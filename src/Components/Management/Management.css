@@ -1,3 +1,9 @@
+.management-container{
+    margin-top: 3%;
+}
+.top-text-man{
+    font-size: 1.2rem;
+}
 .man-data-div{
     display: flex;
     gap: 10px;
@@ -5,16 +11,27 @@
     align-items: center;
 }
 .man-item-div-container{
+    background-image: url(../../Assets/banner-bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     gap: 10px;
-    height: 300px;
+    align-items: center;
+    background-color: #006DFF;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 .man-item-div-container img{
-    height: 100%;
-    width: 100%;
+    height: 300px;
+    width:300px;
+    object-fit: cover;
 }
 .man-item-content{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
 }
 .man-item-content h1{
     font-size: 1.2rem;
@@ -22,4 +39,8 @@
 }
 .man-item-content p{
     font-size: 0.9rem;
+}
+.EXPLORE-MDPS{
+    text-decoration: underline;
+    cursor: pointer;
 }

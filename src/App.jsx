@@ -13,6 +13,11 @@ import CareerSection from './Components/CareerSection/CareerSection';
 import Sales from './Components/Sales/Sales';
 import Platforms from './Components/Platforms/Platforms';
 import Management from './Components/Management/Management';
+import Banner from './Components/Banner/Banner';
+import Industry from './Components/Industry/Industry';
+import Events from './Components/Events/Events';
+import Brands from './Components/Brands/Brands';
+import Footer from './Components/Footer/Footer';
 
 function HomePage() {
   return (
@@ -22,8 +27,13 @@ function HomePage() {
       <HeroSection/>
       <CareerSection/>
       <Sales/>
-      {/* <Management/> */}
+      <Management/>
       <Platforms/>
+      <Banner/>
+      <Industry/>
+      <Events/>
+      <Brands/>
+      <Footer/>
     </>
   );
 }

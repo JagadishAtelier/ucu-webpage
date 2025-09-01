@@ -40,6 +40,7 @@
 .platform img{
     height: 515px;
     width: 100%;
+    border-radius: 10px;
     
 }
 .platform-data-div{

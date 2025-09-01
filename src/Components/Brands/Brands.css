@@ -1,0 +1,15 @@
+.img-div{
+    display: flex;
+    justify-content: space-between;
+}
+.img-item-div{
+    height: 100px;
+    width: 250px;
+    border-top:1px solid white;
+    margin-top: 3%;
+}
+.img-item-div img{
+    margin-top: 5%;
+    height: 100%;
+    width: 100%;
+}

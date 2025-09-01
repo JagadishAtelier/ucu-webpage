@@ -5,11 +5,13 @@ import image2 from '../../Assets/ucu (1)/Rectangle 100.jpg'
 const data = [
     {
         image : image1,
+        top:"Customised Programs",
         heading : "Customised Programs",
         para : "Short-term, intensive programs designed to build managerial and functional expertise across industries.",
     },
     {
         image : image2,
+        top:"MDPS",
         heading : "MDPs – Management Development Programs",
         para : "Short-term, intensive programs designed to build managerial and functional expertise across industries.",
     }
@@ -23,15 +25,18 @@ function Management() {
       </div>
       <div className='man-data-div'>
     {data.map((item,index)=>(
-        <div className='man-item-div-container' key={index}>
+        <div key={index}>
+            <h1 className='top-text-man'>{item.top}</h1>
+        <div className='man-item-div-container'>
             <img src={item.image}/>
             <div className='man-item-content'>
                 <h1>{item.heading}</h1>
                 <p>
                     {item.para}
                 </p>
-                <p>EXPLORE MDPS</p>
+                <p className='EXPLORE-MDPS'>EXPLORE MDPS</p>
             </div>
+        </div>
         </div>
     ))}
     </div>
