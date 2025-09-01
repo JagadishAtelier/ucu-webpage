@@ -1,0 +1,71 @@
+.car-container{
+    background-color: #ECECEC;
+    padding: 3% 0;
+}
+.car-data-div{
+    display: flex;
+    gap: 20px;
+    padding: 0 3%;
+}
+.car-heading-text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.car-heading-text p{
+    width: 40%;
+    font-size: 1rem;
+}
+.car-heading-text h1{
+    font-size: 2rem;
+}
+.car-item-div{
+    display: flex;
+    gap: 10px;
+    height: 300px;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    align-items: center;
+}
+.car-item-div img{
+    width: 100%;
+    border-radius: 10px;
+}
+.car-right h1{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.car-right p{
+    font-size: 0.9rem;
+}
+.car-right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.car-explore-btn-div{
+    display: flex;
+    gap: 10px;
+}
+.car-explore-btn-div button{
+    width: 100%;
+    padding: 5px 5px;
+    font-size: 0.8rem;
+    border-radius: 1px;
+}
+.car-explore-btn{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.car-apply-btn{
+    background-color: #74C61B;
+    color: white;
+    border: none;
+}

@@ -1,0 +1,25 @@
+.man-data-div{
+    display: flex;
+    gap: 10px;
+    padding: 0 3%;
+    align-items: center;
+}
+.man-item-div-container{
+    display: flex;
+    gap: 10px;
+    height: 300px;
+}
+.man-item-div-container img{
+    height: 100%;
+    width: 100%;
+}
+.man-item-content{
+    width: 100%;
+}
+.man-item-content h1{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.man-item-content p{
+    font-size: 0.9rem;
+}

@@ -1,0 +1,23 @@
+.navbar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;
+    color: white;
+    gap: 40px;
+    padding: 25px 0;
+}
+.navbar-container a{
+    text-decoration: none;
+    color: white;
+    font-size:.9rem;
+}
+.subPages-head{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.subPages-head i{
+    font-size: 1rem;
+    color: white;
+}
