@@ -62,7 +62,7 @@ function Footer() {
         </div>
         <hr className='hr-line-footer'/>
         <div className='copy-right-text'>
-            <p>Copyright @ 2025.All Rights . Privacy Policy</p>
+            <p>Copyright @ 2025.All Rights reserved to <a href="https://theateliercreation.com/" target="_blank" className='text-white'> Atelier</a></p>
         </div>
     </div>
   )
