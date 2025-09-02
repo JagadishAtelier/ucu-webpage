@@ -94,6 +94,12 @@
   .Announcement-arrow-icons button {
     padding: 6px;
   }
+  .Announcement-container .swiper{
+    max-width: 90vw !important;
+  }
+  .Announcement-para{
+    max-width: 90vw;
+  }
 
   .Announcement-para p {
     font-size: 0.85rem;
