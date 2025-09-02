@@ -53,7 +53,7 @@ function Platforms() {
               {openIndex === index && (
                 <div>
                   <p className="platform-text">{item.text}</p>
-                  <div className="car-explore-btn-div">
+                  <div className="car-explore-btn-div-faq">
                     <button className="btn btn-outline-dark py-2">EXPLORE PGDM</button>
                     <button className="car-apply-btn py-2">APPLY NOW</button>
                   </div>

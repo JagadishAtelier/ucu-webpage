@@ -36,7 +36,6 @@
   margin: 0 !important;
   display: flex;
   gap: 15px;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -59,6 +58,8 @@
   }
 
   .banner-btns {
+    
+  flex-wrap: wrap;
     width: 100% !important;
     flex-direction: column;
     gap: 10px;
