@@ -44,3 +44,6 @@
 section {
   overflow-x: hidden; /* Hide unwanted horizontal/vertical scrollbars */
 }
+.btn-outline-dark{
+  border-radius: 3px !important;
+}

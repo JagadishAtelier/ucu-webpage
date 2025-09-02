@@ -2,7 +2,6 @@ import "modern-css-reset/dist/reset.min.css";
 import "./App.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -31,12 +30,12 @@ function HomePage() {
       </div>
 
       {/* Career Section */}
-      <div data-aos="fade-right" data-aos-delay="200">
+      <div data-aos="fade-up" data-aos-delay="200">
         <CareerSection />
       </div>
 
       {/* Management Section */}
-      <div data-aos="fade-left" data-aos-delay="300">
+      <div data-aos="fade-left" data-aos-delay="100">
         <Management />
       </div>
 

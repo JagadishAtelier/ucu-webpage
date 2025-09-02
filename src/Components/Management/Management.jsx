@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Management.css";
 import image1 from "../../Assets/ucu (1)/Rectangle 154.jpg";
 import image2 from "../../Assets/ucu (1)/Rectangle 100.jpg";
+import Aos from "aos";
 const data = [
   {
     image: image1,
@@ -17,6 +18,13 @@ const data = [
   },
 ];
 function Management() {
+    useEffect(() => {
+    Aos.init({
+      duration: 1000, // animation duration
+      once: true, // animation triggers only once
+      offset: 100, // offset from bottom
+    });
+  }, []);
   return (
     <div className="management-container">
       <div className="car-heading-text">
@@ -28,7 +36,7 @@ function Management() {
       </div>
       <div className="man-data-div">
         {data.map((item, index) => (
-          <div key={index}>
+          <div key={index} data-aos="fade-up" data-aos-delay={index * 200}>
             <h1 className="top-text-man h3 fw-semibold">{item.top}</h1>
             <div className="man-item-div-container">
               <img src={item.image} />

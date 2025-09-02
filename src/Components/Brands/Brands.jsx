@@ -22,7 +22,7 @@ function Brands() {
         <div className="line"></div>
         <div className="img-div">
           {images.map((img, index) => (
-            <div key={index} className="img-item-div">
+            <div key={index} className="img-item-div" data-aos="fade-up" data-aos-delay={index * 200}>
               <img src={img} alt={`brand-${index}`} />
             </div>
           ))}

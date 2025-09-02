@@ -1,6 +1,16 @@
 .platforms-container {
   margin-top: 3%;
 }
+.apply-btn{
+  transform: scale(1.05);
+    background-color: #74C61B;
+    color: white;
+    border-radius: 3px;
+}
+.apply-btn:hover{
+  background-color: #5aa10f;
+  color: white;
+}
 
 .platform {
   display: flex;
@@ -16,7 +26,14 @@
   border-radius: 10px;
   object-fit: cover;
 }
+.chevron-icon {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out; /* smooth animation */
+}
 
+.chevron-icon.rotate {
+  transform: rotate(180deg); /* rotate down to up */
+}
 /* Content */
 .platform-data-div {
   width: 100%;
@@ -53,6 +70,8 @@
 
 .car-explore-btn-div-faq {
   width: 50%;
+  display: flex;
+  gap: 20px;
   margin-bottom: 3%;
 }
 

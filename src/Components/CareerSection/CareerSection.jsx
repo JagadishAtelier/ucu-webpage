@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./CareerSection.css";
 import image1 from "../../Assets/ucu (1)/Rectangle 43.jpg";
 import image2 from "../../Assets/ucu (1)/Rectangle 45.jpg";
@@ -8,6 +8,8 @@ import { Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const data = [
   {
@@ -33,9 +35,17 @@ const data = [
 ];
 
 function CareerSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true, // animation triggers only once
+      offset: 100, // offset from bottom
+    });
+  }, []);
+
   return (
     <div className="car-container container-fluid mt-5">
-      <div className="car-heading-text mx-2 mb-4">
+      <div className="car-heading-text mx-2 mb-4" data-aos="fade-up">
         <h1 className="h2">
           <strong>Programs Designed for Every Career Stage</strong>
         </h1>
@@ -45,28 +55,26 @@ function CareerSection() {
         </p>
       </div>
 
-      {/* ✅ Swiper with 2 items per view + pagination */}
+      {/* ✅ Swiper with AOS on each card */}
       <Swiper
         modules={[Pagination]}
         spaceBetween={10}
         pagination={{ clickable: true }}
         breakpoints={{
-          0: { slidesPerView: 1 }, // 📱 Mobile
-          768: { slidesPerView: 2 }, // 💻 Tablet & Desktop
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
         }}
         className="car-swiper"
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="car-item-div">
+            <div className="car-item-div" data-aos="fade-up" data-aos-delay={index * 200}>
               <img src={item.image} alt={item.heading} />
               <div className="car-right">
                 <h1>{item.heading}</h1>
                 <p>{item.para}</p>
                 <div className="car-explore-btn-div">
-                  <button className="btn btn-outline-dark py-2">
-                    EXPLORE PGDM
-                  </button>
+                  <button className="btn btn-outline-dark py-2">EXPLORE PGDM</button>
                   <button className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>

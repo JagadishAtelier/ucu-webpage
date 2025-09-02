@@ -1,96 +1,131 @@
-import React,{useState} from 'react'
-import './Events.css'
-import image from '../../Assets/ucu (1)/Rectangle 100.jpg'
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./Events.css";
+import image from "../../Assets/ucu (1)/Rectangle 100.jpg";
+
 const data = [
-    {
-        date : "15 Sept",
-        head : "Masterclass: Navigating the Global Corporate Landscape",
-        text : "Led by global CXOs, this session will cover leadership agility and market expansion strategies.",
-    },
-    {
-        date : "05 Oct",
-        head : "Workshop: AI Applications in Business Strategy",
-        text : "Interactive workshop on leveraging AI for data-driven decisions and innovation.",
-    },
-    {
-        date : "20 Oct",
-        head : "Panel: Career Opportunities in Emerging Sectors",
-        text : "Experts from GCC, FinTech, and Mobility industries share hiring trends and skills in demand.",
-    },
-    {
-        date : "08 Nov",
-        head : "Webinar: Building Future-Ready Leaders",
-        text : "Interactive session with corporate mentors on leadership development.",
-    }
-]
+  {
+    date: "15 Sept",
+    head: "Masterclass: Navigating the Global Corporate Landscape",
+    text: "Led by global CXOs, this session will cover leadership agility and market expansion strategies.",
+  },
+  {
+    date: "05 Oct",
+    head: "Workshop: AI Applications in Business Strategy",
+    text: "Interactive workshop on leveraging AI for data-driven decisions and innovation.",
+  },
+  {
+    date: "20 Oct",
+    head: "Panel: Career Opportunities in Emerging Sectors",
+    text: "Experts from GCC, FinTech, and Mobility industries share hiring trends and skills in demand.",
+  },
+  {
+    date: "08 Nov",
+    head: "Webinar: Building Future-Ready Leaders",
+    text: "Interactive session with corporate mentors on leadership development.",
+  },
+];
 
 function Events() {
-    const [openIndex, setOpenIndex] = useState(0)
-    const [active, setActive] = useState("Latest") // default active button
+  const [openIndex, setOpenIndex] = useState(0);
+  const [active, setActive] = useState("Latest"); // default active button
 
-    const buttons = ["Latest", "Exam", "Admission"]
+  const buttons = ["Latest", "Exam", "Admission"];
 
-    const toggleText = (index) => {
-      setOpenIndex(openIndex === index ? null : index) // toggle
-    }
+  const toggleText = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  // ✅ Initialize AOS
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <div className='eve-platforms-container'>
-        <div className='event-header'>
-            <h1>Recent Events</h1>
-            <div className='event-header-left'>
-                <h1>Upcoming Events</h1>
-                <a href='/'>View all</a>
-            </div>
+    <div className="eve-platforms-container">
+      <div className="event-header" data-aos="fade-down">
+        <h1>Recent Events</h1>
+        <div className="event-header-left">
+          <h1>Upcoming Events</h1>
+          <a href="/">View all</a>
         </div>
-      <div className='eve-platform'>
-      <div className="eve-image-container">
-    <img src={image} alt="Event" />
-    <div className="eve-overlay"></div>
-    <div className="eve-overlay-text">
-      <h3>Industry Icons Leadership Summit 2025</h3>
-      <p>UCU hosted top business leaders from the BAC, AAC, and CHRO councils to discuss future skills and industry trends.</p>
-    </div>
-  </div>
-        <div className='eve-platform-data-div'>
-            <div className='events-btns-div'>
+      </div>
+
+      <div className="eve-platform">
+        {/* Image Section */}
+        <div className="eve-image-container" data-aos="zoom-in">
+          <img src={image} alt="Event" />
+          <div className="eve-overlay"></div>
+          <div className="eve-overlay-text">
+            <h3>Industry Icons Leadership Summit 2025</h3>
+            <p>
+              UCU hosted top business leaders from the BAC, AAC, and CHRO
+              councils to discuss future skills and industry trends.
+            </p>
+          </div>
+        </div>
+
+        {/* Events List */}
+        <div className="eve-platform-data-div">
+          {/* Buttons */}
+          <div
+            className="events-btns-div"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             {buttons.map((btn, index) => (
-        <button
-          key={index}
-          className={active === btn ? "active-btn" : ""}
-          onClick={() => setActive(btn)}
-        >
-          {btn}
-        </button>
-      ))}
-            </div>
-            {data.map((item,index)=>(
-                <div key={index} className='eve-platform-indiviual-con'>
-                    <div className='eve-platform-item-div'
-                                    onClick={() => toggleText(index)}
-                                    style={{cursor:"pointer"}}
-                    >
-                        <div className='event-data-and-text'>
-                        <h1 className='date-text'>{item.date}</h1>
-                        <h1>{item.head}</h1>
-                        </div>
-                        <i class="bi bi-chevron-down"></i>
-                    </div>
-                    {openIndex === index && (
-                        <div>
-                <p className='eve-platform-text'>{item.text}</p>
-                <div className = 'car-explore-btn-div platform-btn'>
-                    <button className='car-explore-btn'>EXPLORE PGDM</button>
-                    <button className='car-apply-btn'>APPLY NOW</button>
-                </div>
-                </div>
-                
-              )}
-                </div>
+              <button
+                key={index}
+                className={active === btn ? "active-btn" : ""}
+                onClick={() => setActive(btn)}
+              >
+                {btn}
+              </button>
             ))}
+          </div>
+
+          {/* Event Items */}
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className="eve-platform-indiviual-con"
+              data-aos="fade-up"
+              data-aos-delay={index * 200 + 300} // staggered delay
+            >
+              <div
+                className="eve-platform-item-div"
+                onClick={() => toggleText(index)}
+                style={{ cursor: "pointer" }}
+              >
+                <div className="event-data-and-text">
+                  <h1 className="date-text">{item.date}</h1>
+                  <h1>{item.head}</h1>
+                </div>
+                <i
+                  className={`bi ${
+                    openIndex === index
+                      ? "bi-chevron-up"
+                      : "bi-chevron-down"
+                  } transition-icon`}
+                ></i>
+              </div>
+
+              {openIndex === index && (
+                <div data-aos="fade-down" data-aos-duration="600">
+                  <p className="eve-platform-text">{item.text}</p>
+                  <div className="car-explore-btn-div platform-btn">
+                    <button className="car-explore-btn">EXPLORE PGDM</button>
+                    <button className="car-apply-btn">APPLY NOW</button>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Events
+export default Events;

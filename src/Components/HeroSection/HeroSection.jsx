@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
+import AOS from "aos";
 import "./HeroSection.css";
 import image from "../../Assets/WhatsApp Image 2025-09-01 at 10.11.41_c995dc02.jpg";
 import image1 from "/slider-2.jpg";
@@ -30,6 +30,14 @@ const heroData = [
 ];
 
 function HeroSection() {
+  useEffect(() => {
+  AOS.init({
+    duration: 1000,  // animation speed
+    once: true,      // run only once
+    easing: "ease-in-out",
+  });
+}, []);
+
   return (
     <>
       <div className="hero-section-container position-relative">
@@ -46,22 +54,39 @@ function HeroSection() {
           {heroData.map((data, index) => (
             <SwiperSlide key={index}>
               <div className="hero-section-data-div">
-                <div className="hero-section-left">
+                <div
+                  className="hero-section-left"
+                  data-aos="fade-right"
+                  data-aos-delay="200"
+                >
                   <h1>{data.header}</h1>
                   <div className="hero-para-line-div">
                     <div className="vertical-line"></div>
                     <p>{data.para}</p>
                   </div>
                   <div className="hero-btn mt-4">
-                    <button className="hero-section-apply-btn fw-semibold">
+                    <button
+                      className="hero-section-apply-btn fw-semibold"
+                      data-aos="zoom-in"
+                      data-aos-delay="400"
+                    >
                       APPLY NOW
                     </button>
-                    <button className="hero-section-download-btn fw-semibold">
+                    <button
+                      className="hero-section-download-btn fw-semibold"
+                      data-aos="zoom-in"
+                      data-aos-delay="600"
+                    >
                       DOWNLOAD BROCHURE
                     </button>
                   </div>
                 </div>
-                <div className="hero-image">
+
+                <div
+                  className="hero-image"
+                  data-aos="fade-left"
+                  data-aos-delay="300"
+                >
                   <img src={data.images} alt="hero" />
                 </div>
               </div>

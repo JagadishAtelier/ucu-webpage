@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -9,6 +9,7 @@ import image1 from "../../Assets/ucu (1)/Rectangle 53.jpg";
 import image2 from "../../Assets/ucu (1)/Rectangle 53-1.jpg";
 import image3 from "../../Assets/ucu (1)/Rectangle 53-2.jpg";
 import image4 from "../../Assets/ucu (1)/Rectangle 100.jpg";
+import Aos from "aos";
 
 const data = [
   {
@@ -24,7 +25,7 @@ const data = [
   {
     image: image3,
     heading: "Diploma in AI & Product Management",
-    para: "Practical learning for students interested in the fast-growing fields of artificial intelligence and product strategy.",
+    para: "Practical learning for students interested in the fast-growing fields of artificial intelligence and product.",
   },
   {
     image: image4,
@@ -34,8 +35,15 @@ const data = [
 ];
 
 function Sales() {
+    useEffect(() => {
+      Aos.init({
+        duration: 1000, // animation duration
+        once: true, // animation triggers only once
+        offset: 100, // offset from bottom
+      });
+    }, []);
   return (
-    <div className="sales-container container-fluid mt-5 mb-5">
+    <div className="sales-container container-fluid my-3">
       <div className="car-heading-text text-center mb-4">
         <h1 className="h1">
           <strong>Diploma Programs</strong>
@@ -48,7 +56,7 @@ function Sales() {
 
       <Swiper
         modules={[Pagination]}
-        spaceBetween={5}
+        spaceBetween={10}
         slidesPerView={1}
         pagination={{ clickable: true }}
         breakpoints={{
@@ -58,8 +66,8 @@ function Sales() {
         className="sales-swiper"
       >
         {data.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="sales-item-div">
+          <SwiperSlide key={index} >
+            <div className="sales-item-div" data-aos="fade-up" data-aos-delay={index * 250}>
               <img src={item.image} alt={item.heading} />
               <div className="p-3 position-relative">
                 <h1 className="mt-3">{item.heading}</h1>
