@@ -1,48 +1,111 @@
-.platforms-container{
-    margin-top: 3%;
+.platforms-container {
+  margin-top: 3%;
 }
-.platform{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    padding: 0 3%;
+
+.platform {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 0 3%;
 }
-.platform-item-div h1{
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0;
+
+/* Image */
+.platform img {
+  height: 515px;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
+
+/* Content */
+.platform-data-div {
+  width: 100%;
+}
+
 .platform-item-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.platform-item-div h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.platform-item-div i {
+  padding: 3px 7px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.platform-indiviual-con {
+  border-bottom: 1px solid gainsboro;
+  margin: 3% 0;
+}
+
+.platform-indiviual-con p {
+  width: 80%;
+}
+
+.car-explore-btn-div {
+  width: 50%;
+  margin-bottom: 3%;
+}
+
+.platform-text {
+  margin-top: 3%;
+}
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    .platforms-container {
+        margin-top: 10%;
+    }
+  .platform {
+    flex-direction: column; /* Stack image + content */
+    gap: 15px;
+  }
+
+  .platform img {
+    height: auto;
+    max-height: 280px; /* shrink image for mobile */
+  }
+
+  .platform-item-div h1 {
+    font-size: 1rem;
+  }
+
+  .platform-indiviual-con p {
+    width: 100%; /* full width for mobile */
+    font-size: 0.9rem;
+  }
+
+  .car-explore-btn-div {
+    width: 100% !important;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .car-explore-btn-div button {
+    width: 100%; /* full-width buttons */
+  }
 }
-.platform-indiviual-con p{
-    width: 80%;
-}
-.platform-item-div i{
-    padding: 3px 7px;
-    text-align: center;
-    border: 1px solid black;
-}
-.platform-indiviual-con{
-    border-bottom: 1px solid gainsboro;
-    margin: 3% 0;
-}
-.platform-btn{
-    width: 50% !important;
-    margin-bottom: 3%;
-}
-.platform-text{
-    margin-top: 3%;
-}
-.platform img{
-    height: 515px;
-    width: 100%;
-    border-radius: 10px;
-    
-}
-.platform-data-div{
-    width: 100%;
+
+@media (max-width: 480px) {
+  .platform img {
+    max-height: 200px;
+  }
+
+  .platform-item-div h1 {
+    font-size: 0.95rem;
+  }
+
+  .platform-indiviual-con p {
+    font-size: 0.85rem;
+  }
 }

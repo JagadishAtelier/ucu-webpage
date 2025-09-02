@@ -1,23 +1,85 @@
-.navbar-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #161616;
-    color: white;
-    gap: 40px;
-    padding: 25px 0;
+.navbar-container {
+  display: flex;
+  justify-content: space-evenly; /* keep logo left, menu/hamburger right */
+  align-items: center;
+  background-color: #161616;
+  color: white;
+  padding: 10px 20px;
 }
-.navbar-container a{
-    text-decoration: none;
-    color: white;
-    font-size:.9rem;
+
+.logo {
+  height: 60px;
 }
-.subPages-head{
-    display: flex;
-    gap: 10px;
-    align-items: center;
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
-.subPages-head i{
+
+.navbar-container a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.subPages-head {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.subPages-head i {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Hamburger button hidden on desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+.logo-txt{
+  display: none;
+}
+
+/* ✅ Mobile styles */
+@media (max-width: 768px) {
+  .logo-txt{
+    display: block;
+    margin: 0;
+    font-weight: 500;
     font-size: 1rem;
-    color: white;
+  }
+    .navbar-container{
+        justify-content: space-between;
+    }
+  .hamburger {
+    display: block; /* show on mobile */
+  }
+
+  .nav-links {
+    display: none; /* hide menu initially */
+    flex-direction: column;
+    width: 100%;
+    background: #161616;
+    position: absolute;
+    top: 70px; /* below navbar */
+    left: 0;
+    padding: 20px 0;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .nav-links.open {
+    display: flex; /* show when toggled */
+  }
+
+  .nav-links i {
+    margin-left: 5px;
+  }
 }

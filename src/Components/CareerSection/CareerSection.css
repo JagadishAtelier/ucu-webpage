@@ -1,7 +1,12 @@
-.car-container{
-    background-color: #ECECEC;
+.car-container {
+    /* background-color: #ECECEC; */
     padding: 3% 0;
+    background-image: url(../../Assets/bg-watermark.png);
+    background-repeat: no-repeat;    
+    background-position: center top; 
+    background-size: contain;        
 }
+
 .car-data-div{
     display: flex;
     gap: 20px;
@@ -13,6 +18,7 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    margin-bottom: 1rem;
     justify-content: center;
 }
 .car-heading-text p{
@@ -22,15 +28,17 @@
 .car-heading-text h1{
     font-size: 2rem;
 }
-.car-item-div{
-    display: flex;
-    gap: 10px;
-    height: 300px;
-    border: 1px solid white;
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    align-items: center;
+.car-item-div {
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* keep image on top, text below */
+  gap: 1rem;/* minimum height */
+  height: 100%;       /* allow Swiper to stretch evenly */
+  border: 1px solid white;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
 }
 .car-item-div img{
     width: 100%;
@@ -57,10 +65,10 @@
     width: 100%;
     padding: 5px 5px;
     font-size: 0.8rem;
-    border-radius: 1px;
+    border-radius: 3px;
 }
 .car-explore-btn{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     color: black;
     border: 1px solid black;
 }
@@ -68,4 +76,71 @@
     background-color: #74C61B;
     color: white;
     border: none;
+}
+.car-swiper{
+    padding: 0 20px;
+}
+.car-swiper .swiper-slide{
+    display: flex;
+  height: auto;
+}
+
+.car-swiper .swiper-pagination {
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.car-swiper .swiper-pagination-bullet {
+  background: #b9b9b9; /* your brand color */
+  opacity: 0.5;
+}
+
+.car-swiper .swiper-pagination-bullet-active {
+  background: #74c61b; /* active dot color */
+  opacity: 1;
+}
+
+/* 📱 Mobile styles */
+@media (max-width: 768px) {
+  .car-heading-text p {
+    width: 90%; /* shrink paragraph width on mobile */
+    font-size: 0.9rem;
+  }
+
+  .car-heading-text h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .car-item-div {
+    flex-direction: column; /* stack image & text */
+    height: auto;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .car-item-div img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .car-right {
+    margin-top: 10px;
+    width: 100%;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .car-explore-btn-div {
+    flex-direction: column; /* stack buttons */
+    width: 100%;
+  }
+
+  .car-explore-btn-div button {
+    font-size: 0.85rem;
+    width: 100%;
+  }
 }

@@ -140,3 +140,87 @@
     background: rgba(0,0,0,0.6); /* black overlay with transparency */
     z-index: 1;
   }
+
+  /* Mobile Responsive */
+@media (max-width: 768px) {
+  .event-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .event-header-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .eve-platform {
+    flex-direction: column;
+    padding: 0 5%;
+  }
+
+  .eve-image-container {
+    height: auto;
+    max-height: 350px;
+  }
+
+  .eve-image-container img {
+    height: auto;
+    max-height: 350px;
+  }
+
+  .eve-overlay-text {
+    left: 5%;
+    bottom: 5%;
+    width: 90%;
+  }
+
+  .eve-overlay-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .eve-overlay-text p {
+    font-size: 0.9rem;
+  }
+
+  .events-btns-div {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 0;
+    margin-left: 0;
+  }
+
+  .events-btns-div button {
+    flex: 1 1 auto;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .eve-platform-indiviual-con {
+    margin: 5% 0;
+  }
+
+  .platform-btn {
+    width: 100% !important;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .platform-btn button {
+    flex: 1;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .event-data-and-text {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .date-text {
+    width: auto !important;
+    font-size: 1rem;
+  }
+}

@@ -26,7 +26,6 @@ function HomePage() {
       <Navbar/>
       <HeroSection/>
       <CareerSection/>
-      <Sales/>
       <Management/>
       <Platforms/>
       <Banner/>

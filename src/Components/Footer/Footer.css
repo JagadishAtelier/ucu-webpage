@@ -1,71 +1,152 @@
-.footer-container{
-    background-color: #181818;
-    width: 100%;
-    padding: 20px;
-    color: white;
-    margin-top: 3%;
-    position: relative;
-    overflow: hidden;
+.footer-container {
+  background-color: #181818;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  margin-top: 3%;
+  position: relative;
+  overflow: hidden;
 }
-.bgImage{
-    position: absolute;
-    width: 100%;
-    object-fit: cover;
 
+.bgImage {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
 }
-.footer-first-row{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
+.footer-first-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  gap: 20px;
 }
-.icon-text{
-    display: flex;
-    gap: 10px;
+
+.icon-text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
-.icon-social{
+
+.icon-social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.icon-social i {
+  font-size: 1.2rem;
+}
+
+.input-text input {
+  border-radius: 20px;
+  width: 250px;
+  height: 40px;
+  padding-left: 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+.social-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-second-row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* allow wrapping */
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.row-two-para {
+  width: 24%;
+  min-width: 250px;
+}
+
+.pages-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.pages-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.copy-right-text {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.hr-line-footer {
+  margin: 3% 8% 20px;
+}
+.footer-second-row-elements{
     display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* ✅ Responsive Design */
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .footer-first-row {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 15px;
+  }
+
+  .social-text {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .input-text {
+    width: 100%;
+  }
+
+  .input-text input {
+    width: 100%;
+  }
+
+  .footer-second-row-elements {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
-}
-.icon-social i{
-    font-size: 1.2rem;
-}
-.input-text input{
-    border-radius: 20px;
-    width:250px;
-    height: 40px;
-    padding-left: 20px;
-    border: 1px solid white;
-    background-color: transparent;
-    color: white;
+  }
 
-}
-.social-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.footer-second-row{
-    display: flex;
-    justify-content: space-evenly;
-}
-.row-two-para{
-    width: 24%;
-}
-.pages-links{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .row-two-para {
+    width: 100%;
+  }
 
-}
-.pages-links a{
-    text-decoration: none;
-    color: white;
-    font-size: 0.9rem;
-}
-.copy-right-text{
-    text-align: center;
+  /* 🔥 Make pages-links 2 per row */
+  .footer-second-row-elements {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+  }
+
+  .pages-links {
+    min-width: unset;
+  }
 }
 
-.hr-line-footer{
-    margin: 3% 8% 20px;
+@media (max-width: 480px) {
+  .icon-social {
+    gap: 12px;
+  }
+
+  .icon-social i {
+    font-size: 1rem;
+  }
 }

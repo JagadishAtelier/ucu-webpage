@@ -39,6 +39,7 @@ function Footer() {
             <p>We are passionate education dedicated to providing high-quality resources learners all backgrounds.</p>
 
         </div>
+        <div className="footer-second-row-elements">
         <div className='pages-links'>
             <h4>About UCU</h4>
             <a href='/'> About Us</a>
@@ -56,6 +57,7 @@ function Footer() {
             <h4>Insights</h4>
             <a href='/'>News & Blogs</a>
             <a href='/'>Events</a>
+        </div>
         </div>
         </div>
         <hr className='hr-line-footer'/>

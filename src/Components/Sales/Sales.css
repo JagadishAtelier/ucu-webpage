@@ -1,33 +1,131 @@
-.sales-data-div{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    padding: 0 3%;
+.sales-item-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  background: #fff;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
-.sales-item-div{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
+.sales-data-div,
+.swiper-slide {
+  overflow: visible !important;
+}
+
+
+/* ✅ Hover animation */
+.sales-item-div:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ✅ Image hover zoom */
+.sales-item-div img {
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.sales-item-div:hover img {
+  transform: scale(1.05);
+}
+
+.sales-item-div h1 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.sales-item-div p {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0 10px;
+}
+
+.sales-btn {
+  margin-top: auto;
+  padding: 1rem 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.expo-btn {
+  padding: 10px 16px !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* ✅ Button hover */
+.expo-btn:hover {
+  transform: scale(1.05);
+  background-color: #74C61B;
+  color: white;
+}
+.sales-swiper {
+  padding-top: 20px; /* allows hover animation without clipping */
+}
+
+.sales-swiper .swiper-pagination {
+  position: relative;   /* keeps it below */
+  margin-top: 20px;     /* space from slider */
+  text-align: center;   /* center dots */
+}
+
+/* Pagination dots style */
+.sales-swiper .swiper-pagination-bullet {
+  background-color: #ccc !important;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin: 0 3px !important;
+  transition: all 0.3s ease;
+}
+
+.sales-swiper .swiper-pagination-bullet-active {
+  background-color: #74C61B !important;
+}
+
+/* ✅ Mobile responsiveness */
+@media (max-width: 767px) {
+  .sales-item-div {
+    max-width: 100%;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+
+  .sales-item-div img {
+    height: 200px; /* smaller image height */
+  }
+
+  .sales-item-div h1 {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .sales-item-div p {
+    font-size: 0.85rem;
+    padding: 0 8px;
+  }
+
+  .sales-btn {
+    flex-direction: column; /* stack buttons on mobile */
+    gap: 8px;
+    padding: 0.8rem 0;
+  }
+
+  .expo-btn {
     width: 100%;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding-bottom: 20px;
-}
-.sales-item-div h1{
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-.sales-item-div img{
-    height: 250px;
-    border-radius: 10px;
-}
-.sales-btn{
-    padding: 0 20px;
-    position:relative;
-    bottom: 0;
-    margin-top: auto;
-}
-.expo-btn{
-    padding: 12px !important;
+    font-size: 0.9rem;
+    padding: 8px 12px !important;
+  }
+
+  .sales-swiper .swiper-pagination {
+    margin-top: 15px;
+  }
 }

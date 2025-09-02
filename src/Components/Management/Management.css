@@ -1,24 +1,28 @@
 .management-container{
-    margin-top: 3%;
+    margin-top: 0%;
 }
 .top-text-man{
     font-size: 1.2rem;
+    margin-left: 3%;
+    margin-bottom: 2%;
 }
 .man-data-div{
     display: flex;
     gap: 10px;
     padding: 0 3%;
     align-items: center;
+    flex-wrap: nowrap;
 }
 .man-item-div-container{
     background-image: url(../../Assets/banner-bg.svg);
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    gap: 10px;
+    gap: 1.5rem;
     align-items: center;
     background-color: #006DFF;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     border-radius: 10px;
 }
 .man-item-div-container img{
@@ -38,9 +42,46 @@
     font-weight: bold;
 }
 .man-item-content p{
+    color: rgba(255, 255, 255, 0.801);
     font-size: 0.9rem;
 }
 .EXPLORE-MDPS{
+    color: white;
     text-decoration: underline;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .man-data-div {
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .top-text-man{
+    text-align: center;
+  }
+
+  .man-item-div-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .man-item-div-container img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .man-item-content {
+    gap: 15px;
+    align-items: center;
+  }
+
+  .man-item-content h1 {
+    font-size: 1.1rem;
+  }
+
+  .man-item-content p {
+    font-size: 0.85rem;
+  }
 }

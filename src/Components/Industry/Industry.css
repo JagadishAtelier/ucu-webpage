@@ -1,25 +1,59 @@
-.industry-container{
-    padding: 3% 0;
-    background-color: #ECECEC;
+.industry-container {
+  padding: 3% 0;
+  background-color: #ECECEC;
 }
-.industry-card-div{
-    display: flex;
-    gap: 30px;
-    justify-content: center;
+
+.industry-card-div {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap; /* desktop: side by side */
 }
-.industry-card{
-    width:350px;
-    padding: 15px;
-    border: 1px solid white;
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+.industry-card {
+  width: 350px;
+  padding: 15px;
+  border: 1px solid white;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 10px;
+  flex-shrink: 0; /* ✅ ensures card doesn’t shrink in horizontal scroll */
+}
+
+.i-frame {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+/* ✅ Mobile horizontal scroll */
+@media (max-width: 768px) {
+  .industry-card-div {
+    flex-wrap: nowrap;           /* row only */
+    overflow-x: auto;            /* horizontal scroll */
+    gap: 15px;
     padding: 10px;
-    align-items: center;
-    text-align: center;
-    border-radius: 10px;
-}
-.i-frame{
-    width: 100%;
-    height: 300px;
-    border-radius: 10px;
+    justify-content: flex-start; /* align left */
+    scroll-snap-type: x mandatory; /* smooth snap */
+  }
+
+  .industry-card {
+    width: 80%; /* each card fills most of screen */
+    max-width: 320px;
+    scroll-snap-align: center; /* snap to center */
+  }
+
+  .i-frame {
+    height: 200px;
+  }
+
+  /* Hide scrollbar for a cleaner look */
+  .industry-card-div::-webkit-scrollbar {
+    display: none;
+  }
+  .industry-card-div {
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
 }

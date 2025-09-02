@@ -1,88 +1,211 @@
-.her0-section-data-div{
-    display: flex;
-    background-color: #005BD4;
-    height: 504px;
+.hero-section-data-div {
+  display: flex;
+  background-color: #005bd4;
+  height: 504px;
 }
 .hero-image {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    width: 98%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 98%;
+}
+
+/* Main Image */
+.hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Blue Slanted Effect */
+.hero-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 100px; /* adjust width of blue strip */
+  height: 100%;
+  background: #005bd4; /* your blue color */
+  clip-path: polygon(0 0, 60% 0, 100% 100%, 0 100%);
+}
+.hero-section-left {
+  position: relative; /* needed for pseudo-element positioning */
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  margin-left: 10%;
+  /* remove background-image from here */
+}
+
+.hero-section-left::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%; /* adjust size of image */
+  height: 95%; /* adjust size of image */
+  background-image: url(../../Assets/banner-bg.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%);
+  z-index: 0; /* behind the text */
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
-  
-  /* Main Image */
-  .hero-image img {
-    display: block;
+  to {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+.hero-section-left h1 {
+  width: 90%;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero-section-left p {
+  width: 70%;
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+}
+.hero-btn {
+  display: flex;
+  gap: 20px;
+  width: 70%;
+  font-size: 0.8rem;
+}
+.hero-section-download-btn {
+  width: 100%;
+  padding: 15px 10px;
+  border: none;
+  color: rgb(31, 30, 30);
+  background-color: #74c61b;
+}
+.hero-section-apply-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gainsboro;
+  background-color: rgba(255, 255, 255, 0.3); /* white with 60% opacity */
+  backdrop-filter: blur(4px); /* optional: glassy look */
+}
+.hero-para-line-div {
+  display: flex;
+  align-items: stretch; /* make children equal height */
+  gap: 10px;
+  justify-content: start;
+}
+
+.vertical-line {
+  width: 4px; /* thickness of the line */
+  background-color: rgba(255, 255, 255, 0.6);
+  flex-shrink: 0; /* prevent shrinking */
+}
+
+/* Custom Navigation Buttons */
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.custom-prev {
+  left: 20px;
+}
+
+.custom-next {
+  right: 20px;
+}
+
+/* Optional: make SwiperSlide image fully cover right side */
+.hero-section-data-div .hero-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .hero-section-data-div {
+    flex-direction: column-reverse; /* stack content vertically */
+  }
+
+  .hero-section-left {
     width: 100%;
-    height: auto;
-  }
-  
-  /* Blue Slanted Effect */
-  .hero-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;   /* adjust width of blue strip */
-    height: 100%;
-    background: #005BD4; /* your blue color */
-    clip-path: polygon(0 0, 60% 0, 100% 100%, 0 100%);
-  }
-  .hero-section-left{
-    background-image: url(../../Assets/banner-bg.svg);
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    background-repeat: no-repeat;
-    flex-direction: column;
-    gap: 10px;
+    text-align: center;
     align-items: center;
+    padding: 20px;
+    margin-left: auto;
   }
-  .hero-section-left h1{
-    width: 70%;
-    color: white;
-    font-size:2.5rem;
-    font-weight: bold;
-    margin-left: 10%;
+
+  .hero-section-left h1 {
+    width: 100%;
+    margin: 0;
+    font-size: 1.8rem;
   }
-  .hero-section-left p{
-    width: 70%;
-    color: white;
-    font-size:1rem;
+
+  .hero-section-left p {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .hero-btn {
+    flex-direction: column-reverse; /* stack buttons */
+    gap: 10px;
+    width: 100%;
     margin: 0;
   }
-  .hero-btn{
-    display: flex;
-    gap: 20px;
-    width: 70%;
-    margin-left: 10%;
-  }
-  .hero-section-download-btn{
+
+  .hero-image {
     width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #74C61B;
+    margin-top: 20px;
+    min-height: 200px;
   }
-  .hero-section-apply-btn {
+
+  .hero-image img {
+    height: auto;
     width: 100%;
-    padding: 10px;
-    border: 1px solid gainsboro;
-    background-color: rgba(255, 255, 255, 0.3); /* white with 60% opacity */
-    backdrop-filter: blur(4px); /* optional: glassy look */
+    object-fit: contain;
   }
-  .hero-para-line-div {
-    display: flex;
-    align-items: stretch; /* make children equal height */
-    gap: 10px;
-    justify-content: center;
-    margin-left: 10%;
+
+  /* Navigation buttons smaller on mobile */
+  .custom-prev,
+  .custom-next {
+    width: 36px;
+    height: 36px;
+    background-color: transparent; /* slightly darker for visibility */
   }
-  
-  .vertical-line {
-    width: 4px; /* thickness of the line */
-    background-color: rgba(255, 255, 255, 0.6);
-    flex-shrink: 0; /* prevent shrinking */
+
+  .custom-prev {
+    left: 10px;
   }
-  
-  
-  
+  .custom-next {
+    right: 10px;
+  }
+.hero-image::before{
+  display: none;
+}
+}
