@@ -7,23 +7,25 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import "./HeroSection.css";
 import image from "../../Assets/WhatsApp Image 2025-09-01 at 10.11.41_c995dc02.jpg";
+import image1 from "/slider-2.jpg";
+import image2 from "/slider-3.jpg";
 import AnnoncementSection from "../AnnoncementSection/AnnoncementSection";
 
 const heroData = [
   {
-    header: "Leaders For Corporate World",
-    para: "UCU blends academic excellence with real-world experience.",
+    header: "Shaping Leaders for the Corporate World",
+    para: "At Universal Corporate University (UCU), we blend academic excellence with real-world corporate insights to create industry-ready leaders",
     images: image,
   },
   {
-    header: "Transforming Education",
-    para: "Students gain practical skills for future careers.",
-    images: image,
+    header: "Future-Ready Programs for High-Growth Sectors",
+    para: "From GCC and FinTech to Mobility, our specialized programs prepare professionals to thrive in industries driving global innovation.",
+    images: image1,
   },
   {
-    header: "Future Ready Graduates",
-    para: "Our programs prepare you for global success.",
-    images: image,
+    header: "Guided by Industry & Academic Icons",
+    para: "Our Business, Academic, CHRO, Talent, and Young CXO councils bring together thought leaders who shape programs, mentor learners, and ensure industry relevance.",
+    images: image2,
   },
 ];
 
