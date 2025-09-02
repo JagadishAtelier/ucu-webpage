@@ -72,7 +72,11 @@
     justify-content: center;
     gap: 15px;
   }
-
+.brand-container{
+  margin-top: 10%;
+    height: 300px;
+  justify-content: center;
+}
   .img-item-div {
     width: 45%; /* two per row */
     height: auto;

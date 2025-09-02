@@ -8,7 +8,7 @@ import image5 from "../../Assets/ucu-logos/Mask group-4.png";
 const images = [image1, image2, image3, image4, image5];
 function Brands() {
   return (
-    <div className="banner-container">
+    <div className="brand-container">
       <div className="car-heading-text banner-text">
         <h1>Industry–Academia Collaboration</h1>
         <p>
