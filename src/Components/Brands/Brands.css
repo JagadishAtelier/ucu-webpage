@@ -1,39 +1,37 @@
-.img-div {
+.brand-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-}
-.brand-container{
-  display: flex;
-    background-image: url(../../Assets/homeImage/bgImage.jpg);
+  background-image: url(../../Assets/homeImage/bgImage.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 450px;
   margin-top: 3%;
   color: white;
-  flex-direction: column; /* stack text and buttons vertically */
-  justify-content: space-between; /* vertical center */
+  flex-direction: column;
+  justify-content: space-between;
   padding: 40px 0px;
-  align-items: center;     /* horizontal center */
-  text-align: center;      
+  align-items: center;
+  text-align: center;
 }
-.brands-div{
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
+
+.brands-div {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Important for the marquee to work correctly */
 }
-.line{
+
+.line {
   border-top: 1px solid white;
   width: 100%;
   height: 0;
 }
+
 .img-item-div {
-  height: 50px;
+  height: 80px;
   width: 250px;
-  flex: 1 1 200px; /* make items flexible */
+  flex-shrink: 0; /* Prevents items from shrinking */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,52 +44,39 @@
   object-fit: contain;
 }
 
-.marquee1 {
+/* Marquee Styles */
+.marquee {
   overflow: hidden;
-  position: relative;
-  width: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
-.marquee1-content {
+.marquee-content {
   display: flex;
   align-items: center;
-  height: 10vh;
-  gap: 3rem;
-  width: max-content; /* ensure it grows properly */
-  animation: marquee 60s linear infinite; /* slower speed */
+  gap: 10px;
+  animation: marquee-animation 30s linear infinite; /* Adjust speed here */
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); } /* move full width */
+@keyframes marquee-animation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .img-div {
+  .brand-container {
+    margin-top: 10%;
+    height: 380px;
     justify-content: center;
-    gap: 15px;
-  }
-.brand-container{
-  margin-top: 10%;
-    height: 300px;
-  justify-content: center;
-}
-  .img-item-div {
-    width: 45%; /* two per row */
-    height: auto;
-    border-top: none;
   }
 
-  .img-item-div img {
-    margin-top: 0;
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 480px) {
   .img-item-div {
-    width: 45%; /* full width on very small screens */
+    width: 150px; /* Adjust as needed for mobile */
+    height: auto;
   }
 }

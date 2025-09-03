@@ -36,9 +36,10 @@
   height: 100%;       /* allow Swiper to stretch evenly */
   border: 1px solid white;
   background-color: white;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   padding: 15px;
   border-radius: 10px;
+   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 .car-item-div img{
     width: 100%;
@@ -100,7 +101,33 @@
   background: #74c61b; /* active dot color */
   opacity: 1;
 }
+.car-item-div:hover {
+  transform: translateY(-10px) scale(1.02); /* Lifts the card and scales it slightly */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increases the shadow for a "lifted" look */
+}
+/* New wrapper for the image to control overflow */
+.car-image-wrapper {
+  overflow: hidden; /* This clips the zoomed image */
+  border-radius: 10px; /* Match parent if desired */
+  flex-shrink: 0; /* Prevent the image wrapper from shrinking */
+  width: 100%; /* Take full width of its column in desktop layout */
+  max-width: 300px; /* Example max-width for image, adjust as needed */
+  height: 100%; /* Fixed height for consistent image presentation */
+}
 
+.car-item-div img {
+  width: 100%;
+  height: 100%; /* Fill the wrapper's height */
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  border-radius: 10px;
+  /* Add transition for smooth zoom */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Zoom effect on image when the card is hovered */
+.car-item-div:hover img {
+  transform: scale(1.1); /* Zooms in the image by 10% */
+}
 /* 📱 Mobile styles */
 @media (max-width: 768px) {
   .car-heading-text p {

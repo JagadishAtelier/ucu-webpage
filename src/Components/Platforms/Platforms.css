@@ -18,9 +18,13 @@
   align-items: center;
   padding: 0 3%;
 }
-
+.platform img:hover {
+  transform: scale(1.05); /* Zooms the image in by 5% */
+}
 /* Image */
 .platform img {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
   height: 515px;
   width: 100%;
   border-radius: 10px;

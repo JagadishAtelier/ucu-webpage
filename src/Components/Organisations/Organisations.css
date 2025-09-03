@@ -19,7 +19,7 @@
 .marquee-content {
   display: flex;
   gap: 3rem;
-  animation: marquee 45s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 
 @keyframes marquee {
@@ -49,4 +49,19 @@
   max-height: 50px;
   max-width: 100%;
   object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .brand-card {
+    width: 80px;
+    height: 50px;
+    margin: 0px 5px 10px 5px;
+  }
+  .brand-logo{
+    max-height: 30px;
+  }
+  .marquee-content{
+    gap: 1rem;
+      animation: marquee 10s linear infinite;
+  }
 }

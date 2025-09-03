@@ -69,7 +69,9 @@ function CareerSection() {
         {data.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="car-item-div" data-aos="fade-up" data-aos-delay={index * 200}>
-              <img src={item.image} alt={item.heading} />
+              <div className="car-image-wrapper">
+                <img src={item.image} alt={item.heading} />
+              </div>
               <div className="car-right">
                 <h1>{item.heading}</h1>
                 <p>{item.para}</p>

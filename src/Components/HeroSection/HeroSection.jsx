@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import AOS from "aos";
 import "./HeroSection.css";
 import image from "../../Assets/WhatsApp Image 2025-09-01 at 10.11.41_c995dc02.jpg";
 import image1 from "/slider-2.jpg";
@@ -30,24 +29,25 @@ const heroData = [
 ];
 
 function HeroSection() {
-  useEffect(() => {
-  AOS.init({
-    duration: 1000,  // animation speed
-    once: true,      // run only once
-    easing: "ease-in-out",
-  });
-}, []);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef(null);
+
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex);
+  };
 
   return (
     <>
       <div className="hero-section-container position-relative">
         <Swiper
           modules={[Navigation, Autoplay]}
+          onSlideChange={handleSlideChange}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           navigation={{
             nextEl: ".custom-next",
             prevEl: ".custom-prev",
           }}
-          // autoplay={{ delay: 4000, disableOnInteraction: false }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
           loop={true}
           slidesPerView={1}
         >
@@ -55,39 +55,35 @@ function HeroSection() {
             <SwiperSlide key={index}>
               <div className="hero-section-data-div">
                 <div
-                  className="hero-section-left"
-                  data-aos="fade-right"
-                  data-aos-delay="200"
+                  className={`hero-section-left ${
+                    index === activeIndex ? "slide-active" : ""
+                  }`}
                 >
-                  <h1>{data.header}</h1>
-                  <div className="hero-para-line-div">
+                  <h1 className="content-slide-in">{data.header}</h1>
+                  <div className="hero-para-line-div content-slide-in">
                     <div className="vertical-line"></div>
                     <p>{data.para}</p>
                   </div>
-                  <div className="hero-btn mt-4">
-                    <button
-                      className="hero-section-apply-btn fw-semibold"
-                      data-aos="zoom-in"
-                      data-aos-delay="400"
-                    >
+                  <div className="hero-btn mt-4 content-slide-in">
+                    <button className="hero-section-apply-btn fw-semibold">
                       APPLY NOW
                     </button>
-                    <button
-                      className="hero-section-download-btn fw-semibold"
-                      data-aos="zoom-in"
-                      data-aos-delay="600"
-                    >
+                    <button className="hero-section-download-btn fw-semibold">
                       DOWNLOAD BROCHURE
                     </button>
                   </div>
                 </div>
 
                 <div
-                  className="hero-image"
-                  data-aos="fade-left"
-                  data-aos-delay="300"
+                  className={`hero-image ${
+                    index === activeIndex ? "slide-active" : ""
+                  }`}
                 >
-                  <img src={data.images} alt="hero" />
+                  <img
+                    className="image-slide-in"
+                    src={data.images}
+                    alt="hero"
+                  />
                 </div>
               </div>
             </SwiperSlide>
@@ -102,7 +98,6 @@ function HeroSection() {
           <ChevronRight size={28} color="#fff" />
         </button>
       </div>
-
       <AnnoncementSection />
     </>
   );

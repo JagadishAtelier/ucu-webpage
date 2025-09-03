@@ -5,7 +5,9 @@ import image2 from "../../Assets/ucu-logos/Mask group-1.png";
 import image3 from "../../Assets/ucu-logos/Mask group-2.png";
 import image4 from "../../Assets/ucu-logos/Mask group-3.png";
 import image5 from "../../Assets/ucu-logos/Mask group-4.png";
+
 const images = [image1, image2, image3, image4, image5];
+
 function Brands() {
   return (
     <div className="brand-container">
@@ -19,13 +21,21 @@ function Brands() {
       </div>
 
       <div className="brands-div">
-        <div className="line"></div>
-        <div className="img-div">
-          {images.map((img, index) => (
-            <div key={index} className="img-item-div" data-aos="fade-up" data-aos-delay={index * 200}>
-              <img src={img} alt={`brand-${index}`} />
-            </div>
-          ))}
+        <div className="line mb-4"></div>
+        <div className="marquee">
+          <div className="marquee-content">
+            {images.map((img, index) => (
+              <div key={`first-${index}`} className="img-item-div">
+                <img src={img} alt={`brand-${index}`} />
+              </div>
+            ))}
+            {/* Duplicate images for infinite loop effect */}
+            {images.map((img, index) => (
+              <div key={`second-${index}`} className="img-item-div">
+                <img src={img} alt={`brand-${index}-duplicate`} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

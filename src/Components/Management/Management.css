@@ -1,54 +1,96 @@
-.management-container{
-    margin-top: 0%;
+.management-container {
+  margin-top: 0%;
 }
-.top-text-man{
-    font-size: 1.2rem;
-    margin-left: 3%;
-    margin-bottom: 2%;
+.top-text-man {
+  font-size: 1.2rem;
+  margin-left: 3%;
+  margin-bottom: 2%;
 }
-.man-data-div{
-    display: flex;
-    gap: 10px;
-    padding: 0 3%;
-    align-items: center;
-    flex-wrap: nowrap;
+.man-data-div {
+  display: flex;
+  gap: 10px;
+  padding: 0 3%;
+  align-items: center;
+  flex-wrap: nowrap;
 }
-.man-item-div-container{
-    background-image: url(../../Assets/banner-bg.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    background-color: #006DFF;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    border-radius: 10px;
+.man-item-div-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  background-color: #006dff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative; /* Crucial for positioning the pseudo-element */
+  z-index: 1; /* Ensures the content is on top */
 }
-.man-item-div-container img{
-    height: 300px;
-    width:300px;
-    object-fit: cover;
+
+/* Pseudo-element for the rotating background */
+.man-item-div-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../Assets/banner-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1; /* Adjust opacity for subtle effect */
+  z-index: -1; /* Place the pseudo-element behind the content */
+  /* Add the transition for the rotation */
+  transition: transform 0.6s ease-in-out;
 }
-.man-item-content{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    color: white;
+
+/* Rotate the pseudo-element on hover */
+.man-item-div-container:hover::before {
+  transform: translatex(50%) rotate(360deg);
 }
-.man-item-content h1{
-    font-size: 1.2rem;
-    font-weight: bold;
+.man-item-div-container:hover {
+  transform: translateY(-5px); /* Lifts the card slightly */
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Provides a more dramatic shadow */
 }
-.man-item-content p{
-    color: rgba(255, 255, 255, 0.801);
-    font-size: 0.9rem;
+
+.man-item-div-container img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  /* Add this for the zoom effect */
+  transition: transform 0.3s ease-in-out;
 }
-.EXPLORE-MDPS{
-    color: white;
-    text-decoration: underline;
-    cursor: pointer;
+
+.man-item-div-container:hover img {
+  transform: scale(1.05); /* Zooms in the image by 5% */
+}
+
+.man-item-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+.man-item-content h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.man-item-content p {
+  color: rgba(255, 255, 255, 0.801);
+  font-size: 0.9rem;
+}
+.EXPLORE-MDPS {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  /* Add a color transition for the link */
+  transition: color 0.3s ease-in-out;
+}
+
+.EXPLORE-MDPS:hover {
+  color: #74c61b; /* Changes link color on hover */
 }
 
 @media (max-width: 768px) {
@@ -57,7 +99,7 @@
     gap: 20px;
     flex-wrap: wrap;
   }
-  .top-text-man{
+  .top-text-man {
     text-align: center;
   }
 
