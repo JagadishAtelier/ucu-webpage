@@ -116,7 +116,7 @@
 }
 
 .EXPLORE-MDPS:hover {
-  color: #74c61b; /* Changes link color on hover */
+  color: #f1f1f1; /* Changes link color on hover */
 }
 
 @media (max-width: 768px) {

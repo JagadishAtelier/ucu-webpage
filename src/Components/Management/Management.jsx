@@ -9,12 +9,14 @@ const data = [
     image: image1,
     top: "Customised Programs",
     heading: "Customised Programs",
+    btntext: "Explore Coustomised Programs",
     para: "Short-term, intensive programs designed to build managerial and functional expertise across industries.",
   },
   {
     image: image2,
     top: "MDPS",
     heading: "MDPs – Management Development Programs",
+    btntext: "Explore MDPS",
     para: "Short-term, intensive programs designed to build managerial and functional expertise across industries.",
   },
 ];
@@ -47,7 +49,7 @@ function Management() {
                 <div className="man-item-content">
                   <h1>{item.heading}</h1>
                   <p>{item.para}</p>
-                  <a className="EXPLORE-MDPS">EXPLORE MDPS</a>
+                  <a className="EXPLORE-MDPS">{item.btntext}</a>
                 </div>
               </div>
             </div>
