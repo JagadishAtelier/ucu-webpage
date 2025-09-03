@@ -1,14 +1,20 @@
 .navbar-container {
   display: flex;
-  justify-content: space-evenly; /* keep logo left, menu/hamburger right */
+  justify-content: space-evenly;
   align-items: center;
   background-color: #161616;
   color: white;
   padding: 10px 20px;
+  position: relative; /* For submenu positioning */
+  z-index: 100; /* Ensure navbar is above other content */
 }
 
 .logo {
   height: 60px;
+}
+
+.logo-txt {
+  display: none; /* Hidden by default, shown on mobile */
 }
 
 .nav-links {
@@ -21,17 +27,75 @@
   text-decoration: none;
   color: white;
   font-size: 0.9rem;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
-.subPages-head {
-  display: flex;
-  gap: 10px;
+/* Base style for nav items that have submenus */
+.nav-item.has-submenu {
+  position: relative;
+  display: flex; /* To align the text and icon */
   align-items: center;
 }
 
-.subPages-head i {
-  font-size: 1rem;
-  color: white;
+.nav-item.has-submenu > a {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between text and chevron */
+}
+
+.nav-item.has-submenu i {
+  font-size: 0.8em; /* Smaller chevron icon */
+  transition: transform 0.3s ease;
+}
+
+/* Rotate chevron when submenu is active on desktop */
+.nav-item.has-submenu:hover > a i {
+  transform: rotate(180deg);
+}
+
+/* Submenu container styles */
+.submenu {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  background-color: #ffffff; /* White background for submenus */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  position: absolute;
+  top: 100%; /* Position below the parent nav item */
+  left: 50%;
+  transform: translateX(-50%); /* Center the submenu below its parent */
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 100; /* Ensure submenu is above other elements */
+  display: block; /* Managed by JS for mobile, or hidden by opacity/visibility */
+}
+
+/* Individual submenu item styles */
+.submenu li {
+  padding: 0 15px;
+}
+
+.submenu a {
+  color: #333; /* Dark text for submenu links */
+  padding: 8px 0;
+  display: block;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.submenu li:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+  color: #005bd4; /* Highlight color on hover */
+}
+
+/* Desktop: Show submenu on hover */
+.nav-item.has-submenu:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-25%) translateY(10px); /* Slight dropdown animation */
 }
 
 /* Hamburger button hidden on desktop */
@@ -43,21 +107,37 @@
   color: white;
   cursor: pointer;
 }
-.logo-txt{
-  display: none;
+
+/* Triangle "arrow" for the submenu */
+.nav-item.has-submenu:hover .submenu::before {
+  content: "";
+  position: absolute;
+  top: -6px; /* Position above the submenu */
+  left: 13%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff; /* Match submenu background */
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for the triangle */
+  z-index: 101; /* Above submenu */
+  border-radius: 2px; /* Slight roundness */
 }
 
+
 /* ✅ Mobile styles */
-@media (max-width: 768px) {
-  .logo-txt{
+@media (max-width: 992px) { /* Adjust breakpoint as needed */
+  .logo-txt {
     display: block;
     margin: 0;
     font-weight: 500;
     font-size: 1rem;
+    flex-grow: 1; /* Allows it to take available space */
+    text-align: center;
   }
-    .navbar-container{
-        justify-content: space-between;
-    }
+  .navbar-container {
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
   .hamburger {
     display: block; /* show on mobile */
   }
@@ -68,18 +148,77 @@
     width: 100%;
     background: #161616;
     position: absolute;
-    top: 70px; /* below navbar */
+    top: 80px; /* Adjusted to be below fixed navbar */
     left: 0;
     padding: 20px 0;
-    gap: 20px;
+    gap: 15px; /* Smaller gap on mobile */
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: calc(100vh - 80px); /* Limit height for scrollability */
+    overflow-y: auto; /* Enable scrolling for long menus */
   }
 
   .nav-links.open {
     display: flex; /* show when toggled */
   }
 
-  .nav-links i {
-    margin-left: 5px;
+  /* Mobile specific submenu behavior */
+  .nav-item.has-submenu {
+    width: 100%; /* Full width for mobile menu items */
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator */
+    padding-bottom: 10px;
+  }
+
+  .nav-item.has-submenu > a {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .submenu {
+    position: static; /* Remove absolute positioning */
+    transform: none; /* Remove transform */
+    opacity: 1; /* Always visible if active */
+    visibility: visible; /* Always visible if active */
+    background-color: #2a2a2a; /* Slightly different background for submenus on mobile */
+    width: 90%; /* Smaller width for nested items */
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out; /* Animate height */
+    border-radius: 5px;
+    box-shadow: none; /* No shadow for mobile submenu */
+  }
+
+  /* Show mobile submenu when active */
+  .nav-item.has-submenu.active .submenu {
+    max-height: 300px; /* Adjust max height to fit content */
+    padding: 10px 0;
+  }
+
+  .submenu li {
+    padding: 0;
+  }
+
+  .submenu a {
+    color: white; /* White text for mobile submenu links */
+    padding: 8px 20px;
+    text-align: center;
+  }
+
+  .submenu a:hover {
+    background-color: #3a3a3a;
+    color: #74c61b;
+  }
+
+  /* Hide the triangle arrow on mobile */
+  .nav-item.has-submenu .submenu::before {
+    display: none;
+  }
+
+  /* Rotate chevron when submenu is active on mobile */
+  .nav-item.has-submenu.active > a i {
+    transform: rotate(180deg);
   }
 }
