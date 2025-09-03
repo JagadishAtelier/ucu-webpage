@@ -40,9 +40,7 @@ function HomePage() {
       </div>
 
       {/* Platforms */}
-      <div data-aos="zoom-in" data-aos-delay="100">
-        <Platforms />
-      </div>
+
 
       {/* Banner */}
       <div data-aos="fade-up" data-aos-delay="200">

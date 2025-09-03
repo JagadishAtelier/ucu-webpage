@@ -1,5 +1,31 @@
+.bg-img {
+  position: relative; /* Essential for positioning the pseudo-element */
+  overflow: hidden;   /* Optional: If you want to clip any overflow from the flipped image */
+  /* Remove existing background-image properties from here */
+  /* background-image: url(../../Assets/bg-watermark.png); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center top; */
+  /* background-size: contain; */
+  /* Add any other styles for the .bg-img container itself, e.g., padding, height */
+}
+
+.bg-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../Assets/bg-watermark.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  transform: scaleY(-1); /* Flips the background image upside down */
+  z-index: -1; /* Ensures the flipped background is behind the content */
+}
 .management-container {
   margin-top: 0%;
+
 }
 .top-text-man {
   font-size: 1.2rem;

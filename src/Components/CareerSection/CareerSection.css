@@ -130,6 +130,9 @@
 }
 /* 📱 Mobile styles */
 @media (max-width: 768px) {
+  .car-image-wrapper {
+     height: auto; 
+  }
   .car-heading-text p {
     width: 90%; /* shrink paragraph width on mobile */
     font-size: 0.9rem;
