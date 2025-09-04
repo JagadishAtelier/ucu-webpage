@@ -6,22 +6,23 @@ import "aos/dist/aos.css";
 
 const data = [
   {
-    head: "PGDM Online",
-    text: "Flexible, online versions of UCU’s programs with the same academic rigor, designed for professionals who prefer learning at their own pace.",
+    head: "Sales",
+    text: "Master the art of persuasion and relationship-building with a program that equips you with modern sales strategies, negotiation skills, and customer engagement techniques to drive measurable business growth.",
   },
   {
-    head: "PGPM Online",
-    text: "Flexible, online versions of UCU’s programs with the same academic rigor, designed for professionals who prefer learning at their own pace.",
+    head: "Product Management",
+    text: "Gain end-to-end expertise in product strategy, development, and lifecycle management. This program empowers you to bridge business, technology, and user needs to launch and scale successful products.",
   },
   {
-    head: "Diploma Programs Online",
-    text: "Flexible, online versions of UCU’s programs with the same academic rigor, designed for professionals who prefer learning at their own pace.",
+    head: "Cybersecurity",
+    text: "Stay ahead in the digital age with a program designed to build strong foundations in network security, risk management, and ethical hacking, preparing you to protect organizations from evolving cyber threats.",
   },
   {
-    head: "Executive Education Online",
-    text: "Flexible, online versions of UCU’s programs with the same academic rigor, designed for professionals who prefer learning at their own pace.",
+    head: "Digital Marketing",
+    text: "Learn how to create data-driven campaigns, master SEO, SEM, and social media strategies, and harness analytics to reach wider audiences and build powerful digital brands in a competitive marketplace.",
   },
 ];
+
 
 function Platforms() {
   const [openIndex, setOpenIndex] = useState(0);

@@ -7,15 +7,15 @@ import Platforms from "../Platforms/Platforms";
 const data = [
   {
     image: image1,
-    top: "Customised Programs",
-    heading: "Customised Programs",
+    top: "Customised Learning Programs for Corporate Professionals",
+    heading: "Customised Learning Programs for Corporate Professionals",
     btntext: "Explore Coustomised Programs",
     para: "Short-term, intensive programs designed to build managerial and functional expertise across industries.",
   },
   {
     image: image2,
-    top: "MDPS",
-    heading: "MDPs – Management Development Programs",
+    top: "Management Development Programs (MDPs)",
+    heading: "Management Development Programs (MDPs)",
     btntext: "Explore MDPS",
     para: "Short-term, intensive programs designed to build managerial and functional expertise across industries.",
   },
