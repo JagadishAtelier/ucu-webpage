@@ -1,0 +1,43 @@
+.why-aim-section {
+  background: #fff;
+  color: #000;
+}
+
+.why-aim-section h2 {
+  font-size: 2rem;
+}
+
+.why-aim-section .lead {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.sub-head{
+    margin: 0 auto;
+    max-width: 900px !important;
+}
+.why-aim-section h5 {
+  color: #222;
+  transition: all 0.5ms ease-in-out ;
+}
+.why-card{
+    cursor: pointer;
+}
+.why-card:hover h5 {
+    color: #005BD4;
+}
+.why-card p {
+  color: #888;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  transition: all 0.3ms ease-in-out ;
+}
+.why-card:hover p{
+    color: #444;
+}
+
+.why-aim-section p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+}

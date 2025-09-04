@@ -1,0 +1,14 @@
+import ProgramBanner from "../Components/ProgramBanner/ProgramBanner"
+import ProgramsTab from "../Components/ProgramsTab/ProgramsTab"
+import WhyUCU from "../Components/WhyUCU/WhyUCU.JSX"
+
+const Program = () => {
+  return (
+    <>
+    <ProgramBanner />
+    <ProgramsTab />
+    <WhyUCU/>
+    </>
+  )
+}
+export default Program

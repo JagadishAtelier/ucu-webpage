@@ -1,0 +1,149 @@
+.masters-programs {
+ background-image: url(/src/Assets/bg-watermark.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+}
+.masters-programs .program-list {
+  border-left: 2px solid #b2bed1;
+  padding-left: 10px;
+}
+
+.masters-programs .program-item {
+  padding: 8px 0;
+  cursor: pointer;
+  color: #666;
+  transition: 0.3s;
+}
+
+.masters-programs .program-item:hover {
+  color: #000;
+}
+
+.masters-programs .program-item.active {
+  font-weight: 600;
+  color: #000;
+  border-left: 3px solid #3441b8;
+  padding-left: 7px;
+}
+
+.masters-programs .program-info {
+  background: #2c2054;
+  color: #fff;
+}
+
+.masters-programs .program-info ul {
+  padding-left: 18px;
+}
+
+.masters-programs .learn-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.masters-programs .learn-more:hover {
+  color: #ddd;
+}
+
+/* ---- Animation ---- */
+.fade-slide {
+  animation: fadeSlide 0.6s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Card container */
+.program-card {
+  background: #0059d1; /* elegant deep purple */
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+/* Image section */
+.program-card-image img {
+  max-height: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Content */
+.program-card-body {
+  /* background: linear-gradient(180deg, #2c2054 0%, #1d163a 100%); */
+  background: linear-gradient(180deg, #005BD4 0%, #003C8F 100%);
+
+}
+
+.program-card-body h3 {
+  color: #fff;
+}
+
+.program-card-body p {
+  color: #d4d0e8;
+}
+.program-card-body{
+    position: relative;
+    z-index: 0;
+}
+.program-card-body::before{
+    content: "";
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 100vh;
+  height: 100vh;
+  background-image: url(../../Assets/banner-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1; /* Adjust opacity for subtle effect */
+  z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+.program-meta h6,
+.program-who h6 {
+  color: #ebe7f7;
+}
+
+.program-meta ul li {
+  font-size: 0.95rem;
+    color: #dfd6f8;
+}
+
+/* Button */
+.program-card .btn {
+  border-radius: 30px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.program-card .btn:hover {
+  background: #fff;
+  color: #2c2054;
+}
+/* Sticky Sidebar */
+.sticky-sidebar {
+  position: sticky;
+  top: 100px; /* Adjust offset for navbar/header */
+}
+
+/* Ensure parent has height */
+.masters-programs {
+  position: relative;
+}
