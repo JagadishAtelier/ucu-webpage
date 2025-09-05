@@ -1,0 +1,191 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #161616;
+  color: white;
+  padding: 0.75rem 1rem;
+  position: relative;
+  z-index: 50;
+}
+
+.logo {
+  height: 60px;
+}
+
+.nav-center {
+  flex: 1;
+  display: flex !important;
+  justify-content: center;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.desktop-menu {
+  display: none !important;
+}
+.mobile-toggle {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #000000;
+  padding: 1rem;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-item {
+  margin: 0.25rem 0;
+}
+.menu-btn,
+.menu-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  font-weight: 300;
+  font-size: 0.9rem;
+  border: none;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.menu ul {
+  padding-left: 1rem;
+}
+
+/* responsive */
+@media (min-width: 992px) {
+  .desktop-menu {
+    display: flex !important;
+  }
+  .mobile-toggle,
+  .mobile-menu {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+  .menu ul {
+    position: absolute;
+    display: none;
+    background: #1b1b1b;
+    padding: 0.5rem 1rem;
+  }
+  .menu-item:hover > ul {
+    display: block;
+  }
+}
+/* Submenu base */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #222;
+  min-width: 220px;
+  z-index: 1000;
+  display: none;
+}
+
+/* Direction */
+.submenu.right {
+  left: 100%;
+}
+.submenu.left {
+  right: 100%;
+}
+
+/* Desktop: open on hover */
+@media (min-width: 992px) {
+  .menu-item:hover > .submenu {
+    display: block;
+  }
+}
+
+/* Mobile: React controls submenu visibility */
+@media (max-width: 991px) {
+  .submenu {
+    position: static;
+    display: none; /* default hidden */
+  }
+  .submenu.open {
+    display: block; /* React adds "open" class */
+  }
+}
+
+/* --- Fix for desktop submenus --- */
+@media (min-width: 992px) {
+  /* Set the parent to relative for proper positioning */
+  .menu-item {
+    position: relative;
+  }
+
+  /* Make sure the main menu item list has proper spacing */
+  .menu.depth-0 > .menu-item > .menu {
+    top: 100%;
+    left: 0;
+  }
+
+  /* Target the submenus (depth-1, depth-2, etc.) */
+  .menu.depth-1,
+  .menu.depth-2,
+  .menu.depth-3 {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Position to the right of the parent item */
+    min-width: 220px;
+    background: #222;
+    z-index: 1000;
+  }
+
+  /* Add a small offset for better visual separation */
+  .menu.depth-1 {
+    top: 0;
+  }
+}
+
+/* Make sure mobile submenus behave correctly */
+@media (max-width: 991px) {
+  .menu ul {
+    /* For mobile, use static positioning and indentation */
+    position: static;
+    padding-left: 1.5rem; /* Indent deeper submenus */
+  }
+}
+
+/* Remove or update these since they're redundant */
+.submenu {
+  /* This is being replaced by the more specific selectors above */
+  display: none;
+}
+.menu-item:hover > ul {
+  display: block;
+}
+@media (min-width: 992px) {
+  /* If it's near the right side of the navbar, open left */
+  .nav-center > .menu > .menu-item:last-child ul ul {
+    left: auto;
+    right: 100%; /* open to the left */
+  }
+}

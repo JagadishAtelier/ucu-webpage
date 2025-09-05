@@ -52,7 +52,7 @@ const Home = () => {
       </div>
 
       {/* Brands */}
-      <div data-aos="zoom-in" data-aos-delay="300">
+      <div data-aos="zoom-in pt-5" data-aos-delay="300">
         <Brands />
       </div>
 

@@ -1,159 +1,87 @@
 import { useState } from "react";
+import { menuData as menuItems } from "./menuData";
 import "./Navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState(null);
 
-  const handleSubMenuToggle = (menuName) => {
-    setActiveSubMenu(activeSubMenu === menuName ? null : menuName);
+   const handleSubMenuToggle = (key) => {
+    setActiveSubMenu((prev) => (prev === key ? null : key));
   };
+
+  const renderMenu = (items, level = 0, parentLabel = "") => (
+    <ul className={`submenu level-${level}`}>
+      {items.map((item) => {
+        const key = `${parentLabel}-${item.label}`;
+
+        return (
+          <li
+            key={key}
+            className={item.submenu ? "nav-item has-submenu" : "nav-item"}
+            onMouseEnter={() => !menuOpen && setActiveSubMenu(key)}
+            onMouseLeave={() => !menuOpen && setActiveSubMenu(null)}
+            onClick={() => menuOpen && handleSubMenuToggle(key)}
+          >
+            {item.submenu ? (
+              <>
+                <a
+                  href={item.link || "#"}
+                  onClick={(e) => e.preventDefault()}
+                >
+                  {item.label} <i className="bi bi-chevron-down"></i>
+                </a>
+                {/* ✅ Show only when active */}
+                {activeSubMenu === key && renderMenu(item.submenu, level + 1, key)}
+              </>
+            ) : (
+              <a href={item.link}>{item.label}</a>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
 
   return (
     <div className="navbar-container">
       <a href="/">
         <img src="/logo.png" alt="logo" className="logo" />
       </a>
-
-      <p className="logo-txt">Universal Corporate University </p>
-
-      <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        <i className="bi bi-list"></i>
-      </button>
+      <p className="logo-txt">Universal Corporate University</p>
 
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <a href="/">Home</a>
+        {menuItems.map((menu) => (
+          <div
+            key={menu.label}
+            className={`nav-item ${menu.submenu ? "has-submenu" : ""}`}
+            onMouseEnter={() => !menuOpen && setActiveSubMenu(menu.label)}
+            onMouseLeave={() => !menuOpen && setActiveSubMenu(null)}
+            onClick={() => menuOpen && handleSubMenuToggle(menu.label)}
+          >
+            {menu.submenu ? (
+              <>
+                <a href={menu.link || "#"} onClick={(e) => e.preventDefault()}>
+                  {menu.label} <i className="bi bi-chevron-down"></i>
+                </a>
+                {/* ✅ Show only active submenu */}
+                {activeSubMenu === menu.label &&
+                  renderMenu(menu.submenu, 1, menu.label)}
+              </>
+            ) : (
+              <a href={menu.link}>{menu.label}</a>
+            )}
+          </div>
+        ))}
+      </div>
 
-        {/* About UCU Submenu */}
-        <div
-          className={`nav-item has-submenu ${
-            activeSubMenu === "about" ? "active" : ""
-          }`}
-          onMouseEnter={() => !menuOpen && setActiveSubMenu("about")}
-          onMouseLeave={() => !menuOpen && setActiveSubMenu(null)}
-          onClick={() => menuOpen && handleSubMenuToggle("about")}
-        >
-          <a href="#" onClick={(e) => e.preventDefault()}>
-            About UCU <i className="bi bi-chevron-down"></i>
-          </a>
-          <ul className="submenu">
-            <li>
-              <a href="/about-us">About Us</a>
-            </li>
-            <li>
-              <a href="/advisory-council">Advisory Council</a>
-            </li>
-            <li>
-              <a href="/faculty">Faculty</a>
-            </li>
-            <li>
-              <a href="/committees-clubs">Committees & Clubs</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Programs Submenu */}
-        <div
-          className={`nav-item has-submenu ${
-            activeSubMenu === "programs" ? "active" : ""
-          }`}
-          onMouseEnter={() => !menuOpen && setActiveSubMenu("programs")}
-          onMouseLeave={() => !menuOpen && setActiveSubMenu(null)}
-          onClick={() => menuOpen && handleSubMenuToggle("programs")}
-        >
-          <a href="#" onClick={(e) => e.preventDefault()}>
-            Programs <i className="bi bi-chevron-down"></i>
-          </a>
-          <ul className="submenu">
-            <li>
-              <a href="/full-time">Full-Time</a>
-            </li>
-            <li>
-              <a href="/diploma">Diploma</a>
-            </li>
-            <li>
-              <a href="/executive-education">Executive Education</a>
-            </li>
-            <li>
-              <a href="/e-learning">E-Learning</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Corporate Connect Submenu */}
-        <div
-          className={`nav-item has-submenu ${
-            activeSubMenu === "corporate" ? "active" : ""
-          }`}
-          onMouseEnter={() => !menuOpen && setActiveSubMenu("corporate")}
-          onMouseLeave={() => !menuOpen && setActiveSubMenu(null)}
-          onClick={() => menuOpen && handleSubMenuToggle("corporate")}
-        >
-          <a href="#" onClick={(e) => e.preventDefault()}>
-            Corporate connect <i className="bi bi-chevron-down"></i>
-          </a>
-          <ul className="submenu">
-            <li>
-              <a href="/placements">Placements</a>
-            </li>
-            <li>
-              <a href="/corporate-lecture-series">Corporate Lecture Series</a>
-            </li>
-            <li>
-              <a href="/partnerships">Partnerships</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Insights Submenu */}
-        <div
-          className={`nav-item has-submenu ${
-            activeSubMenu === "insights" ? "active" : ""
-          }`}
-          onMouseEnter={() => !menuOpen && setActiveSubMenu("insights")}
-          onMouseLeave={() => !menuOpen && setActiveSubMenu(null)}
-          onClick={() => menuOpen && handleSubMenuToggle("insights")}
-        >
-          <a href="#" onClick={(e) => e.preventDefault()}>
-            Insights <i className="bi bi-chevron-down"></i>
-          </a>
-          <ul className="submenu">
-            <li>
-              <a href="/news-blogs">News & Blogs</a>
-            </li>
-            <li>
-              <a href="/events">Events</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Admissions Submenu */}
-        <div
-          className={`nav-item has-submenu ${
-            activeSubMenu === "admissions" ? "active" : ""
-          }`}
-          onMouseEnter={() => !menuOpen && setActiveSubMenu("admissions")}
-          onMouseLeave={() => !menuOpen && setActiveSubMenu(null)}
-          onClick={() => menuOpen && handleSubMenuToggle("admissions")}
-        >
-          <a href="#" onClick={(e) => e.preventDefault()}>
-            Admissions <i className="bi bi-chevron-down"></i>
-          </a>
-          <ul className="submenu">
-            <li>
-              <a href="/admission-process">Admission Process</a>
-            </li>
-            <li>
-              <a href="/scholarships">Scholarships</a>
-            </li>
-            <li>
-              <a href="/apply-now">Apply Now</a>
-            </li>
-          </ul>
-        </div>
-
-        <a href="/contact-us">Contact Us</a>
-        <i className="bi bi-search"></i>
+      <div
+        className={`hamburger ${menuOpen ? "open" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   );

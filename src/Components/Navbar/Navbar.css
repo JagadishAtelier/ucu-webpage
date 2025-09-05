@@ -19,14 +19,15 @@
 
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 15px;
   align-items: center;
 }
 
 .navbar-container a {
   text-decoration: none;
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 300;
   white-space: nowrap;
 }
 
@@ -216,4 +217,31 @@
   .nav-item.has-submenu.active > a i {
     transform: rotate(180deg);
   }
+}
+/* Nested submenus */
+.submenu.level-1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.submenu.level-2 {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 5px;
+}
+
+.submenu.level-3 {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 5px;
+}
+
+.submenu.level-2,
+.submenu.level-3 {
+  background-color: #ffffff;
+  border-radius: 6px;
+  min-width: 200px;
 }

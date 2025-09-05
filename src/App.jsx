@@ -10,6 +10,7 @@ import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Program from "./Pages/Program";
+import NavbarNew from "./Components/Navbar/NavbarNew";
 
 function App() {
   useEffect(() => {
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
+      <NavbarNew />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/full-time" element={<Program />} />

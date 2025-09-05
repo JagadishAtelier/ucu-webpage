@@ -43,7 +43,7 @@ function Events() {
   }, []);
 
   return (
-    <div className="eve-platforms-container">
+    <div className="eve-platforms-container pb-5">
       <div className="event-header" data-aos="fade-down">
         <h1>Recent Events</h1>
         <div className="event-header-left">

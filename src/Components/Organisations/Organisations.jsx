@@ -26,7 +26,7 @@ export default function Organisations() {
       });
     }, []);
   return (
-    <section className="pt-5 text-center">
+    <section className="pb-5 text-center">
       <h2 className="mb-5 fw-semibold">Our Students at</h2>
 
       <div className="marquee">

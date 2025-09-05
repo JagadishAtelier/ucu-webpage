@@ -1,13 +1,13 @@
 .hero-section-data-div {
   display: flex;
   background-color: #005bd4;
-  max-height: 504px;
+  height: 80vh;
 }
 .hero-image {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  width: 98%;
+  width: 100%;
 }
 
 /* Main Image */
@@ -37,7 +37,7 @@
   flex-direction: column;
   gap: 10px;
   align-items: start;
-  margin-left: 10%;
+  margin-left: 6%;
 }
 
 .hero-section-left::before {
@@ -65,16 +65,17 @@
   }
 }
 .hero-section-left h1 {
-  width: 90%;
+  width: 100%;
   color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: 800;
 }
 .hero-section-left p {
-  width: 70%;
+  width: 80%;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0;
+  font-weight: 400;
 }
 .hero-btn {
   display: flex;
@@ -200,7 +201,7 @@
   }
 
   .hero-section-left {
-    width: 100%;
+    width: 90%;
     text-align: center;
     align-items: center;
     padding: 20px;

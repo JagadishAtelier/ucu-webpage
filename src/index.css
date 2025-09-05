@@ -1,4 +1,139 @@
+/* Regular */
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-Regular-TRIAL.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-Regular-Italic-TRIAL.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Medium */
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-Medium-TRIAL.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-Medium-Italic-TRIAL.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-Bold-TRIAL.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-Bold-Italic-TRIAL.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Black */
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-Black-TRIAL.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-Black-Italic-TRIAL.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Light */
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-Light-TRIAL.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-Light-Italic-TRIAL.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* ExtraLight */
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-ExtraLight-TRIAL.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-ExtraLight-Italic-TRIAL.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* UltraLight */
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-UltraLight-TRIAL.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-UltraLight-Italic-TRIAL.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* ExtraBold */
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-ExtraBold-TRIAL.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcidGrotesk";
+  src: url("/fonts/FFF-AcidGrotesk-ExtraBold-Italic-TRIAL.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+
+
 body {
+    font-family: "AcidGrotesk", sans-serif !important;
 overflow-x: hidden;
 margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: "AcidGrotesk", sans-serif !important;
+  margin: 0;
+  font-weight: 800;
+  color: #011225;
+}
+p{
+  font-family: "AcidGrotesk", sans-serif !important;
+  margin: 0;
+  font-weight: 300 !important;
+  /* color: #022043 ; */
 }

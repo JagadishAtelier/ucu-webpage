@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./HeroSection.css";
-import image from "../../Assets/WhatsApp Image 2025-09-01 at 10.11.41_c995dc02.jpg";
+import image from "/slider-1.jpg";
 import image1 from "/slider-2.jpg";
 import image2 from "/slider-3.jpg";
 import AnnoncementSection from "../AnnoncementSection/AnnoncementSection";
@@ -98,7 +98,7 @@ function HeroSection() {
           <ChevronRight size={28} color="#fff" />
         </button>
       </div>
-      <AnnoncementSection />
+      {/* <AnnoncementSection /> */}
     </>
   );
 }

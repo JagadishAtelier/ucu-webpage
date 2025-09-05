@@ -10,7 +10,7 @@ const images = [image1, image2, image3, image4, image5];
 
 function Brands() {
   return (
-    <div className="brand-container">
+    <div className="brand-container my-3">
       <div className="car-heading-text banner-text">
         <h1>Industry–Academia Collaboration</h1>
         <p>
@@ -23,7 +23,7 @@ function Brands() {
       <div className="brands-div">
         <div className="line mb-4"></div>
         <div className="marquee">
-          <div className="marquee-content">
+          <div className="marquee-content-brands">
             {images.map((img, index) => (
               <div key={`first-${index}`} className="img-item-div">
                 <img src={img} alt={`brand-${index}`} />
