@@ -21,6 +21,26 @@ const data = [
     head: "Digital Marketing",
     text: "Learn how to create data-driven campaigns, master SEO, SEM, and social media strategies, and harness analytics to reach wider audiences and build powerful digital brands in a competitive marketplace.",
   },
+  {
+    head: "Mobilty & Sustainability",
+    text: "Learn how to create data-driven campaigns, master SEO, SEM, and social media strategies, and harness analytics to reach wider audiences and build powerful digital brands in a competitive marketplace.",
+  },
+  {
+    head: "Consulting",
+    text: "Learn how to create data-driven campaigns, master SEO, SEM, and social media strategies, and harness analytics to reach wider audiences and build powerful digital brands in a competitive marketplace.",
+  },
+  {
+    head: "Banking & Finance",
+    text: "Learn how to create data-driven campaigns, master SEO, SEM, and social media strategies, and harness analytics to reach wider audiences and build powerful digital brands in a competitive marketplace.",
+  },
+  {
+    head: "Business Analytics",
+    text: "Learn how to create data-driven campaigns, master SEO, SEM, and social media strategies, and harness analytics to reach wider audiences and build powerful digital brands in a competitive marketplace.",
+  },
+  {
+    head: "Data Science",
+    text: "Learn how to create data-driven campaigns, master SEO, SEM, and social media strategies, and harness analytics to reach wider audiences and build powerful digital brands in a competitive marketplace.",
+  },
 ];
 
 

@@ -10,6 +10,7 @@ import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Program from "./Pages/Program";
+import AboutPage from "./Pages/AboutPage/AboutPage";
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/full-time" element={<Program />} />
+        <Route path="/about-ucu" element={<AboutPage/>} />
       </Routes>
       {/* Footer */}
       <div data-aos="fade-up" data-aos-delay="400">
