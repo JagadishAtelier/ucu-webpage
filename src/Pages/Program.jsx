@@ -1,6 +1,6 @@
 import ProgramBanner from "../Components/ProgramBanner/ProgramBanner"
 import ProgramsTab from "../Components/ProgramsTab/ProgramsTab"
-import WhyUCU from "../Components/WhyUCU/WhyUCU.JSX"
+import WhyUCU from "../Components/WhyUCU/WhyUCU"
 
 const Program = () => {
   return (
