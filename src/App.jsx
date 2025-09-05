@@ -10,6 +10,7 @@ import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Program from "./Pages/Program";
+import AboutPage from "./Pages/AboutPage/AboutPage";
 import NavbarNew from "./Components/Navbar/NavbarNew";
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
       <NavbarNew />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/full-time" element={<Program />} />
+        <Route path="/pgpm-elite" element={<Program />} />
+        <Route path="/about-ucu" element={<AboutPage/>} />
       </Routes>
       {/* Footer */}
       <div data-aos="fade-up" data-aos-delay="400">

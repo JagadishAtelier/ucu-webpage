@@ -10,22 +10,22 @@ function Footer() {
             <img src={image}/>
             <div className='icon-text-div'>
                 <div className='icon-text'>
-                    <i class="bi bi-geo-alt"></i>
+                    <i className="bi bi-geo-alt"></i>
                     <p>1810 Campus Way NE Arizon</p>
 
                 </div>
                 <div className='icon-text'>
-                    <i class="bi bi-telephone"></i>
+                    <i className="bi bi-telephone"></i>
                     <p>+09876 43210</p>
                 </div>
             </div>
             <div className='social-text'>
                 <p>Social Media</p>
                 <div className='icon-social'>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-facebook"></i>
-                <i class="bi bi-linkedin"></i>
-                <i class="bi bi-youtube"></i>
+                <i className="bi bi-instagram"></i>
+                <i className="bi bi-facebook"></i>
+                <i className="bi bi-linkedin"></i>
+                <i className="bi bi-youtube"></i>
                 </div>
             </div>
             <div className='input-text'>

@@ -1,0 +1,8 @@
+.about-tour-icon{
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+}
+.about-tour-img{
+    border-radius: 10px;
+}
