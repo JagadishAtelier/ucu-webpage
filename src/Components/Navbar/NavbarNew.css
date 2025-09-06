@@ -4,7 +4,7 @@
   justify-content: space-between;
   background: #f1f1f1;
   color: rgb(17, 17, 17);
-  padding: 1.5rem 3rem;
+  padding: 1.5rem ;
   position: relative;
   z-index: 50;
   /* border-radius: 0 0 20px 20px; */
@@ -37,7 +37,7 @@
   display: block;
   background: none;
   border: none;
-  color: white;
+  color: #222;
 }
 
 .mobile-menu {
@@ -45,7 +45,7 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background: #000000;
+  background: #f1f1f1;
   padding: 1rem;
 }
 
@@ -86,10 +86,22 @@
 .logo-item .logo {
   height: 70px;
 }
-
+.mobile-logo {
+  display: flex;
+  align-items: center;
+}
+.mobile-logo .logo {
+  height: 50px;
+}
 
 /* responsive */
 @media (min-width: 992px) {
+  .navbar{
+    padding: 1.5rem 3rem;
+  }
+  .mobile-logo {
+    display: none; /* Hide mobile logo on desktop */
+  }
   .desktop-menu {
     display: flex !important;
   }

@@ -62,6 +62,11 @@ const NavbarNew = () => {
 
   return (
     <nav className="navbar">
+          <div className="nav-left mobile-logo">
+        <a href="/">
+          <img src="/logo1.png" alt="Logo" className="logo" />
+        </a>
+      </div>
       {/* Desktop Menu */}
       <div className="nav-center desktop-menu">
         <ul className="menu depth-0">
