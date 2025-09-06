@@ -1,0 +1,21 @@
+.stats-section {
+  background-color: #f6f6f6;
+}
+
+.stats-box {
+  padding: 20px 10px;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #004fba; /* dark red tone like screenshot */
+  margin: 0;
+}
+
+.stat-label {
+  margin-top: .8rem;
+  font-size: 0.95rem;
+  font-weight: 400 !important;
+  color: #555;
+}

@@ -115,6 +115,15 @@ export const menuData = [
     ],
   },
   {
+    label: "Campus Placements",
+    submenu: [
+      { label: "Recruiting Partners", link: "/placements/recruiters" },
+      { label: "Placement Reports", link: "/placements/reports" },
+      { label: "Corporate Testimonials", link: "/placements/testimonials" },
+      { label: "Summer Internships", link: "/placements/internships" },
+      { label: "Live Projects", link: "/placements/projects" },
+    ],
+  },{
     label: "Faculty",
     submenu: [
       {
@@ -134,16 +143,6 @@ export const menuData = [
       { label: "Professors of Practice (PoP)", link: "/faculty/pop" },
       { label: "Associate & Assistant Faculty", link: "/faculty/associate" },
       { label: "Research", link: "/faculty/research" },
-    ],
-  },
-  {
-    label: "Campus Placements",
-    submenu: [
-      { label: "Recruiting Partners", link: "/placements/recruiters" },
-      { label: "Placement Reports", link: "/placements/reports" },
-      { label: "Corporate Testimonials", link: "/placements/testimonials" },
-      { label: "Summer Internships", link: "/placements/internships" },
-      { label: "Live Projects", link: "/placements/projects" },
     ],
   },
   {

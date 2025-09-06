@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 const data = [
   {
@@ -36,6 +37,7 @@ const data = [
 ];
 
 function CareerSection() {
+  const navigate = useNavigate();
   useEffect(() => {
     AOS.init({
       duration: 1000, // animation duration
@@ -76,8 +78,8 @@ function CareerSection() {
                 <h1>{item.heading}</h1>
                 <p>{item.para}</p>
                 <div className="car-explore-btn-div">
-                  <button className="btn btn-outline-dark py-2">EXPLORE PGDM</button>
-                  <button className="btn car-apply-btn py-2">APPLY NOW</button>
+                  <button onClick={()=>navigate('/pgpm-elite')} className="btn btn-outline-dark py-2">EXPLORE PGDM</button>
+                  <button onClick={()=>navigate('/pgdm')} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>
             </div>

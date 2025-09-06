@@ -42,7 +42,8 @@ const NavbarNew = () => {
                     <ChevronRight size={16} />
                   )}
                 </button>
-                {openMenus[item.label] && renderMenuItems(item.submenu, depth + 1)}
+                {openMenus[item.label] &&
+                  renderMenuItems(item.submenu, depth + 1)}
               </>
             ) : (
               <a href={item.link} className="menu-link">
@@ -55,18 +56,66 @@ const NavbarNew = () => {
     );
   };
 
+  // Split menuData into two parts (first 5, then rest)
+  const firstHalf = menuData.slice(0, 5);
+  const secondHalf = menuData.slice(5);
+
   return (
     <nav className="navbar">
-      {/* Logo */}
-      <div className="nav-left">
-        <a href="/">
-          <img src="/logo.png" alt="Logo" className="logo" />
-        </a>
-      </div>
-
       {/* Desktop Menu */}
       <div className="nav-center desktop-menu">
-        {renderMenuItems(menuData)}
+        <ul className="menu depth-0">
+          {firstHalf.map((item, idx) => (
+            <li key={idx} className="menu-item">
+              {item.submenu ? (
+                <>
+                  <button
+                    className="menu-btn"
+                    onClick={() => toggleSubmenu(item.label)}
+                  >
+                    {item.label}
+                    <ChevronDown size={16} />
+                  </button>
+                  {openMenus[item.label] &&
+                    renderMenuItems(item.submenu, 1)}
+                </>
+              ) : (
+                <a href={item.link} className="menu-link">
+                  {item.label}
+                </a>
+              )}
+            </li>
+          ))}
+
+          {/* Logo in center */}
+          <li className="menu-item logo-item">
+            <a href="/">
+              <img src="/logo2.png" alt="Logo" className="logo" />
+            </a>
+          </li>
+
+          {secondHalf.map((item, idx) => (
+            <li key={idx} className="menu-item">
+              {item.submenu ? (
+                <>
+                  <button
+                    className="menu-btn"
+                    onClick={() => toggleSubmenu(item.label)}
+                  >
+                    {item.label}
+                    <ChevronDown size={16} />
+                  </button>
+                  {openMenus[item.label] &&
+                    renderMenuItems(item.submenu, 1)}
+                </>
+              ) : (
+                <a href={item.link} className="menu-link">
+                  {item.label}
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Right side icons */}
@@ -80,9 +129,7 @@ const NavbarNew = () => {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="mobile-menu">
-          {renderMenuItems(menuData)}
-        </div>
+        <div className="mobile-menu">{renderMenuItems(menuData)}</div>
       )}
     </nav>
   );
