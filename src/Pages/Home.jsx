@@ -18,7 +18,7 @@ const Home = () => {
         </div>
 
         {/* Career Section */}
-        <div data-aos="fade-up" data-aos-delay="200">
+        <div data-aos="fade-up" data-aos-delay="100">
           <CareerSection />
         </div>
 
@@ -28,12 +28,12 @@ const Home = () => {
         </div>
 
         {/* Banner */}
-        <div data-aos="fade-up" data-aos-delay="200">
+        <div data-aos="fade-up" data-aos-delay="100">
           <Banner />
         </div>
 
         {/* Industry */}
-        <div data-aos="fade-up" data-aos-delay="300">
+        <div data-aos="fade-up" data-aos-delay="100">
           <Industry />
         </div>
 
@@ -43,12 +43,12 @@ const Home = () => {
         </div>
 
         {/* Organisations */}
-        <div data-aos="fade-left" data-aos-delay="200">
+        <div data-aos="fade-left" data-aos-delay="100">
           <Organisations />
         </div>
 
         {/* Brands */}
-        <div data-aos="zoom-in pt-5" data-aos-delay="300">
+        <div data-aos="zoom-in pt-5" data-aos-delay="100">
           <Brands />
         </div>
       </>

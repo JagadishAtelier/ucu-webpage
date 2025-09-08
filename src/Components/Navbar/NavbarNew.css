@@ -246,7 +246,7 @@
   border: 1px solid #ddd;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   padding: 0.5rem 0;
-  z-index: 200;
+  z-index: 200 ;
 }
 
 .desktop-menu .submenu .submenu {

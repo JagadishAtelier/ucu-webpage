@@ -24,7 +24,9 @@ function App() {
 
   return (
     <Router>
+        {/* <div data-aos="fade-down" data-aos-delay="100"> */}
       <NavbarNew />
+      {/* </div> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/full-time-programs" element={<Program />} />
