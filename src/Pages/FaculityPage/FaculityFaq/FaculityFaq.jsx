@@ -40,7 +40,7 @@ function FaculityFaq() {
       setOpenIndex(openIndex === index ? null : index);
     };
   return (
-    <div className="platforms-container py-lg-5 mt-lg-0">
+    <div className="platforms-container py-lg-5 mt-lg-0 fac-plat-con">
 
       <div className="platform">
         <img src="https://demo.farmstudios.net/oakwood/wp-content/uploads/sites/29/2025/08/images-L33ZCYU.jpg" 
@@ -50,7 +50,7 @@ function FaculityFaq() {
         <div className='vertical-line'></div>
         <p className='fs-lg-4 text-uppercase'>FAQ</p>
         </div>
-        <h1 className='display-4 fw-bold col-10'>Everything You Need to <span style={{ color: "#C19A6B" }}>Know</span> Here</h1>
+        <h1 className='display-4 fw-bold col-10'>Everything You Need to <span style={{ color: "#5ac501" }}>Know</span> Here</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex quis lorem elementum varius. Nam vestibulum, ex sit amet dapibus eleifend, lectus justo finibus erat, eget commodo lorem diam vitae nulla.</p>
           {data.map((item, index) => (
             <div

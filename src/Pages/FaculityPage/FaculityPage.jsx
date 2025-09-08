@@ -11,12 +11,12 @@ function FaculityPage() {
   return (
     <div>
         <FaculityHero/>
-        <FaculityAbout/>
+        {/* <FaculityAbout/>
         <FaculityYears/>
         <FaculityVission/>
         <FaculityBg/>
         <FaculityContact/>
-        <FaculityFaq/>
+        <FaculityFaq/> */}
     </div>
 
   )

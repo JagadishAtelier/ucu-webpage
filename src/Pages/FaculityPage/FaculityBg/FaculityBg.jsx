@@ -18,7 +18,7 @@ function FaculityBg() {
       <div className="d-flex flex-column align-items-center justify-content-center text-center">
         <h1 className="display-4 fw-bold col-10">
           Start Your Journey in{" "}
-          <span style={{ color: "#C19A6B" }}>Business</span> Today
+          <span style={{ color: "#5ac501" }}>Business</span> Today
         </h1>
         <p className="col-10 col-md-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
@@ -26,7 +26,7 @@ function FaculityBg() {
           dapibus eleifend, lectus justo finibus erat, eget commodo lorem diam
           vitae nulla.
         </p>
-        <div className="fac-explore-btn-div platform-btn">
+        <div className="fac-explore-btn-div">
           <button className="fac-apply-btn">APPLY NOW</button>
         </div>
       </div>

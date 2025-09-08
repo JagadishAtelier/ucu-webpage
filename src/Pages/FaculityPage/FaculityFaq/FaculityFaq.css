@@ -1,8 +1,35 @@
-.fac-faq-banner{
+.fac-faq-banner {
     position: sticky;
     top: 10px;
-    height: 100vh;
-}
-.platform-data-div{
+    height: 100vh; /* desktop full height */
+  }
+  
+  .platform-data-div {
     position: relative;
-}
+  }
+  
+  /* ✅ Tablet */
+  @media (max-width: 991px) {
+    .fac-faq-banner {
+      position: relative;   /* disable sticky */
+      top: 0;
+      height: auto;         /* let image/content size naturally */
+      margin-bottom: 20px;  /* spacing before next section */
+    }
+    .platform img{
+        position: relative !important;
+        top: 0 !important;
+    }
+    .fac-plat-con{
+        margin-top: 5% !important;
+    }
+  }
+  
+  /* ✅ Mobile */
+  @media (max-width: 576px) {
+    .fac-faq-banner {
+      height: auto;
+      width: 100%;          /* full width for small screens */
+    }
+  }
+  
