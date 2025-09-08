@@ -105,10 +105,10 @@
   .desktop-menu {
     display: flex !important;
   }
-  .mobile-toggle,
+  /* .mobile-toggle,
   .mobile-menu {
     display: none;
-  }
+  } */
   .menu {
     display: flex;
     align-items: center;

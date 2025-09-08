@@ -1,5 +1,6 @@
+// src/components/NavbarNew.jsx
+
 import React, { useState } from "react";
-import { menuData } from "./menuData";
 import {
   Menu,
   X,
@@ -8,6 +9,7 @@ import {
   ChevronDown,
   ChevronRight,
 } from "lucide-react";
+import { menuData } from "./menuData";
 import "./NavbarNew.css";
 
 const NavbarNew = () => {
@@ -23,7 +25,6 @@ const NavbarNew = () => {
     }));
   };
 
-  // recursive renderer for nested menus
   const renderMenuItems = (items, depth = 0) => {
     return (
       <ul className={`menu depth-${depth}`}>
@@ -56,21 +57,28 @@ const NavbarNew = () => {
     );
   };
 
-  // Split menuData into two parts (first 5, then rest)
-  const firstHalf = menuData.slice(0, 5);
-  const secondHalf = menuData.slice(5);
+  // 1. Define the number of items to show on the main desktop nav
+  const visibleItemsCount = 6;
+  const visibleDesktopItems = menuData.slice(0, visibleItemsCount);
+  const hiddenItems = menuData.slice(visibleItemsCount);
+
+  // 2. Create the "More" menu item specifically for the desktop hamburger
+  const moreMenuItem = hiddenItems
+  // 3. Create a mobile-specific menu data array that includes ALL items
+  const mobileMenuData = menuData;
 
   return (
     <nav className="navbar">
-          <div className="nav-left mobile-logo">
+      <div className="nav-left">
         <a href="/">
           <img src="/logo1.png" alt="Logo" className="logo" />
         </a>
       </div>
+
       {/* Desktop Menu */}
       <div className="nav-center desktop-menu">
         <ul className="menu depth-0">
-          {firstHalf.map((item, idx) => (
+          {visibleDesktopItems.map((item, idx) => (
             <li key={idx} className="menu-item">
               {item.submenu ? (
                 <>
@@ -81,37 +89,7 @@ const NavbarNew = () => {
                     {item.label}
                     <ChevronDown size={16} />
                   </button>
-                  {openMenus[item.label] &&
-                    renderMenuItems(item.submenu, 1)}
-                </>
-              ) : (
-                <a href={item.link} className="menu-link">
-                  {item.label}
-                </a>
-              )}
-            </li>
-          ))}
-
-          {/* Logo in center */}
-          <li className="menu-item logo-item">
-            <a href="/">
-              <img src="/logo2.png" alt="Logo" className="logo" />
-            </a>
-          </li>
-
-          {secondHalf.map((item, idx) => (
-            <li key={idx} className="menu-item">
-              {item.submenu ? (
-                <>
-                  <button
-                    className="menu-btn"
-                    onClick={() => toggleSubmenu(item.label)}
-                  >
-                    {item.label}
-                    <ChevronDown size={16} />
-                  </button>
-                  {openMenus[item.label] &&
-                    renderMenuItems(item.submenu, 1)}
+                  {openMenus[item.label] && renderMenuItems(item.submenu, 1)}
                 </>
               ) : (
                 <a href={item.link} className="menu-link">
@@ -123,18 +101,27 @@ const NavbarNew = () => {
         </ul>
       </div>
 
-      {/* Right side icons */}
+      {/* Right side icons and toggle */}
       <div className="nav-right">
-        <Search className="icon" />
-        <User className="icon" />
+        <Search className="icon desktop-only" />
+        <User className="icon desktop-only" />
         <button className="mobile-toggle" onClick={toggleMobile}>
           {mobileOpen ? <X /> : <Menu />}
         </button>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile/Hamburger Drawer */}
       {mobileOpen && (
-        <div className="mobile-menu">{renderMenuItems(menuData)}</div>
+        <div className="mobile-menu">
+          {/* Render different menus based on device */}
+          {window.innerWidth > 991 ? (
+            // On desktop, show only the "More" items inside the hamburger
+            renderMenuItems(moreMenuItem, 0)
+          ) : (
+            // On mobile, show all the original items
+            renderMenuItems(mobileMenuData, 0)
+          )}
+        </div>
       )}
     </nav>
   );
