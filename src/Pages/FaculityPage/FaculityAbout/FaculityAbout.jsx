@@ -9,7 +9,7 @@ function FaculityAbout() {
         <div className='vertical-line'></div>
         <p className='fs-lg-4 text-uppercase'>About the Faculty </p>
         </div>
-        <h1 className='display-4 fw-bold col-10'>Building Skills for Global <span style={{ color: "#C19A6B" }}>Economic</span> Success</h1>
+        <h1 className='display-4 fw-bold col-10'>Building Skills for Global <span style={{ color: "#5ac501" }}>Economic</span> Success</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique elit eget lacus rhoncus, a luctus nisl elementum. Etiam sagittis rutrum augue, euismod molestie lorem molestie ut. Aliquam lorem mi, commodo fringilla imperdiet quis, congue vel ex. Sed ante turpis, viverra ac pellentesque nec, euismod sit amet ligula. Aliquam erat volutpat. Aliquam finibus id felis ut imperdiet. Vivamus fermentum at ex non aliquet. Sed elementum diam dolor, sagittis convallis libero consectetur eu. Sed nec lacus convallis, imperdiet felis nec, ultricies elit. Fusce non vehicula diam.</p>
         <div className='d-flex flex-column flex-lg-row gap-lg-2 gap-2 mb-5'>
             <div className='d-flex flex-row text-start align-items-start flex-lg-row gap-3 bgColorBlue p-3 p-lg-3 align-items-lg-start'>
