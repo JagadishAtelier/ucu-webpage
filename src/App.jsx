@@ -9,9 +9,10 @@ import { useEffect } from "react";
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer/Footer";
 import Program from "./Pages/Program";
-import AboutPage from "./Pages/AboutPage/AboutPage";
+import AboutPage from "./Pages/AboutPage";
 import NavbarNew from "./Components/Navbar/NavbarNew";
-import FaculityPage from "./Pages/FaculityPage/FaculityPage";
+import FaculityPage from "./Pages/FaculityPage";
+import ProgramDetails from "./Pages/ProgramDetails";
 
 function App() {
   useEffect(() => {
@@ -24,15 +25,18 @@ function App() {
 
   return (
     <Router>
+        {/* <div data-aos="fade-down" data-aos-delay="100"> */}
       <NavbarNew />
+      {/* </div> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/pgpm-elite" element={<Program />} />
+        <Route path="/program" element={<Program />} />
         <Route path="/about-ucu" element={<AboutPage/>} />
-        <Route path="/faculity" element={<FaculityPage/>} />
+        <Route path="/faculty/*" element={<FaculityPage/>} />
+        <Route path="/program/*" element={<ProgramDetails/>} />
       </Routes>
       {/* Footer */}
-      <div data-aos="fade-up" data-aos-delay="400">
+      <div data-aos="fade-up" data-aos-delay="100">
         <Footer />
       </div>
     </Router>

@@ -136,7 +136,11 @@ const NavbarNew = () => {
           {/* Drawer itself */}
           <div className="drawer">
             <div className="drawer-header">
-              <img src="/logo.png" alt="Logo" className={window.innerWidth > 991 ? "hidden" : 'drawer-logo'} />
+              <img
+                src="/logo1.png"
+                alt="Logo"
+                className={window.innerWidth > 991 ? "d-none" : "drawer-logo"}
+              />
               <button className="close-btn" onClick={toggleMobile}>
                 <X size={28} />
               </button>
