@@ -1,0 +1,140 @@
+.program-description .program-menu li {
+  margin-bottom: 8px;
+}
+
+.program-description .program-menu a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.program-description .program-menu a:hover {
+  color: #007bff;
+}
+
+.program-event {
+  background: #111827; /* Dark blue/black theme */
+}
+.social-icons a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #74C61B; /* your theme accent */
+}
+.program-curriculum {
+  background: #fff;
+  border: 1px solid #eee;
+  overflow: hidden;
+}
+
+.program-header {
+  background: #1a1a1a;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.program-menu li {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.program-menu li:last-child {
+  border-bottom: none;
+}
+
+.program-menu a {
+  display: block;
+  padding: 12px 15px;
+  color: #333;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.program-menu a:hover {
+  background: #f9f9f9;
+  color: #74c61b; /* theme accent */
+}
+
+.arrow-icon {
+  color: #74c61b;
+  min-width: 16px;
+}
+.program-info {
+  background-color: #8c1d3f !important; /* Dark red background matching the image */
+  color: #fff; /* White text color for contrast */
+  font-family: 'Times New Roman', Times, serif; /* Using a serif font to match the elegant style */
+  border-radius: 12px !important; /* Smoother rounded corners */
+  padding: 24px !important;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Headings within the card */
+.program-info h5,
+.program-info h6 {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.program-info h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.program-info p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+/* Styling for the links (email and phone number) */
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.contact-info a:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+/* Social media icon section */
+.social-info {
+  margin-top: 20px;
+}
+
+.social-info h6 {
+  margin-bottom: 10px;
+}
+
+/* Styling for social icons to match the design */
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  color: #f0f0f0;
+}
+/* Sticky Sidebar */
+.sticky-sidebar {
+  position: sticky;
+  top:10px;
+  z-index: 99;
+}
