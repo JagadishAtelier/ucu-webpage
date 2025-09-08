@@ -187,6 +187,9 @@
 
 /* === RESPONSIVE === */
 @media (min-width: 992px) {
+  .drawer-header {
+    justify-content: flex-end;
+  }
   .navbar {
     padding: .6rem 3rem;
   }

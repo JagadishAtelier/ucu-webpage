@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer/Footer";
 import Program from "./Pages/Program";
-import AboutPage from "./Pages/AboutPage/AboutPage";
+import AboutPage from "./Pages/AboutPage";
 import NavbarNew from "./Components/Navbar/NavbarNew";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
       <NavbarNew />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/pgpm-elite" element={<Program />} />
+        <Route path="/full-time-programs" element={<Program />} />
         <Route path="/about-ucu" element={<AboutPage/>} />
       </Routes>
       {/* Footer */}

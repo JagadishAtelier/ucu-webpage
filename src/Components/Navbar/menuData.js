@@ -50,6 +50,7 @@ export const menuData = [
           { label: "PGPM-ELITE", link: "/pgpm-elite" },
           { label: "PGDM", link: "/pgdm" },
         ],
+        link: "/full-time-programs",
       },
       {
         label: "Post Graduate Diplomas",

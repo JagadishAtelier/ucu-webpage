@@ -11,6 +11,32 @@
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+.sales-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tab-btn {
+  background: none;
+  border: 2px solid #74C61B;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background-color: #74C61B;
+  color: white;
+}
+
+.tab-btn.active {
+  background-color: #74C61B;
+  color: white;
+}
+
 .sales-data-div,
 .swiper-slide {
   overflow: visible !important;
