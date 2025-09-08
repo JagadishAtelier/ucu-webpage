@@ -20,3 +20,16 @@
   border: none;
   border-top: 1px solid #d3d3d3;
 }
+
+@media (max-width: 768px) {
+  .program-title {
+    font-size: 1.3rem;
+  }
+  .program-info-section {
+    padding: 0;
+    padding: 2rem 0 !important;
+  }
+  .divider{
+    display: none;
+  }
+}

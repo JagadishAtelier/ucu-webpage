@@ -25,15 +25,15 @@ function App() {
 
   return (
     <Router>
-        {/* <div data-aos="fade-down" data-aos-delay="100"> */}
+      {/* <div data-aos="fade-down" data-aos-delay="100"> */}
       <NavbarNew />
       {/* </div> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/program" element={<Program />} />
-        <Route path="/about-ucu" element={<AboutPage/>} />
-        <Route path="/faculty/*" element={<FaculityPage/>} />
-        <Route path="/program/*" element={<ProgramDetails/>} />
+        <Route path="/about-ucu" element={<AboutPage />} />
+        <Route path="/faculty/*" element={<FaculityPage />} />
+        <Route path="/program/*" element={<ProgramDetails />} />
       </Routes>
       {/* Footer */}
       <div data-aos="fade-up" data-aos-delay="100">

@@ -146,7 +146,7 @@ const ProgramDescription = () => {
   ];
 
   return (
-    <div className="program-description container-fluid px-5 py-3">
+    <div className="program-description container-fluid px-3 px-md-5 py-3">
       <div className="row">
         {/* Left Content */}
         <div className="col-lg-8">

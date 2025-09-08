@@ -16,6 +16,7 @@
 
 .program-event {
   background: #111827; /* Dark blue/black theme */
+  margin-bottom: 2rem;
 }
 .social-icons a {
   color: #333;
@@ -29,6 +30,7 @@
   background: #fff;
   border: 1px solid #eee;
   overflow: hidden;
+  margin-bottom: 1.5rem;
 }
 
 .program-header {

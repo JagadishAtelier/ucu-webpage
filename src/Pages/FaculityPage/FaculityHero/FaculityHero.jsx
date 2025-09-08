@@ -30,9 +30,9 @@ function FaculityHero({
         <div className="d-flex align-items-center flex-row gap-2 justify-content-center justify-content-lg-start mt-3">
           {breadcrumbs.map((crumb, index) => (
             <React.Fragment key={index}>
-              <p className="fs-5 mb-0">{crumb}</p>
+              <p className="fs-5 mb-0 bread-crumb">{crumb}</p>
               {index < breadcrumbs.length - 1 && (
-                <FaChevronRight size={15} />
+                <FaChevronRight size={window.innerWidth > 991 ? 12 : 15} />
               )}
             </React.Fragment>
           ))}

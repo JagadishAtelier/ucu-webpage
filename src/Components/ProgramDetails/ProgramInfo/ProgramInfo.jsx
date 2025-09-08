@@ -5,7 +5,7 @@ import "./ProgramInfo.css";
 function ProgramInfo({ title, description }) {
   return (
     <div className="program-info-section">
-      <div className="Container-fluid px-5">
+      <div className="Container-fluid px-3 px-md-5">
         <Row className="align-items-center">
           {/* Left Column - Title */}
           <Col md={6}>

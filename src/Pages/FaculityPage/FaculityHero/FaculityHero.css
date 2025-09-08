@@ -15,9 +15,15 @@
     background: rgba(0,0,0,0.5); /* black overlay with 60% opacity */
     z-index: -1;
   }
+
   @media (max-width: 768px) {
     .hero-left {
       margin-left:0; /* md and up */
     }
+      .bread-crumb{
+    font-size: 13px !important;
+    letter-spacing: 1px !important;
+    font-weight: 300 !important;
+  }
   }
   
