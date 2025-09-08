@@ -11,6 +11,7 @@ import Footer from "./Components/Footer/Footer";
 import Program from "./Pages/Program";
 import AboutPage from "./Pages/AboutPage/AboutPage";
 import NavbarNew from "./Components/Navbar/NavbarNew";
+import FaculityPage from "./Pages/FaculityPage/FaculityPage";
 
 function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/pgpm-elite" element={<Program />} />
         <Route path="/about-ucu" element={<AboutPage/>} />
+        <Route path="/faculity" element={<FaculityPage/>} />
       </Routes>
       {/* Footer */}
       <div data-aos="fade-up" data-aos-delay="400">
