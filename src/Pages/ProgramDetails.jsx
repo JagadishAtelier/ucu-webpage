@@ -1,3 +1,4 @@
+import ProgramDescription from "../Components/ProgramDetails/ProgramDescription/ProgramDescription";
 import ProgramInfo from "../Components/ProgramDetails/ProgramInfo/ProgramInfo";
 import FaculityHero from "./FaculityPage/FaculityHero/FaculityHero";
 
@@ -13,8 +14,7 @@ const ProgramDetails = () => {
         title="The Accounting program offers a Bachelor of Science in Accounting."
         description="The program continues to attract students from all ethnic, racial, and cultural backgrounds as they recognize ways that Africana Studies provides them with a forum to examine the intellectual life, the historical experience, and the cultural understanding of one of this country’s largest racial minority groups."
       />
-
-      <div>ProgramDetails</div>
+      <ProgramDescription/>
     </>
   );
 };

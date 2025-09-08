@@ -1,0 +1,29 @@
+/* ✅ Scoped styles only for this swiper */
+.testimonial-swiper-container {
+  background: #f9fafb;
+}
+
+.testimonial-swiper {
+  padding-bottom: 40px; /* space for pagination dots */
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.testimonial-swiper .swiper-pagination-bullet {
+  background: #ccc !important;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+  background: #74C61B !important; /* theme color */
+}
