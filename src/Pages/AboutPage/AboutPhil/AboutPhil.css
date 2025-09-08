@@ -9,7 +9,16 @@
   }
   
   @media (max-width: 767px) {
-    /* On mobile, switch to bottom border instead */
+    .with-divider {
+      border-right: none;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+  
+  /* Tablet (also stacked vertically) */
+  @media (min-width: 768px) and (max-width: 991px) {
     .with-divider {
       border-right: none;
       border-bottom: 2px solid rgba(255, 255, 255, 0.4);

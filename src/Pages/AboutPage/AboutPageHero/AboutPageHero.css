@@ -1,5 +1,5 @@
 .hero-left {
-    margin-left: 0; /* mobile */
+    margin-left: 7rem;
   }
   .hero-section{
     position: relative;
@@ -15,9 +15,9 @@
     background: rgba(0,0,0,0.2); /* black overlay with 60% opacity */
     z-index: -1;
   }
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     .hero-left {
-      margin-left:7rem; /* md and up */
+      margin-left:0; /* md and up */
     }
   }
   

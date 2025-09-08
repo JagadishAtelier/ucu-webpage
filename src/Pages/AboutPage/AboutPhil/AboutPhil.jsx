@@ -23,7 +23,7 @@ const data = [
 ]
 function AboutPhil() {
   return (
-    <div className='d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-start text-white text-center text-md-start p-3 p-md-5 p-lg-7'
+    <div className='d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-lg-start p-3 p-lg-5 p-lg-7'
         style={{
             backgroundImage : `url(${bgImage})`,
             backgroundPosition : "center",
@@ -33,11 +33,14 @@ function AboutPhil() {
 
         }}
     >
-<div className="d-flex flex-column flex-md-row justify-content-md-between align-items-md-start w-100">
+<div className="d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-start w-100">
   {data.map((item, index) => (
     <div 
-      key={index} 
-      className={`col-12 col-md-4 d-flex flex-column flex-md-column align-items-center align-items-md-start px-0 px-md-3 position-relative ${
+      key={index}
+      data-aos={
+        index === 0 ? "fade-right" : index === 1 ? "fade-down" : "fade-left"
+      }
+      className={`col-12 col-lg-4 d-flex flex-column flex-lg-column align-items-center align-items-lg-start px-0 px-lg-3 position-relative ${
         index < data.length - 1 ? "with-divider" : ""
       }`}
     >
