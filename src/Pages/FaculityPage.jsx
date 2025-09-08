@@ -2,6 +2,10 @@ import React from "react";
 import FaculityHero from "./FaculityPage/FaculityHero/FaculityHero";
 import FaculityAbout from "./FaculityPage/FaculityAbout/FaculityAbout";
 import FaculityYears from "./FaculityPage/FaculityYears/FaculityYears";
+import FaculityVission from "./FaculityPage/FaculityVission/FaculityVission";
+import FaculityBg from "./FaculityPage/FaculityBg/FaculityBg";
+import FaculityContact from "./FaculityPage/FaculityContact/FaculityContact";
+import FaculityFaq from "./FaculityPage/FaculityFaq/FaculityFaq";
 
 function FaculityPage() {
   return (
@@ -14,6 +18,10 @@ function FaculityPage() {
 
       <FaculityAbout />
       <FaculityYears />
+      <FaculityVission/>
+      <FaculityBg/>
+      <FaculityContact/>
+      <FaculityFaq/>
     </div>
   );
 }

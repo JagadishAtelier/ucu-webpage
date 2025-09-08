@@ -14,7 +14,7 @@ function FaculityAbout() {
         <div className='d-flex flex-column flex-lg-row gap-lg-2 gap-2 mb-5'>
             <div className='d-flex flex-row text-start align-items-start flex-lg-row gap-3 bgColorBlue p-3 p-lg-3 align-items-lg-start'>
             <div className="icon-wrapper">
-    <FaGlobeAsia size={40} />
+    <FaGlobeAsia size={40} className='fa-global'/>
   </div>
                 <div>
                     <h3 className='fs-4 fw-600'>Global Internship Opportunities</h3>

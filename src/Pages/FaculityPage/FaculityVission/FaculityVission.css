@@ -1,0 +1,51 @@
+.vision-images img{
+    height: 135px;
+}
+.faculty-banner{
+    width: 60%;
+    height:auto;
+}
+.faculty-banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.right-side-fac{
+    width: 100%;
+}
+/* Default style for tabs */
+.tab-text-fac {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Active tab (underline by default) */
+  .tab-text-fac.active {
+    border-bottom: 1px solid black;
+  }
+  
+  /* Hover effect */
+  .tab-text-fac:hover {
+   border-bottom: 1px solid black;
+  }
+  
+  /* Arrow animation */
+  .arrow-icon-fac {
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+    margin-left: 10px;
+  }
+  
+  .tab-text-fac:hover .arrow-icon-fac,
+  .tab-text-fac.active .arrow-icon-fac {
+    opacity: 1; 
+    transform: translateX(0);
+  }
+  
+  
