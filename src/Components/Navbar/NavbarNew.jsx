@@ -1,14 +1,7 @@
 // src/components/NavbarNew.jsx
 
 import React, { useState } from "react";
-import {
-  Menu,
-  X,
-  Search,
-  User,
-  ChevronDown,
-  ChevronRight,
-} from "lucide-react";
+import { Menu, X, Search, User, ChevronDown, ChevronRight } from "lucide-react";
 import { menuData } from "./menuData";
 import "./NavbarNew.css";
 
@@ -58,12 +51,12 @@ const NavbarNew = () => {
   };
 
   // 1. Define the number of items to show on the main desktop nav
-  const visibleItemsCount = 6;
+  const visibleItemsCount = 5;
   const visibleDesktopItems = menuData.slice(0, visibleItemsCount);
   const hiddenItems = menuData.slice(visibleItemsCount);
 
   // 2. Create the "More" menu item specifically for the desktop hamburger
-  const moreMenuItem = hiddenItems
+  const moreMenuItem = hiddenItems;
   // 3. Create a mobile-specific menu data array that includes ALL items
   const mobileMenuData = menuData;
 
@@ -76,20 +69,44 @@ const NavbarNew = () => {
       </div>
 
       {/* Desktop Menu */}
+      {/* Desktop Menu */}
       <div className="nav-center desktop-menu">
         <ul className="menu depth-0">
           {visibleDesktopItems.map((item, idx) => (
-            <li key={idx} className="menu-item">
+            <li key={idx} className="menu-item has-submenu">
               {item.submenu ? (
                 <>
-                  <button
-                    className="menu-btn"
-                    onClick={() => toggleSubmenu(item.label)}
-                  >
+                  <a href={item.link || "#"} className="menu-link">
                     {item.label}
-                    <ChevronDown size={16} />
-                  </button>
-                  {openMenus[item.label] && renderMenuItems(item.submenu, 1)}
+                    <ChevronDown size={14} />
+                  </a>
+                  <ul className="submenu depth-1">
+                    {item.submenu.map((sub, subIdx) => (
+                      <li key={subIdx} className="menu-item">
+                        {sub.submenu ? (
+                          <>
+                            <a href={sub.link || "#"} className="menu-link">
+                              {sub.label}
+                              <ChevronRight size={12} />
+                            </a>
+                            <ul className="submenu depth-2">
+                              {sub.submenu.map((child, cIdx) => (
+                                <li key={cIdx} className="menu-item">
+                                  <a href={child.link} className="menu-link">
+                                    {child.label}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        ) : (
+                          <a href={sub.link} className="menu-link">
+                            {sub.label}
+                          </a>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
                 </>
               ) : (
                 <a href={item.link} className="menu-link">
@@ -110,18 +127,28 @@ const NavbarNew = () => {
         </button>
       </div>
 
-      {/* Mobile/Hamburger Drawer */}
+      {/* Drawer Menu (works for both desktop & mobile) */}
       {mobileOpen && (
-        <div className="mobile-menu">
-          {/* Render different menus based on device */}
-          {window.innerWidth > 991 ? (
-            // On desktop, show only the "More" items inside the hamburger
-            renderMenuItems(moreMenuItem, 0)
-          ) : (
-            // On mobile, show all the original items
-            renderMenuItems(mobileMenuData, 0)
-          )}
-        </div>
+        <>
+          {/* Overlay background */}
+          <div className="drawer-overlay" onClick={toggleMobile}></div>
+
+          {/* Drawer itself */}
+          <div className="drawer">
+            <div className="drawer-header">
+              <img src="/logo.png" alt="Logo" className={window.innerWidth > 991 ? "hidden" : 'drawer-logo'} />
+              <button className="close-btn" onClick={toggleMobile}>
+                <X size={28} />
+              </button>
+            </div>
+
+            <div className="drawer-content">
+              {renderMenuItems(
+                window.innerWidth > 991 ? moreMenuItem : mobileMenuData
+              )}
+            </div>
+          </div>
+        </>
       )}
     </nav>
   );
