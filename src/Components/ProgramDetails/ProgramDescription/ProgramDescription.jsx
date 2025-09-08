@@ -12,6 +12,8 @@ import {
 
 import "./ProgramDescription.css";
 import Testimonials from "./Testimonials";
+import CountUp from "react-countup";
+import CountUpCard from "./CountUpCard";
 
 const ProgramDescription = () => {
   // Course Data (mappable)
@@ -122,7 +124,19 @@ const ProgramDescription = () => {
       ],
     },
   ];
-
+  const data = [
+    { end: 17.8, label: "Average CTC", prefix: "₹ ", suffix: "LPA" },
+    { end: 30.8, label: "Highest CTC", prefix: "₹ ", suffix: "LPA" },
+    { end: 61, label: "Consulting Roles Offered", suffix: "%" },
+    {
+      end: 28.6,
+      label: "Average CTC for Top 10%",
+      prefix: "₹ ",
+      suffix: "LPA",
+    },
+    { end: 25, label: "Employed in Business Consulting", suffix: "%" },
+    { end: 25, label: "New Recruiters", suffix: "+" },
+  ];
   const sidebarMenu = [
     { label: "Course Curriculum", link: "#curriculum" },
     { label: "Program Faculty", link: "faculty-details" },
@@ -158,7 +172,6 @@ const ProgramDescription = () => {
             </p>
           </div>
 
-          {/* Accordion (Courses) */}
           {/* Accordion (Courses) */}
           <div className="program-credit-area mb-5" id="curriculum">
             <h5 className="title mb-3">Program Courses</h5>
@@ -200,6 +213,34 @@ const ProgramDescription = () => {
                 </Accordion.Item>
               ))}
             </Accordion>
+          </div>
+
+          <div className="career-inpact-section my-5">
+            <h5 className="title mb-3">Career Impact</h5>
+            <p>
+              The PGPM Class of 2025 at UCU had an exceptional placement season
+              with top recruiters like Accenture, Deloitte, Cognizant, and
+              Infosys Consulting, and 25+ new companies including KPMG, IBM, and
+              Swiggy offering diverse roles.
+            </p>
+            <div class="col-11 my-5">
+              <img
+                alt=""
+                src="https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/career-impact-1.jpg"
+                title=""
+              />
+            </div>
+            <div className="row">
+              {data.map((item, index) => (
+                <CountUpCard
+                  key={index}
+                  end={item.end}
+                  label={item.label}
+                  prefix={item.prefix}
+                  suffix={item.suffix}
+                />
+              ))}
+            </div>
           </div>
 
           {/* Testimonial Carousel */}
