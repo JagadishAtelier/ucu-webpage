@@ -23,7 +23,7 @@ const data = [
 ]
 function AboutPhil() {
   return (
-    <div className='d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-lg-start p-3 p-lg-5 p-lg-7'
+    <div data-aos="fade-up" className='d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-lg-start p-3 p-lg-5 p-lg-7'
         style={{
             backgroundImage : `url(${bgImage})`,
             backgroundPosition : "center",

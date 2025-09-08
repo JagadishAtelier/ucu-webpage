@@ -13,7 +13,9 @@ function AboutBrand() {
   return (
     <div data-aos="fade-down" className='bgBalck mx-lg-5 mx-2 my-5 py-lg-2 d-flex align-items-lg-center justify-content-lg-around'>
       {images.map((img,index)=>(
-        <div key={index} className='abt-brand-logo'>
+        <div key={index} className='abt-brand-logo'
+        data-aos="fade-up" data-aos-delay={index * 200}
+        >
             <img src={img} className='abt-brand-logo-img'/>
 
         </div>
