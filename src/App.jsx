@@ -32,7 +32,7 @@ function App() {
         <Route path="/faculity" element={<FaculityPage/>} />
       </Routes>
       {/* Footer */}
-      <div data-aos="fade-up" data-aos-delay="400">
+      <div data-aos="fade-up" data-aos-delay="100">
         <Footer />
       </div>
     </Router>
