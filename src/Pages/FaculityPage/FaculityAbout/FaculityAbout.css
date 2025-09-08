@@ -1,0 +1,67 @@
+.fac-about-image{
+    width: 100%;
+    height: 100vh;
+}
+.fac-about-image img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+.bgColorBlue{
+    background-color: rgb(1, 1, 177);
+    color: white;
+    width: 50%;
+}
+.icon-para-about{
+    font-size: 12px;
+}
+.icon-wrapper {
+    background-color: #007bff; /* your desired background */
+    border-radius: 50%;       /* makes it circular */
+    padding: 15px;            /* space inside circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;             /* icon color */
+  }
+  .vertical-line{
+    border: 1px solid black;
+    height:20px;
+    background-color: black;
+  }
+  
+  @media (max-width: 992px) {
+    .bgColorBlue {
+        width: 70%; /* take more width on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .fac-about-image {
+        height: auto; /* auto height on mobile */
+    }
+
+    .bgColorBlue {
+        width: 100%; /* full width on mobile */
+        text-align: center;
+        padding: 10px;
+    }
+
+    .icon-para-about {
+        font-size: 14px; /* slightly larger for readability */
+    }
+
+    .vertical-line {
+        display: none; /* hide line on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-wrapper {
+        padding: 10px; /* smaller circle for small screens */
+    }
+
+    .icon-para-about {
+        font-size: 13px;
+    }
+}
