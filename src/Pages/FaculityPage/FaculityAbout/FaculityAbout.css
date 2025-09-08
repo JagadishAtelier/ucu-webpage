@@ -16,13 +16,13 @@
     font-size: 12px;
 }
 .icon-wrapper {
-    background-color: #007bff; /* your desired background */
+    background-color:white; /* your desired background */
     border-radius: 50%;       /* makes it circular */
-    padding: 15px;            /* space inside circle */
+    padding: 15px;         /* space inside circle */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;             /* icon color */
+    color: blue;             /* icon color */
   }
   .vertical-line{
     border: 1px solid black;
