@@ -31,7 +31,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/full-time-programs" element={<Program />} />
         <Route path="/about-ucu" element={<AboutPage/>} />
-        <Route path="/faculity" element={<FaculityPage/>} />
+        <Route path="/faculty/*" element={<FaculityPage/>} />
       </Routes>
       {/* Footer */}
       <div data-aos="fade-up" data-aos-delay="100">
