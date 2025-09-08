@@ -11,7 +11,7 @@ const images = [
 ]
 function AboutBrand() {
   return (
-    <div className='bgBalck mx-md-5 mx-2 my-5 py-md-2 d-flex align-items-md-center justify-content-md-around'>
+    <div data-aos="fade-down" className='bgBalck mx-lg-5 mx-2 my-5 py-lg-2 d-flex align-items-lg-center justify-content-lg-around'>
       {images.map((img,index)=>(
         <div key={index} className='abt-brand-logo'>
             <img src={img} className='abt-brand-logo-img'/>
