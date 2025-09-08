@@ -129,12 +129,12 @@
   }
 
   .sales-tabs {
-    flex-direction: column;
     gap: 10px; /* Reduces the spacing between tabs */
     margin: 0 10px; /* Add margin on mobile */
   }
 
   .tab-btn {
+    width: 50%;
     padding: 6px 16px;
   }
 
