@@ -25,7 +25,7 @@ const functionalData = [
 
 const industryData = [
   {
-    image: image1,
+    image: image4,
     heading: "FinTech",
     para: "Specialized program focused on financial technology and innovations.",
   },
@@ -40,7 +40,7 @@ const industryData = [
     para: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
   },
   {
-    image: image1,
+    image: image4,
     heading: "FinTech",
     para: "Specialized program focused on financial technology and innovations.",
   },

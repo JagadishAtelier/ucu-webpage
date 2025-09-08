@@ -11,7 +11,7 @@ import Footer from "./Components/Footer/Footer";
 import Program from "./Pages/Program";
 import AboutPage from "./Pages/AboutPage";
 import NavbarNew from "./Components/Navbar/NavbarNew";
-import FaculityPage from "./Pages/FaculityPage/FaculityPage";
+import FaculityPage from "./Pages/FaculityPage";
 
 function App() {
   useEffect(() => {

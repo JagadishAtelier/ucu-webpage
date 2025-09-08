@@ -46,7 +46,6 @@
   overflow: visible !important;
 }
 
-
 /* ✅ Hover animation */
 .sales-item-div:hover {
   transform: translateY(-8px) scale(1.02);
@@ -101,9 +100,9 @@
 }
 
 .sales-swiper .swiper-pagination {
-  position: relative;   /* keeps it below */
-  margin-top: 20px;     /* space from slider */
-  text-align: center;   /* center dots */
+  position: relative; /* keeps it below */
+  margin-top: 20px;   /* space from slider */
+  text-align: center; /* center dots */
 }
 
 /* Pagination dots style */
@@ -127,6 +126,16 @@
     margin: 0 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
+  }
+
+  .sales-tabs {
+    flex-direction: column;
+    gap: 10px; /* Reduces the spacing between tabs */
+    margin: 0 10px; /* Add margin on mobile */
+  }
+
+  .tab-btn {
+    padding: 6px 16px;
   }
 
   .sales-item-div img {
