@@ -10,7 +10,7 @@ import Brands from "../Components/Brands/Brands";
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <>
         {/* Hero Section */}
         <div data-aos="fade-up" data-aos-delay="100">

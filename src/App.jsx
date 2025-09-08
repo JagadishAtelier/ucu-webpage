@@ -12,6 +12,7 @@ import Program from "./Pages/Program";
 import AboutPage from "./Pages/AboutPage";
 import NavbarNew from "./Components/Navbar/NavbarNew";
 import FaculityPage from "./Pages/FaculityPage";
+import ProgramDetails from "./Pages/ProgramDetails";
 
 function App() {
   useEffect(() => {
@@ -29,9 +30,10 @@ function App() {
       {/* </div> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/full-time-programs" element={<Program />} />
+        <Route path="/program" element={<Program />} />
         <Route path="/about-ucu" element={<AboutPage/>} />
         <Route path="/faculty/*" element={<FaculityPage/>} />
+        <Route path="/program/*" element={<ProgramDetails/>} />
       </Routes>
       {/* Footer */}
       <div data-aos="fade-up" data-aos-delay="100">
