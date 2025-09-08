@@ -1,13 +1,13 @@
+/* === NAVBAR WRAPPER === */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #f1f1f1;
-  color: rgb(17, 17, 17);
-  padding: 1.5rem ;
+  color: #111;
+  padding: 1rem;
   position: relative;
   z-index: 50;
-  /* border-radius: 0 0 20px 20px; */
 }
 
 .logo {
@@ -33,201 +33,231 @@
 .desktop-menu {
   display: none !important;
 }
+
 .mobile-toggle {
   display: block;
   background: none;
   border: none;
   color: #222;
+  cursor: pointer;
 }
 
-.mobile-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: #f1f1f1;
-  padding: 1rem;
-}
-
+/* === MENU STRUCTURE === */
 .menu {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .menu-item {
   margin: 0.25rem 0;
 }
+
 .menu-btn,
 .menu-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: none;
-  font-weight: 400;
-  letter-spacing: .5px;
-  font-size: 0.89rem;
+  font-weight: 500;
+  font-size: 0.95rem;
   border: none;
   color: inherit;
   text-decoration: none;
   width: 100%;
-  padding: 0.35rem 0.6rem;
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
+  transition: background 0.2s;
 }
+
+.menu-btn:hover,
+.menu-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
 .menu ul {
   padding-left: 1rem;
 }
-.logo-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
+
+/* === DRAWER OVERLAY === */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 90;
 }
 
-.logo-item .logo {
-  height: 70px;
-}
-.mobile-logo {
+/* === DRAWER PANEL === */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width:100%;
+  height: 100%;
+  background: #fff;
+  color: #111;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+  animation: slideIn 0.3s ease forwards;
 }
-.mobile-logo .logo {
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* === DRAWER HEADER === */
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.drawer-logo {
   height: 50px;
 }
 
-/* responsive */
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* === DRAWER CONTENT === */
+.drawer-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+/* Drawer menu items */
+.drawer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer-item {
+  margin-bottom: 0.5rem;
+}
+
+.drawer-btn,
+.drawer-link {
+  width: 100%;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  padding: 0.6rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.drawer-btn:hover,
+.drawer-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.submenu {
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid #ddd;
+}
+
+/* Chevron animation */
+.chevron {
+  transition: transform 0.2s;
+}
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+/* === RESPONSIVE === */
 @media (min-width: 992px) {
-  .navbar{
-    padding: 1.5rem 3rem;
+  .navbar {
+    padding: .6rem 3rem;
   }
-  .mobile-logo {
-    display: none; /* Hide mobile logo on desktop */
+  .drawer {
+    width: 400px;
   }
   .desktop-menu {
     display: flex !important;
   }
-  .mobile-toggle,
-  .mobile-menu {
-    display: none;
-  }
   .menu {
     display: flex;
-    align-items: center;
   }
-  .menu ul {
-    position: absolute;
-    display: none;
-    background: #f1f1f1;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-  }
-  .menu-item:hover > ul {
-    display: block;
-  }
-}
-/* Submenu base */
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #f1f1f1;
-  min-width: 220px;
-  z-index: 1000;
-  display: none;
-}
-
-/* Direction */
-.submenu.right {
-  left: 100%;
-}
-.submenu.left {
-  right: 100%;
-}
-
-/* Desktop: open on hover */
-@media (min-width: 992px) {
-  .menu-item:hover > .submenu {
-    display: block;
-  }
-}
-
-/* Mobile: React controls submenu visibility */
-@media (max-width: 991px) {
-  .submenu {
-    position: static;
-    display: none; /* default hidden */
-  }
-  .submenu.open {
-    display: block; /* React adds "open" class */
-  }
-}
-
-/* --- Fix for desktop submenus --- */
-@media (min-width: 992px) {
-  /* Set the parent to relative for proper positioning */
   .menu-item {
     position: relative;
+    margin: 0 0.75rem;
   }
-
-  /* Make sure the main menu item list has proper spacing */
-  .menu.depth-0 > .menu-item > .menu {
-    top: 100%;
-    left: 0;
-  }
-
-  /* Target the submenus (depth-1, depth-2, etc.) */
-  .menu.depth-1,
-  .menu.depth-2 {
-    position: absolute;
-    top: 0;
-    left: 100%; /* Position to the right of the parent item */
-    min-width: 320px;
-    padding: 0;
-    background: #f1f1f1;
-    border-radius: 5px;
-    filter: drop-shadow( 0 4px 8px rgba(0, 0, 0, 0.1));
-    z-index: 1000;
-  }
-  .menu.depth-3 {
-    top:30px;
-    left:10px;
-    min-width: 320px;
-  }
-
-  /* Add a small offset for better visual separation */
-  .menu.depth-1 {
-    top: 10px;
+  .menu-link,
+  .menu-btn {
+    padding: 0.35rem 0.5rem;
+    font-weight: 500;
   }
 }
 
-/* Make sure mobile submenus behave correctly */
-@media (max-width: 991px) {
-  .menu ul {
-    /* For mobile, use static positioning and indentation */
-    position: static;
-    padding-left: 1.5rem; /* Indent deeper submenus */
-  }
+.drawer-content .menu{
+  flex-direction: column;
+}
+.drawer-content .menu-item {
+  margin: 0.25rem 0;
+}
+.drawer-content .menu-btn{
+  justify-content: space-between !important;
+}
+.drawer-content .menu-item a, .menu-item .menu-btn{
+  font-size: 0.89rem;
+  letter-spacing: .6px;
 }
 
-/* Remove or update these since they're redundant */
-.submenu {
-  /* This is being replaced by the more specific selectors above */
+/* === SUBMENU DROPDOWN === */
+.desktop-menu .menu-item {
+  position: relative;
+  margin: 0;
+}
+
+.desktop-menu .submenu {
   display: none;
+  position: absolute;
+  list-style: none;
+  text-decoration: none;
+  top: 100%;
+  left: -10px;
+  min-width: 230px;
+  border-radius: 4px;
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 0;
+  z-index: 200;
 }
-.menu-item:hover > ul {
+
+.desktop-menu .submenu .submenu {
+  top: 0;
+  left: 100%;
+  margin: 0;
+}
+
+.desktop-menu .menu-item:hover > .submenu {
   display: block;
 }
-@media (min-width: 992px) {
-  /* If it's near the right side of the navbar, open left */
-  .nav-center > .menu > .menu-item:last-child ul ul {
-    left: auto;
-    min-width: none;
-    right: 100%; /* open to the left */
-    bottom: auto;
-  }
-  .nav-center > .menu > .menu-item:last-child .menu.depth-1{
-    max-width: 220px !important;
-  }
-   .nav-center > .menu > .menu-item:last-child .menu.depth-3{
-    top:0;
-   }
+
+.desktop-menu .submenu .menu-link {
+  padding: 0.5rem 1rem;
+  display: flex;
+  white-space: nowrap;
 }
