@@ -15,6 +15,12 @@ export const menuData = [
     submenu: [
       { label: "Business Advisory Council (BAC)", link: "/bac" },
       { label: "Academic Advisory Council (AAC)", link: "/aac" },
+      { label: "CHRO Advisory Council (CHRAC)", link: "/chrac" },
+      { label: "Talent Advisory Council (TAC)", link: "/tac" },
+      { label: "L&D Advisory Council (L&DAC)", link: "/ldac" },
+      { label: "Young CXO Council (YCxC)", link: "/ycxc" },
+      { label: "Rising Leaders' Council (RLC)", link: "/rlc" },
+      { label: "Our Brand Ambassadors", link: "/brand-ambassadors" },
       {
         label: "SME Program Advisory Council",
         submenu: [
@@ -33,12 +39,6 @@ export const menuData = [
           { label: "Consulting Advisory Council (ConAC)", link: "/conac" },
         ],
       },
-      { label: "CHRO Advisory Council (CHRAC)", link: "/chrac" },
-      { label: "Talent Advisory Council (TAC)", link: "/tac" },
-      { label: "L&D Advisory Council (L&DAC)", link: "/ldac" },
-      { label: "Young CXO Council (YCxC)", link: "/ycxc" },
-      { label: "Rising Leaders' Council (RLC)", link: "/rlc" },
-      { label: "Our Brand Ambassadors", link: "/brand-ambassadors" },
     ],
   },
   {
@@ -223,12 +223,12 @@ export const menuData = [
     ],
   },
   { label: "PACE", link: "/pace" },
-  { label: "News & Blogs", link: "/news-blogs" },
-  { label: "Annual Events", link: "/annual-events" },
   { label: "Admissions", link: "/admissions" },
   { label: "Contact Us", link: "/contact" },
   { label: "Campus Ambience", link: "/campus-ambience" },
   { label: "Corporate Social Responsibility (CSR)", link: "/csr" },
   { label: "Careers", link: "/careers" },
-  { label: "Budding Talent Programs", link: "/budding-talent-programs" },
 ];
+// { label: "News & Blogs", link: "/news-blogs" },
+// { label: "Annual Events", link: "/annual-events" },
+// { label: "Budding Talent Programs", link: "/budding-talent-programs" },
