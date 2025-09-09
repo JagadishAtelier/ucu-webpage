@@ -55,26 +55,26 @@ const industryData = [
     governance, service delivery, and cross-border collaboration.
     `,
   },
-  {
-    image: image3,
-    heading: "Supply Chain Management & Logistics",
-    para: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
-  },
-  {
-    image: image4,
-    heading: "FinTech",
-    para: "Specialized program focused on financial technology and innovations.",
-  },
-  {
-    image: image2,
-    heading: "Global Capability Centers (GCC)",
-    para: "Intensive program for students preparing for careers in global shared services and business operations.",
-  },
-  {
-    image: image3,
-    heading: "Supply Chain Management & Logistics",
-    para: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
-  },
+  // {
+  //   image: image3,
+  //   heading: "Supply Chain Management & Logistics",
+  //   para: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
+  // },
+  // {
+  //   image: image4,
+  //   heading: "FinTech",
+  //   para: "Specialized program focused on financial technology and innovations.",
+  // },
+  // {
+  //   image: image2,
+  //   heading: "Global Capability Centers (GCC)",
+  //   para: "Intensive program for students preparing for careers in global shared services and business operations.",
+  // },
+  // {
+  //   image: image3,
+  //   heading: "Supply Chain Management & Logistics",
+  //   para: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
+  // },
 ];
 
 function Sales() {

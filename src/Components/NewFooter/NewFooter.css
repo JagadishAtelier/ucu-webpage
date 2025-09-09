@@ -1,7 +1,7 @@
-.bgGradient{
+/* .bgGradient{
     background-color: #043361;
     background-image: linear-gradient(to right, #158dbd, #060a6b);
-}
+} */
 .vertical-line-footer{
     border: 1px solid white;
     height: 200px;
@@ -15,7 +15,9 @@
 }
 .new-footer-text-a{
     font-size: 13px;
-    font-weight: 100;
+    font-weight: 300;
+    color: #d7d7d7;
+
 }
 .footer-new-input{
     background-color: transparent !important;

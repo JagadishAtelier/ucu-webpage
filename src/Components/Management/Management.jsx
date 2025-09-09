@@ -36,7 +36,7 @@ function Management() {
   }, []);
   return (
     <div className="bg-img">
-      <div className="management-container container-fluid mt-5">
+      <div className="management-container container-fluid">
         <div className="car-heading-text">
           <h1 className="h2 fw-bold fs-1 fs-lg-1">
             <strong>eXecutive Education & Learning (XEL)</strong>
@@ -55,7 +55,7 @@ bold leadership and deliver breakthrough results!
                 <div className="man-item-content">
                   <h1>{item.heading}</h1>
                   <p className="program-description">{item.para}</p>
-                  <a className="EXPLORE-MDP">{item.btntext}</a>
+                  <a className="EXPLORE-MDPS ">{item.btntext}</a>
                 </div>
               </div>
             </div>

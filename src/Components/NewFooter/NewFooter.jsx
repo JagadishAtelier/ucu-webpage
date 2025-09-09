@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './NewFooter.css'
 import image from '../../Assets/homeImage/footer-logo.png'
+import bgImage from '../../Assets/homeImage/Union (3).svg'
 const aboutData = [
     {name : "Heritage" , herf : "#"},
     {name : "Vision & Values" , herf : "#"},
@@ -26,17 +27,19 @@ const contactUs = [
 ]
 function NewFooter() {
   return (
+    <div className="footer-container">
+                        <img src={bgImage} className='bgImage'/>
     <div className="bgGradient py-lg-5 py-5 pb-lg-2 px-4">
     <div className="d-flex flex-row flex-wrap flex-lg-row align-items-center align-items-lg-start justify-content-start justify-content-lg-evenly row-gap-5 column-gap-5">
         <div className="relative align-items-center d-flex flex-column text-center text-lg-left flex-lg-column gap-3 new-footer-logo align-items-center align-items-lg-center">
         <img src={image} className="logoImage-footer"/>
-        <p className="absolute top-0 col-12 col-lg-10 new-footer-text-a text-white">We are passionate education dedicated to providing high-quality resources learners all backgrounds.</p>
+        <p className="absolute top-0 col-12 col-lg-10 new-footer-text-a">We are passionate education dedicated to providing high-quality resources learners all backgrounds.</p>
         </div>
         <div className="new-footer-links">
             <p className="text-white fs-6 fw-600 new-footer-head">ABOUT US</p>
             <div className="d-flex flex-column flex-lg-column gap-2">
                 {aboutData.map((data,index)=>(
-                    <a href={data.herf} className="new-footer-text-a fw-100 text-white text-decoration-none">{data.name}</a>
+                    <a href={data.herf} className="new-footer-text-a fw-100 text-decoration-none">{data.name}</a>
                 ))}
             </div>
         </div>
@@ -44,7 +47,7 @@ function NewFooter() {
             <p className="text-white fs-6 new-footer-head">EXPLORE</p>
             <div className="d-flex flex-column flex-lg-column gap-2">
                 {exploreData.map((data,index)=>(
-                    <a href={data.herf} className="new-footer-text-a text-white text-decoration-none">{data.name}</a>
+                    <a href={data.herf} className="new-footer-text-a text-decoration-none">{data.name}</a>
                 ))}
             </div>
         </div>
@@ -52,7 +55,7 @@ function NewFooter() {
             <p className="text-white fs-6 new-footer-head">CONTACT US</p>
             <div className="d-flex flex-column flex-lg-column gap-2">
                 {contactUs.map((data,index)=>(
-                    <a href={data.herf} className="new-footer-text-a text-white text-decoration-none">{data.name}</a>
+                    <a href={data.herf} className="new-footer-text-a text-decoration-none">{data.name}</a>
                 ))}
             </div>
         </div>
@@ -63,7 +66,7 @@ function NewFooter() {
 
         <div className='input-text new-footer-links '>
                 <p className="text-white fs-6 new-footer-head">Subscribe to Our Newsletter</p>
-                <p className="new-footer-text-a col-12 col-lg-12 text-white">We’d love to share updates about our latest events with you. Sign up and get our newsletter delivered to your inbox.</p>
+                <p className="new-footer-text-a col-12 col-lg-12">We’d love to share updates about our latest events with you. Sign up and get our newsletter delivered to your inbox.</p>
                 <div className="d-flex flex-column flex-lg-row position-relative">
                 <input type='text' placeholder='Enter your mail' className="footer-new-input"/>
                 <button className="py-lg-2 px-lg-4 py-2 px-5 position-absolute end-0 border-0 sub-new-footer-btn">Subscribe</button>
@@ -76,8 +79,8 @@ function NewFooter() {
     </div>
     <div className="d-flex flex-column flex-lg-row justify-content-lg-between text-white mx-lg-5">
     <div className="">
-        <p className="new-footer-text-a text-white">Copyright @ 2025.All Rights reserved to <a href="https://theateliercreation.com/" target="_blank" className='text-white'> Atelier</a></p>
-        <p className="new-footer-text-a text-white add-new-foot">UCU Pty. Ltd. Provider Category: Institute of Higher Education. TEQSA Provider Identification: PRV12041. CRICOS Provider Code: 03335G.</p>
+        <p className="new-footer-text-a">Copyright @ 2025.All Rights reserved to <a href="https://theateliercreation.com/" target="_blank" className='text-white'> Atelier</a></p>
+        <p className="new-footer-text-a add-new-foot">UCU Pty. Ltd. Provider Category: Institute of Higher Education. TEQSA Provider Identification: PRV12041. CRICOS Provider Code: 03335G.</p>
     </div>
 
     <div>
@@ -90,6 +93,7 @@ function NewFooter() {
                 <i className="bi bi-youtube"></i>
                 </div>
             </div>
+    </div>
     </div>
     </div>
     </div>
