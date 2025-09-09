@@ -27,7 +27,7 @@
   .login-overlay {
     position: absolute;
     inset: 8px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     display: flex;
     height: 100vh;
@@ -76,8 +76,9 @@
   /* Form */
   .login-form {
     display: flex;
+    max-height: 90vh;
     flex-direction: column;
-    gap: 24px;
+    gap: 5px;
     font-size: 0.875rem;
     color: #374151;
   }
@@ -86,7 +87,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 4px;
   }
   
   .form-label {

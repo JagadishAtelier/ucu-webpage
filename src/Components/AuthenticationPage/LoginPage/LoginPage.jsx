@@ -60,10 +60,10 @@ function LoginPage() {
     <div className="login-container">
       {/* Left Side (Image + Overlay) */}
       <div className="login-left">
-        <img alt="auth" className="login-image" src={"/slider-1.jpg"} />
+        <img alt="auth" className="login-image" src={"https://npf-unlayer.s3.ap-south-1.amazonaws.com/unlayer%2Fimages%2F1717766775849-acity-univercity-college.webp"} />
         <div className="login-overlay">
           <div className="login-logo">
-            <img src="/logo.svg" alt="UCU Logo" />
+            {/* <img src="/logo.svg" alt="UCU Logo" /> */}
           </div>
           <div>
             <h2 className="login-title">

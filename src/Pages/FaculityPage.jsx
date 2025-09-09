@@ -6,10 +6,13 @@ import FaculityVission from "./FaculityPage/FaculityVission/FaculityVission";
 import FaculityBg from "./FaculityPage/FaculityBg/FaculityBg";
 import FaculityContact from "./FaculityPage/FaculityContact/FaculityContact";
 import FaculityFaq from "./FaculityPage/FaculityFaq/FaculityFaq";
+import Navbar from "../Components/Navbar/Navbar";
+import NewFooter from "../Components/NewFooter/NewFooter";
 
 function FaculityPage() {
   return (
     <div>
+      <Navbar />
       <FaculityHero
         title="Faculty of Engineering"
         bgImage="https://demo.farmstudios.net/oakwood/wp-content/uploads/sites/29/2025/08/images-YMZPJG5.jpg"
@@ -18,10 +21,11 @@ function FaculityPage() {
 
       <FaculityAbout />
       <FaculityYears />
-      <FaculityVission/>
-      <FaculityBg/>
-      <FaculityContact/>
-      <FaculityFaq/>
+      <FaculityVission />
+      <FaculityBg />
+      <FaculityContact />
+      <FaculityFaq />
+      <NewFooter />
     </div>
   );
 }

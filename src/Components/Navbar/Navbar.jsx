@@ -56,7 +56,7 @@ const Navbar = () => {
         <div className="container-fluid">
           {/* Logo */}
           <Link className="navbar-brand" to="/">
-            <img src="/logo.png" alt="Logo" height="85" />
+            <img src="/logo.svg" alt="Logo" height="85" />
           </Link>
 
           {/* Collapse wrapper */}
@@ -157,7 +157,7 @@ const Navbar = () => {
             <div className="drawer">
               <div className="drawer-header">
                 <img
-                  src="/logo.png"
+                  src="/logo.svg"
                   alt="Logo"
                   className={window.innerWidth > 991 ? "d-none" : "drawer-logo"}
                 />

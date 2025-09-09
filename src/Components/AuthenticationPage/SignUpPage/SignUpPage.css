@@ -67,7 +67,7 @@
   max-width: 450px;
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1rem 2rem;
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -78,15 +78,15 @@
 .login-form-container::after {
   content: "";
   position: absolute;
-  top: 35%;       /* Center vertically */
-  left: 30%;      /* Center horizontally */
+  top: 50%;       /* Center vertically */
+  left: 50%;      /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust offset */
   width: 180px;
   height: 180px;
-  background: url("/favIcon.png") no-repeat center/contain;
-  opacity: 0.08;
+  background: url("/logo.svg") no-repeat center/contain;
+  opacity: 0.1;
   z-index: 0;
-  animation: spin 20s linear infinite;
+  /* animation: spin 20s linear infinite; */
 }
 
 .login-form-container::before {
