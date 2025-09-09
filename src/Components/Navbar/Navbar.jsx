@@ -141,7 +141,7 @@ const Navbar = () => {
           </div>
           <div className="d-flex gap-2 mobile-right">
             <Search className="icon d-lg-none" size={24} color="#333" />
-            <User className="icon " size={24} color="#333" />
+            <User className="icon " size={24} color="#333" onClick={() => navigate("/auth/login")} />
 
             <button className="mobile-toggle" onClick={toggleMobile}>
               {mobileOpen ? <X /> : <Menu />}
