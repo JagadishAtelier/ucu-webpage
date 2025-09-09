@@ -1,12 +1,54 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { menuData } from "./menuData";
 import "./Navbar.css";
-import { Search, User } from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openMenus, setOpenMenus] = useState({});
+  const toggleMobile = () => setMobileOpen(!mobileOpen);
   const topMenus = menuData.filter((menu) => !menu.submenu);
   const bottomMenus = menuData.filter((menu) => menu.submenu);
+  const toggleSubmenu = (label) => {
+    setOpenMenus((prev) => ({
+      ...prev,
+      [label]: !prev[label],
+    }));
+  };
+
+  const renderMenuItems = (items, depth = 0) => {
+    return (
+      <ul className={`menu depth-${depth}`}>
+        {items.map((item, idx) => (
+          <li key={idx} className="menu-item">
+            {item.submenu ? (
+              <>
+                <button
+                  className="menu-btn"
+                  onClick={() => toggleSubmenu(item.label)}
+                >
+                  {item.label}
+                  {depth === 0 ? (
+                    <ChevronDown size={16} />
+                  ) : (
+                    <ChevronRight size={16} />
+                  )}
+                </button>
+                {openMenus[item.label] &&
+                  renderMenuItems(item.submenu, depth + 1)}
+              </>
+            ) : (
+              <a href={item.link} className="menu-link">
+                {item.label}
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+    );
+  };
 
   return (
     <header>
@@ -37,6 +79,14 @@ const Navbar = () => {
                   <i className="bi bi-search"></i>
                 </button>
               </div>
+              <div className="d-flex gap-2">
+                <User
+                  onClick={() => navigate("/auth/login")}
+                  className="icon ms-2"
+                  size={18}
+                  color="#333"
+                />
+              </div>
             </div>
 
             {/* Bottom menus with dropdowns */}
@@ -59,7 +109,11 @@ const Navbar = () => {
                   </a>
 
                   {/* Mega menu */}
-                  <div className={`dropdown-menu ${menu.label?.replace(/\s+/g, "-").toLowerCase()}`}>
+                  <div
+                    className={`dropdown-menu ${menu.label
+                      ?.replace(/\s+/g, "-")
+                      .toLowerCase()}`}
+                  >
                     <div className="row dropdown-menu-container">
                       {menu.submenu.map((col) => (
                         <div className="dropdown-menu-col" key={col.label}>
@@ -83,13 +137,41 @@ const Navbar = () => {
                   </div>
                 </li>
               ))}
-              <div className="d-flex gap-2">
-                <Search className="icon" size={18} color="#333" />
-                <User className="icon" size={18} color="#333" />
-              </div>
             </ul>
           </div>
+          <div className="d-flex gap-2 mobile-right">
+            <Search className="icon d-lg-none" size={24} color="#333" />
+            <User className="icon " size={24} color="#333" />
+
+            <button className="mobile-toggle" onClick={toggleMobile}>
+              {mobileOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
+        {mobileOpen && (
+          <>
+            {/* Overlay background */}
+            <div className="drawer-overlay" onClick={toggleMobile}></div>
+
+            {/* Drawer itself */}
+            <div className="drawer">
+              <div className="drawer-header">
+                <img
+                  src="/logo.png"
+                  alt="Logo"
+                  className={window.innerWidth > 991 ? "d-none" : "drawer-logo"}
+                />
+                <button className="close-btn" onClick={toggleMobile}>
+                  <X size={28} />
+                </button>
+              </div>
+
+              <div className="drawer-content">
+                {renderMenuItems([...topMenus, ...bottomMenus])}
+              </div>
+            </div>
+          </>
+        )}
       </nav>
     </header>
   );

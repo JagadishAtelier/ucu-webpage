@@ -7,11 +7,14 @@ import Industry from "../Components/Industry/Industry";
 import Events from "../Components/Events/Events";
 import Organisations from "../Components/Organisations/Organisations";
 import Brands from "../Components/Brands/Brands";
+import Navbar from "../Components/Navbar/Navbar";
+import NewFooter from "../Components/NewFooter/NewFooter";
 
 const Home = () => {
   return (
     <div className="overflow-x-hidden">
       <>
+        <Navbar />
         {/* Hero Section */}
         <div data-aos="fade-up" data-aos-delay="100">
           <HeroSection />
@@ -51,6 +54,7 @@ const Home = () => {
         <div data-aos="zoom-in pt-5" data-aos-delay="100">
           <Brands />
         </div>
+        <NewFooter />
       </>
     </div>
   );

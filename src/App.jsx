@@ -15,6 +15,11 @@ import FaculityPage from "./Pages/FaculityPage";
 import ProgramDetails from "./Pages/ProgramDetails";
 import NewFooter from "./Components/NewFooter/NewFooter";
 import Navbar from "./Components/Navbar/Navbar";
+import SignUpPage from "./Components/AuthenticationPage/SignUpPage/SignUpPage";
+import LoginPage from "./Components/AuthenticationPage/LoginPage/LoginPage";
+import AuthPassword from "./Components/AuthenticationPage/AuthPassword/AuthPassword";
+import ForgotPassPage from "./Components/AuthenticationPage/ForgotPassPage/ForgotPassPage";
+import ResetPassPage from "./Components/AuthenticationPage/ResetPassPage/ResetPassPage";
 
 function App() {
   useEffect(() => {
@@ -27,9 +32,6 @@ function App() {
 
   return (
     <Router>
-      {/* <div data-aos="fade-down" data-aos-delay="100"> */}
-      {/* <NavbarNew /> */}
-      <Navbar/>
       {/* </div> */}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -37,11 +39,13 @@ function App() {
         <Route path="/about-ucu" element={<AboutPage />} />
         <Route path="/faculty/*" element={<FaculityPage />} />
         <Route path="/program/*" element={<ProgramDetails />} />
+        <Route path="/auth/register" element={<SignUpPage />} />
+        <Route path="/auth/login" element={<LoginPage />} />
+        <Route path="/auth/password" element={<AuthPassword />} />
+        <Route path="/auth/forgot-password" element={<ForgotPassPage />} />
+        <Route path="/auth/reset" element={<ResetPassPage />} />
+        {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
-      {/* Footer */}
-      <div data-aos="fade-up" data-aos-delay="100">
-        <NewFooter/>
-      </div>
     </Router>
   );
 }
