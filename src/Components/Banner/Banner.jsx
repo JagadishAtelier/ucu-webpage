@@ -18,7 +18,7 @@ function Banner() {
         className="car-heading-text banner-text"
         data-aos="fade-up"
       >
-        <h1>Take the Next Step in Your Career with UCU</h1>
+        <h1 className="fw-bold fs-1 fs-lg-1">Take the Next Step in Your Career with UCU</h1>
         <p>
           Gain industry-aligned knowledge, connect with top leaders, and
           accelerate your career.

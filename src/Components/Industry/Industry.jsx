@@ -41,8 +41,8 @@ function Industry() {
   return (
     <div className="industry-container">
       <div className="car-heading-text" data-aos="fade-up">
-        <h1 className="h1 fw-bold">Industry Icons Speak</h1>
-        <p>
+        <h1 className="h1 fw-bold fs-1 fs-lg-1">Industry Icons Speak</h1>
+        <p className="program-description">
           Insights from top leaders shaping the future of business education at
           UCU.
         </p>
@@ -64,8 +64,8 @@ function Industry() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-            <p>{item.para}</p>
-            <p>
+            <p className="program-description">{item.para}</p>
+            <p className="program-description">
               <strong>-{item.author}</strong>, {item.proffection}
             </p>
           </div>

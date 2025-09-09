@@ -48,10 +48,10 @@ function FaculityFaq() {
         <div className="platform-data-div">
         <div className='d-flex flex-row flex-lg-row gap-2 gap-lg-2'>
         <div className='vertical-line'></div>
-        <p className='fs-lg-4 text-uppercase'>FAQ</p>
+        <p className='fs-5 text-uppercase'>FAQ</p>
         </div>
-        <h1 className='display-4 fw-bold col-10'>Everything You Need to <span style={{ color: "#5ac501" }}>Know</span> Here</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex quis lorem elementum varius. Nam vestibulum, ex sit amet dapibus eleifend, lectus justo finibus erat, eget commodo lorem diam vitae nulla.</p>
+        <h1 className='fs-2 fw-bold col-10'>Everything You Need to <span style={{ color: "#5ac501" }}>Know</span> Here</h1>
+          <p className='program-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur ex quis lorem elementum varius. Nam vestibulum, ex sit amet dapibus eleifend, lectus justo finibus erat, eget commodo lorem diam vitae nulla.</p>
           {data.map((item, index) => (
             <div
               key={index}
@@ -64,7 +64,7 @@ function FaculityFaq() {
                 onClick={() => toggleText(index)}
                 style={{ cursor: "pointer" }}
               >
-                <h1>{item.head}</h1>
+                <h1 className='title mb-3'>{item.head}</h1>
                 <i
                   className={`bi bi-chevron-down chevron-icon ${
                     openIndex === index ? "rotate" : ""
@@ -74,7 +74,7 @@ function FaculityFaq() {
 
               {openIndex === index && (
                 <div data-aos="fade-left">
-                  <p className="platform-text">{item.text}</p>
+                  <p className="platform-text program-description">{item.text}</p>
                 </div>
               )}
             </div>

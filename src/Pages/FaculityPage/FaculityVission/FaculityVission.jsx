@@ -43,7 +43,7 @@ function FaculityVission() {
         {activeTab === "vision" && (
           <div className="vision-section d-flex flex-column flex-lg-column gap-2 gap-lg-2">
             <h1 className="display-4 fw-bold col-10">Our Vision for the Future of <span style={{ color: "#5ac501" }}>Economic</span></h1>
-            <p>
+            <p className="program-description">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mi mauris. Praesent ante nisl, interdum in pharetra in, scelerisque vel purus. Sed rutrum, diam et tincidunt iaculis, metus ex dignissim tortor, quis ullamcorper libero sapien ut elit. Etiam lobortis ullamcorper tortor nec convallis. Nam porttitor bibendum pretium. Phasellus massa mauris, faucibus at nunc vel, hendrerit dignissim quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce sagittis nisi vitae est sollicitudin sagittis.
             </p>
             <div className="vision-images d-flex flex-row flex-lg-row">
@@ -60,7 +60,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mi mauris. Prae
 </div>
 
                 <div>
-            <p className="mt-2 mt-lg-4">
+            <p className="mt-2 mt-lg-4 program-description">
             Aenean quis lacinia sem. Pellentesque fermentum nisi non enim dapibus consectetur. Vivamus sed lacinia massa. Ut in nisl nec neque varius aliquam vel a est. Proin pretium augue nulla, id tincidunt velit porta et. In vestibulum urna nulla, nec vestibulum ex fermentum at. Etiam pellentesque porttitor nisl, ut aliquam magna tristique et. Etiam at diam mi. Aliquam ac gravida sapien, in pulvinar dui. Duis molestie arcu sed placerat elementum. Cras at nisl in urna dictum lobortis eu eu augue. Phasellus eu rutrum ipsum. Duis consectetur eleifend neque eu feugiat. Ut lacinia nisl finibus massa volutpat, et tincidunt ex venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum nulla ac risus imperdiet fermentum.
             </p>
             </div>
@@ -72,21 +72,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mi mauris. Prae
 <h1 className="display-4 fw-bold col-10">Our Mission to<span style={{ color: "#5ac501" }}> Educate and Inspire</span></h1>
 
             <ul>
-              <li>✔ Provide Quality Education
+              <li className="title mb-3">✔ Provide Quality Education
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mi mauris. Praesent ante nisl, interdum in pharetra in, scelerisque vel purus. Sed rutrum, diam et tincidunt iaculis, metus ex dignissim tortor, quis ullamcorper libero sapien ut elit.</p>
+                <p className="program-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mi mauris. Praesent ante nisl, interdum in pharetra in, scelerisque vel purus. Sed rutrum, diam et tincidunt iaculis, metus ex dignissim tortor, quis ullamcorper libero sapien ut elit.</p>
               </li>
               <li>✔ Foster Ethical Leadership
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mi mauris. Praesent ante nisl, interdum in pharetra in, scelerisque vel purus. Sed rutrum, diam et tincidunt iaculis, metus ex dignissim tortor, quis ullamcorper libero sapien ut elit.</p>
+                <p className="program-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mi mauris. Praesent ante nisl, interdum in pharetra in, scelerisque vel purus. Sed rutrum, diam et tincidunt iaculis, metus ex dignissim tortor, quis ullamcorper libero sapien ut elit.</p>
               </li>
               <li>✔ Advance Research and Innovation
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mi mauris. Praesent ante nisl, interdum in pharetra in, scelerisque vel purus. Sed rutrum, diam et tincidunt iaculis, metus ex dignissim tortor, quis ullamcorper libero sapien ut elit.</p>
+                <p className="program-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mi mauris. Praesent ante nisl, interdum in pharetra in, scelerisque vel purus. Sed rutrum, diam et tincidunt iaculis, metus ex dignissim tortor, quis ullamcorper libero sapien ut elit.</p>
 
               </li>
               <li>✔ Build Global Connections
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mi mauris. Praesent ante nisl, interdum in pharetra in, scelerisque vel purus. Sed rutrum, diam et tincidunt iaculis, metus ex dignissim tortor, quis ullamcorper libero sapien ut elit.</p>
+                <p className="program-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mi mauris. Praesent ante nisl, interdum in pharetra in, scelerisque vel purus. Sed rutrum, diam et tincidunt iaculis, metus ex dignissim tortor, quis ullamcorper libero sapien ut elit.</p>
               </li>
             </ul>
           </div>

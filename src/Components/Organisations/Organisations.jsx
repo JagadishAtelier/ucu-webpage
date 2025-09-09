@@ -27,7 +27,7 @@ export default function Organisations() {
     }, []);
   return (
     <section className="pb-5 text-center">
-      <h2 className="mb-5 fw-semibold">Our Students at</h2>
+      <h2 className="mb-5 fw-bold fs-1 fs-lg-1">Our Students at</h2>
 
       <div className="marquee">
         <div className="marquee-content">

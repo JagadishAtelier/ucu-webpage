@@ -7,17 +7,23 @@ import Platforms from "../Platforms/Platforms";
 const data = [
   {
     image: image1,
-    top: "Customised Learning Programs for Corporate Professionals",
-    heading: "Customised Learning Programs for Corporate Professionals",
+    top: "Customised Learning Program",
+    heading: "Customised Learning Program",
     btntext: "Explore Coustomised Programs",
-    para: "Short-term, intensive programs designed to build managerial and functional expertise across industries.",
+    para: `Ignite your organization’s potential with UCU’s XEL
+    Customised Learning Program—an electrifying, tailor-made curriculum engineered to
+    catalyze your strategic objectives.
+    `,
   },
   {
     image: image2,
     top: "Management Development Programs (MDPs)",
     heading: "Management Development Programs (MDPs)",
     btntext: "Explore MDPS",
-    para: "Short-term, intensive programs designed to build managerial and functional expertise across industries.",
+    para: `Supercharge your leadership impact with
+    UCU’s MDP Executive Programs—immersive, high-velocity experiences designed to
+    unleash visionary success
+    `,
   },
 ];
 function Management() {
@@ -32,12 +38,12 @@ function Management() {
     <div className="bg-img">
       <div className="management-container container-fluid mt-5">
         <div className="car-heading-text">
-          <h1 className="h2">
-            <strong>Executive Education</strong>
+          <h1 className="h2 fw-bold fs-1 fs-lg-1">
+            <strong>eXecutive Education & Learning (XEL)</strong>
           </h1>
-          <p>
-            6-month program for undergraduates eager to build careers in
-            business development and client engagement.
+          <p className="program-description">
+          Turbocharge your executive prowess with XEL’s high-octane courses—ignite
+bold leadership and deliver breakthrough results!
           </p>
         </div>
         <div className="man-data-div">
@@ -48,8 +54,8 @@ function Management() {
                 <img src={item.image} />
                 <div className="man-item-content">
                   <h1>{item.heading}</h1>
-                  <p>{item.para}</p>
-                  <a className="EXPLORE-MDPS">{item.btntext}</a>
+                  <p className="program-description">{item.para}</p>
+                  <a className="EXPLORE-MDP">{item.btntext}</a>
                 </div>
               </div>
             </div>

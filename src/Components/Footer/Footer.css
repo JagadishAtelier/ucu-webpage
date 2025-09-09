@@ -44,7 +44,7 @@
   padding-left: 20px;
   border: 1px solid white;
   background-color: transparent;
-  color: white;
+  color: white !important;
 }
 
 .social-text {

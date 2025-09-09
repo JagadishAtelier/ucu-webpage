@@ -15,24 +15,41 @@ import { useNavigate } from "react-router-dom";
 const data = [
   {
     image: image1,
-    heading: "PGPM-ELITE – Post Graduate Diploma in Management",
-    para: "A comprehensive 2-year program tailored for fresh graduates to gain in-depth knowledge of business fundamentals, hands-on industry exposure, and holistic personality development for long-term career growth.",
+    heading: "PGPM is Post Graduate Program in Management - ELITE",
+    para: `A one-year Post Graduate Program in Management crafted for professionals with
+    3+ years of experience, merging executive leadership principles with real-world industry
+    insights to accelerate careers into FinTech, AI consulting, or the GCC economy. Master
+    cutting-edge frameworks and market strategies that position you as a transformative leader
+    in the new global business landscape`,
   },
   {
     image: image2,
-    heading: "PGDM – Post Graduate Program in Management",
-    para: "An accelerated 1-year management program crafted for working professionals to sharpen decision-making skills, enhance leadership abilities, and prepare for senior roles in a competitive global business environment.",
+    heading: "PGDM",
+    para: `A Two-Year PGPM pairs core management education with immersive industry
+    projects for candidates with 0–3 years of experience. Fast-track your entry into new-age job
+    roles through global internships, live labs, and executive mentorship—building the leadership
+    skills of tomorrow's market demands.
+    `,
   },
   {
     image: image1,
-    heading: "PGPM-ELITE – Post Graduate Diploma in Management",
-    para: "With a strong emphasis on case studies, live projects, and internships, this 2-year course empowers young graduates to develop analytical, problem-solving, and communication skills essential for the corporate world.",
+    heading: "PGPM is Post Graduate Program in Management - ELITE",
+    para: `A one-year Post Graduate Program in Management crafted for professionals with
+    3+ years of experience, merging executive leadership principles with real-world industry
+    insights to accelerate careers into FinTech, AI consulting, or the GCC economy. Master
+    cutting-edge frameworks and market strategies that position you as a transformative leader
+    in the new global business landscape`,
   },
   {
     image: image2,
-    heading: "PGDM – Post Graduate Program in Management",
-    para: "Designed for mid-level professionals, this 1-year program blends strategic management concepts with real-world application, helping participants fast-track their careers and transition into leadership positions.",
+    heading: "PGDM",
+    para: `A Two-Year PGPM pairs core management education with immersive industry
+    projects for candidates with 0–3 years of experience. Fast-track your entry into new-age job
+    roles through global internships, live labs, and executive mentorship—building the leadership
+    skills of tomorrow's market demands.
+    `,
   },
+
   
 ];
 
@@ -49,10 +66,10 @@ function CareerSection() {
   return (
     <div className="car-container container-fluid mt-5">
       <div className="car-heading-text mx-2 mb-4" data-aos="fade-up">
-        <h1 className="h2">
+        <h1 className="h2 fw-bold fs-1 fs-lg-1">
           <strong>Full Time Programs</strong>
         </h1>
-        <p className="mb-4">
+        <p className="mb-4 program-description">
         Explore our full-time programs designed to equip students and professionals with strong business acumen, practical skills, and global exposure to excel in today’s dynamic corporate landscape.
         </p>
       </div>
@@ -75,8 +92,8 @@ function CareerSection() {
                 <img src={item.image} alt={item.heading} />
               </div>
               <div className="car-right">
-                <h1>{item.heading}</h1>
-                <p>{item.para}</p>
+                <h1 className="title mb-3">{item.heading}</h1>
+                <p className="program-description">{item.para}</p>
                 <div className="car-explore-btn-div">
                   <button onClick={()=>navigate('/pgpm-elite')} className="btn btn-outline-dark py-2">EXPLORE PGDM</button>
                   <button onClick={()=>navigate('/pgdm')} className="btn car-apply-btn py-2">APPLY NOW</button>

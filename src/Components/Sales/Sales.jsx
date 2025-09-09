@@ -12,27 +12,48 @@ import image4 from "../../Assets/ucu (1)/Rectangle 100.jpg";
 import Aos from "aos";
 
 const functionalData = [
-  { image: image1, heading: "Sales", para: "6-month program for undergraduates eager to build careers in business development and client relations." },
-  { image: image2, heading: "Product Management", para: "Practical program for students interested in product management and innovation." },
-  { image: image3, heading: "Cybersecurity", para: "Specialized program for students aiming to enter the field of data security and digital protection." },
-  { image: image4, heading: "Digital Marketing", para: "Intensive program for students interested in digital marketing strategies and tools." },
-  { image: image1, heading: "Mobility & Sustainability", para: "Focused program on sustainable business practices and mobility solutions." },
-  { image: image3, heading: "Consulting", para: "Program designed for students to develop consulting and advisory skills for businesses." },
-  { image: image4, heading: "Banking & Finance", para: "Comprehensive program in finance, banking operations, and financial analysis." },
-  { image: image2, heading: "Business Analytics", para: "Program for students to learn data-driven decision making and analytics tools." },
-  { image: image1, heading: "Data Science", para: "Hands-on program with data analysis, machine learning, and AI applications." },
+  { image: image1, heading: "Sales", para: `Accelerate revenue with strategic consultative selling and high-impact
+  negotiation skills.` },
+  { image: image2, heading: "Cyber Security", para: ` Fortify digital infrastructures with proactive cyber defense and
+  mastery in the business of threat intelligence.` },
+  { image: image3, heading: "AI", para: `Harness AI algorithms and deployment frameworks to drive data-driven
+  innovation.
+  ` },
+  { image: image4, heading: "Product Management", para: ` Lead end-to-end product lifecycles with agile roadmaps and
+  market-driven insights.
+  ` },
+  { image: image1, heading: "Digital Marketing", para: `Maximize brand reach with data-driven campaigns and
+  omnichannel engagement strategies` },
+  { image: image3, heading: "Mobility & Sustainability", para: `Pioneer green mobility solutions by integrating sustainable
+  design with smart transport tech.` },
+  { image: image4, heading: "Consulting", para: `Deliver strategic business transformations through structured
+  problem-solving and stakeholder engagement.
+  ` },
+  { image: image2, heading: "Banking & Finance", para: `Optimize financial performance with risk management,
+  investment analysis, and compliance expertise.
+  ` },
+  { image: image1, heading: "Product Marketing", para: `Drive product success with compelling positioning, launch
+  planning, and performance analytics.
+  ` },
+  { image: image2, heading: "Data Analytics", para: `Transform raw data into actionable insights using advanced analytics
+  and visualization techniques
+  ` },
 ];
 
 const industryData = [
   {
     image: image4,
     heading: "FinTech",
-    para: "Specialized program focused on financial technology and innovations.",
+    para: `Revolutionize financial services with blockchain, digital payments, and
+    regulatory tech innovation.
+    `,
   },
   {
     image: image2,
-    heading: "Global Capability Centers (GCC)",
-    para: "Intensive program for students preparing for careers in global shared services and business operations.",
+    heading: "Global Capability Centers (GCCs)",
+    para: ` Excel in GCC operations with best-in-class
+    governance, service delivery, and cross-border collaboration.
+    `,
   },
   {
     image: image3,

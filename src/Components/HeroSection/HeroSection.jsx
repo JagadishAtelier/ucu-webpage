@@ -59,10 +59,10 @@ function HeroSection() {
                     index === activeIndex ? "slide-active" : ""
                   }`}
                 >
-                  <h1 className="content-slide-in">{data.header}</h1>
+                  <h1 className="content-slide-in fw-bold fs-1 fs-lg-1">{data.header}</h1>
                   <div className="hero-para-line-div content-slide-in">
                     <div className="vertical-line"></div>
-                    <p>{data.para}</p>
+                    <p className="program-description">{data.para}</p>
                   </div>
                   <div className="hero-btn mt-4 content-slide-in">
                     <button className="hero-section-apply-btn fw-semibold">
