@@ -14,6 +14,7 @@ import NavbarNew from "./Components/Navbar/NavbarNew";
 import FaculityPage from "./Pages/FaculityPage";
 import ProgramDetails from "./Pages/ProgramDetails";
 import NewFooter from "./Components/NewFooter/NewFooter";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   useEffect(() => {
@@ -27,7 +28,8 @@ function App() {
   return (
     <Router>
       {/* <div data-aos="fade-down" data-aos-delay="100"> */}
-      <NavbarNew />
+      {/* <NavbarNew /> */}
+      <Navbar/>
       {/* </div> */}
       <Routes>
         <Route path="/" element={<Home />} />
