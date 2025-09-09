@@ -13,6 +13,7 @@ import AboutPage from "./Pages/AboutPage";
 import NavbarNew from "./Components/Navbar/NavbarNew";
 import FaculityPage from "./Pages/FaculityPage";
 import ProgramDetails from "./Pages/ProgramDetails";
+import NewFooter from "./Components/NewFooter/NewFooter";
 
 function App() {
   useEffect(() => {
@@ -37,7 +38,7 @@ function App() {
       </Routes>
       {/* Footer */}
       <div data-aos="fade-up" data-aos-delay="100">
-        <Footer />
+        <NewFooter/>
       </div>
     </Router>
   );

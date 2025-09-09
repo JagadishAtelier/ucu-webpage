@@ -8,8 +8,9 @@
     object-fit: cover;
 }
 .bgColorBlue{
-    background-color: rgb(1, 1, 177);
-    color: white;
+    background-color: gainsboro;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.155);
     width: 50%;
 }
 .icon-para-about{

@@ -12,7 +12,7 @@ function Brands() {
   return (
     <div className="brand-container my-3">
       <div className="car-heading-text banner-text">
-        <h1>Industry–Academia Collaboration</h1>
+        <h1 className="fw-bold fs-1 fs-lg-1">Industry–Academia Collaboration</h1>
         <p>
           We partner with leading corporations and institutions to bring
           real-world insights, corporate mentorship, and career opportunities to

@@ -58,8 +58,8 @@ function Events() {
           <img src={image} alt="Event" />
           <div className="eve-overlay"></div>
           <div className="eve-overlay-text">
-            <h3>Industry Icons Leadership Summit 2025</h3>
-            <p>
+            <h3 className="fw-bold fs-1 fs-lg-1">Industry Icons Leadership Summit 2025</h3>
+            <p className="program-description">
               UCU hosted top business leaders from the BAC, AAC, and CHRO
               councils to discuss future skills and industry trends.
             </p>
@@ -113,7 +113,7 @@ function Events() {
 
               {openIndex === index && (
                 <div data-aos="fade-down" data-aos-duration="600">
-                  <p className="eve-platform-text">{item.text}</p>
+                  <p className="eve-platform-text program-description">{item.text}</p>
                   <div className="car-explore-btn-div platform-btn">
                     <button className="car-explore-btn">EXPLORE PGDM</button>
                     <button className="car-apply-btn">APPLY NOW</button>
