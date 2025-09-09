@@ -18,8 +18,22 @@
   align-items: flex-start;
   padding: 0 3%;
 }
+.image-wrapper {
+  position: sticky;
+  top: 100px;
+  align-self: flex-start; /* important for sticky in flex */
+  flex-shrink: 0;
+  max-height: calc(100vh - 100px);
+}
+
+.image-wrapper img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
 /* Image */
-.platform img {
+/* .platform img {
   cursor: pointer;
   height: 515px;
   width: 100%;
@@ -27,7 +41,7 @@
   object-fit: cover;
   position: sticky;
   top: 100px;
-}
+} */
 .chevron-icon {
   display: inline-block;
   transition: transform 0.3s ease-in-out; /* smooth animation */
@@ -39,6 +53,8 @@
 /* Content */
 .platform-data-div {
   width: 100%;
+  position: relative;
+
 }
 
 .platform-item-div {
@@ -47,7 +63,7 @@
   margin-bottom: 20px;
   align-items: center;
   cursor: pointer;
-  position: relative;
+    position: relative;
 }
 
 .platform-item-div h1 {

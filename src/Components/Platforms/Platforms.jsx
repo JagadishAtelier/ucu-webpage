@@ -77,7 +77,10 @@ function Platforms() {
       </div>
 
       <div className="platform">
-        <img src={image} alt="Platform illustration" data-aos="fade-right" />
+      <div className="image-wrapper">
+  <img src={image} alt="Platform illustration" data-aos="fade-right" />
+</div>
+
         <div className="platform-data-div">
           {data.map((item, index) => (
             <div
