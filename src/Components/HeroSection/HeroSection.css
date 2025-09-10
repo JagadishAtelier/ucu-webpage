@@ -3,6 +3,10 @@
   background-color: #005bd4;
   height: 75vh;
 }
+.color-highlight{
+  color: #5ac501;
+}
+
 .hero-image {
   position: relative;
   display: inline-block;
@@ -89,6 +93,7 @@
   border: none;
   color: rgb(31, 30, 30);
   background-color: #74c61b;
+  color: white;
 }
 .hero-section-apply-btn {
   width: 100%;
@@ -96,6 +101,7 @@
   border: 1px solid gainsboro;
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(4px);
+  color: white;
 }
 .hero-para-line-div {
   display: flex;

@@ -65,11 +65,10 @@ function CareerSection() {
 
   return (
     <div className="car-container container-fluid mt-5">
-      <div className="car-heading-text mx-2 mb-4" data-aos="fade-up">
-        <h1 className="h2 fw-bold fs-1 fs-lg-1">
-          <strong>Full Time Programs</strong>
+      <div className="mx-2 mb-4 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center" data-aos="fade-up">
+        <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}>Full Time </span>Programs
         </h1>
-        <p className="mb-4 program-description">
+        <p className="mb-4 program-description col-lg-6 text-center">
         Explore our full-time programs designed to equip students and professionals with strong business acumen, practical skills, and global exposure to excel in today’s dynamic corporate landscape.
         </p>
       </div>

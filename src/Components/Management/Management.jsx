@@ -37,11 +37,11 @@ function Management() {
   return (
     <div className="bg-img">
       <div className="management-container container-fluid">
-        <div className="car-heading-text">
-          <h1 className="h2 fw-bold fs-1 fs-lg-1">
-            <strong>eXecutive Education & Learning (XEL)</strong>
+        <div className="d-flex flex-lg-column flex-column align-items-lg-center justify-content-lg-center">
+          <h1 className="display-4 fw-bold col-12 col-lg-6 text-center">
+            <span style={{color:"#5ac501"}}>eXecutive</span> Education & Learning (XEL)
           </h1>
-          <p className="program-description">
+          <p className="program-description col-lg-6 text-center">
           Turbocharge your executive prowess with XEL’s high-octane courses—ignite
 bold leadership and deliver breakthrough results!
           </p>

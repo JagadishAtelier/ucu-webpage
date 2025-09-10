@@ -12,21 +12,22 @@ import AnnoncementSection from "../AnnoncementSection/AnnoncementSection";
 
 const heroData = [
   {
-    header: "Shaping Leaders for the Corporate World",
+    header: <>Shaping Leaders for the <span className="color-highlight">Corporate</span> World</>,
     para: "At Universal Corporate University (UCU), we blend academic excellence with real-world corporate insights to create industry-ready leaders",
     images: image,
   },
   {
-    header: "Future-Ready Programs for High-Growth Sectors",
+    header: <>Future-Ready Programs for <span className="color-highlight">High-Growth</span> Sectors</>,
     para: "From GCC and FinTech to Mobility, our specialized programs prepare professionals to thrive in industries driving global innovation.",
     images: image1,
   },
   {
-    header: "Guided by Industry & Academic Icons",
+    header: <>Guided by Industry & Academic <span className="color-highlight">Icons</span></>,
     para: "Our Business, Academic, CHRO, Talent, and Young CXO councils bring together thought leaders who shape programs, mentor learners, and ensure industry relevance.",
     images: image2,
   },
 ];
+
 
 function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -59,7 +60,7 @@ function HeroSection() {
                     index === activeIndex ? "slide-active" : ""
                   }`}
                 >
-                  <h1 className="content-slide-in fw-bold fs-1 fs-lg-1">{data.header}</h1>
+                  <h1 className="content-slide-in display-4 fw-bold col-10">{data.header}</h1>
                   <div className="hero-para-line-div content-slide-in">
                     <div className="vertical-line"></div>
                     <p className="program-description">{data.para}</p>
