@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Events.css";
 import image from "../../Assets/ucu (1)/Rectangle 100.jpg";
-
+import { useModal } from "../Context/ApplyModal/ModalContext";
 const data = [
   {
     date: "15 Sept",
@@ -30,7 +30,7 @@ const data = [
 function Events() {
   const [openIndex, setOpenIndex] = useState(0);
   const [active, setActive] = useState("Latest"); // default active button
-
+  const { showModal } = useModal();
   const buttons = ["Latest", "Exam", "Admission"];
 
   const toggleText = (index) => {
@@ -116,7 +116,7 @@ function Events() {
                   <p className="eve-platform-text program-description">{item.text}</p>
                   <div className="car-explore-btn-div platform-btn">
                     <button className="car-explore-btn">EXPLORE PGDM</button>
-                    <button className="car-apply-btn">APPLY NOW</button>
+                    <button onClick={() => showModal("apply")} className="car-apply-btn">APPLY NOW</button>
                   </div>
                 </div>
               )}

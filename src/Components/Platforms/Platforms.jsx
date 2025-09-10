@@ -3,6 +3,7 @@ import "./Platforms.css";
 import image from "../../Assets/ucu (1)/Rectangle 154.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useModal } from "../Context/ApplyModal/ModalContext";
 
 const data = [
   {
@@ -50,7 +51,7 @@ const data = [
 
 function Platforms() {
   const [openIndex, setOpenIndex] = useState(0);
-
+  const { showModal } = useModal();
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -109,7 +110,7 @@ function Platforms() {
                     <button className="btn btn-outline-dark py-2">
                       EXPLORE PGDM
                     </button>
-                    <button className="btn apply-btn py-2">APPLY NOW</button>
+                    <button onClick={() => showModal("apply")} className="btn apply-btn py-2">APPLY NOW</button>
                   </div>
                 </div>
               )}

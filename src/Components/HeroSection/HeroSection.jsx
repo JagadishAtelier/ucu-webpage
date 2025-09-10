@@ -9,7 +9,7 @@ import image from "/slider-1.jpg";
 import image1 from "/slider-2.jpg";
 import image2 from "/slider-3.jpg";
 import AnnoncementSection from "../AnnoncementSection/AnnoncementSection";
-
+import { useModal } from "../Context/ApplyModal/ModalContext";
 const heroData = [
   {
     header: <>Shaping Leaders for the <span className="color-highlight">Corporate</span> World</>,
@@ -32,6 +32,7 @@ const heroData = [
 function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
+  const { showModal } = useModal();
 
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
@@ -66,10 +67,10 @@ function HeroSection() {
                     <p className="program-description">{data.para}</p>
                   </div>
                   <div className="hero-btn mt-4 content-slide-in">
-                    <button className="hero-section-apply-btn fw-semibold">
+                    <button onClick={() => showModal("apply")} className="hero-section-apply-btn fw-semibold">
                       APPLY NOW
                     </button>
-                    <button className="hero-section-download-btn fw-semibold">
+                    <button onClick={() => showModal("brochure")} className="hero-section-download-btn fw-semibold">
                       DOWNLOAD BROCHURE
                     </button>
                   </div>

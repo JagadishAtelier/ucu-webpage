@@ -20,6 +20,7 @@ import LoginPage from "./Components/AuthenticationPage/LoginPage/LoginPage";
 import AuthPassword from "./Components/AuthenticationPage/AuthPassword/AuthPassword";
 import ForgotPassPage from "./Components/AuthenticationPage/ForgotPassPage/ForgotPassPage";
 import ResetPassPage from "./Components/AuthenticationPage/ResetPassPage/ResetPassPage";
+import { ModalProvider } from "./Components/Context/ApplyModal/ModalContext";
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
   return (
     <Router>
       {/* </div> */}
+      <ModalProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/program" element={<Program />} />
@@ -46,6 +48,7 @@ function App() {
         <Route path="/auth/reset" element={<ResetPassPage />} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
+      </ModalProvider>
     </Router>
   );
 }

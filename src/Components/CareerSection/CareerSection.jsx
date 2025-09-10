@@ -5,6 +5,7 @@ import image2 from "../../Assets/ucu (1)/Rectangle 45.jpg";
 import Sales from "../Sales/Sales";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { useModal } from "../Context/ApplyModal/ModalContext";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -54,6 +55,8 @@ const data = [
 ];
 
 function CareerSection() {
+  const { showModal } = useModal();
+  console.log("useModal hook loaded:", showModal);  
   const navigate = useNavigate();
   useEffect(() => {
     AOS.init({
@@ -94,8 +97,8 @@ function CareerSection() {
                 <h1 className="title mb-3">{item.heading}</h1>
                 <p className="program-description">{item.para}</p>
                 <div className="car-explore-btn-div">
-                  <button onClick={()=>navigate('/pgpm-elite')} className="btn btn-outline-dark py-2">EXPLORE PGDM</button>
-                  <button onClick={()=>navigate('/pgdm')} className="btn car-apply-btn py-2">APPLY NOW</button>
+                  <button onClick={() => showModal("enquiry")} className="btn btn-outline-dark py-2">EXPLORE PGDM</button>
+                  <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>
             </div>
