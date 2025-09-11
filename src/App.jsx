@@ -21,6 +21,7 @@ import AuthPassword from "./Components/AuthenticationPage/AuthPassword/AuthPassw
 import ForgotPassPage from "./Components/AuthenticationPage/ForgotPassPage/ForgotPassPage";
 import ResetPassPage from "./Components/AuthenticationPage/ResetPassPage/ResetPassPage";
 import { ModalProvider } from "./Components/Context/ApplyModal/ModalContext";
+import NewFaculty from "./Components/NewFaculty/NewFaculty";
 
 function App() {
   useEffect(() => {
@@ -39,7 +40,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/program" element={<Program />} />
         <Route path="/about-ucu" element={<AboutPage />} />
-        <Route path="/faculty/*" element={<FaculityPage />} />
+        <Route path="/faculty/*" element={<NewFaculty/>} />
         <Route path="/program/*" element={<ProgramDetails />} />
         <Route path="/auth/register" element={<SignUpPage />} />
         <Route path="/auth/login" element={<LoginPage />} />
