@@ -39,8 +39,8 @@ function PDPhero() {
             <div className='border bg-light border-2 mb-lg-1'></div>
 
 
-            <p>Education</p>
-            <ul className='education-li-list'>
+            <p className='fs-6 fw-normal'>Education</p>
+            <ul className='education-li-list pdp-sub li'>
                 <li>PhD in Customer Experience Management, Dr RML Avadh University, India</li>
                 <li>PhD in Customer Experience Management, Dr RML Avadh University, India</li>
                 <li>PhD in Customer Experience Management, Dr RML Avadh University, India</li>
