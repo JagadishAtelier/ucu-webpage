@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./NewFac.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const departments = [
   {
@@ -168,29 +169,39 @@ const departments = [
   },
 ];
 
-const FacultyPairCard = ({ pair }) => (
-  <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center p-3 rounded shadow-sm bg-color-card mb-4 mx-lg-4">
-    {pair.map((faculty, i) => (
-      <div
-        key={i}
-        className="card-width-fac d-flex flex-column flex-md-row align-items-center mb-3 mb-md-0"
-      >
-        <img
-          src={faculty.image}
-          alt={faculty.name}
-          className="rounded-circle me-md-3 mb-2 mb-md-0 director-img"
-        />
-        <div className="mt-4 text-center text-lg-start">
-          <h5 className="mb-1">{faculty.name}</h5>
-          <p className="text-muted mb-1 white-space-pre-line">{faculty.prof}</p>
-          <a href="/" className="text-decoration-none">
-            GO TO CV
-          </a>
-        </div>
+const FacultyPairCard = ({ pair }) => {
+    const navigate = useNavigate();
+
+    const handleGoToCV = (faculty) => {
+        navigate("/profile/details", { state: faculty }); 
+      };
+    return(
+        <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center p-3 rounded shadow-sm bg-color-card mb-4 mx-lg-4">
+        {pair.map((faculty, i) => (
+          <div
+            key={i}
+            className="card-width-fac d-flex flex-column flex-md-row align-items-center mb-3 mb-md-0"
+          >
+            <img
+              src={faculty.image}
+              alt={faculty.name}
+              className="rounded-circle me-md-3 mb-2 mb-md-0 director-img"
+            />
+            <div className="mt-4 text-center text-lg-start">
+              <h5 className="mb-1">{faculty.name}</h5>
+              <p className="text-muted mb-1 white-space-pre-line">{faculty.prof}</p>
+              <button
+              className="btn btn-link text-decoration-none p-0"
+              onClick={() => handleGoToCV(faculty)}
+            >
+              GO TO CV
+            </button>
+            </div>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-);
+    )
+        }
 
 const DepartmentSection = ({ department, isOpen, onToggle }) => {
   const pairs = [];

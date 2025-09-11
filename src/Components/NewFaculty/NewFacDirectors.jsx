@@ -1,6 +1,6 @@
 import React from 'react'
 import './NewFac.css'
-
+import { useNavigate } from 'react-router-dom'
 const data = [
   { name: "Seema Khanvilkar", prof: "Program Director", image: "https://sdabocconiasiacenter.com/wp-content/uploads/2024/07/shibani_belwalkar_cv-1.jpg" },
   { name: "Veronica Vecchi", prof: "Academic Director", image: "https://sdabocconiasiacenter.com/wp-content/uploads/2024/07/veronica_vecchi_cv.png" },
@@ -11,6 +11,11 @@ const imbDirectors = [
 ]
 
 function NewFacDirectors() {
+    const  navigate = useNavigate();
+
+    const handleGoToCV = (person) => {
+        navigate("/profile/details", { state: person }); 
+      };
   // Split data into pairs for each card
   const pairs = []
   for (let i = 0; i < data.length; i += 2) {
@@ -41,7 +46,12 @@ function NewFacDirectors() {
                   <div className='mt-4 text-center text-lg-start'>
                     <h5 className="mb-1">{person.name}</h5>
                     <p className="text-muted mb-0">{person.prof}</p>
-                    <a href="/" className="text-decoration-none">GO TO CV</a>
+                    <button
+              className="btn btn-link text-decoration-none p-0"
+              onClick={() => handleGoToCV(person)}
+            >
+              GO TO CV
+            </button>
                   </div>
                 </div>
               ))}
@@ -69,7 +79,12 @@ function NewFacDirectors() {
                   <div className='mt-4 text-center text-lg-start'>
                     <h5 className="mb-1">{person.name}</h5>
                     <p className="text-muted mb-0">{person.prof}</p>
-                    <a href="/" className="text-decoration-none">GO TO CV</a>
+                    <button
+              className="btn btn-link text-decoration-none p-0"
+              onClick={() => handleGoToCV(person)}
+            >
+              GO TO CV
+            </button>
                   </div>
                 </div>
               ))}
