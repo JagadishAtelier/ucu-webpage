@@ -10,7 +10,6 @@ import Navbar from '../Navbar/Navbar';
 function NewFaculty() {
   return (
     <div>
-      <Navbar/>
     <div
       data-aos="fade-down"
       className="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-lg-start p-3 p-lg-5 p-lg-7"

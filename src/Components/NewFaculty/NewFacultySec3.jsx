@@ -234,7 +234,7 @@ function NewFacultySec3() {
 
   return (
     <div className="mt-lg-5 mt-5 text-center text-lg-start mx-lg-5">
-      <h1 className="mb-5 display-4">The Faculty</h1>
+      <h1 className="display-4">The Faculty</h1>
       {departments.map((dept, idx) => (
         <DepartmentSection
           key={idx}
