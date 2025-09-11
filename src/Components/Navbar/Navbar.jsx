@@ -77,7 +77,7 @@ const Navbar = () => {
             id="mainNavbar"
           >
             {/* Top bar */}
-            <div className="top-bar d-flex justify-content-end align-items-center pt-4 bg-white">
+            <div className="top-bar d-flex justify-content-end align-items-center pt-3 bg-white">
               <ul className="list-inline mb-0">
                 {topMenus.map((menu) => (
                   <li key={menu.label} className="list-inline-item">
