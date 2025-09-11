@@ -3,7 +3,7 @@ import './NewFac.css'
 import { useNavigate } from 'react-router-dom'
 const data = [
   { name: "Seema Khanvilkar", prof: "Program Director", image: "https://sdabocconiasiacenter.com/wp-content/uploads/2024/07/shibani_belwalkar_cv-1.jpg" },
-  { name: "Veronica Vecchi", prof: "Academic Director", image: "https://sdabocconiasiacenter.com/wp-content/uploads/2024/07/veronica_vecchi_cv.png" },
+  { name: "Veronica Vecchi", prof: "Academic Director", image: "https://sdabocconiasiacenter.com/wp-content/uploads/2024/07/maurizio_poli_cv.jpg" },
 ]
 const imbDirectors = [
   { name: "Shibani Belwalkar", prof: "Program Director", image: "https://sdabocconiasiacenter.com/wp-content/uploads/2024/07/misb-prof-seema-Khanvilkar.jpg" },

@@ -32,13 +32,11 @@ function PDPhero() {
         <div className='d-flex flex-column flex-lg-column gap-1 text-lg-left ms-lg-4 align-items-start text-start'>
             <div className='vertical-line-pdp'></div>
             <h3>{faculty.name}</h3>
-            <div className='d-flex flex-row flex-lg-row justify-content-between'>
+            <div className='d-flex flex-row flex-lg-row justify-content-between fac-prof'>
             <p className='fs-6 fw-bold'>{faculty.prof}</p>
             <FaLinkedin size={25} className='linked-in-icon'/>
             </div>
-            <div className='border bg-light border-2 mb-lg-1'></div>
-
-
+            <div className='border-line-fac mb-lg-2'></div>
             <p className='fs-6 fw-normal'>Education</p>
             <ul className='education-li-list pdp-sub li'>
                 <li>PhD in Customer Experience Management, Dr RML Avadh University, India</li>

@@ -161,3 +161,11 @@
   .pdp-exp{
     width: 70%;
   }
+  .fac-prof{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .border-line-fac{
+    border: 2px solid gainsboro;
+    width: 100%;
+  }
