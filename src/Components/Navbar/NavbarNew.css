@@ -9,9 +9,12 @@
   position: relative;
   z-index: 50;
 }
-
+.nav-left a{
+  padding: 0;
+}
 .logo {
-  height: 80px;
+  height: 110px;
+  padding: 0;
 }
 
 .nav-center {

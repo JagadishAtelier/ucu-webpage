@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Events.css";
 import image from "../../Assets/ucu (1)/Rectangle 100.jpg";
-
+import { useModal } from "../Context/ApplyModal/ModalContext";
 const data = [
   {
     date: "15 Sept",
@@ -30,7 +30,7 @@ const data = [
 function Events() {
   const [openIndex, setOpenIndex] = useState(0);
   const [active, setActive] = useState("Latest"); // default active button
-
+  const { showModal } = useModal();
   const buttons = ["Latest", "Exam", "Admission"];
 
   const toggleText = (index) => {
@@ -45,9 +45,9 @@ function Events() {
   return (
     <div className="eve-platforms-container pb-5">
       <div className="event-header" data-aos="fade-down">
-        <h1>Recent Events</h1>
+        <h1 className="display-4 fw-bold col-12 col-lg-4 text-center">Recent <span style={{color:"#5ac501"}}>Events</span></h1>
         <div className="event-header-left">
-          <h1>Upcoming Events</h1>
+          <h1 className="display-4 fw-bold col-6 col-lg-10 text-center">Upcoming <span style={{color:"#5ac501"}}>Events</span></h1>
           <a href="/">View all</a>
         </div>
       </div>
@@ -116,7 +116,7 @@ function Events() {
                   <p className="eve-platform-text program-description">{item.text}</p>
                   <div className="car-explore-btn-div platform-btn">
                     <button className="car-explore-btn">EXPLORE PGDM</button>
-                    <button className="car-apply-btn">APPLY NOW</button>
+                    <button onClick={() => showModal("apply")} className="car-apply-btn">APPLY NOW</button>
                   </div>
                 </div>
               )}

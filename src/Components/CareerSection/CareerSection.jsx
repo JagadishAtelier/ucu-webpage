@@ -5,6 +5,7 @@ import image2 from "../../Assets/ucu (1)/Rectangle 45.jpg";
 import Sales from "../Sales/Sales";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { useModal } from "../Context/ApplyModal/ModalContext";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -54,6 +55,8 @@ const data = [
 ];
 
 function CareerSection() {
+  const { showModal } = useModal();
+  console.log("useModal hook loaded:", showModal);  
   const navigate = useNavigate();
   useEffect(() => {
     AOS.init({
@@ -65,11 +68,10 @@ function CareerSection() {
 
   return (
     <div className="car-container container-fluid mt-5">
-      <div className="car-heading-text mx-2 mb-4" data-aos="fade-up">
-        <h1 className="h2 fw-bold fs-1 fs-lg-1">
-          <strong>Full Time Programs</strong>
+      <div className="mx-2 mb-4 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center" data-aos="fade-up">
+        <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}>Full Time </span>Programs
         </h1>
-        <p className="mb-4 program-description">
+        <p className="mb-4 program-description col-lg-6 text-center">
         Explore our full-time programs designed to equip students and professionals with strong business acumen, practical skills, and global exposure to excel in today’s dynamic corporate landscape.
         </p>
       </div>
@@ -95,8 +97,8 @@ function CareerSection() {
                 <h1 className="title mb-3">{item.heading}</h1>
                 <p className="program-description">{item.para}</p>
                 <div className="car-explore-btn-div">
-                  <button onClick={()=>navigate('/pgpm-elite')} className="btn btn-outline-dark py-2">EXPLORE PGDM</button>
-                  <button onClick={()=>navigate('/pgdm')} className="btn car-apply-btn py-2">APPLY NOW</button>
+                  <button onClick={() => showModal("enquiry")} className="btn btn-outline-dark py-2">EXPLORE PGDM</button>
+                  <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>
             </div>

@@ -40,9 +40,9 @@ function Industry() {
 
   return (
     <div className="industry-container">
-      <div className="car-heading-text" data-aos="fade-up">
-        <h1 className="h1 fw-bold fs-1 fs-lg-1">Industry Icons Speak</h1>
-        <p className="program-description">
+      <div className="d-flex flex-column flex-lg-column align-items-lg-center justify-content-lg-center" data-aos="fade-up">
+        <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}>Industry</span> Icons Speak</h1>
+        <p className="program-description col-lg-6 text-center">
           Insights from top leaders shaping the future of business education at
           UCU.
         </p>

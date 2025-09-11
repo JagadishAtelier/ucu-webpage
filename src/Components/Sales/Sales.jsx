@@ -4,7 +4,7 @@ import { Pagination,Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./Sales.css";
-
+import { useModal } from "../Context/ApplyModal/ModalContext";
 import image1 from "../../Assets/ucu (1)/Rectangle 53.jpg";
 import image2 from "../../Assets/ucu (1)/Rectangle 53-1.jpg";
 import image3 from "../../Assets/ucu (1)/Rectangle 53-2.jpg";
@@ -79,7 +79,7 @@ const industryData = [
 
 function Sales() {
   const [activeTab, setActiveTab] = useState("functional");
-
+  const { showModal } = useModal();
   useEffect(() => {
     Aos.init({ duration: 1000, once: true, offset: 100 });
   }, []);
@@ -88,11 +88,11 @@ function Sales() {
 
   return (
     <div className="sales-container container-fluid my-3">
-      <div className="car-heading-text text-center mb-4">
-        <h1 className="h1">
-          <strong>Diploma Programs</strong>
+      <div className="d-flex flex-lg-column flex-column align-items-lg-center justify-content-lg-center text-center mb-4">
+        <h1 className="display-4 fw-bold col-12 col-lg-12 text-center">
+          <span style={{color:"#5ac501"}}>Diploma</span> Programs
         </h1>
-        <p>
+        <p className="col-lg-6 text-center">
           Explore our range of industry-focused programs designed to equip
           students with practical skills and career-ready expertise.
         </p>
@@ -138,7 +138,7 @@ function Sales() {
                   <button className="car-explore-btn expo-btn btn btn-outline-dark">
                     EXPLORE PGDM
                   </button>
-                  <button className="car-apply-btn expo-btn">APPLY NOW</button>
+                  <button onClick={() => showModal("apply")} className="car-apply-btn expo-btn">APPLY NOW</button>
                 </div>
               </div>
             </div>

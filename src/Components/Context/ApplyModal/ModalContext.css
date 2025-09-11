@@ -1,0 +1,168 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999 !important; /* make sure it's above Bootstrap navbar, swiper, etc */
+  }
+  .cancel-icon{
+    position: absolute;
+    right: 3%;
+    top: 10px;
+    background-color: white;
+    border: none;
+    font-size: 1.5rem;
+  }
+  
+  .modal-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: relative;
+    width: 70%;
+    height: 90vh;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    overflow-y: auto;   /* ✅ allows vertical scroll */
+    overflow-x: hidden;
+  }
+  .modal-banner{
+    height:100%;
+    width:39%;
+  }
+  .modal-right-form{
+    width: 100%;
+  }
+  .modal-para-text{
+    color: gray;
+    font-size: 13px;
+  }
+  .contact-btn{
+    background-color: white;
+    border-radius: 10px;
+  }
+  .select-input-div{
+    height: 50px;
+  }
+  .form-div input{
+    font-size: 14px;
+    font-weight: 100;
+    border-radius: 10px;
+
+  }
+  .select-input-div select{
+    height:43px;
+    border-radius: 10px ;
+    border: 1px solid gainsboro;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 2px 5px;
+  }
+  .radio-btn-text{
+    color: gray;
+    font-size: 13px;
+  }
+  .number-input-modal{
+    width: 200px;
+  }
+  
+  .input-radio-btn {
+    transform: scale(1.5);  /* make it 1.5x bigger */
+    margin-right: 8px;      /* adjust spacing if needed */
+  }
+  
+  .contact-btn {
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .contact-btn.active-btn {
+    background: #5ac501; /* blue */
+    color: white;
+    border-color: #5ac501;
+  }
+  .number-text-modal{
+    font-size: 14px;
+
+  }
+  .submit-btn-modal{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #5ac501;
+    background-color: #5ac501;
+    color: white;
+  }
+  .modal-banner-div{
+    height:83vh;
+    width: 50%;
+  }
+  .modal-banner-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+  /* 📱 Mobile & small screens */
+@media (max-width: 768px) {
+    .modal-box {
+      width: 95%;
+      height: 85vh;
+      padding: 1rem;
+    }
+    .modal-banner-div{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+
+    }
+  
+    .modal-banner {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+    }
+  
+    .modal-right-form {
+      width: 100%;
+    }
+  
+    .number-input-modal {
+      width: 100%; /* Full width for mobile */
+    }
+  
+    .form-div input,
+    .select-input-div select {
+      width: 100%;
+    }
+  
+    .submit-btn-modal {
+      width: 100%;
+    }
+  
+    .cancel-icon {
+      right: 10px;
+      top: 10px;
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* 💻 Tablet screens */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .modal-box {
+      width: 85%;
+      height: 90vh;
+    }
+  
+    .modal-banner {
+      width: 45%;
+    }
+  
+    .modal-right-form {
+      width: 55%;
+    }
+  }
+  
