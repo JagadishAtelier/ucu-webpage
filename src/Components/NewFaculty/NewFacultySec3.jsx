@@ -188,7 +188,7 @@ const FacultyPairCard = ({ pair }) => {
               className="rounded-circle me-md-3 mb-2 mb-md-0 director-img"
             />
             <div className="mt-4 text-center text-lg-start">
-              <h5 className="mb-1">{faculty.name}</h5>
+              <h5 className="mb-2 fs-4">{faculty.name}</h5>
               <p className="text-muted mb-1 white-space-pre-line">{faculty.prof}</p>
               <button
               className="btn btn-link text-decoration-none p-0"
