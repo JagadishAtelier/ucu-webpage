@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import image from "/slider-1.jpg";
+// import image from "/slider-1.jpg";
 import "./SignUpPage.css";
 import { useNavigate } from "react-router-dom";
 import VerificationSuccess from "./VerificationSuccess";

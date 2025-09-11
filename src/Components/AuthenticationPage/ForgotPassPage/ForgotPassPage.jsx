@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ForgotPassPage.css";
-import image from "/slider-1.jpg";
+// import image from "/slider-1.jpg";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function ForgotPassPage() {

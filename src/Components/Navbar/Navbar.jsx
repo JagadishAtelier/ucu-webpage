@@ -51,12 +51,24 @@ const Navbar = () => {
   };
 
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-0 navbar-main-container">
+    <header className="position-relative">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-0 navbar-main-container ">
         <div className="container-fluid">
           {/* Logo */}
+          <Link className="navbar-brand logo-box" to="/">
+            <img
+              src="/logo.svg"
+              alt="Universal Corporate University Logo"
+              className="logo-img"
+            />
+          </Link>
+
           <Link className="navbar-brand" to="/">
-            <img src="/logo.svg" alt="Logo" height="85" />
+            <img
+              src="/logo.svg"
+              alt="Universal Corporate University Logo"
+              className="logo-img"
+            />
           </Link>
 
           {/* Collapse wrapper */}
@@ -141,7 +153,12 @@ const Navbar = () => {
           </div>
           <div className="d-flex gap-2 mobile-right">
             <Search className="icon d-lg-none" size={24} color="#333" />
-            <User className="icon " size={24} color="#333" onClick={() => navigate("/auth/login")} />
+            <User
+              className="icon "
+              size={24}
+              color="#333"
+              onClick={() => navigate("/auth/login")}
+            />
 
             <button className="mobile-toggle" onClick={toggleMobile}>
               {mobileOpen ? <X /> : <Menu />}
