@@ -29,7 +29,7 @@
   text-transform: uppercase;
   color: #333 !important;
   position: relative;
-  padding: 20px 15px;
+  padding: 15px 15px;
 }
 .navbar-nav .nav-link::before {
   content: "";
@@ -52,17 +52,37 @@
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translateX(-50%);
-  display: none;
-  background: #fff;
-  border-top: 2px solid #eee;
+  display: block;
+  transform: translateX(-50%) translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  background: #0069f5;
+  border-top: 2px solid #348cff;
   z-index: 1000;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  width: 100vw;
-  min-width: 300px;
+
+  width: 0;
   max-width: 1200px;
-  padding: 2rem;
+  max-height: 0; /* collapsed */
+  overflow: hidden;
+
+  padding: 0 2rem; /* no vertical padding initially */
+
+  transition: opacity 0.5s ease, width 0.5s ease-in-out,
+    max-height 0.3s ease-in-out 0.8s,
+    /* start after width finishes */ padding 0.3s ease-in-out 0.8s,
+    transform 0.5s ease, visibility 0.5s ease;
 }
+
+.navbar-nav > .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  width: 100vw;
+  max-height: 600px; /* enough to show content */
+  padding: 2rem;
+  transform: translateX(-50%) translateY(0);
+}
+
 .dropdown-menu.programs,
 .dropdown-menu.advisory-councils {
   left: 210% !important;
@@ -98,16 +118,17 @@
 /* column heading */
 .dropdown-menu-col .top-head {
   font-size: 0.75rem;
-  color: #000080;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 1px solid #ff7b00;
+  border-bottom: 1px solid #74e974;
   margin-bottom: 10px;
   padding-bottom: 4px;
 }
 .top-head a {
   text-decoration: none;
   font-weight: 500;
+  color: #fff !important;
   letter-spacing: 0.6px;
 }
 /* links inside dropdown */
@@ -120,9 +141,9 @@
   margin-bottom: 6px;
 }
 .dropdown-menu-col ul li a {
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: #333 !important;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #e5e5e5 !important;
   text-decoration: none;
 }
 .dropdown-menu-col ul li a:hover {
@@ -336,22 +357,22 @@
 }
 
 .logo-img {
-  height: 150px;
+  height: 145px;
   width: 175px;
   display: block;
 }
-.navbar-brand.mobile-only{
+.navbar-brand.mobile-only {
   display: none;
 }
 @media (max-width: 991px) {
-  .navbar-brand.mobile-only{
-  display: block;
-}
-.logo-box {
+  .navbar-brand.mobile-only {
+    display: block;
+  }
+  .logo-box {
     display: none;
   }
-  .logo-img{
-    height: 80px; 
+  .logo-img {
+    height: 80px;
     width: auto !important;
   }
 
