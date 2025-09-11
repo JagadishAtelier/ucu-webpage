@@ -63,7 +63,7 @@ const Navbar = () => {
             />
           </Link>
 
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand mobile-only" to="/">
             <img
               src="/logo.svg"
               alt="Universal Corporate University Logo"

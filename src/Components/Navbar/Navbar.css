@@ -340,8 +340,13 @@
   width: 175px;
   display: block;
 }
-
+.navbar-brand.mobile-only{
+  display: none;
+}
 @media (max-width: 991px) {
+  .navbar-brand.mobile-only{
+  display: block;
+}
 .logo-box {
     display: none;
   }
