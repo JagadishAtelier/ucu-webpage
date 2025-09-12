@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const departments = [
   {
-    title: "Accounting",
+    title: "Marketing",
     data: [
       {
         name: "Laura Zoni",
@@ -15,7 +15,7 @@ const departments = [
     ],
   },
   {
-    title: "Economics, Politics and Decision Sciences",
+    title: "Operations & Supply Chain",
     data: [
       {
         name: "Alessandro Recla",
@@ -92,7 +92,7 @@ const departments = [
     ],
   },
   {
-    title: "Government, Health and Not for Profit",
+    title: "Analytics & AI",
     data: [
       {
         name: "Giampaolo Gabbi",
@@ -111,7 +111,7 @@ const departments = [
     ],
   },
   {
-    title: "Leadership, Human Resources and Digital Technologies",
+    title: "Consulting",
     data: [
       {
         name: "Giampaolo Gabbi",
@@ -130,7 +130,7 @@ const departments = [
     ],
   },
   {
-    title: "Marketing",
+    title: "Product",
     data: [
       {
         name: "Giampaolo Gabbi",
@@ -149,7 +149,7 @@ const departments = [
     ],
   },
   {
-    title: "Strategy and Operations",
+    title: "Associate & Assistant Faculty",
     data: [
       {
         name: "Giampaolo Gabbi",
@@ -245,7 +245,7 @@ function NewFacultySec3() {
 
   return (
     <div className="mt-lg-5 mt-5 text-center text-lg-start mx-lg-5">
-      <h1 className="display-4">The Faculty</h1>
+      <h1 className="display-4 fw-bold col-12">The <span style={{ color: "#5ac501" }}>Faculty</span></h1>
       {departments.map((dept, idx) => (
         <DepartmentSection
           key={idx}
