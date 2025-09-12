@@ -58,6 +58,22 @@
   .instagram {
     background: #003E68;
   }
+
+  .NFB-overlay{
+    position: relative;
+    z-index: 1;
+  }
+  .NFB-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 62, 104, 0.8); /* deep navy blue with 80% opacity */
+
+    z-index: -1;
+  }
   
 
   @media (max-width: 480px) {
