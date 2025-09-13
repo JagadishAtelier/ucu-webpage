@@ -355,7 +355,16 @@ left: 10% !important;
     display: none !important;
   }
 }
-
+.Business-school{
+  position: absolute;
+  left: 13%;
+  top: 30%;
+}
+.logo-text{
+  color: #111;
+  font-weight: 400 !important;
+  margin-bottom: auto;
+}
 .logo-box {
   position: absolute;
   top: 0px; /* shadow offset */
