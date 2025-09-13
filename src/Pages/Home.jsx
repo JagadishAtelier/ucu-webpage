@@ -9,6 +9,7 @@ import Organisations from "../Components/Organisations/Organisations";
 import Brands from "../Components/Brands/Brands";
 import Navbar from "../Components/Navbar/Navbar";
 import NewFooter from "../Components/NewFooter/NewFooter";
+import Platforms from "../Components/Platforms/Platforms";
 
 const Home = () => {
   return (
@@ -29,6 +30,8 @@ const Home = () => {
         <div data-aos="fade-left" data-aos-delay="100">
           <Management />
         </div>
+
+        <Platforms />
 
         {/* Banner */}
         <div data-aos="fade-up" data-aos-delay="100">

@@ -48,7 +48,6 @@ const data = [
   },
 ];
 
-
 function Platforms() {
   const [openIndex, setOpenIndex] = useState(0);
   const { showModal } = useModal();
@@ -66,9 +65,13 @@ function Platforms() {
 
   return (
     <div className="platforms-container">
-      <div className="d-flex flex-lg-column flex-column align-items-lg-center justify-content-lg-center mb-4" data-aos="fade-up">
+      <div
+        className="d-flex flex-lg-column flex-column align-items-lg-center justify-content-lg-center mb-4"
+        data-aos="fade-up"
+      >
         <h1 className="display-4 fw-bold col-12 col-lg-6 text-center">
-          <span style={{color:"#5ac501"}}>E-Learning</span> Programs – Learn Anytime, Anywhere
+          <span style={{ color: "#5ac501" }}>E-Learning</span> Programs – Learn
+          Anytime, Anywhere
         </h1>
         <p className="program-description col-lg-6 text-center">
           Flexible, online versions of UCU’s programs with the same academic
@@ -78,18 +81,13 @@ function Platforms() {
       </div>
 
       <div className="platform">
-      <div className="image-wrapper">
-  <img src={image} alt="Platform illustration" data-aos="fade-right" />
-</div>
+        <div className="image-wrapper">
+          <img src={image} alt="Platform illustration" data-aos="fade-right" />
+        </div>
 
         <div className="platform-data-div">
           {data.map((item, index) => (
-            <div
-              key={index}
-              className="platform-indiviual-con"
-              data-aos="fade-up"
-              data-aos-delay={index * 50}
-            >
+            <div key={index} className="platform-indiviual-con">
               <div
                 className="platform-item-div"
                 onClick={() => toggleText(index)}
@@ -105,12 +103,19 @@ function Platforms() {
 
               {openIndex === index && (
                 <div data-aos="fade-left">
-                  <p className="platform-text program-description">{item.text}</p>
+                  <p className="platform-text program-description">
+                    {item.text}
+                  </p>
                   <div className="car-explore-btn-div-faq">
                     <button className="btn btn-outline-dark py-2">
                       EXPLORE PGDM
                     </button>
-                    <button onClick={() => showModal("apply")} className="btn apply-btn py-2">APPLY NOW</button>
+                    <button
+                      onClick={() => showModal("apply")}
+                      className="btn apply-btn py-2"
+                    >
+                      APPLY NOW
+                    </button>
                   </div>
                 </div>
               )}

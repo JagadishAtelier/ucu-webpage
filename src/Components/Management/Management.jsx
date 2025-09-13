@@ -141,9 +141,6 @@ function Management() {
           </button>
         </div>
       </div>
-      <div data-aos="zoom-in" data-aos-delay="100">
-        <Platforms />
-      </div>
     </div>
   );
 }

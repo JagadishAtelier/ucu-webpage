@@ -1,5 +1,5 @@
 section {
-  overflow-x: hidden; /* Hide unwanted horizontal/vertical scrollbars */
+  /* overflow-x: hidden; */
 }
 .btn-outline-dark{
   border-radius: 3px !important;
