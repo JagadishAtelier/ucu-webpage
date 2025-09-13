@@ -94,7 +94,7 @@ const Navbar = () => {
               <div className="d-flex gap-2">
                 <User
                   onClick={() => navigate("/auth/login")}
-                  className="icon ms-2"
+                  className="icons ms-2"
                   size={18}
                   color="#333"
                 />

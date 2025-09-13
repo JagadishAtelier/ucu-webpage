@@ -12,7 +12,7 @@ import NewFooter from "../Components/NewFooter/NewFooter";
 function FaculityPage() {
   return (
     <div>
-      <Navbar />
+       <Navbar />
       <FaculityHero
         title="Faculty of Engineering"
         bgImage="https://demo.farmstudios.net/oakwood/wp-content/uploads/sites/29/2025/08/images-YMZPJG5.jpg"
