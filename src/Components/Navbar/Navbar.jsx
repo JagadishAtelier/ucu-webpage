@@ -52,12 +52,12 @@ const Navbar = () => {
 
   return (
     <header className="position-relative">
-      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-0 navbar-main-container ">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-md py-0 navbar-main-container ">
         <div className="container-fluid">
           {/* Logo */}
           <Link className="navbar-brand logo-box" to="/">
             <img
-              src="/logo.svg"
+              src="/logo1.svg"
               alt="Universal Corporate University Logo"
               className="logo-img"
             />
