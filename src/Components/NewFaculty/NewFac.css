@@ -1,0 +1,85 @@
+.director-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+  .card-width-fac{
+    width: 100%;
+  }
+  
+  .bg-color-card{
+    background-color: rgb(250, 248, 248);
+  }
+  .dept-btn{
+    width: 100%;
+    text-align: left;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+
+  .transition-max-height {
+    transition: max-height 10s ease-in-out;
+  }
+  .bg-color-card {
+    background-color: #f9f9f9; /* customize card background */
+  }
+  .dept-btn {
+    cursor: pointer;
+  }
+  .bg-banner-color-fsc{
+    background-color: rgb(1, 1, 177);
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;   /* size of box */
+    height: 40px;
+    border-radius: 50%; /* makes it circular */
+    color: white;
+    font-size: 20px; /* icon size */
+    cursor: pointer;
+  }
+  
+  .facebook {
+    background-color: #003E68; /* Facebook blue */
+  }
+  
+  .linkedin {
+    background-color: #003E68;
+  }
+  
+  .youtube {
+    background-color: #003E68;
+  }
+  
+  .instagram {
+    background: #003E68;
+  }
+
+  .NFB-overlay{
+    position: relative;
+    z-index: 1;
+  }
+  .NFB-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 62, 104, 0.8); /* deep navy blue with 80% opacity */
+
+    z-index: -1;
+  }
+  
+
+  @media (max-width: 480px) {
+    .director-img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+  }

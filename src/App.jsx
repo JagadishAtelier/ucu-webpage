@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import Home from "./Pages/Home";
+import Home from "../Home";
 import Footer from "./Components/Footer/Footer";
 import Program from "./Pages/Program";
 import AboutPage from "./Pages/AboutPage";
@@ -21,6 +21,8 @@ import AuthPassword from "./Components/AuthenticationPage/AuthPassword/AuthPassw
 import ForgotPassPage from "./Components/AuthenticationPage/ForgotPassPage/ForgotPassPage";
 import ResetPassPage from "./Components/AuthenticationPage/ResetPassPage/ResetPassPage";
 import { ModalProvider } from "./Components/Context/ApplyModal/ModalContext";
+import NewFaculty from "./Components/NewFaculty/NewFaculty";
+import PDPhero from "./Components/ProfileDetailsPage/PDPhero";
 
 function App() {
   useEffect(() => {
@@ -39,7 +41,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/program" element={<Program />} />
         <Route path="/about-ucu" element={<AboutPage />} />
-        <Route path="/faculty/*" element={<FaculityPage />} />
+        <Route path="/faculty/*" element={<NewFaculty/>} />
+        <Route path="/profile/details" element={<PDPhero/>} />
         <Route path="/program/*" element={<ProgramDetails />} />
         <Route path="/auth/register" element={<SignUpPage />} />
         <Route path="/auth/login" element={<LoginPage />} />
