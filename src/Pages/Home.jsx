@@ -1,14 +1,14 @@
 import React from "react";
-import HeroSection from "./src/Components/HeroSection/HeroSection";
-import CareerSection from "./src/Components/CareerSection/CareerSection";
-import Management from "./src/Components/Management/Management";
-import Banner from "./src/Components/Banner/Banner";
-import Industry from "./src/Components/Industry/Industry";
-import Events from "./src/Components/Events/Events";
-import Organisations from "./src/Components/Organisations/Organisations";
-import Brands from "./src/Components/Brands/Brands";
-import Navbar from "./src/Components/Navbar/Navbar";
-import NewFooter from "./src/Components/NewFooter/NewFooter";
+import HeroSection from "../Components/HeroSection/HeroSection";
+import CareerSection from "../Components/CareerSection/CareerSection";
+import Management from "../Components/Management/Management";
+import Banner from "../Components/Banner/Banner";
+import Industry from "../Components/Industry/Industry";
+import Events from "../Components/Events/Events";
+import Organisations from "../Components/Organisations/Organisations";
+import Brands from "../Components/Brands/Brands";
+import Navbar from "../Components/Navbar/Navbar";
+import NewFooter from "../Components/NewFooter/NewFooter";
 
 const Home = () => {
   return (

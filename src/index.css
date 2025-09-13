@@ -118,7 +118,12 @@
   font-style: italic;
 }
 
-
+@font-face {
+  font-family: "GothamBold";
+  src: url("/fonts/HomepageBaukasten-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
 
 body {
     font-family: "AcidGrotesk", sans-serif !important;
@@ -136,4 +141,7 @@ p{
   margin: 0;
   font-weight: 300 !important;
   /* color: #022043 ; */
+}
+.logo-text{
+ font-family: 'GothamBold' !important;
 }

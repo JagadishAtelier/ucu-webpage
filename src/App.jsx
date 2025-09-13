@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import Home from "../Home";
+import Home from "./Pages/Home";
 import Footer from "./Components/Footer/Footer";
 import Program from "./Pages/Program";
 import AboutPage from "./Pages/AboutPage";

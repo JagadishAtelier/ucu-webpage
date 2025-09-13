@@ -118,6 +118,116 @@
 .EXPLORE-MDPS:hover {
   color: #f1f1f1; /* Changes link color on hover */
 }
+.view-more-wrapper{
+  display: flex;
+  justify-content: center;
+}
+.extra-content-inner{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.extra-content-inner h3{
+ display: inline;
+ margin-top: 1rem;
+}
+.sort-disc{
+  text-align: center;
+  opacity: 0.9;
+  font-size: 14px;
+  font-weight: 300 !important;
+  letter-spacing: 1px;
+  max-width: 900px;
+}
+.cxo-grid {
+  display: grid;
+  margin: 1rem 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Individual cards */
+.cxo-card {
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  height: 250px; /* optional fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* keep text at bottom */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* dark overlay */
+.cxo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* semi-transparent black */
+  z-index: 1;
+}
+
+/* content above overlay */
+.cxo-card h4,
+.cxo-card p {
+  position: relative;
+  z-index: 2;
+}
+
+.cxo-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.cxo-card p {
+  font-size: 0.8rem;
+  color: #e2e2e2 !important;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Hover effect */
+.cxo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+
+/* Example background images per role */
+.bg-cxo {
+  background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80");
+}
+
+.bg-cio {
+  background-image: url("https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=80");
+}
+
+.bg-cto {
+  background-image: url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80");
+}
+
+.bg-cmo {
+  background-image: url("https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&w=1200&q=80");
+}
+
+.bg-chro {
+  background-image: url("https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80");
+}
+
+.bg-cfo {
+  background-image: url("https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1200&q=80");
+}
+
+.bg-cpo {
+  background-image: url("../../Assets/ucu (1)/Rectangle 100.jpg");
+}
+
 
 @media (max-width: 768px) {
   .man-data-div {
