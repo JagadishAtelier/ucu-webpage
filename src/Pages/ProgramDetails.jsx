@@ -1,4 +1,4 @@
-import { Navbar } from "react-bootstrap";
+import Navbar from "../Components/Navbar/Navbar";
 import NewFooter from "../Components/NewFooter/NewFooter";
 import ProgramDescription from "../Components/ProgramDetails/ProgramDescription/ProgramDescription";
 import ProgramInfo from "../Components/ProgramDetails/ProgramInfo/ProgramInfo";
