@@ -56,11 +56,14 @@ const Navbar = () => {
         <div className="container-fluid">
           {/* Logo */}
           <Link className="navbar-brand logo-box" to="/">
-            <img
+            <div className="logo-with-text">
+              <img
               src="/logo.svg"
               alt="Universal Corporate University Logo"
               className="logo-img"
             />
+             <p className="logo-text">Business School</p>
+            </div>
           </Link>
 
           <Link className="navbar-brand mobile-only" to="/">
@@ -79,8 +82,8 @@ const Navbar = () => {
             {/* Top bar */}
             <div className="top-bar d-flex justify-content-end align-items-center pt-3 bg-white">
               <div className="Business-school">
-                <p className="logo-text">Business School</p>
-              <p className="logo-text">Chennai</p>
+               
+              {/* <p className="logo-text">Chennai</p> */}
               </div>
               <ul className="list-inline mb-0">
                 {topMenus.map((menu) => (
