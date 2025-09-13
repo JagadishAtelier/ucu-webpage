@@ -46,53 +46,64 @@ export const menuData = [
     link: "/program",
     submenu: [
       {
-        label: "Full Time Programs",
-        submenu: [
-          { label: "PGPM-ELITE", link: "/program/pgpm-elite" },
-          { label: "PGDM", link: "/program/pgdm" },
-        ],
-        link: "/program/full-time-programs",
-      },
-      {
         label: "Post Graduate Diplomas",
+        link: "/program/post-graduate-diplomas",
         submenu: [
           {
+            label: "Industry-Sector Specific Offerings",
+            link: "/program/industry-sector",
+            submenu: [
+              { label: "FinTech", link: "/program/fintech" },
+              {
+                label: "Global Capability Centers (GCC)",
+                link: "/program/gcc",
+              },
+            ],
+          },
+          {
             label: "Functional (off-line)",
+            link: "/program/functional-offline",
             submenu: [
               { label: "Sales", link: "/program/sales" },
-              { label: "Product Management", link: "/program/product-management" },
+              {
+                label: "Product Management",
+                link: "/program/product-management",
+              },
               { label: "Cybersecurity", link: "/program/cybersecurity" },
-              { label: "Digital Marketing", link: "/program/digital-marketing" },
+              {
+                label: "Digital Marketing",
+                link: "/program/digital-marketing",
+              },
               {
                 label: "Mobility & Sustainability",
                 link: "/program/mobility-sustainability",
               },
               { label: "Consulting", link: "/program/consulting" },
               { label: "Banking & Finance", link: "/program/banking-finance" },
-              { label: "Business Analytics", link: "/program/business-analytics" },
+              {
+                label: "Business Analytics",
+                link: "/program/business-analytics",
+              },
               { label: "Data Science", link: "/program/data-science" },
             ],
           },
         ],
       },
       {
-        label: "Industry-Sector Specific Offerings",
-        submenu: [
-          { label: "FinTech", link: "/program/fintech" },
-          { label: "Global Capability Centers (GCC)", link: "/program/gcc" },
-        ],
-      },
-      { label: "Career Reboot Program for Women", link: "/program/career-reboot" },
-      {
         label: "Executive Education",
+        link: "/program/executive-education",
         submenu: [
           {
             label: "Customised Learning Programs for Corporate Professionals",
             link: "/program/customised-learning",
           },
-          { label: "Management Development Programs (MDPs)", link: "/program/mdps" },
+          {
+            label: "Management Development Programs (MDPs)",
+            link: "/program/mdps",
+          },
           {
             label: "1 Year CXO Accelerator Program with Campus Immersion",
+            link: "/program/cxo-accelerator",
             submenu: [
               { label: "CXO", link: "/program/cxo" },
               { label: "CIO", link: "/program/cio" },
@@ -107,9 +118,13 @@ export const menuData = [
       },
       {
         label: "Online Programs (E-Learning)",
+        link: "/program/online-programs",
         submenu: [
           { label: "Sales", link: "/program/e-sales" },
-          { label: "Product Management", link: "/program/e-product-management" },
+          {
+            label: "Product Management",
+            link: "/program/e-product-management",
+          },
           { label: "Cybersecurity", link: "/program/e-cybersecurity" },
           { label: "Digital Marketing", link: "/program/e-digital-marketing" },
           {
@@ -118,16 +133,35 @@ export const menuData = [
           },
           { label: "Consulting", link: "/program/e-consulting" },
           { label: "Banking & Finance", link: "/program/e-banking-finance" },
-          { label: "Business Analytics", link: "/program/e-business-analytics" },
+          {
+            label: "Business Analytics",
+            link: "/program/e-business-analytics",
+          },
           { label: "Data Science", link: "/program/e-data-science" },
+          {
+            label: "Industry-Sector Specific Offerings",
+            link: "/program/e-industry-sector",
+            submenu: [
+              { label: "FinTech", link: "/program/e-fintech" },
+              {
+                label: "Global Capability Centers (GCC)",
+                link: "/program/e-gcc",
+              },
+            ],
+          },
         ],
       },
       {
-        label: "Industry-Sector Specific Offerings",
+        label: "Full Time Programs",
+        link: "/program/full-time-programs",
         submenu: [
-          { label: "FinTech", link: "/program/e-fintech" },
-          { label: "Global Capability Centers (GCC)", link: "/program/e-gcc" },
+          { label: "PGPM-ELITE", link: "/program/pgpm-elite" },
+          { label: "PGDM", link: "/program/pgdm" },
         ],
+      },
+      {
+        label: "Career Reboot Program for Women",
+        link: "/program/career-reboot",
       },
     ],
   },
@@ -144,6 +178,12 @@ export const menuData = [
   {
     label: "Faculty",
     submenu: [
+      { label: "Full Time", link: "/faculty/full-time" },
+      { label: "Visiting Faculty", link: "/faculty/visiting" },
+      { label: "Adjunct Faculty", link: "/faculty/adjunct" },
+      { label: "Professors of Practice (PoP)", link: "/faculty/pop" },
+      { label: "Associate & Assistant Faculty", link: "/faculty/associate" },
+      { label: "Research", link: "/faculty/research" },
       {
         label: "Area Chairs",
         submenu: [
@@ -155,12 +195,6 @@ export const menuData = [
           { label: "Product", link: "/faculty/product" },
         ],
       },
-      { label: "Full Time", link: "/faculty/full-time" },
-      { label: "Visiting Faculty", link: "/faculty/visiting" },
-      { label: "Adjunct Faculty", link: "/faculty/adjunct" },
-      { label: "Professors of Practice (PoP)", link: "/faculty/pop" },
-      { label: "Associate & Assistant Faculty", link: "/faculty/associate" },
-      { label: "Research", link: "/faculty/research" },
     ],
   },
   {
@@ -183,6 +217,9 @@ export const menuData = [
   {
     label: "Consortium",
     submenu: [
+      { label: "Strategic Partners", link: "/partners" },
+      { label: "International Collaborations", link: "/collaborations" },
+      { label: "Industry Partners", link: "/Industry-partners" },
       {
         label: "Strategic Collaborations & Partnerships",
         submenu: [
@@ -215,9 +252,6 @@ export const menuData = [
               },
             ],
           },
-          { label: "Strategic Partners", link: "/partners" },
-          { label: "International Collaborations", link: "/collaborations" },
-          { label: "Industry Partners", link: "/Industry-partners" },
         ],
       },
     ],
@@ -229,6 +263,3 @@ export const menuData = [
   { label: "Corporate Social Responsibility (CSR)", link: "/csr" },
   { label: "Careers", link: "/careers" },
 ];
-// { label: "News & Blogs", link: "/news-blogs" },
-// { label: "Annual Events", link: "/annual-events" },
-// { label: "Budding Talent Programs", link: "/budding-talent-programs" },

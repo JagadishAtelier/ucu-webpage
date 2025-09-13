@@ -108,8 +108,8 @@
   left: 90% !important;
 }
 .dropdown-menu.consortium {
-  width: 260px !important;
-  left: 10% !important;
+  width: 550px !important;
+  left: -100% !important;
 }
 .dropdown-menu.faculty,
 .dropdown-menu.industry-academia-engagement {
@@ -124,7 +124,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 2rem;
+  column-gap: 0rem;
+  row-gap: 1rem;
   margin: 0;
 }
 
@@ -442,4 +443,162 @@
   .logo-box::after {
     content: none;
   }
+}
+
+.drawer-content .menu.depth-0 {
+  /* Styles for top-level items in the drawer */
+  padding-left: 0;
+}
+
+.drawer-content .menu-item {
+  border-bottom: 1px solid #eee;
+}
+
+.drawer-content .menu-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #333; /* Default text color */
+}
+
+.drawer-content .menu-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.drawer-content .menu-btn.open {
+  background-color: #e0e0e0; /* Highlight when open */
+}
+
+.drawer-content .menu.depth-1 {
+  /* Styles for second-level menus in the drawer */
+  padding-left: 1rem; /* Indent second level */
+  background-color: #f9f9f9;
+}
+
+.drawer-content .menu.depth-2 {
+  /* Styles for third-level menus in the drawer */
+  padding-left: 2rem; /* Indent third level */
+  background-color: #f2f2f2;
+}
+
+.drawer-content .menu.depth-3 {
+  /* Styles for fourth-level menus in the drawer */
+  padding-left: 3rem; /* Indent fourth level */
+  background-color: #ebebeb;
+}
+
+
+.drawer-content .menu-link {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.drawer-content .menu-link:hover {
+  background-color: #f0f0f0;
+}
+
+/* Chevron icon rotation for mobile drawer */
+.drawer-content .chevron {
+  transition: transform 0.2s ease;
+}
+
+.drawer-content .chevron.rotated {
+  transform: rotate(90deg); /* For ChevronRight */
+}
+.drawer-content .depth-0 .chevron.rotated {
+    transform: rotate(180deg); /* For ChevronDown at depth 0 */
+}
+
+
+/* --- Desktop Mega Menu Specific Styling for 3rd/4th levels --- */
+.third-level-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px; /* Adjust spacing as needed */
+}
+
+.third-level-menu li {
+  margin-bottom: 3px;
+}
+
+.third-level-menu li a {
+  font-size: 0.7rem; /* Smaller font for deeper levels */
+  color: #d0d0d0 !important; /* Lighter color */
+  padding: 0.3rem 0.5rem; /* Adjust padding */
+  display: block; /* Make links block level for better click area */
+}
+
+.third-level-menu li:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Lighter hover for deeper levels */
+  border-radius: 2px;
+}
+
+.third-level-menu li:hover a {
+  color: white !important;
+}
+
+/* For items that are parents to 4th level */
+.fourth-level-parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.fourth-level-parent:hover {
+   background-color: rgba(255, 255, 255, 0.1);
+   border-radius: 2px;
+}
+
+.fourth-level-parent .third-level-link {
+  color: #dddddd !important;
+  font-weight: 500;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.fourth-level-parent:hover .third-level-link {
+   color: rgb(0, 0, 0) !important;
+}
+
+
+.right-arrow-icon {
+  color: #181717; /* Match text color */
+  margin-left: 5px;
+}
+
+.fourth-level-menu {
+  list-style: none;
+  padding-left: 15px; /* Indent fourth level */
+  margin-top: 3px;
+}
+
+.fourth-level-menu li a {
+  font-size: 0.65rem; /* Even smaller font */
+  color: #b0b0b0 !important; /* Even lighter color */
+  padding: 0.2rem 0.4rem;
+  display: block;
+}
+
+.fourth-level-menu li:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* Very light hover */
+  border-radius: 2px;
+}
+
+.fourth-level-menu li:hover a {
+  color: white !important;
 }

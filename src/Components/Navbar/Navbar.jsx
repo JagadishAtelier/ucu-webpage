@@ -7,14 +7,20 @@ import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
 const Navbar = () => {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
+  // Using an object to keep track of which menus are open, by their label
   const [openMenus, setOpenMenus] = useState({});
+
   const toggleMobile = () => setMobileOpen(!mobileOpen);
-  const topMenus = menuData.filter((menu) => !menu.submenu);
-  const bottomMenus = menuData.filter((menu) => menu.submenu);
+
+  // Separating top-level menu items for desktop vs mobile drawer display
+  // For the drawer, it's better to render all in one go with proper nesting
+  // so we can combine them later.
+  // For now, let's just make sure menuData is used correctly for the drawer.
+
   const toggleSubmenu = (label) => {
     setOpenMenus((prev) => ({
       ...prev,
-      [label]: !prev[label],
+      [label]: !prev[label], // Toggle the state for the clicked menu item's label
     }));
   };
 
@@ -26,21 +32,23 @@ const Navbar = () => {
             {item.submenu ? (
               <>
                 <button
-                  className="menu-btn"
+                  className={`menu-btn depth-${depth} ${openMenus[item.label] ? 'open' : ''}`}
                   onClick={() => toggleSubmenu(item.label)}
                 >
                   {item.label}
                   {depth === 0 ? (
-                    <ChevronDown size={16} />
+                    <ChevronDown size={16} className={`chevron ${openMenus[item.label] ? 'rotated' : ''}`} />
                   ) : (
-                    <ChevronRight size={16} />
+                    <ChevronRight size={16} className={`chevron ${openMenus[item.label] ? 'rotated' : ''}`} />
                   )}
                 </button>
-                {openMenus[item.label] &&
-                  renderMenuItems(item.submenu, depth + 1)}
+                {/* Only render submenu if it's open */}
+                {openMenus[item.label] && item.submenu.length > 0 && (
+                  renderMenuItems(item.submenu, depth + 1)
+                )}
               </>
             ) : (
-              <a href={item.link} className="menu-link">
+              <a href={item.link} className={`menu-link depth-${depth}`} onClick={toggleMobile}>
                 {item.label}
               </a>
             )}
@@ -58,11 +66,11 @@ const Navbar = () => {
           <Link className="navbar-brand logo-box" to="/">
             <div className="logo-with-text">
               <img
-              src="/logo.svg"
-              alt="Universal Corporate University Logo"
-              className="logo-img"
-            />
-             <p className="logo-text">Business School</p>
+                src="/logo.svg"
+                alt="Universal Corporate University Logo"
+                className="logo-img"
+              />
+              <p className="logo-text">Business School</p>
             </div>
           </Link>
 
@@ -81,12 +89,9 @@ const Navbar = () => {
           >
             {/* Top bar */}
             <div className="top-bar d-flex justify-content-end align-items-center pt-3 bg-white">
-              <div className="Business-school">
-               
-              {/* <p className="logo-text">Chennai</p> */}
-              </div>
+              <div className="Business-school">{/* <p className="logo-text">Chennai</p> */}</div>
               <ul className="list-inline mb-0">
-                {topMenus.map((menu) => (
+                {menuData.filter((menu) => !menu.submenu).map((menu) => ( // Use menuData directly for top-level non-submenu items
                   <li key={menu.label} className="list-inline-item">
                     <Link to={menu.link}>{menu.label.toLocaleUpperCase()}</Link>
                   </li>
@@ -108,14 +113,12 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Bottom menus with dropdowns */}
+            {/* Bottom menus with dropdowns (Desktop Mega Menu) */}
             <ul className="navbar-nav navbar-main d-flex justify-content-end align-items-center">
-              {bottomMenus.map((menu) => (
+              {menuData.filter((menu) => menu.submenu).map((menu) => ( // Use menuData directly for top-level submenu items
                 <li
                   key={menu.label}
-                  className={`nav-item dropdown ${
-                    menu.submenu ? "has-mega" : ""
-                  }`}
+                  className={`nav-item dropdown ${menu.submenu ? "has-mega" : ""}`}
                 >
                   <a
                     href="#!"
@@ -139,13 +142,36 @@ const Navbar = () => {
                           <p className="top-head">
                             <Link to={col.link || "#"}>{col.label}</Link>
                           </p>
-                          {col.submenu?.length > 0 && (
-                            <ul>
-                              {col.submenu.map((item) => (
-                                <li key={item.label}>
-                                  <Link to={item.link || "#"}>
-                                    {item.label}
-                                  </Link>
+                          {/* Render sub-submenus recursively */}
+                          {col.submenu && col.submenu.length > 0 && (
+                            <ul className="third-level-menu">
+                              {col.submenu.map((subItem) => (
+                                <li key={subItem.label}>
+                                  {subItem.submenu ? (
+                                    <>
+                                      <div className="fourth-level-parent">
+                                        <Link to={subItem.link || "#"} className="third-level-link">
+                                          {subItem.label}
+                                        </Link>
+                                        <ChevronRight size={14} className="right-arrow-icon" />
+                                      </div>
+                                      {subItem.submenu.length > 0 && (
+                                        <ul className="fourth-level-menu">
+                                          {subItem.submenu.map((fourthItem) => (
+                                            <li key={fourthItem.label}>
+                                              <Link to={fourthItem.link || "#"} className="fourth-level-link">
+                                                {fourthItem.label}
+                                              </Link>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      )}
+                                    </>
+                                  ) : (
+                                    <Link to={subItem.link || "#"}>
+                                      {subItem.label}
+                                    </Link>
+                                  )}
                                 </li>
                               ))}
                             </ul>
@@ -191,7 +217,8 @@ const Navbar = () => {
               </div>
 
               <div className="drawer-content">
-                {renderMenuItems([...topMenus, ...bottomMenus])}
+                {/* Render all menu data for the mobile drawer */}
+                {renderMenuItems(menuData)} 
               </div>
             </div>
           </>
