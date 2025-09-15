@@ -25,6 +25,15 @@ import aacImg2 from '../../Assets/aac/image2.jpg'
 import aacImg3 from '../../Assets/aac/image3.jpg'
 import aacImg4 from '../../Assets/aac/image4.jpg'
 import aacImg5 from '../../Assets/aac/image5.jpg'
+
+//HRac Image
+import hracImg from '../../Assets/hac/image1.jpg'
+
+//Ycc Images
+import yccImg1 from '../../Assets/ycc/image1.jpg'
+import yccImg2 from '../../Assets/ycc/image2.jpg'
+import yccImg3 from '../../Assets/ycc/image3.jpg'
+import yccImg4 from '../../Assets/ycc/image4.jpg'
 const councils = [
     {
         type: "bac",
@@ -164,27 +173,49 @@ const councils = [
         sec2head : "HR Advisory Council",
         sec2Para : "The HR Advisory Council plays a crucial role in the Corporate University's success by shaping talent excellence with strategic insight. Comprising seasoned HR leaders, organizational development experts, and talent management specialists, the council provides invaluable guidance on attracting, developing, and retaining top-tier talent for both employees and students. Their expertise ensures the University excels in strategic workforce planning, talent acquisition and onboarding, performance management and professional development, compensation and benefits, succession planning, organizational culture and employee engagement, student admission advisory, and aligning programs with corporate placement demands. By championing a people-centric approach and fostering an environment that empowers employees, promotes growth, and aligns individual aspirations with the Corporate University's overarching goals, the HR Advisory Council is instrumental in shaping a dynamic and inclusive workplace and ensuring graduates are well-prepared to meet the evolving needs of the corporate world, thereby ensuring the University's continued success.",
         staff : [
-            { image :image1,
-              name :"Dr. M. Balaji (BALA)",
-              prof : "Founder, CU"
+            { image :hracImg,
+              name :"Krithivasan S.",
+              prof : "HRAC Chair"
             },
-            { image : image2,
-              name :"Ritwick Banerjea",
-              prof : "Student Mentorship & Welfare"
+            { image : pI,
+              name :"Deepshikha Bhowmick",
+              prof : "Talent Management, Capegemini"
             },
-            { image :image3,
-              name :"Ganesan Ramachandran",
-              prof : "MD, Accenture Strategy",
+            { image :pI,
+              name :"Radhika Ravi",
+              prof : "TA Head, Wipro",
               comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
             },
-            { image :image4,
-              name :"Sundara B. Reddy",
-              prof : "MD, Accenture Strategy,BAC Chair",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+            { image : pI,
+              name :"Subhasree Pradeep",
+              prof : `HR & DEI Leader
+
+              L&T`,
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
             },
-            { image : image5,
-              name :"Murali Chandranasan",
-              prof : "Sr. Director, Capgemini Invent",
+            { image : pI,
+              name :"Mithun Madhavan",
+              prof : `TA, Optum`,
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Marcus Durai",
+              prof : `HR Head - RAMCO`,
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Naresh Rajendran",
+              prof : `HR Head - Grundfos`,
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Vandhana Sundaram",
+              prof : `Sr. Director, LTI Mindtree`,
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Manoj Verghese",
+              prof : `CPO, Tonik`,
               comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
             },
 
@@ -198,27 +229,82 @@ const councils = [
         sec2head : "Young CEOs Council",
         sec2Para : "The Young CEOs Council plays a crucial role in the Corporate University's success by driving innovation with next-gen leadership. Comprising dynamic executives who have achieved CEO status at an early stage in their careers, the council provides invaluable guidance on fostering a culture of innovation, agility, and disruptive thinking. Their expertise ensures the University excels in future-proofing its curriculum, promoting entrepreneurial ventures, and equipping graduates with the skills and mindset to thrive in a rapidly evolving business landscape. By connecting the University with cutting-edge industry practices and emerging business models, the Young CEOs Council is instrumental in shaping a forward-thinking institution and ensuring its graduates are well-prepared to lead and transform organizations.",
         staff : [
-            { image : image1,
-              name :"Dr. M. Balaji (BALA)",
-              prof : "Founder, CU"
+            { image : yccImg1,
+              name :"Vishal Lathwal",
+              prof : "Apollo Homecare"
             },
-            { image :image2,
-              name :"Ritwick Banerjea",
-              prof : "Student Mentorship & Welfare"
+            { image :yccImg2,
+              name :"Ashish Prasad",
+              prof : "A&M"
             },
-            { image :image3,
-              name :"Ganesan Ramachandran",
-              prof : "MD, Accenture Strategy",
+            { image :yccImg3,
+              name :"Aparna S.",
+              prof : "Head - Bain & Co.",
               comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
             },
-            { image :image4,
-              name :"Sundara B. Reddy",
-              prof : "MD, Accenture Strategy,BAC Chair",
+            { image :yccImg4,
+              name :"Vidyasagari Sundaram",
+              prof : "Partner, EY",
               comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
             },
-            { image : image5,
-              name :"Murali Chandranasan",
-              prof : "Sr. Director, Capgemini Invent",
+            { image : pI,
+              name :"Ramesh Babu",
+              prof : "Head (AI & ML) - Innovations Inc.",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Savitha Ajitraj",
+              prof : "Director, Paypal",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Kartik Kannan",
+              prof : "DGroup Product Manager AJIO",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Prathitha Muthurangam",
+              prof : "Business Head, Airtel",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Krithi Gugan",
+              prof : "Director, Vivriti",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Uppili Ramabadran",
+              prof : "Director, SYS",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Sreelakshmi Menon",
+              prof : "GM, L&T",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Swetha Kochar",
+              prof : "Partner, PKC Consulting",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Shankaran G.",
+              prof : "Co-founder, Learner Circle",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Raghava Rao",
+              prof : "CEO, Camocile",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Manoj Prabhakaar",
+              prof : "MD & CEO, TrueInfo Labs",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Rachna Ganatra",
+              prof : "Founder, RR",
               comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
             },
 
