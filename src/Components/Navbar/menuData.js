@@ -13,32 +13,32 @@ export const menuData = [
   {
     label: "Advisory Councils",
     submenu: [
-      { label: "Business Advisory Council (BAC)", link: "/bac" },
-      { label: "Academic Advisory Council (AAC)", link: "/aac" },
-      { label: "CHRO Advisory Council (CHRAC)", link: "/chrac" },
-      { label: "Talent Advisory Council (TAC)", link: "/tac" },
-      { label: "L&D Advisory Council (L&DAC)", link: "/ldac" },
-      { label: "Young CXO Council (YCxC)", link: "/ycxc" },
-      { label: "Rising Leaders' Council (RLC)", link: "/rlc" },
-      { label: "Our Brand Ambassadors", link: "/brand-ambassadors" },
-      {
-        label: "SME Program Advisory Council",
-        submenu: [
-          { label: "Sales Advisory Council (SAC)", link: "/sac" },
-          {
-            label: "Product Management Advisory Council (PMAC)",
-            link: "/pmac",
-          },
-          { label: "Cybersecurity Advisory Council (CAC)", link: "/cac" },
-          { label: "FinTech Advisory Council (FTAC)", link: "/ftac" },
-          { label: "GCC Advisory Council (GCCAC)", link: "/gccac" },
-          {
-            label: "Mobility & Sustainability Advisory Council (MSAC)",
-            link: "/msac",
-          },
-          { label: "Consulting Advisory Council (ConAC)", link: "/conac" },
-        ],
-      },
+      { label: "Business Advisory Council", link: "/bac" },
+      { label: "Academic Advisory Council", link: "/aac" },
+      { label: "HR Advisory Council", link: "/hrac" },
+      { label: "Young CEOs Council ", link: "/tcc" },
+      { label: "Rising Leaders Council ", link: "/rlc" },
+      { label: "Student Committees & Clubs", link: "/scc" },
+      { label: "Administrative Committee", link: "/adc" },
+      // { label: "Our Brand Ambassadors", link: "/brand-ambassadors" },
+      // {
+      //   label: "SME Program Advisory Council",
+      //   submenu: [
+      //     { label: "Sales Advisory Council (SAC)", link: "/sac" },
+      //     {
+      //       label: "Product Management Advisory Council (PMAC)",
+      //       link: "/pmac",
+      //     },
+      //     { label: "Cybersecurity Advisory Council (CAC)", link: "/cac" },
+      //     { label: "FinTech Advisory Council (FTAC)", link: "/ftac" },
+      //     { label: "GCC Advisory Council (GCCAC)", link: "/gccac" },
+      //     {
+      //       label: "Mobility & Sustainability Advisory Council (MSAC)",
+      //       link: "/msac",
+      //     },
+      //     { label: "Consulting Advisory Council (ConAC)", link: "/conac" },
+      //   ],
+      // },
     ],
   },
   {

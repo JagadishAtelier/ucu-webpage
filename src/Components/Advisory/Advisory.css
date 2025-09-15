@@ -1,0 +1,9 @@
+.staff-card img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+.linkedin-icon{
+    color: blue;
+}

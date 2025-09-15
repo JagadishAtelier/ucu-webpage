@@ -23,6 +23,7 @@ import ResetPassPage from "./Components/AuthenticationPage/ResetPassPage/ResetPa
 import { ModalProvider } from "./Components/Context/ApplyModal/ModalContext";
 import NewFaculty from "./Components/NewFaculty/NewFaculty";
 import PDPhero from "./Components/ProfileDetailsPage/PDPhero";
+import Advisory from "./Components/Advisory/Advisory";
 
 function App() {
   useEffect(() => {
@@ -49,6 +50,7 @@ function App() {
         <Route path="/auth/password" element={<AuthPassword />} />
         <Route path="/auth/forgot-password" element={<ForgotPassPage />} />
         <Route path="/auth/reset" element={<ResetPassPage />} />
+        <Route path="/:type" element={<Advisory/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       </ModalProvider>

@@ -6,7 +6,22 @@ import image3 from "../../Assets/ucu-logos/Mask group-2.png";
 import image4 from "../../Assets/ucu-logos/Mask group-3.png";
 import image5 from "../../Assets/ucu-logos/Mask group-4.png";
 
-const images = [image1, image2, image3, image4, image5];
+const images = [
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/edhec-business-school.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/chicago-booth1.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/manchester-metropolitan-university.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/nucb-business-school.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/ieseg.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/frankfurt-school-of-finance-and-management.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/bologna-business-school.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/skema-business-school.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/hhl-leipzig-graduate-school-of-management.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/pace-university.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/universite-bordeaux.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/ipag.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/university-of-huddersfield.png",
+  "https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/ajman-university.png"
+];
 
 function Brands() {
   return (
