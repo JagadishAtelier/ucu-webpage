@@ -66,9 +66,9 @@ const Navbar = () => {
           <Link className="navbar-brand logo-box" to="/">
             <div className="logo-with-text">
               <img
-                src="/logo.svg"
+                src="/logoCropImg.png"
                 alt="Universal Corporate University Logo"
-                className="logo-img"
+                className="logo-img my-2"
               />
               <p className="logo-text">Business School</p>
             </div>

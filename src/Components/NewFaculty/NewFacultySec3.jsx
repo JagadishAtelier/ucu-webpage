@@ -148,25 +148,25 @@ const departments = [
       },
     ],
   },
-  {
-    title: "Associate & Assistant Faculty",
-    data: [
-      {
-        name: "Giampaolo Gabbi",
-        prof: "Professor of Practice Audit & Risk Management",
-        image:
-          "https://sdabocconiasiacenter.com/wp-content/uploads/2025/04/alessandro_recla_cv.jpg",
-      },
-      {
-        name: "Leonardo Luca Etro",
-        prof: `Dean, SDA Bocconi Asia Center
-        Associate Professor of Practice
-        M&A and Restructuring`,
-        image:
-          "https://sdabocconiasiacenter.com/wp-content/uploads/2025/04/daniele_tonini_cv.jpg",
-      },
-    ],
-  },
+  // {
+  //   title: "Associate & Assistant Faculty",
+  //   data: [
+  //     {
+  //       name: "Giampaolo Gabbi",
+  //       prof: "Professor of Practice Audit & Risk Management",
+  //       image:
+  //         "https://sdabocconiasiacenter.com/wp-content/uploads/2025/04/alessandro_recla_cv.jpg",
+  //     },
+  //     {
+  //       name: "Leonardo Luca Etro",
+  //       prof: `Dean, SDA Bocconi Asia Center
+  //       Associate Professor of Practice
+  //       M&A and Restructuring`,
+  //       image:
+  //         "https://sdabocconiasiacenter.com/wp-content/uploads/2025/04/daniele_tonini_cv.jpg",
+  //     },
+  //   ],
+  // },
 ];
 
 const FacultyPairCard = ({ pair }) => {

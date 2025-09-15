@@ -39,7 +39,8 @@
     background-color: white;
 }
 .logoImage-footer{
-    width:50%;
+    width:60%;
+    /* filter: brightness(0) invert(1); */
 }
 .new-footer-logo{
     width: 20%;
