@@ -82,7 +82,6 @@ function Advisory() {
       }
   return (
     <div>
-        <Navbar/>
     <div
       data-aos="fade-down"
       className="fac-hero-section d-flex flex-column flex-lg-column align-items-center justify-content-center justify-content-lg-center text-white text-center text-lg-start p-3 p-lg-5 p-lg-7"
@@ -100,14 +99,16 @@ function Advisory() {
               <p className="fs-5 mb-0 bread-crumb">Home</p>
                 <FaChevronRight size={window.innerWidth > 991 ? 12 : 15} />
                 <p className="fs-5 mb-0 bread-crumb">Advisory Council</p>
+                <FaChevronRight size={window.innerWidth > 991 ? 12 : 15} />
+                <p className="fs-5 mb-0 bread-crumb">{council.bannerHead}</p>
         </div>
     </div>
-    <section className="my-5 px-5">
-        <h4>{council.sec2head}</h4>
-        <p>{council.sec2Para}</p>
+    <section className="my-5 px-3 px-lg-5">
+        <h4 className='text-center mb-3 lg:mb-4'>{council.sec2head}</h4>
+        <p className='text-center text-lg-start'>{council.sec2Para}</p>
       </section>
 
-      <section className="container justify-content-center align-items-center">
+      <section className="container  justify-content-center align-items-center">
   <div>
     <h1 className="display-4 fw-bold col-12 text-center my-5">
       {council.gridHead}
@@ -115,7 +116,7 @@ function Advisory() {
   </div>
 
   {/* row-cols ensures 3 per row, justify-content-center keeps last row centered */}
-  <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center mb-5">
+  <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center mb-lg-5 mb-5">
     {council.staff.map((person, idx) => (
       <div key={idx} className="col d-flex">
         <div className="staff-card d-flex flex-column justify-content-between align-items-center text-center w-100">

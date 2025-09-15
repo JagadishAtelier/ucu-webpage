@@ -3,7 +3,20 @@
     height: 200px;
     width: 200px;
     object-fit: cover;
+    transition: transform 0.4s ease-in-out;
 }
 .linkedin-icon{
     color: blue;
+}
+
+.staff-card img:hover {
+    transform: scale(1.1); /* zoom-in */
+  }
+@media (max-width: 768px){
+    .staff-card img{
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+    }
 }
