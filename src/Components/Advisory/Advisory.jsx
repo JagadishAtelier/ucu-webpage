@@ -34,6 +34,15 @@ import yccImg1 from '../../Assets/ycc/image1.jpg'
 import yccImg2 from '../../Assets/ycc/image2.jpg'
 import yccImg3 from '../../Assets/ycc/image3.jpg'
 import yccImg4 from '../../Assets/ycc/image4.jpg'
+
+// Rlc Images 
+import rlcImg1 from '../../Assets/rlc/image1.jpg'
+import rlcImg2 from '../../Assets/rlc/image2.jpg'
+import rlcImg3 from '../../Assets/rlc/image3.jpg'
+import rlcImg4 from '../../Assets/rlc/image4.jpg'
+import rlcImg5 from '../../Assets/rlc/image5.jpg'
+import rlcImg6 from '../../Assets/rlc/image7.jpg'
+import rlcImg7 from '../../Assets/rlc/image8.jpg'
 const councils = [
     {
         type: "bac",
@@ -318,27 +327,37 @@ const councils = [
         sec2head : "Rising Leaders' Council (RLC)",
         sec2Para : "The Rising Leaders Committee (RLC) plays a crucial role in the Corporate University's success by empowering growth with emerging talent. Comprising dynamic and accomplished young professionals, the RLC provides invaluable guidance on fostering student mentorship, offering real-world guidance, and championing innovative implementation ideas. Their expertise ensures the University excels in bridging the gap between academia and the professional world, equipping students with the necessary skills and insights to navigate their career paths, and infusing the University's initiatives with fresh perspectives. By connecting students with relatable role models and fostering a culture of continuous improvement, the RLC is instrumental in shaping a supportive and forward-thinking institution, and ensuring its graduates are well-prepared to excel as future leaders.",
         staff : [
-            { image :image1,
-              name :"Dr. M. Balaji (BALA)",
-              prof : "Founder, CU"
+            { image :rlcImg1,
+              name :"Bharath Rapeka",
+              // prof : "Founder, CU"
             },
-            { image :image2,
+            { image :rlcImg2,
+              name :"Manikandan M.",
+              // prof : "Student Mentorship & Welfare"
+            },
+            { image :rlcImg3,
+              name :"Ajit Bhardwaj",
+              // prof : "MD, Accenture Strategy",
+              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+            },
+            { image :rlcImg4,
+              name :"Deep Gandhi",
+              // prof : "MD, Accenture Strategy,BAC Chair",
+              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+            },
+            { image :rlcImg5,
+              name :"Anna Vinaya Xavier",
+              // prof : "Ex-Google",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image :rlcImg6,
+              name :"Jaideep Thanage",
+              prof : "Ex-Google",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image :rlcImg7,
               name :"Ritwick Banerjea",
-              prof : "Student Mentorship & Welfare"
-            },
-            { image :image3,
-              name :"Ganesan Ramachandran",
-              prof : "MD, Accenture Strategy",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
-            },
-            { image :image4,
-              name :"Sundara B. Reddy",
-              prof : "MD, Accenture Strategy,BAC Chair",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
-            },
-            { image :image5,
-              name :"Murali Chandranasan",
-              prof : "Sr. Director, Capgemini Invent",
+              prof : "ex-McKinsey",
               comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
             },
 
@@ -346,35 +365,35 @@ const councils = [
     },
     {
         type: "scc",
-        gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+        // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
         bgImage : `https://lh3.googleusercontent.com/sitesv/AICyYdYlVhFz3Yp8Ibu9gv-OeFtuWHbZvwS0Z4RbRmh68aUw5RZ2tYN16pR95DxevTGOZmmrxOo8QPGhWaLgi8nGQlYk1lK2WILON31KgCmN2srfmvSqiZcaymWp5qb5ZZqJ96EWZXfm4HdXkuuAzXPLvCXBw243_7dFUBtIC2WIy88VYpVm2zS_Ws2k=w16383`,
         bannerHead : "Student Committees & Clubs",
         sec2head : "Student Committees & Clubs",
         sec2Para : "At the forefront of the Universities strategic direction stands our esteemed Business Advisory Council (BAC). Comprised of luminaries holding influential leadership positions across diverse industries, the BAC provides invaluable insights and forward-thinking guidance. These accomplished executives contribute their unparalleled real-world experience, ensuring the Universities initiatives and member institutions remain acutely attuned to the dynamic demands of the global marketplace. The BAC serves as a powerful nexus between academia and industry, fostering a symbiotic relationship that shapes curriculum relevance, anticipates future talent needs, and ultimately empowers the next generation of business leaders. Their strategic counsel is instrumental in driving the Consortium's mission to elevate business education and foster sustainable growth.",
         staff : [
-            { image :image1,
-              name :"Dr. M. Balaji (BALA)",
-              prof : "Founder, CU"
-            },
-            { image :image2,
-              name :"Ritwick Banerjea",
-              prof : "Student Mentorship & Welfare"
-            },
-            { image :image3,
-              name :"Ganesan Ramachandran",
-              prof : "MD, Accenture Strategy",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
-            },
-            { image : image4,
-              name :"Sundara B. Reddy",
-              prof : "MD, Accenture Strategy,BAC Chair",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
-            },
-            { image : image5,
-              name :"Murali Chandranasan",
-              prof : "Sr. Director, Capgemini Invent",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
-            },
+            // { image :image1,
+            //   name :"Dr. M. Balaji (BALA)",
+            //   prof : "Founder, CU"
+            // },
+            // { image :image2,
+            //   name :"Ritwick Banerjea",
+            //   prof : "Student Mentorship & Welfare"
+            // },
+            // { image :image3,
+            //   name :"Ganesan Ramachandran",
+            //   prof : "MD, Accenture Strategy",
+            //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+            // },
+            // { image : image4,
+            //   name :"Sundara B. Reddy",
+            //   prof : "MD, Accenture Strategy,BAC Chair",
+            //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+            // },
+            // { image : image5,
+            //   name :"Murali Chandranasan",
+            //   prof : "Sr. Director, Capgemini Invent",
+            //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            // },
 
         ]
     },
@@ -393,21 +412,6 @@ const councils = [
             { image : image2,
               name :"Ritwick Banerjea",
               prof : "Student Mentorship & Welfare"
-            },
-            { image :image3,
-              name :"Ganesan Ramachandran",
-              prof : "MD, Accenture Strategy",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
-            },
-            { image :image4,
-              name :"Sundara B. Reddy",
-              prof : "MD, Accenture Strategy,BAC Chair",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
-            },
-            { image : image5,
-              name :"Murali Chandranasan",
-              prof : "Sr. Director, Capgemini Invent",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
             },
 
         ]
