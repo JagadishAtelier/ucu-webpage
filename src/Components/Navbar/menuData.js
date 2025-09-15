@@ -16,10 +16,10 @@ export const menuData = [
       { label: "Business Advisory Council", link: "/bac" },
       { label: "Academic Advisory Council", link: "/aac" },
       { label: "HR Advisory Council", link: "/hrac" },
-      { label: "Young CEOs Council ", link: "/tcc" },
+      { label: "Young CEOs Council ", link: "/ycc" },
       { label: "Rising Leaders Council ", link: "/rlc" },
       { label: "Student Committees & Clubs", link: "/scc" },
-      { label: "Administrative Committee", link: "/adc" },
+      { label: "Administrative Committee", link: "/acc" },
       // { label: "Our Brand Ambassadors", link: "/brand-ambassadors" },
       // {
       //   label: "SME Program Advisory Council",
