@@ -3,12 +3,28 @@ import './Advisory.css'
 import { useParams } from "react-router-dom";
 import { FaLinkedin,FaChevronRight } from 'react-icons/fa';
 import Navbar from '../Navbar/Navbar';
+import pI from '../../Assets/acp/profileImg.webp'
+
 import NewFooter from '../NewFooter/NewFooter';
 import image1 from '../../Assets/acp/image1.jpg'
 import image2 from '../../Assets/acp/image2.jpg'
 import image3 from '../../Assets/acp/image3.jpg'
 import image4 from '../../Assets/acp/image4.jpg'
 import image5 from '../../Assets/acp/image5.jpg'
+import image6 from '../../Assets/acp/image6.jpg'
+import image7 from '../../Assets/acp/image7.jpg'
+import image8 from '../../Assets/acp/image8.jpg'
+import image9 from '../../Assets/acp/image9.jpg'
+import image10 from '../../Assets/acp/image10.jpg'
+import image11 from '../../Assets/acp/image11.jpg'
+import image12 from '../../Assets/acp/image12.jpg'
+
+//Aac Images
+import aacImg1 from '../../Assets/aac/image1.jpg'
+import aacImg2 from '../../Assets/aac/image2.jpg'
+import aacImg3 from '../../Assets/aac/image3.jpg'
+import aacImg4 from '../../Assets/aac/image4.jpg'
+import aacImg5 from '../../Assets/aac/image5.jpg'
 const councils = [
     {
         type: "bac",
@@ -41,6 +57,66 @@ const councils = [
               prof : "Sr. Director, Capgemini Invent",
               comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
             },
+            { image : image6,
+              name :"Mani James",
+              prof : "Chief Business Officer,Mosiac Digital",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : image7,
+              name :"Preetha Reddy",
+              prof : "Apollo",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : image8,
+              name :"Subramanian N. N.",
+              prof : "CEO, Maveric",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : image9,
+              name :"Manish Goyal",
+              prof : "Partner, A&M",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : image10,
+              name :"Dr. K. Ganesh",
+              prof : "Partner, McKinsey & Company",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : image11,
+              name :"Chandramouliswaran (Mouli) V.",
+              prof : "VP-Data, Paypal",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : image12,
+              name :"Manikandan Thangarathnam",
+              prof : "Sr. Director, Uber",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Sundar Rajan Rengamani",
+              prof : "VP - Straive",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Sarathy Rajagopalan",
+              prof : "Sr. Director, PayPal",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Kumaran Sasikanthan",
+              prof : "Group VP, Informatica",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Ramanan S. V.",
+              prof : "CEO, Intellect Design",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
+            { image : pI,
+              name :"Bala MS",
+              prof : "CEO, Stratinfinity",
+              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+            },
 
         ]
     },
@@ -52,27 +128,29 @@ const councils = [
         sec2head : "Academic Advisory Council",
         sec2Para : "The lifeblood of the Corporate Universities intellectual rigor is our esteemed Academic Advisory Committee. Comprising distinguished scholars, pioneering researchers, and globally recognized thought leaders in management education, this committee is dedicated to upholding and advancing the highest standards of academic excellence. They provide crucial guidance on curriculum development, pedagogical innovation, and research initiatives, ensuring that member B-Schools remain at the vanguard of management knowledge. The AAC fosters a culture of continuous improvement, promoting cutting-edge teaching methodologies, and anticipating future trends in business education.",
         staff : [
-            { image : image1,
-              name :"Dr. M. Balaji (BALA)",
-              prof : "Founder, CU"
+            { image : aacImg1,
+              name :"Venkat GRV",
+              prof : `Academic Affairs, Ex-IFMR KREA (PD)
+
+              AAC Chair`
             },
-            { image :image2,
-              name :"Ritwick Banerjea",
-              prof : "Student Mentorship & Welfare"
+            { image :aacImg2,
+              name :"Dr. Vaidyanathan",
+              prof : "Director, XIMR"
             },
-            { image :image3,
-              name :"Ganesan Ramachandran",
-              prof : "MD, Accenture Strategy",
+            { image :aacImg3,
+              name :"Dr. P.K. Vishwanathan",
+              prof : "Advisory, Academic Affairs",
               comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
             },
-            { image : image4,
-              name :"Sundara B. Reddy",
-              prof : "MD, Accenture Strategy,BAC Chair",
+            { image : aacImg4,
+              name :"Prof. Sanjoy Sircar",
+              prof : " Professor of Finance | Program Director - PGPM | Expert in Corporate Finance & Financial Analytics ",
               comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
             },
-            { image :image5,
-              name :"Murali Chandranasan",
-              prof : "Sr. Director, Capgemini Invent",
+            { image :aacImg5,
+              name :"Dr. Vaidy Jayaraman ",
+              prof : "Dean | Supply Chain & Analytics Expert | Ex-Great Lakes Principal ",
               comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
             },
 
