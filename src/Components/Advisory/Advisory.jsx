@@ -4,6 +4,11 @@ import { useParams } from "react-router-dom";
 import { FaLinkedin,FaChevronRight } from 'react-icons/fa';
 import Navbar from '../Navbar/Navbar';
 import NewFooter from '../NewFooter/NewFooter';
+import image1 from '../../Assets/acp/image1.jpg'
+import image2 from '../../Assets/acp/image2.jpg'
+import image3 from '../../Assets/acp/image3.jpg'
+import image4 from '../../Assets/acp/image4.jpg'
+import image5 from '../../Assets/acp/image5.jpg'
 const councils = [
     {
         type: "bac",
@@ -13,25 +18,25 @@ const councils = [
         sec2head : "Business Advisory Council",
         sec2Para : "At the forefront of the Universities strategic direction stands our esteemed Business Advisory Council (BAC). Comprised of luminaries holding influential leadership positions across diverse industries, the BAC provides invaluable insights and forward-thinking guidance. These accomplished executives contribute their unparalleled real-world experience, ensuring the Universities initiatives and member institutions remain acutely attuned to the dynamic demands of the global marketplace. The BAC serves as a powerful nexus between academia and industry, fostering a symbiotic relationship that shapes curriculum relevance, anticipates future talent needs, and ultimately empowers the next generation of business leaders. Their strategic counsel is instrumental in driving the Consortium's mission to elevate business education and foster sustainable growth.",
         staff : [
-            { image : `https://lh3.googleusercontent.com/sitesv/AICyYdanPYoqVhK5ZWHjkEsa6t0P-z3BEIQesXTk9MhrYFQvvnF8O2zuDvxwackhLKgUoJs3BcOdcgUs4x7NINeIaRF7g97DqfmiBocwyF6Q8UhJ7jPSLy9pLnLqA_zD-GyMiLcckrzdo0L4DxBDS1etmQbFzRIWw8hKPNICPS148ZZWosBgwl0854TpPyMhVmv4DakqwXxC7rRCV8f4h_9ZWjrEJ586990o-4iWiHE=w1280`,
+            { image : image1,
               name :"Dr. M. Balaji (BALA)",
               prof : "Founder, CU"
             },
-            { image : `https://lh3.googleusercontent.com/sitesv/AICyYdZ6dEJNMaz40rey41Qdi6QxHki7ktlR2Cvh-qdF08j5zP5W83Fuodce6gDLnyiJvrU4KeZ9ok6k3R4ONhI6zTXxwvr0QNPLT35RzkvHAxXpU5gWHJBTgqUyJnphwJ3X8TnRKjhnt7NwnglAdj8ibKRxF0RTBEjyBVqkp6r3gzeA9ibCCQiAeULiAdY-JxB_KWXRbRZgugiJ7ewjr6yyrqdnWf2HKCjUsP3kKHs=w1280`,
+            { image : image2,
               name :"Ritwick Banerjea",
               prof : "Student Mentorship & Welfare"
             },
-            { image : `https://lh3.googleusercontent.com/sitesv/AICyYdYUj-6Ey0D1CJNzgUG5OMEyn1yxFblnQ1axJz_BS7mB336adAZTpDZUH89m8HCfvoPYAl11IwKcZZBkP9B5Y3aa_SVL_QCbduX4xHuT-TYIEDCtGlxlroAnt84kaFAIVTiKQRY50K59s4degT-8XEbxNapcPOvpiu2Lf-P1D0V9LiGOxxav-TxGk4kTj4d5tmH5s_W98KZBiJsNLAshN9QB-Oa3aY1FNCX8=w1280`,
+            { image : image3,
               name :"Ganesan Ramachandran",
               prof : "MD, Accenture Strategy",
               comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
             },
-            { image : `https://lh3.googleusercontent.com/sitesv/AICyYdbkkkU4bYHVPdvG2VKqQatlvKA9hjb3zCkJxrX4HyYlX0CrBcxtUR_OsikpnKb-V4Pzjnpjxt8IjneYwVHWKqKFGJfHKtZZShGASg23hWhy0eNQu46lnBPQOYH33f5sakU3mf9bXAuzK1EGOQjjTQ0JZs9Oq1lguoWnpsszygnJp4SZ8YgZcb9G-cVaNqKvRRFUvXevNLU3RJq0mc3Q5x3V31kNuhg-CAmg=w1280`,
+            { image :image4,
               name :"Sundara B. Reddy",
               prof : "MD, Accenture Strategy,BAC Chair",
               comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
             },
-            { image : `https://lh3.googleusercontent.com/sitesv/AICyYdawFPLJrGfebaPt_v7_LGx6upKd4k8_KPmp_CqVSopf7StEep9xq8Sh4PkfDeew5nmBxuA61f5a1XCcUNMPmlFWqjKTEc4gNOIO91NrkIi8-b2y1q9srjmO-DnSAlRdumYYkx0_eOUkbVspN01uWTykdKq-dJ_GmR_H7Pt91JJrXjFfpNq5mFVtrGEInZ_jPE4Ii-8_RBZ5GHjuugMqouzHebQTTpJWs3OGFQ4=w1280`,
+            { image : image5,
               name :"Murali Chandranasan",
               prof : "Sr. Director, Capgemini Invent",
               comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
