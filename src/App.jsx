@@ -24,6 +24,7 @@ import { ModalProvider } from "./Components/Context/ApplyModal/ModalContext";
 import NewFaculty from "./Components/NewFaculty/NewFaculty";
 import PDPhero from "./Components/ProfileDetailsPage/PDPhero";
 import Advisory from "./Components/Advisory/Advisory";
+import WhatsAppButton from "./Components/WhatsAppButton/WhatsAppButton";
 
 function App() {
   useEffect(() => {
@@ -53,6 +54,7 @@ function App() {
         <Route path="/:type" element={<Advisory/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
+      <WhatsAppButton/>
       </ModalProvider>
     </Router>
   );
