@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import image1 from "../../Assets/ucu (1)/Rectangle 43.jpg";
+import image1 from "../../Assets/homeImage/UCU Logo SVG/close-up-women-working-together.jpg";
 import image2 from "../../Assets/ucu (1)/Rectangle 45.jpg";
 import Sales from "../Sales/Sales";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,22 +14,18 @@ import { useNavigate } from "react-router-dom";
 const data = [
     {
       image: image1,
-      heading: "PGPM - ELITE",
-      para: `A one-year Post Graduate Program in Management crafted for professionals with
-      3+ years of experience, merging executive leadership principles with real-world industry
-      insights to accelerate careers into FinTech, AI consulting, or the GCC economy. Master
-      cutting-edge frameworks and market strategies that position you as a transformative leader
-      in the new global business landscape`,
+      heading: "Women’s Program",
+      para: `A “Women’s Program” (sometimes called Women’s Leadership Program, Gender Leadership Initiative, Women in Academia etc.) refers to structured programmes designed to support the development, empowerment, and advancement of women in professional, academic, or leadership roles.`,
     },
-    {
-      image: image2,
-      heading: "PGDM",
-      para: `A Two-Year PGPM pairs core management education with immersive industry
-      projects for candidates with 0–3 years of experience. Fast-track your entry into new-age job
-      roles through global internships, live labs, and executive mentorship—building the leadership
-      skills of tomorrow's market demands.
-      `,
-    },
+    // {
+    //   image: image2,
+    //   heading: "PGDM",
+    //   para: `A Two-Year PGPM pairs core management education with immersive industry
+    //   projects for candidates with 0–3 years of experience. Fast-track your entry into new-age job
+    //   roles through global internships, live labs, and executive mentorship—building the leadership
+    //   skills of tomorrow's market demands.
+    //   `,
+    // },
   
     
   ];
@@ -77,7 +73,7 @@ function Wps() {
                 <h1 className="title mb-3">{item.heading}</h1>
                 <p className="program-description">{item.para}</p>
                 <div className="car-explore-btn-div">
-                  <button onClick={() => showModal("enquiry")} className="btn btn-outline-dark py-2">EXPLORE PGDM</button>
+                  <button onClick={() => showModal("enquiry")} className="btn btn-outline-dark py-2">EXPLORE</button>
                   <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>
