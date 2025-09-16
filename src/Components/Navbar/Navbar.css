@@ -399,6 +399,7 @@
   ); */
   padding:0;
   height: 100px;
+  width:400px;
 }
 
 /* .logo-box::after {
@@ -417,9 +418,8 @@
 .logo-img {
   height:100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
-  padding-right: 2rem;
 }
 .navbar-brand.mobile-only {
   display: none;
