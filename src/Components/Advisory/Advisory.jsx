@@ -414,6 +414,414 @@ const councils = [
 
         ]
     },
+    {
+      type: "chro",
+      // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+      bgImage : `https://chroseries.com/wp-content/uploads/2024/10/banner-ph-full-scaled.jpg`,
+      bannerHead : "CHRO Advisory Council (CHRAC)",
+      sec2head : "CHRO Advisory Council (CHRAC)",
+      sec2Para : "The CHRO Advisory Council (CHRAC) serves as a strategic body that brings together senior human resource leaders, academic experts, and industry professionals to guide the university on matters related to workforce development, talent management, and organizational growth. The council provides insights on aligning HR strategies with institutional goals, fostering diversity and inclusion, and preparing students for the evolving demands of the global workplace. By bridging academia and industry, CHRAC ensures that the university’s policies, programs, and initiatives remain innovative, future-focused, and responsive to the needs of both students and employers.",
+      staff : [
+          // { image :image1,
+          //   name :"Dr. M. Balaji (BALA)",
+          //   prof : "Founder, CU"
+          // },
+          // { image :image2,
+          //   name :"Ritwick Banerjea",
+          //   prof : "Student Mentorship & Welfare"
+          // },
+          // { image :image3,
+          //   name :"Ganesan Ramachandran",
+          //   prof : "MD, Accenture Strategy",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image4,
+          //   name :"Sundara B. Reddy",
+          //   prof : "MD, Accenture Strategy,BAC Chair",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image5,
+          //   name :"Murali Chandranasan",
+          //   prof : "Sr. Director, Capgemini Invent",
+          //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+          // },
+
+      ]
+  },
+    {
+      type: "tac",
+      // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+      bgImage : `https://s7d9.scene7.com/is/image/shrm/istock-1704589778?ts=1753806253269&dpr=off&fmt=png-alpha&bfc=on`,
+      bannerHead : "Talent Advisory Council (TAC)",
+      sec2head : "Talent Advisory Council (TAC)",
+      sec2Para : "The Talent Advisory Council (TAC) is a distinguished panel of industry leaders, academic professionals, and organizational experts who collaborate with the university to shape strategies for talent development and career readiness. TAC focuses on identifying emerging skill requirements, enhancing curriculum relevance, and strengthening industry–academia partnerships. The council provides valuable guidance on internships, placements, and professional development opportunities, ensuring that students are well-prepared to excel in competitive global markets. By fostering innovation and aligning academic learning with real-world expectations, TAC plays a vital role in nurturing future-ready graduates.",
+      staff : [
+          // { image :image1,
+          //   name :"Dr. M. Balaji (BALA)",
+          //   prof : "Founder, CU"
+          // },
+          // { image :image2,
+          //   name :"Ritwick Banerjea",
+          //   prof : "Student Mentorship & Welfare"
+          // },
+          // { image :image3,
+          //   name :"Ganesan Ramachandran",
+          //   prof : "MD, Accenture Strategy",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image4,
+          //   name :"Sundara B. Reddy",
+          //   prof : "MD, Accenture Strategy,BAC Chair",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image5,
+          //   name :"Murali Chandranasan",
+          //   prof : "Sr. Director, Capgemini Invent",
+          //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+          // },
+
+      ]
+  },
+    {
+      type: "ldac",
+      // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+      bgImage : `https://media.licdn.com/dms/image/v2/D5612AQFHL7xLRWxl6w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1674364230526?e=2147483647&v=beta&t=B3GxwhslEormgQ6GhWMQqQyVFd96krGrS07LfGSVv-0`,
+      bannerHead : "L&D Advisory Council (L&DAC)",
+      sec2head : "L&D Advisory Council (L&DAC)",
+      sec2Para : "The Learning & Development Advisory Council (L&DAC) is a collaborative body that guides the university in advancing academic excellence and continuous skill enhancement. Comprising education specialists, corporate trainers, and industry experts, the council advises on innovative teaching methodologies, leadership development, and lifelong learning initiatives. L&DAC focuses on integrating modern learning technologies, enhancing faculty development programs, and ensuring that students acquire both academic knowledge and practical skills. By aligning learning strategies with industry needs and future competencies, the council plays a key role in fostering a culture of growth, adaptability, and professional success.",
+      staff : [
+          // { image :image1,
+          //   name :"Dr. M. Balaji (BALA)",
+          //   prof : "Founder, CU"
+          // },
+          // { image :image2,
+          //   name :"Ritwick Banerjea",
+          //   prof : "Student Mentorship & Welfare"
+          // },
+          // { image :image3,
+          //   name :"Ganesan Ramachandran",
+          //   prof : "MD, Accenture Strategy",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image4,
+          //   name :"Sundara B. Reddy",
+          //   prof : "MD, Accenture Strategy,BAC Chair",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image5,
+          //   name :"Murali Chandranasan",
+          //   prof : "Sr. Director, Capgemini Invent",
+          //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+          // },
+
+      ]
+  },
+    {
+      type: "ycxoc",
+      // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+      bgImage : `https://ycc.org.kh/wp-content/uploads/2023/10/P1031212-scaled.jpg`,
+      bannerHead : "Young CXO Council (YCxC)",
+      sec2head : "Young CXO Council (YCxC)",
+      sec2Para : "The Young CXO Council (YCxC) is a dynamic forum of emerging leaders, entrepreneurs, and young executives who collaborate with the university to bring fresh perspectives on leadership, innovation, and enterprise growth. The council serves as a bridge between academia and the evolving corporate world, offering students insights into real-world challenges, startup ecosystems, and modern business practices. By engaging with young changemakers, YCxC inspires students to think creatively, embrace entrepreneurship, and prepare for leadership roles early in their careers. The council’s involvement also helps the university stay connected to the aspirations and expectations of the next generation of leaders.",
+      staff : [
+          // { image :image1,
+          //   name :"Dr. M. Balaji (BALA)",
+          //   prof : "Founder, CU"
+          // },
+          // { image :image2,
+          //   name :"Ritwick Banerjea",
+          //   prof : "Student Mentorship & Welfare"
+          // },
+          // { image :image3,
+          //   name :"Ganesan Ramachandran",
+          //   prof : "MD, Accenture Strategy",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image4,
+          //   name :"Sundara B. Reddy",
+          //   prof : "MD, Accenture Strategy,BAC Chair",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image5,
+          //   name :"Murali Chandranasan",
+          //   prof : "Sr. Director, Capgemini Invent",
+          //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+          // },
+
+      ]
+  },
+    {
+      type: "oba",
+      // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+      bgImage : `https://www.tpgliveevents.com/wp-content/uploads/2022/07/So-you-want-to-be-in-trade-shows-Resized-900-by-600.png`,
+      bannerHead : "Our Brand Ambassadors",
+      sec2head : "Our Brand Ambassadors",
+      sec2Para : "Our Brand Ambassadors are distinguished alumni, thought leaders, and accomplished professionals who represent the values and vision of the university on a global stage. They serve as inspiring role models for students by sharing their success stories, industry expertise, and real-world experiences. Through their active engagement in mentoring, networking, and advocacy, Brand Ambassadors strengthen the university’s reputation and foster meaningful connections between academia, industry, and society. By embodying the spirit of excellence, innovation, and leadership, they play a vital role in enhancing the university’s visibility and influence worldwide.",
+      staff : [
+          // { image :image1,
+          //   name :"Dr. M. Balaji (BALA)",
+          //   prof : "Founder, CU"
+          // },
+          // { image :image2,
+          //   name :"Ritwick Banerjea",
+          //   prof : "Student Mentorship & Welfare"
+          // },
+          // { image :image3,
+          //   name :"Ganesan Ramachandran",
+          //   prof : "MD, Accenture Strategy",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image4,
+          //   name :"Sundara B. Reddy",
+          //   prof : "MD, Accenture Strategy,BAC Chair",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image5,
+          //   name :"Murali Chandranasan",
+          //   prof : "Sr. Director, Capgemini Invent",
+          //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+          // },
+
+      ]
+  },
+    {
+      type: "sac",
+      // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+      bgImage : `https://assets.td.org/m/24b2ddfdbfe32eaf/original/What-to-Do-When-Launching-a-Sales-Advisory-Council.jpg`,
+      bannerHead : "Sales Advisory Council (SAC)",
+      sec2head : "Sales Advisory Council (SAC)",
+      sec2Para : "The Sales Advisory Council (SAC) is a strategic body of senior sales leaders, industry practitioners, and academic experts who work closely with the university to strengthen its sales education and career readiness initiatives. The council provides valuable insights into evolving sales strategies, customer engagement trends, and digital selling practices, ensuring that students gain practical knowledge alongside theoretical foundations. SAC also advises on curriculum enrichment, industry projects, and experiential learning opportunities, enabling students to develop essential skills in negotiation, relationship management, and value-based selling. By bridging academia with industry expectations, the council plays a pivotal role in preparing students for successful careers in sales and business development.",
+      staff : [
+          // { image :image1,
+          //   name :"Dr. M. Balaji (BALA)",
+          //   prof : "Founder, CU"
+          // },
+          // { image :image2,
+          //   name :"Ritwick Banerjea",
+          //   prof : "Student Mentorship & Welfare"
+          // },
+          // { image :image3,
+          //   name :"Ganesan Ramachandran",
+          //   prof : "MD, Accenture Strategy",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image4,
+          //   name :"Sundara B. Reddy",
+          //   prof : "MD, Accenture Strategy,BAC Chair",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image5,
+          //   name :"Murali Chandranasan",
+          //   prof : "Sr. Director, Capgemini Invent",
+          //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+          // },
+
+      ]
+  },
+    {
+      type: "pmac",
+      // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+      bgImage : `https://procept.com/img/course_type/change_management_bg.png`,
+      bannerHead : "Product Management Advisory Council (PMAC)",
+      sec2head : "Product Management Advisory Council (PMAC)",
+      sec2Para : "The Product Management Advisory Council (PMAC) is a panel of accomplished product leaders, innovators, and academic professionals who collaborate with the university to shape the future of product management education. The council provides strategic guidance on product strategy, design thinking, user experience, and agile methodologies, ensuring that students are equipped with industry-relevant skills. By advising on curriculum development, live projects, and emerging market trends, PMAC helps bridge the gap between academic learning and real-world product practices. The council also fosters innovation and entrepreneurial thinking, preparing students to excel as product managers and innovators in a competitive global marketplace.",
+      staff : [
+          // { image :image1,
+          //   name :"Dr. M. Balaji (BALA)",
+          //   prof : "Founder, CU"
+          // },
+          // { image :image2,
+          //   name :"Ritwick Banerjea",
+          //   prof : "Student Mentorship & Welfare"
+          // },
+          // { image :image3,
+          //   name :"Ganesan Ramachandran",
+          //   prof : "MD, Accenture Strategy",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image4,
+          //   name :"Sundara B. Reddy",
+          //   prof : "MD, Accenture Strategy,BAC Chair",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image5,
+          //   name :"Murali Chandranasan",
+          //   prof : "Sr. Director, Capgemini Invent",
+          //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+          // },
+
+      ]
+  },
+    {
+      type: "cac",
+      // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+      bgImage : `https://media.erepublic.com/image/FL_Cyber_24_pic_1.jpg`,
+      bannerHead : "Cybersecurity Advisory Council (CAC)",
+      sec2head : "Cybersecurity Advisory Council (CAC)",
+      sec2Para : "The Cybersecurity Advisory Council (CAC) is a specialized body of cybersecurity leaders, technology experts, and academic professionals who partner with the university to strengthen its capabilities in digital safety, risk management, and data protection. The council provides strategic insights on emerging threats, regulatory compliance, and advanced security practices, ensuring that students gain both theoretical knowledge and hands-on expertise in safeguarding digital assets. By advising on curriculum design, industry collaborations, and practical learning opportunities, CAC equips students to address real-world cybersecurity challenges. Through its guidance, the university fosters a culture of trust, resilience, and innovation in an increasingly connected world.",
+      staff : [
+          // { image :image1,
+          //   name :"Dr. M. Balaji (BALA)",
+          //   prof : "Founder, CU"
+          // },
+          // { image :image2,
+          //   name :"Ritwick Banerjea",
+          //   prof : "Student Mentorship & Welfare"
+          // },
+          // { image :image3,
+          //   name :"Ganesan Ramachandran",
+          //   prof : "MD, Accenture Strategy",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image4,
+          //   name :"Sundara B. Reddy",
+          //   prof : "MD, Accenture Strategy,BAC Chair",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image5,
+          //   name :"Murali Chandranasan",
+          //   prof : "Sr. Director, Capgemini Invent",
+          //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+          // },
+
+      ]
+  },
+    {
+      type: "ftac",
+      // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+      bgImage : `https://ftahk.org/sites/default/files/2025-01/AFF%20Picture4.jpg`,
+      bannerHead : "FinTech Advisory Council (FTAC)",
+      sec2head : "FinTech Advisory Council (FTAC)",
+      sec2Para : "The FinTech Advisory Council (FTAC) brings together financial leaders, technology innovators, and academic experts to guide the university in advancing education and research at the intersection of finance and technology. The council provides strategic insights on digital banking, blockchain, artificial intelligence in finance, and emerging financial models, ensuring students gain exposure to cutting-edge industry practices. FTAC also advises on curriculum development, industry partnerships, and experiential learning opportunities, enabling students to build the skills needed to thrive in the rapidly evolving FinTech ecosystem. By fostering innovation and real-world application, the council helps prepare graduates to become future-ready leaders in the digital finance landscape.",
+      staff : [
+          // { image :image1,
+          //   name :"Dr. M. Balaji (BALA)",
+          //   prof : "Founder, CU"
+          // },
+          // { image :image2,
+          //   name :"Ritwick Banerjea",
+          //   prof : "Student Mentorship & Welfare"
+          // },
+          // { image :image3,
+          //   name :"Ganesan Ramachandran",
+          //   prof : "MD, Accenture Strategy",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image4,
+          //   name :"Sundara B. Reddy",
+          //   prof : "MD, Accenture Strategy,BAC Chair",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image5,
+          //   name :"Murali Chandranasan",
+          //   prof : "Sr. Director, Capgemini Invent",
+          //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+          // },
+
+      ]
+  },
+    {
+      type: "gccac",
+      // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+      bgImage : `https://globalcarboncouncil.com/wp-content/uploads/2023/05/governance2.jpg`,
+      bannerHead : "GCC Advisory Council (GCCAC)",
+      sec2head : "GCC Advisory Council (GCCAC)",
+      sec2Para : "The GCC Advisory Council (GCCAC) is a distinguished forum of business leaders, policy experts, and academic professionals from the Gulf Cooperation Council region who collaborate with the university to strengthen its global outlook and regional engagement. The council provides valuable insights on economic trends, workforce needs, and emerging opportunities within the GCC, ensuring that academic programs remain relevant and globally competitive. By fostering cross-border collaborations, industry partnerships, and cultural exchange, GCCAC helps students gain international exposure and prepares them to excel in diverse professional environments. The council also plays a pivotal role in positioning the university as a trusted partner for innovation, research, and talent development in the GCC region.",
+      staff : [
+          // { image :image1,
+          //   name :"Dr. M. Balaji (BALA)",
+          //   prof : "Founder, CU"
+          // },
+          // { image :image2,
+          //   name :"Ritwick Banerjea",
+          //   prof : "Student Mentorship & Welfare"
+          // },
+          // { image :image3,
+          //   name :"Ganesan Ramachandran",
+          //   prof : "MD, Accenture Strategy",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image4,
+          //   name :"Sundara B. Reddy",
+          //   prof : "MD, Accenture Strategy,BAC Chair",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image5,
+          //   name :"Murali Chandranasan",
+          //   prof : "Sr. Director, Capgemini Invent",
+          //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+          // },
+
+      ]
+  },
+    {
+      type: "msac",
+      // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+      bgImage : `https://engineering.uark.edu/_resources/images/DSC_2492-2-web.jpg`,
+      bannerHead : "Mobility & Sustainability Advisory Council (MSAC)",
+      sec2head : "Mobility & Sustainability Advisory Council (MSAC)",
+      sec2Para : "The Mobility & Sustainability Advisory Council (MSAC) brings together global experts, industry leaders, and academic professionals to guide the university in advancing sustainable practices and innovative mobility solutions. The council provides strategic insights on clean energy, smart transportation, climate action, and sustainable urban development, ensuring that students are prepared to address pressing environmental and societal challenges. By advising on curriculum enrichment, research initiatives, and industry collaborations, MSAC fosters innovation and equips students with the knowledge and skills needed to create sustainable, future-ready solutions. Through its efforts, the council supports the university’s mission of shaping responsible leaders committed to building a greener and more resilient world.",
+      staff : [
+          // { image :image1,
+          //   name :"Dr. M. Balaji (BALA)",
+          //   prof : "Founder, CU"
+          // },
+          // { image :image2,
+          //   name :"Ritwick Banerjea",
+          //   prof : "Student Mentorship & Welfare"
+          // },
+          // { image :image3,
+          //   name :"Ganesan Ramachandran",
+          //   prof : "MD, Accenture Strategy",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image4,
+          //   name :"Sundara B. Reddy",
+          //   prof : "MD, Accenture Strategy,BAC Chair",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image5,
+          //   name :"Murali Chandranasan",
+          //   prof : "Sr. Director, Capgemini Invent",
+          //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+          // },
+
+      ]
+  },
+    {
+      type: "conac",
+      // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
+      bgImage : `https://www.shrm.org/adobe/dynamicmedia/deliver/dm-aid--66d218a8-9e99-4fb4-b9f5-8cf40f901eb1/istock-1448493342.png?preferwebp=true&quality=82`,
+      bannerHead : "Consulting Advisory Council (ConAC)",
+      sec2head : "Consulting Advisory Council (ConAC)",
+      sec2Para : "The Consulting Advisory Council (ConAC) is a network of seasoned consultants, industry strategists, and academic professionals who collaborate with the university to enhance its consulting education and career development initiatives. The council provides valuable perspectives on problem-solving frameworks, business transformation strategies, digital consulting, and client engagement practices. By advising on curriculum design, case-based learning, and industry projects, ConAC ensures that students gain both analytical expertise and practical consulting experience. Through its guidance, the council helps prepare graduates to excel in management consulting, strategy, and advisory roles, equipping them to deliver impactful solutions in dynamic business environments.",
+      staff : [
+          // { image :image1,
+          //   name :"Dr. M. Balaji (BALA)",
+          //   prof : "Founder, CU"
+          // },
+          // { image :image2,
+          //   name :"Ritwick Banerjea",
+          //   prof : "Student Mentorship & Welfare"
+          // },
+          // { image :image3,
+          //   name :"Ganesan Ramachandran",
+          //   prof : "MD, Accenture Strategy",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image4,
+          //   name :"Sundara B. Reddy",
+          //   prof : "MD, Accenture Strategy,BAC Chair",
+          //   comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+          // },
+          // { image : image5,
+          //   name :"Murali Chandranasan",
+          //   prof : "Sr. Director, Capgemini Invent",
+          //   comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+          // },
+
+      ]
+  },
 ]
 function Advisory() {
     const { type } = useParams();
