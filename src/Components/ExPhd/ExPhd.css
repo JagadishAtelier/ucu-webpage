@@ -2,3 +2,9 @@
     width:50% !important;
     margin: auto !important;
 }
+
+@media (max-width:786px) {
+    .ex-phd-container{
+        width:100% !important;
+    }
+}
