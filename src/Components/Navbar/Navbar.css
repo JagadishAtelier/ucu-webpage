@@ -398,6 +398,7 @@
     rgba(255, 255, 255, 0) 60%
   ); */
   padding:0;
+  padding-top: 15px;
   height: 100px;
   width:400px;
 }
@@ -427,13 +428,21 @@
 @media (max-width: 991px) {
   .navbar-brand.mobile-only {
     display: block;
+    display: block;
+        width: 67%;
+        height: 70px;
+        margin: 0;
+        padding-top: 10px;
+  }
+  .icon{
+    width: 23px !important;
   }
   .logo-box {
     display: none;
   }
   .logo-img {
-    height: 80px;
-    width: auto !important;
+    height: 100%;
+    width: 100% !important;
   }
 
   .logo-box::after {
