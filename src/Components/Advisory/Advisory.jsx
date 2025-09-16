@@ -52,14 +52,6 @@ const councils = [
         sec2head : "Business Advisory Council",
         sec2Para : "At the forefront of the Universities strategic direction stands our esteemed Business Advisory Council (BAC). Comprised of luminaries holding influential leadership positions across diverse industries, the BAC provides invaluable insights and forward-thinking guidance. These accomplished executives contribute their unparalleled real-world experience, ensuring the Universities initiatives and member institutions remain acutely attuned to the dynamic demands of the global marketplace. The BAC serves as a powerful nexus between academia and industry, fostering a symbiotic relationship that shapes curriculum relevance, anticipates future talent needs, and ultimately empowers the next generation of business leaders. Their strategic counsel is instrumental in driving the Consortium's mission to elevate business education and foster sustainable growth.",
         staff : [
-            { image : image1,
-              name :"Dr. M. Balaji (BALA)",
-              prof : "Founder, CU"
-            },
-            { image : image2,
-              name :"Ritwick Banerjea",
-              prof : "Student Mentorship & Welfare"
-            },
             { image : image3,
               name :"Ganesan Ramachandran",
               prof : "MD, Accenture Strategy",

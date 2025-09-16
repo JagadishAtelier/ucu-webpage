@@ -390,9 +390,6 @@
   /* margin: auto; */
 }
 .logo-box {
-  position: absolute;
-  top: 0px; /* shadow offset */
-  left: 0px; /* shadow offset */
   display: inline-block;
   /* background: linear-gradient(
     to top,
@@ -400,29 +397,25 @@
     rgba(0, 0, 0, 0.3) 2%,
     rgba(255, 255, 255, 0) 60%
   ); */
-  width: auto;
-  padding: 5px 5px;
-  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
-  width: 250px;
-  z-index: 0; /* create stacking context */
+  padding:0;
 }
 
-.logo-box::after {
+/* .logo-box::after {
   content: "";
   position: absolute;
   top: -2px;
   left: -8px;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: #fff; */
   /* background: rgba(0, 0, 0, 0.8); */
-  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
-  z-index: -1; /* behind white box inside its context */
-}
+  /* clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%); */
+  /* z-index: -1; */
+/* } */
 
 .logo-img {
-  height: 155px;
-  width: 175px;
+  height: 100%;
+  width: 100%;
   display: block;
 }
 .navbar-brand.mobile-only {
