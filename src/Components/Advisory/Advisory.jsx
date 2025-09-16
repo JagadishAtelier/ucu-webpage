@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { FaLinkedin,FaChevronRight } from 'react-icons/fa';
 import Navbar from '../Navbar/Navbar';
 import pI from '../../Assets/acp/profileImg.webp'
-
+import logoIno from '../../Assets/acp/logoIno.jpg'
 import NewFooter from '../NewFooter/NewFooter';
 import image1 from '../../Assets/acp/image1.jpg'
 import image2 from '../../Assets/acp/image2.jpg'
@@ -55,77 +55,77 @@ const councils = [
             { image : image3,
               name :"Ganesan Ramachandran",
               prof : "MD, Accenture Strategy",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+              comLogo : `https://upload.wikimedia.org/wikipedia/commons/1/1c/Accenture_logo.svg`
             },
             { image :image4,
               name :"Sundara B. Reddy",
               prof : "MD, Accenture Strategy,BAC Chair",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+              comLogo : `https://upload.wikimedia.org/wikipedia/commons/1/1c/Accenture_logo.svg`
             },
             { image : image5,
               name :"Murali Chandranasan",
               prof : "Sr. Director, Capgemini Invent",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://www.drupal.org/files/Capgemini_Logo_2COL_RGB.png`
             },
             { image : image6,
               name :"Mani James",
               prof : "Chief Business Officer,Mosiac Digital",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTprvG8j1wz9skvMeqqmT9J3Ih5Ie4jV69UZw&s`
             },
             { image : image7,
               name :"Preetha Reddy",
               prof : "Apollo",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCwVoIefNX_v1icK6HUoNCTo_5bVgTT2-Atuiqp57HKLF-yqE_jILY3idbTCIRdCOGA_I&usqp=CAU`
             },
             { image : image8,
               name :"Subramanian N. N.",
               prof : "CEO, Maveric",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://cdn-fcich.nitrocdn.com/ZguJicRwSUMwxXTngUutFlvSuzRwiSdB/assets/images/optimized/rev-f55dbdb/maveric-systems.com/wp-content/uploads/2023/12/Maveric-AN-Logo_Original.png`
             },
             { image : image9,
               name :"Manish Goyal",
               prof : "Partner, A&M",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Njo9Zw47uUtbXxwjZeCsxfbfDzJzd9tdUA&s`
             },
             { image : image10,
               name :"Dr. K. Ganesh",
               prof : "Partner, McKinsey & Company",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://cdn.cookielaw.org/logos/353d36fb-3a1c-4021-b831-ee6d50361d6a/07a8989e-cba1-4f60-a67a-0ffe9efc1b3a/5705935c-c99f-48d8-8aef-b78127f4aed3/mckinsey---company_owler_20190728_090718_original.png`
             },
             { image : image11,
               name :"Chandramouliswaran (Mouli) V.",
               prof : "VP-Data, Paypal",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/2560px-PayPal.svg.png`
             },
             { image : image12,
               name :"Manikandan Thangarathnam",
               prof : "Sr. Director, Uber",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPjgpgVspA7OECttknM08dXUEZNc40OBwOFw&s`
             },
             { image : pI,
               name :"Sundar Rajan Rengamani",
               prof : "VP - Straive",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzHQ_8annzluojESqlaeDNAKt4_ZQSyXI4PA&s`
             },
             { image : pI,
               name :"Sarathy Rajagopalan",
               prof : "Sr. Director, PayPal",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/2560px-PayPal.svg.png`
             },
             { image : pI,
               name :"Kumaran Sasikanthan",
               prof : "Group VP, Informatica",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2q06EAtGZ7ldD03vRTq9JGY2QIwDh5kEHw&s`
             },
             { image : pI,
               name :"Ramanan S. V.",
               prof : "CEO, Intellect Design",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTirsrTU93EYKDlGl_QpuQHZVZT068NPoBV5Q&s`
             },
             { image : pI,
               name :"Bala MS",
               prof : "CEO, Stratinfinity",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://media.licdn.com/dms/image/v2/D563DAQHfueHRFrC1uw/image-scale_191_1128/image-scale_191_1128/0/1697805029697/stratinfinity_inc_cover?e=2147483647&v=beta&t=OGPxLoaDiKyyBUmZPexuMk_dFz4dvveeYfIIKimYMWk`
             },
 
         ]
@@ -146,22 +146,22 @@ const councils = [
             },
             { image :aacImg2,
               name :"Dr. Vaidyanathan",
-              prof : "Director, XIMR"
+              prof : "Director, XIMR",
+              comLogo :"https://www.ximr.ac.in/Content/images/logo.png"
             },
             { image :aacImg3,
               name :"Dr. P.K. Vishwanathan",
               prof : "Advisory, Academic Affairs",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
             },
             { image : aacImg4,
               name :"Prof. Sanjoy Sircar",
               prof : " Professor of Finance | Program Director - PGPM | Expert in Corporate Finance & Financial Analytics ",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+              comLogo : `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQioLMk0I8GQtxjr120g9yxRq4cBRqTUeYqXQ&s`
             },
             { image :aacImg5,
               name :"Dr. Vaidy Jayaraman ",
               prof : "Dean | Supply Chain & Analytics Expert | Ex-Great Lakes Principal ",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWtJ-Xp_Xh77xKqcdXrS_b-4N5sX44xEHymg&s`
             },
 
         ]
@@ -180,44 +180,46 @@ const councils = [
             },
             { image : pI,
               name :"Deepshikha Bhowmick",
-              prof : "Talent Management, Capegemini"
+              prof : "Talent Management, Capegemini",
+              comLogo : "https://www.drupal.org/files/Capgemini_Logo_2COL_RGB.png"
             },
             { image :pI,
               name :"Radhika Ravi",
               prof : "TA Head, Wipro",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+              comLogo : `https://www.bigdatawire.com/wp-content/uploads/2022/11/wipro-logo-2022.png`
             },
             { image : pI,
               name :"Subhasree Pradeep",
               prof : `HR & DEI Leader
 
               L&T`,
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://www.wirecable.in/wp-content/uploads/2024/05/larsen-toubro.png`
             },
             { image : pI,
               name :"Mithun Madhavan",
               prof : `TA, Optum`,
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYOSU02Lv5k_xuDRty7jdO8IGbrv3rQH748A&s`
             },
             { image : pI,
               name :"Marcus Durai",
               prof : `HR Head - RAMCO`,
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://gpa.net/cdn/shop/articles/Ramco_Systems_logo_1024x.png?v=1679913362`
             },
             { image : pI,
               name :"Naresh Rajendran",
               prof : `HR Head - Grundfos`,
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPp1w10uQTD0vwsVJUKsoo8MFYQLfkz3IISQ&s`
             },
             { image : pI,
               name :"Vandhana Sundaram",
               prof : `Sr. Director, LTI Mindtree`,
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz672QMsGdwWLm8I2wH5mquKQseumpD24taA&s`
+
             },
             { image : pI,
               name :"Manoj Verghese",
               prof : `CPO, Tonik`,
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://lh3.googleusercontent.com/PlrQKH49IfuWJQ-aqiDmNRFHmORjkrlj5QIkWGz5B7-TlZ5w3LgkOIObUsX665hDoEzEVcf_-LWwqmpA6GutsGG5dKCYlqvffFEAQf_fNmlM4WWh6RBj`
             },
 
         ]
@@ -232,81 +234,83 @@ const councils = [
         staff : [
             { image : yccImg1,
               name :"Vishal Lathwal",
-              prof : "Apollo Homecare"
+              prof : "Apollo Homecare",
+              comLogo : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgzfRRIqFoGxJZjUeJhe95-yObY0tSAU0oEw&s"
             },
             { image :yccImg2,
               name :"Ashish Prasad",
-              prof : "A&M"
+              prof : "A&M",
+              comLogo:"https://www.bvca.co.uk/static/de9585cd-10c6-4d0d-ace88e44607b74fd/Alvarez-Marsal-Europe-LLP.jpg"
             },
             { image :yccImg3,
               name :"Aparna S.",
               prof : "Head - Bain & Co.",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+              comLogo : `https://www.consultancy.in/profile/media/bain-company-spotlight-2021-09-30-140558201.png`
             },
             { image :yccImg4,
               name :"Vidyasagari Sundaram",
               prof : "Partner, EY",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+              comLogo : `https://knect365.imgix.net/uploads/EY-Logo-Beam-Tag-Horizontal-RGB-OffBlack-Yellow-border2-f205367abc70f83910164a166e45c51f.png?auto=format&fit=max&w=412&dpr=5`
             },
             { image : pI,
               name :"Ramesh Babu",
               prof : "Head (AI & ML) - Innovations Inc.",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :logoIno
             },
             { image : pI,
               name :"Savitha Ajitraj",
               prof : "Director, Paypal",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://marketplace.commercetools.com/img/containers/assets/pp_h_rgb_450-450.png/b0735facc519b33d6ceb1a7133fa77ad.png`
             },
             { image : pI,
               name :"Kartik Kannan",
               prof : "DGroup Product Manager AJIO",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRukFWxO8FAucrV4RAiwXBt3TiDjUQNU5SIXw&s`
             },
             { image : pI,
               name :"Prathitha Muthurangam",
               prof : "Business Head, Airtel",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://www.gadgets360.com/static/v1/images/og_airtel.png`
             },
             { image : pI,
               name :"Krithi Gugan",
               prof : "Director, Vivriti",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://www.tvscapital.in/wp-content/uploads/2023/07/vivriti-65800cd2e6718.webp`
             },
             { image : pI,
               name :"Uppili Ramabadran",
               prof : "Director, SYS",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_qw3BgGR1m8rNOC_kHrWcWqkZzMlJf9nwIH6PdT3_IZqTBoJNecOH7ox88C4amjXtZA&usqp=CAU`
             },
             { image : pI,
               name :"Sreelakshmi Menon",
               prof : "GM, L&T",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://img.etimg.com/thumb/width-1200,height-900,imgsize-18236,resizemode-75,msid-119848724/industry/indl-goods/svs/engineering/larsen-toubro-wins-large-orders-in-india-overseas.jpg`
             },
             { image : pI,
               name :"Swetha Kochar",
               prof : "Partner, PKC Consulting",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyHCAFZfDfjqlhznsreMDnVM37xB6BY-dhg&s`
             },
             { image : pI,
               name :"Shankaran G.",
               prof : "Co-founder, Learner Circle",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://play-lh.googleusercontent.com/qfmpNiFCKopf-RwmDDm1T8ZpDx3O5yLVpI2Sjuhj90MVmIAUwVN7ZjU4hoYByEOq9BE`
             },
             { image : pI,
               name :"Raghava Rao",
               prof : "CEO, Camocile",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ52jDO5PWGPrVm7Tz1tu2QR3X7PJLX_SGaUw&s`
             },
             { image : pI,
               name :"Manoj Prabhakaar",
               prof : "MD & CEO, TrueInfo Labs",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://media.licdn.com/dms/image/v2/C560BAQG5K17Zs-cxaQ/company-logo_200_200/company-logo_200_200/0/1679503453577?e=2147483647&v=beta&t=ke_DtFvulOc7FNf-JQNC5pWmIedKDeiebXFwEsCIwzg`
             },
             { image : pI,
               name :"Rachna Ganatra",
               prof : "Founder, RR",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcgZ1D8KRH7rxuGdTAtGMtGGWJnlwveZpx8A&s`
             },
 
         ]
@@ -322,35 +326,37 @@ const councils = [
             { image :rlcImg1,
               name :"Bharath Rapeka",
               // prof : "Founder, CU"
+              comLogo : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgrkada84btevykP_-yrqs0YXM_YclNrdZMg&s"
             },
             { image :rlcImg2,
               name :"Manikandan M.",
               // prof : "Student Mentorship & Welfare"
+              comLogo : "https://marketplace.commercetools.com/img/containers/assets/pp_h_rgb_450-450.png/b0735facc519b33d6ceb1a7133fa77ad.png"
             },
             { image :rlcImg3,
               name :"Ajit Bhardwaj",
               // prof : "MD, Accenture Strategy",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+              comLogo : `https://marketplace.commercetools.com/img/containers/assets/pp_h_rgb_450-450.png/b0735facc519b33d6ceb1a7133fa77ad.png`
             },
             { image :rlcImg4,
               name :"Deep Gandhi",
               // prof : "MD, Accenture Strategy,BAC Chair",
-              comLogo : `https://lh3.googleusercontent.com/sitesv/AICyYdbIw1-GvNUHzyM_1VgxrLNUFV4U6JV3mtlACDVmnmcOSgprTbL1VtY4naFoD0Vrg7HAtari79K9o7QBSjJWBJ38gGboeqMF2oUYIqtKgAio5ruPekYm_pUiMqYWPqUJFbAJ1CeBbklpy05t5k3taOvt1Eo4ecR7s7Ud4I-s7SSNjEtIv2IxIz-2eI1Pyy5JY8aEXKVhTCdF3oE9aH9wLgNoJuv5jtLnKC-gYj8=w1280`
+              comLogo : `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlsj9bCdo4Ct_4GmzwijJPFfcplaj3NraAcg&s`
             },
             { image :rlcImg5,
               name :"Anna Vinaya Xavier",
               // prof : "Ex-Google",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://www.clientassociates.com/images/logo.png`
             },
             { image :rlcImg6,
               name :"Jaideep Thanage",
               prof : "Ex-Google",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://boomi.com/wp-content/uploads/Dell_Technologies_logo-2-1.png`
             },
             { image :rlcImg7,
               name :"Ritwick Banerjea",
               prof : "ex-McKinsey",
-              comLogo :`https://lh3.googleusercontent.com/sitesv/AICyYdZhVmfPaucDL4BYmRyKLf7C9q3kHYo5MwFQmomHwEwzCwzP4KkiDFRc-hie0ttV4w2_10OmLXQrVTtpIARYYNBR0nGZb6FFEWpwvnNgyvCIlbUdJIq_rvFUnAkqtg6rBeQraM8HfuDR-N_Pxjql9T8COs99Qw_hOEFFYXBzUy2anFsHFIHVW8P3xVhIfiAcunadvThlC0dJa1UJbMyX9plgAZ9PDm0O1K5b=w1280`
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE6d_C2nCLaVGFVTXgvBWLC_OPk4GQ31yvvQ&s`
             },
 
         ]
@@ -472,9 +478,13 @@ function Advisory() {
   <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center mb-lg-5 mb-5 position-relative">
     {council.staff.map((person, idx) => (
       <div key={idx} className="col d-flex">
-        <div className="staff-card d-flex flex-column justify-content-between align-items-center text-center w-100">
+        <div className="staff-card d-flex flex-column justify-content-between align-items-center text-center w-100 mt-lg-3">
           <img src={person.image} alt={person.name} className="staff-img" />
-
+          <div className='com-logo'>
+          {person.comLogo && (
+            <img src={person.comLogo} className='com-logo-img'/>
+          )}
+          </div>
           <div className="mt-3">
             <h4 className="fs-4 fw-bold text-uppercase mb-2">{person.name}</h4>
             <p className="fs-5 color-highlight mb-2 font-bold">{person.prof}</p>
