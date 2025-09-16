@@ -425,7 +425,7 @@
 .navbar-brand.mobile-only {
   display: none;
 }
-@media (max-width: 991px) {
+@media (max-width: 480px) {
   .navbar-brand.mobile-only {
     display: block;
     display: block;
@@ -433,6 +433,16 @@
         height: 70px;
         margin: 0;
         padding-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-brand.mobile-only {
+    display: block;
+    display: block;
+        width: 50%;
+        height: 90px;
+        margin: 0;
+        padding-top: 22px;
   }
   .icon{
     width: 23px !important;
