@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 const data = [
   {
     image: image1,
-    heading: "PGPM is Post Graduate Program in Management - ELITE",
+    heading: "PGPM - ELITE",
     para: `A one-year Post Graduate Program in Management crafted for professionals with
     3+ years of experience, merging executive leadership principles with real-world industry
     insights to accelerate careers into FinTech, AI consulting, or the GCC economy. Master
@@ -34,7 +34,7 @@ const data = [
   },
   {
     image: image1,
-    heading: "PGPM is Post Graduate Program in Management - ELITE",
+    heading: "PGPM - ELITE",
     para: `A one-year Post Graduate Program in Management crafted for professionals with
     3+ years of experience, merging executive leadership principles with real-world industry
     insights to accelerate careers into FinTech, AI consulting, or the GCC economy. Master
