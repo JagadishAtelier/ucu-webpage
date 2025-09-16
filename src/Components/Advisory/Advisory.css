@@ -20,3 +20,42 @@
         object-fit: cover;
     }
 }
+
+.staff-card {
+    position: relative;
+    overflow: hidden; /* Ensures shine stays within image */
+    display: inline-block;
+  }
+  
+  .staff-card img {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Shine effect */
+  .staff-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+    transform: skewX(-25deg);
+  }
+  
+  /* On hover - animate shine */
+  .staff-card:hover::before {
+    animation: shine 0.8s forwards;
+  }
+  
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+  
