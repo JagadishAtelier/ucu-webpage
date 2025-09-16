@@ -81,8 +81,6 @@ function Wps() {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <Sales />
     </div>
   )
 }
