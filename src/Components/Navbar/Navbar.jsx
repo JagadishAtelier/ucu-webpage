@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { menuData } from "./menuData";
 import "./Navbar.css";
 import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
-import logoImg from '../../Assets/homeImage/l.jpg'
+import logoImg from '../../Assets/homeImage/UCU Logo SVG/UCU Logo.svg'
 const Navbar = () => {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -74,7 +74,7 @@ const Navbar = () => {
 
           <Link className="navbar-brand mobile-only" to="/">
             <img
-              src="/logo.svg"
+                src={logoImg}
               alt="Universal Corporate University Logo"
               className="logo-img"
             />

@@ -8,6 +8,7 @@
   padding: 1rem;
   position: relative;
   z-index: 50;
+  padding-left: 0 !important;
 }
 .nav-left a{
   padding: 0;
@@ -193,9 +194,9 @@
   .drawer-header {
     justify-content: flex-end;
   }
-  .navbar {
+  /* .navbar {
     padding: .6rem 3rem;
-  }
+  } */
   .drawer {
     width: 400px;
   }

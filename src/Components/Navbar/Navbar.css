@@ -419,6 +419,7 @@
   width: 100%;
   object-fit: contain;
   display: block;
+  padding-right: 2rem;
 }
 .navbar-brand.mobile-only {
   display: none;
