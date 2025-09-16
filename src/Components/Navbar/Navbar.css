@@ -398,6 +398,7 @@
     rgba(255, 255, 255, 0) 60%
   ); */
   padding:0;
+  height: 100px;
 }
 
 /* .logo-box::after {
@@ -414,8 +415,9 @@
 /* } */
 
 .logo-img {
-  height: 100%;
+  height:100%;
   width: 100%;
+  object-fit: contain;
   display: block;
 }
 .navbar-brand.mobile-only {

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { menuData } from "./menuData";
 import "./Navbar.css";
 import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
-import logoImg from '../../Assets/homeImage/logoImg.png'
+import logoImg from '../../Assets/homeImage/l.jpg'
 const Navbar = () => {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -63,15 +63,13 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-md py-0 navbar-main-container ">
         <div className="container-fluid">
           {/* Logo */}
-          <Link className="navbar-brand logo-box" to="/">
-            <div className="logo-with-text">
+          <Link className="navbar-brand logo-box m-lg-0" to="/">
               <img
                 src={logoImg}
                 alt="Universal Corporate University Logo"
                 className="logo-img"
               />
               {/* <p className="logo-text">Business School</p> */}
-            </div>
           </Link>
 
           <Link className="navbar-brand mobile-only" to="/">
