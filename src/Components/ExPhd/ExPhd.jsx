@@ -80,8 +80,6 @@ function ExPhd() {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <Sales />
     </div>
   )
 }
