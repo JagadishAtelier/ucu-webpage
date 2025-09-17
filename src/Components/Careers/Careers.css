@@ -26,3 +26,8 @@
         display: none;
     }
 }
+
+/* Prevent unwanted horizontal scrolling */
+body {
+    overflow-x: hidden;
+  }
