@@ -22,6 +22,7 @@ const data = [
     insights to accelerate careers into FinTech, AI consulting, or the GCC economy. Master
     cutting-edge frameworks and market strategies that position you as a transformative leader
     in the new global business landscape`,
+    buttonText:"Explore-PGPM-ELITE"
   },
   {
     image: image2,
@@ -31,6 +32,7 @@ const data = [
     roles through global internships, live labs, and executive mentorship—building the leadership
     skills of tomorrow's market demands.
     `,
+    buttonText:"Explore-PGDM"
   },
   {
     image: image1,
@@ -40,6 +42,7 @@ const data = [
     insights to accelerate careers into FinTech, AI consulting, or the GCC economy. Master
     cutting-edge frameworks and market strategies that position you as a transformative leader
     in the new global business landscape`,
+    buttonText:"Explore-PGPM-ELITE"
   },
   {
     image: image2,
@@ -49,6 +52,7 @@ const data = [
     roles through global internships, live labs, and executive mentorship—building the leadership
     skills of tomorrow's market demands.
     `,
+    buttonText:"Explore-PGDM"
   },
 
   
@@ -97,7 +101,7 @@ function CareerSection() {
                 <h1 className="title mb-3">{item.heading}</h1>
                 <p className="program-description">{item.para}</p>
                 <div className="car-explore-btn-div">
-                  <button onClick={() => showModal("enquiry")} className="btn btn-outline-dark py-2">EXPLORE PGDM</button>
+                  <button className="btn btn-outline-dark py-2">{item.buttonText}</button>
                   <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>

@@ -11,40 +11,36 @@ const data = [
     text: "Boost growth through digital consultative selling and powerful online negotiation.",
   },
   {
-    head: "Cyber Security",
+    head: "Product Management",
     text: "Enhance skills through online learning with expert guidance and mastery in digital threat defense.",
   },
   {
-    head: "AI",
+    head: "Cybersecurity",
     text: "Build AI skills through online platforms and drive smarter innovation.",
   },
   {
-    head: "Product Management",
+    head: "Digital Marketing",
     text: "Master online product lifecycles through agile tools and market-driven decisions.",
   },
   {
-    head: "Digital Marketing",
+    head: "Mobilty & Sustainability",
     text: "Learn marketing online with interactive modules, real-time analytics, and growth-focused strategies.",
   },
   {
-    head: "Mobility & Sustainability",
+    head: "Consulting",
     text: "Learn online to design green solutions with smart and sustainable transport technology.",
   },
   {
-    head: "Consulting",
+    head: "Banking & Finance",
     text: "Learn online to drive business transformation with problem-solving and stakeholder collaboration.",
   },
   {
-    head: "Banking & Finance",
+    head: "Business Analytics",
     text: "Learn online to optimize finance with risk management, investment, and compliance skills.",
   },
   {
-    head: "Product Marketing",
+    head: "Data Science",
     text: "Learn online to drive product success with positioning, launches, and performance analytics.",
-  },
-  {
-    head: "Data Analytics",
-    text: "Learn online to turn raw data into insights using analytics and visualization tools.",
   },
 ];
 
@@ -108,7 +104,7 @@ function Platforms() {
                   </p>
                   <div className="car-explore-btn-div-faq">
                     <button className="btn btn-outline-dark py-2">
-                      EXPLORE PGDM
+                      EXPLORE
                     </button>
                     <button
                       onClick={() => showModal("apply")}

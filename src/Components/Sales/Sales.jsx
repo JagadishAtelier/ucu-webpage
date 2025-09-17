@@ -136,7 +136,7 @@ function Sales() {
                 <p className="mb-3">{item.para}</p>
                 <div className="car-explore-btn-div sales-btn p-1">
                   <button className="car-explore-btn expo-btn btn btn-outline-dark">
-                    EXPLORE PGDM
+                    EXPLORE
                   </button>
                   <button onClick={() => showModal("apply")} className="car-apply-btn expo-btn">APPLY NOW</button>
                 </div>

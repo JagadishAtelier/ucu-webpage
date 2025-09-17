@@ -45,7 +45,7 @@ function Wps() {
   return (
     <div className="car-container container-fluid mt-5">
       <div className="mx-2 mb-4 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center" data-aos="fade-up">
-        <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}> Women's </span>Program
+        <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}> Career Reboot Program</span> for Women
         </h1>
         <p className="mb-4 program-description col-lg-6 text-center">
         A “Women’s Program” (sometimes called Women’s Leadership Program, Gender Leadership Initiative, Women in Academia etc.) refers to structured programmes designed to support the development, empowerment, and advancement of women in professional, academic, or leadership roles.
@@ -81,8 +81,6 @@ function Wps() {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <Sales />
     </div>
   )
 }
