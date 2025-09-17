@@ -265,4 +265,25 @@ align-items: center;
   .man-item-content p {
     font-size: 0.85rem;
   }
+  .cxo-grid{
+    flex-direction: column;
+    width: 100%;
+  }
+  .cxo-card{
+    width: 100%;
+    max-width: none;
+  }
+  .extra-content-inner h3{
+    text-align: center;
+  }
+  .bg-cxo,
+  .bg-cto,
+  .bg-cio,
+  .bg-cmo,
+  .bg-chro,
+  .bg-cfo,
+  .bg-cpo{
+    min-height: 40vh;
+  }
 }
+

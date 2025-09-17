@@ -1,0 +1,28 @@
+.career-page-sidebar{
+    height: fit-content;
+    position: sticky;
+    top: 10px;
+}
+.careers-page-banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.careers-page-banner{
+    width: 100%;
+    padding: 10% 5%;
+
+}
+@media (max-width:768px) {
+    .career-page-sidebar{
+        position: relative;
+        height: fit-content;
+    }
+    .careers-page-banner img{
+        display: none;
+    }
+    .careers-page-banner{
+        display: none;
+    }
+}
