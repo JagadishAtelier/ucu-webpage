@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { menuData } from "./menuData";
 import "./Navbar.css";
 import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
-import logoImg from '../../Assets/Ucu_Updated_Logo/UCU logo Center.jpg'
+import logoImg from '../../Assets/Ucu_Updated_Logo/UCU logo Right Side.jpg'
 const Navbar = () => {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
