@@ -425,9 +425,6 @@
 .navbar-brand.mobile-only {
   display: none;
 }
-@media (max-width: 480px) {
-
-}
 @media (max-width: 991px) {
   .navbar-brand.mobile-only {
     display: block;
