@@ -14,8 +14,8 @@ import { useNavigate } from "react-router-dom";
 const data = [
     {
       image: image1,
-      heading: "Women’s Program",
-      para: `A “Women’s Program” (sometimes called Women’s Leadership Program, Gender Leadership Initiative, Women in Academia etc.) refers to structured programmes designed to support the development, empowerment, and advancement of women in professional, academic, or leadership roles.`,
+      heading: "Career Reboot Program",
+      para: `Many women take career breaks due to personal, family, or health reasons. Returning to the workforce after a gap often comes with challenges such as skill gaps, lack of confidence, or difficulty in finding suitable opportunities. A Career Reboot Program for Women is designed to help women re-enter the professional world with the right skills, support, and opportunities.`,
     },
     // {
     //   image: image2,
@@ -45,7 +45,7 @@ function Wps() {
   return (
     <div className="car-container container-fluid mt-5">
       <div className="mx-2 mb-4 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center" data-aos="fade-up">
-        <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}> Career Reboot Program</span> for Women
+        <h1 className="display-4 fw-bold col-12 col-lg-12 text-center">Career Reboot Program<span style={{color:"#5ac501"}}> for Women</span>
         </h1>
         <p className="mb-4 program-description col-lg-6 text-center">
         A “Women’s Program” (sometimes called Women’s Leadership Program, Gender Leadership Initiative, Women in Academia etc.) refers to structured programmes designed to support the development, empowerment, and advancement of women in professional, academic, or leadership roles.
