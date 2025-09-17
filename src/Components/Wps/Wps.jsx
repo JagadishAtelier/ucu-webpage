@@ -48,7 +48,7 @@ function Wps() {
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center">Career Reboot Program<span style={{color:"#5ac501"}}> for Women</span>
         </h1>
         <p className="mb-4 program-description col-lg-6 text-center">
-        A “Women’s Program” (sometimes called Women’s Leadership Program, Gender Leadership Initiative, Women in Academia etc.) refers to structured programmes designed to support the development, empowerment, and advancement of women in professional, academic, or leadership roles.
+        The Career Reboot Program for Women is designed to support women who have taken a career break and wish to return to the workforce with renewed confidence and updated skills.
         </p>
       </div>
 
@@ -73,7 +73,7 @@ function Wps() {
                 <h1 className="title mb-3">{item.heading}</h1>
                 <p className="program-description">{item.para}</p>
                 <div className="car-explore-btn-div">
-                  <button onClick={() => showModal("enquiry")} className="btn btn-outline-dark py-2">EXPLORE</button>
+                  <button className="btn btn-outline-dark py-2">EXPLORE</button>
                   <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>

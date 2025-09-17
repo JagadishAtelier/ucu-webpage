@@ -72,7 +72,7 @@ function ExPhd() {
                 <h1 className="title mb-3">{item.heading}</h1>
                 <p className="program-description">{item.para}</p>
                 <div className="car-explore-btn-div">
-                  <button onClick={() => showModal("enquiry")} className="btn btn-outline-dark py-2">EXPLORE</button>
+                  <button className="btn btn-outline-dark py-2">EXPLORE</button>
                   <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>

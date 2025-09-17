@@ -115,7 +115,7 @@ function Events() {
                 <div data-aos="fade-down" data-aos-duration="600">
                   <p className="eve-platform-text program-description">{item.text}</p>
                   <div className="car-explore-btn-div platform-btn">
-                    <button className="car-explore-btn">EXPLORE PGDM</button>
+                    <button className="car-explore-btn">EXPLORE</button>
                     <button onClick={() => showModal("apply")} className="car-apply-btn">APPLY NOW</button>
                   </div>
                 </div>
