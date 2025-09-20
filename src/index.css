@@ -124,6 +124,18 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Aptos-Bold";
+  src: url("/fonts/Aptos-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "georgiab";
+  src: url("/fonts/georgiab.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
 
 body {
     font-family: "AcidGrotesk", sans-serif !important;
@@ -143,5 +155,6 @@ p{
   /* color: #022043 ; */
 }
 .logo-text{
- font-family: 'GothamBold' !important;
+ font-family: 'georgiab' !important;
+ /* font-weight: 800 !important; */
 }
