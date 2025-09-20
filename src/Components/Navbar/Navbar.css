@@ -389,11 +389,10 @@
 }
 .logo-text {
   color: #000;
-  font-family: ;
   font-size: 20px;
   /* letter-spacing: 2px; */
   letter-spacing: 1px;
-  font-weight: 400 !important;
+  /* font-weight: 400 !important; */
     margin-left: 8%;
     margin-top: -4.5%;
     margin-bottom: -6%;
