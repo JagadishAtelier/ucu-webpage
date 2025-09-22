@@ -76,13 +76,13 @@ const Navbar = () => {
               </div>
           </Link>
 
-          <Link className="navbar-brand mobile-only" to="/">
+          {/* <Link className="navbar-brand mobile-only" to="/">
             <img
                 src={"/logo2.svg"}
               alt="Universal Corporate University Logo"
               className="logo my-auto"
             />
-          </Link>
+          </Link> */}
 
           {/* Collapse wrapper */}
           <div

@@ -28,12 +28,12 @@ const contactUs = [
 function NewFooter() {
   return (
     <div className="footer-container">
-      {/* <img src={bgImage} className="bgImage" /> */}
-      <div className="bgGradient py-lg-5 py-5 pb-lg-2 px-4">
+      <img src={bgImage} className="bgImage" />
+      <div className="py-lg-5 py-5 pb-lg-2 px-4 text-white">
         <div className="d-flex flex-row flex-wrap flex-lg-row align-items-center align-items-lg-start justify-content-start justify-content-lg-evenly row-gap-5 column-gap-5">
           <div className="relative align-items-center d-flex flex-column text-center text-lg-left flex-lg-column gap-3 new-footer-logo align-items-center align-items-lg-center">
             <img src={"logo.svg"} className="logoImage-footer" />
-            <p className="absolute top-0 col-12 col-lg-10 text-dark new-footer-text-a">
+            <p className="absolute top-0 col-12 col-lg-10 new-footer-text-a">
               We are passionate education dedicated to providing high-quality
               resources learners all backgrounds.
             </p>
@@ -44,7 +44,7 @@ function NewFooter() {
               {aboutData.map((data, index) => (
                 <a
                   href={data.herf}
-                  className="new-footer-text-a text-dark fw-100 text-decoration-none"
+                  className="new-footer-text-a fw-100 text-decoration-none"
                 >
                   {data.name}
                 </a>
@@ -57,7 +57,7 @@ function NewFooter() {
               {exploreData.map((data, index) => (
                 <a
                   href={data.herf}
-                  className="new-footer-text-a text-dark text-decoration-none"
+                  className="new-footer-text-a text-decoration-none"
                 >
                   {data.name}
                 </a>
@@ -70,7 +70,7 @@ function NewFooter() {
               {contactUs.map((data, index) => (
                 <a
                   href={data.herf}
-                  className="new-footer-text-a text-dark  text-decoration-none"
+                  className="new-footer-text-a  text-decoration-none"
                 >
                   {data.name}
                 </a>
@@ -104,7 +104,7 @@ function NewFooter() {
         <div className="horizontal-line m-5 m-lg-5 mb-lg-3 mx-0"></div>
         <div className="d-flex flex-column flex-lg-row justify-content-lg-between text-white mx-lg-5">
           <div className="">
-            <p className="new-footer-text-a text-dark">
+            <p className="new-footer-text-a">
               Copyright @ 2025.All Rights reserved to{" "}
               <a
                 href="https://theateliercreation.com/"
@@ -115,7 +115,7 @@ function NewFooter() {
                 Atelier
               </a>
             </p>
-            <p className="new-footer-text-a add-new-foot text-dark">
+            <p className="new-footer-text-a add-new-foot">
               UCU Pty. Ltd. Provider Category: Institute of Higher Education.
               TEQSA Provider Identification: PRV12041. CRICOS Provider Code:
               03335G.
