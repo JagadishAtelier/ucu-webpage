@@ -12,50 +12,47 @@ import "swiper/css/pagination";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
-
+import { FaUserTie } from "react-icons/fa";   // for eligibility
+import { BsClockHistory } from "react-icons/bs"; // for duration
 const data = [
   {
     image: image1,
-    heading: "PGPM - ELITE",
-    para: `A one-year Post Graduate Program in Management crafted for professionals with
-    3+ years of experience, merging executive leadership principles with real-world industry
-    insights to accelerate careers into FinTech, AI consulting, or the GCC economy. Master
-    cutting-edge frameworks and market strategies that position you as a transformative leader
-    in the new global business landscape`,
-    buttonText:"Explore-PGPM-ELITE"
+    heading: "Post Graduate Program in Management - ELITE (PGPM-ELITE)",
+    para: `A one-year Post Graduate Program in Management designed for experienced professionals—integrating executive leadership frameworks with real-world business insight to accelerate career impact`,
+    buttonText:"Explore-PGPM-ELITE",
+    elgible : "3+ years of experience",
+    duration : "18 months",
   },
   {
     image: image2,
-    heading: "PGDM",
-    para: `A Two-Year PGPM pairs core management education with immersive industry
-    projects for candidates with 0–3 years of experience. Fast-track your entry into new-age job
-    roles through global internships, live labs, and executive mentorship—building the leadership
-    skills of tomorrow's market demands.
+    heading: "Post Graduate Diploma in Management (PGDM)",
+    para: `UCU’s Post Graduate Management Program for Freshers is designed to launch high-potential talent into the business world—building strong foundations and accelerating their journey into impactful careers.
     `,
-    buttonText:"Explore-PGDM"
-  },
-  {
-    image: image1,
-    heading: "PGPM - ELITE",
-    para: `A one-year Post Graduate Program in Management crafted for professionals with
-    3+ years of experience, merging executive leadership principles with real-world industry
-    insights to accelerate careers into FinTech, AI consulting, or the GCC economy. Master
-    cutting-edge frameworks and market strategies that position you as a transformative leader
-    in the new global business landscape`,
-    buttonText:"Explore-PGPM-ELITE"
-  },
-  {
-    image: image2,
-    heading: "PGDM",
-    para: `A Two-Year PGPM pairs core management education with immersive industry
-    projects for candidates with 0–3 years of experience. Fast-track your entry into new-age job
-    roles through global internships, live labs, and executive mentorship—building the leadership
-    skills of tomorrow's market demands.
-    `,
-    buttonText:"Explore-PGDM"
-  },
+    buttonText:"Explore-PGDM",
+    elgible : "0 - 3 years of experience",
+    duration : "24 months"
 
-  
+  },
+  // {
+  //   image: image1,
+  //   heading: "PGPM - ELITE",
+  //   para: `A one-year Post Graduate Program in Management crafted for professionals with
+  //   3+ years of experience, merging executive leadership principles with real-world industry
+  //   insights to accelerate careers into FinTech, AI consulting, or the GCC economy. Master
+  //   cutting-edge frameworks and market strategies that position you as a transformative leader
+  //   in the new global business landscape`,
+  //   buttonText:"Explore-PGPM-ELITE"
+  // },
+  // {
+  //   image: image2,
+  //   heading: "PGDM",
+  //   para: `A Two-Year PGPM pairs core management education with immersive industry
+  //   projects for candidates with 0–3 years of experience. Fast-track your entry into new-age job
+  //   roles through global internships, live labs, and executive mentorship—building the leadership
+  //   skills of tomorrow's market demands.
+  //   `,
+  //   buttonText:"Explore-PGDM"
+  // },
 ];
 
 function CareerSection() {
@@ -76,7 +73,7 @@ function CareerSection() {
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}>Full Time </span>Programs
         </h1>
         <p className="mb-4 program-description col-lg-6 text-center">
-        Explore our full-time programs designed to equip students and professionals with strong business acumen, practical skills, and global exposure to excel in today’s dynamic corporate landscape.
+        Discover UCU’s full-time programs—tailored to build sharp business acumen, hands-on skills, and global perspective for high-impact careers in today’s fast-evolving corporate world
         </p>
       </div>
 
@@ -100,6 +97,14 @@ function CareerSection() {
               <div className="car-right">
                 <h1 className="title mb-3">{item.heading}</h1>
                 <p className="program-description">{item.para}</p>
+                <div className="d-flex flex-row gap-2 items-center">
+                  <FaUserTie />
+                  <p className="program-description">{item.elgible}</p>
+                </div>
+                <div className="d-flex flex-row gap-2 items-center">
+                <BsClockHistory />
+                  <p className="program-description">{item.duration}</p>
+                </div>
                 <div className="car-explore-btn-div">
                   <button className="btn btn-outline-dark py-2">{item.buttonText}</button>
                   <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>

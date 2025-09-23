@@ -11,12 +11,15 @@ import "swiper/css/pagination";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
-
+import { FaUserTie } from "react-icons/fa"; 
 const data = [
     {
       image: image1,
       heading: "Executive PhD",
-      para: `An Executive PhD (sometimes called an Executive Doctorate) is a doctoral‐level degree designed specifically for senior professionals or executives who wish to pursue rigorous research without leaving their careers.`,
+      para: `The Executive PhD (EPhD) is a doctoral-level program tailored for working professionals, combining advanced research with career continuity.
+      Designed for Industry Leaders aspiring a career in academia 
+      `,
+      eligible : "10+ years of work experience"
     },
     // {
     //   image: image2,
@@ -47,7 +50,8 @@ function ExPhd() {
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}>Executive </span>PhD
         </h1>
         <p className="mb-4 program-description col-lg-6 text-center">
-        An Executive PhD (or EPhD) is a doctoral‐level programme designed specifically for experienced professionals / executives, enabling them to pursue rigorous research while continuing in their careers.
+        An Executive PhD (or EPhD) is a doctoral‐level programme designed specifically for experienced professionals / executives, enabling them to pursue rigorous research while continuing in their careers
+
         </p>
       </div>
 
@@ -71,6 +75,10 @@ function ExPhd() {
               <div className="car-right">
                 <h1 className="title mb-3">{item.heading}</h1>
                 <p className="program-description">{item.para}</p>
+                <div className="d-flex flex-row gap-2 items-center">
+                  <FaUserTie />
+                  <p className="program-description">{item.eligible}</p>
+                </div>
                 <div className="car-explore-btn-div">
                   <button className="btn btn-outline-dark py-2">EXPLORE</button>
                   <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>

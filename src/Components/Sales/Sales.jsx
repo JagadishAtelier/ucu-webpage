@@ -12,59 +12,40 @@ import image4 from "../../Assets/ucu (1)/Rectangle 100.jpg";
 import Aos from "aos";
 
 const functionalData = [
-  { image: image1, heading: "Sales", para: `Accelerate revenue with strategic consultative selling and high-impact
-  negotiation skills.` },
-  { image: image2, heading: "Cyber Security", para: ` Fortify digital infrastructures with proactive cyber defense and
-  mastery in the business of threat intelligence.` },
-  { image: image3, heading: "AI", para: `Harness AI algorithms and deployment frameworks to drive data-driven
-  innovation.
-  ` },
-  { image: image4, heading: "Product Management", para: ` Lead end-to-end product lifecycles with agile roadmaps and
-  market-driven insights.
-  ` },
-  { image: image1, heading: "Digital Marketing", para: `Maximize brand reach with data-driven campaigns and
-  omnichannel engagement strategies` },
-  { image: image3, heading: "Mobility & Sustainability", para: `Pioneer green mobility solutions by integrating sustainable
-  design with smart transport tech.` },
-  { image: image4, heading: "Consulting", para: `Deliver strategic business transformations through structured
-  problem-solving and stakeholder engagement.
-  ` },
-  { image: image2, heading: "Banking & Finance", para: `Optimize financial performance with risk management,
-  investment analysis, and compliance expertise.
-  ` },
-  { image: image1, heading: "Product Marketing", para: `Drive product success with compelling positioning, launch
-  planning, and performance analytics.
-  ` },
-  { image: image2, heading: "Data Analytics", para: `Transform raw data into actionable insights using advanced analytics
-  and visualization techniques
-  ` },
+  { image: image1, heading: "Sales", para: `Master the art and science of selling with industry-driven strategies that fuel revenue and relationships` },
+  { image: image2, heading: "Product Management", para: `  Build, launch, and lead breakthrough products with cross-functional expertise and market-first thinking` },
+  { image: image3, heading: "Cyber Security", para: `Protect the digital frontier with cutting-edge skills in risk, resilience, and cyber intelligence` },
+  { image: image4, heading: "Brand Management & Digital Marketing", para: ` Drive growth & enhance brand value in the digital age through data-led storytelling and performance marketing mastery  ` },
+  { image: image1, heading: "Mobility & Sustainability", para: `Shape the future of smart, sustainable ecosystems with innovation at the intersection of tech and impact` },
+  { image: image3, heading: "Consulting", para: `Become a trusted advisor with analytical thinking, strategic insight, and boardroom-ready problem solving` },
+  { image: image4, heading: "Banking & Finance", para: ` Navigate the banking & financial landscape with domain depth, regulatory fluency, and technology enabled thinking to spearhead value driven outcomes ` },
+  { image: image2, heading: "Business Analytics", para: `Turn data into decisions with analytical tools that power business performance and strategic clarity` },
+  { image: image1, heading: "Data Science & AI", para: `Harness the power of algorithms and AI to unlock insights, automate intelligence, and transform industries` },
 ];
 
 const industryData = [
   {
     image: image4,
-    heading: "FinTech",
-    para: `Revolutionize financial services with blockchain, digital payments, and
-    regulatory tech innovation.
+    heading: "Fin-Tech",
+    para: `Lead the financial revolution with cutting-edge skills in digital finance, innovation, and tech-powered disruption
     `,
   },
   {
     image: image2,
-    heading: "Global Capability Centers (GCCs)",
-    para: ` Excel in GCC operations with best-in-class
-    governance, service delivery, and cross-border collaboration.
+    heading: "Global Capability Center (GCC)",
+    para: `Step into the engine room of global enterprises—mastering strategy, scale, and operational excellence across GCCs
     `,
   },
-  // {
-  //   image: image3,
-  //   heading: "Supply Chain Management & Logistics",
-  //   para: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
-  // },
-  // {
-  //   image: image4,
-  //   heading: "FinTech",
-  //   para: "Specialized program focused on financial technology and innovations.",
-  // },
+  {
+    image: image3,
+    heading: "Healthcare & Lifescience",
+    para: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
+  },
+  {
+    image: image4,
+    heading: "Semiconductor",
+    para: "Specialized program focused on financial technology and innovations.",
+  },
   // {
   //   image: image2,
   //   heading: "Global Capability Centers (GCC)",
@@ -93,8 +74,7 @@ function Sales() {
           <span style={{color:"#5ac501"}}>Diploma</span> Programs
         </h1>
         <p className="col-lg-6 text-center">
-          Explore our range of industry-focused programs designed to equip
-          students with practical skills and career-ready expertise.
+        Explore our range of industry-focused programs designed to equip students with practical skills and career-ready expertise.
         </p>
       </div>
 

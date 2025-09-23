@@ -44,8 +44,7 @@ function Management() {
             Learning (XEL)
           </h1>
           <p className="program-description col-lg-6 text-center">
-            Turbocharge your executive prowess with XEL’s high-octane
-            courses—ignite bold leadership and deliver breakthrough results!
+          Turbocharge your executive prowess with XEL’s high-octane courses—ignite bold leadership and deliver breakthrough results!
           </p>
         </div>
         <div className="man-data-div">

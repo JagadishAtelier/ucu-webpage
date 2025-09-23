@@ -15,7 +15,10 @@ const data = [
     {
       image: image1,
       heading: "Career Reboot Program",
-      para: `Many women take career breaks due to personal, family, or health reasons. Returning to the workforce after a gap often comes with challenges such as skill gaps, lack of confidence, or difficulty in finding suitable opportunities. A Career Reboot Program for Women is designed to help women re-enter the professional world with the right skills, support, and opportunities.`,
+      para1: `Designed for women aspiring to get back into the corporate`,
+      para2: `Program Duration: X months`,
+      para3: `Mode: Hybrid`,
+
     },
     // {
     //   image: image2,
@@ -48,7 +51,7 @@ function Wps() {
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center">Career Reboot Program<span style={{color:"#5ac501"}}> for Women</span>
         </h1>
         <p className="mb-4 program-description col-lg-6 text-center">
-        The Career Reboot Program for Women is designed to support women who have taken a career break and wish to return to the workforce with renewed confidence and updated skills.
+        UCU’s Career Reboot Program for Women empowers professionals returning from a career break—equipping them with refreshed skills, renewed confidence, and a clear pathway back into the workforce
         </p>
       </div>
 
@@ -71,7 +74,11 @@ function Wps() {
               </div>
               <div className="car-right">
                 <h1 className="title mb-3">{item.heading}</h1>
-                <p className="program-description">{item.para}</p>
+                <ul>
+                  <li className="program-description">{item.para1}</li>
+                  <li className="program-description">{item.para2}</li>
+                  <li className="program-description">{item.para3}</li>
+                </ul>
                 <div className="car-explore-btn-div">
                   <button className="btn btn-outline-dark py-2">EXPLORE</button>
                   <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>

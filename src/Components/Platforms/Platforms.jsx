@@ -8,39 +8,39 @@ import { useModal } from "../Context/ApplyModal/ModalContext";
 const data = [
   {
     head: "Sales",
-    text: "Boost growth through digital consultative selling and powerful online negotiation.",
+    text: "Master the art and science of selling with industry-driven strategies that fuel revenue and relationships",
   },
   {
     head: "Product Management",
-    text: "Product management bridges business, technology, and customers—driving strategy, defining requirements, prioritizing features, and ensuring successful product delivery.",
+    text: "Build, launch, and lead breakthrough products with cross-functional expertise and market-first thinking",
   },
   {
     head: "Cybersecurity",
-    text: "Cybersecurity safeguards digital systems, networks, and data—preventing unauthorized access, mitigating threats, ensuring privacy, and maintaining trust in technology.",
+    text: "Protect the digital frontier with cutting-edge skills in risk, resilience, and cyber intelligence",
   },
   {
-    head: "Digital Marketing",
-    text: "Digital marketing promotes brands online—using SEO, social media, content, email, and analytics to engage audiences, drive traffic, and boost sales.",
+    head: "Brand Management & Digital Marketing",
+    text: "Drive growth & enhance brand value in the digital age through data-led storytelling and performance marketing mastery",
   },
   {
     head: "Mobilty & Sustainability",
-    text: "Mobility & sustainability focus on eco-friendly transport, renewable energy, smart infrastructure, and innovation—reducing emissions, conserving resources, and ensuring greener futures.",
+    text: "Shape the future of smart, sustainable ecosystems with innovation at the intersection of tech and impact",
   },
   {
     head: "Consulting",
-    text: "Consulting provides expert advice, strategic guidance, and problem-solving—helping organizations improve performance, efficiency, innovation, and achieve sustainable growth successfully.",
+    text: "Become a trusted advisor with analytical thinking, strategic insight, and boardroom-ready problem solving",
   },
   {
     head: "Banking & Finance",
-    text: " Banking & finance manage money, investments, and risks—supporting businesses, individuals, and economies through services, innovation, security, and sustainable growth.",
+    text: " Navigate the banking & financial landscape with domain depth, regulatory fluency, and technology enabled thinking to spearhead value driven outcomes",
   },
   {
     head: "Business Analytics",
-    text: "Business analytics interprets data, identifies patterns, and delivers insights—supporting strategic decisions, improving efficiency, forecasting trends, and driving business growth.",
+    text: "Turn data into decisions with analytical tools that power business performance and strategic clarity",
   },
   {
-    head: "Data Science",
-    text: "Data science combines statistics, programming, and domain knowledge—analyzing data, building models, uncovering insights, and enabling smarter, evidence-based decisions.",
+    head: "Data Science & AI",
+    text: "Harness the power of algorithms and AI to unlock insights, automate intelligence, and transform industries",
   },
 ];
 
