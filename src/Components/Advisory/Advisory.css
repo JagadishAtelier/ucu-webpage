@@ -22,12 +22,6 @@
     transform: scale(1.1); /* zoom-in */
   }
 @media (max-width: 768px){
-    .staff-card img{
-        border-radius: 50%;
-        height: 150px;
-        width: 150px;
-        object-fit: cover;
-    }
 }
 
 .staff-card {

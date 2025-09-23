@@ -834,7 +834,7 @@ function Advisory() {
         <Navbar/>
     <div
       data-aos="fade-down"
-      className="fac-hero-section d-flex flex-column flex-lg-column align-items-center justify-content-center justify-content-lg-center text-white text-center text-lg-start p-3 p-lg-5 p-lg-7"
+      className="fac-hero-section d-flex flex-column flex-lg-column align-items-lg-start align-items-center justify-content-center justify-content-lg-center text-white text-center text-lg-start p-3 p-lg-5 p-lg-7"
       style={{
         backgroundImage: `url(${council.bgImage})`,
         backgroundSize: "cover",
@@ -854,8 +854,8 @@ function Advisory() {
         </div>
     </div>
     <section className="my-5 px-3 px-lg-5">
-        <h4 className='text-center mb-3 lg:mb-4'>{council.sec2head}</h4>
-        <p className='text-center text-lg-start'>{council.sec2Para}</p>
+        <h4 className='text-start text-lg-center mb-3 lg:mb-4'>{council.sec2head}</h4>
+        <p className='text-start text-lg-start'>{council.sec2Para}</p>
       </section>
 
       <section 
