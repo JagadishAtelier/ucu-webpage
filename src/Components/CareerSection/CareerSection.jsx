@@ -96,7 +96,7 @@ function CareerSection() {
               </div>
               <div className="car-right">
                 <h1 className="title mb-lg-3 mb-0">{item.heading}</h1>
-                <p className="program-description mb-0">{item.para}</p>
+                <p className="program-description mb-0 mb-lg-2">{item.para}</p>
                 <div className="d-flex flex-row gap-2 items-center">
                   <FaUserTie />
                   <p className="program-description">{item.elgible}</p>

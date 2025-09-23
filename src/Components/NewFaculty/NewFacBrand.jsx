@@ -12,8 +12,8 @@ function NewFacBrand() {
 
   }}
     >
-      <h1 className='fs-2'>More from UCU World</h1>
-      <div className='d-flex gap-5'>
+      <h1 className='fs-2 mb-3'>More from UCU World</h1>
+      <div className='d-flex gap-lg-5 flex-lg-row flex-column gap-3'>
         <img src='	https://sdabocconiasiacenter.com/wp-content/uploads/2024/07/sdab-business-logo.png'/>
         <img src='https://sdabocconiasiacenter.com/wp-content/uploads/2024/07/ftr-logo2.png'/>
         <img src='https://sdabocconiasiacenter.com/wp-content/uploads/2024/07/ftr-logo3.png'/>
