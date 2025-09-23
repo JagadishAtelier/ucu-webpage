@@ -14,7 +14,7 @@ function Banner() {
   }, []);
 
   return (
-    <div className="banner-container">
+    <div className="banner-container my-5">
       <div
         className="car-heading-text banner-text"
         data-aos="fade-up"

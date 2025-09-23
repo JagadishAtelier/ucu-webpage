@@ -50,7 +50,7 @@ function Wps() {
       <div className="mx-2 mb-4 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center" data-aos="fade-up">
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center">Career Reboot Program<span style={{color:"#5ac501"}}> for Women</span>
         </h1>
-        <p className="mb-4 program-description col-lg-6 text-center">
+        <p className="mb-lg-4 mb-0 program-description col-lg-6 text-center">
         UCU’s Career Reboot Program for Women empowers professionals returning from a career break—equipping them with refreshed skills, renewed confidence, and a clear pathway back into the workforce
         </p>
       </div>

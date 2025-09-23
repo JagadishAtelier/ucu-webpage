@@ -65,7 +65,7 @@ function Management() {
         {showMore && (
           <div className="extra-content my-4 mx-auto" data-aos="fade-up">
             <div className="extra-content-inner">
-              <h3>1 Year CXO Accelerator Program with Campus Immersion</h3>
+              <h3 className="display-4 fw-bold col-12 col-lg-12 text-center">1 Year <span style={{color:"#5ac501"}}> CXO Accelerator Program</span> with Campus Immersion</h3>
               <p className="sort-disc">
                 An intensive, one-year executive learning journey designed to
                 empower business leaders with cutting-edge skills, strategic

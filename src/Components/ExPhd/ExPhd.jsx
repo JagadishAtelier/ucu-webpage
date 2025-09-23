@@ -49,7 +49,7 @@ function ExPhd() {
       <div className="mx-2 mb-4 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center" data-aos="fade-up">
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}>Executive </span>PhD
         </h1>
-        <p className="mb-4 program-description col-lg-6 text-center">
+        <p className="mb-lg-4 mb-0 program-description col-lg-6 text-center">
         An Executive PhD (or EPhD) is a doctoral‐level programme designed specifically for experienced professionals / executives, enabling them to pursue rigorous research while continuing in their careers
 
         </p>

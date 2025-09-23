@@ -135,7 +135,7 @@ scrollbar-width: none; /* Firefox */
   }
 
   .car-explore-btn-div-faq {
-    width: 100% !important;
+    width: 65% !important;
     display: flex;
     flex-direction: row;
     gap: 10px;

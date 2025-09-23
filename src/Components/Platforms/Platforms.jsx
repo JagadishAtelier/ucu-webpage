@@ -103,12 +103,12 @@ function Platforms() {
                     {item.text}
                   </p>
                   <div className="car-explore-btn-div-faq">
-                    <button className="btn btn-outline-dark py-2">
+                    <button className="btn btn-outline-dark py-lg-2 py-1">
                       EXPLORE
                     </button>
                     <button
                       onClick={() => showModal("apply")}
-                      className="btn apply-btn py-2"
+                      className="btn apply-btn py-lg-2 py-1"
                     >
                       APPLY NOW
                     </button>
