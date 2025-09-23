@@ -95,8 +95,8 @@ function CareerSection() {
                 <img src={item.image} alt={item.heading} />
               </div>
               <div className="car-right">
-                <h1 className="title mb-3">{item.heading}</h1>
-                <p className="program-description">{item.para}</p>
+                <h1 className="title mb-lg-3 mb-0">{item.heading}</h1>
+                <p className="program-description mb-0">{item.para}</p>
                 <div className="d-flex flex-row gap-2 items-center">
                   <FaUserTie />
                   <p className="program-description">{item.elgible}</p>
