@@ -49,6 +49,7 @@
 .platform-btn{
     width: 50% !important;
     margin-bottom: 3%;
+    margin-left: 12%;
 }
 .eve-platform-text{
     margin-top: 3%;
@@ -204,7 +205,8 @@
   }
 
   .platform-btn {
-    width: 100% !important;
+    width: 70% !important;
+    margin-left: 0;
     display: flex;
     gap: 10px;
     justify-content: center;
