@@ -75,9 +75,15 @@ function Wps() {
               <div className="car-right">
                 <h1 className="title mb-3">{item.heading}</h1>
                 <ul>
-                  <li className="program-description">{item.para1}</li>
-                  <li className="program-description">{item.para2}</li>
-                  <li className="program-description">{item.para3}</li>
+                  <li>
+                    <p className="program-description">{item.para1}</p>
+                    </li>
+                  <li >
+                    <p className="program-description">{item.para2}</p>
+                    </li>
+                  <li >
+                    <p className="program-description">{item.para3}</p>
+                    </li>
                 </ul>
                 <div className="car-explore-btn-div">
                   <button className="btn btn-outline-dark py-2">EXPLORE</button>
