@@ -66,7 +66,7 @@ function Platforms() {
         data-aos="fade-up"
       >
         <h1 className="display-4 fw-bold col-12 col-lg-6 text-center">
-          <span style={{ color: "#5ac501" }}>E-Learning</span> Programs – Learn
+          <span style={{ color: "#5ac501" }}>UCU-Online</span> Programs – Learn
           Anytime, Anywhere
         </h1>
         <p className="program-description col-lg-6 text-center">
