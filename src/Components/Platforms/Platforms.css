@@ -130,12 +130,12 @@ scrollbar-width: none; /* Firefox */
   }
 
   .platform-indiviual-con p {
-    width: 90%; /* full width for mobile */
+    width: 100%; /* full width for mobile */
     font-size: 0.9rem;
   }
 
   .car-explore-btn-div-faq {
-    width: 100% !important;
+    width: 98% !important;
     display: flex;
     flex-direction: row;
     gap: 10px;
