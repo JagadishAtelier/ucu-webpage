@@ -208,11 +208,18 @@ const Navbar = () => {
             {/* Drawer itself */}
             <div className="drawer">
               <div className="drawer-header">
-                <img
-                  src="/logo.svg"
-                  alt="Logo"
-                  className={window.innerWidth > 991 ? "d-none" : "drawer-logo"}
-                />
+              <Link className="navbar-brand d-flex align-items-center logo-box m-lg-0" to="/">
+              {/* <img
+                src={"/logo2.svg"}
+                alt="Universal Corporate University Logo"
+                className="logo"
+              /> */}
+              <div className="border-l border-white">
+                <p className="logo-text" style={{color:"#1703a9"}} ><span style={{color:"#1703a9"}} >U</span>niversal</p>
+                <p className="logo-text" style={{color:"#5bc500"}} ><span style={{color:"#5bc500"}} >C</span>orporate</p>
+                <p className="logo-text" style={{color:"#07baf3"}} ><span style={{color:"#07baf3"}} >U</span>niversity</p>
+              </div>
+          </Link>
                 <button className="close-btn" onClick={toggleMobile}>
                   <X size={28} />
                 </button>

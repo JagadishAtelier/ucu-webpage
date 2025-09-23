@@ -204,6 +204,7 @@
 @media (max-width: 768px) {
   .hero-section-data-div {
     flex-direction: column-reverse;
+    height: 110vh;
   }
 
   .hero-section-left {
@@ -234,7 +235,6 @@
 
   .hero-image {
     width: 100%;
-    margin-top: 20px;
     min-height: 200px;
   }
 

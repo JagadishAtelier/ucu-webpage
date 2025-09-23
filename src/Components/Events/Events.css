@@ -148,6 +148,10 @@
     gap: 10px;
   }
 
+  .eve-platform-indiviual-con p{
+    margin: 0;
+    margin-bottom: 20px;
+  }
   .event-header-left {
     width: 100%;
     justify-content: space-between;
@@ -180,6 +184,7 @@
 
   .eve-overlay-text p {
     font-size: 0.9rem;
+    color: white;
   }
 
   .events-btns-div {

@@ -256,7 +256,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 73% !important;
   max-width: 100%;
   height: 100%;
   background: #fff;
@@ -281,7 +281,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0 !important;
   border-bottom: 1px solid #ddd;
 }
 
@@ -453,6 +453,8 @@
   }
   .logo-box {
     display: none;
+    width: auto;
+    height: auto;
   }
   .logo-img {
     height: 100%;
@@ -462,6 +464,16 @@
   .logo-box::after {
     content: none;
   }
+  .logo{
+    height: 90px !important;
+  }
+  .logo-text span{
+    font-size: 20px;
+  }
+  .logo-text{
+    font-size: 14px;
+  }
+
 }
 
 .drawer-content .menu.depth-0 {
