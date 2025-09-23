@@ -149,7 +149,6 @@
   }
 
   .eve-platform-indiviual-con p{
-    margin: 0;
     margin-bottom: 20px;
   }
   .event-header-left {
@@ -213,6 +212,7 @@
     margin-left: 0;
     display: flex;
     gap: 10px;
+    margin-left: 10%;
     justify-content: center;
   }
 

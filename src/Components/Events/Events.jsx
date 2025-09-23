@@ -47,7 +47,7 @@ function Events() {
       <div className="event-header" data-aos="fade-down">
         <h1 className="display-4 fw-bold col-12 col-lg-4 text-center">Recent <span style={{color:"#5ac501"}}>Events</span></h1>
         <div className="event-header-left">
-          <h1 className="display-4 fw-bold col-10 col-lg-10 text-lg-center text-left">Upcoming <span style={{color:"#5ac501"}}>Events</span></h1>
+          <h1 className="display-4 fw-bold col-12 col-lg-10 text-lg-center text-center">Upcoming <span style={{color:"#5ac501"}}>Events</span></h1>
           <a href="/" className="event-view-all-a-tag">View all</a>
         </div>
       </div>
