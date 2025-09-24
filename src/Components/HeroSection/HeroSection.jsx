@@ -10,11 +10,12 @@ import image1 from "/slider-2.jpg";
 import image2 from "/slider-3.jpg";
 import AnnoncementSection from "../AnnoncementSection/AnnoncementSection";
 import { useModal } from "../Context/ApplyModal/ModalContext";
+import banner1 from  '../../Assets/aac/Banner1.png'
 const heroData = [
   {
     header: <>Guided by Industry &<span className="color-highlight">Academic </span> Icons</>,
     para: "Every program is co-created and co-delivered by academia and industry—where faculty and industry CXOs collaborate to build future-ready, job-relevant learning experiences for students",
-    images: image,
+    images: banner1,
   },
   {
     header: <>Future Ready Programs for <span className="color-highlight">Emerging Industry</span> Sectors</>,
@@ -74,7 +75,7 @@ function HeroSection() {
             nextEl: ".custom-next",
             prevEl: ".custom-prev",
           }}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          autoplay={{ delay: 400000, disableOnInteraction: false }}
           loop={true}
           slidesPerView={1}
         >

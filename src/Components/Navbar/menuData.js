@@ -51,55 +51,30 @@ export const menuData = [
         submenu: [
           { label: "PGPM-ELITE", link: "/program/pgpm-elite" },
           { label: "PGDM", link: "/program/pgdm" },
+          {
+            label: "Career Reboot Program for Women",
+            link: "/program/career-reboot",
+          },
         ],
       },
       {
         label: "Post Graduate Diplomas",
         link: "/program/post-graduate-diplomas",
-        // submenu: [
-        //   {
-        //     label: "Industry-Sector Specific Offerings",
-        //     link: "/program/industry-sector",
-        //     submenu: [
-        //       { label: "FinTech", link: "/program/fintech" },
-        //       {
-        //         label: "Global Capability Centers (GCC)",
-        //         link: "/program/gcc",
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     label: "Functional (off-line)",
-        //     link: "/program/functional-offline",
-        //     submenu: [
-        //       { label: "Sales", link: "/program/sales" },
-        //       {
-        //         label: "Product Management",
-        //         link: "/program/product-management",
-        //       },
-        //       { label: "Cybersecurity", link: "/program/cybersecurity" },
-        //       {
-        //         label: "Digital Marketing",
-        //         link: "/program/digital-marketing",
-        //       },
-        //       {
-        //         label: "Mobility & Sustainability",
-        //         link: "/program/mobility-sustainability",
-        //       },
-        //       { label: "Consulting", link: "/program/consulting" },
-        //       { label: "Banking & Finance", link: "/program/banking-finance" },
-        //       {
-        //         label: "Business Analytics",
-        //         link: "/program/business-analytics",
-        //       },
-        //       { label: "Data Science", link: "/program/data-science" },
-        //     ],
-        //   },
-        // ],
-      },
-      {
-        label: "Functional (off-line)",
-        link: "/program/functional-off-line",
+        submenu: [
+          {
+            label: "Industry-Sector Specific Offerings",
+            link: "/program/industry-sector",
+            submenu: [
+              { label: "FinTech", link: "/program/fintech" },
+              {
+                label: "Global Capability Centers (GCC)",
+                link: "/program/gcc",
+              },
+            ],
+          },
+          {
+            label: "Functional (off-line)",
+            link: "/program/functional-offline",
             submenu: [
               { label: "Sales", link: "/program/sales" },
               {
@@ -123,22 +98,47 @@ export const menuData = [
               },
               { label: "Data Science", link: "/program/data-science" },
             ],
-      },
-      {
-        label: "Industry-Sector Specific Offerings",
-        link: "/program/industry-sector",
-        submenu: [
-          { label: "FinTech", link: "/program/fin-tech" },
-          {
-            label: "Global Capability Centers (GCC)",
-            link: "/program/gcc",
           },
         ],
       },
-      {
-        label: "Career Reboot Program for Women",
-        link: "/program/career-reboot",
-      },
+      // {
+      //   label: "Functional (off-line)",
+      //   link: "/program/functional-off-line",
+      //       submenu: [
+      //         { label: "Sales", link: "/program/sales" },
+      //         {
+      //           label: "Product Management",
+      //           link: "/program/product-management",
+      //         },
+      //         { label: "Cybersecurity", link: "/program/cybersecurity" },
+      //         {
+      //           label: "Digital Marketing",
+      //           link: "/program/digital-marketing",
+      //         },
+      //         {
+      //           label: "Mobility & Sustainability",
+      //           link: "/program/mobility-sustainability",
+      //         },
+      //         { label: "Consulting", link: "/program/consulting" },
+      //         { label: "Banking & Finance", link: "/program/banking-finance" },
+      //         {
+      //           label: "Business Analytics",
+      //           link: "/program/business-analytics",
+      //         },
+      //         { label: "Data Science", link: "/program/data-science" },
+      //       ],
+      // },
+      // {
+      //   label: "Industry-Sector Specific Offerings",
+      //   link: "/program/industry-sector",
+      //   submenu: [
+      //     { label: "FinTech", link: "/program/fin-tech" },
+      //     {
+      //       label: "Global Capability Centers (GCC)",
+      //       link: "/program/gcc",
+      //     },
+      //   ],
+      // },
       {
         label: "Executive Education",
         link: "/program/executive-education",
