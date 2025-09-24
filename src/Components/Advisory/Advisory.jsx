@@ -6,6 +6,7 @@ import Navbar from '../Navbar/Navbar';
 import pI from '../../Assets/acp/profileImg.webp'
 import logoIno from '../../Assets/acp/logoIno.jpg'
 import NewFooter from '../NewFooter/NewFooter';
+import venkatImage from '../../Assets/aac/venkatNew.jfif'
 import image1 from '../../Assets/acp/image1.jpg'
 import image2 from '../../Assets/acp/image2.jpg'
 import image3 from '../../Assets/acp/image3.jpg'
@@ -162,6 +163,11 @@ const councils = [
               name :"Dr. Vaidy Jayaraman ",
               prof : "Dean | Supply Chain & Analytics Expert | Ex-Great Lakes Principal ",
               comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWtJ-Xp_Xh77xKqcdXrS_b-4N5sX44xEHymg&s`
+            },
+            { image :venkatImage,
+              name :"Venkat Krishnan",
+              prof : "Expert in leadership and Indian ethos | Ph.D. (Temple) & D.Litt. (S-VYASA) | Teaching Udemy course on Upanishads | RKVenkat.org",
+              comLogo :`https://media.licdn.com/dms/image/v2/D560BAQHUiIQpinpKVQ/company-logo_100_100/company-logo_100_100/0/1722342154423?e=1761782400&v=beta&t=05Ym0mM8F6sqpppZSIbSq37iY49_trEXgoAsVd8Qs3s`
             },
 
         ]
