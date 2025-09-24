@@ -65,10 +65,10 @@ function Sales() {
     Aos.init({ duration: 1000, once: true, offset: 100 });
   }, []);
 
-  const data = activeTab === "functional" ? functionalData : industryData;
+  // const data = activeTab === "functional" ? functionalData : industryData;
 
   return (
-    <div className="sales-container container-fluid my-3">
+    <div className="sales-container container-fluid my-lg-5 my-1">
       <div className="d-flex flex-lg-column flex-column align-items-lg-center justify-content-lg-center text-center mb-4">
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center">
           <span style={{color:"#5ac501"}}>Diploma</span> Programs
@@ -77,9 +77,7 @@ function Sales() {
         Explore our range of industry-focused programs designed to equip students with practical skills and career-ready expertise.
         </p>
       </div>
-
-      {/* Tabs */}
-      <div className="sales-tabs text-center mb-4">
+      {/* <div className="sales-tabs text-center mb-4">
         <button
           className={`tab-btn ${activeTab === "functional" ? "active" : ""}`}
           onClick={() => setActiveTab("functional")}
@@ -92,6 +90,48 @@ function Sales() {
         >
           Industry-Sector Specific Offerings
         </button>
+      </div> */}
+      <div>
+      <h1 className="display-6 fw-bold col-12 col-lg-12 text-center">
+      Functional (off-line)
+        </h1>
+      </div>
+      <Swiper
+        modules={[Pagination,Autoplay]}
+        spaceBetween={10}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
+        className="sales-swiper"
+      >
+        {functionalData.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div
+              className="sales-item-div"
+              data-aos="fade-up"
+              data-aos-delay={index * 250}
+            >
+              <img src={item.image} alt={item.heading} />
+              <div className="p-3 position-relative">
+                <h1 className="mt-3">{item.heading}</h1>
+                <p className="mb-3">{item.para}</p>
+                <div className="car-explore-btn-div sales-btn p-1">
+                  <button className="car-explore-btn expo-btn btn btn-outline-dark">
+                    EXPLORE
+                  </button>
+                  <button onClick={() => showModal("apply")} className="car-apply-btn expo-btn">APPLY NOW</button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div>
+      <h1 className="display-6 fw-bold col-12 col-lg-12 text-center mt-lg-5 mt-3">
+      Industry-Sector Specific Offerings
+        </h1>
       </div>
 
       <Swiper
@@ -103,7 +143,7 @@ function Sales() {
         breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
         className="sales-swiper"
       >
-        {data.map((item, index) => (
+        {industryData.map((item, index) => (
           <SwiperSlide key={index}>
             <div
               className="sales-item-div"

@@ -45,7 +45,7 @@ function ExPhd() {
       });
     }, []);
   return (
-    <div className="car-container container-fluid mt-5">
+    <div className="car-container container-fluid">
       <div className="mx-2 mb-4 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center" data-aos="fade-up">
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}>Executive </span>PhD
         </h1>

@@ -111,6 +111,10 @@
   width: 550px !important;
   left: -100% !important;
 }
+.dropdown-menu.strategic {
+  width: 550px !important;
+  left: -100% !important;
+}
 .dropdown-menu.faculty,
 .dropdown-menu.industry-academia-engagement {
   width: 600px !important;

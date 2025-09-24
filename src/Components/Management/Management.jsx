@@ -62,8 +62,7 @@ function Management() {
             </div>
           ))}
         </div>
-        {showMore && (
-          <div className="extra-content my-4 mx-auto" data-aos="fade-up">
+          <div className="extra-content my-5 mx-auto" data-aos="fade-up">
             <div className="extra-content-inner">
               <h3 className="display-4 fw-bold col-12 col-lg-12 text-center">1 Year <span style={{color:"#5ac501"}}> CXO Accelerator Program</span> with Campus Immersion</h3>
               <p className="sort-disc">
@@ -128,9 +127,8 @@ function Management() {
               </div>
             </div>
           </div>
-        )}
 
-        <div className="view-more-wrapper mt-4">
+        {/* <div className="view-more-wrapper mt-4">
           <button
             onClick={() => setShowMore((prev) => !prev)}
             className="btn car-apply-btn expo-btn"
@@ -138,7 +136,7 @@ function Management() {
           >
             {showMore ?"View Less" :"View More" }
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

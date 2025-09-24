@@ -33,9 +33,11 @@ const Home = () => {
           <Management />
         </div>
 
-        <Platforms />
-
         <ExPhd/>
+
+        <Wps/>
+
+        <Platforms />
 
         {/* Banner */}
         <div data-aos="fade-up" data-aos-delay="100">
@@ -46,7 +48,6 @@ const Home = () => {
         <div data-aos="fade-up" data-aos-delay="100">
           <Industry />
         </div>
-        <Wps/>
         {/* Events */}
         <div data-aos="fade-right" data-aos-delay="100">
           <Events />
