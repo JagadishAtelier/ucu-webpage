@@ -11,6 +11,10 @@ import image2 from "/slider-3.jpg";
 import AnnoncementSection from "../AnnoncementSection/AnnoncementSection";
 import { useModal } from "../Context/ApplyModal/ModalContext";
 import banner1 from  '../../Assets/aac/Banner1.png'
+import banner2 from '../../Assets/aac/2.png'
+import banner3 from '../../Assets/aac/3.png'
+import banner4 from '../../Assets/aac/4.png'
+import banner8 from '../../Assets/aac/8.png'
 const heroData = [
   {
     header: <>Guided by Industry &<span className="color-highlight">Academic </span> Icons</>,
@@ -20,17 +24,17 @@ const heroData = [
   {
     header: <>Future Ready Programs for <span className="color-highlight">Emerging Industry</span> Sectors</>,
     para: "From GCC and FinTech to Healthcare and Semiconductor industries, our specialised programs are expertly tailored to empower talent to lead innovation and deliver transformative strategies from day one.",
-    images: image1,
+    images: banner2,
   },
   {
     header: <><span className="color-highlight">Business Advisory </span>Council (BAC)</>,
     para: "Our Business Advisory Council (BAC) anchors UCU’s strategic vision—shaping curriculum, guiding long-term direction, and ensuring every program delivers tangible career value from day one",
-    images: image2,
+    images: banner3,
   },
   {
     header: <><span className="color-highlight">Academic Advisory </span>Council (AAC)</>,
     para: "UCU’s Academic Advisory Council (AAC) strengthens our intellectual core—shaping curriculum, deepening academic rigor, and laying the foundation of business knowledge to nurture future leaders",
-    images: image2,
+    images: banner4,
   },
   {
     header: <><span className="color-highlight">CHRO Advisory </span>Council (CHRAC)</>,
@@ -50,7 +54,7 @@ const heroData = [
   {
     header: <><span className="color-highlight">Young CXOL&D Advisory </span>Council (YCC)</>,
     para: " UCU’s Young CXO Council (YCC) connects tomorrow’s talent with today’s trailblazing leaders—driving measurable corporate impact and channeling boardroom insights directly into our classrooms",
-    images: image2,
+    images: banner8,
   },
 ];
 
