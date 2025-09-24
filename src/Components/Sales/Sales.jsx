@@ -12,37 +12,37 @@ import image4 from "../../Assets/ucu (1)/Rectangle 100.jpg";
 import Aos from "aos";
 
 const functionalData = [
-  { image: image1, heading: "Sales", para: `Master the art and science of selling with industry-driven strategies that fuel revenue and relationships` },
-  { image: image2, heading: "Product Management", para: `  Build, launch, and lead breakthrough products with cross-functional expertise and market-first thinking` },
-  { image: image3, heading: "Cyber Security", para: `Protect the digital frontier with cutting-edge skills in risk, resilience, and cyber intelligence` },
-  { image: image4, heading: "Brand Management & Digital Marketing", para: ` Drive growth & enhance brand value in the digital age through data-led storytelling and performance marketing mastery  ` },
-  { image: image1, heading: "Mobility & Sustainability", para: `Shape the future of smart, sustainable ecosystems with innovation at the intersection of tech and impact` },
-  { image: image3, heading: "Consulting", para: `Become a trusted advisor with analytical thinking, strategic insight, and boardroom-ready problem solving` },
-  { image: image4, heading: "Banking & Finance", para: ` Navigate the banking & financial landscape with domain depth, regulatory fluency, and technology enabled thinking to spearhead value driven outcomes ` },
-  { image: image2, heading: "Business Analytics", para: `Turn data into decisions with analytical tools that power business performance and strategic clarity` },
-  { image: image1, heading: "Data Science & AI", para: `Harness the power of algorithms and AI to unlock insights, automate intelligence, and transform industries` },
+  { image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2FsZXN8ZW58MHx8MHx8fDA%3D", heading: "Sales", para: `Master the art and science of selling with industry-driven strategies that fuel revenue and relationships` },
+  { image: "https://plus.unsplash.com/premium_photo-1690302394250-f3e7626a01b0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHByb2R1Y3QlMjBtYW5hZ2VtZW50fGVufDB8fDB8fHww", heading: "Product Management", para: `  Build, launch, and lead breakthrough products with cross-functional expertise and market-first thinking` },
+  { image: "https://media.istockphoto.com/id/1435605327/photo/cybersecurity-concept-global-network-security-technology-business-people-protect-personal.webp?a=1&b=1&s=612x612&w=0&k=20&c=Reqkqf1qILOYmckRT5y1B9pL-hZuBWl1FbXTrWnoiGw=", heading: "Cyber Security", para: `Protect the digital frontier with cutting-edge skills in risk, resilience, and cyber intelligence` },
+  { image: "https://media.istockphoto.com/id/2166193783/photo/data-analytics-team-meeting-at-night.webp?a=1&b=1&s=612x612&w=0&k=20&c=8rcZn4Dbs7qAE4jn8C2_NrED5R_XWJCJMWMFCJYYvpU=", heading: "Brand Management & Digital Marketing", para: ` Drive growth & enhance brand value in the digital age through data-led storytelling and performance marketing mastery  ` },
+  { image: "https://images.unsplash.com/photo-1617906647113-0b8b7f262c6c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fE1vYmlsaXR5fGVufDB8fDB8fHww", heading: "Mobility & Sustainability", para: `Shape the future of smart, sustainable ecosystems with innovation at the intersection of tech and impact` },
+  { image: "https://media.istockphoto.com/id/2160707342/photo/making-decision-on-the-move.webp?a=1&b=1&s=612x612&w=0&k=20&c=UKdF7StmfHxqV5Tm7yaaq9QuP6iJKkYoS3H4nhGOox4=", heading: "Consulting", para: `Become a trusted advisor with analytical thinking, strategic insight, and boardroom-ready problem solving` },
+  { image: "https://plus.unsplash.com/premium_photo-1661313667772-3cdc7bf2344e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFua2luZyUyMGFuZCUyMGZpbmFuY2V8ZW58MHx8MHx8fDA%3D", heading: "Banking & Finance", para: ` Navigate the banking & financial landscape with domain depth, regulatory fluency, and technology enabled thinking to spearhead value driven outcomes ` },
+  { image: "https://plus.unsplash.com/premium_photo-1688821129380-75c32b3e5918?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnVzaW5lc3MlMjBhbmFseXRpY3N8ZW58MHx8MHx8fDA%3D", heading: "Business Analytics", para: `Turn data into decisions with analytical tools that power business performance and strategic clarity` },
+  { image: "https://media.istockphoto.com/id/2156388139/photo/hispanic-latin-american-couple-software-engineer-developer-use-computer-work-on-program.webp?a=1&b=1&s=612x612&w=0&k=20&c=TUOL-41O9o9XnQbLksRDeHjiKIv5scF-jTmOqkrEwLg=", heading: "Data Science & AI", para: `Harness the power of algorithms and AI to unlock insights, automate intelligence, and transform industries` },
 ];
 
 const industryData = [
   {
-    image: image4,
+    image: "https://media.istockphoto.com/id/866905356/photo/fintech-the-financial-technology.webp?a=1&b=1&s=612x612&w=0&k=20&c=R3ceaD5uN_QA_6_OGYQAt2xM5jYNXqCCMxQpIgUAKDs=",
     heading: "Fin-Tech",
     para: `Lead the financial revolution with cutting-edge skills in digital finance, innovation, and tech-powered disruption
     `,
   },
   {
-    image: image2,
+    image: "https://www.colliers.com/-/media/images/colliers/asia/india/research-images/2024/1536gccreport.ashx?bid=3dd61b5289dd4e2abf9a823864443392",
     heading: "Global Capability Center (GCC)",
     para: `Step into the engine room of global enterprises—mastering strategy, scale, and operational excellence across GCCs
     `,
   },
   {
-    image: image3,
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhbHRoY2FyZXxlbnwwfHwwfHx8MA%3D%3D",
     heading: "Healthcare & Lifescience",
     para: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
   },
   {
-    image: image4,
+    image: "https://plus.unsplash.com/premium_photo-1683121716061-3faddf4dc504?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U2VtaWNvbmR1Y3RvcnxlbnwwfHwwfHx8MA%3D%3D",
     heading: "Semiconductor",
     para: "Specialized program focused on financial technology and innovations.",
   },

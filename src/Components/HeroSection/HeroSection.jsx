@@ -80,7 +80,7 @@ function HeroSection() {
             nextEl: ".custom-next",
             prevEl: ".custom-prev",
           }}
-          autoplay={{ delay: 400000, disableOnInteraction: false }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
           loop={true}
           slidesPerView={1}
         >

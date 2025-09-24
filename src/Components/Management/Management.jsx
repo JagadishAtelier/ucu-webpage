@@ -77,49 +77,49 @@ function Management() {
               <div className="cxo-grid">
                 <div className="cxo-card bg-cxo">
                   <h4>CXO</h4>
-                  <p>
+                  <p className="fs-6">
                     Master cross-functional leadership, strategy execution, and
                     boardroom decision-making.
                   </p>
                 </div>
                 <div className="cxo-card bg-cio">
                   <h4>CIO</h4>
-                  <p>
+                  <p className="fs-6">
                     Drive digital transformation, IT governance, and innovation
                     in technology adoption.
                   </p>
                 </div>
                 <div className="cxo-card bg-cto">
                   <h4>CTO</h4>
-                  <p>
+                  <p className="fs-6">
                     Build expertise in emerging technologies, product
                     innovation, and scalable architectures.
                   </p>
                 </div>
                 <div className="cxo-card bg-cmo">
                   <h4>CMO</h4>
-                  <p>
+                  <p className="fs-6">
                     Lead customer-first growth, brand building, and data-driven
                     marketing strategies.
                   </p>
                 </div>
                 <div className="cxo-card bg-chro">
                   <h4>CHRO</h4>
-                  <p>
+                  <p className="fs-6">
                     Transform people strategy, organizational culture, and
                     workforce innovation.
                   </p>
                 </div>
                 <div className="cxo-card bg-cfo">
                   <h4>CFO</h4>
-                  <p>
+                  <p className="fs-6">
                     Strengthen financial strategy, risk management, and global
                     capital allocation.
                   </p>
                 </div>
                 <div className="cxo-card bg-cpo">
                   <h4>CPO</h4>
-                  <p>
+                  <p className="fs-6">
                     Optimize product vision, design thinking, and customer
                     experience excellence.
                   </p>

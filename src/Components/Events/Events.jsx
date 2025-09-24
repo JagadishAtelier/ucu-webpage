@@ -59,7 +59,7 @@ function Events() {
           <div className="eve-overlay"></div>
           <div className="eve-overlay-text">
             <h3 className="fw-bold fs-1 fs-lg-1">Industry Icons Leadership Summit 2025</h3>
-            <p className="program-description">
+            <p className="program-description text-white">
               UCU hosted top business leaders from the BAC, AAC, and CHRO
               councils to discuss future skills and industry trends.
             </p>

@@ -55,6 +55,10 @@ export const menuData = [
             label: "Career Reboot Program for Women",
             link: "/program/career-reboot",
           },
+          {
+            label: "Faculty Development Program",
+            link: "/program/faculty-development",
+          },
         ],
       },
       {
