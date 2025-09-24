@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { menuData } from "./menuData";
 import "./Navbar.css";
 import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
-import logoImg from '../../Assets/Ucu_Updated_Logo/UCU logo without Tag.jpg'
+import logoImg from "../../Assets/Ucu_Updated_Logo/UCU logo without Tag.jpg";
 const Navbar = () => {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -32,23 +32,39 @@ const Navbar = () => {
             {item.submenu ? (
               <>
                 <button
-                  className={`menu-btn depth-${depth} ${openMenus[item.label] ? 'open' : ''}`}
+                  className={`menu-btn depth-${depth} ${
+                    openMenus[item.label] ? "open" : ""
+                  }`}
                   onClick={() => toggleSubmenu(item.label)}
                 >
                   {item.label}
                   {depth === 0 ? (
-                    <ChevronDown size={16} className={`chevron ${openMenus[item.label] ? 'rotated' : ''}`} />
+                    <ChevronDown
+                      size={16}
+                      className={`chevron ${
+                        openMenus[item.label] ? "rotated" : ""
+                      }`}
+                    />
                   ) : (
-                    <ChevronRight size={16} className={`chevron ${openMenus[item.label] ? 'rotated' : ''}`} />
+                    <ChevronRight
+                      size={16}
+                      className={`chevron ${
+                        openMenus[item.label] ? "rotated" : ""
+                      }`}
+                    />
                   )}
                 </button>
                 {/* Only render submenu if it's open */}
-                {openMenus[item.label] && item.submenu.length > 0 && (
-                  renderMenuItems(item.submenu, depth + 1)
-                )}
+                {openMenus[item.label] &&
+                  item.submenu.length > 0 &&
+                  renderMenuItems(item.submenu, depth + 1)}
               </>
             ) : (
-              <a href={item.link} className={`menu-link depth-${depth}`} onClick={toggleMobile}>
+              <a
+                href={item.link}
+                className={`menu-link depth-${depth}`}
+                onClick={toggleMobile}
+              >
                 {item.label}
               </a>
             )}
@@ -63,17 +79,26 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-md py-0 navbar-main-container ">
         <div className="container-fluid">
           {/* Logo */}
-          <Link className="navbar-brand d-flex align-items-center logo-box m-lg-0" to="/">
-              <img
-                src={"/logo2.svg"}
-                alt="Universal Corporate University Logo"
-                className="logo"
-              />
-              <div className="border-l">
-                <p className="logo-text" style={{color:"#1703a9"}} ><span style={{color:"#1703a9"}} >U</span>niversal</p>
-                <p className="logo-text" style={{color:"#5bc500"}} ><span style={{color:"#5bc500"}} >C</span>orporate</p>
-                <p className="logo-text" style={{color:"#07baf3"}} ><span style={{color:"#07baf3"}} >U</span>niversity</p>
-              </div>
+          <Link
+            className="navbar-brand d-flex align-items-center logo-box m-lg-0"
+            to="/"
+          >
+            <img
+              src={"/logo2.svg"}
+              alt="Universal Corporate University Logo"
+              className="logo"
+            />
+            <div className="border-l">
+              <p className="logo-text" style={{ color: "#1703a9" }}>
+                <span style={{ color: "#1703a9" }}>U</span>niversal
+              </p>
+              <p className="logo-text" style={{ color: "#5bc500" }}>
+                <span style={{ color: "#5bc500" }}>C</span>orporate
+              </p>
+              <p className="logo-text" style={{ color: "#07baf3" }}>
+                <span style={{ color: "#07baf3" }}>U</span>niversity
+              </p>
+            </div>
           </Link>
 
           {/* <Link className="navbar-brand mobile-only" to="/">
@@ -91,13 +116,23 @@ const Navbar = () => {
           >
             {/* Top bar */}
             <div className="top-bar d-flex justify-content-end align-items-center pt-3 bg-white">
-              <div className="Business-school">{/* <p className="logo-text">Chennai</p> */}</div>
+              <div className="Business-school">
+                {/* <p className="logo-text">Chennai</p> */}
+              </div>
               <ul className="list-inline mb-0">
-                {menuData.filter((menu) => !menu.submenu).map((menu) => ( // Use menuData directly for top-level non-submenu items
-                  <li key={menu.label} className="list-inline-item">
-                    <Link to={menu.link}>{menu.label.toLocaleUpperCase()}</Link>
-                  </li>
-                ))}
+                {menuData
+                  .filter((menu) => !menu.submenu)
+                  .map(
+                    (
+                      menu // Use menuData directly for top-level non-submenu items
+                    ) => (
+                      <li key={menu.label} className="list-inline-item">
+                        <Link to={menu.link}>
+                          {menu.label.toLocaleUpperCase()}
+                        </Link>
+                      </li>
+                    )
+                  )}
               </ul>
               <div className="search-box ms-3">
                 <input type="text" placeholder="Search" />
@@ -117,73 +152,107 @@ const Navbar = () => {
 
             {/* Bottom menus with dropdowns (Desktop Mega Menu) */}
             <ul className="navbar-nav navbar-main d-flex justify-content-end align-items-center">
-              {menuData.filter((menu) => menu.submenu).map((menu) => ( // Use menuData directly for top-level submenu items
-                <li
-                  key={menu.label}
-                  className={`nav-item dropdown ${menu.submenu ? "has-mega" : ""}`}
-                >
-                  <a
-                    href="#!"
-                    className="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    role="button"
-                    aria-expanded="false"
-                  >
-                    {menu.label}
-                  </a>
+              {menuData
+                .filter((menu) => menu.submenu)
+                .map(
+                  (
+                    menu // Use menuData directly for top-level submenu items
+                  ) => (
+                    <li
+                      key={menu.label}
+                      className={`nav-item dropdown ${
+                        menu.submenu ? "has-mega" : ""
+                      }`}
+                    >
+                      <a
+                        href="#!"
+                        className="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        role="button"
+                        aria-expanded="false"
+                      >
+                        {menu.label}
+                      </a>
 
-                  {/* Mega menu */}
-                  <div
-                    className={`dropdown-menu ${menu.label
-                      ?.replace(/\s+/g, "-")
-                      .toLowerCase()}`}
-                  >
-                    <div className="row dropdown-menu-container">
-                      {menu.submenu.map((col) => (
-                        <div className="dropdown-menu-col" key={col.label}>
-                          <p className="top-head">
-                            <Link to={col.link || "#"}>{col.label}</Link>
-                          </p>
-                          {/* Render sub-submenus recursively */}
-                          {col.submenu && col.submenu.length > 0 && (
-                            <ul className="third-level-menu">
-                              {col.submenu.map((subItem) => (
-                                <li key={subItem.label}>
-                                  {subItem.submenu ? (
-                                    <>
-                                      <div className="fourth-level-parent">
-                                        <Link to={subItem.link || "#"} className="third-level-link">
+                      {/* Mega menu */}
+                      <div
+                        className={`dropdown-menu ${menu.label
+                          ?.replace(/\s+/g, "-")
+                          .toLowerCase()}`}
+                      >
+                        <div className="row dropdown-menu-container">
+                          {menu.submenu.map((col) => (
+                            <div className="dropdown-menu-col" key={col.label}>
+                              <p className="top-head">
+                                <Link to={col.link || "#"}>{col.label}</Link>
+                              </p>
+                              {/* Render sub-submenus recursively */}
+                              {col.submenu && col.submenu.length > 0 && (
+                                <ul className="third-level-menu">
+                                  {col.submenu.map((subItem) => (
+                                    <li key={subItem.label}>
+                                      {subItem.submenu ? (
+                                        <>
+                                          <div className="fourth-level-parent">
+                                            <Link
+                                              to={subItem.link || "#"}
+                                              className={`third-level-link ${
+                                                subItem.label ===
+                                                "Career Reboot Program for Women"
+                                                  ? "career-reboot-link"
+                                                  : ""
+                                              }`}
+                                            >
+                                              {subItem.label}
+                                            </Link>
+                                            <ChevronRight
+                                              size={14}
+                                              className="right-arrow-icon"
+                                            />
+                                          </div>
+                                          {subItem.submenu.length > 0 && (
+                                            <ul className="fourth-level-menu">
+                                              {subItem.submenu.map(
+                                                (fourthItem) => (
+                                                  <li key={fourthItem.label}>
+                                                    <Link
+                                                      to={
+                                                        fourthItem.link || "#"
+                                                      }
+                                                      className="fourth-level-link"
+                                                    >
+                                                      {fourthItem.label}
+                                                    </Link>
+                                                  </li>
+                                                )
+                                              )}
+                                            </ul>
+                                          )}
+                                        </>
+                                      ) : (
+                                        <Link
+                                          to={subItem.link || "#"}
+                                          className={
+                                            subItem.label ===
+                                            "Career Reboot Program for Women"
+                                              ? "career-reboot-link"
+                                              : ""
+                                          }
+                                        >
                                           {subItem.label}
                                         </Link>
-                                        <ChevronRight size={14} className="right-arrow-icon" />
-                                      </div>
-                                      {subItem.submenu.length > 0 && (
-                                        <ul className="fourth-level-menu">
-                                          {subItem.submenu.map((fourthItem) => (
-                                            <li key={fourthItem.label}>
-                                              <Link to={fourthItem.link || "#"} className="fourth-level-link">
-                                                {fourthItem.label}
-                                              </Link>
-                                            </li>
-                                          ))}
-                                        </ul>
                                       )}
-                                    </>
-                                  ) : (
-                                    <Link to={subItem.link || "#"}>
-                                      {subItem.label}
-                                    </Link>
-                                  )}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  </div>
-                </li>
-              ))}
+                      </div>
+                    </li>
+                  )
+                )}
             </ul>
           </div>
           <div className="d-flex gap-2 mobile-right">
@@ -208,18 +277,27 @@ const Navbar = () => {
             {/* Drawer itself */}
             <div className="drawer">
               <div className="drawer-header">
-              <Link className="navbar-brand d-flex align-items-center logo-box m-lg-0" to="/">
-              {/* <img
+                <Link
+                  className="navbar-brand d-flex align-items-center logo-box m-lg-0"
+                  to="/"
+                >
+                  {/* <img
                 src={"/logo2.svg"}
                 alt="Universal Corporate University Logo"
                 className="logo"
               /> */}
-              <div className="border-l border-white">
-                <p className="logo-text" style={{color:"#1703a9"}} ><span style={{color:"#1703a9"}} >U</span>niversal</p>
-                <p className="logo-text" style={{color:"#5bc500"}} ><span style={{color:"#5bc500"}} >C</span>orporate</p>
-                <p className="logo-text" style={{color:"#07baf3"}} ><span style={{color:"#07baf3"}} >U</span>niversity</p>
-              </div>
-          </Link>
+                  <div className="border-l border-white">
+                    <p className="logo-text" style={{ color: "#1703a9" }}>
+                      <span style={{ color: "#1703a9" }}>U</span>niversal
+                    </p>
+                    <p className="logo-text" style={{ color: "#5bc500" }}>
+                      <span style={{ color: "#5bc500" }}>C</span>orporate
+                    </p>
+                    <p className="logo-text" style={{ color: "#07baf3" }}>
+                      <span style={{ color: "#07baf3" }}>U</span>niversity
+                    </p>
+                  </div>
+                </Link>
                 <button className="close-btn" onClick={toggleMobile}>
                   <X size={28} />
                 </button>
@@ -227,7 +305,7 @@ const Navbar = () => {
 
               <div className="drawer-content">
                 {/* Render all menu data for the mobile drawer */}
-                {renderMenuItems(menuData)} 
+                {renderMenuItems(menuData)}
               </div>
             </div>
           </>

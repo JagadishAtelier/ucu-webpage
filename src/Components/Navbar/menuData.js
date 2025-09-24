@@ -62,17 +62,6 @@ export const menuData = [
         link: "/program/post-graduate-diplomas",
         submenu: [
           {
-            label: "Industry-Sector Specific Offerings",
-            link: "/program/industry-sector",
-            submenu: [
-              { label: "FinTech", link: "/program/fintech" },
-              {
-                label: "Global Capability Centers (GCC)",
-                link: "/program/gcc",
-              },
-            ],
-          },
-          {
             label: "Functional (off-line)",
             link: "/program/functional-offline",
             submenu: [
@@ -97,6 +86,17 @@ export const menuData = [
                 link: "/program/business-analytics",
               },
               { label: "Data Science", link: "/program/data-science" },
+            ],
+          },
+          {
+            label: "Industry-Sector Specific Offerings",
+            link: "/program/industry-sector",
+            submenu: [
+              { label: "FinTech", link: "/program/fintech" },
+              {
+                label: "Global Capability Centers (GCC)",
+                link: "/program/gcc",
+              },
             ],
           },
         ],
