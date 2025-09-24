@@ -124,14 +124,21 @@
 }
 
 /* container for all columns */
-.dropdown-menu-container {
+/* .dropdown-menu-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   column-gap: 0rem;
   row-gap: 1rem;
   margin: 0;
+} */
+/* container for all columns */
+.dropdown-menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem; /* spacing between items */
 }
+
 
 /* individual column */
 .dropdown-menu-col {
@@ -624,6 +631,7 @@
   margin-bottom: 10px !important;
   padding-bottom: 4px !important;
   font-weight: 600 !important;
+  padding-left: 0 !important;
 }
 
 
@@ -659,3 +667,52 @@
 .fourth-level-menu li:hover a {
   color: white !important;
 }
+
+
+.career-reboot-heading {
+  position: relative;
+  font-size: 0.75rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.career-reboot-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0;
+  background-color: #74e974;
+  transition: width 0.3s ease;
+}
+
+.career-reboot-heading:hover::after {
+  width: 100%;
+}
+/* Prevent hover background on the heading */
+li:hover .career-reboot-heading {
+  background: none !important;
+  cursor: default; /* no pointer hand */
+}
+/* Prevent hover background for the Career Reboot heading */
+.dropdown-menu-col ul li:hover:has(.career-reboot-heading) {
+  background: none !important;
+}
+.career-reboot-heading {
+  padding-left: 0 !important;  /* remove left padding */
+  margin-left: 0 !important;   /* optional, ensures no extra space */
+  display: block;              /* keeps alignment clean */
+}
+
+.dropdown-menu-col ul li:has(.career-reboot-heading) {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+
+

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { menuData } from "./menuData";
 import "./Navbar.css";
 import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
-import logoImg from "../../Assets/Ucu_Updated_Logo/UCU logo without Tag.jpg";
+import logoImg from "../../Assets/aac/Copy of Webpage_20250924_151944_0001.png";
 const Navbar = () => {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -84,7 +84,7 @@ const Navbar = () => {
             to="/"
           >
             <img
-              src={"/logo2.svg"}
+              src={logoImg}
               alt="Universal Corporate University Logo"
               className="logo"
             />
@@ -188,64 +188,61 @@ const Navbar = () => {
                               </p>
                               {/* Render sub-submenus recursively */}
                               {col.submenu && col.submenu.length > 0 && (
-                                <ul className="third-level-menu">
-                                  {col.submenu.map((subItem) => (
-                                    <li key={subItem.label}>
-                                      {subItem.submenu ? (
-                                        <>
-                                          <div className="fourth-level-parent">
-                                            <Link
-                                              to={subItem.link || "#"}
-                                              className={`third-level-link ${
-                                                subItem.label ===
-                                                "Career Reboot Program for Women"
-                                                  ? "career-reboot-link"
-                                                  : ""
-                                              }`}
-                                            >
-                                              {subItem.label}
-                                            </Link>
-                                            <ChevronRight
-                                              size={14}
-                                              className="right-arrow-icon"
-                                            />
-                                          </div>
-                                          {subItem.submenu.length > 0 && (
-                                            <ul className="fourth-level-menu">
-                                              {subItem.submenu.map(
-                                                (fourthItem) => (
-                                                  <li key={fourthItem.label}>
-                                                    <Link
-                                                      to={
-                                                        fourthItem.link || "#"
-                                                      }
-                                                      className="fourth-level-link"
-                                                    >
-                                                      {fourthItem.label}
-                                                    </Link>
-                                                  </li>
-                                                )
-                                              )}
-                                            </ul>
-                                          )}
-                                        </>
-                                      ) : (
-                                        <Link
-                                          to={subItem.link || "#"}
-                                          className={
-                                            subItem.label ===
-                                            "Career Reboot Program for Women"
-                                              ? "career-reboot-link"
-                                              : ""
-                                          }
-                                        >
-                                          {subItem.label}
-                                        </Link>
-                                      )}
-                                    </li>
-                                  ))}
-                                </ul>
-                              )}
+  <ul className="third-level-menu">
+    {col.submenu.map((subItem) => (
+      <li key={subItem.label}>
+        {subItem.submenu ? (
+          <>
+            <div className="fourth-level-parent">
+              {subItem.label === "Career Reboot Program for Women" ? (
+                <p className="career-reboot-heading">
+                  {subItem.label}
+                </p>
+              ) : (
+                <Link
+                  to={subItem.link || "#"}
+                  className="third-level-link"
+                >
+                  {subItem.label}
+                </Link>
+              )}
+              <ChevronRight size={14} className="right-arrow-icon" />
+            </div>
+
+            {subItem.submenu.length > 0 && (
+              <ul className="fourth-level-menu">
+                {subItem.submenu.map((fourthItem) => (
+                  <li key={fourthItem.label}>
+                    <Link
+                      to={fourthItem.link || "#"}
+                      className="fourth-level-link"
+                    >
+                      {fourthItem.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </>
+        ) : (
+          subItem.label === "Career Reboot Program for Women" ? (
+            <p className="career-reboot-heading">
+              {subItem.label}
+            </p>
+          ) : (
+            <Link
+              to={subItem.link || "#"}
+              className="third-level-link"
+            >
+              {subItem.label}
+            </Link>
+          )
+        )}
+      </li>
+    ))}
+  </ul>
+)}
+
                             </div>
                           ))}
                         </div>

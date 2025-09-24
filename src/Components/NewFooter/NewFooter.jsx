@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./NewFooter.css";
-import image from "../../Assets/homeImage/footer-logo.png";
+import image from "../../Assets/aac/Copy of Webpage_20250924_151944_0000.png";
 import bgImage from "../../Assets/homeImage/Union (3).svg";
 const aboutData = [
   { name: "Heritage", herf: "#" },
@@ -32,7 +32,7 @@ function NewFooter() {
       <div className="py-lg-5 py-5 pb-lg-2 px-4 text-white">
         <div className="d-flex flex-row flex-wrap flex-lg-row align-items-center align-items-lg-start justify-content-start justify-content-lg-evenly row-gap-5 column-gap-5">
           <div className="relative align-items-center d-flex flex-column text-center text-lg-left flex-lg-column gap-3 new-footer-logo align-items-center align-items-lg-center">
-            <img src={"/logo2.svg"} className="logoImage-footer" />
+            <img src={image} className="logoImage-footer" />
             <p className="absolute top-0 col-12 col-lg-10 new-footer-text-a">
               We are passionate education dedicated to providing high-quality
               resources learners all backgrounds.

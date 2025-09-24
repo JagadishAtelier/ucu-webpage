@@ -19,7 +19,7 @@ export const menuData = [
       { label: "Talent Advisory Council (TAC)", link: "/tac" },
       { label: "L&D Advisory Council (L&DAC)", link: "/ldac" },
       { label: "Young CXO Council (YCxC)", link: "/ycxoc" },
-      { label: "Rising Leaders Council ", link: "/rlc" },
+      { label: "Rising Leader's Council", link: "/rlc" },
       { label: "Our Brand Ambassadors", link: "/oba" },
       {
         label: "SME Program Advisory Council",

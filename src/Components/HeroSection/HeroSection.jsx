@@ -10,9 +10,9 @@ import image1 from "/slider-2.jpg";
 import image2 from "/slider-3.jpg";
 import AnnoncementSection from "../AnnoncementSection/AnnoncementSection";
 import { useModal } from "../Context/ApplyModal/ModalContext";
-import banner1 from  '../../Assets/aac/Banner1.png'
+import banner1 from  '../../Assets/aac/Banner1UCU.png'
 import banner2 from '../../Assets/aac/2.png'
-import banner3 from '../../Assets/aac/3.png'
+import banner3 from '../../Assets/aac/Banner3.png'
 import banner4 from '../../Assets/aac/4.png'
 import banner8 from '../../Assets/aac/8.png'
 const heroData = [
@@ -52,7 +52,7 @@ const heroData = [
     images: image2,
   },
   {
-    header: <><span className="color-highlight">Young CXOL&D Advisory </span>Council (YCC)</>,
+    header: <><span className="color-highlight">Young CXO </span>Council (YCC)</>,
     para: " UCU’s Young CXO Council (YCC) connects tomorrow’s talent with today’s trailblazing leaders—driving measurable corporate impact and channeling boardroom insights directly into our classrooms",
     images: banner8,
   },

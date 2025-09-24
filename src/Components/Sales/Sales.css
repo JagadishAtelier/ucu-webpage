@@ -10,6 +10,9 @@
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+
+    /* ✅ Equal height */
+    height: 100%;
 }
 .sales-tabs {
   display: flex;
@@ -177,4 +180,22 @@
     width: 100%;
     padding: 6px 12px;
   }
+}
+
+/* Ensure swiper slides stretch equally */
+.sales-swiper .swiper-slide {
+  display: flex;
+  height: auto !important;
+}
+
+/* Make inner content stretch to push buttons down */
+.sales-item-div .p-3 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push the buttons to bottom consistently */
+.sales-btn {
+  margin-top: auto;
 }
