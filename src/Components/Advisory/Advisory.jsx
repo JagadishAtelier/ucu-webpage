@@ -166,7 +166,7 @@ const councils = [
             { image : aacImage1,
               name :"Dr. R. Chandran",
               prof : `Executive Director`,
-              comText : "Pillai Institute of Management",
+              comText : "Pillai Institute of Management Studies & Research",
               comLogo : "https://media.licdn.com/dms/image/v2/C4D0BAQELd1pE6OBd5g/company-logo_200_200/company-logo_200_200/0/1630513284225/pimsr_logo?e=2147483647&v=beta&t=cIscRSSwioTsralzuE4wmq6lI4N398vWazVxprGfpUA"
             },
             { image :aacImage2,
