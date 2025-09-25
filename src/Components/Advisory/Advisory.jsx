@@ -93,7 +93,7 @@ const councils = [
         image: uppli,
         name: "Dr Uppiliappan Gopalan",
         linkedIn: "https://www.linkedin.com/in/uppiliappan/",
-        prof: "Dr Uppiliappan Gopalan, Group CEO, R.C. Manubhai",
+        prof: "Group CEO, R.C. Manubhai",
       },
       {
         image: image4,
