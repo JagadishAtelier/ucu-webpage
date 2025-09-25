@@ -3,6 +3,20 @@ import './Advisory.css'
 import { useParams } from "react-router-dom";
 import { FaLinkedin,FaChevronRight } from 'react-icons/fa';
 import Navbar from '../Navbar/Navbar';
+
+import aacImage2 from '../../Assets/linkedin profilea/Dr. P.K. Viswanathan.jpg'
+import aacImage3 from '../../Assets/linkedin profilea/Dr. Vaidy Jayaraman.jpg'
+import aacImage4 from '../../Assets/linkedin profilea/Prof. R.S. Veeravalli.jpg'
+import aacImage6 from '../../Assets/linkedin profilea/Easwar Krishna Iyer.jpg'
+import aacImage9 from '../../Assets/linkedin profilea/Venkat Krishnan.jpg'
+import aacImage10 from '../../Assets/linkedin profilea/Tushar Jarohar.jpg'
+import aacImage11 from '../../Assets/linkedin profilea/Dr. M.J. Xavier.jpg'
+import aacImage12 from '../../Assets/linkedin profilea/Dr. N. Ravichandran.jpg'
+import aacImage15 from '../../Assets/linkedin profilea/Dr. Kishore Kunal.jpg'
+import aacImage16 from '../../Assets/linkedin profilea/Dr. K.C. John.jpg'
+import aacImage17 from '../../Assets/linkedin profilea/Dr. T.V. Rao.jpg'
+import aacImage18 from '../../Assets/linkedin profilea/Dr. R.L. Shankar.jpg'
+
 import pI from '../../Assets/acp/profileImg.webp'
 import logoIno from '../../Assets/acp/logoIno.jpg'
 import NewFooter from '../NewFooter/NewFooter';
@@ -139,35 +153,112 @@ const councils = [
         sec2head : "Academic Advisory Council",
         sec2Para : "The lifeblood of the Corporate Universities intellectual rigor is our esteemed Academic Advisory Committee. Comprising distinguished scholars, pioneering researchers, and globally recognized thought leaders in management education, this committee is dedicated to upholding and advancing the highest standards of academic excellence. They provide crucial guidance on curriculum development, pedagogical innovation, and research initiatives, ensuring that member B-Schools remain at the vanguard of management knowledge. The AAC fosters a culture of continuous improvement, promoting cutting-edge teaching methodologies, and anticipating future trends in business education.",
         staff : [
-            { image : aacImg1,
-              name :"Venkat GRV",
-              prof : `Academic Affairs, Ex-IFMR KREA (PD)
-
-              AAC Chair`
+            { image : pI,
+              name :"Dr. R. Chandran",
+              prof : `Executive Director`,
+              comLogo : "https://media.licdn.com/dms/image/v2/C4D0BAQELd1pE6OBd5g/company-logo_200_200/company-logo_200_200/0/1630513284225/pimsr_logo?e=2147483647&v=beta&t=cIscRSSwioTsralzuE4wmq6lI4N398vWazVxprGfpUA"
             },
-            { image :aacImg2,
-              name :"Dr. Vaidyanathan",
-              prof : "Director, XIMR",
-              comLogo :"https://www.ximr.ac.in/Content/images/logo.png"
+            { image :aacImage2,
+              name :"Dr. P.K. Viswanathan",
+              prof : "Former Distinguished Chair Professor - Analytics",
+              linkedIn : "https://www.linkedin.com/in/dr-pkv/",
+              comLogo :"https://media.licdn.com/dms/image/v2/D560BAQHUiIQpinpKVQ/company-logo_100_100/company-logo_100_100/0/1722342154423?e=1761782400&v=beta&t=05Ym0mM8F6sqpppZSIbSq37iY49_trEXgoAsVd8Qs3s"
             },
-            { image :aacImg3,
-              name :"Dr. P.K. Vishwanathan",
-              prof : "Advisory, Academic Affairs",
+            { image :aacImage3,
+              name :"Dr. Vaidy Jayaraman",
+              prof : "Former Dean ",
+              linkedIn : "https://www.linkedin.com/in/vaidyjayaraman/",
+              comLogo : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWtJ-Xp_Xh77xKqcdXrS_b-4N5sX44xEHymg&s"
             },
-            { image : aacImg4,
-              name :"Prof. Sanjoy Sircar",
-              prof : " Professor of Finance | Program Director - PGPM | Expert in Corporate Finance & Financial Analytics ",
-              comLogo : `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQioLMk0I8GQtxjr120g9yxRq4cBRqTUeYqXQ&s`
+            { image : pI,
+              name :"Prof. R.S. Veeravalli",
+              prof : "Director - PGXPM ",
+              linkedIn : "https://www.linkedin.com/in/rangamannar-veeravalli-04a39320/",
+              comLogo : `https://media.licdn.com/dms/image/v2/D560BAQHUiIQpinpKVQ/company-logo_100_100/company-logo_100_100/0/1722342154423?e=1761782400&v=beta&t=05Ym0mM8F6sqpppZSIbSq37iY49_trEXgoAsVd8Qs3s`
             },
-            { image :aacImg5,
-              name :"Dr. Vaidy Jayaraman ",
-              prof : "Dean | Supply Chain & Analytics Expert | Ex-Great Lakes Principal ",
-              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWtJ-Xp_Xh77xKqcdXrS_b-4N5sX44xEHymg&s`
-            },
-            { image :venkatImage,
-              name :"Venkat Krishnan",
-              prof : "Expert in leadership and Indian ethos | Ph.D. (Temple) & D.Litt. (S-VYASA) | Teaching Udemy course on Upanishads | RKVenkat.org",
+            { image :pI,
+              name :"Dr. Manaswee Samal",
+              prof : "Adjunct Faculty-Finance",
+              linkedIn : "https://www.linkedin.com/in/manaswee-samal-00516645/",
               comLogo :`https://media.licdn.com/dms/image/v2/D560BAQHUiIQpinpKVQ/company-logo_100_100/company-logo_100_100/0/1722342154423?e=1761782400&v=beta&t=05Ym0mM8F6sqpppZSIbSq37iY49_trEXgoAsVd8Qs3s`
+            },
+            { image :pI,
+              name :"Dr. S. Chinnam Reddy",
+              prof : "Former Director",
+              linkedIn : "https://www.linkedin.com/in/dr-chinnam-reddy-s-b55114b/",
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ka-ywqmutCKStT6LyjpyrXZmgmd4xzU-dQ&s`
+            },
+            { image :aacImage6,
+              name :"Easwar Krishna Iyer",
+              prof : "Director",
+              linkedIn : "https://www.linkedin.com/in/dr-easwar-krishna-iyer/",
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT848zkfR8bGJJUvVf3BpqCMt4hL4r4xXy_Jw&s`
+            },
+            { image :aacImage9,
+              name :"Venkat Krishnan",
+              prof : "Director",
+              linkedIn : "https://www.linkedin.com/in/rkvenkat/",
+              comLogo :`	https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg`
+            },
+            { image :aacImage10,
+              name :"Tushar Jarohar",
+              prof : "Visiting Faculty",
+              linkedIn : "https://www.linkedin.com/in/tushar-jaruhar-9362959/",
+              comLogo :`https://upload.wikimedia.org/wikipedia/en/0/09/Ashoka_University_logo_with_wordmark.png`
+            },
+            { image :pI,
+              name :"Dr. K.N. Vaidyanathan",
+              prof : "Director",
+              // linkedIn : "https://www.linkedin.com/in/dr-chinnam-reddy-s-b55114b/",
+              comLogo :`https://www.ximr.ac.in/Content/images/pic-ximr-symbol.png`
+            },
+            { image :aacImage11,
+              name :"Dr. M.J. Xavier",
+              prof : "Founding Director",
+              linkedIn : "https://www.linkedin.com/in/mj-xavier-58803012/",
+              comLogo :`https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Indian_Institute_of_Management_Ranchi.svg/1200px-Indian_Institute_of_Management_Ranchi.svg.png`
+            },
+            { image :aacImage12,
+              name :"Dr. N. Ravichandran",
+              prof : "Executive Director",
+              linkedIn : "https://www.linkedin.com/in/dr-n-ravichandran/",
+              comLogo :`https://media.licdn.com/dms/image/v2/C560BAQH3hNBr2ro08A/company-logo_200_200/company-logo_200_200/0/1635494183126?e=2147483647&v=beta&t=BWdehXCu6wOorQcqdjf4qZy975aPexbEM8VNEU8q6K4`
+            },
+            { image :pI,
+              name :"Dr. Suresh Ramanathan",
+              prof : "Former Dean ",
+              // linkedIn : "https://www.linkedin.com/in/dr-chinnam-reddy-s-b55114b/",
+              comLogo :`https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/logo-chennai-2.jpg`
+            },
+            { image :pI,
+              name :"Dr. S. Arunachalam",
+              prof : "Marketing Faculty",
+              linkedIn : "https://www.linkedin.com/in/s-arunachalam-4675a96/",
+              comLogo :`https://media.licdn.com/dms/image/v2/D560BAQGeW5435DZNIA/company-logo_200_200/company-logo_200_200/0/1738784538199/research_rawls_college_of_business_logo?e=2147483647&v=beta&t=TyMkjCIAJsdyT--nA-pN7OV4yPVkElvtmvr2zQaWAcE`
+            },
+            { image :aacImage15,
+              name :"Dr. Kishore Kunal",
+              prof : "Dean",
+              linkedIn : "https://www.linkedin.com/in/kishoreindia/",
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2aYX4S4BBzg-GFn2CILI1oyOejKYqRIvm1w&s`
+            },
+            { image :aacImage16,
+              name :"Dr. K.C. John",
+              prof : "Director, Faculty of Management ",
+              linkedIn : "https://www.linkedin.com/in/kc-john-74ba58/",
+              comLogo :`https://admissions.sriramachandra.edu.in/pg/assets/images/logo.png`
+            },
+            { image :aacImage17,
+              name :"Dr. T.V. Rao",
+              prof : "Director",
+              linkedIn : "https://www.linkedin.com/in/tv-rao-9bb9b5/",
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo-rfJqQHj5fbX5GdW-wtN-pu4bzWbaNFXipi0xbS_cZoCaaK92rxnb5jOvqqHtkOJCL4&usqp=CAU`
+            },
+            { image :aacImage18,
+              name :"Dr. R.L. Shankar",
+              prof : "Associate Professor-Finance",
+              linkedIn : "https://www.linkedin.com/in/rlshankar/",
+              comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4SFl9aZsLIJ2425nsBFmqMwPCATnK57sDJw&s`
             },
 
         ]
@@ -905,7 +996,9 @@ function Advisory() {
           </div>
 
           <div className="d-flex flex-column align-items-center gap-2">
-            <FaLinkedin size={30} className="linkedin-icon" />
+            <a href={person.linkedIn}>
+              <FaLinkedin size={30} className="linkedin-icon" />
+              </a>
           </div>
         </div>
       </div>
