@@ -23,6 +23,11 @@ import aacImage16 from '../../Assets/linkedin profilea/Dr. K.C. John.jpg'
 import aacImage17 from '../../Assets/linkedin profilea/Dr. T.V. Rao.jpg'
 import aacImage18 from '../../Assets/linkedin profilea/Dr. R.L. Shankar.jpg'
 
+import uppli from '../../Assets/aac/upilli.jpeg'
+import sathis from '../../Assets/aac/upilli.jpeg'
+import ram from '../../Assets/aac/ram.jpeg'
+import kumara from '../../Assets/aac/kumara.jfif'
+
 import pI from '../../Assets/acp/profileImg.webp'
 import logoIno from '../../Assets/acp/logoIno.jpg'
 import NewFooter from '../NewFooter/NewFooter';
@@ -78,8 +83,9 @@ const councils = [
               prof : "MD, Accenture Strategy",
               comLogo : `https://upload.wikimedia.org/wikipedia/commons/1/1c/Accenture_logo.svg`
             },
-            { image : "https://media.licdn.com/dms/image/v2/D4D03AQFUWHsequrp4w/profile-displayphoto-crop_800_800/B4DZjTeQ_qGgAI-/0/1755894585848?e=1761782400&v=beta&t=SbnG7l13MPZ206ZPuSM2esu-1TnOznWej2npQE92IWs",
+            { image :uppli,
               name :"Dr Uppiliappan Gopalan",
+              linkedIn : "https://www.linkedin.com/in/uppiliappan/",
               prof : "Dr Uppiliappan Gopalan, Group CEO, R.C. Manubhai",
             },
             { image :image4,
@@ -129,6 +135,7 @@ const councils = [
             },
             { image : pI,
               name :"Sundar Rajan Rengamani",
+              linkedIn : "https://www.linkedin.com/in/sundarrengamani/",
               prof : "VP - Straive",
               comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzHQ_8annzluojESqlaeDNAKt4_ZQSyXI4PA&s`
             },
@@ -137,18 +144,20 @@ const councils = [
               prof : "Sr. Director, PayPal",
               comLogo :`https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/2560px-PayPal.svg.png`
             },
-            { image : pI,
+            { image : kumara,
               name :"Kumaran Sasikanthan",
+              linkedIn : "https://www.linkedin.com/in/kumaransasikanthan/",
               prof : "Group VP, Informatica",
               comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2q06EAtGZ7ldD03vRTq9JGY2QIwDh5kEHw&s`
             },
-            { image : pI,
+            { image : ram,
               name :"Ramanan S. V.",
               prof : "CEO, Intellect Design",
               comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTirsrTU93EYKDlGl_QpuQHZVZT068NPoBV5Q&s`
             },
             { image : pI,
               name :"Bala MS",
+              linkedIn : "https://www.linkedin.com/in/balams03/ ",
               prof : "CEO, Stratinfinity",
               comLogo :`https://media.licdn.com/dms/image/v2/D563DAQHfueHRFrC1uw/image-scale_191_1128/image-scale_191_1128/0/1697805029697/stratinfinity_inc_cover?e=2147483647&v=beta&t=OGPxLoaDiKyyBUmZPexuMk_dFz4dvveeYfIIKimYMWk`
             },
