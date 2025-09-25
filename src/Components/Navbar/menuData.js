@@ -310,4 +310,7 @@ export const menuData = [
   { label: "CSR", link: "/csr" },
   { label: "Careers", link: "/careers" },
   { label: "Consortium", link: "/consortium" },
+  { label: "News & Blogs", link: "/news-blogs" },
+  { label: "Annual Events", link: "/anual-events" },
+
 ];
