@@ -4,10 +4,16 @@ import { useParams } from "react-router-dom";
 import { FaLinkedin,FaChevronRight } from 'react-icons/fa';
 import Navbar from '../Navbar/Navbar';
 
+
+import aacImage1 from '../../Assets/linkedin profilea/chandran.jpeg'
 import aacImage2 from '../../Assets/linkedin profilea/Dr. P.K. Viswanathan.jpg'
 import aacImage3 from '../../Assets/linkedin profilea/Dr. Vaidy Jayaraman.jpg'
-import aacImage4 from '../../Assets/linkedin profilea/Prof. R.S. Veeravalli.jpg'
+import aacImage4 from '../../Assets/linkedin profilea/veravalli.png'
+import aacImage5 from '../../Assets/linkedin profilea/manaswee.jpeg'
+import aacImage0 from '../../Assets/linkedin profilea/chinnam-reddy.jpeg'
 import aacImage6 from '../../Assets/linkedin profilea/Easwar Krishna Iyer.jpg'
+import aacImage7 from '../../Assets/linkedin profilea/Suresh.jpeg'
+import aacImage8 from '../../Assets/linkedin profilea/Arunachalam.jpeg'
 import aacImage9 from '../../Assets/linkedin profilea/Venkat Krishnan.jpg'
 import aacImage10 from '../../Assets/linkedin profilea/Tushar Jarohar.jpg'
 import aacImage11 from '../../Assets/linkedin profilea/Dr. M.J. Xavier.jpg'
@@ -71,6 +77,10 @@ const councils = [
               name :"Ganesan Ramachandran",
               prof : "MD, Accenture Strategy",
               comLogo : `https://upload.wikimedia.org/wikipedia/commons/1/1c/Accenture_logo.svg`
+            },
+            { image : "https://media.licdn.com/dms/image/v2/D4D03AQFUWHsequrp4w/profile-displayphoto-crop_800_800/B4DZjTeQ_qGgAI-/0/1755894585848?e=1761782400&v=beta&t=SbnG7l13MPZ206ZPuSM2esu-1TnOznWej2npQE92IWs",
+              name :"Dr Uppiliappan Gopalan",
+              prof : "Dr Uppiliappan Gopalan, Group CEO, R.C. Manubhai",
             },
             { image :image4,
               name :"Sundara B. Reddy",
@@ -153,110 +163,128 @@ const councils = [
         sec2head : "Academic Advisory Council",
         sec2Para : "The lifeblood of the Corporate Universities intellectual rigor is our esteemed Academic Advisory Committee. Comprising distinguished scholars, pioneering researchers, and globally recognized thought leaders in management education, this committee is dedicated to upholding and advancing the highest standards of academic excellence. They provide crucial guidance on curriculum development, pedagogical innovation, and research initiatives, ensuring that member B-Schools remain at the vanguard of management knowledge. The AAC fosters a culture of continuous improvement, promoting cutting-edge teaching methodologies, and anticipating future trends in business education.",
         staff : [
-            { image : pI,
+            { image : aacImage1,
               name :"Dr. R. Chandran",
               prof : `Executive Director`,
+              comText : "Pillai Institute of Management",
               comLogo : "https://media.licdn.com/dms/image/v2/C4D0BAQELd1pE6OBd5g/company-logo_200_200/company-logo_200_200/0/1630513284225/pimsr_logo?e=2147483647&v=beta&t=cIscRSSwioTsralzuE4wmq6lI4N398vWazVxprGfpUA"
             },
             { image :aacImage2,
               name :"Dr. P.K. Viswanathan",
+              comText : "Great Lakes Institute of Management, Chennai",
               prof : "Former Distinguished Chair Professor - Analytics",
               linkedIn : "https://www.linkedin.com/in/dr-pkv/",
               comLogo :"https://media.licdn.com/dms/image/v2/D560BAQHUiIQpinpKVQ/company-logo_100_100/company-logo_100_100/0/1722342154423?e=1761782400&v=beta&t=05Ym0mM8F6sqpppZSIbSq37iY49_trEXgoAsVd8Qs3s"
             },
             { image :aacImage3,
               name :"Dr. Vaidy Jayaraman",
+              comText : "SP Jain Global & Great Lakes ",
               prof : "Former Dean ",
               linkedIn : "https://www.linkedin.com/in/vaidyjayaraman/",
               comLogo : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWtJ-Xp_Xh77xKqcdXrS_b-4N5sX44xEHymg&s"
             },
-            { image : pI,
+            { image : aacImage4,
               name :"Prof. R.S. Veeravalli",
               prof : "Director - PGXPM ",
+              comText : "Great Lakes Institute of Management, Chennai",
               linkedIn : "https://www.linkedin.com/in/rangamannar-veeravalli-04a39320/",
               comLogo : `https://media.licdn.com/dms/image/v2/D560BAQHUiIQpinpKVQ/company-logo_100_100/company-logo_100_100/0/1722342154423?e=1761782400&v=beta&t=05Ym0mM8F6sqpppZSIbSq37iY49_trEXgoAsVd8Qs3s`
             },
-            { image :pI,
+            { image :aacImage5,
               name :"Dr. Manaswee Samal",
               prof : "Adjunct Faculty-Finance",
+              comText : "Great Lakes Institute of Management, Chennai",
               linkedIn : "https://www.linkedin.com/in/manaswee-samal-00516645/",
               comLogo :`https://media.licdn.com/dms/image/v2/D560BAQHUiIQpinpKVQ/company-logo_100_100/company-logo_100_100/0/1722342154423?e=1761782400&v=beta&t=05Ym0mM8F6sqpppZSIbSq37iY49_trEXgoAsVd8Qs3s`
             },
-            { image :pI,
+            { image :aacImage0,
               name :"Dr. S. Chinnam Reddy",
               prof : "Former Director",
+              comText : " National Institute of Tourism and Hospitality Management (NITHM)",
               linkedIn : "https://www.linkedin.com/in/dr-chinnam-reddy-s-b55114b/",
               comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ka-ywqmutCKStT6LyjpyrXZmgmd4xzU-dQ&s`
             },
             { image :aacImage6,
               name :"Easwar Krishna Iyer",
               prof : "Director",
+              comText : "Indus Business Academy (IBA)",
               linkedIn : "https://www.linkedin.com/in/dr-easwar-krishna-iyer/",
               comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT848zkfR8bGJJUvVf3BpqCMt4hL4r4xXy_Jw&s`
             },
             { image :aacImage9,
               name :"Venkat Krishnan",
               prof : "Director",
+              comText : "Center for Oneness & Transforming Leadership",
               linkedIn : "https://www.linkedin.com/in/rkvenkat/",
-              comLogo :`	https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg`
+              // comLogo :`	https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg`
             },
             { image :aacImage10,
               name :"Tushar Jarohar",
               prof : "Visiting Faculty",
+              comText : "Ashoka University",
               linkedIn : "https://www.linkedin.com/in/tushar-jaruhar-9362959/",
               comLogo :`https://upload.wikimedia.org/wikipedia/en/0/09/Ashoka_University_logo_with_wordmark.png`
             },
             { image :pI,
               name :"Dr. K.N. Vaidyanathan",
+              comText : "Xavier Institute of Management & Research",
               prof : "Director",
               // linkedIn : "https://www.linkedin.com/in/dr-chinnam-reddy-s-b55114b/",
               comLogo :`https://www.ximr.ac.in/Content/images/pic-ximr-symbol.png`
             },
             { image :aacImage11,
               name :"Dr. M.J. Xavier",
+              comText : "IIM, Ranchi",
               prof : "Founding Director",
               linkedIn : "https://www.linkedin.com/in/mj-xavier-58803012/",
               comLogo :`https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Indian_Institute_of_Management_Ranchi.svg/1200px-Indian_Institute_of_Management_Ranchi.svg.png`
             },
             { image :aacImage12,
               name :"Dr. N. Ravichandran",
+              comText : "Manipal Center for Business",
               prof : "Executive Director",
               linkedIn : "https://www.linkedin.com/in/dr-n-ravichandran/",
               comLogo :`https://media.licdn.com/dms/image/v2/C560BAQH3hNBr2ro08A/company-logo_200_200/company-logo_200_200/0/1635494183126?e=2147483647&v=beta&t=BWdehXCu6wOorQcqdjf4qZy975aPexbEM8VNEU8q6K4`
             },
-            { image :pI,
+            { image :aacImage7,
               name :"Dr. Suresh Ramanathan",
+              comText : "Great Lakes Institute of Management, Chennai",
               prof : "Former Dean ",
               // linkedIn : "https://www.linkedin.com/in/dr-chinnam-reddy-s-b55114b/",
               comLogo :`https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/logo-chennai-2.jpg`
             },
-            { image :pI,
+            { image :aacImage8,
               name :"Dr. S. Arunachalam",
-              prof : "Marketing Faculty",
+              comText : "Texas Tech University, Rawls College of Business, US",
+              prof : `Director & Dean, BSM, Hyderabad Professor of Marketing Former Faculty, Texas Tech University`,
               linkedIn : "https://www.linkedin.com/in/s-arunachalam-4675a96/",
               comLogo :`https://media.licdn.com/dms/image/v2/D560BAQGeW5435DZNIA/company-logo_200_200/company-logo_200_200/0/1738784538199/research_rawls_college_of_business_logo?e=2147483647&v=beta&t=TyMkjCIAJsdyT--nA-pN7OV4yPVkElvtmvr2zQaWAcE`
             },
             { image :aacImage15,
               name :"Dr. Kishore Kunal",
               prof : "Dean",
+              comText : "LIBA, Chennai",
               linkedIn : "https://www.linkedin.com/in/kishoreindia/",
               comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2aYX4S4BBzg-GFn2CILI1oyOejKYqRIvm1w&s`
             },
             { image :aacImage16,
               name :"Dr. K.C. John",
               prof : "Director, Faculty of Management ",
+              comText : "Sri Ramachandra Institute Of Higher Education and Research",
               linkedIn : "https://www.linkedin.com/in/kc-john-74ba58/",
               comLogo :`https://admissions.sriramachandra.edu.in/pg/assets/images/logo.png`
             },
             { image :aacImage17,
               name :"Dr. T.V. Rao",
               prof : "Director",
+              comText : "TV Rao Learning Systems (Former Board Member, IIMA)",
               linkedIn : "https://www.linkedin.com/in/tv-rao-9bb9b5/",
               comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo-rfJqQHj5fbX5GdW-wtN-pu4bzWbaNFXipi0xbS_cZoCaaK92rxnb5jOvqqHtkOJCL4&usqp=CAU`
             },
             { image :aacImage18,
               name :"Dr. R.L. Shankar",
               prof : "Associate Professor-Finance",
+              comText : "Emory University - Goizueta Business School, USA",
               linkedIn : "https://www.linkedin.com/in/rlshankar/",
               comLogo :`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4SFl9aZsLIJ2425nsBFmqMwPCATnK57sDJw&s`
             },
@@ -986,11 +1014,13 @@ function Advisory() {
         <div className="staff-card d-flex flex-column justify-content-between align-items-center text-center w-100 mt-lg-3">
           <img src={person.image} alt={person.name} className="staff-img" />
           <div className='com-logo'>
-          {person.comLogo && (
-            <img src={person.comLogo} className='com-logo-img'/>
-          )}
-          </div>
+  {person.comLogo ? (
+  <img src={person.comLogo} className='com-logo-img' alt="company logo"/>
+  ) : null}
+</div>
+
           <div className="mt-3">
+            <p className="fs-5 mb-2 font-bold">{person.comText}</p>
             <h4 className="fs-4 fw-bold text-uppercase mb-2">{person.name}</h4>
             <p className="fs-5 color-highlight mb-2 font-bold">{person.prof}</p>
           </div>
