@@ -91,9 +91,10 @@ const councils = [
       },
       {
         image: uppli,
-        name: "Dr Uppiliappan Gopalan",
+        name: "Dr.Uppili",
         linkedIn: "https://www.linkedin.com/in/uppiliappan/",
         prof: "Group CEO, R.C. Manubhai",
+        comLogo : "https://rcmanubhai.com.fj/wp-content/uploads/2023/06/Site-Logo.svg"
       },
       {
         image: image4,
