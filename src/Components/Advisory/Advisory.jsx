@@ -99,7 +99,7 @@ const councils = [
       {
         image: image4,
         name: "Sundara B. Reddy",
-        prof: "MD, Accenture Strategy,BAC Chair",
+        prof: "MD, Accenture Strategy",
         comLogo: `https://upload.wikimedia.org/wikipedia/commons/1/1c/Accenture_logo.svg`,
       },
       {
