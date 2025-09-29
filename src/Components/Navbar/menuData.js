@@ -15,28 +15,28 @@ export const menuData = [
     submenu: [
       { label: "Business Advisory Council", link: "/bac" },
       { label: "Academic Advisory Council", link: "/aac" },
-      { label: "CHRO Advisory Council (CHRAC)", link: "/chro" },
-      { label: "Talent Advisory Council (TAC)", link: "/tac" },
-      { label: "L&D Advisory Council (L&DAC)", link: "/ldac" },
-      { label: "Young CXO Council (YCxC)", link: "/ycxoc" },
+      { label: "CHRO Advisory Council", link: "/chro" },
+      { label: "Talent Advisory Council", link: "/tac" },
+      { label: "L&D Advisory Council", link: "/ldac" },
+      { label: "Young CXO Council", link: "/ycxoc" },
       { label: "Rising Leader's Council", link: "/rlc" },
       { label: "Our Brand Ambassadors", link: "/oba" },
       {
         label: "SME Program Advisory Council",
         submenu: [
-          { label: "Sales Advisory Council (SAC)", link: "/sac" },
+          { label: "Sales Advisory Council", link: "/sac" },
           {
-            label: "Product Management Advisory Council (PMAC)",
+            label: "Product Management Advisory Council",
             link: "/pmac",
           },
-          { label: "Cybersecurity Advisory Council (CAC)", link: "/cac" },
-          { label: "FinTech Advisory Council (FTAC)", link: "/ftac" },
-          { label: "GCC Advisory Council (GCCAC)", link: "/gccac" },
+          { label: "Cybersecurity Advisory Council", link: "/cac" },
+          { label: "FinTech Advisory Council", link: "/ftac" },
+          { label: "GCC Advisory Council", link: "/gccac" },
           {
-            label: "Mobility & Sustainability Advisory Council (MSAC)",
+            label: "Mobility & Sustainability Advisory Council",
             link: "/msac",
           },
-          { label: "Consulting Advisory Council (ConAC)", link: "/conac" },
+          { label: "Consulting Advisory Council", link: "/conac" },
         ],
       },
     ],
@@ -66,7 +66,7 @@ export const menuData = [
         link: "/program/post-graduate-diplomas",
         submenu: [
           {
-            label: "Functional (off-line)",
+            label: "Functional",
             link: "/program/functional-offline",
             submenu: [
               { label: "Sales", link: "/program/sales" },

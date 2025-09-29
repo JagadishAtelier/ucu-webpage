@@ -93,7 +93,7 @@ function Sales() {
       </div> */}
       <div>
       <h1 className="display-6 fw-bold col-12 col-lg-12 text-center">
-      Functional (off-line)
+      Functional
         </h1>
       </div>
       <Swiper

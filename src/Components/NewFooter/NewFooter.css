@@ -3,6 +3,17 @@
     /* background: linear-gradient(266deg,rgb(13, 8, 110) 0%, rgb(15, 15, 175) 35%, rgb(177, 231, 241) 80%); */
     background-image: linear-gradient(to right, #e3f1f8, #060a6b);
 }
+.footer-links-content-con{
+    position: relative !important;
+    z-index: 999 !important;
+}
+/* .bg-overlay-footer {
+    background-image: linear-gradient(180deg, white, #f5f4fd00); 
+    height: 100px;
+    z-index: 9999;
+    position: absolute;
+    inset: 0% 0% auto; 
+  }   */
 .vertical-line-footer{
     border: 1px solid white;
     height: 200px;
@@ -46,6 +57,7 @@
 }
 .logoImage-footer{
     width:60%;
+    cursor: pointer !important;
     /* filter: brightness(0) invert(1); */
 }
 .new-footer-logo{

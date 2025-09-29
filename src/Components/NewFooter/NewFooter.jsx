@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./NewFooter.css";
+import { useNavigate } from 'react-router-dom';
 import image from "../../Assets/aac/Copy of Webpage_20250924_151944_0000.png";
 import bgImage from "../../Assets/homeImage/Union (3).svg";
 const aboutData = [
-  { name: "Heritage", herf: "#" },
-  { name: "Vision & Values", herf: "#" },
-  { name: "Recognition", herf: "#" },
+  { name: "About UCU", herf: "/about-ucu" },
+  { name: "Vision & Mission", herf: "#" },
+  { name: "Founder's Message", herf: "#" },
+  { name: "Campus", herf: "#" },
   { name: "Leadership", herf: "#" },
-  { name: "Board of Directors", herf: "#" },
-  { name: "Accreditations & Registrations", herf: "#" },
 ];
 const exploreData = [
   { name: "News", herf: "#" },
@@ -20,19 +20,26 @@ const exploreData = [
 ];
 
 const contactUs = [
-  { name: "Mumbai", herf: "#" },
-  { name: "Dubai", herf: "#" },
-  { name: "Singapore", herf: "#" },
-  { name: "Syndey", herf: "#" },
+  {
+    country: "India",
+    cities: ["Chennai", "Hyderabad", "Bangalore", "Mumbai", "Gurgaon", "Kolkata"],
+  },
+  { country: "USA", cities: [] },
+  { country: "UK", cities: [] },
+  { country: "UAE", cities: [] },
 ];
+
+
 function NewFooter() {
+  const navigate = useNavigate();
   return (
     <div className="footer-container">
+      <div className="bg-overlay-footer"></div>
       <img src={bgImage} className="bgImage" />
-      <div className="py-lg-5 py-5 pb-lg-2 px-4 text-white">
+      <div className="py-lg-5 py-5 pb-lg-2 px-4 text-white footer-links-content-con">
         <div className="d-flex flex-row flex-wrap flex-lg-row align-items-center align-items-lg-start justify-content-start justify-content-lg-evenly row-gap-5 column-gap-5">
           <div className="relative align-items-center d-flex flex-column text-center text-lg-left flex-lg-column gap-3 new-footer-logo align-items-center align-items-lg-center">
-            <img src={image} className="logoImage-footer" />
+            <img onClick={()=>navigate('/')} src='/logo.svg' className="logoImage-footer" />
             <p className="absolute top-0 col-12 col-lg-10 new-footer-text-a">
               We are passionate education dedicated to providing high-quality
               resources learners all backgrounds.
@@ -65,18 +72,32 @@ function NewFooter() {
             </div>
           </div>
           <div className="new-footer-links">
-            <p className="text-white fs-6 new-footer-head">CONTACT US</p>
-            <div className="d-flex flex-column flex-lg-column gap-2">
-              {contactUs.map((data, index) => (
-                <a
-                  href={data.herf}
-                  className="new-footer-text-a  text-decoration-none"
-                >
-                  {data.name}
-                </a>
-              ))}
-            </div>
-          </div>
+  <p className="text-white fs-6 new-footer-head">OUR OUTREACH</p>
+  <div className="d-flex flex-column flex-lg-column gap-2">
+  {contactUs.map((data, index) => (
+  <div key={index} className={data.cities && data.cities.length > 0 ? "mb-2" : "mb-0"}>
+    <p className="fw-600 mb-1">{data.country}</p>
+    
+    {/* Render cities only if there are any */}
+    {data.cities && data.cities.length > 0 && (
+      <div className="d-flex flex-column gap-1 ms-2">
+        {data.cities.map((city, i) => (
+          <a
+            key={i}
+            href="#"
+            className="new-footer-text-a text-decoration-none"
+          >
+            {city}
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+))}
+
+  </div>
+</div>
+
 
           <div className="vertical-line-footer"></div>
 

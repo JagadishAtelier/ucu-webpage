@@ -28,32 +28,32 @@ const heroData = [
     images: bannerImage,
   },
   {
-    header: <><span className="color-highlight">Business Advisory </span>Council (BAC)</>,
+    header: <><span className="color-highlight">Business Advisory </span>Council</>,
     para: "Our Business Advisory Council (BAC) anchors UCU’s strategic vision—shaping curriculum, guiding long-term direction, and ensuring every program delivers tangible career value from day one",
     images: bannerImage,
   },
   {
-    header: <><span className="color-highlight">Academic Advisory </span>Council (AAC)</>,
+    header: <><span className="color-highlight">Academic Advisory </span>Council</>,
     para: "UCU’s Academic Advisory Council (AAC) strengthens our intellectual core—shaping curriculum, deepening academic rigor, and laying the foundation of business knowledge to nurture future leaders",
     images: bannerImage,
   },
   {
-    header: <><span className="color-highlight">CHRO Advisory </span>Council (CHRAC)</>,
+    header: <><span className="color-highlight">CHRO Advisory </span>Council</>,
     para: "UCU’s CHRO Advisory Council brings strategic HR minds together to shape talent frameworks, leadership readiness, and workforce evolution—ensuring our programs mirror the priorities of enterprise people strategy.",
     images: bannerImage,
   },
   {
-    header: <><span className="color-highlight">Talent Acquisition </span>Council (TAC)</>,
+    header: <><span className="color-highlight">Talent Acquisition </span>Council </>,
     para: "UCU’s Talent Acquisition Council draws on frontline recruitment expertise to align hiring realities with learner outcomes—crafting career pathways that meet the pulse of industry demand",
     images: bannerImage,
   },
   {
-    header: <><span className="color-highlight">L&D Advisory </span>Council (L&DAC)</>,
+    header: <><span className="color-highlight">L&D Advisory </span>Council</>,
     para: "UCU’s L&D Advisory Council collaborates with learning leaders to refine instructional design, enhance learner engagement, and embed growth mindsets into every stage of professional development",
     images: bannerImage,
   },
   {
-    header: <><span className="color-highlight">Young CXO </span>Council (YCC)</>,
+    header: <><span className="color-highlight">Young CXO </span>Council</>,
     para: " UCU’s Young CXO Council (YCC) connects tomorrow’s talent with today’s trailblazing leaders—driving measurable corporate impact and channeling boardroom insights directly into our classrooms",
     images: bannerImage,
   },
