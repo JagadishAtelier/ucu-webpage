@@ -3,7 +3,7 @@ import "./Advisory.css";
 import { useParams } from "react-router-dom";
 import { FaLinkedin, FaChevronRight } from "react-icons/fa";
 import Navbar from "../Navbar/Navbar";
-
+import sundarImage from '../../Assets/acp/sundar.jpeg'
 import aacImage1 from "../../Assets/linkedin profilea/chandran.jpeg";
 import aacImage2 from "../../Assets/linkedin profilea/Dr. P.K. Viswanathan.jpg";
 import aacImage3 from "../../Assets/linkedin profilea/Dr. Vaidy Jayaraman.jpg";
@@ -91,7 +91,7 @@ const councils = [
       },
       {
         image: uppli,
-        name: "Dr.Uppili",
+        name: "Dr.Uppili Gopalan",
         linkedIn: "https://www.linkedin.com/in/uppiliappan/",
         prof: "Group CEO, R.C. Manubhai",
         comLogo : "https://rcmanubhai.com.fj/wp-content/uploads/2023/06/Site-Logo.svg"
@@ -151,7 +151,7 @@ const councils = [
         comLogo: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPjgpgVspA7OECttknM08dXUEZNc40OBwOFw&s`,
       },
       {
-        image: pI,
+        image: sundarImage,
         name: "Sundar Rajan Rengamani",
         linkedIn: "https://www.linkedin.com/in/sundarrengamani/",
         prof: "VP - Straive",
