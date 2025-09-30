@@ -31,7 +31,7 @@
     font-size: 13px;
     font-weight: 300;
     color: #dfdfdf;
-    margin-left: 20%;
+    margin-left: 10%;
 
  }
 .input-text{
@@ -68,6 +68,7 @@
     height:250px;
     width: 130%;
     top: -44%;
+    left:-10%;
     max-width: 150%;
 }
 .logo-batch-div{
@@ -78,7 +79,7 @@
 .logoImage-footer{
     position: absolute;
     top:-32%;
-    left: 16%;
+    left: 6%;
     height: 95%;
     width: 100%;
     cursor: pointer !important;
