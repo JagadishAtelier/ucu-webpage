@@ -120,14 +120,27 @@
     .icon-social i {
         font-size: 1.2rem !important;
     }
+    .batchImage{
+        width: 100%;
+        left: 0;
+        top: -41%;
+    }
+    .logoImage-footer {
+        width: 90%;
+    }
   }
   
 @media (max-width: 480px) {
     .new-footer-logo {
         width: 100%;
     }
+    .batchImage{
+        width: 100%;
+        left: 0;
+        top: -41%;
+    }
     .logoImage-footer {
-        width: 30%;
+        width: 90%;
     }
     .vertical-line-footer {
         border: 1px solid white;
@@ -146,3 +159,25 @@
     }
   }
   
+  @media (max-width: 375px){
+    .batchImage{
+        width: 100%;
+        left: 0;
+        top: -45%;
+    }
+    .logoImage-footer {
+        width: 90%;
+    }
+  }
+  @media (max-width: 320px){
+    .batchImage{
+        width: 100%;
+        left: 0;
+        top: -52%;
+    }
+    .logoImage-footer {
+        width: 50%;
+        top: -83px;
+        left: 70px;
+    }
+  }
