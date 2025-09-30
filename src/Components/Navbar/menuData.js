@@ -195,6 +195,18 @@ export const menuData = [
                 link: "/program/business-analytics",
               },
               { label: "Data Science", link: "/program/data-science" },
+
+              {
+                label: "Industry Sector Specific Offerings",
+                link: "/program/industry-sector",
+                submenu: [
+                  { label: "FinTech", link: "/program/fintech" },
+                  {
+                    label: "Global Capability Centers (GCC)",
+                    link: "/program/gcc",
+                  },
+                ],
+              },
             ],
       },
     ],
@@ -232,7 +244,7 @@ export const menuData = [
     ],
   },
   {
-    label: "Industry-Academia Engagement",
+    label: "Industry-Collabration",
     submenu: [
       { label: "CXO Series", link: "/engagement/cxo" },
       { label: "CIO Series", link: "/engagement/cio" },
@@ -251,6 +263,8 @@ export const menuData = [
   {
     label: "Strategic",
     submenu: [
+      { label: "Strategic Partners", link: "/partners" },
+      { label: "International Collaborations", link: "/collaborations" },
       {
         label: "Centers of Excellence (CoEs)",
         submenu: [
@@ -280,6 +294,7 @@ export const menuData = [
           },
         ],
       },
+      { label: "Industry Partners", link: "/Industry-partners" },
       // {
       //   label: "Centers of Excellence (CoEs)",
       //   submenu: [
@@ -299,12 +314,13 @@ export const menuData = [
       // },
     ],
   },
-  { label: "PACE", link: "/pace" },
   { label: "Admissions", link: "/admissions" },
-  { label: "Contact Us", link: "/contact" },
-  { label: "Campus Ambience", link: "/campus-ambience" },
-  { label: "CSR", link: "/csr" },
   { label: "Careers", link: "/careers" },
+  { label: "Campus Ambience", link: "/campus-ambience" },
+  { label: "PACE", link: "/pace" },
   { label: "Consortium", link: "/consortium" },
+  { label: "Contact Us", link: "/contact" },
+
+  // { label: "CSR", link: "/csr" },
 
 ];

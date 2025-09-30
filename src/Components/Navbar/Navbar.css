@@ -113,7 +113,7 @@
 }
 .dropdown-menu.strategic {
   width: 550px !important;
-  left: -100% !important;
+  left: -155% !important;
 }
 .dropdown-menu.faculty,
 .dropdown-menu.industry-academia-engagement {
@@ -672,7 +672,7 @@
 .career-reboot-heading {
   position: relative;
   font-size: 0.75rem;
-  color: #fff;
+  color: #fff !important;
   text-transform: uppercase;
   margin-bottom: 10px;
   padding-bottom: 4px;
@@ -693,25 +693,30 @@
 
 .career-reboot-heading:hover::after {
   width: 100%;
+  color: white;
 }
 /* Prevent hover background on the heading */
 li:hover .career-reboot-heading {
   background: none !important;
   cursor: default; /* no pointer hand */
+  color:white !important;
 }
 /* Prevent hover background for the Career Reboot heading */
 .dropdown-menu-col ul li:hover:has(.career-reboot-heading) {
   background: none !important;
+  color: white !important;
 }
 .career-reboot-heading {
   padding-left: 0 !important;  /* remove left padding */
   margin-left: 0 !important;   /* optional, ensures no extra space */
   display: block;              /* keeps alignment clean */
+  color: white !important;
 }
 
 .dropdown-menu-col ul li:has(.career-reboot-heading) {
   padding-left: 0 !important;
   margin-left: 0 !important;
+  color: white !important;
 }
 
 

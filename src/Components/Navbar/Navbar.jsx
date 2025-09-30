@@ -197,6 +197,8 @@ const Navbar = () => {
                                             {subItem.label ===
                                               "Career Reboot Program for Women" ||
                                             subItem.label ===
+                                              "Industry Sector Specific Offerings" ||
+                                            subItem.label ===
                                               "Faculty Development Program" ? (
                                               <p className="career-reboot-heading">
                                                 {subItem.label}
@@ -236,6 +238,8 @@ const Navbar = () => {
                                         </>
                                       ) : subItem.label ===
                                           "Career Reboot Program for Women" ||
+                                          subItem.label ===
+                                              "Industry Sector Specific Offerings" ||
                                         subItem.label ===
                                           "Faculty Development Program" ? (
                                         <p className="career-reboot-heading">
