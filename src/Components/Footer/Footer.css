@@ -1,9 +1,9 @@
 .footer-container {
-  background-color: black;
+  background-color: #181818;
   width: 100%;
-  color: black;
+  color: white;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .bgImage {

@@ -25,6 +25,14 @@
  .new-footer-text-a.text-dark {
  color: #000 !important;
  }
+ .logo-bottom-text{
+    position: absolute;
+    bottom: -20%;
+    font-size: 13px;
+    font-weight: 300;
+    color: #dfdfdf;
+
+ }
 .input-text{
     width: 20%;
 }
@@ -32,7 +40,6 @@
     font-size: 13px;
     font-weight: 300;
     color: #dfdfdf;
-
 }
 .footer-new-input{
     background-color: transparent !important;
@@ -55,8 +62,24 @@
     /* background-image: linear-gradient(to left, #e3f1f8, #060a6b); */
     background-color: #fff;
 }
+.batchImage{
+    position: relative;
+    height:235px;
+    object-fit: cover;
+    width: 100%;
+    top: -40%;
+}
+.logo-batch-div{
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
 .logoImage-footer{
-    width:60%;
+    position: absolute;
+    top:-20%;
+    left: 10%;
+    height: 80%;
+    width: 80%;
     cursor: pointer !important;
     /* filter: brightness(0) invert(1); */
 }

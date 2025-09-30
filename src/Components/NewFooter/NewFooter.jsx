@@ -3,6 +3,7 @@ import "./NewFooter.css";
 import { useNavigate } from 'react-router-dom';
 import image from "../../Assets/aac/Copy of Webpage_20250924_151944_0000.png";
 import bgImage from "../../Assets/homeImage/Union (3).svg";
+import batchImage from '../../Assets/hac/LogoBatch.svg'
 const aboutData = [
   { name: "About UCU", herf: "/about-ucu" },
   { name: "Vision & Mission", herf: "#" },
@@ -34,13 +35,16 @@ function NewFooter() {
   const navigate = useNavigate();
   return (
     <div className="footer-container">
-      <div className="bg-overlay-footer"></div>
+      {/* <div className="bg-overlay-footer"></div> */}
       <img src={bgImage} className="bgImage" />
       <div className="py-lg-5 py-5 pb-lg-2 px-4 text-white footer-links-content-con">
         <div className="d-flex flex-row flex-wrap flex-lg-row align-items-center align-items-lg-start justify-content-start justify-content-lg-evenly row-gap-5 column-gap-5">
-          <div className="relative align-items-center d-flex flex-column text-center text-lg-left flex-lg-column gap-3 new-footer-logo align-items-center align-items-lg-center">
-            <img onClick={()=>navigate('/')} src='/logo.svg' className="logoImage-footer" />
-            <p className="absolute top-0 col-12 col-lg-10 new-footer-text-a">
+          <div className="position-relative align-items-center d-flex flex-column text-center text-lg-left flex-lg-column gap-3 new-footer-logo align-items-center align-items-lg-center">
+            <div className="logo-batch-div">
+              <img src={batchImage} className="batchImage"/>
+              <img onClick={()=>navigate('/')} src='/logo.svg' className="logoImage-footer" />
+            </div>
+            <p className="col-12 col-lg-10 logo-bottom-text">
               We are passionate education dedicated to providing high-quality
               resources learners all backgrounds.
             </p>

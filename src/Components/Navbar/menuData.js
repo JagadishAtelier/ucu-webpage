@@ -297,10 +297,6 @@ export const menuData = [
       //     },
       //   ],
       // },
-      { label: "Strategic Partners", link: "/partners" },
-      { label: "International Collaborations", link: "/collaborations" },
-      { label: "Industry Partners", link: "/Industry-partners" },
-
     ],
   },
   { label: "PACE", link: "/pace" },
@@ -310,7 +306,5 @@ export const menuData = [
   { label: "CSR", link: "/csr" },
   { label: "Careers", link: "/careers" },
   { label: "Consortium", link: "/consortium" },
-  { label: "News & Blogs", link: "/news-blogs" },
-  { label: "Annual Events", link: "/anual-events" },
 
 ];
