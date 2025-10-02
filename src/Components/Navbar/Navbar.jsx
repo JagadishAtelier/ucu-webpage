@@ -197,6 +197,8 @@ const Navbar = () => {
                                             {subItem.label ===
                                               "Career Reboot Program for Women" ||
                                             subItem.label ===
+                                              "Executive Post Graduate Certificate Programs" ||
+                                            subItem.label ===
                                               "Industry Sector Specific Offerings" ||
                                             subItem.label ===
                                               "Faculty Development Program" ? (
@@ -238,6 +240,8 @@ const Navbar = () => {
                                         </>
                                       ) : subItem.label ===
                                           "Career Reboot Program for Women" ||
+                                          subItem.label ===
+                                          "Executive Post Graduate Certificate Programs" ||
                                           subItem.label ===
                                               "Industry Sector Specific Offerings" ||
                                         subItem.label ===
