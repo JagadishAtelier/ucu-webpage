@@ -39,13 +39,8 @@ const Home = () => {
 
         <Platforms />
 
-        {/* Banner */}
-        <div data-aos="fade-up" data-aos-delay="100">
-          <Banner />
-        </div>
-
         {/* Industry */}
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div data-aos="fade-up" data-aos-delay="100" className="my-5">
           <Industry />
         </div>
         {/* Events */}
@@ -62,6 +57,13 @@ const Home = () => {
         <div data-aos="zoom-in pt-5" data-aos-delay="100">
           <Brands />
         </div>
+
+                {/* Banner */}
+                <div data-aos="fade-up" data-aos-delay="100">
+          <Banner />
+        </div>
+
+
         <NewFooter />
       </>
     </div>

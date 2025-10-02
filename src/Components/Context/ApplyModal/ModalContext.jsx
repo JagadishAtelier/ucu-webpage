@@ -85,7 +85,7 @@ export const ModalProvider = ({ children }) => {
                 </div>
                 <div className="mt-2 mt-lg-2 d-flex flex-row flex-lg-row gap-2 align-items-start align-items-lg-start">
                     <input type="radio" className="input-radio-btn"/>
-                    <p className="radio-btn-text">By entering these details I agree that Amity University Online and its associates can contact me with updates & notifications via Email, SMS, WhatsApp, and Voice call as per the Privacy Policy. This consent will override any registration for DNC / NDNC.
+                    <p className="radio-btn-text">By entering these details I agree that Universal Corporate University Online and its associates can contact me with updates & notifications via Email, SMS, WhatsApp, and Voice call as per the Privacy Policy. This consent will override any registration for DNC / NDNC.
                 </p>
                 </div>
                   <button className="submit-btn-modal px-lg-4 py-lg-2 py-3">
@@ -149,7 +149,7 @@ Connect with our <span style={{color:"#5ac501"}}>counsellor</span></p>
               </div>
               <div className="mt-2 mt-lg-2 d-flex flex-row flex-lg-row gap-2 align-items-start align-items-lg-start">
                   <input type="radio" className="input-radio-btn"/>
-                  <p className="radio-btn-text">By entering these details I agree that Amity University Online and its associates can contact me with updates & notifications via Email, SMS, WhatsApp, and Voice call as per the Privacy Policy. This consent will override any registration for DNC / NDNC.
+                  <p className="radio-btn-text">By entering these details I agree that Universal Corporate University Online and its associates can contact me with updates & notifications via Email, SMS, WhatsApp, and Voice call as per the Privacy Policy. This consent will override any registration for DNC / NDNC.
               </p>
               </div>
                 <button className="submit-btn-modal px-lg-4 py-lg-2 py-3">
@@ -213,7 +213,7 @@ Download <span style={{color:"#5ac501"}}>Brochure</span></p>
               </div>
               <div className="mt-2 mt-lg-2 d-flex flex-row flex-lg-row gap-2 align-items-start align-items-lg-start">
                   <input type="radio" className="input-radio-btn"/>
-                  <p className="radio-btn-text">By entering these details I agree that Amity University Online and its associates can contact me with updates & notifications via Email, SMS, WhatsApp, and Voice call as per the Privacy Policy. This consent will override any registration for DNC / NDNC.
+                  <p className="radio-btn-text">By entering these details I agree that Universal Corporate University Online and its associates can contact me with updates & notifications via Email, SMS, WhatsApp, and Voice call as per the Privacy Policy. This consent will override any registration for DNC / NDNC.
               </p>
               </div>
                 <button className="submit-btn-modal px-lg-4 py-lg-2 py-3">
