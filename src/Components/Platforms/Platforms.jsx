@@ -6,10 +6,10 @@ import "aos/dist/aos.css";
 import { useModal } from "../Context/ApplyModal/ModalContext";
 
 const data = [
-  {
-    head: "Sales",
-    text: "Master the art and science of selling with industry-driven strategies that fuel revenue and relationships",
-  },
+  // {
+  //   head: "Sales",
+  //   text: "Master the art and science of selling with industry-driven strategies that fuel revenue and relationships",
+  // },
   {
     head: "Product Management",
     text: "Build, launch, and lead breakthrough products with cross-functional expertise and market-first thinking",
@@ -44,8 +44,43 @@ const data = [
   },
 ];
 
+const industryData = [
+  {
+    head: "Fin-Tech",
+    text: `Lead the financial revolution with cutting-edge skills in digital finance, innovation, and tech-powered disruption
+    `,
+  },
+  {
+    image: "https://www.colliers.com/-/media/images/colliers/asia/india/research-images/2024/1536gccreport.ashx?bid=3dd61b5289dd4e2abf9a823864443392",
+    head: "Global Capability Center (GCC)",
+    text: `Step into the engine room of global enterprises—mastering strategy, scale, and operational excellence across GCCs
+    `,
+  },
+  {
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhbHRoY2FyZXxlbnwwfHwwfHx8MA%3D%3D",
+    head: "Healthcare & Lifescience",
+    text: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
+  },
+  {
+    image: "https://plus.unsplash.com/premium_photo-1683121716061-3faddf4dc504?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U2VtaWNvbmR1Y3RvcnxlbnwwfHwwfHx8MA%3D%3D",
+    head: "Semiconductor",
+    text: "Specialized program focused on financial technology and innovations.",
+  },
+  // {
+  //   image: image2,
+  //   heading: "Global Capability Centers (GCC)",
+  //   para: "Intensive program for students preparing for careers in global shared services and business operations.",
+  // },
+  // {
+  //   image: image3,
+  //   heading: "Supply Chain Management & Logistics",
+  //   para: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
+  // },
+];
+
 function Platforms() {
   const [openIndex, setOpenIndex] = useState(0);
+  const [activeTab, setActiveTab] = useState("functional");
   const { showModal } = useModal();
   useEffect(() => {
     AOS.init({
@@ -58,6 +93,7 @@ function Platforms() {
   const toggleText = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+  const currentData = activeTab === "functional" ? data : industryData;
 
   return (
     <div className="platforms-container">
@@ -82,7 +118,38 @@ function Platforms() {
         </div>
 
         <div className="platform-data-div">
-          {data.map((item, index) => (
+          {/* Tabs */}
+          <div className="d-flex gap-3 mb-3 border-bottom pb-3 justify-content-center">
+          <button
+  onClick={() => {
+    setActiveTab("functional");
+    setOpenIndex(null);
+  }}
+  className={`btn border py-lg-2 px-lg-3 col-5 ${
+    activeTab === "functional" ? "text-white" : "text-dark"
+  }`}
+  style={{
+    backgroundColor: activeTab === "functional" ? "#74C61B" : "#ffffff",
+  }}
+>
+  Functional
+</button>
+          <button
+  onClick={() => {
+    setActiveTab("industry");
+    setOpenIndex(null);
+  }}
+  className={`btn border py-lg-2 px-lg-3 col-5 ${
+    activeTab === "industry" ? "text-white" : "text-dark"
+  }`}
+  style={{
+    backgroundColor: activeTab === "industry" ? "#74C61B" : "#ffffff",
+  }}
+>
+Industry-Sector
+</button>
+          </div>
+          {currentData.map((item, index) => (
             <div key={index} className="platform-indiviual-con">
               <div
                 className="platform-item-div"

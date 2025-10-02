@@ -81,7 +81,8 @@
 }
 .events-btns-div{
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
     border-top: 1px solid gainsboro;
     border-bottom: 1px solid gainsboro;
     background-color: white;

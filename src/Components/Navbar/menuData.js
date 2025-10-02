@@ -1,5 +1,5 @@
 export const menuData = [
-  { label: "Home", link: "/" },
+  { label: "Home", link: "/", placement: "top" },
   {
     label: "About",
     submenu: [
@@ -9,7 +9,9 @@ export const menuData = [
       { label: "Industry First Approach", link: "/industry-approach" },
       // { label: "Campus", link: "/campus" },
     ],
+    placement: "bottom"
   },
+  { label: "Admissions", link: "/admissions",submenu:[],placement: "bottom" },
   {
     label: "Programs",
     link: "/program",
@@ -177,6 +179,7 @@ export const menuData = [
             ],
       },
     ],
+    placement: "bottom"
   },
   {
     label: "Advisory Councils",
@@ -208,6 +211,7 @@ export const menuData = [
         ],
       },
     ],
+    placement: "bottom"
   },
   {
     label: "Faculty",
@@ -223,6 +227,7 @@ export const menuData = [
         link: "/faculty/business-communications-others" 
       },
     ],
+    placement: "bottom"
   },
   {
     label: "Campus Placements",
@@ -233,6 +238,7 @@ export const menuData = [
       { label: "Summer Internships", link: "/placements/internships" },
       { label: "Live Projects", link: "/placements/projects" },
     ],
+    placement: "bottom"
   },
   {
     label: "Industry Engagement",
@@ -250,12 +256,20 @@ export const menuData = [
         link: "/engagement/ct-to-ca",
       },
     ],
+    placement: "top"
   },
+  { label: "Consortium", link: "/consortium",placement: "bottom" },
+  // { label: "News & Blogs", link: "/new-blogs" },
+  { label: "Contact Us", link: "/contact", placement: "top" },
+  { label: "Campus Ambience", link: "/campus-ambience", placement: "top" },
+    { label: "CSR", link: "/csr", placement: "top" },
+  { label: "Careers", link: "/careers", placement: "top" },
   {
-    label: "Strategic",
+    label: "Strategic Colab",
     submenu: [
       { label: "Strategic Partners", link: "/partners" },
       { label: "International Collaborations", link: "/collaborations" },
+      { label: "Industry Partners", link: "/Industry-partners" },
       {
         label: "Centers of Excellence (CoEs)",
         submenu: [
@@ -285,7 +299,6 @@ export const menuData = [
           },
         ],
       },
-      { label: "Industry Partners", link: "/Industry-partners" },
       // {
       //   label: "Centers of Excellence (CoEs)",
       //   submenu: [
@@ -304,16 +317,10 @@ export const menuData = [
       //   ],
       // },
     ],
+    placement: "top"
   },
-  // { label: "News & Blogs", link: "/new-blogs" },
-  { label: "Admissions", link: "/admissions" },
-  { label: "Contact Us", link: "/contact" },
-  { label: "Campus Ambience", link: "/campus-ambience" },
-    { label: "CSR", link: "/csr" },
-  { label: "Careers", link: "/careers" },
   // { label: "Budding Talent", link: "/budding-talent" },
-  { label: "Consortium", link: "/consortium" },
-  { label: "Budding Talent", link: "/budding-talent" },
+  { label: "Budding Talent", link: "/budding-talent", placement: "bottom" },
 
   // { label: "CSR", link: "/csr" },
 

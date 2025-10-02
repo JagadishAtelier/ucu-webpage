@@ -8,7 +8,7 @@ const data = [
   {
     image: image1,
     top: "Customised Learning Program",
-    heading: "Customised Learning Program",
+    // heading: "Customised Learning Program",
     btntext: "Explore Coustomised Programs",
     para: `Ignite your organization’s potential with UCU’s XEL
     Customised Learning Program—an electrifying, tailor-made curriculum engineered to
@@ -18,7 +18,7 @@ const data = [
   {
     image: image2,
     top: "Management Development Programs (MDPs)",
-    heading: "Management Development Programs (MDPs)",
+    // heading: "Management Development Programs (MDPs)",
     btntext: "Explore MDPS",
     para: `Supercharge your leadership impact with
     UCU’s MDP Executive Programs—immersive, high-velocity experiences designed to
@@ -75,13 +75,13 @@ function Management() {
 
               {/* Grid Section */}
               <div className="cxo-grid">
-                <div className="cxo-card bg-cxo">
+                {/* <div className="cxo-card bg-cxo">
                   <h4>CXO</h4>
                   <p className="fs-6">
                     Master cross-functional leadership, strategy execution, and
                     boardroom decision-making.
                   </p>
-                </div>
+                </div> */}
                 <div className="cxo-card bg-cio">
                   <h4>CIO</h4>
                   <p className="fs-6">

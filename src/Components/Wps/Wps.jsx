@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 const data = [
     {
       image: image1,
-      heading: "Career Reboot Program",
+      // heading: "Career Reboot Program",
       para1: `Designed for women aspiring to get back into the corporate`,
       para2: `Program Duration: X months`,
       para3: `Mode: Hybrid`,

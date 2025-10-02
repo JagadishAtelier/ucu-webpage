@@ -98,6 +98,7 @@
   flex-direction: column;
   gap: 20px;
   color: white;
+  padding-right: 1rem;
 }
 .man-item-content h1 {
   font-size: 1.2rem;

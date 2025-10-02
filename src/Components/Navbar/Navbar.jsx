@@ -9,7 +9,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   // Using an object to keep track of which menus are open, by their label
   const [openMenus, setOpenMenus] = useState({});
-
+  const [hoverMenus, setHoverMenus] = useState({});
   const toggleMobile = () => setMobileOpen(!mobileOpen);
 
   // Separating top-level menu items for desktop vs mobile drawer display
@@ -22,6 +22,16 @@ const Navbar = () => {
       ...prev,
       [label]: !prev[label], // Toggle the state for the clicked menu item's label
     }));
+  };
+
+  const handleHover = (label) => {
+    setHoverMenus((prev) => ({ ...prev, [label]: true }));
+  };
+  
+  const handleLeave = (label) => {
+    setTimeout(() => {
+      setHoverMenus((prev) => ({ ...prev, [label]: false }));
+    }, 5000); // keeps dropdown open for 5 sec
   };
 
   const renderMenuItems = (items, depth = 0) => {
@@ -38,21 +48,21 @@ const Navbar = () => {
                   onClick={() => toggleSubmenu(item.label)}
                 >
                   {item.label}
-                  {depth === 0 ? (
-                    <ChevronDown
-                      size={16}
-                      className={`chevron ${
-                        openMenus[item.label] ? "rotated" : ""
-                      }`}
-                    />
-                  ) : (
-                    <ChevronRight
-                      size={16}
-                      className={`chevron ${
-                        openMenus[item.label] ? "rotated" : ""
-                      }`}
-                    />
-                  )}
+                  {item.submenu && item.submenu.length > 0 && (
+  depth === 0 ? (
+    <ChevronDown
+      size={16}
+      className={`chevron ${openMenus[item.label] ? "rotated" : ""}`}
+    />
+  ) : (
+    <ChevronRight
+      size={16}
+      className={`chevron ${openMenus[item.label] ? "rotated" : ""}`}
+    />
+  )
+)}
+
+
                 </button>
                 {/* Only render submenu if it's open */}
                 {openMenus[item.label] &&
@@ -120,20 +130,66 @@ const Navbar = () => {
                 {/* <p className="logo-text">Chennai</p> */}
               </div>
               <ul className="list-inline mb-0">
-                {menuData
-                  .filter((menu) => !menu.submenu)
-                  .map(
-                    (
-                      menu // Use menuData directly for top-level non-submenu items
-                    ) => (
-                      <li key={menu.label} className="list-inline-item">
-                        <Link to={menu.link}>
-                          {menu.label.toLocaleUpperCase()}
-                        </Link>
-                      </li>
-                    )
+              {menuData
+  .filter((menu) => menu.placement === "top")
+  .map((menu) => (
+    <li
+      key={menu.label}
+      className={`list-inline-item nav-item dropdown ${menu.submenu ? "has-mega" : ""}`}
+      onMouseEnter={() => handleHover(menu.label)}
+      onMouseLeave={() => handleLeave(menu.label)}
+    >
+      {menu.submenu && menu.submenu.length > 0 ? (
+        <>
+          <a
+            href="#!"
+            className="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            role="button"
+            aria-expanded="false"
+          >
+            {menu.label.toUpperCase()}
+          </a>
+
+          <div
+            className={`dropdown-menu top-dropdown  ${menu.label
+              ?.replace(/\s+/g, "-")
+              .toLowerCase()}`}
+            style={{ display: hoverMenus[menu.label] ? "block" : "none" }}
+          >
+            <div className="row dropdown-menu-container">
+              {menu.submenu.map((col) => (
+                <div className="dropdown-menu-col" key={col.label}>
+                  <p className="top-head">
+                    <Link to={col.link || "#"}>{col.label}</Link>
+                  </p>
+                  {col.submenu && (
+                    <ul className="third-level-menu">
+                      {col.submenu.map((subItem) => (
+                        <li key={subItem.label}>
+                          <Link
+                            to={subItem.link || "#"}
+                            className="third-level-link"
+                          >
+                            {subItem.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                   )}
-              </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </>
+      ) : (
+        <Link to={menu.link}>{menu.label.toUpperCase()}</Link>
+      )}
+    </li>
+  ))}
+
+</ul>
+
               <div className="search-box ms-3">
                 <input type="text" placeholder="Search" />
                 <button type="button">
@@ -151,124 +207,61 @@ const Navbar = () => {
             </div>
 
             {/* Bottom menus with dropdowns (Desktop Mega Menu) */}
-            <ul className="navbar-nav navbar-main d-flex justify-content-end align-items-center">
-              {menuData
-                .filter((menu) => menu.submenu)
-                .map(
-                  (
-                    menu // Use menuData directly for top-level submenu items
-                  ) => (
-                    <li
-                      key={menu.label}
-                      className={`nav-item dropdown ${
-                        menu.submenu ? "has-mega" : ""
-                      }`}
-                    >
-                      <a
-                        href="#!"
-                        className="nav-link dropdown-toggle"
-                        data-bs-toggle="dropdown"
-                        role="button"
-                        aria-expanded="false"
-                      >
-                        {menu.label}
-                      </a>
+{/* Bottom menus with dropdowns */}
+<ul className="navbar-nav navbar-main d-flex justify-content-end align-items-center">
+  {menuData
+    .filter((menu) => menu.placement === "bottom")
+    .map((menu) => (
+      <li
+        key={menu.label}
+        className={`nav-item dropdown ${menu.submenu ? "has-mega" : ""}`}
+      >
+{menu.submenu && menu.submenu.length > 0 ? (
+  <a
+    href="#!"
+    className="nav-link dropdown-toggle"
+    data-bs-toggle="dropdown"
+    role="button"
+    aria-expanded="false"
+  >
+    {menu.label}
+  </a>
+) : (
+  <Link to={menu.link} className="nav-link" style={{width:"max-content"}}>
+    {menu.label}
+  </Link>
+)}
 
-                      {/* Mega menu */}
-                      <div
-                        className={`dropdown-menu ${menu.label
-                          ?.replace(/\s+/g, "-")
-                          .toLowerCase()}`}
-                      >
-                        <div className="row dropdown-menu-container">
-                          {menu.submenu.map((col) => (
-                            <div className="dropdown-menu-col" key={col.label}>
-                              <p className="top-head">
-                                <Link to={col.link || "#"}>{col.label}</Link>
-                              </p>
-                              {/* Render sub-submenus recursively */}
-                              {col.submenu && col.submenu.length > 0 && (
-                                <ul className="third-level-menu">
-                                  {col.submenu.map((subItem) => (
-                                    <li key={subItem.label}>
-                                      {subItem.submenu ? (
-                                        <>
-                                          <div className="fourth-level-parent">
-                                            {subItem.label ===
-                                              "Career Reboot Program for Women" ||
-                                            subItem.label ===
-                                              "Executive Post Graduate Certificate Programs" ||
-                                            subItem.label ===
-                                              "Industry Sector Specific Offerings" ||
-                                            subItem.label ===
-                                              "Faculty Development Program" ? (
-                                              <p className="career-reboot-heading">
-                                                {subItem.label}
-                                              </p>
-                                            ) : (
-                                              <Link
-                                                to={subItem.link || "#"}
-                                                className="third-level-link"
-                                              >
-                                                {subItem.label}
-                                              </Link>
-                                            )}
-                                            <ChevronRight
-                                              size={14}
-                                              className="right-arrow-icon"
-                                            />
-                                          </div>
 
-                                          {subItem.submenu.length > 0 && (
-                                            <ul className="fourth-level-menu">
-                                              {subItem.submenu.map(
-                                                (fourthItem) => (
-                                                  <li key={fourthItem.label}>
-                                                    <Link
-                                                      to={
-                                                        fourthItem.link || "#"
-                                                      }
-                                                      className="fourth-level-link"
-                                                    >
-                                                      {fourthItem.label}
-                                                    </Link>
-                                                  </li>
-                                                )
-                                              )}
-                                            </ul>
-                                          )}
-                                        </>
-                                      ) : subItem.label ===
-                                          "Career Reboot Program for Women" ||
-                                          subItem.label ===
-                                          "Executive Post Graduate Certificate Programs" ||
-                                          subItem.label ===
-                                              "Industry Sector Specific Offerings" ||
-                                        subItem.label ===
-                                          "Faculty Development Program" ? (
-                                        <p className="career-reboot-heading">
-                                          {subItem.label}
-                                        </p>
-                                      ) : (
-                                        <Link
-                                          to={subItem.link || "#"}
-                                          className="third-level-link"
-                                        >
-                                          {subItem.label}
-                                        </Link>
-                                      )}
-                                    </li>
-                                  ))}
-                                </ul>
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </li>
-                  )
-                )}
-            </ul>
+
+        {menu.submenu && menu.submenu.length > 0 && (
+          <div className={`dropdown-menu ${menu.label?.replace(/\s+/g, "-").toLowerCase()}`}>
+            <div className="row dropdown-menu-container">
+              {menu.submenu.map((col) => (
+                <div className="dropdown-menu-col" key={col.label}>
+                  <p className="top-head">
+                    <Link to={col.link || "#"}>{col.label}</Link>
+                  </p>
+                  {col.submenu && (
+                    <ul className="third-level-menu">
+                      {col.submenu.map((subItem) => (
+                        <li key={subItem.label}>
+                          <Link to={subItem.link || "#"} className="third-level-link">
+                            {subItem.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </li>
+    ))}
+</ul>
+
           </div>
           <div className="d-flex gap-2 mobile-right">
             <Search className="icon d-lg-none" size={24} color="#333" />

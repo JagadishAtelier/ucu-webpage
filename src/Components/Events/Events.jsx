@@ -45,11 +45,9 @@ function Events() {
   return (
     <div className="eve-platforms-container py-5">
       <div className="event-header" data-aos="fade-down">
-        <h1 className="display-4 fw-bold col-12 col-lg-4 text-center mb-0">Recent <span style={{color:"#5ac501"}}>Events</span></h1>
-        <div className="event-header-left">
-          <h1 className="display-4 fw-bold col-12 col-lg-10 text-lg-center text-center">Upcoming <span style={{color:"#5ac501"}}>Events</span></h1>
-          <a href="/" className="event-view-all-a-tag">View all</a>
-        </div>
+        {/* <h1 className="display-4 fw-bold col-12 col-lg-4 text-center mb-0">Recent <span style={{color:"#5ac501"}}>Events</span></h1> */}
+          <h1 className="display-4 fw-bold col-12 col-lg-12 text-lg-center text-center">Upcoming <span style={{color:"#5ac501"}}>Events</span></h1>
+          {/* <a href="/" className="event-view-all-a-tag">View all</a> */}
       </div>
 
       <div className="eve-platform">
@@ -74,6 +72,7 @@ function Events() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
+            <div className="d-flex gap-3">
             {buttons.map((btn, index) => (
               <button
                 key={index}
@@ -83,6 +82,8 @@ function Events() {
                 {btn}
               </button>
             ))}
+          </div>
+                    <a href="/" className="event-view-all-a-tag">View all</a>
           </div>
 
           {/* Event Items */}
