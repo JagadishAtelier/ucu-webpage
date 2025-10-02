@@ -92,9 +92,12 @@
   transform: translateX(-50%) translateY(0);
 }
 
-.dropdown-menu.programs,
+
 .dropdown-menu.advisory-councils {
   left: 110% !important;
+}
+.dropdown-menu.programs{
+  left: 210% !important;
 }
 .dropdown-menu.programs,
 .dropdown-menu.advisory-councils {

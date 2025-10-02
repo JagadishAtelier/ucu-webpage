@@ -313,6 +313,7 @@ export const menuData = [
   { label: "Careers", link: "/careers" },
   // { label: "Budding Talent", link: "/budding-talent" },
   { label: "Consortium", link: "/consortium" },
+  { label: "Budding Talent", link: "/budding-talent" },
 
   // { label: "CSR", link: "/csr" },
 
