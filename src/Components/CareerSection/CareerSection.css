@@ -51,6 +51,8 @@
 }
 .car-right p{
     font-size: 0.9rem;
+    color: #000;
+    opacity: 1 !important;
 }
 .car-right{
     display: flex;

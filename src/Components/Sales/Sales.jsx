@@ -115,7 +115,7 @@ function Sales() {
               <img src={item.image} alt={item.heading} />
               <div className="p-3 position-relative">
                 <h1 className="mt-3">{item.heading}</h1>
-                <p className="mb-3">{item.para}</p>
+                <p className="mb-3 text-dark">{item.para}</p>
                 <div className="car-explore-btn-div sales-btn p-1">
                   <button className="car-explore-btn expo-btn btn btn-outline-dark">
                     EXPLORE
