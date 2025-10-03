@@ -131,6 +131,7 @@ align-items: center;
 .extra-content-inner h3{
  display: inline;
  margin-top: 1rem;
+ max-width:70%;
 }
 .sort-disc{
   text-align: center;
