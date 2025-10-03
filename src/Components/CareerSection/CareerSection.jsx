@@ -14,12 +14,13 @@ import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 import { FaUserTie } from "react-icons/fa";   // for eligibility
 import { BsClockHistory } from "react-icons/bs"; // for duration
+import { CalendarDays, User } from "lucide-react";
 const data = [
   {
     image: image1,
     heading: "Post Graduate Program in Management - ELITE (PGPM-ELITE)",
     para: `A one-year Post Graduate Program in Management designed for experienced professionals—integrating executive leadership frameworks with real-world business insight to accelerate career impact`,
-    buttonText:"Explore-PGPM-ELITE",
+    buttonText:"Explore More",
     elgible : "3+ years of experience",
     duration : "18 months",
   },
@@ -28,7 +29,7 @@ const data = [
     heading: "Post Graduate Diploma in Management (PGDM)",
     para: `A two-year UCU’s Post Graduate Diploma in Management (PGDM) for Freshers is designed to launch high-potential talent into the business world—building strong foundations and accelerating their journey into impactful careers.
     `,
-    buttonText:"Explore-PGDM",
+    buttonText:"Explore More",
     elgible : "0 - 3 years of experience",
     duration : "24 months"
 
@@ -59,7 +60,7 @@ const secondRowdata = [
     image: "https://plus.unsplash.com/premium_photo-1691849271953-5f727dfaf1ae?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     heading: "PGPM FLEX",
     para: `A one-year PGPM FLEX designed for experienced professionals—integrating executive leadership frameworks with real-world business insight to accelerate career impact`,
-    buttonText:"Explore-PGPM-ELITE",
+    buttonText:"Explore More",
     elgible : "3+ years of experience",
     duration : "18 months",
   },
@@ -68,7 +69,7 @@ const secondRowdata = [
     heading: "PGXPM",
     para: `A two-year UCU’s PGXPM for Freshers is designed to launch high-potential talent into the business world—building strong foundations and accelerating their journey into impactful careers.
     `,
-    buttonText:"Explore-PGDM",
+    buttonText:"Explore More",
     elgible : "0 - 3 years of experience",
     duration : "24 months"
 
@@ -130,7 +131,7 @@ function CareerSection() {
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="car-item-div" data-aos="fade-up" data-aos-delay={index * 200}>
+            <div className="car-item-div" style={{background:"linear-gradient(205deg, rgba(23, 3, 169, 1) 1%, rgba(7, 186, 243, 1) 100%)"}} data-aos="fade-up" data-aos-delay={index * 200}>
               <div className="car-image-wrapper">
                 <img src={item.image} alt={item.heading} />
               </div>
@@ -138,15 +139,15 @@ function CareerSection() {
                 <h1 className="title mb-lg-3 mb-0">{item.heading}</h1>
                 <p className="program-description mb-0 mb-lg-2">{item.para}</p>
                 <div className="d-flex flex-row gap-2 items-center">
-                  <FaUserTie />
+                  <User size={18} color="#07b5f1"/>
                   <p className="program-description">{item.elgible}</p>
                 </div>
                 <div className="d-flex flex-row gap-2 items-center">
-                <BsClockHistory />
+                <CalendarDays size={18} color="#07b5f1"/>
                   <p className="program-description">{item.duration}</p>
                 </div>
                 <div className="car-explore-btn-div">
-                  <button className="btn btn-outline-dark py-2">{item.buttonText}</button>
+                  <button className="btn green-explore-btn py-2">{item.buttonText}</button>
                   <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>
@@ -168,7 +169,7 @@ function CareerSection() {
       >
         {secondRowdata.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="car-item-div" data-aos="fade-up" data-aos-delay={index * 200}>
+            <div className="car-item-div" style={{background:"linear-gradient(205deg, rgba(23, 3, 169, 1) 1%, rgba(7, 186, 243, 1) 100%)"}} data-aos="fade-up" data-aos-delay={index * 200}>
               <div className="car-image-wrapper">
                 <img src={item.image} alt={item.heading} />
               </div>
@@ -176,15 +177,15 @@ function CareerSection() {
                 <h1 className="title mb-lg-3 mb-0">{item.heading}</h1>
                 <p className="program-description mb-0 mb-lg-2">{item.para}</p>
                 <div className="d-flex flex-row gap-2 items-center">
-                  <FaUserTie />
+                  <User size={18} color="#07b5f1" className=""/>
                   <p className="program-description">{item.elgible}</p>
                 </div>
                 <div className="d-flex flex-row gap-2 items-center">
-                <BsClockHistory />
+                <CalendarDays size={18} color="#07b5f1" className=""/>
                   <p className="program-description">{item.duration}</p>
                 </div>
                 <div className="car-explore-btn-div">
-                  <button className="btn btn-outline-dark py-2">{item.buttonText}</button>
+                  <button className="btn green-explore-btn py-2">{item.buttonText}</button>
                   <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>

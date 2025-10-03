@@ -53,9 +53,9 @@ function Management() {
               <div className="man-item-div-container">
                 <img src={item.image} />
                 <div className="man-item-content">
-                  <h1>{item.heading}</h1>
+                  {/* <h1>{item.heading}</h1> */}
                   <h1 className="top-text-man my-0 ms-0 h3 fw-semibold">{item.top}</h1>
-                  <p className="program-description">{item.para}</p>
+                  <p className="program-description text-white">{item.para}</p>
                   <a className="EXPLORE-MDPS ">{item.btntext}</a>
                 </div>
               </div>

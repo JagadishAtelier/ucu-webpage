@@ -22,7 +22,10 @@ export const menuData = [
           { label: "CHRO Series", link: "/engagement/chro" },
           { label: "CFO Series", link: "/engagement/cfo" },
           { label: "CPO Series", link: "/engagement/cpo" },
-          { label: "Career Accelerator Program (CAP)", link: "/engagement/cap" },
+          {
+            label: "Career Accelerator Program (CAP)",
+            link: "/engagement/cap",
+          },
           {
             label: "Career Transformation to Career Acceleration (CT to CA)",
             link: "/engagement/ct-to-ca",
@@ -106,27 +109,45 @@ export const menuData = [
         ],
       },
       {
-        label: "Functional Certifications",
-        link: "/program/functional-certifications",
+        label: "Executive Post Graduate Certificate Programmes",
+        link: "/program/career-reboot",
         submenu: [
-          { label: "Sales", link: "/program/sales" },
-          { label: "Product Management", link: "/program/product-management" },
-          { label: "Cybersecurity", link: "/program/cybersecurity" },
           {
-            label: "Brand Management & Digital Marketing",
-            link: "/program/bm-dm",
+            label: "Functional Specialization",
+            link: "/program/functional-certifications",
+            submenu: [
+              { label: "Sales", link: "/program/sales" },
+              {
+                label: "Product Management",
+                link: "/program/product-management",
+              },
+              { label: "Cybersecurity", link: "/program/cybersecurity" },
+              {
+                label: "Brand Management & Digital Marketing",
+                link: "/program/bm-dm",
+              },
+              {
+                label: "Mobility & Sustainability",
+                link: "/program/mobility-sustainability",
+              },
+              { label: "Consulting", link: "/program/consulting" },
+              { label: "Banking & Finance", link: "/program/banking-finance" },
+              {
+                label: "Business Analytics",
+                link: "/program/business-analytics",
+              },
+              { label: "Data Science & AI", link: "/program/data-science" },
+            ],
           },
-          { label: "Mobility & Sustainability", link: "/program/mobility-sustainability" },
-          { label: "Consulting", link: "/program/consulting" },
-          { label: "Banking & Finance", link: "/program/banking-finance" },
-          { label: "Business Analytics", link: "/program/business-analytics" },
-          { label: "Data Science & AI", link: "/program/data-science" },
           {
-            label: "Industry Sector Specific Offerings",
+            label: "Industry Sector Specialization",
             link: "/program/industry-sector",
             submenu: [
               { label: "FinTech", link: "/program/fintech" },
-              { label: "Global Capability Centers (GCC)", link: "/program/gcc" },
+              {
+                label: "Global Capability Centers (GCC)",
+                link: "/program/gcc",
+              },
             ],
           },
         ],
@@ -139,7 +160,10 @@ export const menuData = [
             label: "Customised Learning Programs for Corporate Professionals",
             link: "/program/program-customised-learning-programs-for-corporate-professionals",
           },
-          { label: "Management Development Programs (MDPs)", link: "/program/MDPs" },
+          {
+            label: "Management Development Programs (MDPs)",
+            link: "/program/MDPs",
+          },
           {
             label: "1 Year CXO Accelerator Program with Campus Immersion",
             submenu: [
@@ -161,7 +185,10 @@ export const menuData = [
           { label: "Product Management", link: "/program/product-management" },
           { label: "Cybersecurity", link: "/program/cybersecurity" },
           { label: "Digital Marketing", link: "/program/digital-marketing" },
-          { label: "Mobility & Sustainability", link: "/program/mobility-sustainability" },
+          {
+            label: "Mobility & Sustainability",
+            link: "/program/mobility-sustainability",
+          },
           { label: "Consulting", link: "/program/consulting" },
           { label: "Banking & Finance", link: "/program/banking-finance" },
           { label: "Business Analytics", link: "/program/business-analytics" },
@@ -171,7 +198,10 @@ export const menuData = [
             link: "/program/industry-sector",
             submenu: [
               { label: "FinTech", link: "/program/fintech" },
-              { label: "Global Capability Centers (GCC)", link: "/program/gcc" },
+              {
+                label: "Global Capability Centers (GCC)",
+                link: "/program/gcc",
+              },
             ],
           },
         ],
@@ -185,7 +215,10 @@ export const menuData = [
     submenu: [
       { label: "Sales & Marketing", link: "/faculty/sales-marketing" },
       { label: "Finance", link: "/faculty/finance" },
-      { label: "Operations & Supply Chain", link: "/faculty/operations-supply-chain" },
+      {
+        label: "Operations & Supply Chain",
+        link: "/faculty/operations-supply-chain",
+      },
       { label: "Analytics & AI", link: "/faculty/analytics-AI" },
       { label: "Consulting", link: "/faculty/consulting" },
       { label: "Product", link: "/faculty/product" },
@@ -216,7 +249,10 @@ export const menuData = [
           { label: "Cybersecurity Advisory Council", link: "/cac" },
           { label: "FinTech Advisory Council", link: "/ftac" },
           { label: "GCC Advisory Council", link: "/gccac" },
-          { label: "Mobility & Sustainability Advisory Council", link: "/msac" },
+          {
+            label: "Mobility & Sustainability Advisory Council",
+            link: "/msac",
+          },
           { label: "Consulting Advisory Council", link: "/conac" },
         ],
       },

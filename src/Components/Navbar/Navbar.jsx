@@ -2,25 +2,28 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { menuData } from "./menuData";
 import "./Navbar.css";
-import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronRight,
+  Menu,
+  Search,
+  User,
+  X,
+} from "lucide-react";
 import logoImg from "../../Assets/aac/Copy of Webpage_20250924_151944_0001.png";
+
 const Navbar = () => {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
-  // Using an object to keep track of which menus are open, by their label
   const [openMenus, setOpenMenus] = useState({});
   const [hoverMenus, setHoverMenus] = useState({});
-  const toggleMobile = () => setMobileOpen(!mobileOpen);
 
-  // Separating top-level menu items for desktop vs mobile drawer display
-  // For the drawer, it's better to render all in one go with proper nesting
-  // so we can combine them later.
-  // For now, let's just make sure menuData is used correctly for the drawer.
+  const toggleMobile = () => setMobileOpen(!mobileOpen);
 
   const toggleSubmenu = (label) => {
     setOpenMenus((prev) => ({
       ...prev,
-      [label]: !prev[label], // Toggle the state for the clicked menu item's label
+      [label]: !prev[label],
     }));
   };
 
@@ -31,15 +34,43 @@ const Navbar = () => {
   const handleLeave = (label) => {
     setTimeout(() => {
       setHoverMenus((prev) => ({ ...prev, [label]: false }));
-    }, 5000); // keeps dropdown open for 5 sec
+    }, 300); // quick hover delay
   };
 
+  // ✅ Recursive submenu renderer
+  const renderNestedMenu = (submenu, depth = 1) => {
+    if (!submenu || !submenu.length) return null;
+
+    return (
+      <ul className={`submenu depth-${depth}`}>
+        {submenu.map((sub) => (
+          <li key={sub.label} className="submenu-item">
+            {sub.submenu && sub.submenu.length > 0 ? (
+              <div className="submenu-parent">
+                <Link to={sub.link || "#"} className={`submenu-link`}>
+                  {sub.label}
+                </Link>
+                <ChevronRight size={12} className="submenu-arrow" />
+                {renderNestedMenu(sub.submenu, depth + 1)}
+              </div>
+            ) : (
+              <Link to={sub.link || "#"} className={`submenu-link`}>
+                {sub.label}
+              </Link>
+            )}
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
+  // ✅ Render menu recursively (for mobile)
   const renderMenuItems = (items, depth = 0) => {
     return (
       <ul className={`menu depth-${depth}`}>
-        {items.map((item, idx) => (
-          <li key={idx} className="menu-item">
-            {item.submenu ? (
+        {items.map((item) => (
+          <li key={item.label} className="menu-item">
+            {item.submenu && item.submenu.length > 0 ? (
               <>
                 <button
                   className={`menu-btn depth-${depth} ${
@@ -48,37 +79,33 @@ const Navbar = () => {
                   onClick={() => toggleSubmenu(item.label)}
                 >
                   {item.label}
-                  {item.submenu &&
-                    item.submenu.length > 0 &&
-                    (depth === 0 ? (
-                      <ChevronDown
-                        size={16}
-                        className={`chevron ${
-                          openMenus[item.label] ? "rotated" : ""
-                        }`}
-                      />
-                    ) : (
-                      <ChevronRight
-                        size={16}
-                        className={`chevron ${
-                          openMenus[item.label] ? "rotated" : ""
-                        }`}
-                      />
-                    ))}
+                  {depth === 0 ? (
+                    <ChevronDown
+                      size={16}
+                      className={`chevron ${
+                        openMenus[item.label] ? "rotated" : ""
+                      }`}
+                    />
+                  ) : (
+                    <ChevronRight
+                      size={16}
+                      className={`chevron ${
+                        openMenus[item.label] ? "rotated" : ""
+                      }`}
+                    />
+                  )}
                 </button>
-                {/* Only render submenu if it's open */}
                 {openMenus[item.label] &&
-                  item.submenu.length > 0 &&
                   renderMenuItems(item.submenu, depth + 1)}
               </>
             ) : (
-              <a
-                href={item.link}
+              <Link
+                to={item.link || "#"}
                 className={`menu-link depth-${depth}`}
                 onClick={toggleMobile}
               >
                 {item.label}
-              </a>
+              </Link>
             )}
           </li>
         ))}
@@ -88,18 +115,11 @@ const Navbar = () => {
 
   return (
     <header className="position-relative">
-      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-md py-0 navbar-main-container ">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-md py-0 navbar-main-container">
         <div className="container-fluid">
           {/* Logo */}
-          <Link
-            className="navbar-brand d-flex align-items-center logo-box m-lg-0"
-            to="/"
-          >
-            <img
-              src={logoImg}
-              alt="Universal Corporate University Logo"
-              className="logo"
-            />
+          <Link className="navbar-brand d-flex align-items-center logo-box m-lg-0" to="/">
+            <img src={logoImg} alt="Universal Corporate University Logo" className="logo" />
             <div className="border-l">
               <p className="logo-text" style={{ color: "#1703a9" }}>
                 <span style={{ color: "#1703a9" }}>U</span>niversal
@@ -113,24 +133,9 @@ const Navbar = () => {
             </div>
           </Link>
 
-          {/* <Link className="navbar-brand mobile-only" to="/">
-            <img
-                src={"/logo2.svg"}
-              alt="Universal Corporate University Logo"
-              className="logo my-auto"
-            />
-          </Link> */}
-
-          {/* Collapse wrapper */}
-          <div
-            className="collapse navbar-collapse justify-content-end flex-column align-items-end"
-            id="mainNavbar"
-          >
-            {/* Top bar */}
+          {/* Top Menu */}
+          <div className="collapse navbar-collapse justify-content-end flex-column align-items-end" id="mainNavbar">
             <div className="top-bar d-flex justify-content-end align-items-center pt-3 bg-white">
-              <div className="Business-school">
-                {/* <p className="logo-text">Chennai</p> */}
-              </div>
               <ul className="list-inline mb-0">
                 {menuData
                   .filter((menu) => menu.placement === "top")
@@ -145,18 +150,11 @@ const Navbar = () => {
                     >
                       {menu.submenu && menu.submenu.length > 0 ? (
                         <>
-                          <a
-                            href="#!"
-                            className="nav-link dropdown-toggle"
-                            data-bs-toggle="dropdown"
-                            role="button"
-                            aria-expanded="false"
-                          >
+                          <a href="#!" className="nav-link dropdown-toggle">
                             {menu.label.toUpperCase()}
                           </a>
-
                           <div
-                            className={`dropdown-menu top-dropdown  ${menu.label
+                            className={`dropdown-menu top-dropdown ${menu.label
                               ?.replace(/\s+/g, "-")
                               .toLowerCase()}`}
                             style={{
@@ -167,29 +165,11 @@ const Navbar = () => {
                           >
                             <div className="row dropdown-menu-container">
                               {menu.submenu.map((col) => (
-                                <div
-                                  className="dropdown-menu-col"
-                                  key={col.label}
-                                >
+                                <div className="dropdown-menu-col" key={col.label}>
                                   <p className="top-head">
-                                    <Link to={col.link || "#"}>
-                                      {col.label}
-                                    </Link>
+                                    <Link to={col.link || "#"}>{col.label}</Link>
                                   </p>
-                                  {col.submenu && (
-                                    <ul className="third-level-menu">
-                                      {col.submenu.map((subItem) => (
-                                        <li key={subItem.label}>
-                                          <Link
-                                            to={subItem.link || "#"}
-                                            className="third-level-link"
-                                          >
-                                            {subItem.label}
-                                          </Link>
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  )}
+                                  {col.submenu && renderNestedMenu(col.submenu, 2)}
                                 </div>
                               ))}
                             </div>
@@ -202,10 +182,11 @@ const Navbar = () => {
                   ))}
               </ul>
 
+              {/* Search & Login */}
               <div className="search-box ms-3">
                 <input type="text" placeholder="Search" />
                 <button type="button">
-                  <i className="bi bi-search"></i>
+                  <Search size={16} />
                 </button>
               </div>
               <div className="d-flex gap-2">
@@ -218,8 +199,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Bottom menus with dropdowns (Desktop Mega Menu) */}
-            {/* Bottom menus with dropdowns */}
+            {/* Bottom/Main Menu */}
             <ul className="navbar-nav navbar-main d-flex justify-content-end align-items-center">
               {menuData
                 .filter((menu) => menu.placement === "bottom")
@@ -229,32 +209,26 @@ const Navbar = () => {
                     className={`nav-item dropdown ${
                       menu.submenu ? "has-mega" : ""
                     }`}
+                    onMouseEnter={() => handleHover(menu.label)}
+                    onMouseLeave={() => handleLeave(menu.label)}
                   >
                     {menu.submenu && menu.submenu.length > 0 ? (
-                      <a
-                        href="#!"
-                        className="nav-link dropdown-toggle"
-                        data-bs-toggle="dropdown"
-                        role="button"
-                        aria-expanded="false"
-                      >
+                      <a href="#!" className="nav-link dropdown-toggle">
                         {menu.label}
                       </a>
                     ) : (
-                      <Link
-                        to={menu.link}
-                        className="nav-link"
-                        style={{ width: "max-content" }}
-                      >
+                      <Link to={menu.link} className="nav-link">
                         {menu.label}
                       </Link>
                     )}
-
-                    {menu.submenu && menu.submenu.length > 0 && (
+                    {menu.submenu && (
                       <div
                         className={`dropdown-menu ${menu.label
                           ?.replace(/\s+/g, "-")
                           .toLowerCase()}`}
+                        style={{
+                          display: hoverMenus[menu.label] ? "block" : "none",
+                        }}
                       >
                         <div className="row dropdown-menu-container">
                           {menu.submenu.map((col) => (
@@ -262,20 +236,7 @@ const Navbar = () => {
                               <p className="top-head">
                                 <Link to={col.link || "#"}>{col.label}</Link>
                               </p>
-                              {col.submenu && (
-                                <ul className="third-level-menu">
-                                  {col.submenu.map((subItem) => (
-                                    <li key={subItem.label}>
-                                      <Link
-                                        to={subItem.link || "#"}
-                                        className="third-level-link"
-                                      >
-                                        {subItem.label}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                              )}
+                              {col.submenu && renderNestedMenu(col.submenu, 2)}
                             </div>
                           ))}
                         </div>
@@ -285,37 +246,29 @@ const Navbar = () => {
                 ))}
             </ul>
           </div>
+
+          {/* Mobile Buttons */}
           <div className="d-flex gap-2 mobile-right">
             <Search className="icon d-lg-none" size={24} color="#333" />
             <User
-              className="icon "
+              className="icon"
               size={24}
               color="#333"
               onClick={() => navigate("/auth/login")}
             />
-
             <button className="mobile-toggle" onClick={toggleMobile}>
               {mobileOpen ? <X /> : <Menu />}
             </button>
           </div>
         </div>
+
+        {/* Mobile Drawer */}
         {mobileOpen && (
           <>
-            {/* Overlay background */}
             <div className="drawer-overlay" onClick={toggleMobile}></div>
-
-            {/* Drawer itself */}
             <div className="drawer">
               <div className="drawer-header">
-                <Link
-                  className="navbar-brand d-flex align-items-center logo-box m-lg-0"
-                  to="/"
-                >
-                  {/* <img
-                src={"/logo2.svg"}
-                alt="Universal Corporate University Logo"
-                className="logo"
-              /> */}
+                <Link className="navbar-brand d-flex align-items-center logo-box m-lg-0" to="/">
                   <div className="border-l border-white">
                     <p className="logo-text" style={{ color: "#1703a9" }}>
                       <span style={{ color: "#1703a9" }}>U</span>niversal
@@ -332,11 +285,7 @@ const Navbar = () => {
                   <X size={28} />
                 </button>
               </div>
-
-              <div className="drawer-content">
-                {/* Render all menu data for the mobile drawer */}
-                {renderMenuItems(menuData)}
-              </div>
+              <div className="drawer-content">{renderMenuItems(menuData)}</div>
             </div>
           </>
         )}

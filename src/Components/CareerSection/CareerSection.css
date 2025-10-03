@@ -48,10 +48,11 @@
 .car-right h1{
     font-size: 1.2rem;
     font-weight: bold;
+    color: #fff;
 }
 .car-right p{
     font-size: 0.9rem;
-    color: #000;
+    color: #fff;
     opacity: 1 !important;
 }
 .car-right{
@@ -73,12 +74,29 @@
     border-radius: 3px;
 }
 .car-explore-btn{
-    background-color: rgba(255, 255, 255, 0);
+        background-color: #ffffff00;
     color: black;
     border: 1px solid black;
 }
+.green-explore-btn{
+    background-color: #74C61B;
+    color: white;
+    letter-spacing: .5px;
+    border: none;
+}
+.green-explore-btn:hover{
+    background-color: #5aa015;
+    color: white;
+    border: none;
+}
 .car-apply-btn{
     background-color: #74C61B;
+    color: white;
+    letter-spacing: 1px;
+    border: none;
+}
+.car-apply-btn:hover{
+    background-color: #5aa015;
     color: white;
     border: none;
 }

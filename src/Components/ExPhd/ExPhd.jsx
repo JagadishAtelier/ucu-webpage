@@ -12,6 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 import { FaUserTie } from "react-icons/fa"; 
+import { User } from "lucide-react";
 const data = [
     {
       image: image1,
@@ -68,7 +69,7 @@ function ExPhd() {
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="car-item-div ex-phd-container" data-aos="fade-up" data-aos-delay={index * 200}>
+            <div className="car-item-div ex-phd-container" style={{background:"linear-gradient(205deg, rgba(23, 3, 169, 1) 1%, rgba(7, 186, 243, 1) 100%)"}} data-aos="fade-up" data-aos-delay={index * 200}>
               <div className="car-image-wrapper exPhd-img-div">
                 <img src={item.image} alt={item.heading} className="exPhd-img"/>
               </div>
@@ -76,11 +77,11 @@ function ExPhd() {
                 {/* <h1 className="title mb-3">{item.heading}</h1> */}
                 <p className="program-description mt-3">{item.para}</p>
                 <div className="d-flex flex-row gap-2 items-center">
-                  <FaUserTie />
+                  <User size={18} color="#07b5f1" />
                   <p className="program-description">{item.eligible}</p>
                 </div>
                 <div className="car-explore-btn-div">
-                  <button className="btn btn-outline-dark py-2">EXPLORE</button>
+                  <button className="btn car-apply-btn py-2">EXPLORE</button>
                   <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>
