@@ -102,11 +102,12 @@
 .dropdown-menu.programs,
 .dropdown-menu.advisory-councils {
   width: 79vw !important;
-  transform: translateX(-55%) translateY(0) !important;
+  transform: translateX(-65%) translateY(0) !important;
 }
 .dropdown-menu.about,
 .dropdown-menu.campus-placements {
   width: 300px !important;
+  transform: translateX(-70%) translateY(0) !important ;
 }
 .dropdown-menu.about {
   left: 90% !important;

@@ -1,20 +1,91 @@
 export const menuData = [
+  // 🔝 Top Menu
   { label: "Home", link: "/", placement: "top" },
+  { label: "News & Blog", link: "/news-blogs", placement: "top" },
+  { label: "Campus", link: "/campus-ambience", placement: "top" },
+  { label: "Societal impact", link: "/csr", placement: "top" },
+  { label: "Careers", link: "/careers", placement: "top" },
+  { label: "Budding Talent", link: "/budding-talent", placement: "top" },
+
+  // ✅ Industry Partnership (Merged)
+  {
+    label: "Industry Partnership",
+    placement: "top",
+    submenu: [
+      {
+        label: "Industry Engagement",
+        submenu: [
+          { label: "CXO Series", link: "/engagement/cxo" },
+          { label: "CIO Series", link: "/engagement/cio" },
+          { label: "CTO Series", link: "/engagement/cto" },
+          { label: "CMO Series", link: "/engagement/cmo" },
+          { label: "CHRO Series", link: "/engagement/chro" },
+          { label: "CFO Series", link: "/engagement/cfo" },
+          { label: "CPO Series", link: "/engagement/cpo" },
+          { label: "Career Accelerator Program (CAP)", link: "/engagement/cap" },
+          {
+            label: "Career Transformation to Career Acceleration (CT to CA)",
+            link: "/engagement/ct-to-ca",
+          },
+        ],
+      },
+      {
+        label: "Strategic Collaborations",
+        submenu: [
+          { label: "Strategic Partners", link: "/partners" },
+          { label: "International Collaborations", link: "/collaborations" },
+          { label: "Industry Partners", link: "/Industry-partners" },
+          {
+            label: "Centers of Excellence (CoEs)",
+            submenu: [
+              {
+                label: "Center of Excellence in Marketing",
+                link: "/coe/marketing",
+              },
+              {
+                label: "Center of Excellence in Finance",
+                link: "/coe/finance",
+              },
+              {
+                label: "Center of Excellence in Operations",
+                link: "/coe/operations",
+              },
+              {
+                label: "Center of Excellence in Analytics, Data & AI",
+                link: "/coe/analytics-ai",
+              },
+              {
+                label: "Center of Excellence in Consulting",
+                link: "/coe/consulting",
+              },
+              {
+                label: "Center of Excellence in Entrepreneurship",
+                link: "/coe/entrepreneurship",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // 🧭 Nav Bar (Main Menu - Bottom Placement)
   {
     label: "About",
+    placement: "bottom",
+    link: "/about-ucu",
     submenu: [
       { label: "Our Story", link: "/our-story" },
       { label: "Vision & Mission", link: "/vision-mission" },
       { label: "Founder's Message", link: "/founder-message" },
       { label: "Industry First Approach", link: "/industry-approach" },
-      // { label: "Campus", link: "/campus" },
     ],
-    placement: "bottom"
   },
-  { label: "Admissions", link: "/admissions",submenu:[],placement: "bottom" },
+
   {
     label: "Programs",
     link: "/program",
+    placement: "bottom",
     submenu: [
       {
         label: "Full Time Programs",
@@ -22,15 +93,8 @@ export const menuData = [
         submenu: [
           { label: "PGPM-ELITE", link: "/program/pgpm-elite" },
           { label: "PGDM", link: "/program/pgdm" },
-          {
-            label: "PGPM Flex",
-            link: "/program/pgpm",
-          },
-          {
-            label: "PGXPM",
-            link: "/program/pgxpm",
-          },
-
+          { label: "PGPM Flex", link: "/program/pgpm" },
+          { label: "PGXPM", link: "/program/pgxpm" },
           {
             label: "Executive Post Graduate Certificate Programs",
             link: "/program/executive-pgcp",
@@ -41,148 +105,100 @@ export const menuData = [
           },
         ],
       },
+      {
+        label: "Functional Certifications",
+        link: "/program/functional-certifications",
+        submenu: [
+          { label: "Sales", link: "/program/sales" },
+          { label: "Product Management", link: "/program/product-management" },
+          { label: "Cybersecurity", link: "/program/cybersecurity" },
           {
-            label: "Functional Certifications",
-            link: "/program/functional-certifications",
+            label: "Brand Management & Digital Marketing",
+            link: "/program/bm-dm",
+          },
+          { label: "Mobility & Sustainability", link: "/program/mobility-sustainability" },
+          { label: "Consulting", link: "/program/consulting" },
+          { label: "Banking & Finance", link: "/program/banking-finance" },
+          { label: "Business Analytics", link: "/program/business-analytics" },
+          { label: "Data Science & AI", link: "/program/data-science" },
+          {
+            label: "Industry Sector Specific Offerings",
+            link: "/program/industry-sector",
             submenu: [
-              { label: "Sales", link: "/program/sales" },
-              {
-                label: "Product Management",
-                link: "/program/product-management",
-              },
-              { label: "Cybersecurity", link: "/program/cybersecurity" },
-              { label: "Brand Management & Digital Marketing", link: "/program/bm-dm" },
-              {
-                label: "Mobility & Sustainability",
-                link: "/program/mobility-sustainability",
-              },
-              { label: "Consulting", link: "/program/consulting" },
-              { label: "Banking & Finance", link: "/program/banking-finance" },
-              {
-                label: "Business Analytics",
-                link: "/program/business-analytics",
-              },
-              { label: "Data Science & AI", link: "/program/data-science" },
-              {
-                label: "Industry Sector Specific Offerings",
-                link: "/program/industry-sector",
-                submenu: [
-                  { label: "FinTech", link: "/program/fintech" },
-                  {
-                    label: "Global Capability Centers (GCC)",
-                    link: "/program/gcc",
-                  },
-                ],
-              },
+              { label: "FinTech", link: "/program/fintech" },
+              { label: "Global Capability Centers (GCC)", link: "/program/gcc" },
             ],
           },
+        ],
+      },
+      {
+        label: "Executive Education",
+        link: "/program-customised-learning-programs-for-corporate-professionals",
+        submenu: [
           {
-            label: "Executive Education",
-            link: "/program-customised-learning-programs-for-corporate-professionals",
+            label: "Customised Learning Programs for Corporate Professionals",
+            link: "/program/program-customised-learning-programs-for-corporate-professionals",
+          },
+          { label: "Management Development Programs (MDPs)", link: "/program/MDPs" },
+          {
+            label: "1 Year CXO Accelerator Program with Campus Immersion",
             submenu: [
-              { label: "Customised Learning Programs for Corporate Professionals", link: "/program/program-customised-learning-programs-for-corporate-professionals" },
-              {
-                label: "Management Development Programs (MDPs)",
-                link: "/program/MDPs",
-              },
-              {
-                label: "1 Year CXO Accelerator Program with Campus Immersion",
-                submenu : [
-                  { label: "CXO ", link: "/program/CXO " },
-                  {
-                    label: "CIO ",
-                    link: "/program/CIO ",
-                  },
-                  { label: "CTO ", link: "/program/CTO " },
-                  { label: "CMO ", link: "/program/CMO " },
-                  { label: "CHRO ", link: "/program/CHRO " },
-                  { label: "CFO ", link: "/program/CFO " },
-                  { label: "CPO ", link: "/program/CPO " },
-                ]
-              },
+              { label: "CXO", link: "/program/CXO" },
+              { label: "CIO", link: "/program/CIO" },
+              { label: "CTO", link: "/program/CTO" },
+              { label: "CMO", link: "/program/CMO" },
+              { label: "CHRO", link: "/program/CHRO" },
+              { label: "CFO", link: "/program/CFO" },
+              { label: "CPO", link: "/program/CPO" },
             ],
           },
-      // {
-      //   label: "Functional (off-line)",
-      //   link: "/program/functional-off-line",
-      //       submenu: [
-      //         { label: "Sales", link: "/program/sales" },
-      //         {
-      //           label: "Product Management",
-      //           link: "/program/product-management",
-      //         },
-      //         { label: "Cybersecurity", link: "/program/cybersecurity" },
-      //         {
-      //           label: "Digital Marketing",
-      //           link: "/program/digital-marketing",
-      //         },
-      //         {
-      //           label: "Mobility & Sustainability",
-      //           link: "/program/mobility-sustainability",
-      //         },
-      //         { label: "Consulting", link: "/program/consulting" },
-      //         { label: "Banking & Finance", link: "/program/banking-finance" },
-      //         {
-      //           label: "Business Analytics",
-      //           link: "/program/business-analytics",
-      //         },
-      //         { label: "Data Science", link: "/program/data-science" },
-      //       ],
-      // },
-      // {
-      //   label: "Industry-Sector Specific Offerings",
-      //   link: "/program/industry-sector",
-      //   submenu: [
-      //     { label: "FinTech", link: "/program/fin-tech" },
-      //     {
-      //       label: "Global Capability Centers (GCC)",
-      //       link: "/program/gcc",
-      //     },
-      //   ],
-      // },
+        ],
+      },
       {
         label: "Online Programs (E-Learning)",
         link: "/program/online-program",
+        submenu: [
+          { label: "Product Management", link: "/program/product-management" },
+          { label: "Cybersecurity", link: "/program/cybersecurity" },
+          { label: "Digital Marketing", link: "/program/digital-marketing" },
+          { label: "Mobility & Sustainability", link: "/program/mobility-sustainability" },
+          { label: "Consulting", link: "/program/consulting" },
+          { label: "Banking & Finance", link: "/program/banking-finance" },
+          { label: "Business Analytics", link: "/program/business-analytics" },
+          { label: "Data Science", link: "/program/data-science" },
+          {
+            label: "Industry Sector Specific Offerings",
+            link: "/program/industry-sector",
             submenu: [
-              {
-                label: "Product Management",
-                link: "/program/product-management",
-              },
-              { label: "Cybersecurity", link: "/program/cybersecurity" },
-              {
-                label: "Digital Marketing",
-                link: "/program/digital-marketing",
-              },
-              {
-                label: "Mobility & Sustainability",
-                link: "/program/mobility-sustainability",
-              },
-              { label: "Consulting", link: "/program/consulting" },
-              { label: "Banking & Finance", link: "/program/banking-finance" },
-              {
-                label: "Business Analytics",
-                link: "/program/business-analytics",
-              },
-              { label: "Data Science", link: "/program/data-science" },
-
-              {
-                label: "Industry Sector Specific Offerings",
-                link: "/program/industry-sector",
-                submenu: [
-                  { label: "FinTech", link: "/program/fintech" },
-                  {
-                    label: "Global Capability Centers (GCC)",
-                    link: "/program/gcc",
-                  },
-                ],
-              },
+              { label: "FinTech", link: "/program/fintech" },
+              { label: "Global Capability Centers (GCC)", link: "/program/gcc" },
             ],
+          },
+        ],
       },
     ],
-    placement: "bottom"
   },
+
+  {
+    label: "Faculty",
+    placement: "bottom",
+    submenu: [
+      { label: "Sales & Marketing", link: "/faculty/sales-marketing" },
+      { label: "Finance", link: "/faculty/finance" },
+      { label: "Operations & Supply Chain", link: "/faculty/operations-supply-chain" },
+      { label: "Analytics & AI", link: "/faculty/analytics-AI" },
+      { label: "Consulting", link: "/faculty/consulting" },
+      { label: "Product", link: "/faculty/product" },
+      {
+        label: "Business Communications & Others",
+        link: "/faculty/business-communications-others",
+      },
+    ],
+  },
+
   {
     label: "Advisory Councils",
+    placement: "bottom",
     submenu: [
       { label: "Business Advisory Council", link: "/bac" },
       { label: "Academic Advisory Council", link: "/aac" },
@@ -196,41 +212,32 @@ export const menuData = [
         label: "SME Program Advisory Council",
         submenu: [
           { label: "Sales Advisory Council", link: "/sac" },
-          {
-            label: "Product Management Advisory Council",
-            link: "/pmac",
-          },
+          { label: "Product Management Advisory Council", link: "/pmac" },
           { label: "Cybersecurity Advisory Council", link: "/cac" },
           { label: "FinTech Advisory Council", link: "/ftac" },
           { label: "GCC Advisory Council", link: "/gccac" },
-          {
-            label: "Mobility & Sustainability Advisory Council",
-            link: "/msac",
-          },
+          { label: "Mobility & Sustainability Advisory Council", link: "/msac" },
           { label: "Consulting Advisory Council", link: "/conac" },
         ],
       },
     ],
-    placement: "bottom"
   },
+
   {
-    label: "Faculty",
-    submenu: [
-      { label: "Sales & Marketing", link: "/faculty/sales-marketing" },
-      { label: "Finance", link: "/faculty/finance" },
-      { label: "Operations & Supply Chain", link: "/faculty/operations-supply-chain" },
-      { label: "Analytics & AI", link: "/faculty/analytics-AI" },
-      { label: "Consulting", link: "/faculty/consulting" },
-      { label: "Product", link: "/faculty/product" },
-      {
-        label: "Business Communications & Others",
-        link: "/faculty/business-communications-others" 
-      },
-    ],
-    placement: "bottom"
+    label: "Admissions",
+    link: "/admissions",
+    placement: "bottom",
   },
+
+  {
+    label: "Consortium",
+    link: "/consortium",
+    placement: "bottom",
+  },
+
   {
     label: "Campus Placements",
+    placement: "bottom",
     submenu: [
       { label: "Recruiting Partners", link: "/placements/recruiters" },
       { label: "Placement Reports", link: "/placements/reports" },
@@ -238,90 +245,5 @@ export const menuData = [
       { label: "Summer Internships", link: "/placements/internships" },
       { label: "Live Projects", link: "/placements/projects" },
     ],
-    placement: "bottom"
   },
-  {
-    label: "Industry Engagement",
-    submenu: [
-      { label: "CXO Series", link: "/engagement/cxo" },
-      { label: "CIO Series", link: "/engagement/cio" },
-      { label: "CTO Series", link: "/engagement/cto" },
-      { label: "CMO Series", link: "/engagement/cmo" },
-      { label: "CHRO Series", link: "/engagement/chro" },
-      { label: "CFO Series", link: "/engagement/cfo" },
-      { label: "CPO Series", link: "/engagement/cpo" },
-      { label: "Career Accelerator Program (CAP)", link: "/engagement/cap" },
-      {
-        label: "Career Transformation to Career Acceleration (CT to CA)",
-        link: "/engagement/ct-to-ca",
-      },
-    ],
-    placement: "top"
-  },
-  { label: "Consortium", link: "/consortium",placement: "bottom" },
-  // { label: "News & Blogs", link: "/new-blogs" },
-  { label: "Contact Us", link: "/contact", placement: "top" },
-  { label: "Campus Ambience", link: "/campus-ambience", placement: "top" },
-    { label: "CSR", link: "/csr", placement: "top" },
-  { label: "Careers", link: "/careers", placement: "top" },
-  {
-    label: "Strategic Collaborations",
-    submenu: [
-      { label: "Strategic Partners", link: "/partners" },
-      { label: "International Collaborations", link: "/collaborations" },
-      { label: "Industry Partners", link: "/Industry-partners" },
-      {
-        label: "Centers of Excellence (CoEs)",
-        submenu: [
-          {
-            label: "Center of Excellence in Marketing",
-            link: "/coe/marketing",
-          },
-          {
-            label: "Center of Excellence in Finance",
-            link: "/coe/finance",
-          },
-          {
-            label: "Center of Excellence in Operations",
-            link: "/coe/operations",
-          },
-          {
-            label: "Center of Excellence in Analytics, Data & AI",
-            link: "/coe/analytics-ai",
-          },
-          {
-            label: "Center of Excellence in Consulting",
-            link: "/coe/consulting",
-          },
-          {
-            label: "Center of Excellence in Entrepreneurship",
-            link: "/coe/entrepreneurship",
-          },
-        ],
-      },
-      // {
-      //   label: "Centers of Excellence (CoEs)",
-      //   submenu: [
-      //     {
-      //       label: "Center of Excellence in Marketing",
-      //       link: "/coe/marketing",
-      //     },
-      //     {
-      //       label: "Center of Excellence in Finance",
-      //       link: "/coe/finance",
-      //     },
-      //     {
-      //       label: "Center of Excellence in Operations",
-      //       link: "/coe/operations",
-      //     },
-      //   ],
-      // },
-    ],
-    placement: "top"
-  },
-  // { label: "Budding Talent", link: "/budding-talent" },
-  { label: "Budding Talent", link: "/budding-talent", placement: "bottom" },
-
-  // { label: "CSR", link: "/csr" },
-
 ];

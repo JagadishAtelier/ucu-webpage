@@ -27,11 +27,11 @@
  }
  .logo-bottom-text{
     position: absolute;
-    bottom: -20%;
+    bottom: -50%;
     font-size: 13px;
     font-weight: 300;
     color: #dfdfdf;
-    margin-left: 10%;
+    margin-left: 6%;
 
  }
 .input-text{
@@ -134,6 +134,14 @@
     .new-footer-logo {
         width: 100%;
     }
+    .quats{
+        bottom: -16px !important;
+        margin-left: 0;
+    }
+     .logo-bottom-text{
+        bottom:-29%;
+        margin-left: 0;
+     }
     .batchImage{
         width: 100%;
         left: 0;

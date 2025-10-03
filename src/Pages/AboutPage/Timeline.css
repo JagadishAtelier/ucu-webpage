@@ -1,0 +1,92 @@
+.timeline {
+  position: relative;
+  padding: 4rem 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: #e0e0e0;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-row {
+  position: relative;
+  margin: 3rem 0;
+  align-items: center;
+}
+
+.timeline-row.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+.timeline-row.reverse .image {
+  order: 2;
+}
+
+.timeline-row.reverse .content {
+  text-align: right;
+}
+
+.timeline-row .image {
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-row .image-auto {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-row .image-auto img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.timeline-row .content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-row .content h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.timeline-row .content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+  .timeline-row {
+    flex-direction: column !important;
+  }
+  .timeline-row.reverse .content {
+    text-align: left;
+  }
+  .timeline-row .image,
+  .timeline-row .content {
+    order: unset;
+    width: 100%;
+  }
+}

@@ -4,3 +4,29 @@ section {
 .btn-outline-dark{
   border-radius: 3px !important;
 }
+.primary-bg {
+  background: #1703A9;
+  background: -webkit-linear-gradient(
+    218deg,
+    rgba(23, 3, 169, 1) 0%,
+    rgba(7, 186, 243, 0.98) 50%,
+    rgba(91, 197, 0, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    218deg,
+    rgba(23, 3, 169, 1) 0%,
+    rgba(7, 186, 243, 0.98) 50%,
+    rgba(91, 197, 0, 1) 100%
+  );
+  background: linear-gradient(
+    218deg,
+    rgba(23, 3, 169, 1) 0%,
+    rgba(7, 186, 243, 0.98) 50%,
+    rgba(91, 197, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    startColorstr="#1703A9",
+    endColorstr="#5BC500",
+    GradientType=0
+  );
+}

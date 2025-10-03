@@ -44,6 +44,8 @@ function NewFooter() {
               <img src={batchImage} className="batchImage"/>
               <img onClick={()=>navigate('/')} src='/logo.svg' className="logoImage-footer" />
             </div>
+            <p className="col-12 col-lg-10 quats" style={{position:'absolute',bottom:"-30px", marginLeft:"6%"}}>Built with Industry, Powered by Skills, 
+Measured through Careers!</p>
             <p className="col-12 col-lg-10 logo-bottom-text">
               We are passionate education dedicated to providing high-quality
               resources learners all backgrounds.
