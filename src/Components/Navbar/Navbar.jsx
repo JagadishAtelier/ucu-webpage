@@ -27,7 +27,7 @@ const Navbar = () => {
   const handleHover = (label) => {
     setHoverMenus((prev) => ({ ...prev, [label]: true }));
   };
-  
+
   const handleLeave = (label) => {
     setTimeout(() => {
       setHoverMenus((prev) => ({ ...prev, [label]: false }));
@@ -48,21 +48,23 @@ const Navbar = () => {
                   onClick={() => toggleSubmenu(item.label)}
                 >
                   {item.label}
-                  {item.submenu && item.submenu.length > 0 && (
-  depth === 0 ? (
-    <ChevronDown
-      size={16}
-      className={`chevron ${openMenus[item.label] ? "rotated" : ""}`}
-    />
-  ) : (
-    <ChevronRight
-      size={16}
-      className={`chevron ${openMenus[item.label] ? "rotated" : ""}`}
-    />
-  )
-)}
-
-
+                  {item.submenu &&
+                    item.submenu.length > 0 &&
+                    (depth === 0 ? (
+                      <ChevronDown
+                        size={16}
+                        className={`chevron ${
+                          openMenus[item.label] ? "rotated" : ""
+                        }`}
+                      />
+                    ) : (
+                      <ChevronRight
+                        size={16}
+                        className={`chevron ${
+                          openMenus[item.label] ? "rotated" : ""
+                        }`}
+                      />
+                    ))}
                 </button>
                 {/* Only render submenu if it's open */}
                 {openMenus[item.label] &&
@@ -130,65 +132,75 @@ const Navbar = () => {
                 {/* <p className="logo-text">Chennai</p> */}
               </div>
               <ul className="list-inline mb-0">
-              {menuData
-  .filter((menu) => menu.placement === "top")
-  .map((menu) => (
-    <li
-      key={menu.label}
-      className={`list-inline-item nav-item dropdown ${menu.submenu ? "has-mega" : ""}`}
-      onMouseEnter={() => handleHover(menu.label)}
-      onMouseLeave={() => handleLeave(menu.label)}
-    >
-      {menu.submenu && menu.submenu.length > 0 ? (
-        <>
-          <a
-            href="#!"
-            className="nav-link dropdown-toggle"
-            data-bs-toggle="dropdown"
-            role="button"
-            aria-expanded="false"
-          >
-            {menu.label.toUpperCase()}
-          </a>
-
-          <div
-            className={`dropdown-menu top-dropdown  ${menu.label
-              ?.replace(/\s+/g, "-")
-              .toLowerCase()}`}
-            style={{ display: hoverMenus[menu.label] ? "block" : "none" }}
-          >
-            <div className="row dropdown-menu-container">
-              {menu.submenu.map((col) => (
-                <div className="dropdown-menu-col" key={col.label}>
-                  <p className="top-head">
-                    <Link to={col.link || "#"}>{col.label}</Link>
-                  </p>
-                  {col.submenu && (
-                    <ul className="third-level-menu">
-                      {col.submenu.map((subItem) => (
-                        <li key={subItem.label}>
-                          <Link
-                            to={subItem.link || "#"}
-                            className="third-level-link"
+                {menuData
+                  .filter((menu) => menu.placement === "top")
+                  .map((menu) => (
+                    <li
+                      key={menu.label}
+                      className={`list-inline-item nav-item dropdown ${
+                        menu.submenu ? "has-mega" : ""
+                      }`}
+                      onMouseEnter={() => handleHover(menu.label)}
+                      onMouseLeave={() => handleLeave(menu.label)}
+                    >
+                      {menu.submenu && menu.submenu.length > 0 ? (
+                        <>
+                          <a
+                            href="#!"
+                            className="nav-link dropdown-toggle"
+                            data-bs-toggle="dropdown"
+                            role="button"
+                            aria-expanded="false"
                           >
-                            {subItem.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </>
-      ) : (
-        <Link to={menu.link}>{menu.label.toUpperCase()}</Link>
-      )}
-    </li>
-  ))}
+                            {menu.label.toUpperCase()}
+                          </a>
 
-</ul>
+                          <div
+                            className={`dropdown-menu top-dropdown  ${menu.label
+                              ?.replace(/\s+/g, "-")
+                              .toLowerCase()}`}
+                            style={{
+                              display: hoverMenus[menu.label]
+                                ? "block"
+                                : "none",
+                            }}
+                          >
+                            <div className="row dropdown-menu-container">
+                              {menu.submenu.map((col) => (
+                                <div
+                                  className="dropdown-menu-col"
+                                  key={col.label}
+                                >
+                                  <p className="top-head">
+                                    <Link to={col.link || "#"}>
+                                      {col.label}
+                                    </Link>
+                                  </p>
+                                  {col.submenu && (
+                                    <ul className="third-level-menu">
+                                      {col.submenu.map((subItem) => (
+                                        <li key={subItem.label}>
+                                          <Link
+                                            to={subItem.link || "#"}
+                                            className="third-level-link"
+                                          >
+                                            {subItem.label}
+                                          </Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </>
+                      ) : (
+                        <Link to={menu.link}>{menu.label.toUpperCase()}</Link>
+                      )}
+                    </li>
+                  ))}
+              </ul>
 
               <div className="search-box ms-3">
                 <input type="text" placeholder="Search" />
@@ -207,61 +219,71 @@ const Navbar = () => {
             </div>
 
             {/* Bottom menus with dropdowns (Desktop Mega Menu) */}
-{/* Bottom menus with dropdowns */}
-<ul className="navbar-nav navbar-main d-flex justify-content-end align-items-center">
-  {menuData
-    .filter((menu) => menu.placement === "bottom")
-    .map((menu) => (
-      <li
-        key={menu.label}
-        className={`nav-item dropdown ${menu.submenu ? "has-mega" : ""}`}
-      >
-{menu.submenu && menu.submenu.length > 0 ? (
-  <a
-    href="#!"
-    className="nav-link dropdown-toggle"
-    data-bs-toggle="dropdown"
-    role="button"
-    aria-expanded="false"
-  >
-    {menu.label}
-  </a>
-) : (
-  <Link to={menu.link} className="nav-link" style={{width:"max-content"}}>
-    {menu.label}
-  </Link>
-)}
+            {/* Bottom menus with dropdowns */}
+            <ul className="navbar-nav navbar-main d-flex justify-content-end align-items-center">
+              {menuData
+                .filter((menu) => menu.placement === "bottom")
+                .map((menu) => (
+                  <li
+                    key={menu.label}
+                    className={`nav-item dropdown ${
+                      menu.submenu ? "has-mega" : ""
+                    }`}
+                  >
+                    {menu.submenu && menu.submenu.length > 0 ? (
+                      <a
+                        href="#!"
+                        className="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        role="button"
+                        aria-expanded="false"
+                      >
+                        {menu.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={menu.link}
+                        className="nav-link"
+                        style={{ width: "max-content" }}
+                      >
+                        {menu.label}
+                      </Link>
+                    )}
 
-
-
-        {menu.submenu && menu.submenu.length > 0 && (
-          <div className={`dropdown-menu ${menu.label?.replace(/\s+/g, "-").toLowerCase()}`}>
-            <div className="row dropdown-menu-container">
-              {menu.submenu.map((col) => (
-                <div className="dropdown-menu-col" key={col.label}>
-                  <p className="top-head">
-                    <Link to={col.link || "#"}>{col.label}</Link>
-                  </p>
-                  {col.submenu && (
-                    <ul className="third-level-menu">
-                      {col.submenu.map((subItem) => (
-                        <li key={subItem.label}>
-                          <Link to={subItem.link || "#"} className="third-level-link">
-                            {subItem.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-      </li>
-    ))}
-</ul>
-
+                    {menu.submenu && menu.submenu.length > 0 && (
+                      <div
+                        className={`dropdown-menu ${menu.label
+                          ?.replace(/\s+/g, "-")
+                          .toLowerCase()}`}
+                      >
+                        <div className="row dropdown-menu-container">
+                          {menu.submenu.map((col) => (
+                            <div className="dropdown-menu-col" key={col.label}>
+                              <p className="top-head">
+                                <Link to={col.link || "#"}>{col.label}</Link>
+                              </p>
+                              {col.submenu && (
+                                <ul className="third-level-menu">
+                                  {col.submenu.map((subItem) => (
+                                    <li key={subItem.label}>
+                                      <Link
+                                        to={subItem.link || "#"}
+                                        className="third-level-link"
+                                      >
+                                        {subItem.label}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </li>
+                ))}
+            </ul>
           </div>
           <div className="d-flex gap-2 mobile-right">
             <Search className="icon d-lg-none" size={24} color="#333" />

@@ -265,7 +265,7 @@ export const menuData = [
     { label: "CSR", link: "/csr", placement: "top" },
   { label: "Careers", link: "/careers", placement: "top" },
   {
-    label: "Strategic Colab",
+    label: "Strategic Collaborations",
     submenu: [
       { label: "Strategic Partners", link: "/partners" },
       { label: "International Collaborations", link: "/collaborations" },

@@ -155,7 +155,7 @@ function CareerSection() {
         ))}
       </Swiper>
 
-      <div className="my-5">
+      <div className="-my-2">
       <Swiper
         modules={[Pagination]}
         spaceBetween={10}

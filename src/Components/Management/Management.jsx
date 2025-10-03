@@ -50,7 +50,7 @@ function Management() {
         <div className="man-data-div">
           {data.map((item, index) => (
             <div key={index} data-aos="fade-up" data-aos-delay={index * 200}>
-              <h1 className="top-text-man h3 fw-semibold">{item.top}</h1>
+              <h1 className="top-text-man text-center h3 fw-semibold">{item.top}</h1>
               <div className="man-item-div-container">
                 <img src={item.image} />
                 <div className="man-item-content">

@@ -81,11 +81,14 @@
     border: none;
 }
 .car-swiper{
-    padding: 0 20px;
+    padding: 30px 20px;
 }
 .car-swiper .swiper-slide{
     display: flex;
   height: auto;
+}
+.-my-2{
+  margin-top: -2rem;
 }
 
 .car-swiper .swiper-pagination {

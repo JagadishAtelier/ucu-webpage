@@ -6,7 +6,7 @@
   font-size: 0.85rem;
 }
 .top-bar a {
-  color: rgb(58, 58, 58);
+  color: rgb(12, 12, 12);
   font-size: 11px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -30,7 +30,7 @@
   font-weight: 400;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #333 !important;
+  color: #111 !important;
   position: relative;
   padding: 15px 15px;
 }
@@ -102,6 +102,7 @@
 .dropdown-menu.programs,
 .dropdown-menu.advisory-councils {
   width: 79vw !important;
+  transform: translateX(-55%) translateY(0) !important;
 }
 .dropdown-menu.about,
 .dropdown-menu.campus-placements {

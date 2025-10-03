@@ -46,10 +46,10 @@ function ExPhd() {
     }, []);
   return (
     <div className="car-container container-fluid">
-      <div className="mx-2 mb-4 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center" data-aos="fade-up">
+      <div className="mx-2 mb-2 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center" data-aos="fade-up">
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}>Executive </span>PhD
         </h1>
-        <p className="mb-lg-4 mb-0 program-description col-lg-6 text-center">
+        <p className="mb-lg-1 mb-0 program-description col-lg-6 text-center">
         An Executive PhD (or EPhD) is a doctoral‐level programme designed specifically for experienced professionals / executives, enabling them to pursue rigorous research while continuing in their careers
 
         </p>
@@ -73,8 +73,8 @@ function ExPhd() {
                 <img src={item.image} alt={item.heading} className="exPhd-img"/>
               </div>
               <div className="car-right">
-                <h1 className="title mb-3">{item.heading}</h1>
-                <p className="program-description">{item.para}</p>
+                {/* <h1 className="title mb-3">{item.heading}</h1> */}
+                <p className="program-description mt-3">{item.para}</p>
                 <div className="d-flex flex-row gap-2 items-center">
                   <FaUserTie />
                   <p className="program-description">{item.eligible}</p>
