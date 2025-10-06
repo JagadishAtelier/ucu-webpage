@@ -11,9 +11,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useNavigate } from "react-router-dom";
-import { FaUserTie } from "react-icons/fa";   // for eligibility
-import { BsClockHistory } from "react-icons/bs"; // for duration
 import { CalendarDays, User } from "lucide-react";
 const data = [
   {
@@ -99,7 +96,7 @@ const secondRowdata = [
 function CareerSection() {
   const { showModal } = useModal();
   console.log("useModal hook loaded:", showModal);  
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   useEffect(() => {
     AOS.init({
       duration: 1000, // animation duration

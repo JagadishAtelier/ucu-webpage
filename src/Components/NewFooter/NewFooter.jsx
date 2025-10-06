@@ -1,158 +1,141 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./NewFooter.css";
-import { useNavigate } from 'react-router-dom';
-import image from "../../Assets/aac/Copy of Webpage_20250924_151944_0000.png";
 import bgImage from "../../Assets/homeImage/Union (3).svg";
-import batchImage from '../../Assets/hac/LogoBatch.svg'
-const aboutData = [
-  { name: "About UCU", herf: "/about-ucu" },
-  { name: "Vision & Mission", herf: "#" },
-  { name: "Founder's Message", herf: "#" },
-  { name: "Campus", herf: "#" },
-  { name: "Leadership", herf: "#" },
-];
-const exploreData = [
-  { name: "News", herf: "#" },
-  { name: "Events", herf: "#" },
-  { name: "Blog", herf: "#" },
-  { name: "Careers", herf: "#" },
-  { name: "Global Agents", herf: "#" },
-  { name: "Site map", herf: "#" },
-];
+import batchImage from "../../Assets/hac/LogoBatch.svg";
+import { footerMenu } from "./footerMenu";
 
 const contactUs = [
+  { country: "USA", cities: [] },
+  { country: "UK", cities: [] },
+  { country: "UAE", cities: [] },
   {
     country: "India",
     cities: ["Chennai", "Hyderabad", "Bangalore", "Mumbai", "Gurgaon", "Kolkata"],
   },
-  { country: "USA", cities: [] },
-  { country: "UK", cities: [] },
-  { country: "UAE", cities: [] },
 ];
-
 
 function NewFooter() {
   const navigate = useNavigate();
+
+  // Split footer menus into two groups
+  const menusWithItems = footerMenu.filter((menu) => menu.items && menu.items.length > 0);
+  const menusWithoutItems = footerMenu.filter((menu) => !menu.items || menu.items.length === 0);
+
   return (
     <div className="footer-container">
-      {/* <div className="bg-overlay-footer"></div> */}
-      <img src={bgImage} className="bgImage" />
+      <img src={bgImage} className="bgImage" alt="Background" />
+
       <div className="py-lg-5 py-5 pb-lg-2 px-4 text-white footer-links-content-con">
-        <div className="d-flex flex-row flex-wrap flex-lg-row align-items-center align-items-lg-start justify-content-start justify-content-lg-evenly row-gap-5 column-gap-5">
-          <div className="position-relative align-items-center d-flex flex-column text-center text-lg-left flex-lg-column gap-3 new-footer-logo align-items-center align-items-lg-center">
+        <div className="d-flex flex-row flex-wrap flex-lg-row align-items-start justify-content-start justify-content-lg-between row-gap-4 column-gap-4">
+          
+          {/* 🌟 Logo Section */}
+          <div className="position-relative align-items-center d-flex flex-column text-center text-lg-left flex-lg-column gap-3 new-footer-logo">
             <div className="logo-batch-div">
-              <img src={batchImage} className="batchImage"/>
-              <img onClick={()=>navigate('/')} src='/logo.svg' className="logoImage-footer" />
-            </div>
-            <p className="col-12 col-lg-10 quats" style={{position:'absolute',bottom:"-30px", marginLeft:"6%"}}>Built with Industry, Powered by Skills, 
-Measured through Careers!</p>
-            <p className="col-12 col-lg-10 logo-bottom-text">
-              We are passionate education dedicated to providing high-quality
-              resources learners all backgrounds.
-            </p>
-          </div>
-          <div className="new-footer-links">
-            <p className="text-white fs-6 fw-600 new-footer-head text-dark">ABOUT US</p>
-            <div className="d-flex flex-column flex-lg-column gap-2">
-              {aboutData.map((data, index) => (
-                <a
-                  href={data.herf}
-                  className="new-footer-text-a fw-100 text-decoration-none"
-                >
-                  {data.name}
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="new-footer-links">
-            <p className="text-white fs-6 new-footer-head">EXPLORE</p>
-            <div className="d-flex flex-column flex-lg-column gap-2">
-              {exploreData.map((data, index) => (
-                <a
-                  href={data.herf}
-                  className="new-footer-text-a text-decoration-none"
-                >
-                  {data.name}
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="new-footer-links">
-  <p className="text-white fs-6 new-footer-head">OUR OUTREACH</p>
-  <div className="d-flex flex-column flex-lg-column gap-2">
-  {contactUs.map((data, index) => (
-  <div key={index} className={data.cities && data.cities.length > 0 ? "mb-2" : "mb-0"}>
-    <p className="fw-600 mb-1">{data.country}</p>
-    
-    {/* Render cities only if there are any */}
-    {data.cities && data.cities.length > 0 && (
-      <div className="d-flex flex-column gap-1 ms-2">
-        {data.cities.map((city, i) => (
-          <a
-            key={i}
-            href="#"
-            className="new-footer-text-a text-decoration-none"
-          >
-            {city}
-          </a>
-        ))}
-      </div>
-    )}
-  </div>
-))}
-
-  </div>
-</div>
-
-
-          <div className="vertical-line-footer"></div>
-
-          <div className="input-text new-footer-links ">
-            <p className="text-white fs-6 new-footer-head">
-              Subscribe to Our Newsletter
-            </p>
-            <p className="new-footer-text-a col-12 col-lg-12">
-              We’d love to share updates about our latest events with you. Sign
-              up and get our newsletter delivered to your inbox.
-            </p>
-            <div className="d-flex flex-column flex-lg-row position-relative">
-              <input
-                type="text"
-                placeholder="Enter your mail"
-                className="footer-new-input"
+              <img src={batchImage} className="batchImage" alt="Batch Logo" />
+              <img
+                onClick={() => navigate("/")}
+                src="/logo.svg"
+                className="logoImage-footer"
+                alt="Logo"
               />
-              <button className="py-lg-2 px-lg-4 py-2 px-5 position-absolute end-0 border-0 sub-new-footer-btn">
-                Subscribe
-              </button>
             </div>
+            <p
+              className="col-12 col-lg-10 quats"
+              style={{ position: "absolute", bottom: "-30px", marginLeft: "6%" }}
+            >
+              Built with Industry, Powered by Skills, Measured through Careers!
+            </p>
+            {/* <p className="col-12 col-lg-10 logo-bottom-text">
+              We are passionate education dedicated to providing high-quality resources to learners of all backgrounds.
+            </p> */}
+          </div>
+
+          {/* 🧭 Footer Menus (with items) */}
+          {menusWithItems.map((menu, idx) => (
+            <div key={idx} className="new-footer-links">
+              <p className="text-white fs-6 fw-600 new-footer-head">
+                {menu.title.toUpperCase()}
+              </p>
+              <div className="d-flex flex-column gap-2 menu-wrapper">
+                {menu.items.map((item, i) => (
+                  <a
+                    key={i}
+                    href="#"
+                    className="new-footer-text-a text-decoration-none"
+                  >
+                    {item}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          {/* 🌍 Our Outreach Section */}
+          <div className="new-footer-links">
+            <p className="text-white fs-6 fw-600 new-footer-head">OUR OUTREACH</p>
+            <div className="d-flex flex-column gap-2">
+              {contactUs.map((data, index) => (
+                <div
+                  key={index}
+                  className={data.cities?.length > 0 ? "mb-2" : "mb-0"}
+                >
+                  <p className="fw-600 mb-1">{data.country}</p>
+                  {data.cities?.length > 0 && (
+                    <div className="d-flex flex-column gap-1 ms-2">
+                      {data.cities.map((city, i) => (
+                        <a
+                          key={i}
+                          href="#"
+                          className="new-footer-text-a text-decoration-none"
+                        >
+                          {city}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="ms-5 d-flex justify-content-start flex-column flex-lg-row align-items-center gap-5">
+
+          {/* 🧱 Menus without items (headings only) */}
+          {menusWithoutItems.map((menu, idx) => (
+            <div key={idx} className="new-footer-links-bottom">
+              <p className="text-white fs-6 fw-600 new-footer-head">
+                {menu.title.toUpperCase()}
+              </p>
+            </div>
+          ))}
           </div>
         </div>
 
+        {/* ⚡ Footer Bottom */}
         <div className="horizontal-line m-5 m-lg-5 mb-lg-3 mx-0"></div>
         <div className="d-flex flex-column flex-lg-row justify-content-lg-between text-white mx-lg-5">
-          <div className="">
+          
+          {/* Left Section */}
+          <div>
             <p className="new-footer-text-a">
-              Copyright @ 2025.All Rights reserved to{" "}
+              Copyright @ 2025. All Rights reserved to{" "}
               <a
                 href="https://theateliercreation.com/"
                 target="_blank"
+                rel="noreferrer"
                 className="text-dark"
               >
-                {" "}
                 Atelier
               </a>
             </p>
             <p className="new-footer-text-a add-new-foot">
-              UCU Pty. Ltd. Provider Category: Institute of Higher Education.
-              TEQSA Provider Identification: PRV12041. CRICOS Provider Code:
-              03335G.
+              UCU Pty. Ltd. Provider Category: Institute of Higher Education. TEQSA Provider Identification: PRV12041. CRICOS Provider Code: 03335G.
             </p>
           </div>
 
+          {/* Right Section */}
           <div>
-            <p className="new-footer-text-a new-footer-head">
-              Stay Connected With Us
-            </p>
+            <p className="new-footer-text-a new-footer-head">Stay Connected With Us</p>
             <div className="social-text">
               <div className="icon-social">
                 <i className="bi bi-instagram"></i>
