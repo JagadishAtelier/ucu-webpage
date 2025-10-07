@@ -1,23 +1,54 @@
-.hero-left {
-    margin-left: 7rem;
-  }
-  .hero-section{
+/* Custom utility classes for padding if not using Bootstrap defaults */
+.p-lg-7 {
+    padding: 5rem !important; /* Example value, adjust as needed */
+}
+/* If you need different values for x/y padding, define them separately
+.px-lg-7 { padding-left: 5rem !important; padding-right: 5rem !important; }
+.py-lg-7 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+*/
+
+
+.hero-section {
     position: relative;
-    z-index: 1;
-  }
-  .hero-section::before {
+    /* No need for z-index: 1 here as the content wrapper will be above the pseudo-element */
+}
+
+.hero-section::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.2); /* black overlay with 60% opacity */
-    z-index: -1;
-  }
-  @media (max-width: 768px) {
-    .hero-left {
-      margin-left:0; /* md and up */
+    background: rgba(0, 0, 0, 0.5); /* Increased opacity for better text contrast */
+    z-index: 0; /* Changed from -1 to 0. The content wrapper will have z-index:1 */
+}
+
+.hero-content-wrapper {
+    position: relative; /* Ensure it respects z-index */
+    z-index: 1; /* Bring content above the overlay */
+    width: 100%; /* Default to full width */
+    max-width: 900px; /* Max width to prevent content from stretching too much on large screens */
+    margin-left: 0; /* Default no margin for smaller screens */
+    padding-left: 15px; /* Adjust as needed */
+    padding-right: 15px; /* Adjust as needed */
+}
+
+/* Responsive margins for the content wrapper */
+@media (min-width: 992px) { /* Large screens (lg) and up */
+    .hero-content-wrapper {
+        width: 75%; /* Equivalent to w-lg-75 */
+        max-width: 700px; /* Example, adjust based on desired width */
+        margin-left: 7rem; /* Equivalent to ms-lg-7 */
+        /* If you need it even narrower on very large screens, you could add: */
+        /* max-width: 500px; */
     }
+}
+
+/* You had this, ensure it's still needed or correctly applying */
+/* @media (max-width: 768px) {
+  .hero-left {
+    margin-left:0;
   }
-  
+} */
+/* With .hero-content-wrapper and specific lg breakpoint, the above might be redundant */

@@ -1,12 +1,19 @@
-import React from 'react'
-import './AboutStory.css'
+import React from 'react';
+import './AboutStory.css'; // Keep this import for your custom CSS
+
 function AboutStory() {
   return (
-    <div data-aos="fade-up" className='text-center text-lg-start my-4 px-2 px-lg-5 my-lg-4'>
-        <h1 className=' mb-1 fs-2 fw-bold mb-lg-3'>Our Story</h1>
-        <p className='fs-6 fs-lg-1 text-muted'>Universal Corporate University (UCU) was founded with a vision to redefine management education by bridging academia and industry. Our innovative programs are designed to equip aspiring leaders with knowledge, skills, and values that drive meaningful impact across industries and geographies.</p>      
+    <div data-aos="fade-up" className='about-story-section py-5 px-3 px-md-4 px-lg-0 text-center text-md-start'>
+      <div className="container">
+        <h2 className='story-heading fw-bold mb-3 mb-md-4'>
+          Reimagining Business Education for a Borderless, Industry-Driven, AI-Empowered Future
+        </h2>
+        <p className='story-paragraph lead text-dark mx-auto mx-md-0'>
+          Universal Corporate University (UCU) was founded with a vision to redefine management education by bridging academia and industry. Our innovative programs are designed to equip aspiring leaders with knowledge, skills, and values that drive meaningful impact across industries and geographies.
+        </p>
+      </div>
     </div>
-  )
+  );
 }
 
-export default AboutStory
+export default AboutStory;

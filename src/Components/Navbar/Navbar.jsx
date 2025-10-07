@@ -150,7 +150,7 @@ const Navbar = () => {
                     >
                       {menu.submenu && menu.submenu.length > 0 ? (
                         <>
-                          <a href="#!" className="nav-link dropdown-toggle">
+                          <a href={menu.link} className="nav-link dropdown-toggle">
                             {menu.label.toUpperCase()}
                           </a>
                           <div
@@ -213,7 +213,7 @@ const Navbar = () => {
                     onMouseLeave={() => handleLeave(menu.label)}
                   >
                     {menu.submenu && menu.submenu.length > 0 ? (
-                      <a href="#!" className="nav-link dropdown-toggle">
+                      <a href={menu.link} className="nav-link dropdown-toggle">
                         {menu.label}
                       </a>
                     ) : (

@@ -1,9 +1,68 @@
-.bg-darkblue {
-    background-color: rgb(1, 1, 177); /* Example dark blue */
-  }
-  
-  .text-size{
-    margin: 0;
+.about-years-section {
+  background-color: rgb(1, 1, 177); /* fallback dark blue */
+}
+
+/* Counter number styling */
+.counter-text {
+  margin: 0;
+  font-size: 2.5rem; /* default for mobile */
+  line-height: 1.2;
+}
+
+/* Paragraph styling */
+.counter-paragraph {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Divider for large screens */
+.with-divider::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 576px) {
+  .counter-text {
     font-size: 3rem;
-    line-height: 1em;
   }
+  .counter-paragraph {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .counter-text {
+    font-size: 3.5rem;
+  }
+  .counter-paragraph {
+    font-size: 1.05rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .counter-text {
+    font-size: 4rem;
+  }
+  .counter-paragraph {
+    font-size: 1.1rem;
+  }
+
+  /* Show divider only on large screens */
+  .with-divider::after {
+    display: block;
+  }
+}
+
+/* On mobile, remove dividers */
+@media (max-width: 991px) {
+  .with-divider::after {
+    display: none;
+  }
+}

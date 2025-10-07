@@ -8,6 +8,8 @@ import AboutGraduation from './AboutPage/AboutGraduation/AboutGraduation'
 import AboutBrand from './AboutPage/AboutBrand/AboutBrand'
 import Navbar from '../Components/Navbar/Navbar'
 import NewFooter from '../Components/NewFooter/NewFooter'
+import Timeline from './AboutPage/Timeline'
+import ConnectWithUs from './AboutPage/ConnectWithUs'
 function AboutPage() {
   return (
     <div>
@@ -15,11 +17,13 @@ function AboutPage() {
         <AboutPageHero/>
         <AboutStory/>
         <AboutPhil/>
-        <AboutJourney/>
+        {/* <AboutJourney/> */}
+        <Timeline/>
         <AboutYears/>
-        <AboutTour/>
+        <ConnectWithUs/>
+        {/* <AboutTour/>
         <AboutGraduation/>
-        <AboutBrand/>
+        <AboutBrand/> */}
         <NewFooter/>
     </div>
   )
