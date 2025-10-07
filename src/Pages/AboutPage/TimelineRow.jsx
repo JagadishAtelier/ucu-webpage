@@ -10,7 +10,7 @@ const TimelineRow = ({ title, description, images = [], reverse }) => {
         {images.length > 0 && (
           <Carousel
             indicators={false}
-            controls={true}
+            controls={false}
             interval={3000}
             pause={false}
             className="timeline-carousel"
