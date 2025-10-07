@@ -6,7 +6,7 @@
 
 /* Divider line only for large screens */
 .border-end-lg {
-  border-right: 3px solid rgba(255, 255, 255, 0.6);
+  border-right: 3px solid rgba(255, 255, 255, 0.726);
 }
 
 @media (max-width: 991px) {
@@ -23,7 +23,8 @@
   text-align: left;
   list-style-type: disc;
   padding-left: 1.2rem;
-  font-size: 0.95rem;
+  font-weight: 300;
+  /* font-size: 1rem;  */
   line-height: 1.5;
 }
 

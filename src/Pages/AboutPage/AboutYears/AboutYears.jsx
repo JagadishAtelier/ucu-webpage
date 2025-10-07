@@ -59,7 +59,7 @@ function AboutYears() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-start w-100">
+      <div className="d-flex flex-column gy-md-3 flex-lg-row justify-content-lg-between align-items-lg-start w-100">
         {data.map((item, index) => (
           <div
             key={index}

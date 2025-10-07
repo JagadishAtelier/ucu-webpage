@@ -43,21 +43,21 @@ function AboutPhil() {
         minHeight: "60vh"
       }}
     >
-      <div className="row w-100 justify-content-center">
+      <div className="row w-lg-100 py-4 py-lg-0 justify-content-center">
         {data.map((item, index) => (
           <div
             key={index}
-            className={`col-12 col-lg-12 d-flex flex-column align-items-center align-items-lg-start mb-4 px-3 ${
-              index === 0 ? "text-left align-items-lg-start" : "text-right align-items-lg-start"
+            className={`col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start mb-4 px-3 ${
+              index === 0 ? "text-left align-items-lg-start border-end-lg" : "text-right align-items-lg-start"
             }`}
             data-aos={index === 0 ? "fade-right" : "fade-left"}
           >
             <img src={item.icon} className="phil-icon-image mb-3" alt={item.head} />
             <h1 className="fw-bold fs-2 mb-3 text-center text-lg-start">{item.head}</h1>
             {typeof item.para === "string" ? (
-              <p className="fs-6 mb-0 text-center text-lg-start">{item.para}</p>
+              <p className="fs-6 mb-0 text-lg-start">{item.para}</p>
             ) : (
-              <div className="fs-6 text-center text-lg-right">{item.para}</div>
+              <div className="fs-6 text-lg-right">{item.para}</div>
             )}
           </div>
         ))}

@@ -62,8 +62,6 @@ const Timeline = () => {
 
         Under his stewardship, the institute’s average campus CTC increased more than sevenfold within a decade,
         reflecting the transformative impact of his leadership.<br /><br />
-
-        <em>Put 3–4 self-playing images of Dr. Balaji with dignitaries here.</em>
       `,
       images: ["./histroy-2.jpg", "./histroy-2.jpg", "./histroy-2.jpg"],// replace with a collage or carousel image
       reverse: true,
