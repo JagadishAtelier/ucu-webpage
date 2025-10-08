@@ -91,6 +91,7 @@ const Timeline = () => {
 
   return (
     <section className="timeline">
+
       <div className="container-fluid">
         {data.map((item, idx) => (
           <TimelineRow key={idx} {...item} />
