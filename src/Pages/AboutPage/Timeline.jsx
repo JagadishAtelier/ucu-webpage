@@ -84,7 +84,7 @@ const Timeline = () => {
         UCU is the <strong>living legacy</strong> of a leader who dedicated his career to aligning talent with enterprise expectations.
         Every program is engineered for genuine impact, empowering learners to become agile, future-ready business leaders.
       `,
-      images: ["/timeline-logo.png"], // replace with actual image
+      images: ["/timeline-logo2.png"], // replace with actual image
       reverse: false,
     },
   ];
