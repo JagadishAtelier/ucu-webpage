@@ -177,7 +177,8 @@ align-items: center;
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5); /* semi-transparent black */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.87),rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+ /* semi-transparent black */
   z-index: 1;
 }
 
@@ -203,7 +204,7 @@ align-items: center;
 /* Hover effect */
 .cxo-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.158);
 }
 
 
@@ -213,15 +214,15 @@ align-items: center;
 }
 
 .bg-cio {
-  background-image: url("https://www.michaelpage.nl/sites/michaelpage.nl/files/legacy/role_cio_image_0.jpg");
+  background-image: url("./CIO.jpg");
 }
 
 .bg-cto {
-  background-image: url("https://hctlinked.ir/fa/storage/2025/07/CTO.jpg");
+  background-image: url("./CTO.webp");
 }
 
 .bg-cmo {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdOACN2UvwcOcT4kQGOQ749o0T8Ybo1qsYOg&s");
+  background-image: url("./CMO.jpg");
 }
 
 .bg-chro {

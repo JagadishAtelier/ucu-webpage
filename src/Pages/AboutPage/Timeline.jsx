@@ -91,11 +91,11 @@ const Timeline = () => {
 
   return (
     <section className="timeline">
-      <Container>
+      <div className="container-fluid">
         {data.map((item, idx) => (
           <TimelineRow key={idx} {...item} />
         ))}
-      </Container>
+      </div>
     </section>
   );
 };

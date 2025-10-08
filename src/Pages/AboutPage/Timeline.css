@@ -54,14 +54,19 @@
   width: 100%;
   height: auto;
   display: block;
+  text-align: end;
   object-fit: cover;
   border-radius: 12px;
 }
 
 .timeline-carousel {
   margin-bottom: 1rem;
+  width: 95%;
+    margin-left: .5rem;
 }
-
+.timeline-row.reverse .timeline-carousel {
+    margin-left: 2rem;
+}
 .timeline-row .content {
   background: #fff;
   padding: 2rem;
@@ -165,3 +170,5 @@
     display: none; /* no line after last */
   }
 }
+
+/* 🌸 Pink Gradient — moves clockwise */

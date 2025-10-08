@@ -51,18 +51,21 @@ const industryData = [
     `,
   },
   {
-    image: "https://www.colliers.com/-/media/images/colliers/asia/india/research-images/2024/1536gccreport.ashx?bid=3dd61b5289dd4e2abf9a823864443392",
+    image:
+      "https://www.colliers.com/-/media/images/colliers/asia/india/research-images/2024/1536gccreport.ashx?bid=3dd61b5289dd4e2abf9a823864443392",
     head: "Global Capability Center (GCC)",
     text: `Step into the engine room of global enterprises—mastering strategy, scale, and operational excellence across GCCs
     `,
   },
   {
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhbHRoY2FyZXxlbnwwfHwwfHx8MA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhbHRoY2FyZXxlbnwwfHwwfHx8MA%3D%3D",
     head: "Healthcare & Lifescience",
     text: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
   },
   {
-    image: "https://plus.unsplash.com/premium_photo-1683121716061-3faddf4dc504?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U2VtaWNvbmR1Y3RvcnxlbnwwfHwwfHx8MA%3D%3D",
+    image:
+      "https://plus.unsplash.com/premium_photo-1683121716061-3faddf4dc504?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U2VtaWNvbmR1Y3RvcnxlbnwwfHwwfHx8MA%3D%3D",
     head: "Semiconductor",
     text: "Specialized program focused on financial technology and innovations.",
   },
@@ -120,34 +123,36 @@ function Platforms() {
         <div className="platform-data-div">
           {/* Tabs */}
           <div className="d-flex gap-3 mb-3 border-bottom pb-3 justify-content-center">
-          <button
-  onClick={() => {
-    setActiveTab("functional");
-    setOpenIndex(null);
-  }}
-  className={`btn border py-lg-2 px-lg-3 col-5 ${
-    activeTab === "functional" ? "text-white" : "text-dark"
-  }`}
-  style={{
-    backgroundColor: activeTab === "functional" ? "#74C61B" : "#ffffff",
-  }}
->
-  Functional
-</button>
-          <button
-  onClick={() => {
-    setActiveTab("industry");
-    setOpenIndex(null);
-  }}
-  className={`btn border py-lg-2 px-lg-3 col-5 ${
-    activeTab === "industry" ? "text-white" : "text-dark"
-  }`}
-  style={{
-    backgroundColor: activeTab === "industry" ? "#74C61B" : "#ffffff",
-  }}
->
-Industry-Sector
-</button>
+            <button
+              onClick={() => {
+                setActiveTab("functional");
+                setOpenIndex(null);
+              }}
+              className={`btn border py-lg-2 px-lg-3 col-5 ${
+                activeTab === "functional" ? "text-white" : "text-dark"
+              }`}
+              style={{
+                backgroundColor:
+                  activeTab === "functional" ? "#74C61B" : "#ffffff",
+              }}
+            >
+              Functional
+            </button>
+            <button
+              onClick={() => {
+                setActiveTab("industry");
+                setOpenIndex(null);
+              }}
+              className={`btn border py-lg-2 px-lg-3 col-5 ${
+                activeTab === "industry" ? "text-white" : "text-dark"
+              }`}
+              style={{
+                backgroundColor:
+                  activeTab === "industry" ? "#74C61B" : "#ffffff",
+              }}
+            >
+              Industry-Sector
+            </button>
           </div>
           {currentData.map((item, index) => (
             <div key={index} className="platform-indiviual-con">
