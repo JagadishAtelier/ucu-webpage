@@ -78,8 +78,8 @@ export const menuData = [
     placement: "bottom",
     link: "/about-ucu",
     submenu: [
-      { label: "Our Story", link: "/our-story" },
-      { label: "Vision & Mission", link: "/vision-mission" },
+      { label: "Our Story", scrollId: "our-story"  },
+      { label: "Vision & Mission",scrollId: "vision-mission"  },
       { label: "Founder's Message", link: "/founder-message" },
       { label: "Industry First Approach", link: "/industry-approach" },
     ],

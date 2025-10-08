@@ -8,9 +8,9 @@ const FounderMessage = () => {
   return (
     <>
       <Navbar />
-      <h1 className="section-title mt-4">
+      <h4 className="section-title mt-4">
         Message from the Founder & Chairman
-      </h1>
+      </h4>
       <section className="founder-section">
         <div className="founder-content">
           <p className="founder-subtitle">FOUNDER & CHAIRMAN</p>

@@ -2,14 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { menuData } from "./menuData";
 import "./Navbar.css";
-import {
-  ChevronDown,
-  ChevronRight,
-  Menu,
-  Search,
-  User,
-  X,
-} from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
 import logoImg from "../../Assets/aac/Copy of Webpage_20250924_151944_0001.png";
 
 const Navbar = () => {
@@ -25,6 +18,16 @@ const Navbar = () => {
       ...prev,
       [label]: !prev[label],
     }));
+  };
+
+  const handleScrollNavigation = (scrollId) => {
+    setMobileOpen(false); // close mobile drawer if open
+    const section = document.getElementById(scrollId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/about-ucu", { state: { section: scrollId } });
+    }
   };
 
   const handleHover = (label) => {
@@ -47,9 +50,19 @@ const Navbar = () => {
           <li key={sub.label} className="submenu-item">
             {sub.submenu && sub.submenu.length > 0 ? (
               <div className="submenu-parent">
-                <Link to={sub.link || "#"} className={`submenu-link`}>
-                  {sub.label}
-                </Link>
+                {sub.scrollId ? (
+                  <button
+                    className="submenu-link"
+                    onClick={() => handleScrollNavigation(sub.scrollId)}
+                  >
+                    {sub.label}
+                  </button>
+                ) : (
+                  <Link to={sub.link || "#"} className="submenu-link">
+                    {sub.label}
+                  </Link>
+                )}
+
                 <ChevronRight size={12} className="submenu-arrow" />
                 {renderNestedMenu(sub.submenu, depth + 1)}
               </div>
@@ -99,13 +112,24 @@ const Navbar = () => {
                   renderMenuItems(item.submenu, depth + 1)}
               </>
             ) : (
-              <Link
-                to={item.link || "#"}
-                className={`menu-link depth-${depth}`}
-                onClick={toggleMobile}
-              >
-                {item.label}
-              </Link>
+              <>
+                {item.scrollId ? (
+                  <button
+                    className={`menu-link depth-${depth}`}
+                    onClick={() => handleScrollNavigation(item.scrollId)}
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link
+                    to={item.link || "#"}
+                    className={`menu-link depth-${depth}`}
+                    onClick={toggleMobile}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </>
             )}
           </li>
         ))}
@@ -118,8 +142,15 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-md py-0 navbar-main-container">
         <div className="container-fluid">
           {/* Logo */}
-          <Link className="navbar-brand d-flex align-items-center logo-box m-lg-0" to="/">
-            <img src={logoImg} alt="Universal Corporate University Logo" className="logo" />
+          <Link
+            className="navbar-brand d-flex align-items-center logo-box m-lg-0"
+            to="/"
+          >
+            <img
+              src={logoImg}
+              alt="Universal Corporate University Logo"
+              className="logo"
+            />
             <div className="border-l">
               <p className="logo-text" style={{ color: "#1703a9" }}>
                 <span style={{ color: "#1703a9" }}>U</span>niversal
@@ -134,7 +165,10 @@ const Navbar = () => {
           </Link>
 
           {/* Top Menu */}
-          <div className="collapse navbar-collapse justify-content-end flex-column align-items-end" id="mainNavbar">
+          <div
+            className="collapse navbar-collapse justify-content-end flex-column align-items-end"
+            id="mainNavbar"
+          >
             <div className="top-bar d-flex justify-content-end align-items-center pt-3 bg-white">
               <ul className="list-inline mb-0">
                 {menuData
@@ -150,9 +184,24 @@ const Navbar = () => {
                     >
                       {menu.submenu && menu.submenu.length > 0 ? (
                         <>
-                          <a href={menu.link} className="nav-link dropdown-toggle">
-                            {menu.label.toUpperCase()}
-                          </a>
+                          {menu.scrollId ? (
+                            <button
+                              className="nav-link dropdown-toggle bg-transparent border-0"
+                              onClick={() =>
+                                handleScrollNavigation(menu.scrollId)
+                              }
+                            >
+                              {menu.label.toUpperCase()}
+                            </button>
+                          ) : (
+                            <Link
+                              to={menu.link || "#"}
+                              className="nav-link dropdown-toggle"
+                            >
+                              {menu.label.toUpperCase()}
+                            </Link>
+                          )}
+
                           <div
                             className={`dropdown-menu top-dropdown ${menu.label
                               ?.replace(/\s+/g, "-")
@@ -165,18 +214,54 @@ const Navbar = () => {
                           >
                             <div className="row dropdown-menu-container">
                               {menu.submenu.map((col) => (
-                                <div className="dropdown-menu-col" key={col.label}>
-                                  <p className="top-head">
-                                    <Link to={col.link || "#"}>{col.label}</Link>
-                                  </p>
-                                  {col.submenu && renderNestedMenu(col.submenu, 2)}
+                                <div
+                                  className="dropdown-menu-col"
+                                  key={col.label}
+                                >
+                                  <div className="top-head">
+                                    {col.scrollId ? (
+                                      <button
+                                        className="submenu-link bg-transparent border-0 p-0"
+                                        onClick={() =>
+                                          handleScrollNavigation(col.scrollId)
+                                        }
+                                      >
+                                        {col.label}
+                                      </button>
+                                    ) : (
+                                      <Link
+                                        to={col.link || "#"}
+                                        className="submenu-link"
+                                      >
+                                        {col.label}
+                                      </Link>
+                                    )}
+                                  </div>
+
+                                  {col.submenu &&
+                                    renderNestedMenu(col.submenu, 2)}
                                 </div>
                               ))}
                             </div>
                           </div>
                         </>
                       ) : (
-                        <Link to={menu.link}>{menu.label.toUpperCase()}</Link>
+                        <>
+                          {menu.scrollId ? (
+                            <button
+                              className="nav-link bg-transparent border-0"
+                              onClick={() =>
+                                handleScrollNavigation(menu.scrollId)
+                              }
+                            >
+                              {menu.label.toUpperCase()}
+                            </button>
+                          ) : (
+                            <Link to={menu.link}>
+                              {menu.label.toUpperCase()}
+                            </Link>
+                          )}
+                        </>
                       )}
                     </li>
                   ))}
@@ -233,9 +318,26 @@ const Navbar = () => {
                         <div className="row dropdown-menu-container">
                           {menu.submenu.map((col) => (
                             <div className="dropdown-menu-col" key={col.label}>
-                              <p className="top-head">
-                                <Link to={col.link || "#"}>{col.label}</Link>
-                              </p>
+                              <div className="top-head">
+                                {col.scrollId ? (
+                                  <button
+                                    className="submenu-link bg-transparent border-0 p-0"
+                                    onClick={() =>
+                                      handleScrollNavigation(col.scrollId)
+                                    }
+                                  >
+                                    {col.label}
+                                  </button>
+                                ) : (
+                                  <Link
+                                    to={col.link || "#"}
+                                    className="submenu-link"
+                                  >
+                                    {col.label}
+                                  </Link>
+                                )}
+                              </div>
+
                               {col.submenu && renderNestedMenu(col.submenu, 2)}
                             </div>
                           ))}
@@ -268,7 +370,10 @@ const Navbar = () => {
             <div className="drawer-overlay" onClick={toggleMobile}></div>
             <div className="drawer">
               <div className="drawer-header">
-                <Link className="navbar-brand d-flex align-items-center logo-box m-lg-0" to="/">
+                <Link
+                  className="navbar-brand d-flex align-items-center logo-box m-lg-0"
+                  to="/"
+                >
                   <div className="border-l border-white">
                     <p className="logo-text" style={{ color: "#1703a9" }}>
                       <span style={{ color: "#1703a9" }}>U</span>niversal

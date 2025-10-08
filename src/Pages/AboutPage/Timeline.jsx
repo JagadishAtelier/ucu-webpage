@@ -84,20 +84,23 @@ const Timeline = () => {
         UCU is the <strong>living legacy</strong> of a leader who dedicated his career to aligning talent with enterprise expectations.
         Every program is engineered for genuine impact, empowering learners to become agile, future-ready business leaders.
       `,
-      images: ["./histroy-3.jpg", "./histroy-3.jpg", "./histroy-3.jpg"], // replace with actual image
+      images: ["/timeline-logo.png"], // replace with actual image
       reverse: false,
     },
   ];
 
   return (
+    <>
+    <h1 className="section-title my-4 mb-2">
+        Our History
+      </h1>
     <section className="timeline">
-
       <div className="container-fluid">
         {data.map((item, idx) => (
           <TimelineRow key={idx} {...item} />
         ))}
       </div>
-    </section>
+    </section></>
   );
 };
 
