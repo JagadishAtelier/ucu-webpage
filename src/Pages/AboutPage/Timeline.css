@@ -1,26 +1,52 @@
+/* ==============================
+   Timeline Section
+============================== */
 .timeline {
   position: relative;
   padding: 4rem 0;
+  overflow: visible; /* ensures orbiting gradients are visible */
 }
 
-/* Full vertical line (desktop & fallback) */
-.timeline::before {
+/* Section title */
+.section-title {
+  overflow: hidden;
+  position: relative;
+  z-index: 2; /* above gradients */
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: #e0e0e0;
+  transform: translateX(-50%);
+  z-index: 2; /* above gradients */
+}
+/* ==============================
+   Timeline vertical line
+============================== */
+/* .timeline::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   left: 50%;
   width: 3px;
-  background: #e0e0e0; /* full grey line */
+  background: #e0e0e0;
   transform: translateX(-50%);
-  z-index: 0;
-}
+  z-index: 2; 
+} */
 
+/* ==============================
+   Timeline Rows
+============================== */
 .timeline-row {
   position: relative;
   margin: 3rem 0;
-  align-items: center;
   display: flex;
+  align-items: center;
 }
 
 .timeline-row.active {
@@ -29,6 +55,7 @@
   transition: all 0.6s ease;
 }
 
+/* Reverse layout for alternate rows */
 .timeline-row.reverse .image {
   order: 2;
 }
@@ -37,42 +64,45 @@
   text-align: right;
 }
 
+/* Timeline image */
 .timeline-row .image {
   position: relative;
   z-index: 2;
 }
 
 .timeline-row .image-auto {
-  position: relative;
   width: 100%;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .timeline-carousel .image-auto img {
   width: 100%;
   height: auto;
-  display: block;
-  text-align: end;
   object-fit: cover;
+  display: block;
   border-radius: 12px;
 }
 
 .timeline-carousel {
   margin-bottom: 1rem;
   width: 95%;
-    margin-left: .5rem;
+  margin-left: 0.5rem;
 }
+
 .timeline-row.reverse .timeline-carousel {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
+
+/* Timeline content */
 .timeline-row .content {
-  background: #fff;
   padding: 2rem;
   border-radius: 10px;
   position: relative;
   z-index: 2;
+  /* background: #fff; optional */
 }
 
 .timeline-row .content h3 {
@@ -86,7 +116,9 @@
   line-height: 1.6;
 }
 
-/* Timeline dot */
+/* ==============================
+   Timeline Dot
+============================== */
 .timeline-point {
   position: absolute;
   left: 50%;
@@ -94,81 +126,141 @@
   transform: translate(-50%, -50%);
   width: 20px;
   height: 30px;
-  background-color: #007bff; 
+  background-color: #007bff;
   border: 3px solid #fff;
   border-radius: 50%;
-  z-index: 3;
+  z-index: 3; /* above everything */
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
   transition: transform 0.1s ease-in, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
 .timeline-row:hover .timeline-point {
   transform: translate(-50%, -50%) scale(1.2);
   box-shadow: 0 0 0 6px rgba(0, 123, 255, 0.1);
 }
 
-/* ===== Mobile Styles ===== */
+/* ==============================
+   Mobile Styles
+============================== */
 @media (max-width: 768px) {
-  /* Full grey vertical line on left */
   .timeline::before {
-    left: 26px; 
+    left: 26px;
   }
 
   .timeline-row {
     flex-direction: column !important;
     align-items: flex-start;
-    padding-left: 40px; /* spacing for line/dot */
+    padding-left: 40px;
   }
-  .timeline-row.reverse{
+
+  .timeline-row.reverse {
     flex-direction: column-reverse !important;
   }
 
   .timeline-row .image,
   .timeline-row .content {
-    order: unset; /* image first, content second */
+    order: unset;
     width: 100%;
     text-align: left;
   }
 
   .timeline-point {
-    left: 15px; /* dot aligns with line */
+    left: 15px;
   }
 
   .timeline-row.reverse .content {
     text-align: left;
   }
 
-  /* Disconnected blue progress line */
+  /* Mobile progress line */
   .timeline-row::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 28px; /* align with dot */
+    left: 28px;
     width: 3px;
     height: 100%;
-    background-color: #007bff; /* active/progress line */
+    background-color: #007bff;
     z-index: 1;
     transform-origin: top;
-    transform: scaleY(0); /* start collapsed */
+    transform: scaleY(0);
     transition: transform 0.6s ease-in-out;
   }
 
-  /* Full connecting grey line behind */
+  /* Full grey line behind */
   .timeline-row::after {
-    content: none;
+    content: "";
     position: absolute;
-    top: 30px; /* start just below dot */
+    top: 30px;
     left: 28px;
     width: 3px;
     height: calc(100% - 30px);
-    background-color: #e0e0e0; /* full grey line */
+    background-color: #e0e0e0;
     z-index: 0;
   }
 
   .timeline-row:last-child::after {
-    display: none; /* no line after last */
+    display: none;
   }
 }
 
-/* 🌸 Pink Gradient — moves clockwise */
+/* ==============================
+   Orbiting Gradient Backgrounds
+============================== */
+.timeline::before,
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.5;
+  z-index: 0; /* behind timeline */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+}
+
+/* 🌸 Pink orbit clockwise */
+.timeline::before {
+  top: -120px;
+  left: -180px;
+  background: radial-gradient(circle, rgb(209, 255, 182), transparent 100%);
+  animation-name: orbitPink;
+}
+
+/* 💙 Blue orbit counterclockwise */
+.timeline::after {
+  bottom: -120px;
+  right: -180px;
+  background: radial-gradient(circle, rgb(173, 216, 230), transparent 100%);
+  animation-name: orbitBlue;
+}
+
+/* Orbit animations */
+@keyframes orbitPink {
+  0%   { transform: translate(0, 5vh); }
+  25%  { transform: translate(90vw, 5vh); }
+  50%  { transform: translate(90vw, 60vh); }
+  75%  { transform: translate(0, 60vh); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes orbitBlue {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(-90vw, 0); }
+  50%  { transform: translate(-90vw, -60vh); }
+  75%  { transform: translate(0, -60vh); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ==============================
+   Ensure content is above gradients
+============================== */
+.timeline .container-fluid,
+.timeline .timeline-row,
+.timeline .section-title {
+  position: relative;
+  z-index: 2;
+}

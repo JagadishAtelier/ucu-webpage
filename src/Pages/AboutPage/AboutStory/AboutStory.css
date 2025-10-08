@@ -75,7 +75,7 @@
 .about-story-section::before {
   top: -120px;
   left: -180px;
-  background: radial-gradient(circle, rgb(255, 182, 193), transparent 100%);
+  background: radial-gradient(circle, rgb(209, 255, 182), transparent 100%);
   animation-name: orbitPink;
 }
 

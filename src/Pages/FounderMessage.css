@@ -136,8 +136,8 @@
   font-size: 0.9rem;
   letter-spacing: 1px;
   margin-bottom: 0.8rem;
-  font-weight: 600;
-  color: #d1d1d1;
+  font-weight: 800 !important;
+  color: #fff;
 }
 
 .founder-name {
@@ -148,7 +148,7 @@
 
 .founder-org {
   font-size: 1.2rem;
-  color: #ccc;
+  color: #fff;
   margin-top: 0.5rem;
 }
 

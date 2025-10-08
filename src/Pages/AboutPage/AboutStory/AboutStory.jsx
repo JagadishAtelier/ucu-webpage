@@ -8,7 +8,7 @@ function AboutStory() {
         <h2 className='story-heading fw-bold mb-3 mb-md-4'>
           Reimagining Business Education for a Borderless, Industry-Driven, AI-Empowered Future
         </h2>
-        <p className='story-paragraph lead text-dark mx-auto mx-md-0'>
+        <p className='story-paragraph text-center lead text-dark mx-auto mx-md-0'>
           Universal Corporate University (UCU) was founded with a vision to redefine management education by bridging academia and industry. Our innovative programs are designed to equip aspiring leaders with knowledge, skills, and values that drive meaningful impact across industries and geographies.
         </p>
       </div>

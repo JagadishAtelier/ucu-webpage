@@ -29,8 +29,8 @@ const FounderMessage = () => {
             <div className="message-wrapper">
               <p className="story-paragraph">Dear Stakeholders,</p>
               <p className="story-paragraph">
-                It is with immense pride that I welcome you to Universal
-                Corporate University (UCU), a pioneering institution with a bold
+                It is with immense pride that I welcome you to <strong>Universal
+                Corporate University (UCU)</strong> , a pioneering institution with a bold
                 mission to democratize access to high-quality business education
                 and cultivate a future-ready talent pipeline aligned with the
                 dynamic needs of global corporations.
@@ -39,10 +39,10 @@ const FounderMessage = () => {
                 India stands today as a beacon of intellectual capital,
                 increasingly recognized by global organizations as a premier hub
                 for skilled professionals. UCU was founded to meet this growing
-                demand, not only by nurturing exceptional talent but also by
+                demand, not only by <strong>nurturing exceptional talent but also by
                 strengthening academic institutions through rigorous Faculty
                 Development Programs, powered by a diverse network of industry
-                leaders.
+                leaders.</strong>
               </p>
               <p className="story-paragraph">
                 With over 35 years of experience bridging academia and industry,
