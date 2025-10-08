@@ -31,3 +31,9 @@
 .aboutphil-container {
   row-gap: 2rem;
 }
+
+.vision-supplementary-image{
+  height: 35vh;
+  width: 100%;
+  object-fit: cover;
+}

@@ -1,66 +1,116 @@
-/* Section-level styling */
+/* ==============================
+   Section-level styling
+============================== */
 .about-story-section {
-    /* Optional background color */
-    /* background-color: #f8f9fa; */
+  position: relative;
+  overflow: hidden;
+  background-color: #fff; /* Base background */
 }
 
-/* Heading styling */
+/* ==============================
+   Heading styling
+============================== */
 .story-heading {
-    color: #42427D;
-    font-size: 2rem; /* Default for mobile */
-    line-height: 1.3;
+  color: #42427D;
+  font-size: 2rem;
+  line-height: 1.3;
 }
 
-/* Paragraph styling */
+/* ==============================
+   Paragraph styling
+============================== */
 .story-paragraph {
-    max-width: 100%; /* Full width on small screens */
-    font-size: 1rem;
-    line-height: 1.6;
+  max-width: 100%;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-/* Padding overrides for large screens */
+/* ==============================
+   Padding overrides for large screens
+============================== */
 .px-lg-5 {
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
 }
 
-/* Medium screens */
+/* ==============================
+   Responsive Typography
+============================== */
 @media (min-width: 576px) {
-    .story-heading {
-        font-size: 2.25rem;
-    }
-    .story-paragraph {
-        font-size: 1.05rem;
-    }
+  .story-heading { font-size: 2.25rem; }
+  .story-paragraph { font-size: 1.05rem; }
 }
-
-/* Large screens */
 @media (min-width: 768px) {
-    .story-heading {
-        font-size: 2.75rem;
-    }
-    .story-paragraph {
-        font-size: 1.15rem;
-    }
+  .story-heading { font-size: 2.75rem; }
+  .story-paragraph { font-size: 1.15rem; }
 }
-
-/* Extra large screens */
 @media (min-width: 992px) {
-    .story-heading {
-        font-size: 3rem;
-    }
-    .story-paragraph {
-        max-width: 900px; /* Constrain line length for readability */
-        font-size: 1.2rem;
-    }
+  .story-heading { font-size: 3rem; }
+  .story-paragraph { max-width: 900px; font-size: 1.2rem; }
+}
+@media (min-width: 1200px) {
+  .story-heading { font-size: 3.5rem; }
+  .story-paragraph { font-size: 1.25rem; }
 }
 
-/* Extra extra large screens */
-@media (min-width: 1200px) {
-    .story-heading {
-        font-size: 3.5rem;
-    }
-    .story-paragraph {
-        font-size: 1.25rem;
-    }
+/* ==============================
+   Animated Cloud-like Gradients
+============================== */
+.about-story-section::before,
+.about-story-section::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.6;
+  z-index: 0;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 30s; /* smooth circular motion */
+}
+
+/* 🌸 Pink Gradient — moves clockwise */
+.about-story-section::before {
+  top: -120px;
+  left: -180px;
+  background: radial-gradient(circle, rgb(255, 182, 193), transparent 100%);
+  animation-name: orbitPink;
+}
+
+/* 💙 Blue Gradient — moves counterclockwise */
+.about-story-section::after {
+  bottom: -120px;
+  right: -180px;
+  background: radial-gradient(circle, rgb(173, 216, 230), transparent 100%);
+  animation-name: orbitBlue;
+}
+
+/* Keep text above background */
+.about-story-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==============================
+   Orbit Animations
+============================== */
+
+/* 🌸 Pink — Clockwise Motion */
+@keyframes orbitPink {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(90vw, 0); }        /* move to top-right */
+  50%  { transform: translate(90vw, 60vh); }     /* move to bottom-right */
+  75%  { transform: translate(0, 60vh); }        /* move to bottom-left */
+  100% { transform: translate(0, 0); }           /* back to top-left */
+}
+
+/* 💙 Blue — Counterclockwise Motion */
+@keyframes orbitBlue {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(-90vw, 0); }       /* move to bottom-left */
+  50%  { transform: translate(-90vw, -60vh); }   /* move to top-left */
+  75%  { transform: translate(0, -60vh); }       /* move to top-right */
+  100% { transform: translate(0, 0); }           /* back to bottom-right */
 }
