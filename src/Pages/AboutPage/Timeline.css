@@ -4,16 +4,11 @@
 .timeline {
   position: relative;
   padding: 4rem 0;
-  overflow: visible; /* ensures orbiting gradients are visible */
+  overflow: hidden; /* hide gradient edges */
+  background-color: #fff; /* match AboutStory */
 }
 
-/* Section title */
-.section-title {
-  overflow: hidden;
-  position: relative;
-  z-index: 2; /* above gradients */
-}
-
+/* Central vertical line */
 .timeline-line {
   position: absolute;
   top: 0;
@@ -24,24 +19,8 @@
   transform: translateX(-50%);
   z-index: 2; /* above gradients */
 }
-/* ==============================
-   Timeline vertical line
-============================== */
-/* .timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 3px;
-  background: #e0e0e0;
-  transform: translateX(-50%);
-  z-index: 2; 
-} */
 
-/* ==============================
-   Timeline Rows
-============================== */
+/* Timeline Rows */
 .timeline-row {
   position: relative;
   margin: 3rem 0;
@@ -55,7 +34,6 @@
   transition: all 0.6s ease;
 }
 
-/* Reverse layout for alternate rows */
 .timeline-row.reverse .image {
   order: 2;
 }
@@ -64,25 +42,25 @@
   text-align: right;
 }
 
-/* Timeline image */
 .timeline-row .image {
   position: relative;
   z-index: 2;
 }
 
 .timeline-row .image-auto {
+  position: relative;
   width: 100%;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  position: relative;
 }
 
 .timeline-carousel .image-auto img {
   width: 100%;
   height: auto;
-  object-fit: cover;
   display: block;
+  text-align: end;
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -96,13 +74,12 @@
   margin-left: 2rem;
 }
 
-/* Timeline content */
 .timeline-row .content {
+  background: #fff;
   padding: 2rem;
   border-radius: 10px;
   position: relative;
   z-index: 2;
-  /* background: #fff; optional */
 }
 
 .timeline-row .content h3 {
@@ -116,9 +93,7 @@
   line-height: 1.6;
 }
 
-/* ==============================
-   Timeline Dot
-============================== */
+/* Timeline dot */
 .timeline-point {
   position: absolute;
   left: 50%;
@@ -129,7 +104,7 @@
   background-color: #007bff;
   border: 3px solid #fff;
   border-radius: 50%;
-  z-index: 3; /* above everything */
+  z-index: 3;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
   transition: transform 0.1s ease-in, box-shadow 0.3s ease;
 }
@@ -143,14 +118,18 @@
    Mobile Styles
 ============================== */
 @media (max-width: 768px) {
-  .timeline::before {
+  .timeline-line {
     left: 26px;
+    transform: none;
+  }
+  .timeline-carousel{
+    margin: 0 !important;
   }
 
   .timeline-row {
     flex-direction: column !important;
     align-items: flex-start;
-    padding-left: 40px;
+    padding-left: 40px; /* spacing for line/dot */
   }
 
   .timeline-row.reverse {
@@ -165,19 +144,19 @@
   }
 
   .timeline-point {
-    left: 15px;
+    left: 15px; /* aligns with vertical line */
   }
 
   .timeline-row.reverse .content {
     text-align: left;
   }
 
-  /* Mobile progress line */
+  /* Mobile active/progress line */
   .timeline-row::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 28px;
+    left: 28px; /* align with dot */
     width: 3px;
     height: 100%;
     background-color: #007bff;
@@ -187,11 +166,11 @@
     transition: transform 0.6s ease-in-out;
   }
 
-  /* Full grey line behind */
+  /* Full connecting grey line behind */
   .timeline-row::after {
-    content: "";
+    content: none;
     position: absolute;
-    top: 30px;
+    top: 30px; /* start below dot */
     left: 28px;
     width: 3px;
     height: calc(100% - 30px);
@@ -216,7 +195,7 @@
   border-radius: 50%;
   filter: blur(140px);
   opacity: 0.5;
-  z-index: 0; /* behind timeline */
+  z-index: 0; /* behind timeline content & line */
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-duration: 30s;
