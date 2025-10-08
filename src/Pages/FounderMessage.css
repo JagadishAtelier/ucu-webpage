@@ -1,0 +1,118 @@
+.founder-message-page {
+  position: relative;
+  background-color: #fff;
+  overflow-x: hidden; /* prevents horizontal scroll */
+  overflow-y: visible;
+}
+
+/* Apply gradients to the page wrapper */
+.founder-message-page::before,
+.founder-message-page::after {
+  content: "";
+  position: fixed; /* prevents enlarging container */
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.6;
+  z-index: 0;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+}
+
+/* 🌸 Pink Gradient — clockwise motion */
+.founder-message-page::before {
+  top: 10%;
+  left: 5%;
+  background: radial-gradient(circle, #cbffb6, transparent 100%);
+  animation-name: orbitPink;
+}
+
+/* 💙 Blue Gradient — counterclockwise motion */
+.founder-message-page::after {
+  bottom: 10%;
+  right: 5%;
+  background: radial-gradient(circle, rgb(177, 173, 230), transparent 100%);
+  animation-name: orbitBlue;
+}
+
+/* Ensure text is above the gradients */
+.founder-message-page .founder-message-section {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 3rem;
+  max-width: 600px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 auto 2rem auto;
+  color: #42427D;
+  text-align: center;
+}
+
+/* ============================== Orbit Animations ============================= */
+@keyframes orbitPink {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(90vw, -5vh); }
+  50%  { transform: translate(90vw, 10vh); }
+  75%  { transform: translate(0, 45vh); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes orbitBlue {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(-90vw, 20vh); }
+  50%  { transform: translate(-90vw, -40vh); }
+  75%  { transform: translate(0, -45vh); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ============================== Typography ============================= */
+.story-heading {
+  color: #42427D;
+  font-size: 2rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.story-paragraph {
+  max-width: 100%;
+  text-align: justify;
+  font-size: 1rem;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.signature {
+  font-weight: 500;
+  margin-top: 2rem;
+  margin: 0 auto ;
+}
+
+
+/* Responsive Typography */
+@media (min-width: 576px) {
+  .story-heading { font-size: 2.25rem; }
+  .story-paragraph { font-size: 1.05rem; }
+}
+
+@media (min-width: 768px) {
+  .story-heading { font-size: 2.75rem; }
+  .story-paragraph { font-size: 1.15rem; }
+}
+
+@media (min-width: 992px) {
+  .story-heading { font-size: 3rem; }
+  .story-paragraph { max-width: 100%; font-size: 1.2rem; }
+}
+
+@media (min-width: 1200px) {
+  .story-heading { font-size: 3.5rem; }
+  .story-paragraph { font-size: 1.25rem; }
+}

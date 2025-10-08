@@ -26,6 +26,7 @@ import PDPhero from "./Components/ProfileDetailsPage/PDPhero";
 import Advisory from "./Components/Advisory/Advisory";
 import WhatsAppButton from "./Components/WhatsAppButton/WhatsAppButton";
 import Careers from "./Components/Careers/Careers";
+import FounderMessage from "./Pages/FounderMessage";
 
 function App() {
   useEffect(() => {
@@ -54,6 +55,7 @@ function App() {
         <Route path="/auth/reset" element={<ResetPassPage />} />
         <Route path="/:type" element={<Advisory/>} />
         <Route path="/Careers" element={<Careers/>} />
+        <Route path="/founder-message" element={<FounderMessage/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>
