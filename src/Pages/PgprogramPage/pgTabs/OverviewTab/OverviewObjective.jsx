@@ -5,34 +5,34 @@ import { FaPlayCircle } from "react-icons/fa";
 
 function OverviewObjective() {
     return (
-        <div style={{ paddingBottom: "200px", position: "relative" }} className="container my-1">
+        <div style={{ paddingBottom: "150px", position: "relative" }} className="container my-1">
             <h1 className="display-4 fw-bold col-12 col-lg-12 mb-3">
                 <span style={{ color: "#fff" }}>Objective</span>
             </h1>
             <p className="font-weight-normal">
-                Objective Competency goals PGDM (BM) aims to develop socially sensitive leaders with a global mindset...
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <ul>
-                <li>To develop a holistic understanding of the business environment...</li>
-                <li>To hone analytical, problem-solving, decision-making, and leadership skills...</li>
-                <li>To develop the ability to communicate effectively with stakeholders...</li>
-                <li>To foster a commitment to ethical and socially responsible business practices.</li>
-                <li>To prepare students for successful careers in a variety of industries and sectors...</li>
+                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
             </ul>
 
             <p className="font-weight-normal">Competency goals:</p>
             <ul>
-                <li>Business acumen: Develop a deep understanding of business concepts...</li>
-                <li>Leadership skills: Cultivate leadership qualities such as vision...</li>
-                <li>Communication skills: Develop the ability to effectively communicate...</li>
-                <li>Entrepreneurial mindset: Cultivate an entrepreneurial mindset...</li>
+                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
+                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
             </ul>
 
             {/* VIDEO CONTAINER */}
             <div
                 className="my-4 position-absolute overview-video"
                 style={{
-                    left: "30%",
+                    left: "20%",
                     zIndex: 2,
                 }}
             >
@@ -41,11 +41,11 @@ function OverviewObjective() {
                     src={videoimage}
                     alt="Video thumbnail"
                     style={{
-                        width: "100%",
-                        height: "auto",
+                        height: "350px",
                         borderRadius: "10px",
                         position: "relative",
                         zIndex: 1,
+                        width: "700px"
                     }}
                 />
                 <div

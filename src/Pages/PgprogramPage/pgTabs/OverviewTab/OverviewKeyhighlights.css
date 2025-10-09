@@ -1,0 +1,111 @@
+/* Basic layout & sizing */
+.overview-keyhighlights {
+  align-items: start;
+  margin-top: 100px !important;
+}
+
+/* Left nav pills */
+.left-nav .nav-pill {
+  background: transparent;
+  border: 2px solid #6b2b83; 
+  color: #6b2b83;
+  text-align: left;
+  width: 100%;
+  border-radius: 4px;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+}
+
+/* active state */
+.left-nav .nav-pill.active {
+  background: #4b1a66; /* dark purple */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(75,26,102,0.08);
+}
+.left-nav .nav-pill.active .icon {
+  /* background: #fff; */
+  color: #fff;
+}
+
+.left-nav .nav-pill .icon {
+  display: inline-flex;
+  align-items: center;
+  color: #6b2b83;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+/* label text styling */
+.left-nav .nav-pill .label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Right content card */
+.content-card {
+  background: #fff;
+  border-radius: 4px;
+  min-height: 335px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* title & paragraph */
+.content-title {
+  color: #6b2b83;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.content-text {
+  color: #6b6b6b;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* CTA button look like orange circle with chevron */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #fff;
+  border: none;
+  color: #6b6b6b;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+.btn-cta .chev {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6921e; /* orange */
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  font-size: 18px;
+  line-height: 0;
+  padding-bottom: 3px;
+}
+
+/* Responsive spacing: on small screens stack with some margins */
+@media (max-width: 991.98px) {
+  .left-nav {
+    flex-direction: row;
+    gap: 0.75rem;
+    overflow-x: auto;
+  }
+  .left-nav .nav-pill {
+    min-width: 220px;
+    white-space: nowrap;
+  }
+  .content-card {
+    margin-top: 1rem;
+  }
+}

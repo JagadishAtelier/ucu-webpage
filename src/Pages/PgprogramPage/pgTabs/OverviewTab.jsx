@@ -2,6 +2,8 @@ import React from "react";
 import OverviewAbout from "./OverviewTab/OverviewAbout";
 import OverviewObjective from "./OverviewTab/OverviewObjective";
 import bgImage from "../../../Assets/aboutPageImage/vision_mission_bg1.png";
+import OverviewKeyhighlights from "./OverviewTab/OverviewKeyhighlights";
+import OverviewIndustryconnect from "./OverviewTab/OverviewIndustryconnect";
 
 
 
@@ -24,6 +26,12 @@ function OverviewTab() {
                 }}
             >
                 <OverviewObjective />
+            </div>
+            <div className="container my-1 p-3">
+                <OverviewKeyhighlights />
+            </div>
+            <div className="container my-1 p-3">
+                <OverviewIndustryconnect />
             </div>
         </>
     );
