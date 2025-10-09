@@ -38,9 +38,9 @@
   order: 2;
 }
 
-.timeline-row.reverse .content {
+/* .timeline-row.reverse .content {
   text-align: right;
-}
+} */
 
 .timeline-row .image {
   position: relative;
@@ -58,6 +58,7 @@
 .timeline-carousel .image-auto img {
   width: 100%;
   height: auto;
+  max-height: 400px;
   display: block;
   text-align: end;
   object-fit: cover;

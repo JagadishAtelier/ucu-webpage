@@ -40,7 +40,7 @@ const Timeline = () => {
         
         These milestones laid the foundation for his deep expertise in corporate and executive education ecosystems.
       `,
-      images: ["/historyImages/2.jpg", "/historyImages/1.jpg", "/historyImages/3.jpg", "./ucu_journey_img.svg"],
+      images: ["/historyImages/2.jpg", "/historyImages/1.jpg", "/historyImages/3.jpg",],
       reverse: false,
     },
     {
@@ -63,7 +63,7 @@ const Timeline = () => {
         Under his stewardship, the institute’s average campus CTC increased more than sevenfold within a decade,
         reflecting the transformative impact of his leadership.<br /><br />
       `,
-      images: ["./histroy-2.jpg", "./histroy-2.jpg", "./histroy-2.jpg"],// replace with a collage or carousel image
+      images: ["/historyImages/4.jpg", "/historyImages/5.jpg", "/historyImages/6.jpg"],// replace with a collage or carousel image
       reverse: true,
     },
     {
