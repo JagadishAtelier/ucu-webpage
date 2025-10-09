@@ -75,7 +75,7 @@
 }
 .car-explore-btn{
         background-color: #ffffff00;
-    color: black;
+    color: black !important;
     border: 1px solid black;
 }
 .green-explore-btn{
