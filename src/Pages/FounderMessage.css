@@ -51,7 +51,7 @@
   font-weight: 600;
   line-height: 1.3;
   margin: 0 auto 2rem auto;
-  color: #42427D;
+  color: #000000;
   text-align: center;
 }
 
@@ -74,7 +74,7 @@
 
 /* ============================== Typography ============================= */
 .story-heading {
-  color: #42427D;
+  color: #000000;
   font-size: 2rem;
   line-height: 1.3;
   text-align: center;

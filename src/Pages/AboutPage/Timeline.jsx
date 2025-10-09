@@ -40,7 +40,7 @@ const Timeline = () => {
         
         These milestones laid the foundation for his deep expertise in corporate and executive education ecosystems.
       `,
-      images: ["/historyImages/2.jpg", "/historyImages/1.jpg", "/historyImages/3.jpg",],
+      images: ["/historyImages/2009.jpg",],
       reverse: false,
     },
     {
@@ -63,7 +63,7 @@ const Timeline = () => {
         Under his stewardship, the institute’s average campus CTC increased more than sevenfold within a decade,
         reflecting the transformative impact of his leadership.<br /><br />
       `,
-      images: ["/historyImages/4.jpg", "/historyImages/5.jpg", "/historyImages/6.jpg"],// replace with a collage or carousel image
+      images: ["/historyImages/2.jpg","/historyImages/4.jpg", "/historyImages/5.jpg", "/historyImages/6.jpg", "/historyImages/1.jpg", "/historyImages/3.jpg",],// replace with a collage or carousel image
       reverse: true,
     },
     {
@@ -92,7 +92,7 @@ const Timeline = () => {
   return (
     <>
     <h1 className="section-title my-4 mb-2">
-        Our History
+       <span style={{color:'#5ac501'}}> Our</span> History
       </h1>
     <section className="timeline">
       <div className="timeline-line"></div>
