@@ -1,0 +1,90 @@
+import React from "react";
+import { Accordion } from "react-bootstrap";
+import "./FeeStructure.css";
+import feeImage from "../../../../Assets/aboutPageImage/fee.jpg"; // update with actual path or import
+
+const FeeStructure = () => {
+  return (
+    <section className="fee-structure container-flued mx-5 my-4">
+      <h3 className="pg-panel-title fs-2 gradient-text hero-gradient-1">PGDM Fee Structure</h3>
+
+      {/* ================= Fee Info ================= */}
+      <div className="fee-info bg-light p-3 rounded">
+        <div className="fee-image">
+          <img
+            src={feeImage} // update with actual path or import
+            alt="Students discussing fee details"
+          />
+        </div>
+
+        <div className="fee-details">
+          <h5 className="gradient-text hero-gradient-1">Indian Participants:</h5>
+          <p>
+            The fee for Indian participants is <strong>INR 26.50 lakhs*</strong>.
+          </p>
+          <p>
+            This fee includes tuition fee and basic hostel/accommodation.{" "}
+            <em>*This fee is indicative and subject to revision.</em>
+          </p>
+
+          <p className="mt-3">
+            [The Global Fast Track (GFT) and International Exchange are optional components of
+            the PGDM and PGDM (BM) programmes. Please note that the fees mentioned above do not
+            include the expenses associated with these components.]
+          </p>
+
+          <h5 className="gradient-text hero-gradient-1 mt-4">International Participants:</h5>
+          <p>
+            The fee for International participants is <strong>INR 35.94 lakhs*</strong>.
+          </p>
+          <p>
+            This fee includes tuition fee and basic hostel/accommodation.{" "}
+            <em>*This fee is indicative and subject to revision.</em>
+          </p>
+
+          <p className="mt-3">
+            [The Global Fast Track (GFT) and International Exchange are optional components of
+            the PGDM and PGDM (BM) programmes. Please note that the fees mentioned above do not
+            include the expenses associated with these components.]
+          </p>
+        </div>
+      </div>
+
+      {/* ================= Scholarships ================= */}
+      <div className="scholarship-section">
+        <h4 className="gradient-text hero-gradient-1">Financial Assistance and Scholarships</h4>
+        <p>
+          The main objective of financial assistance and scholarships is to provide monetary
+          assistance to meritorious and needy PGDM participants. The scholarship is available
+          after the programme commences and is awarded each academic year.
+        </p>
+
+        <Accordion defaultActiveKey="0" className="mt-4">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>Merit cum Means Based Financial Assistance</Accordion.Header>
+            <Accordion.Body>
+              <p>
+                The scholarship is awarded based on both academic merit and financial need. It
+                covers a portion of the tuition fee for eligible students who demonstrate
+                outstanding performance and genuine need for support.
+              </p>
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Mirae Asset Foundation (MAF) Scholarship</Accordion.Header>
+            <Accordion.Body>
+              <p>
+                The Mirae Asset Foundation (MAF) Scholarship is designed to recognize students
+                who exhibit exceptional leadership qualities, academic excellence, and a
+                commitment to making a positive impact on society.
+              </p>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+      </div>
+    </section>
+  );
+};
+
+export default FeeStructure;

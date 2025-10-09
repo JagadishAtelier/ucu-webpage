@@ -3,6 +3,8 @@ import OverviewTab from "./pgTabs/OverviewTab";
 import FeesTab from "./pgTabs/FeesTab";
 import "./pgtab.css";
 import Curriculum from "./pgTabs/Curriculum/Curriculum";
+import FeeStructure from "./pgTabs/FeeStructure/FeeStructure";
+import AdmissionsTab from "./pgTabs/AdmissionsTab/AdmissionsTab";
 
 const TAB_LIST = [
   "Overview",
@@ -43,43 +45,12 @@ export default function PgTabs() {
 
       case "Fees and Scholarships":
         return (
-          <section aria-labelledby="fees-heading">
-            <FeesTab />
-          </section>
+          <FeeStructure/>
         );
 
       case "Admissions":
         return (
-          <section aria-labelledby="admissions-heading">
-            <h3 id="admissions-heading" className="pg-panel-title">Admissions Process</h3>
-
-            <ol style={{ paddingLeft: "1.1rem", marginTop: ".5rem" }}>
-              <li>Complete the online application form</li>
-              <li>Submit transcripts, resume, and one recommendation</li>
-              <li>Shortlisted candidates receive an interview invite</li>
-              <li>Final decision communicated via email</li>
-            </ol>
-
-            <p style={{ marginTop: ".6rem" }} className="pg-panel-body">
-              Tip: Apply early to be considered for scholarships. For application assistance, contact admissions@ucu.edu.
-            </p>
-
-            <div style={{ marginTop: ".6rem" }}>
-              <button
-                onClick={() => window.location.href = "/apply"}
-                style={{
-                  padding: ".5rem .75rem",
-                  borderRadius: 6,
-                  border: "none",
-                  background: "#16a34a",
-                  color: "#fff",
-                  cursor: "pointer"
-                }}
-              >
-                Apply Now
-              </button>
-            </div>
-          </section>
+          <AdmissionsTab/>
         );
 
       case "International Immersion":

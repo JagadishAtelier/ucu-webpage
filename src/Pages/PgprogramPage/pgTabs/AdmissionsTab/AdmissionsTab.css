@@ -1,0 +1,155 @@
+.admissions-tab {
+  color: #333;
+  line-height: 1.6;
+  padding: 1.5rem 3rem;
+}
+
+.pg-panel-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #5b2c91; /* SPJIMR purple */
+}
+
+.pg-panel-body {
+  font-size: 0.98rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.admissions-section {
+  margin-top: 2rem;
+}
+
+.admissions-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #222;
+}
+
+.admissions-list {
+  padding-left: 1.2rem;
+  margin-top: 0.3rem;
+}
+
+.highlight-link {
+  color: #e67e22;
+  text-decoration: underline;
+}
+
+.timelines {
+  background: #f7f3fc;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid #2c3691;
+  border-radius: 6px;
+}
+
+/* ===============================
+   Updated Background Section
+=============================== */
+.admissions-columns {
+  margin-top: 2.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  background-image: url("https://www.spjimr.org/wp-content/uploads/2022/09/pgdm-admissions-img-jpg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Semi-transparent overlay for readability */
+.admissions-columns::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* Container for buttons over image */
+.admissions-buttons {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+}
+
+/* Applicant boxes */
+.applicant-box {
+  padding: 1.8rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.applicant-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.applicant-box.indian {
+  background: linear-gradient(90deg, #654dee, #448da3);
+}
+
+.applicant-box.international {
+  background: linear-gradient(90deg, #29e622, #c2f312);
+}
+.applicant-box.indian h5, .applicant-box.international h5 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.apply-button-wrapper {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.apply-button {
+  background: linear-gradient(90deg, #362c91, #49e622);
+  color: #fff;
+  padding: 0.7rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.apply-button:hover {
+  opacity: 0.9;
+}
+
+/* ===============================
+   Responsive Design
+=============================== */
+@media (max-width: 768px) {
+  .admissions-columns {
+    min-height: 420px;
+  }
+
+  .admissions-buttons {
+    flex-direction: row;
+    gap: 0.8rem;
+    padding: 1.2rem;
+  }
+
+  .applicant-box {
+    flex: 1;
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+}
