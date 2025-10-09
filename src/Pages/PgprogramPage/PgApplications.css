@@ -1,0 +1,80 @@
+.pg-applications {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 66.6%; /* takes up two-thirds of the full row */
+  margin-left: 0;
+  margin-top: -70px; /* align to left */
+  margin-right: auto; /* ensures it's flush left */
+  color: #fff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.app-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  padding: 1rem;
+  height: 70px;
+  position: relative;
+}
+
+
+/* Background colors for each column */
+.box-1 { background: #b99cd9; }
+.box-2 { background: #9a83bf; }
+.box-3 { background: #7d5fa5; }
+.box-4 { background: #3b0b66; }
+
+.icon {
+  flex-shrink: 0;
+  color: #fff;
+}
+
+/* Text styles */
+.text-small {
+  font-size: 10px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.text-large {
+  font-size: 12px;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Apply button */
+.apply-btn {
+  position: absolute;
+  bottom: .4rem;
+  right: 1rem;
+  background: #f6921e;
+  color: #fff;
+  border: none;
+  font-size: 6px;
+  border-radius: 4px;
+  padding: 0.3rem .8rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.apply-btn:hover {
+  background: #e58010;
+}
+
+/* Responsive layout */
+@media (max-width: 992px) {
+  .pg-applications {
+    flex-direction: column;
+  }
+  .app-box {
+    justify-content: flex-start;
+  }
+  .apply-btn {
+    position: static;
+    margin-top: 1rem;
+  }
+}
