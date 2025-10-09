@@ -27,6 +27,7 @@ import Advisory from "./Components/Advisory/Advisory";
 import WhatsAppButton from "./Components/WhatsAppButton/WhatsAppButton";
 import Careers from "./Components/Careers/Careers";
 import FounderMessage from "./Pages/FounderMessage";
+import PgprogramPage from "./Pages/pgprogramPage";
 
 function App() {
   useEffect(() => {
@@ -56,6 +57,7 @@ function App() {
         <Route path="/:type" element={<Advisory/>} />
         <Route path="/Careers" element={<Careers/>} />
         <Route path="/founder-message" element={<FounderMessage/>} />
+        <Route path="/pgprogram" element={<PgprogramPage/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>

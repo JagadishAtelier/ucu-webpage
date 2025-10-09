@@ -12,6 +12,7 @@ import Timeline from "./AboutPage/Timeline";
 import ConnectWithUs from "./AboutPage/ConnectWithUs";
 import { useLocation } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import heroImage from "../Assets/aboutPageImage/ucu-About us.svg";
 function AboutPage() {
   const location = useLocation();
 
@@ -49,7 +50,11 @@ function AboutPage() {
   return (
     <div>
       <Navbar />
-      <AboutPageHero />
+      <AboutPageHero
+        title="About UCU"
+        breadcrumb={["Home", "About Us"]}
+        bgImage={heroImage}
+      />
       <div ref={refs["our-story"]}>
         <AboutStory />
       </div>
