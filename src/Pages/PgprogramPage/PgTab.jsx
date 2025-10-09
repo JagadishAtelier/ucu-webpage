@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import OverviewTab from "./pgTabs/OverviewTab";
 import "./pgtab.css";
 import Curriculum from "./pgTabs/Curriculum/Curriculum";
+import FeeStructure from "./pgTabs/FeeStructure/FeeStructure";
+import AdmissionsTab from "./pgTabs/AdmissionsTab/AdmissionsTab";
 
 const TAB_LIST = [
   "Overview",
@@ -42,70 +44,12 @@ export default function PgTabs() {
 
       case "Fees and Scholarships":
         return (
-          <section aria-labelledby="fees-heading">
-            <h3 id="fees-heading" className="pg-panel-title">Fees & Scholarships</h3>
-
-            <div style={{ marginTop: ".6rem" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                <tbody>
-                  <tr>
-                    <td style={{ padding: ".5rem 0", fontWeight: 600 }}>Tuition (total)</td>
-                    <td style={{ padding: ".5rem 0", textAlign: "right" }}>₹ 6,00,000</td>
-                  </tr>
-                  <tr>
-                    <td style={{ padding: ".5rem 0", fontWeight: 600 }}>One-time fees</td>
-                    <td style={{ padding: ".5rem 0", textAlign: "right" }}>₹ 25,000</td>
-                  </tr>
-                  <tr>
-                    <td style={{ padding: ".5rem 0", fontWeight: 600 }}>Payment options</td>
-                    <td style={{ padding: ".5rem 0", textAlign: "right" }}>Instalments available</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div style={{ marginTop: ".75rem" }}>
-                <h4 style={{ margin: 0, fontSize: "0.95rem" }}>Scholarships</h4>
-                <ul style={{ paddingLeft: "1.1rem", marginTop: ".4rem" }}>
-                  <li>Merit-based scholarships up to 50% for top applicants</li>
-                  <li>Need-based aid and early-application discounts</li>
-                </ul>
-              </div>
-            </div>
-          </section>
+          <FeeStructure/>
         );
 
       case "Admissions":
         return (
-          <section aria-labelledby="admissions-heading">
-            <h3 id="admissions-heading" className="pg-panel-title">Admissions Process</h3>
-
-            <ol style={{ paddingLeft: "1.1rem", marginTop: ".5rem" }}>
-              <li>Complete the online application form</li>
-              <li>Submit transcripts, resume, and one recommendation</li>
-              <li>Shortlisted candidates receive an interview invite</li>
-              <li>Final decision communicated via email</li>
-            </ol>
-
-            <p style={{ marginTop: ".6rem" }} className="pg-panel-body">
-              Tip: Apply early to be considered for scholarships. For application assistance, contact admissions@ucu.edu.
-            </p>
-
-            <div style={{ marginTop: ".6rem" }}>
-              <button
-                onClick={() => window.location.href = "/apply"}
-                style={{
-                  padding: ".5rem .75rem",
-                  borderRadius: 6,
-                  border: "none",
-                  background: "#16a34a",
-                  color: "#fff",
-                  cursor: "pointer"
-                }}
-              >
-                Apply Now
-              </button>
-            </div>
-          </section>
+          <AdmissionsTab/>
         );
 
       case "International Immersion":

@@ -1,6 +1,6 @@
 import React from 'react'
 import './AboutGraduation.css'
-import image from '../../../Assets/aboutPageImage/WhatsApp Image 2025-09-05 at 14.33.24_14c60c6f.jpg'
+import image from '../../../Assets/aboutPageImage/fee.jpg'
 import icon from '../../../Assets/aboutPageImage/Graduate_icon.svg'
 function AboutGraduation() {
   return (
