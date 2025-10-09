@@ -84,11 +84,18 @@
 
 .timeline-row .content h3 {
   font-weight: 600;
-  color: #42427D;
+  color: #000 !important;
   margin-bottom: 1rem;
+}
+.timeline-row .content h3 span {
+  color: #5ac501;;
 }
 
 .timeline-row .content p {
+  font-family: "Merriweather", serif !important;
+  font-weight: 500 !important;
+  color: #000 !important;
+  font-size: 1.14rem;
   margin: 0;
   line-height: 1.6;
 }

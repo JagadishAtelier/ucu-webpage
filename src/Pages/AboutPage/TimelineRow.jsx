@@ -27,7 +27,7 @@ const TimelineRow = ({ title, description, images = [], reverse }) => {
       </Col>
 
       <Col md={6} className="content">
-        <h3>{title}</h3>
+        <h3 dangerouslySetInnerHTML={{ __html: title }}></h3>
         <p dangerouslySetInnerHTML={{ __html: description }} />
       </Col>
     </Row>

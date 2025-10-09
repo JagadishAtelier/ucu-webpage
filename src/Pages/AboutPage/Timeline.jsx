@@ -27,7 +27,7 @@ import TimelineRow from "./TimelineRow";
 const Timeline = () => {
   const data = [
     {
-      title: "1990 – 2009: The Foundational Years",
+      title: "<span>1990 – 2009</span> : The Foundational Years",
       description: `
         This journey is the life’s work of our Founder & Chairman, <strong>Dr. M. Balaji (Bala)</strong>.
         It began at the <strong>Ahmedabad Management Association (AMA)</strong>, founded by Dr. Vikram Sarabhai,
@@ -40,11 +40,11 @@ const Timeline = () => {
         
         These milestones laid the foundation for his deep expertise in corporate and executive education ecosystems.
       `,
-      images: ["./ucu_journey_img.svg", "./ucu_journey_img.svg"],
+      images: ["/historyImages/2.jpg", "/historyImages/1.jpg", "/historyImages/3.jpg", "./ucu_journey_img.svg"],
       reverse: false,
     },
     {
-      title: "2009 – 2026: Transforming Corporate Education",
+      title: "<span>2009 – 2026</span> : Transforming Corporate Education",
       description: `
         Dr. Bala carried his vision forward to <strong>Great Lakes Institute of Management</strong>, where he served
         for over 15 years and played a pivotal role in shaping its corporate engagement strategy.<br /><br />
@@ -67,7 +67,7 @@ const Timeline = () => {
       reverse: true,
     },
     {
-      title: "2025 – Present: Building UCU for the Future of Work",
+      title: "<span>2025 – Present</span> : Building UCU for the Future of Work",
       description: `
         Throughout his career, Dr. Bala keenly observed the widening disconnect between what was taught in business schools
         and what the industry truly needed — an issue magnified by the rise of AI and rapid technological change.<br /><br />

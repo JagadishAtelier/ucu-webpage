@@ -11,7 +11,9 @@
    Heading styling
 ============================== */
 .story-heading {
+ 
   color: #42427D;
+  font-weight: 700;
   font-size: 2rem;
   line-height: 1.3;
 }
@@ -20,8 +22,14 @@
    Paragraph styling
 ============================== */
 .story-paragraph {
+  /* font-family: "Montserrat", sans-serif !important; */
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500 !important;
+  /* font-family: "Playfair Display", serif !important;
+  font-weight: 600 !important; */
+  color: #000;
   max-width: 100%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.6;
 }
 
