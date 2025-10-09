@@ -31,6 +31,15 @@
 .aboutphil-container {
   row-gap: 2rem;
 }
+.vission-p, .vission-p ul li {
+    font-family: "Merriweather", serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 1px;
+}
+.vission-h1 span {
+  color: #5ac501;
+
+}
 
 .vision-supplementary-image{
   height: 35vh;

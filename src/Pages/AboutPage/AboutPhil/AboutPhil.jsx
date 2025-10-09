@@ -8,7 +8,7 @@ import visionImage from "../../../Assets/aboutPageImage/vision_image1.jpg"; // n
 const data = [
   {
     icon: iconVision,
-    head: "Our Vision",
+    head: "Our <span> Vision</span>",
     para: `To be a globally recognised force in business education—democratising access, 
     bridging rural-urban divides, and empowering learners and educators through a curriculum 
     co-created and delivered by industry leaders and corporate practitioners, within a lifelong 
@@ -18,9 +18,10 @@ const data = [
   },
   {
     icon: iconMission,
-    head: "Our Mission",
+    head: "Our <span > Mission</span>",
     para: (
       <>
+      
         <ul className="mission-list text-lg-right">
           <li className="mb-2">
             To co-create and co-deliver cutting-edge, contemporary, and
@@ -85,13 +86,12 @@ function AboutPhil() {
               />
             </div>
 
-            <h1 className="fw-bold fs-2 mb-3 text-center text-lg-start">
-              {item.head}
+            <h1 className="fw-bold vission-h1 fs-2 mb-3 text-center text-lg-start" dangerouslySetInnerHTML={{ __html: item.head }  }>
             </h1>
             {typeof item.para === "string" ? (
-              <p className="fs-6 mb-3 text-lg-start">{item.para}</p>
+              <p className=" vission-p fs-6 mb-3 text-lg-start">{item.para}</p>
             ) : (
-              <div className="fs-6 mb-3 text-lg-right">{item.para}</div>
+              <div className=" vission-p fs-6 mb-3 text-lg-right">{item.para}</div>
             )}
 
             {/* Add supplementary image under Vision */}
