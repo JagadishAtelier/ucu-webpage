@@ -70,6 +70,9 @@
   width: 95%;
   margin-left: 0.5rem;
 }
+.timeline-row.reverse{
+  align-items: flex-start !important;
+}
 
 .timeline-row.reverse .timeline-carousel {
   margin-left: 2rem;
