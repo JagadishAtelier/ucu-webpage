@@ -1,0 +1,151 @@
+.pgdm-section {
+  padding: 1rem 0;
+  background-color: #fff;
+  color: #333;
+  text-align: left;
+}
+
+.pgdm-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+}
+ span.program {
+  color: #5ac501;
+ }
+.pgdm-intro {
+  max-width: 100%;
+  /* margin: 0 auto; */
+  color: #555;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.pgdm-description {
+  margin-bottom: 2rem;
+}
+
+.minor-btn {
+  width: 100%;
+  background: linear-gradient(205deg, rgb(7, 186, 243)  1% , rgb(23, 3, 169) 100%);
+  border: none;
+  color: white;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.minor-btn:hover {
+  background: linear-gradient(205deg, rgb(23, 3, 169) 1%, rgb(7, 186, 243) 100%);
+}
+
+.accordion-button {
+  background: linear-gradient(205deg, rgb(7, 186, 243)  1% , rgb(23, 3, 169) 100%) !important;
+  color: white !important;
+  font-weight: 600;
+}
+.accordion-button::after {
+  filter: invert(1);
+}
+
+.accordion-body {
+  background-color: #f8f8f8;
+}
+
+img.img-fluid {
+  border-radius: 10px;
+}
+.custom-vertical-tabs {
+  border-right: none;
+}
+
+.Students img{
+    height: auto;
+    margin: 0 auto;
+    width: 80%;
+    max-height: 400px;
+    border-radius: 0;
+    object-fit: cover;
+    object-position: center center;
+}
+.custom-vertical-tabs .nav-item{
+    width: 100%;
+    border-radius: 0;
+}
+.custom-vertical-tabs .nav-link {
+  border: 1px solid #1703a9;
+  color: #1703a9;
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  background: #fff;
+}
+
+.custom-vertical-tabs .nav-link.active {
+  background: linear-gradient(205deg, rgb(7, 186, 243)  1% , #1703a9 100%);
+  color: #fff;
+  font-weight: 600;
+}
+
+.custom-vertical-tabs .nav-link:hover {
+   background: linear-gradient(205deg,#1703a9 1% ,  #07baf3 100%);
+  color: #fff;
+}
+
+.tab-content-box {
+  background: #fff;
+  border: 1px solid #eee;
+  border-left: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-height: 220px;
+}
+
+.tab-content-box h5 {
+  margin-bottom: 0.75rem;
+}
+.hero-gradient-1{
+    background: linear-gradient(93deg,#1703a9 1% ,  #07baf3 100%);
+}
+.gradient-text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tab-content-box p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .majors-tab-layout {
+    flex-direction: column;
+  }
+
+  .custom-vertical-tabs {
+    flex-direction: row !important;
+    border: none;
+    justify-content: center;
+  }
+
+  .custom-vertical-tabs .nav-link {
+    flex: 1;
+    text-align: center;
+    margin-right: 6px;
+    border-radius: 6px;
+  }
+
+  .tab-content-box {
+    margin-top: 16px;
+  }
+}

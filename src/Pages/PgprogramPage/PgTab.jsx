@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import OverviewTab from "./pgTabs/OverviewTab";
 import "./pgtab.css";
+import Curriculum from "./pgTabs/Curriculum/Curriculum";
 
 const TAB_LIST = [
   "Overview",
@@ -36,33 +37,7 @@ export default function PgTabs() {
 
       case "Curriculum":
         return (
-          <section aria-labelledby="curriculum-heading">
-            <h3 id="curriculum-heading" className="pg-panel-title">Curriculum (sample)</h3>
-
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginTop: ".6rem" }}>
-              <div>
-                <h4 style={{ margin: 0, fontSize: "0.95rem" }}>Core Semesters</h4>
-                <ol style={{ paddingLeft: "1.1rem", marginTop: ".5rem" }}>
-                  <li>Foundations of Management</li>
-                  <li>Data Analytics & Decision Making</li>
-                  <li>Operations & Supply Chain</li>
-                </ol>
-              </div>
-
-              <div>
-                <h4 style={{ margin: 0, fontSize: "0.95rem" }}>Electives & Capstone</h4>
-                <ol style={{ paddingLeft: "1.1rem", marginTop: ".5rem" }}>
-                  <li>Fintech & Innovation</li>
-                  <li>Strategic Marketing</li>
-                  <li>Capstone Project (industry-sponsored)</li>
-                </ol>
-              </div>
-            </div>
-
-            <p style={{ marginTop: ".6rem" }} className="pg-panel-body">
-              Students choose 3 electives and complete a capstone with a corporate partner in the final semester.
-            </p>
-          </section>
+          <Curriculum/>
         );
 
       case "Fees and Scholarships":

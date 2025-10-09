@@ -183,6 +183,7 @@
 .top-head a, button {
   text-decoration: none;
   font-weight: 500;
+   color: #fff;
   text-transform: uppercase;
 
   letter-spacing: 0.6px;
