@@ -25,10 +25,10 @@
 
 
 /* Background colors for each column */
-.box-1 { background: #b99cd9; }
-.box-2 { background: #9a83bf; }
-.box-3 { background: #7d5fa5; }
-.box-4 { background: #3b0b66; }
+.box-1 { background: #8fbaf1; }
+.box-2 { background: #4791f2; }
+.box-3 { background: #2274df; }
+.box-4 { background: #005bd4; }
 
 .icon {
   flex-shrink: 0;

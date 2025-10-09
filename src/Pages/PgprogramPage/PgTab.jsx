@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import OverviewTab from "./pgTabs/OverviewTab";
+import FeesTab from "./pgTabs/FeesTab";
 import "./pgtab.css";
 import Curriculum from "./pgTabs/Curriculum/Curriculum";
 import FeeStructure from "./pgTabs/FeeStructure/FeeStructure";

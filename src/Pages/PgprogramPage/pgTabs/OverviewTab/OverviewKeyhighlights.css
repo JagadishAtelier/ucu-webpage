@@ -7,8 +7,8 @@
 /* Left nav pills */
 .left-nav .nav-pill {
   background: transparent;
-  border: 2px solid #6b2b83; 
-  color: #6b2b83;
+  border: 2px solid #005bd4; 
+  color: #005bd4;
   text-align: left;
   width: 100%;
   border-radius: 4px;
@@ -18,7 +18,7 @@
 
 /* active state */
 .left-nav .nav-pill.active {
-  background: #4b1a66; /* dark purple */
+  background: #005bd4; /* dark purple */
   color: #fff;
   box-shadow: 0 4px 10px rgba(75,26,102,0.08);
 }
@@ -30,7 +30,7 @@
 .left-nav .nav-pill .icon {
   display: inline-flex;
   align-items: center;
-  color: #6b2b83;
+  color: #005bd4;
   justify-content: center;
   width: 36px;
   height: 36px;
@@ -57,7 +57,7 @@
 
 /* title & paragraph */
 .content-title {
-  color: #6b2b83;
+  color: #005bd4;
   margin-bottom: 1rem;
   font-weight: 600;
 }
