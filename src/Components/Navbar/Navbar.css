@@ -184,8 +184,11 @@
   text-decoration: none;
   font-weight: 500;
   text-transform: uppercase;
-  color: #fff !important;
+
   letter-spacing: 0.6px;
+}
+.top-head button{
+  color: #fff !important;
 }
 /* links inside dropdown */
 .dropdown-menu-col ul {
