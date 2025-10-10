@@ -79,7 +79,8 @@ const councils = [
     ),
     bgImage: `https://web.saumag.edu/business/files/2019/12/BSAC_BAC-group-picture-scaled.jpg`,
     bannerHead: "Business Advisory Council",
-    sec2head: "Business Advisory Council",
+    sec2head: <><span className="color-highlight">Business Advisory </span>Council</>,
+        // <><span className="color-highlight">Business Advisory </span>Council</>
     sec2Para:
       "At the forefront of the Universities strategic direction stands our esteemed Business Advisory Council (BAC). Comprised of luminaries holding influential leadership positions across diverse industries, the BAC provides invaluable insights and forward-thinking guidance. These accomplished executives contribute their unparalleled real-world experience, ensuring the Universities initiatives and member institutions remain acutely attuned to the dynamic demands of the global marketplace. The BAC serves as a powerful nexus between academia and industry, fostering a symbiotic relationship that shapes curriculum relevance, anticipates future talent needs, and ultimately empowers the next generation of business leaders. Their strategic counsel is instrumental in driving the Consortium's mission to elevate business education and foster sustainable growth.",
     staff: [
@@ -194,7 +195,8 @@ const councils = [
     ),
     bgImage: `https://www.cuny.edu/wp-content/uploads/sites/4/page-assets/about/administration/offices/hr/recruitment-diversity/people/u-a-c-d/DSPIIE-Phase-III-006.jpg`,
     bannerHead: "Academic Advisory Council",
-    sec2head: "Academic Advisory Council",
+    sec2head: <><span className="color-highlight">Academic Advisory </span>Council</>,
+    // <><span className="color-highlight">Academic Advisory </span>Council</>
     sec2Para:
       "The lifeblood of the Corporate Universities intellectual rigor is our esteemed Academic Advisory Committee. Comprising distinguished scholars, pioneering researchers, and globally recognized thought leaders in management education, this committee is dedicated to upholding and advancing the highest standards of academic excellence. They provide crucial guidance on curriculum development, pedagogical innovation, and research initiatives, ensuring that member B-Schools remain at the vanguard of management knowledge. The AAC fosters a culture of continuous improvement, promoting cutting-edge teaching methodologies, and anticipating future trends in business education.",
     staff: [
@@ -1071,21 +1073,21 @@ function Advisory() {
           minHeight: "60vh",
         }}
       >
-        <h1>{council.bannerHead}</h1>
+        <h1 className="display-4 fw-bold col-12">{council.bannerHead}</h1>
 
         <div className="d-flex align-items-center flex-row gap-2 justify-content-center justify-content-lg-start mt-3">
-          <p className="fs-5 mb-0 bread-crumb">Home</p>
+          <p className="fs-4 mb-0 bread-crumb">Home</p>
           <FaChevronRight size={window.innerWidth > 991 ? 12 : 15} />
-          <p className="fs-5 mb-0 bread-crumb">Advisory Council</p>
-          <FaChevronRight size={window.innerWidth > 991 ? 12 : 15} />
-          <p className="fs-5 mb-0 bread-crumb">{council.bannerHead}</p>
+          {/* <p className="fs-5 mb-0 bread-crumb">Advisory Council</p>
+          <FaChevronRight size={window.innerWidth > 991 ? 12 : 15} /> */}
+          <p className="fs-4 mb-0 bread-crumb">{council.bannerHead}</p>
         </div>
       </div>
       <section className="my-5 px-3 px-lg-5">
-        <h4 className="text-start text-lg-center mb-3 lg:mb-4">
+        {/* <h4 className="text-start text-lg-center display-4 fw-bold col-12  mb-3 lg:mb-4">
           {council.sec2head}
-        </h4>
-        <p className="text-start text-lg-start">{council.sec2Para}</p>
+        </h4> */}
+        <p className="text-center text-lg-center">{council.sec2Para}</p>
       </section>
 
       <section
