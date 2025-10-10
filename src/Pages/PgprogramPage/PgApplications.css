@@ -4,9 +4,9 @@
   justify-content: space-between;
   align-items: stretch;
   width: 66.6%; /* takes up two-thirds of the full row */
-  margin-left: 0;
   margin-top: -70px; /* align to left */
-  margin-right: auto; /* ensures it's flush left */
+  margin-right: 8%; /* ensures it's flush left */
+  margin-left: auto;
   color: #fff;
   text-align: left;
   font-family: 'Poppins', sans-serif;
@@ -25,10 +25,11 @@
 
 
 /* Background colors for each column */
-.box-1 { background: #8fbaf1; }
-.box-2 { background: #4791f2; }
-.box-3 { background: #2274df; }
-.box-4 { background: #005bd4; }
+.box-1 { background: #6696f7; } /* Lightest – pastel blue */
+.box-2 { background: #2f59bb; } /* Mid-light – medium blue */
+.box-3 { background: #041d80; } /* Deep blue */
+.box-4 { background: #0c0142; } /* Dark navy (base) */
+
 
 .icon {
   flex-shrink: 0;
@@ -37,12 +38,12 @@
 
 /* Text styles */
 .text-small {
-  font-size: 10px;
+  font-size: 10x !important;
   margin: 0;
   letter-spacing: 1px;
 }
 .text-large {
-  font-size: 12px;
+  font-size: 12px !important;
   margin: 0;
   font-weight: 600;
 }

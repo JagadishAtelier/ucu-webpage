@@ -137,10 +137,8 @@ align-items: center;
 .sort-disc{
   text-align: center;
   color: #000;
-  font-weight: 600;
   opacity: 1;
   font-size: 16px;
-  font-weight: 300 !important;
   letter-spacing: 1px;
   max-width: 900px;
 }
@@ -271,7 +269,7 @@ align-items: center;
   }
 
   .man-item-content p {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   .cxo-grid{
     flex-direction: column;

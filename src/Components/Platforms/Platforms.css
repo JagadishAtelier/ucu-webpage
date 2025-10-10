@@ -126,12 +126,12 @@ scrollbar-width: none; /* Firefox */
   }
 
   .platform-item-div h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .platform-indiviual-con p {
     width: 100%; /* full width for mobile */
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .car-explore-btn-div-faq {
@@ -152,10 +152,10 @@ scrollbar-width: none; /* Firefox */
   }
 
   .platform-item-div h1 {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
   }
 
   .platform-indiviual-con p {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 }
