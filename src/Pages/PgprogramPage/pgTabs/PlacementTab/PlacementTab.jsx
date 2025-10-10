@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import './PlacementTab.css'
 import PlacementCareerTab from './PlacementCareerTab';
+import PlacementHighlights from './PlacementHighlights';
+import OurRecuriters from './OurRecuriters';
+import PlacementContact from './PlacementContact';
 function PlacementTab() {
 const [selectedBtn, setSelectedBtn] = useState("intern");
   return (
@@ -95,6 +98,9 @@ The Corporate Autumn/Summer Internship is a mandatory credit component of the Po
             </div>
 
             <PlacementCareerTab/>
+            <PlacementHighlights/>
+            <OurRecuriters/>
+            <PlacementContact/>
           </div>
         ) : (
           <div>

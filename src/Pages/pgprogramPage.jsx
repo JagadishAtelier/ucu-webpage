@@ -13,8 +13,9 @@ function PgprogramPage() {
             
             <Navbar />
             <AboutPageHero
-                title="PG Programs"
-                breadcrumb={["Home", "PG Programs"]}
+                title="PGDM"
+                sub="Post Graduate Diplamo in Management"
+                breadcrumb={["Home", "PGDM Programs"]}
                 bgImage={heroImage}
             />
             <div>

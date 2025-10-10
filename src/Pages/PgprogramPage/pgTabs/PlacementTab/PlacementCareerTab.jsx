@@ -38,8 +38,13 @@ function PlacementCareerTab() {
       modules={[Autoplay]}
         spaceBetween={30}
         slidesPerView={3}
-        autoplay={{ delay: 100000, disableOnInteraction: false }} // ✅ autoplay without importing module
+        autoplay={{ delay: 3000, disableOnInteraction: false }} // ✅ autoplay without importing module
         loop={true}
+                breakpoints={{
+          0: { slidesPerView: 1 },       // ✅ 1 slide on mobile
+          768: { slidesPerView: 2 },     // ✅ 2 slides on tablets
+          1024: { slidesPerView: 3 }     // ✅ 3 slides on desktop
+        }}
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
