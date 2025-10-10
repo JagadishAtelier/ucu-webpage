@@ -108,7 +108,7 @@ function Platforms() {
           <span style={{ color: "#5ac501" }}>UCU-Online</span> Programs – Learn
           Anytime, Anywhere
         </h1>
-        <p className="program-description col-lg-6 text-center">
+        <p className="sort-disc mb-lg-5 col-lg-6 text-center">
           Flexible, online versions of UCU’s programs with the same academic
           rigor, designed for professionals who prefer learning at their own
           pace.

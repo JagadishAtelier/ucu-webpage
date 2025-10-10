@@ -49,7 +49,7 @@ function Wps() {
           Career Reboot Program
           <span style={{ color: "#5ac501" }}> for Women</span>
         </h1>
-        <p className="mb-lg-1 mb-0 program-description col-lg-6 text-center">
+        <p className="mb-lg-1 mb-0 sort-disc col-lg-6 text-center">
           UCU’s Career Reboot Program for Women empowers professionals returning
           from a career break—equipping them with refreshed skills, renewed
           confidence, and a clear pathway back into the workforce

@@ -107,10 +107,10 @@ function CareerSection() {
 
   return (
     <div className="car-container container-fluid mt-5">
-      <div className="mx-2 mb-4 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center" data-aos="fade-up">
+      <div className="mx-2 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center" data-aos="fade-up">
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}>Full Time </span>Programs
         </h1>
-        <p className="mb-lg-4 mb-0 program-description col-lg-8 text-center">
+        <p className="mb-0 sort-disc col-lg-8 text-center">
         Discover UCU’s full-time programs—tailored to build sharp business acumen, hands-on skills, and global perspective for high-impact careers in today’s fast-evolving corporate world
         </p>
       </div>

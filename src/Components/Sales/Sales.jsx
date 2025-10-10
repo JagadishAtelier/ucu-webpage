@@ -73,7 +73,7 @@ function Sales() {
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center">
            <span style={{color:"#5ac501"}}>Executive Post Graduate</span> <br /> Certificate Programmes
         </h1>
-        <p className="col-lg-6 text-center">
+        <p className="col-lg-6 text-center sort-disc">
         Explore our range of industry-focused programs designed to equip <br /> students with practical skills and career-ready expertise.
         </p>
       </div>

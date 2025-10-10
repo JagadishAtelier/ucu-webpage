@@ -43,7 +43,7 @@ function Management() {
             <span style={{ color: "#5ac501" }}>eXecutive</span> Education &
             Learning (XEL)
           </h1>
-          <p className="program-description col-lg-6 text-center">
+          <p className="sort-disc col-lg-6 text-center">
           Turbocharge your executive prowess with XEL’s high-octane courses—ignite bold leadership and deliver breakthrough results!
           </p>
         </div>
