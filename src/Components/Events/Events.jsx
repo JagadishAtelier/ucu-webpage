@@ -43,7 +43,7 @@ function Events() {
   }, []);
 
   return (
-    <div className="eve-platforms-container py-5">
+    <div className="eve-platforms-container py-4">
       <div className="event-header" data-aos="fade-down">
         {/* <h1 className="display-4 fw-bold col-12 col-lg-4 text-center mb-0">Recent <span style={{color:"#5ac501"}}>Events</span></h1> */}
           <h1 className="display-4 fw-bold col-12 col-lg-12 text-lg-center text-center">Upcoming <span style={{color:"#5ac501"}}>Events</span></h1>

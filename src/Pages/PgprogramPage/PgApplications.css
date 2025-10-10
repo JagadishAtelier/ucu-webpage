@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: stretch;
   width: 66.6%; /* takes up two-thirds of the full row */
-  margin-top: -70px; /* align to left */
+  margin-top: -90px; /* align to left */
   margin-right: 8%; /* ensures it's flush left */
   margin-left: auto;
   color: #fff;
@@ -19,7 +19,7 @@
   gap: 1rem;
   flex: 1;
   padding: 1rem;
-  height: 70px;
+  height: 90px;
   position: relative;
 }
 
@@ -38,7 +38,7 @@
 
 /* Text styles */
 .text-small {
-  font-size: 10x !important;
+  font-size: 0.9rem !important;
   margin: 0;
   letter-spacing: 1px;
 }

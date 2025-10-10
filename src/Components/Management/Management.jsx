@@ -62,7 +62,7 @@ function Management() {
             </div>
           ))}
         </div>
-          <div className="extra-content my-5 mx-auto" data-aos="fade-up">
+          <div className="extra-content my-4 mx-auto" data-aos="fade-up">
             <div className="extra-content-inner">
               <h3 className="display-4 fw-bold col-12 col-lg-12 text-center">1 Year <span style={{color:"#5ac501"}}> CXO Accelerator Program</span></h3>
               <h4 className="text-center fw-bold display-6"> with Campus Immersion</h4>

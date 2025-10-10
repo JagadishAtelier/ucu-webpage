@@ -3,7 +3,7 @@ import './ImmersionTab.css'
 function ImmersionTab() {
   return (
     <div>
-        PGDM international immersion
+        <h1>PGDM international immersion</h1>
     </div>
   )
 }
