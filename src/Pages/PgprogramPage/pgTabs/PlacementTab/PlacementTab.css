@@ -1,0 +1,79 @@
+.placement-tab-div{
+    max-width: 1320px;
+    width: 100%;
+}
+.placement-btns-final{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.placement-btns-intern{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.active {
+  background: #5ac501;
+  color: white;
+  border: none;
+}
+
+.placement-table {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.placement-table th,
+.placement-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.placement-table th {
+  background-color: #0c0142;
+  color: white;
+}
+
+.placement-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.placement-table tr:hover {
+  background-color: #e6f2d6;
+}
+.placement-table-head{
+    border: 1px solid #0c0142;
+    background-color: #0c0142;
+    color: white;
+    padding: 1rem;
+    width: 50%;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.placement-car-slide {
+  text-align: center;
+}
+
+.placement-car-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.placement-car-head {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.placement-car-para {
+  font-size: 1rem;
+  color: #555;
+}

@@ -5,13 +5,14 @@ import "./pgtab.css";
 import Curriculum from "./pgTabs/Curriculum/Curriculum";
 import FeeStructure from "./pgTabs/FeeStructure/FeeStructure";
 import AdmissionsTab from "./pgTabs/AdmissionsTab/AdmissionsTab";
+import PlacementTab from "./pgTabs/PlacementTab/PlacementTab";
 
 const TAB_LIST = [
   "Overview",
   "Curriculum",
   "Fees and Scholarships",
   "Admissions",
-  "International Immersion",
+  // "International Immersion",
   "Placements",
 ];
 
@@ -53,53 +54,28 @@ export default function PgTabs() {
           <AdmissionsTab/>
         );
 
-      case "International Immersion":
-        return (
-          <section aria-labelledby="immersion-heading">
-            <h3 id="immersion-heading" className="pg-panel-title">International Immersion</h3>
+      // case "International Immersion":
+      //   return (
+      //     <section aria-labelledby="immersion-heading">
+      //       <h3 id="immersion-heading" className="pg-panel-title">International Immersion</h3>
 
-            <p className="pg-panel-body" style={{ marginTop: ".4rem" }}>
-              Selected students participate in a 2-week immersion at a partner university overseas.
-              The program includes corporate visits, workshops and a short consultancy project.
-            </p>
+      //       <p className="pg-panel-body" style={{ marginTop: ".4rem" }}>
+      //         Selected students participate in a 2-week immersion at a partner university overseas.
+      //         The program includes corporate visits, workshops and a short consultancy project.
+      //       </p>
 
-            <h4 style={{ marginTop: ".6rem", marginBottom: ".2rem" }}>Recent partner universities</h4>
-            <ul style={{ paddingLeft: "1.1rem" }}>
-              <li>University of Melbourne — Business Analytics</li>
-              <li>National University of Singapore — Strategy Lab</li>
-              <li>Rotterdam School of Management — Corporate Visits</li>
-            </ul>
-          </section>
-        );
+      //       <h4 style={{ marginTop: ".6rem", marginBottom: ".2rem" }}>Recent partner universities</h4>
+      //       <ul style={{ paddingLeft: "1.1rem" }}>
+      //         <li>University of Melbourne — Business Analytics</li>
+      //         <li>National University of Singapore — Strategy Lab</li>
+      //         <li>Rotterdam School of Management — Corporate Visits</li>
+      //       </ul>
+      //     </section>
+      //   );
 
       case "Placements":
         return (
-          <section aria-labelledby="placements-heading">
-            <h3 id="placements-heading" className="pg-panel-title">Placements & Careers</h3>
-
-            <div style={{ display: "flex", gap: "1.5rem", marginTop: ".5rem", flexWrap: "wrap" }}>
-              <div style={{ minWidth: 220 }}>
-                <p style={{ margin: 0, fontWeight: 700, fontSize: "1.25rem" }}>92%</p>
-                <p style={{ margin: 0, color: "#555" }}>placement rate (last cohort)</p>
-              </div>
-
-              <div style={{ minWidth: 220 }}>
-                <p style={{ margin: 0, fontWeight: 700, fontSize: "1.25rem" }}>₹ 12.5 LPA</p>
-                <p style={{ margin: 0, color: "#555" }}>average CTC</p>
-              </div>
-            </div>
-
-            <div style={{ marginTop: ".6rem" }}>
-              <h4 style={{ margin: 0, fontSize: ".95rem" }}>Top recruiters</h4>
-              <ul style={{ paddingLeft: "1.1rem", marginTop: ".3rem" }}>
-                <li>Accenture</li>
-                <li>HSBC</li>
-                <li>Amazon</li>
-                <li>Deloitte</li>
-                <li>Flipkart</li>
-              </ul>
-            </div>
-          </section>
+          <PlacementTab/>
         );
 
       default:
