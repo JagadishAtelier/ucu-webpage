@@ -48,7 +48,7 @@ function App() {
         <Route path="/about-ucu" element={<AboutPage />} />
         <Route path="/faculty/*" element={<NewFaculty/>} />
         <Route path="/profile/details" element={<PDPhero/>} />
-        <Route path="/program/*" element={<ProgramDetails />} />
+        <Route path="/program/*" element={<PgprogramPage/>} />
         <Route path="/auth/register" element={<SignUpPage />} />
         <Route path="/auth/login" element={<LoginPage />} />
         <Route path="/auth/password" element={<AuthPassword />} />

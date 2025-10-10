@@ -17,7 +17,9 @@ function AboutPageHero({ title,sub, breadcrumb = [], bgImage }) {
     >
       <div className="hero-content-wrapper" data-aos="fade-right">
         <h1 className="fw-bold display-4 display-md-3 display-lg-2">{title}</h1>
-        <p>({sub})</p>
+        {sub && (
+         <p>({sub})</p>
+        )}
         {/* ✅ Breadcrumb rendering */}
         <div className="d-flex align-items-center flex-row gap-2 justify-content-center justify-content-lg-start mt-3 fs-5">
           {breadcrumb.map((item, index) => (
