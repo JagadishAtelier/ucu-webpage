@@ -21,7 +21,7 @@ const Curriculum = () => {
       <div className="container my-4">
         {/* Header */}
         <div className="text-left mb-5">
-          <h2 className="pgdm-title">
+          <h2 className="display-6 fw-bold col-12 col-lg-12">
             <span className="program">PGDM</span> Curriculum and Programme
             Structure
           </h2>

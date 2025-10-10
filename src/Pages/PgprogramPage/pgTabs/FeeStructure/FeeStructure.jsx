@@ -5,8 +5,8 @@ import feeImage from "../../../../Assets/aboutPageImage/fee.jpg"; // update with
 
 const FeeStructure = () => {
   return (
-    <section className="fee-structure container-flued mx-5 my-4">
-      <h3 className="pg-panel-title fs-2 gradient-text hero-gradient-1">PGDM Fee Structure</h3>
+    <section className="fee-structure p-3 mx-auto placement-tab-div my-1">
+      <h3 className="display-6 fw-bold col-12 col-lg-12"><span className="program">PGDM</span> Fee Structure</h3>
 
       {/* ================= Fee Info ================= */}
       <div className="fee-info bg-light p-3 rounded">

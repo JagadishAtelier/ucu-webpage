@@ -3,9 +3,9 @@ import "./AdmissionsTab.css";
 
 export default function AdmissionsTab() {
   return (
-    <section className="admissions-tab container-fluid">
+    <section className="admissions-tab p-3 mx-auto placement-tab-div my-1">
       {/* Title */}
-      <h3 className="pg-panel-title gradient-text hero-gradient-1">PGDM Admission Process</h3>
+      <h3 className="display-6 fw-bold col-12 col-lg-12"><span className="program">PGDM</span> Admission Process</h3>
 
       {/* Intro paragraph */}
       <p className="pg-panel-body">
