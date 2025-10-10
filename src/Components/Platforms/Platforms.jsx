@@ -180,7 +180,7 @@ function Platforms() {
                     </button>
                     <button
                       onClick={() => showModal("apply")}
-                      className="btn apply-btn py-lg-2 py-1"
+                      className="btn apply-btns py-lg-2 py-1"
                     >
                       APPLY NOW
                     </button>

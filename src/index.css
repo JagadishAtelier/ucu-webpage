@@ -140,7 +140,7 @@
 }
 
 body {
-    font-family: "AcidGrotesk", sans-serif !important;
+  font-family: "Merriweather", serif !important;
 /* overflow-x: hidden; */
 margin: 0;
 }
@@ -151,7 +151,7 @@ h1,h2,h3,h4,h5,h6{
   color: #011225;
 }
 p{
-  font-family: "AcidGrotesk", sans-serif !important;
+  font-family: "Merriweather", serif !important;
   margin: 0;
   font-weight: 300 !important;
   /* color: #022043 ; */
