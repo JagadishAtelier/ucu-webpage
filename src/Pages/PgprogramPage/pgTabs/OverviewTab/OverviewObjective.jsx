@@ -30,11 +30,7 @@ function OverviewObjective() {
 
             {/* VIDEO CONTAINER */}
             <div
-                className="my-4 position-absolute overview-video"
-                style={{
-                    left: "20%",
-                    zIndex: 2,
-                }}
+                className="my-4 position-absolute overview-video video-con-objectives"
             >
                 <a href="#">
                 <img

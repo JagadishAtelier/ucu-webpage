@@ -15,7 +15,7 @@ function OverviewTab() {
             </div>
             <div
                 data-aos="fade-up"
-                className="aboutphil-container text-white p-lg-5"
+                className="aboutphil-container text-white p-lg-5 p-3"
                 style={{
                     backgroundImage: `url(${bgImage})`,
                     backgroundPosition: "center",
