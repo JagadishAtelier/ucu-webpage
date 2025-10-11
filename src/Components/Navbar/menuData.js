@@ -71,6 +71,35 @@ export const menuData = [
       },
     ],
   },
+        {
+        label: "Online Programs",
+        placement:"top",
+        link: "/program/online-program",
+        submenu: [
+          { label: "Product Management", link: "/program/product-management" },
+          { label: "Cybersecurity", link: "/program/cybersecurity" },
+          { label: "Digital Marketing", link: "/program/digital-marketing" },
+          {
+            label: "Mobility & Sustainability",
+            link: "/program/mobility-sustainability",
+          },
+          { label: "Consulting", link: "/program/consulting" },
+          { label: "Banking & Finance", link: "/program/banking-finance" },
+          { label: "Business Analytics", link: "/program/business-analytics" },
+          { label: "Data Science", link: "/program/data-science" },
+          {
+            label: "Industry Sector Specific Offerings",
+            link: "/program/industry-sector",
+            submenu: [
+              { label: "FinTech", link: "/program/fintech" },
+              {
+                label: "Global Capability Centers (GCC)",
+                link: "/program/gcc",
+              },
+            ],
+          },
+        ],
+      },
 
   // 🧭 Nav Bar (Main Menu - Bottom Placement)
   {
@@ -142,34 +171,6 @@ export const menuData = [
           },
           {
             label: "Industry Sector Specialization",
-            link: "/program/industry-sector",
-            submenu: [
-              { label: "FinTech", link: "/program/fintech" },
-              {
-                label: "Global Capability Centers (GCC)",
-                link: "/program/gcc",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        label: "Online Programs (E-Learning)",
-        link: "/program/online-program",
-        submenu: [
-          { label: "Product Management", link: "/program/product-management" },
-          { label: "Cybersecurity", link: "/program/cybersecurity" },
-          { label: "Digital Marketing", link: "/program/digital-marketing" },
-          {
-            label: "Mobility & Sustainability",
-            link: "/program/mobility-sustainability",
-          },
-          { label: "Consulting", link: "/program/consulting" },
-          { label: "Banking & Finance", link: "/program/banking-finance" },
-          { label: "Business Analytics", link: "/program/business-analytics" },
-          { label: "Data Science", link: "/program/data-science" },
-          {
-            label: "Industry Sector Specific Offerings",
             link: "/program/industry-sector",
             submenu: [
               { label: "FinTech", link: "/program/fintech" },

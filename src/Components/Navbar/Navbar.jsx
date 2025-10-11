@@ -197,12 +197,13 @@ const Navbar = () => {
                               {menu.label.toUpperCase()}
                             </button>
                           ) : (
-                            <Link
-                              to={menu.link || "#"}
-                              className="nav-link dropdown-toggle"
-                            >
-                              {menu.label.toUpperCase()}
-                            </Link>
+<Link
+  to={menu.link || "#"}
+  className={`nav-link dropdown-toggle ${menu.label === "Online Programs" ? "online-program-link" : ""}`}
+>
+  {menu.label.toUpperCase()}
+</Link>
+
                           )}
 
                           <div

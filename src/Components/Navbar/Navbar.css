@@ -99,6 +99,9 @@
 .dropdown-menu.programs{
   left: 310% !important;
 }
+.dropdown-menu.online-programs{
+  left: -60% !important;
+}
 .dropdown-menu.programs{
     width: 60vw !important;
   transform: translateX(-65%) translateY(0) !important;
@@ -831,4 +834,13 @@ li:hover .career-reboot-heading {
   right: 5%;
   top: 42%;
   color: #0c0142;
+}
+
+.online-program-link {
+  font-weight: 600;
+  background-color: #0c0142;
+  color: white !important;
+  position: relative;
+  padding: 0.8rem 2rem;
+  transition: 0.3s ease;
 }
