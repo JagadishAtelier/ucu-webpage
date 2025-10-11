@@ -97,9 +97,17 @@
   left: 110% !important;
 }
 .dropdown-menu.programs{
-  left: 210% !important;
+  left: 310% !important;
 }
-.dropdown-menu.programs,
+.dropdown-menu.programs{
+    width: 60vw !important;
+  transform: translateX(-65%) translateY(0) !important;
+}
+.dropdown-menu.executive-education{
+    left: 210% !important;
+    width: 50vw !important;
+  transform: translateX(-65%) translateY(0) !important;
+}
 .dropdown-menu.advisory-councils {
   width: 79vw !important;
   transform: translateX(-65%) translateY(0) !important;
@@ -785,4 +793,42 @@ li:hover .career-reboot-heading {
 
 .top-dropdown{
   margin-top: 15%;
+}
+
+.search-icon-nab-bg{
+  background-color: #0c0142;
+  color: white;
+  border-radius: 50%;
+  padding:7px 8px;
+  cursor: pointer;
+}
+.profile-icon-nab-bg{
+  background-color: #0c0142;
+  color: white;
+  border-radius: 50%;
+  padding:8px;
+  cursor: pointer;
+}
+.search-dropdown-box-div{
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 2.5rem;
+  background-color: white;
+  border-top: 1px solid black;
+}
+.search-dropdown-box{
+ width: 100%;
+ height: 45px;
+ position: relative;
+ padding-left: 2%;
+ border: 1px solid gainsboro;
+}
+.dropdown-search-icon{
+  position: absolute;
+  right: 5%;
+  top: 42%;
+  color: #0c0142;
 }

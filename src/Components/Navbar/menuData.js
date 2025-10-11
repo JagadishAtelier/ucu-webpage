@@ -154,32 +154,6 @@ export const menuData = [
         ],
       },
       {
-        label: "Executive Education",
-        link: "/program-customised-learning-programs-for-corporate-professionals",
-        submenu: [
-          {
-            label: "Customised Learning Programs for Corporate Professionals",
-            link: "/program/program-customised-learning-programs-for-corporate-professionals",
-          },
-          {
-            label: "Management Development Programs (MDPs)",
-            link: "/program/MDPs",
-          },
-          {
-            label: "1 Year CXO Accelerator Program with Campus Immersion",
-            submenu: [
-              { label: "CXO", link: "/program/CXO" },
-              { label: "CIO", link: "/program/CIO" },
-              { label: "CTO", link: "/program/CTO" },
-              { label: "CMO", link: "/program/CMO" },
-              { label: "CHRO", link: "/program/CHRO" },
-              { label: "CFO", link: "/program/CFO" },
-              { label: "CPO", link: "/program/CPO" },
-            ],
-          },
-        ],
-      },
-      {
         label: "Online Programs (E-Learning)",
         link: "/program/online-program",
         submenu: [
@@ -209,7 +183,33 @@ export const menuData = [
       },
     ],
   },
-
+      {
+        label: "Executive Education",
+        placement: "bottom",
+        link: "/program-customised-learning-programs-for-corporate-professionals",
+        submenu: [
+          {
+            label: "Customised Learning Programs for Corporate Professionals",
+            link: "/program/program-customised-learning-programs-for-corporate-professionals",
+          },
+          {
+            label: "Management Development Programs (MDPs)",
+            link: "/program/MDPs",
+          },
+          {
+            label: "1 Year CXO Accelerator Program with Campus Immersion",
+            submenu: [
+              { label: "CXO", link: "/program/CXO" },
+              { label: "CIO", link: "/program/CIO" },
+              { label: "CTO", link: "/program/CTO" },
+              { label: "CMO", link: "/program/CMO" },
+              { label: "CHRO", link: "/program/CHRO" },
+              { label: "CFO", link: "/program/CFO" },
+              { label: "CPO", link: "/program/CPO" },
+            ],
+          },
+        ],
+      },
   {
     label: "Faculty",
     placement: "bottom",

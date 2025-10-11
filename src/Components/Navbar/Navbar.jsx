@@ -10,8 +10,11 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenus, setOpenMenus] = useState({});
   const [hoverMenus, setHoverMenus] = useState({});
+  const [searchDrodow , setSearchDropdown] = useState(false)
 
   const toggleMobile = () => setMobileOpen(!mobileOpen);
+
+  const toggleSearch = () => setSearchDropdown(!searchDrodow)
 
   const toggleSubmenu = (label) => {
     setOpenMenus((prev) => ({
@@ -268,18 +271,25 @@ const Navbar = () => {
               </ul>
 
               {/* Search & Login */}
-              <div className="search-box ms-3">
-                <input type="text" placeholder="Search" />
-                <button type="button">
-                  <Search size={16} />
-                </button>
-              </div>
-              <div className="d-flex gap-2">
+              {/* <div className="search-box ms-3"> */}
+                {/* <input type="text" placeholder="Search" /> */}
+                <div className="ms-3 search-icon-nab-bg" onClick={toggleSearch}>
+                  <Search size={17} />
+                </div>
+                {searchDrodow && (
+                  <div className="search-dropdown-box-div">
+                     <input type="text" className="search-dropdown-box" placeholder="Search ...." />
+                <div className="dropdown-search-icon">
+                  <Search size={20} />
+                </div>
+                  </div>
+                )}
+              {/* </div> */}
+              <div className="d-flex gap-2 ms-3 profile-icon-nab-bg">
                 <User
                   onClick={() => navigate("/auth/login")}
-                  className="icons ms-2"
+                  className=""
                   size={18}
-                  color="#333"
                 />
               </div>
             </div>
