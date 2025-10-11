@@ -81,6 +81,7 @@ export const menuData = [
       { label: "Our Story", scrollId: "our-story"  },
       { label: "Vision & Mission",scrollId: "vision-mission"  },
       { label: "Founder's Message", link: "/founder-message" },
+      { label: "Leadership", link: "/leader-ship" },
       { label: "Industry First Approach", link: "/industry-approach" },
     ],
   },

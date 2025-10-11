@@ -9,13 +9,24 @@ export default function PgApplications() {
     <div className="pg-applications">
       {/* Applications Open */}
       <div className="app-box box-1">
-        <div className="icon"><FiClock size={24} /></div>
-        <div className="app-content" style={{marginTop: '-18px'}}>
-          <p className="text-small">Applications Open</p>
-          <p className="text-small">Batch 2026–28</p>
+        <div className="icon d-lg-block d-none"><FiClock size={24} /></div>
+        <div className="app-content d-lg-block d-none" style={{marginTop: '-18px'}}>
+          <p className="text-small d-lg-block d-none">Applications Open</p>
+          <p className="text-small d-lg-block d-none">Batch 2026–28</p>
           
         </div>
-        <button className="apply-btn">Apply Now</button>
+        <button className="apply-btn d-lg-block d-none">Apply Now</button>
+        
+        {/* Mobile content */}
+        <div className="d-flex ">
+          <div className="icon d-lg-none d-block"><FiClock size={24} /></div>
+            <div className="app-content d-lg-none d-block" style={{marginTop: '-18px'}}>
+              <p className="text-small d-lg-none d-block">Applications Open</p>
+            <p className="text-small d-lg-none d-block">Batch 2026–28</p>
+          
+        </div>
+        </div>
+        <button className="apply-btn d-lg-none d-block">Apply Now</button>
         
       </div>
 

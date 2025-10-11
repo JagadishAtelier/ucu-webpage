@@ -29,6 +29,21 @@ export default function PgTabs() {
     }
   }, [active]);
 
+  // 👇 Mobile auto-scroll nudge (runs once)
+useEffect(() => {
+  const nav = navRef.current;
+
+  if (window.innerWidth <= 768 && nav) {
+    const interval = setInterval(() => {
+      nav.scrollTo({ left: 60, behavior: "smooth" });
+      setTimeout(() => nav.scrollTo({ left: 0, behavior: "smooth" }), 1500);
+    }, 3000); // every 3 seconds
+    return () => clearInterval(interval);
+  }
+}, []);
+
+
+
   // returns different JSX per tab
   const renderContent = (tab) => {
     switch (tab) {

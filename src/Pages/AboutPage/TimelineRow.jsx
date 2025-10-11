@@ -3,7 +3,7 @@ import { Row, Col, Carousel } from "react-bootstrap";
 
 const TimelineRow = ({ title, description, images = [], reverse }) => {
   return (
-    <Row className={`timeline-row ${reverse ? "reverse" : ""} active`}>
+    <Row className={`timeline-row ${reverse ? "reverse" : ""} active `}>
       <div className="timeline-point"></div>
 
       <Col md={6} className="image">

@@ -8,7 +8,7 @@ import visionImage from "../../../Assets/aboutPageImage/vision_image1.jpg"; // n
 const data = [
   {
     icon: iconVision,
-    head: "Our <span> Vision</span>",
+    head: "<span> Vision</span>",
     para: `To be a globally recognised force in business education—democratising access, 
     bridging rural-urban divides, and empowering learners and educators through a curriculum 
     co-created and delivered by industry leaders and corporate practitioners, within a lifelong 
@@ -18,7 +18,7 @@ const data = [
   },
   {
     icon: iconMission,
-    head: "Our <span > Mission</span>",
+    head: "<span > Mission</span>",
     para: (
       <>
       

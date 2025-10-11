@@ -124,3 +124,28 @@
   :root { --pg-gap: 0.5rem; --pg-padding: 0.4rem 0.6rem; --pg-font-size: 0.9rem; }
   .pg-tab-btn::after { bottom: -9px; height: 2.5px; left: 10%; right: 10%; }
 }
+@media (max-width: 768px) {
+  .pg-tabs-nav {
+    position: relative;
+  }
+
+  .pg-tabs-nav::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    pointer-events: none;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.7));
+    opacity: 0;
+    animation: fadeHint 3s ease-in-out infinite; /* 🔁 infinite loop */
+  }
+
+  @keyframes fadeHint {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+}

@@ -175,7 +175,7 @@ align-items: center;
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.87),rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.90),rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
  /* semi-transparent black */
   z-index: 1;
 }

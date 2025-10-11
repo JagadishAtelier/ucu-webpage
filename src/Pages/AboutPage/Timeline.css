@@ -3,7 +3,7 @@
 ============================== */
 .timeline {
   position: relative;
-  padding: 4rem 0;
+  padding:-10%;
   overflow: hidden; /* hide gradient edges */
   background-color: #fff; /* match AboutStory */
 }
@@ -11,8 +11,8 @@
 /* Central vertical line */
 .timeline-line {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 60px;
+  bottom: 60px;
   left: 50%;
   width: 3px;
   background: #e0e0e0;
@@ -23,9 +23,12 @@
 /* Timeline Rows */
 .timeline-row {
   position: relative;
-  margin: 3rem 0;
+  margin: 0;
   display: flex;
   align-items: center;
+}
+.timeline-row:not(:first-child) {
+  margin: 3rem 0;
 }
 
 .timeline-row.active {

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./AboutYears.css";
 import CountUp from "react-countup";
-import bgImage from "../../../Assets/aboutPageImage/image-ucu.svg";
+import bgImage from "../../../Assets/aboutPageImage/vision_mission_bg1.png";
 
 const data = [
   {

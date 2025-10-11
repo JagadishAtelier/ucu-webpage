@@ -27,7 +27,7 @@ import TimelineRow from "./TimelineRow";
 const Timeline = () => {
   const data = [
     {
-      title: "<span>1990 – 2009</span> : The Foundational Years",
+      title: "<span>1990 – 2009</span> : Vision Realised",
       description: `
         This journey is the life’s work of our Founder & Chairman, <strong>Dr. M. Balaji (Bala)</strong>.
         It began at the <strong>Ahmedabad Management Association (AMA)</strong>, founded by Dr. Vikram Sarabhai,
@@ -44,7 +44,7 @@ const Timeline = () => {
       reverse: false,
     },
     {
-      title: "<span>2009 – 2026</span> : Transforming Corporate Education",
+      title: "<span>2009 – 2026</span> : Building Launchpad for Global Careers",
       description: `
         Dr. Bala carried his vision forward to <strong>Great Lakes Institute of Management</strong>, where he served
         for over 15 years and played a pivotal role in shaping its corporate engagement strategy.<br /><br />
@@ -67,7 +67,7 @@ const Timeline = () => {
       reverse: true,
     },
     {
-      title: "<span>2025 – Present</span> : Building UCU for the Future of Work",
+      title: "<span>2026 – Present</span> : Birth of Universal Corporate University (UCU) - Building what's next",
       description: `
         Throughout his career, Dr. Bala keenly observed the widening disconnect between what was taught in business schools
         and what the industry truly needed — an issue magnified by the rise of AI and rapid technological change.<br /><br />
@@ -91,8 +91,8 @@ const Timeline = () => {
 
   return (
     <>
-    <h1 className="section-title my-4 mb-2">
-       <span style={{color:'#5ac501'}}> Our</span> History
+    <h1 className="display-4 fw-bold col-12 text-center mt-4">
+       <span style={{color:'#5ac501'}}> Our</span> Journey
       </h1>
     <section className="timeline">
       <div className="timeline-line"></div>
