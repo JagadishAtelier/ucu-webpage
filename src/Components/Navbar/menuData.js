@@ -1,14 +1,7 @@
 export const menuData = [
   // 🔝 Top Menu
   { label: "Home", link: "/", placement: "top" },
-  { label: "News & Blog", link: "/news-blogs", placement: "top" },
-  { label: "Campus", link: "/campus-ambience", placement: "top" },
-  { label: "Societal impact", link: "/csr", placement: "top" },
-  { label: "Careers", link: "/careers", placement: "top" },
-  { label: "Budding Talent", link: "/budding-talent", placement: "top" },
-
-  // ✅ Industry Partnership (Merged)
-  {
+    {
     label: "Industry Partnership",
     placement: "top",
     submenu: [
@@ -71,6 +64,15 @@ export const menuData = [
       },
     ],
   },
+    { label: "Campus", link: "/campus-ambience", placement: "top" },
+  { label: "Societal impact", link: "/csr", placement: "top" },
+    { label: "Budding Talent", link: "/budding-talent", placement: "top" },
+      { label: "Careers", link: "/careers", placement: "top" },
+  { label: "News & Blog", link: "/news-blogs", placement: "top" },
+  // { label: "contact", link: "/contact", placement: "top" },
+
+
+  // ✅ Industry Partnership (Merged)
         {
         label: "Online Programs",
         placement:"top",

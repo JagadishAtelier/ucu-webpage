@@ -1,0 +1,25 @@
+.leader-ship-bg-design {
+  background: linear-gradient(to top, #0140ff,#9fd5e9,#f3f8fa);
+  border-radius: 10px;
+}
+.leader-ship-bg-design-img{
+    height: 60vh;
+    width: auto;
+    object-fit: cover;
+}
+.leader-name-color{
+    color: #0140ff;
+    border-bottom: 2px solid #0140ff;
+    padding-bottom: 3px;
+}
+.leader-top-head{
+    border-bottom: 2px solid #0140ff;
+    padding-bottom: 3px;
+    width: fit-content;
+    margin: auto;
+    
+}
+.top-leader-banner{
+    margin:1%;
+    border-radius: 10px;
+}

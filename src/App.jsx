@@ -28,6 +28,7 @@ import WhatsAppButton from "./Components/WhatsAppButton/WhatsAppButton";
 import Careers from "./Components/Careers/Careers";
 import FounderMessage from "./Pages/FounderMessage";
 import PgprogramPage from "./Pages/pgprogramPage";
+import LeaderShipPage from "./Pages/LeaderShipPage/LeaderShipPage";
 
 function App() {
   useEffect(() => {
@@ -58,6 +59,7 @@ function App() {
         <Route path="/Careers" element={<Careers/>} />
         <Route path="/founder-message" element={<FounderMessage/>} />
         <Route path="/pgprogram" element={<PgprogramPage/>} />
+        <Route path="/leader-ship" element={<LeaderShipPage/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>

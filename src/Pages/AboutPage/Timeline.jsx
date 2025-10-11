@@ -2,7 +2,8 @@ import React from "react";
 import { Container, Row, Col  } from "react-bootstrap";
 import "./Timeline.css";
 import TimelineRow from "./TimelineRow";
-
+import image1 from '../../Assets/about-page-images/image-1.jpg'
+import image2 from '../../Assets/about-page-images/image-2.jpg'
 // ✅ TimelineRow Component
 // const TimelineRow = ({ title, description, image, reverse }) => {
 //   return (
@@ -40,7 +41,7 @@ const Timeline = () => {
         
         These milestones laid the foundation for his deep expertise in corporate and executive education ecosystems.
       `,
-      images: ["/historyImages/2009.jpg",],
+      images: [image1,image2],
       reverse: false,
     },
     {

@@ -18,7 +18,8 @@ export default function PgApplications() {
         <button className="apply-btn d-lg-block d-none">Apply Now</button>
         
         {/* Mobile content */}
-        <div className="d-flex ">
+        <div className="d-flex flex-row flex-wrap gap-1">
+        <div className="d-flex gap-2">
           <div className="icon d-lg-none d-block"><FiClock size={24} /></div>
             <div className="app-content d-lg-none d-block" style={{marginTop: '-18px'}}>
               <p className="text-small d-lg-none d-block">Applications Open</p>
@@ -26,8 +27,8 @@ export default function PgApplications() {
           
         </div>
         </div>
-        <button className="apply-btn d-lg-none d-block">Apply Now</button>
-        
+        <button className="apply-btn-mob d-lg-none d-block py-2 mx-auto">Apply Now</button>
+        </div>
       </div>
 
       {/* Duration */}
