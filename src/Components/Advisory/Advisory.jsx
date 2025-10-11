@@ -184,6 +184,12 @@ const councils = [
         prof: "CEO, Stratinfinity",
         comLogo: `https://media.licdn.com/dms/image/v2/D563DAQHfueHRFrC1uw/image-scale_191_1128/image-scale_191_1128/0/1697805029697/stratinfinity_inc_cover?e=2147483647&v=beta&t=OGPxLoaDiKyyBUmZPexuMk_dFz4dvveeYfIIKimYMWk`,
       },
+      {
+        image: "https://media.licdn.com/dms/image/v2/D4D03AQErFQ2xW-y0XA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1728558130749?e=1762992000&v=beta&t=3LFpdiy8TiZpHjREjTAEnJ7EX_JAIIEHUb2E3pk6WYs",
+        name: "Rasesh Shah ",
+        linkedIn: "https://www.linkedin.com/in/raseshs/",
+        prof: "Chief Practice Officer - Fractal",
+      },
     ],
   },
   {
@@ -260,14 +266,14 @@ const councils = [
         linkedIn: "https://www.linkedin.com/in/dr-easwar-krishna-iyer/",
         comLogo: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT848zkfR8bGJJUvVf3BpqCMt4hL4r4xXy_Jw&s`,
       },
-      {
-        image: aacImage9,
-        name: "Venkat Krishnan",
-        prof: "Director",
-        comText: "Center for Oneness & Transforming Leadership",
-        linkedIn: "https://www.linkedin.com/in/rkvenkat/",
-        // comLogo :`	https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg`
-      },
+      // {
+      //   image: aacImage9,
+      //   name: "Venkat Krishnan",
+      //   prof: "Director",
+      //   comText: "Center for Oneness & Transforming Leadership",
+      //   linkedIn: "https://www.linkedin.com/in/rkvenkat/",
+      //   // comLogo :`	https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg`
+      // },
       {
         image: aacImage10,
         name: "Tushar Jarohar",
@@ -347,6 +353,15 @@ const councils = [
         // comText : "Emory University - Goizueta Business School, USA",
         linkedIn: "https://www.linkedin.com/in/rlshankar/",
         comLogo: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4SFl9aZsLIJ2425nsBFmqMwPCATnK57sDJw&s`,
+      },
+      {
+        image: "https://www.greatlakes.edu.in/chennai/uploads/faculty/irudayaraj-isf.png",
+        name: "Irudayaraj ISF",
+        prof: `Professor
+XLRI, Jamshedpur`,
+        // comText : "Emory University - Goizueta Business School, USA",
+        // linkedIn: "https://www.linkedin.com/in/rlshankar/",
+        // comLogo: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4SFl9aZsLIJ2425nsBFmqMwPCATnK57sDJw&s`,
       },
     ],
   },
