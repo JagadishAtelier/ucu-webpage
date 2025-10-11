@@ -361,7 +361,8 @@ const councils = [
 XLRI, Jamshedpur`,
         // comText : "Emory University - Goizueta Business School, USA",
         // linkedIn: "https://www.linkedin.com/in/rlshankar/",
-        // comLogo: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4SFl9aZsLIJ2425nsBFmqMwPCATnK57sDJw&s`,
+        comLogo:
+          "https://media.licdn.com/dms/image/v2/D560BAQHUiIQpinpKVQ/company-logo_100_100/company-logo_100_100/0/1722342154423?e=1761782400&v=beta&t=05Ym0mM8F6sqpppZSIbSq37iY49_trEXgoAsVd8Qs3s",
       },
     ],
   },
