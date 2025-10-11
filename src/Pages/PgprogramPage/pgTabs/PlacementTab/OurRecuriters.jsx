@@ -45,7 +45,7 @@ function OurRecuriters() {
           768: { slidesPerView: 4 },     // ✅ 2 slides on tablets
           1024: { slidesPerView: 4 }     // ✅ 3 slides on desktop
         }}
-          className='swiper'
+          className='swiper-place-tab'
         >
           {data.map((item, index) => (
             <SwiperSlide key={index} >

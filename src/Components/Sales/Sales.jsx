@@ -68,7 +68,7 @@ function Sales() {
   // const data = activeTab === "functional" ? functionalData : industryData;
 
   return (
-    <div className="sales-container container-fluid my-lg-4 my-1">
+    <div className="sales-container container-fluid my-lg-3 my-1">
       <div className="d-flex flex-lg-column flex-column align-items-lg-center justify-content-lg-center text-center mb-4">
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center">
            <span style={{color:"#5ac501"}}>Executive Post Graduate</span> <br /> Certificate Programmes
@@ -129,7 +129,7 @@ function Sales() {
       </Swiper>
 
       <div>
-      <h1 className="display-6 fw-bold col-12 col-lg-12 text-center mt-lg-5 mt-3">
+      <h1 className="display-6 fw-bold col-12 col-lg-12 text-center mt-lg-4 mt-3">
       <span style={{color:"#5ac501"}}>Industry-Sector</span> Specialization
         </h1>
       </div>

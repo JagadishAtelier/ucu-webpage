@@ -40,7 +40,7 @@ function Wps() {
     });
   }, []);
   return (
-    <div className="car-container container-fluid">
+    <div className="car-container container-fluid py-0">
       <div
         className="mx-2 mb-1 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center"
         data-aos="fade-up"
@@ -71,6 +71,7 @@ function Wps() {
           <SwiperSlide key={index}>
             <div
               className="car-item-div ex-phd-container"
+              style={{background:"linear-gradient(205deg, rgba(23, 3, 169, 1) 1%, rgba(7, 186, 243, 1) 100%)"}}
               data-aos="fade-up"
               data-aos-delay={index * 200}
             >
@@ -82,11 +83,11 @@ function Wps() {
                 />
               </div>
               <div className="car-right ">
-                <h1 className="title mb-3 text-dark">{item.heading}</h1>
-                <p className="program-description mt-3 text-dark">{item.para1}</p>
+                <h1 className="title mb-3 text-white">{item.heading}</h1>
+                <p className="program-description mt-3 text-white">{item.para1}</p>
 
                 <div className="car-explore-btn-div">
-                  <button className="btn btn-outline-dark py-2">EXPLORE</button>
+                  <button className="btn car-apply-btn py-2">EXPLORE</button>
                   <button
                     onClick={() => showModal("apply")}
                     className="btn car-apply-btn py-2"
