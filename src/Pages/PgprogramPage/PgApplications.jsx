@@ -45,8 +45,7 @@ export default function PgApplications() {
       <div className="app-box box-3">
         <div className="icon"><FiFileText size={24} /></div>
         <div>
-          <p className="text-small">Programme Starts</p>
-          <p className="text-large">June 2026</p>
+          <p className="text-small">Eligibility 0-3 years of work experience</p>
         </div>
       </div>
       {/* One more box */}

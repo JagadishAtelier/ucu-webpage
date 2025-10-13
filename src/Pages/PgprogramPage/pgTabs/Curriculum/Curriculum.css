@@ -106,7 +106,7 @@ img.img-fluid {
   border: 1px solid #eee;
   border-left: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  min-height: 220px;
+  min-height: 336px;
 }
 
 .tab-content-box h5 {
@@ -194,4 +194,34 @@ img.img-fluid {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ===== Responsive for Mobile Only ===== */
+@media (max-width: 768px) {
+  .curriculum-table-container {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scroll */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+  }
+
+  .curriculum-table {
+    width: 800px; /* Keeps columns visible side-by-side */
+    border-collapse: collapse;
+  }
+
+  .curriculum-table th,
+  .curriculum-table td {
+    padding: 8px;
+    font-size: 14px;
+    white-space: nowrap; /* Prevent text wrapping inside cells */
+  }
+
+  .curriculum-table td ul {
+    padding-left: 0;
+  }
+
+  .curriculum-table td li,
+  .curriculum-table td p {
+    font-size: 13px;
+  }
 }

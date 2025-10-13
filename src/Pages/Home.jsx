@@ -12,6 +12,7 @@ import NewFooter from "../Components/NewFooter/NewFooter";
 import Platforms from "../Components/Platforms/Platforms";
 import ExPhd from "../Components/ExPhd/ExPhd";
 import Wps from "../Components/Wps/Wps";
+import OverviewParticipant from "./PgprogramPage/pgTabs/OverviewTab/OverviewParticipant";
 
 const Home = () => {
   return (
@@ -42,6 +43,9 @@ const Home = () => {
         {/* Industry */}
         <div data-aos="fade-up" data-aos-delay="100" className="my-5">
           <Industry />
+        </div>
+        <div className="my-5 mx-5 text-center">
+        <OverviewParticipant/>
         </div>
         {/* Events */}
         <div data-aos="fade-right" data-aos-delay="100">

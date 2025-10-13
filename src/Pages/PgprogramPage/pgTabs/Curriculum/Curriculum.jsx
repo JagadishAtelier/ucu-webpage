@@ -28,11 +28,7 @@ const Curriculum = () => {
             Structure
           </h2>
           <p className="pgdm-intro">
-            PGDM academic year commences with the Harvard Business School's
-            pre-MBA foundation module. The first-year curriculum focuses on core
-            functional and general management courses. Participants also begin
-            their experiential learning journey with curated initiatives such as
-            ADMAP, Abhyudaya, DoCC, SOS, and Design & Innovation.
+A new-age curriculum co-created with the Industry, keeping corporate needs and employability at the forefront
           </p>
         </div>
 
@@ -52,7 +48,7 @@ const Curriculum = () => {
           </Accordion.Item>
           
           <div className="my-5">
-              <p className="Summer-Internship-head">Summer Internship</p>
+              <p className="Summer-Internship-head mb-4">Summer Internship</p>
             <SummerInternship/>
           </div>
 
@@ -110,7 +106,7 @@ const Curriculum = () => {
                   <Nav.Link eventKey="hr-ob">HR & OB</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="business">Business Analytics & AI</Nav.Link>
+                  <Nav.Link eventKey="bussiness">Business Analytics & AI</Nav.Link>
                 </Nav.Item>
               </Nav>
             </Col>
