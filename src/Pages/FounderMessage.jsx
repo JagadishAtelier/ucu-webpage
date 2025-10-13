@@ -8,7 +8,7 @@ const FounderMessage = () => {
   return (
     <>
       <Navbar />
-      <h4 className="display-4 fw-bold col-12 col-lg-12 text-left my-4 mx-5">
+      <h4 className="display-4 fw-bold col-12 col-lg-12 text-lg-left text-center  my-4 mx-lg-5 m-0">
         Message from the <span style={{color:'#5ac501'}}> Founder & Chairman</span>
       </h4>
       <section className="founder-section">
