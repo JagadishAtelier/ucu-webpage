@@ -51,3 +51,11 @@
 .accordion-button {
   font-weight: 500;
 }
+
+.hostel-sec{
+    background: linear-gradient(205deg, rgb(7, 186, 243)  1% , rgb(23, 3, 169) 100%) !important;
+    border: none !important;
+}
+.hostel-sec-table-data{
+  background-color: #f8f6fb;
+}

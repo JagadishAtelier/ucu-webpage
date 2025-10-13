@@ -11,6 +11,8 @@ import {
 } from "react-bootstrap";
 import "./Curriculum.css";
 import pgdmImage from "../../../../Assets/aboutPageImage/vision_image.jpg"; // your image path
+import CurriculumTable from "./CurriculumTable";
+import SummerInternship from "./SummerInternship";
 
 
 const Curriculum = () => {
@@ -43,9 +45,16 @@ const Curriculum = () => {
                 <li>Core management foundation courses</li>
                 <li>Experiential learning: ADMAP, Abhyudaya, DoCC, SOS</li>
                 <li>Corporate internship preparation</li>
+                
               </ul>
+              <CurriculumTable/>
             </Accordion.Body>
           </Accordion.Item>
+          
+          <div className="my-5">
+              <p className="Summer-Internship-head">Summer Internship</p>
+            <SummerInternship/>
+          </div>
 
           <Accordion.Item eventKey="1">
             <Accordion.Header>Year 2</Accordion.Header>
@@ -55,6 +64,7 @@ const Curriculum = () => {
                 <li>Corporate internships and electives</li>
                 <li>Global Fast Track (GFT) immersion module</li>
               </ul>
+              <CurriculumTable/>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

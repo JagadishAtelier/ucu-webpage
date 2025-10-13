@@ -2,6 +2,7 @@ import React from "react";
 import { Accordion } from "react-bootstrap";
 import "./FeeStructure.css";
 import feeImage from "../../../../Assets/aboutPageImage/fee.jpg"; // update with actual path or import
+import HostelSection from "./HostelSection";
 
 const FeeStructure = () => {
   return (
@@ -48,6 +49,13 @@ const FeeStructure = () => {
         </div>
       </div>
 
+
+            <div className="mt-5">
+              <HostelSection/>
+            </div>
+
+
+
       {/* ================= Scholarships ================= */}
       <div className="scholarship-section">
         <h4 className="gradient-text hero-gradient-1">Financial Assistance and Scholarships</h4>
@@ -70,10 +78,10 @@ const FeeStructure = () => {
           </Accordion.Item>
 
           <Accordion.Item eventKey="1">
-            <Accordion.Header>Mirae Asset Foundation (MAF) Scholarship</Accordion.Header>
+            <Accordion.Header>Budding Leadership Excellence Scholarship</Accordion.Header>
             <Accordion.Body>
               <p>
-                The Mirae Asset Foundation (MAF) Scholarship is designed to recognize students
+                Budding Leadership Excellence Scholarship is designed to recognize students
                 who exhibit exceptional leadership qualities, academic excellence, and a
                 commitment to making a positive impact on society.
               </p>
