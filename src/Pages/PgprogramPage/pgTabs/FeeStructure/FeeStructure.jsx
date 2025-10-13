@@ -20,33 +20,31 @@ const FeeStructure = () => {
         <div className="fee-details">
           <h5 className="gradient-text hero-gradient-1">Indian Participants:</h5>
           <p>
-            The fee for Indian participants is <strong>INR 26.50 lakhs*</strong>.
+            The fee for Indian Participants is <strong> INR 10,00,000*</strong>.
           </p>
           <p>
-            This fee includes tuition fee and basic hostel/accommodation.{" "}
-            <em>*This fee is indicative and subject to revision.</em>
+            This fee is not inclusive of hostel accommodation, mess and other expenses.{" "}
+            <em>*This includes only the tuition fee and is subject to revision.</em>
           </p>
 
-          <p className="mt-3">
-            [The Global Fast Track (GFT) and International Exchange are optional components of
-            the PGDM and PGDM (BM) programmes. Please note that the fees mentioned above do not
-            include the expenses associated with these components.]
-          </p>
+          {/* <p className="mt-3">
+            [The above mentioned fee does not include the Global Fast Track Immersion Program which is our exchange program crafted for the two year PGDM. ]
+          </p> */}
 
           <h5 className="gradient-text hero-gradient-1 mt-4">International Participants:</h5>
           <p>
-            The fee for International participants is <strong>INR 35.94 lakhs*</strong>.
+            The fee for Indian Participants is  <strong> INR 16,00,000*</strong>.
           </p>
           <p>
-            This fee includes tuition fee and basic hostel/accommodation.{" "}
-            <em>*This fee is indicative and subject to revision.</em>
+            This  his fee is not inclusive of hostel accommodation, mess and other expenses. {" "}
+            <em>*This includes only the tuition fee and is subject to revision.</em>
           </p>
 
-          <p className="mt-3">
+          {/* <p className="mt-3">
             [The Global Fast Track (GFT) and International Exchange are optional components of
             the PGDM and PGDM (BM) programmes. Please note that the fees mentioned above do not
             include the expenses associated with these components.]
-          </p>
+          </p> */}
         </div>
       </div>
 

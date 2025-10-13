@@ -3,10 +3,8 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: stretch;
-  width: 66.6%; /* takes up two-thirds of the full row */
-  margin-top: -90px; /* align to left */
-  margin-right: 8%; /* ensures it's flush left */
-  margin-left: auto;
+  width:85%; /* takes up two-thirds of the full row */
+  margin: -90px auto 0;
   color: #fff;
   text-align: left;
   font-family: 'Poppins', sans-serif;
@@ -27,7 +25,9 @@
 /* Background colors for each column */
 .box-1 { background: #6696f7; } /* Lightest – pastel blue */
 .box-2 { background: #2f59bb; } /* Mid-light – medium blue */
-.box-3 { background: #041d80; } /* Deep blue */
+.box-3 { background: #1535b4; } /* Deep blue */
+.box-5 { background: #00197e; } /* Deep blue */
+
 .box-4 { background: #0c0142; } /* Dark navy (base) */
 
 

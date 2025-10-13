@@ -10,23 +10,30 @@ function OverviewObjective() {
                 <span style={{ color: "#fff" }}>Objective</span>
             </h1>
             <p className="font-weight-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                 The PGDM program is designed to nurture globally attuned, socially conscious leaders who embody UCU’s mission to influence managerial practice and drive value-based growth through wise innovation. The program’s core objectives are:
             </p>
             <ul>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                <li><span className="fw-bold">Empower students with robust conceptual foundations and interpersonal acumen,</span>fostering collaboration and a deep sense of social responsibility in managerial decision-making </li>
+                <li><span className="fw-bold">Cultivate a hands-on, action-oriented learning culture, </span> where students are encouraged to engage deeply, take initiative, and embrace real-world challenges 
+Create immersive environments that spark innovation, enabling students to think creatively, challenge conventions, and develop breakthrough solutions </li>
+                <li><span className="fw-bold">Deliver a pedagogical experience that harmonizes academic rigor with industry relevance, </span>ensuring that learning is both intellectually rich and practically applicable </li>
+                <li><span className="fw-bold">Embed domain-centric exposure throughout the program,</span>so students graduate with firsthand experience and are equipped to contribute from Day One—not as novices, but as prepared professionals
+</li>
             </ul>
 
-            <p className="font-weight-normal">Competency goals:</p>
-            <ul>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-            </ul>
+            <p className="fw-bold">PGDM Competency Goals at UCU:</p>
+            <ol>
+                <li><span className="fw-bold">Develop Responsible, Socially Conscious Leaders</span></li>
+                <h6 className="fw-light mt-2">Cultivate ethical leadership grounded in empathy, sustainability, and societal impact. </h6>
+                <li><span className="fw-bold">Build Global Management Capability</span></li>
+                <h6 className="fw-light mt-2">Equip students to navigate complex, cross-border business environments with cultural fluency and strategic agility. </h6>
+                <li><span className="fw-bold">Ensure Functional and Cross-Functional Mastery</span></li>
+                <h6 className="fw-light mt-2">Foster deep expertise across core business domains while enabling integrative thinking across functions. </h6>
+                <li><span className="fw-bold">Strengthen Decision-Making Acumen</span></li>
+                <h6 className="fw-light mt-2"> Train students to make data-driven, context-aware, and ethically sound managerial decisions. </h6>
+                <li><span className="fw-bold">Ignite Innovative Leadership</span></li>
+                <h6 className="fw-light mt-2"> Empower students to lead transformation through creativity, entrepreneurial thinking, and future-focused vision.</h6>
+            </ol>
 
             {/* VIDEO CONTAINER */}
             <div

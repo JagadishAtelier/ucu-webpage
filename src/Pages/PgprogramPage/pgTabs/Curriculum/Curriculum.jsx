@@ -61,7 +61,7 @@ const Curriculum = () => {
 
         {/* Majors */}
         <section className="majors mb-5">
-          <h3 className="majors-section-title mb-4 text-left">Majors</h3>
+          <h3 className="majors-section-title mb-4 text-left">Functional Major</h3>
           <p className="pgdm-description text-left mb-5">
             PGDM is the only programme that offers the participants the
             flexibility to change their major specialisation and also choose a
@@ -95,6 +95,12 @@ const Curriculum = () => {
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link eventKey="finance">Finance</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="hr-ob">HR & OB</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="business">Business Analytics & AI</Nav.Link>
                 </Nav.Item>
               </Nav>
             </Col>
@@ -146,6 +152,22 @@ const Curriculum = () => {
                     </p>
                   </div>
                 </Tab.Pane>
+                <Tab.Pane eventKey="finance" active={key === "hr-ob"}>
+                  <div className="tab-content-box shadow-sm p-4">
+                    <h5 className="gradient-text hero-gradient-1">HR & OB</h5>
+                    <p>
+Focus on Talent Management in New Age Industries with AI applications
+                    </p>
+                  </div>
+                </Tab.Pane>
+                <Tab.Pane eventKey="finance" active={key === "bussiness"}>
+                  <div className="tab-content-box shadow-sm p-4">
+                    <h5 className="gradient-text hero-gradient-1">Business Analytics & AI </h5>
+                    <p>
+A program with cutting-edge analytics, industry co-creation, and global relevance
+                    </p>
+                  </div>
+                </Tab.Pane>
               </Tab.Content>
             </Col>
           </Row>
@@ -156,16 +178,21 @@ const Curriculum = () => {
           <h3 className="majors-section-title mb-4">Minors</h3>
           <Row>
             <Col md={3}>
-              <Button className="minor-btn">Analytics</Button>
+              <Button className="minor-btn">Fin-Tech</Button>
+            </Col>
+            <Col md={3}>
+              <Button className="minor-btn">GCC</Button>
             </Col>
             <Col md={3}>
               <Button className="minor-btn">Consulting</Button>
             </Col>
             <Col md={3}>
-              <Button className="minor-btn">Finance</Button>
+              <Button className="minor-btn">Manufacturing</Button>
             </Col>
+          </Row>
+          <Row>
             <Col md={3}>
-              <Button className="minor-btn">Information Management</Button>
+              <Button className="minor-btn">Semiconductor</Button>
             </Col>
           </Row>
         </section>

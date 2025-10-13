@@ -3,6 +3,7 @@ import { FiClock, FiDownload, FiFileText } from "react-icons/fi";
 import { LuHourglass } from "react-icons/lu";
 import "./PgApplications.css";
 import { div } from "framer-motion/client";
+import { PersonStanding, User } from "lucide-react";
 
 export default function PgApplications() {
   return (
@@ -48,7 +49,13 @@ export default function PgApplications() {
           <p className="text-large">June 2026</p>
         </div>
       </div>
-
+      {/* One more box */}
+      <div className="app-box box-5">
+        <User/>
+        <div>
+          <p className="text-small">Faculity</p>
+        </div>
+      </div>
       {/* Download Brochure */}
       <div className="app-box box-4">
         <div className="icon"><FiDownload size={24} /></div>
@@ -56,6 +63,8 @@ export default function PgApplications() {
           <p className="text-small">Download Brochure</p>
         </div>
       </div>
+
+
     </div>
   );
 }

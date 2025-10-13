@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { FiMapPin, FiUsers, FiBriefcase, FiAward } from "react-icons/fi";
 import "./OverviewKeyhighlights.css";
 import { ArrowDown, ChevronDown } from "lucide-react";
-
+import { line } from "framer-motion/client";
+import { useNavigate } from "react-router-dom";
 const ITEMS = [
   {
     id: "location",
@@ -10,39 +11,48 @@ const ITEMS = [
     icon: <FiMapPin size={20} />,
     title: "Location",
     text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+`<p>Coming Soon</p>`,
     action: "Know more",
+    link : "/campus-ambience"
   },
   {
     id: "pedagogy",
     label: "Innovative pedagogy",
     icon: <FiUsers size={20} />,
     title: "Innovative pedagogy",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    text:`
+    <ol>
+      <li class='fw-bold'>Industry-First Program Design</li>
+      <h6 class='fw-light mt-2'>Co-created and continuously driven by 500+ CXOs, SMEs, and domain leaders </h6>
+      
+      <li  class='fw-bold'>Personalized Career Navigation</li>
+      <h6 class='fw-light mt-2'> Every student receives tailored guidance through our 1:1 industry mentorship framework </h6>
+
+      <li  class='fw-bold'>Learning by Solving</li>
+      <h6 class='fw-light mt-2'> Curriculum anchored in live projects, problem-based coursework, and immersive hands-on experiences  </h6>
+
+      <li  class='fw-bold'>World-Class Learning Infrastructure</li>
+      <h6 class='fw-light mt-2'> State-of-the-art facilities designed to elevate engagement, collaboration, and applied learning </h6>
+
+    </ol>
+    `,
     action: "Find out how",
+        link : "/industry-approach"
   },
   {
     id: "placements",
-    label: "Placements",
+    label: "Our Recruiters",
     icon: <FiBriefcase size={20} />,
-    title: "Placements",
+    title: "Our Recruiters",
     text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+     `<p>UCU connects students to cutting-edge career opportunities across emerging and high-growth sectors. Through strategic partnerships and deep industry integration, we enable graduates to fast-track their careers and step confidently onto the path of business leadership</p>`,
     action: "View placements",
-  },
-  {
-    id: "rankings",
-    label: "Rankings",
-    icon: <FiAward size={20} />,
-    title: "Rankings",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    action: "See rankings",
+    link:"/placements/recruiters"
   },
 ];
 
 export default function OverviewKeyhighlights() {
+  const navigate = useNavigate()
   const [active, setActive] = useState("location");
   const [mobileOpen, setMobileOpen] = useState("location");
 
@@ -87,7 +97,10 @@ export default function OverviewKeyhighlights() {
                   }`}
                 >
                     <h5>{item.title}</h5>
-                    <p>{item.text}</p>
+    <div
+      className="content-text"
+      dangerouslySetInnerHTML={{ __html: activeItem.text }}
+    />
                     <button className="btn-cta">
                       {item.action} <span className="chev">›</span>
                     </button>
@@ -102,8 +115,11 @@ export default function OverviewKeyhighlights() {
       <div className="col-12 col-lg-9 d-none d-lg-block">
         <div className="content-card p-4 shadow-sm">
           <h3 className="content-title">{activeItem.title}</h3>
-          <p className="content-text">{activeItem.text}</p>
-          <button className="btn-cta">{activeItem.action} <span className="chev">›</span></button>
+    <div
+      className="content-text"
+      dangerouslySetInnerHTML={{ __html: activeItem.text }}
+    />
+          <button onClick={()=>navigate(`${activeItem.link}`)} className="btn-cta">{activeItem.action} <span className="chev">›</span></button>
         </div>
       </div>
     </div>

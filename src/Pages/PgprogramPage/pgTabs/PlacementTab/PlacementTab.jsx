@@ -8,11 +8,10 @@ function PlacementTab() {
 const [selectedBtn, setSelectedBtn] = useState("intern");
   return (
     <div className='p-3 mx-auto placement-tab-div my-1'>
-        <h1 className="display-6 fw-bold col-12 col-lg-12"><span style={{color:"#5ac501"}} className=''>PGDM  </span>placement and career services</h1>
+        <h1 className="display-6 fw-bold col-12 col-lg-12"><span style={{color:"#5ac501"}} className=''>UCU Chennai:  </span> Gateway to the World of Opportunity
+</h1>
     
-        <p className=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p className=''> Through its expansive network of 2000+ leading corporations—spanning both national champions and global giants—UCU Chennai unlocks high-impact career pathways for every student. From consulting, banking, and finance to manufacturing, FinTech, IT/ITES, sales & marketing, and global capability centers (GCCs), our industry-first ecosystem ensures access to cutting-edge roles that accelerate your journey toward business leadership</p>
     
     <h1 className='fs-2 fw-medium mt-5'>Placements process</h1>
     <p>The placement process happens in two hiring cycles:</p>
