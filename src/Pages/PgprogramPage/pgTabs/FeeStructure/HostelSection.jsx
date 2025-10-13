@@ -20,7 +20,7 @@ function HostelSection() {
   ];
   return (
     <div>
-        <h1>Hostel</h1>
+        <h1 className='hostel-sec-head'>Hostel</h1>
             <div className="curriculum-table-container">
       <table className="curriculum-table">
         <thead>
@@ -57,6 +57,20 @@ function HostelSection() {
           ))}
         </tbody>
       </table>
+
+      <p className='fw-bold mt-3'>Note :</p>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat eros non augue facilisis, vel commodo felis tincidunt.
+</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat eros non augue facilisis, vel commodo felis tincidunt.
+</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat eros non augue facilisis, vel commodo felis tincidunt.
+</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat eros non augue facilisis, vel commodo felis tincidunt.
+</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat eros non augue facilisis, vel commodo felis tincidunt.
+</li>
+      </ul>
     </div>
     </div>
   )
