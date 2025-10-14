@@ -21,7 +21,7 @@
   align-items: center;
   gap: var(--pg-gap);
   background: var(--pg-bg);
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 7rem;
   border-radius: 6px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -127,6 +127,7 @@
 @media (max-width: 768px) {
   .pg-tabs-nav {
     position: relative;
+    padding: 0.25rem 0.5rem;
   }
 
   .pg-tabs-nav::after {
@@ -137,9 +138,9 @@
     height: 100%;
     width: 40px;
     pointer-events: none;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.7));
+    /* background: linear-gradient(to right, transparent, rgba(255,255,255,0.7)); */
     opacity: 0;
-    animation: fadeHint 3s ease-in-out infinite; /* 🔁 infinite loop */
+    animation: fadeHint 1s ease-in-out infinite; /* 🔁 infinite loop */
   }
 
   @keyframes fadeHint {

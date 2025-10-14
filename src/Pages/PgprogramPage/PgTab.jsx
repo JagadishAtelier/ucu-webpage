@@ -105,7 +105,7 @@ useEffect(() => {
 
   return (
     <div className="pg-tabs-root">
-      <nav className="pg-tabs-nav" role="tablist" aria-label="Page sections" ref={navRef}>
+      <nav className="pg-tabs-nav " role="tablist" aria-label="Page sections" ref={navRef}>
         {TAB_LIST.map((tab) => (
           <button
             key={tab}
