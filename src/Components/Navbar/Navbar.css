@@ -110,12 +110,12 @@
   transform: translateX(-65%) translateY(0) !important;
 }
 .dropdown-menu.executive-education{
-    left: 210% !important;
-    width: 50vw !important;
+    left: 130% !important;
+    width: 40vw !important;
   transform: translateX(-65%) translateY(0) !important;
 }
 .dropdown-menu.advisory-councils {
-  width: 79vw !important;
+  width: 40vw !important;
   transform: translateX(-65%) translateY(0) !important;
 }
 .dropdown-menu.about,
@@ -847,3 +847,100 @@ li:hover .career-reboot-heading {
   padding: 0.8rem 2rem;
   transition: 0.3s ease;
 }
+
+
+.normal-submenu-item {
+  font-weight: normal !important;
+  color: #333 !important;
+  text-transform: none !important;
+}
+
+
+.submenu-link.sublink-custom {
+  position: relative;
+  font-weight: 500;
+  color: white !important;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  padding-bottom: 4px; /* space for the underline */
+  display: inline-block; /* needed for ::after to work correctly */
+}
+/* Create the animated underline */
+.submenu-link.sublink-custom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #74e974;
+  transition: width 0.3s ease;
+}
+
+/* Expand underline on hover */
+.submenu-link.sublink-custom:hover::after {
+  width: 100%;
+}
+
+
+/* Remove li padding only for this link */
+.submenu-item.no-padding {
+  padding: 0;
+  margin: 0 0 5%;
+  color: white;
+}
+.submenu-item.no-padding a {
+  color: white;
+  position: relative !important;
+}
+.submenu-item.no-padding:hover {
+  background-color: transparent !important;
+  border: none !important;
+  color: white !important;
+}
+.dropdown-menu-col ul li:hover .submenu-link.sublink-custom {
+    color: white !important;
+    background-color: transparent !important; /* if needed */
+    text-decoration: none !important;
+}
+
+.submenu-item.no-padding::after{
+content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10% !important;
+    height: 2px;
+    width: 0;
+    background-color: #74e974;
+    transition: width 0.3s 
+ease;
+color: white !important;
+}
+
+.submenu.no-border {
+  border-left: none !important;
+  color: white !important
+}
+.submenu.no-border:hover {
+  border-left: none !important;
+  color: white !important
+}
+.submenu.no-border a {
+  border-left: none !important;
+  color: white !important
+}
+/* Remove hover background for this specific custom link */
+.submenu-link.sublink-custom:hover {
+  background-color: transparent !important;
+  color: white; /* optional: keep the text color same */
+  text-decoration: none; /* optional: remove underline if any */
+  cursor: default; /* optional: remove pointer cursor if you want */
+}
+
+/* If your li has hover effect affecting it, also override */
+.submenu-item.sublink-custom:hover {
+  background-color: transparent !important;
+}
+
+

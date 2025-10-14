@@ -194,10 +194,14 @@ export const menuData = [
           {
             label: "Customised Learning Programs for Corporate Professionals",
             link: "/program/program-customised-learning-programs-for-corporate-professionals",
-          },
+                        submenu: [
           {
             label: "Management Development Programs (MDPs)",
             link: "/program/MDPs",
+className: "sublink-custom",
+ customHover: false,
+          },
+                        ]
           },
           {
             label: "1 Year CXO Accelerator Program with Campus Immersion",
@@ -237,14 +241,18 @@ export const menuData = [
     label: "Advisory Councils",
     placement: "bottom",
     submenu: [
-      { label: "Business Advisory Council", link: "/bac" },
-      { label: "Academic Advisory Council", link: "/aac" },
-      { label: "CHRO Advisory Council", link: "/chro" },
-      { label: "Talent Advisory Council", link: "/tac" },
-      { label: "L&D Advisory Council", link: "/ldac" },
-      { label: "Young CXO Council", link: "/ycxoc" },
-      { label: "Rising Leaders' Council", link: "/rlc" },
-      { label: "Our Brand Ambassadors", link: "/oba" },
+      { label: "Business Advisory Council", link: "/bac",
+                    submenu: [
+      { label: "Academic Advisory Council", link: "/aac",className: "sublink-custom", },
+      { label: "CHRO Advisory Council", link: "/chro",className: "sublink-custom", },
+      { label: "Talent Advisory Council", link: "/tac",className: "sublink-custom", },
+      { label: "L&D Advisory Council", link: "/ldac",className: "sublink-custom", },
+      { label: "Young CXO Council", link: "/ycxoc",className: "sublink-custom", },
+      { label: "Rising Leaders' Council", link: "/rlc",className: "sublink-custom", },   
+      { label: "Our Brand Ambassadors", link: "/oba" ,className: "sublink-custom",},
+        ]
+       },
+
       {
         label: "SME Program Advisory Council",
         submenu: [

@@ -44,41 +44,38 @@ const Navbar = () => {
   };
 
   // ✅ Recursive submenu renderer
-  const renderNestedMenu = (submenu, depth = 1) => {
-    if (!submenu || !submenu.length) return null;
-
-    return (
-      <ul className={`submenu depth-${depth}`}>
-        {submenu.map((sub) => (
-          <li key={sub.label} className="submenu-item">
-            {sub.submenu && sub.submenu.length > 0 ? (
-              <div className="submenu-parent">
-                {sub.scrollId ? (
-                  <button
-                    className="submenu-link"
-                    onClick={() => handleScrollNavigation(sub.scrollId)}
-                  >
-                    {sub.label}
-                  </button>
-                ) : (
-                  <Link to={sub.link || "#"} className="submenu-link">
-                    {sub.label}
-                  </Link>
-                )}
-
-                <ChevronRight size={12} className="submenu-arrow" />
-                {renderNestedMenu(sub.submenu, depth + 1)}
-              </div>
-            ) : (
-              <Link to={sub.link || "#"} className={`submenu-link`}>
+const renderNestedMenu = (submenu, depth = 1) => {
+  if (!submenu || !submenu.length) return null;
+const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
+  return (
+    <ul className={`submenu depth-${depth} ${hasCustomLink ? "no-border" : ""}`}>
+      {submenu.map((sub) => (
+        <li key={sub.label} className={`submenu-item ${sub.className === "sublink-custom" ? "no-padding" : ""}`}>
+          {sub.submenu && sub.submenu.length > 0 ? (
+            <div className="submenu-parent">
+              <Link
+                to={sub.link || "#"}
+                className={`submenu-link ${sub.className || ""}`}
+              >
                 {sub.label}
               </Link>
-            )}
-          </li>
-        ))}
-      </ul>
-    );
-  };
+              <ChevronRight size={12} className="submenu-arrow" />
+              {renderNestedMenu(sub.submenu, depth + 1)}
+            </div>
+          ) : (
+            <Link
+              to={sub.link || "#"}
+              className={`submenu-link ${sub.className || ""}`}
+            >
+              {sub.label}
+            </Link>
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+};
+
 
   // ✅ Render menu recursively (for mobile)
   const renderMenuItems = (items, depth = 0) => {
