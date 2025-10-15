@@ -271,7 +271,7 @@ const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
               {/* Search & Login */}
               {/* <div className="search-box ms-3"> */}
                 {/* <input type="text" placeholder="Search" /> */}
-                <div className="ms-3 search-icon-nab-bg" onClick={toggleSearch}>
+                <div className="ms-2 search-icon-nab-bg" onClick={toggleSearch}>
                   <Search size={17} />
                 </div>
                 {searchDrodow && (
@@ -283,7 +283,7 @@ const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
                   </div>
                 )}
               {/* </div> */}
-              <div className="d-flex gap-2 ms-3 profile-icon-nab-bg">
+              <div className="d-flex gap-2 ms-2 profile-icon-nab-bg">
                 <User
                   onClick={() => navigate("/auth/login")}
                   className=""
@@ -359,7 +359,7 @@ const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
 
           {/* Mobile Buttons */}
           <div className="d-flex gap-2 mobile-right">
-            <Search className="icon d-lg-none" size={24} color="#333" />
+            <Search className="icon " size={24} color="#333" />
             <User
               className="icon"
               size={24}
