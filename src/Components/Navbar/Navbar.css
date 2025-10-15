@@ -211,6 +211,19 @@
   padding: 0;
   margin: 0;
 }
+.dropdown-menu-col ul li a {
+  display: inline-block;         /* prevent bullets or padding from offsetting */
+  white-space: normal;           /* allow wrapping */
+  text-indent: 0;                /* reset any default text indentation */
+  padding-left: 0;               /* remove extra space before text */
+}
+
+.dropdown-menu-col ul li {
+  text-indent: 0;                /* ensure no indentation on wrap */
+  padding-left: 0.8rem;          /* keep consistent left space */
+  display: block;
+}
+
 .dropdown-menu-col ul li {
   margin-bottom: 6px;
   padding-left: 0.8rem;

@@ -155,8 +155,14 @@ img.img-fluid {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  table-layout: fixed; /* Ensures equal column width */
 }
-
+.curriculum-table th,
+.curriculum-table td {
+  width: calc(100% / 3); /* Equal width for 3 columns */
+  text-align: left;
+  vertical-align: top;
+}
 .curriculum-table th {
   border: 1px solid #000; /* Only header has border */
   padding: 10px;
