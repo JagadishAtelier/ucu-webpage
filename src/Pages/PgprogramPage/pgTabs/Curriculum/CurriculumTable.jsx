@@ -53,7 +53,7 @@ function CurriculumTable() {
           {tableData.map((row, rowIndex) => (
             <tr key={rowIndex}>
               <td>
-                <ul>
+                <ul className='mt-3'>
                   {row.Trimester1.map((item, i) => (
                     <div className="d-flex gap-2 align-items-center mb-3">
                         <div className="green-point-box"></div>
@@ -63,7 +63,7 @@ function CurriculumTable() {
                 </ul>
               </td>
               <td>
-                <ul>
+                <ul className='mt-3'>
                   {row.Trimester2.map((item, i) => (
                                         <div className="d-flex gap-2 align-items-center mb-3">
                         <div className="green-point-box"></div>
@@ -73,7 +73,7 @@ function CurriculumTable() {
                 </ul>
               </td>
               <td>
-                <ul>
+                <ul className='mt-3'>
                   {row.Trimester3.map((item, i) => (
                                         <div className="d-flex gap-2 align-items-center mb-3">
                         <div className="green-point-box"></div>

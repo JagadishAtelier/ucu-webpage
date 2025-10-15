@@ -234,7 +234,7 @@
   letter-spacing: 1px;
   /* margin-left: 1rem; */
   font-weight: 300;
-  color: #e9e9e9 !important;
+  color: white !important;
   text-decoration: none;
 }
 .dropdown-menu-col ul li:hover {
@@ -884,6 +884,7 @@ li:hover .career-reboot-heading {
   text-decoration: none;
   padding-bottom: 4px; /* space for the underline */
   display: inline-block; /* needed for ::after to work correctly */
+  cursor: pointer;
 }
 /* Create the animated underline */
 .submenu-link.sublink-custom::after {
@@ -939,7 +940,8 @@ color: white !important;
 
 .submenu.no-border {
   border-left: none !important;
-  color: white !important
+  color: white !important;
+  cursor: pointer;
 }
 .submenu.no-border:hover {
   border-left: none !important;
@@ -947,7 +949,8 @@ color: white !important;
 }
 .submenu.no-border a {
   border-left: none !important;
-  color: white !important
+  color: white !important;
+  cursor: pointer;
 }
 /* Remove hover background for this specific custom link */
 .submenu-link.sublink-custom:hover {

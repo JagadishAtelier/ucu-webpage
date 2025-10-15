@@ -57,8 +57,8 @@ function HostelSection() {
           ))}
         </tbody>
       </table>
-
-      <p className='fw-bold mt-3'>Note :</p>
+    </div>
+          <p className='fw-bold mt-3'>Note :</p>
       <ul>
         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat eros non augue facilisis, vel commodo felis tincidunt.
 </li>
@@ -71,7 +71,6 @@ function HostelSection() {
         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat eros non augue facilisis, vel commodo felis tincidunt.
 </li>
       </ul>
-    </div>
     </div>
   )
 }

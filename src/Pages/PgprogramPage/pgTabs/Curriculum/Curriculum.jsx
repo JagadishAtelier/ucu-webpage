@@ -13,6 +13,9 @@ import "./Curriculum.css";
 import pgdmImage from "../../../../Assets/aboutPageImage/vision_image.jpg"; // your image path
 import CurriculumTable from "./CurriculumTable";
 import SummerInternship from "./SummerInternship";
+import Electives from "./Electives";
+import OerationTable from "./OerationTable";
+import AimlaTable from "./AimlaTable";
 
 
 const Curriculum = () => {
@@ -202,6 +205,16 @@ A program with cutting-edge analytics, industry co-creation, and global relevanc
             </Col>
           </Row>
         </section>
+
+        <div>
+          <Electives/>
+        </div>
+        <div className="mt-4">
+          <OerationTable/>
+        </div>
+        <div className="mt-4">
+          <AimlaTable/>
+        </div>
       </div>
     </section>
   );

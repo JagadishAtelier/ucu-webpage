@@ -164,7 +164,7 @@ img.img-fluid {
   vertical-align: top;
 }
 .curriculum-table th {
-  border: 1px solid #000; /* Only header has border */
+  border: 1px solid gainsboro; /* Only header has border */
   padding: 10px;
   background-color: #f3f3f3;
 }

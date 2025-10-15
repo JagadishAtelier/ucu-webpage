@@ -364,6 +364,15 @@ XLRI, Jamshedpur`,
         comLogo:
           "https://media.licdn.com/dms/image/v2/D560BAQHUiIQpinpKVQ/company-logo_100_100/company-logo_100_100/0/1722342154423?e=1761782400&v=beta&t=05Ym0mM8F6sqpppZSIbSq37iY49_trEXgoAsVd8Qs3s",
       },
+      {
+        image: "https://media.licdn.com/dms/image/v2/C4D03AQHZptI2AXzWPw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516550502867?e=1763596800&v=beta&t=OnUx_NY72SrV47ChknrgM13XGsLH9A7BkWZrXBuCbAE",
+        name: "M.S Unnikrishnan",
+        prof: `Chief Executive Officer at IITB-Monash Research Academy`,
+        comText : "IITB-Monash Research Academy",
+        linkedIn: "https://www.linkedin.com/in/m-s-unnikrishnan-907bbb14/",
+        comLogo:
+          "https://media.licdn.com/dms/image/v2/C4E0BAQF9PAqKITvGvg/company-logo_100_100/company-logo_100_100/0/1630567979536/iitb_monash_research_academy_logo?e=1763596800&v=beta&t=6p4SzsNPyI6FcxwxuK9q36XuLiaLYholPHb5NjUjqZo",
+      },
     ],
   },
   {
