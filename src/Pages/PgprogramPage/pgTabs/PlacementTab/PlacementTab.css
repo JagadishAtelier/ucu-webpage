@@ -124,11 +124,19 @@
   border: 1px solid white;
 }
 .contact-add{
-  margin-right: 8% !important;
+  margin-right: 10% !important;
+}
+@media (max-width:1024px){
+.contact-add{
+  margin-right: -3% !important;
+}
 }
 @media (max-width:768px){
   .placement-table {
   width: 100%;
+}
+.contact-add{
+  margin: 0 !important;
 }
 .placement-table-head{
   width: 100%;
