@@ -116,14 +116,16 @@
   padding: 3% 0;
 }
 .contact-place-con{
-  background-color: #0c0142;
+  /* background-color: #0c0142; */
   color: white;
   padding: 3%;
 }
 .place-contact-vertical{
   border: 1px solid white;
 }
-
+.contact-add{
+  margin-right: 8% !important;
+}
 @media (max-width:768px){
   .placement-table {
   width: 100%;
