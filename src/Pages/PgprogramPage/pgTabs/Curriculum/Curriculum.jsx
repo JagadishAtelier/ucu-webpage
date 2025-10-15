@@ -49,7 +49,7 @@ A new-age curriculum co-created with the Industry, keeping corporate needs and e
           
           <div className="my-5">
               <p className="Summer-Internship-head mb-4">Summer Internship</p>
-            <SummerInternship/>
+            {/* <SummerInternship/> */}
           </div>
 
           <Accordion.Item eventKey="1">

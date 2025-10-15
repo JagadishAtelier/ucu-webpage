@@ -98,6 +98,14 @@ export const menuData = [
                 label: "Global Capability Centers (GCC)",
                 link: "/program/gcc",
               },
+                            {
+                label: "Semi conductors",
+                link: "/program/semi-conductors",
+              },
+              {
+                label: "Health Care & Life Science. ",
+                link: "/program/hc-ls",
+              },
             ],
           },
         ],
@@ -130,13 +138,14 @@ export const menuData = [
           { label: "PGDM", link: "/program/pgdm" },
           { label: "PGPM Flex", link: "/program/pgpm" },
           { label: "PGXPM", link: "/program/pgxpm" },
-          {
-            label: "Executive Post Graduate Certificate Programs",
-            link: "/program/executive-pgcp",
-          },
+          // {
+          //   label: "Executive Post Graduate Certificate Programs",
+          //   link: "/program/executive-pgcp",
+          // },
           {
             label: "Career Reboot Program for Women",
             link: "/program/career-reboot",
+            className: "sublink-custom",
           },
         ],
       },
@@ -179,6 +188,14 @@ export const menuData = [
               {
                 label: "Global Capability Centers (GCC)",
                 link: "/program/gcc",
+              },
+              {
+                label: "Semi conductors",
+                link: "/program/semi-conductors",
+              },
+              {
+                label: "Health Care & Life Science. ",
+                link: "/program/hc-ls",
               },
             ],
           },

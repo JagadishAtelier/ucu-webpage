@@ -24,10 +24,10 @@ const FeeStructure = () => {
             The fee for Indian Participants is <strong> INR 10,00,000*</strong>.
           </p>
           <p>
-            This fee is not inclusive of hostel accommodation, mess and other expenses.{" "}
-            <em>*This includes only the tuition fee and is subject to revision.</em>
-          </p>
-
+            This fee is not inclusive of hostel accommodation, mess and other expenses.This includes only the tuition fee and is subject to revision.</p>
+<p> The above mentioned fee does not include the 
+Global Fast Track Immersion Program which is our exchange program crafted for the 
+two year PGDM.</p>
           {/* <p className="mt-3">
             [The above mentioned fee does not include the Global Fast Track Immersion Program which is our exchange program crafted for the two year PGDM. ]
           </p> */}
@@ -37,9 +37,11 @@ const FeeStructure = () => {
             The fee for Indian Participants is  <strong> INR 16,00,000*</strong>.
           </p>
           <p>
-            This  his fee is not inclusive of hostel accommodation, mess and other expenses. {" "}
-            <em>*This includes only the tuition fee and is subject to revision.</em>
+            This  his fee is not inclusive of hostel accommodation, mess and other expenses.This includes only the tuition fee and is subject to revision.
           </p>
+          <p> The above mentioned fee does not include the 
+Global Fast Track Immersion Program which is our exchange program crafted for the 
+two year PGDM.</p>
 
           {/* <p className="mt-3">
             [The Global Fast Track (GFT) and International Exchange are optional components of

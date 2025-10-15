@@ -49,12 +49,6 @@ export default function PgApplications() {
         </div>
       </div>
       {/* One more box */}
-      <div className="app-box box-5">
-        <User/>
-        <div>
-          <p className="text-small">Faculity</p>
-        </div>
-      </div>
       {/* Download Brochure */}
       <div className="app-box box-4">
         <div className="icon"><FiDownload size={24} /></div>
