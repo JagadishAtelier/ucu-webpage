@@ -1,0 +1,235 @@
+.campus-route-bg {
+  background: linear-gradient(205deg, rgb(7, 186, 243) 1%, rgb(23, 3, 169) 100%);
+  width: 100%;
+  left: 0;
+  padding-left:8%;
+  color: white;
+}
+.campus-gateway-slider-swiper-div{
+    height: 50vh;
+    width: 100%;
+    margin: auto;
+}
+.campus-gateway-slider-content{
+    width: 100%;
+  background: linear-gradient(205deg, rgb(7, 186, 243) 1%, rgb(23, 3, 169) 100%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  padding:0 1rem 0 4rem;
+
+}
+.campus-gateway-slider-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.campus-gateway-swiper{
+    width: 100%;
+}
+/* Custom navigation buttons */
+.swiper-button-prev svg{
+    height: 50% !important;
+}
+.swiper-button-next svg{
+    height: 50%;
+}
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+.custom-prev {
+  left: 0;
+}
+
+.custom-next {
+  right: 0;
+}
+
+/* Ensure the parent has relative positioning for buttons to align correctly */
+.campus-gateway-slider-container {
+  position: relative;
+}
+.captital-campus-content-sec{
+    padding: 0 8%;
+}
+.campus-choose-data-image{
+    width: 60px;
+    height: 60px;
+}
+.campus-choose-item {
+    padding-bottom: 4%; /* space for the line */
+    border-bottom: 1px solid #ccc; /* vertical line */
+}
+
+.campus-choose-item:nth-last-child(-n+3) {
+    border-bottom: none;
+}
+.campus-choose-data-text {
+    font-size: 1.5rem;
+}
+.campus-faculity-image-div {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.campus-faculity-image {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.campus-faculity-bottom-text {
+  position: absolute;
+  bottom: -5%;
+  z-index: 2;
+  background-color: #005bd4;
+  width: 100%;
+  left: 0;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+/* Hover overlay */
+.campus-faculity-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #005bd4; /* semi-transparent blue */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  opacity: 0;
+  padding: 1rem;
+  text-align: start;
+  transition: opacity 0.3s ease;
+}
+
+.campus-faculity-hover-overlay p {
+  margin: 0.5rem 0;
+}
+
+.campus-faculity-image-div:hover .campus-faculity-hover-overlay {
+  opacity: 1;
+}
+
+.campus-faculity-image-div:hover .campus-faculity-image {
+  transform: scale(1.05);
+}
+.campus-faculity-image-div:hover .campus-faculity-bottom-text {
+    display: none;
+}
+.campus-faculity-hover-head{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.campus-explore-bottom-text{
+  position: absolute;
+  bottom: -5%;
+  z-index: 2;
+  background-color: #005bd4;
+  width: 100%;
+  left: 0;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+.campus-community-grid-data{
+    background-color: rgb(243, 242, 242);
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 0 20px;
+}
+.campus-community-km-btn{
+    background-color: transparent !important;
+}
+
+
+@media (max-width: 1024px)  {
+    .campus-route-bg{
+        padding-left: 8%;
+    }
+    .campus-gateway-slider-image{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+}
+@media (max-width: 768px)  {
+    .campus-route-bg{
+        padding-left: 10%;
+    }
+    .campus-gateway-slider-image{
+    width: 100%;
+}
+.captital-campus-content-sec{
+    padding: 0 3%;
+}
+.campus-gateway-slider-swiper-div{
+    height: 70vh;
+    width: 100%;
+    margin: auto;
+}
+.custom-prev {
+  left: 3%;
+}
+
+.custom-next {
+  right: 3%;
+}
+.campus-gateway-slider-content{
+    padding: 2rem;
+}
+}
+@media (max-width: 480px)  {
+    .campus-route-bg{
+        justify-content: center;
+        padding-left: 0;
+    }
+    .campus-choose-item:nth-last-child(n) {
+    border-bottom: none;
+}
+.campus-choose-data-text {
+    font-size: 1rem;
+}
+.campus-faculity-bottom-text{
+    bottom: -6%;
+}
+
+}

@@ -49,7 +49,7 @@ function OverviewParticipant() {
 
   return (
     <div>
-      <h1 className="display-4 col-12 fw-bold text-black"><span style={{color:"#5ac501"}}>Aspirants & Parents</span> Speak</h1>
+      <h1 className="display-4 col-12 fw-bold text-black text-lg-center text-md-center text-start"><span style={{color:"#5ac501"}}>Aspirants & Parents</span> Speak</h1>
       <p className="mb-4 sort-disc col-lg-6 text-center mx-auto">
         Hear from our Aspirants, present students and their parents speak on the
         uniqueness of our programs and their outcomes
