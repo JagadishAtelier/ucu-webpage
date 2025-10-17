@@ -42,7 +42,7 @@ function CampusFaculty() {
 <div key={index} className='col-lg-4 col-12 col-md-6 campus-faculity-item-div'>
               <div className='campus-faculity-image-div'>
                 <img src={item.image} className='campus-faculity-image'/>
-                
+                                <div className='campus-faculity-image-overlay'></div>
                 {/* Overlay content */}
                 <div className='campus-faculity-hover-overlay'>
                   <p className='campus-faculity-hover-head'>{item.hoverHead}</p>

@@ -103,13 +103,13 @@
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
+
 }
 
 .campus-faculity-bottom-text {
   position: absolute;
   bottom: -5%;
   z-index: 2;
-  background-color: #005bd4;
   width: 100%;
   left: 0;
   color: white;
@@ -125,7 +125,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #005bd4; /* semi-transparent blue */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
   color: white;
   display: flex;
   flex-direction: column;
@@ -151,21 +151,28 @@
 .campus-faculity-image-div:hover .campus-faculity-bottom-text {
     display: none;
 }
+.campus-faculity-image-div:hover .campus-faculity-image-overlay {
+    display: none;
+}
 .campus-faculity-hover-head{
     font-size: 1.2rem;
     font-weight: bold;
+    position: relative;
+    z-index: 9999;
+    color: white;
 }
-.campus-explore-bottom-text{
+.campus-explore-bottom-text {
   position: absolute;
-  bottom: -5%;
-  z-index: 2;
-  background-color: #005bd4;
-  width: 100%;
+  bottom: 0;
   left: 0;
+  width: 100%;
   color: white;
+  padding: 1rem;
   text-align: center;
-  padding: 0.5rem;
   font-weight: bold;
+  z-index: 2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .campus-community-grid-data{
     background-color: rgb(243, 242, 242);
@@ -214,7 +221,15 @@
 .campus-address-location{
   width: 60%;
 }
-
+.campus-faculity-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  transition: opacity 0.4s ease;
+  opacity: 1;
+  border-radius: 10px;
+  z-index: 1;
+}
 @media (max-width: 1024px)  {
     .campus-route-bg{
         padding-left: 8%;

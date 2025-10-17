@@ -27,6 +27,7 @@ function CampusExplore() {
 <div key={index} className='col-lg-4 col-12 col-md-6 campus-faculity-item-div mx-auto'>
               <div className='campus-faculity-image-div'>
                 <img src={item.image} className='campus-faculity-image'/>
+                <div className='campus-faculity-image-overlay'></div>
                 <p className='campus-explore-bottom-text'>{item.text}</p>
               </div>
             </div>
