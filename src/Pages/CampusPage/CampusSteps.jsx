@@ -27,7 +27,7 @@ const data = [
 ]
 function CampusSteps() {
   return (
-    <div className='captital-campus-content-sec my-5'>
+    <div className='captital-campus-content-sec'>
         <h1>Everything you need, just steps away</h1>
         <div className='d-grid mt-5'>
             <div className='row row-gap-5'>
