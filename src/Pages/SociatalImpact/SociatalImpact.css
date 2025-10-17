@@ -1,0 +1,82 @@
+.societal-image-1{
+    height: 100px;
+    width: 300px;
+    border: 1px solid gainsboro;
+    padding: 30px;
+}
+.societal-image-2 {
+  height: 100%;
+  width: 100%;
+  border: 1px solid gainsboro;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
+}
+.societal-video-1{
+height: 100%;
+  width: 800px;
+}
+.societal-video-1 iframe{
+    height: 100%;
+  width: 100%;
+}
+.societal-image-2 img {
+  width: 100px;
+  height: 100px;
+}
+
+.societal-impactimage-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.societal-impactimage-btn button {
+  background-color: rgb(90, 197, 1);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+@media (max-width: 768px) {
+.societal-video-1 iframe{
+  width:290px;
+}
+}
+@media (max-width: 480px) {
+.societal-image-1{
+    width: 100%;
+    height: 150px;
+}
+.societal-video-1{
+    height: 30vh;
+    width: 400px;
+}
+.societal-video-1 iframe{
+    width: 100%;
+}
+}
+@media (max-width: 376px){
+    .societal-video-1{
+    height: 30vh;
+    width: 350px;
+}
+.societal-video-1 iframe{
+    width: 100% !important;
+}
+}
+@media (max-width: 320px){
+    .societal-video-1{
+    height: 30vh;
+    width: 300px;
+}
+.societal-video-1 iframe{
+    width: 100% !important;
+}
+}
