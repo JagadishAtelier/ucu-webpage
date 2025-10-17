@@ -11,6 +11,7 @@ import CampusFaculty from './CampusFaculty'
 import CampusExplore from './CampusExplore'
 import CampusCommunity from './CampusCommunity'
 import CampusSteps from './CampusSteps'
+import CampusLocation from './CampusLocation'
 function CampusPage() {
   return (
     <div>
@@ -46,7 +47,8 @@ function CampusPage() {
     <CampusFaculty/>
     <CampusExplore/>
     <CampusCommunity/>
-    {/* <CampusSteps/> */}
+    <CampusSteps/>
+    <CampusLocation/>
     <NewFooter/>
     </div>
   )
