@@ -13,6 +13,7 @@ import Platforms from "../Components/Platforms/Platforms";
 import ExPhd from "../Components/ExPhd/ExPhd";
 import Wps from "../Components/Wps/Wps";
 import OverviewParticipant from "./PgprogramPage/pgTabs/OverviewTab/OverviewParticipant";
+import Aspirants from "../Components/Aspirants/Aspirants";
 
 const Home = () => {
   return (
@@ -44,8 +45,8 @@ const Home = () => {
         <div data-aos="fade-up" data-aos-delay="100" className="my-5">
           <Industry />
         </div>
-        <div className="my-5 mx-5 text-center">
-          <OverviewParticipant />
+        <div className="my-5 mx-lg-5 mx-0 text-center">
+          <Aspirants/>
         </div>
         {/* Events */}
         <div data-aos="fade-right" data-aos-delay="100">

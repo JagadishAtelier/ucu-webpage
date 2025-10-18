@@ -1,0 +1,108 @@
+.asp-industry-container {
+  padding: 0 0;
+}
+
+.asp-industry-card-div {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap; /* desktop: side by side */
+  width: 1162px;
+  margin: auto;
+}
+
+.asp-industry-card {
+  width: 350px;
+  padding: 15px;
+  border: 1px solid white;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  flex-shrink: 0; /* ✅ ensures card doesn’t shrink in horizontal scroll */
+}
+
+.asp-i-frame {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+.asp-industry-card:hover{
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* ✅ Mobile horizontal scroll */
+@media (max-width: 768px) {
+  .asp-industry-card-div {
+    flex-wrap: nowrap;           /* row only */
+    overflow-x: auto;            /* horizontal scroll */
+    gap: 15px;
+    padding: 10px;
+    justify-content: flex-start; /* align left */
+    scroll-snap-type: x mandatory; /* smooth snap */
+  }
+
+  .asp-industry-card {
+    width: 80%; /* each card fills most of screen */
+    max-width: 320px;
+    scroll-snap-align: center; /* snap to center */
+  }
+
+  .asp-i-frame {
+    height: 200px;
+  }
+
+  /* Hide scrollbar for a cleaner look */
+  .asp-industry-card-div::-webkit-scrollbar {
+    display: none;
+  }
+  .asp-industry-card-div {
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+}
+/* -------------------------------
+   🎥 Thumbnail + Play Button
+--------------------------------*/
+.asp-video-thumbnail-wrapper {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+}
+
+.asp-participant-play-thumbnail {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.asp-video-thumbnail-wrapper:hover .asp-participant-play-thumbnail {
+  transform: scale(1.03);
+}
+
+.asp-play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  color: white;
+  font-size: 40px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* match iframe height on mobile */
+@media (max-width: 768px) {
+  .asp-participant-play-thumbnail {
+    height: 200px;
+  }
+}
