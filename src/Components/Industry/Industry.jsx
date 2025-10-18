@@ -2,6 +2,11 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Industry.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const data = [
   {
@@ -15,6 +20,12 @@ const data = [
     author: "Anita Kapoor",
     proffection: "Managing Director, Visionary Enterprises",
     para: "The corporate partnership initiatives at UCU are creating impactful opportunities for students and professionals alike.",
+  },
+  {
+    videoUrl: "https://youtu.be/ulaQhIpWY98?si=O_Ofh6g_EBIawX-C",
+    author: "Vikram Sethi",
+    proffection: "Chief Human Resources Officer, Global Dynamics",
+    para: "UCU is cultivating the next generation of business leaders through practical, industry-focused learning.",
   },
   {
     videoUrl: "https://youtu.be/ulaQhIpWY98?si=O_Ofh6g_EBIawX-C",
@@ -40,37 +51,60 @@ function Industry() {
 
   return (
     <div className="industry-container">
-      <div className="d-flex flex-column flex-lg-column align-items-lg-center justify-content-lg-center" data-aos="fade-up">
-        <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}>Industry</span> Icons Speak</h1>
+      <div
+        className="d-flex flex-column flex-lg-column align-items-lg-center justify-content-lg-center"
+        data-aos="fade-up"
+      >
+        <h1 className="display-4 fw-bold col-12 text-center">
+          <span style={{ color: "#5ac501" }}>Industry</span> Icons Speak
+        </h1>
         <p className="sort-disc col-lg-6 text-center">
           Insights from top leaders shaping the future of business education at
           UCU.
         </p>
       </div>
 
-      <div className="industry-card-div">
+      {/* ✅ Swiper Integration */}
+      <Swiper
+        modules={[Autoplay, Navigation, Pagination]}
+        spaceBetween={30}
+        slidesPerView={3}
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 250000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          768: { slidesPerView: 1 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="industry-card-div"
+      >
         {data.map((item, index) => (
-          <div
-            key={index}
-            className="industry-card"
-            data-aos="zoom-in"
-            data-aos-delay={index * 200} // stagger effect
-          >
-            <iframe
-              className="i-frame"
-              src={convertToEmbedUrl(item.videoUrl)}
-              title={item.author}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-            <p className="program-description">{item.para}</p>
-            <p className="program-description">
-              <strong>-{item.author}</strong>, {item.proffection}
-            </p>
-          </div>
+          <SwiperSlide key={index}>
+            <div
+              className="industry-card"
+              data-aos="zoom-in"
+              data-aos-delay={index * 200}
+            >
+              <iframe
+                className="i-frame"
+                src={convertToEmbedUrl(item.videoUrl)}
+                title={item.author}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+              <p className="program-description">{item.para}</p>
+              <p className="program-description">
+                <strong>-{item.author}</strong>, {item.proffection}
+              </p>
+            </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
 }

@@ -92,12 +92,12 @@ function SocietalFocus() {
               <p>
 The Development of Corporate Citizenship (DoCC) initiative, started in the 1990s, engages with hundreds of NGOs through mandatory student internships, fairs, and discussion forums that provide market access and learning opportunities to NGOs, and through awards that recognise innovation in the social sector.
               </p>
-              <div>
-                <div>
+              <div className='d-grid'>
+                <div className='row gap-2'>
                     {boxTwoData.map((item,index)=>(
-                        <div>
+                        <div className='col-2 box-two-data-card'>
                             <img src={item.image}/>
-                            <p>{item.head}</p>
+                            <p className='col-8'>{item.head}</p>
                         </div>
                     ))}
                 </div>

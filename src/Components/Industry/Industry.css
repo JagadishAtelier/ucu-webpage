@@ -3,14 +3,16 @@
 }
 
 .industry-card-div {
+  width: 100%;
+  max-width: 1320px;
   display: flex;
+  padding: 40px 0;
   gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap; /* desktop: side by side */
 }
 
 .industry-card {
   width: 400px;
+  height: 70vh;
   padding: 15px;
   border: 1px solid white;
   background-color: white;
@@ -18,7 +20,7 @@
   text-align: center;
   border-radius: 10px;
   transition: all 0.3s ease;
-  flex-shrink: 0; /* ✅ ensures card doesn’t shrink in horizontal scroll */
+  margin: auto;
 }
 
 .i-frame {
@@ -26,37 +28,29 @@
   height: 300px;
   border-radius: 10px;
 }
-.industry-card:hover{
+
+.industry-card:hover {
   transform: translateY(-5px) scale(1.02);
 }
 
-/* ✅ Mobile horizontal scroll */
+/* ✅ Responsive Swiper settings */
 @media (max-width: 768px) {
-  .industry-card-div {
-    flex-wrap: nowrap;           /* row only */
-    overflow-x: auto;            /* horizontal scroll */
-    gap: 15px;
-    padding: 10px;
-    justify-content: flex-start; /* align left */
-    scroll-snap-type: x mandatory; /* smooth snap */
-  }
-
   .industry-card {
-    width: 80%; /* each card fills most of screen */
-    max-width: 320px;
-    scroll-snap-align: center; /* snap to center */
+    width: 100%;
+    max-width: 350px;
   }
 
   .i-frame {
-    height: 200px;
+    height: 40vh;
   }
+}
 
-  /* Hide scrollbar for a cleaner look */
-  .industry-card-div::-webkit-scrollbar {
-    display: none;
-  }
-  .industry-card-div {
-    -ms-overflow-style: none;  /* IE/Edge */
-    scrollbar-width: none;     /* Firefox */
-  }
+/* ✅ Swiper UI tweaks (optional) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #5ac501;
+}
+
+.swiper-pagination-bullet {
+  background-color: #5ac501;
 }
