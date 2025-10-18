@@ -43,6 +43,18 @@ height: 100%;
   cursor: pointer;
   font-size: 10px;
 }
+.societal-campus-youtube{
+  width: 100%;
+  height: 40vh;
+}
+.societal-campus-youtube iframe{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
 
 @media (max-width: 768px) {
 .societal-video-1 iframe{

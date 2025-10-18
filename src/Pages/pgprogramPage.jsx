@@ -14,9 +14,9 @@ function PgprogramPage() {
             <Navbar />
             <AboutPageHero
                 title="PGDM"
-                sub="Post Graduate Diplamo in Management"
+                sub="Post Graduate Diploma in Management"
                 breadcrumb={["Home", "PGDM Programs"]}
-                bgImage={heroImage}
+                bgImage="https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
             />
             <div>
                 <PgApplications />

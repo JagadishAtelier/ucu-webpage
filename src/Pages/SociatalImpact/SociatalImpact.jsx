@@ -5,6 +5,7 @@ import NewFooter from '../../Components/NewFooter/NewFooter'
 import { ChevronRight } from 'lucide-react'
 import SocietalStep from './SocietalStep'
 import SocietalApproach from './SocietalApproach'
+import SocietalFocus from './SocietalFocus'
 function SociatalImpact() {
   return (
     <div>
@@ -37,6 +38,7 @@ function SociatalImpact() {
     </div>
     <SocietalStep/>
     <SocietalApproach/>
+    <SocietalFocus/>
     <NewFooter/>
     </div>
   )

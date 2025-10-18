@@ -1,0 +1,113 @@
+import React from 'react'
+import { Accordion } from "react-bootstrap";
+import {Button} from 'react-bootstrap';
+
+const boxTwoData = [
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/2024/05/social-sector-internship.png",
+        head : "Social Sector Intership",
+        hoverText : "Contributing to the societal issue of grassroots communities"
+    },
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/2024/05/social-sector-internship.png",
+        head : "Social Sector Intership",
+        hoverText : "Contributing to the societal issue of grassroots communities"
+    },
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/2024/05/social-sector-internship.png",
+        head : "Social Sector Intership",
+        hoverText : "Contributing to the societal issue of grassroots communities"
+    },
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/2024/05/social-sector-internship.png",
+        head : "Social Sector Intership",
+        hoverText : "Contributing to the societal issue of grassroots communities"
+    },
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/2024/05/social-sector-internship.png",
+        head : "Social Sector Intership",
+        hoverText : "Contributing to the societal issue of grassroots communities"
+    },
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/2024/05/social-sector-internship.png",
+        head : "Social Sector Intership",
+        hoverText : "Contributing to the societal issue of grassroots communities"
+    },
+]
+function SocietalFocus() {
+  return (
+    <div className='captital-campus-content-sec my-4'>
+        <h1>Our current societal impact initiatives are focused on:</h1>
+        <div>
+        <Accordion defaultActiveKey="0" className="mt-4">
+
+        {/* Accordion box-1 */}
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>Empowering the underprivileged segment of our local community</Accordion.Header>
+            <Accordion.Body>
+        <div className='d-flex flex-lg-row flex-md-row flex-column gap-3 '>
+            <p className='col-lg-9 col-md-7  fw-normal fs-6'>The Abhyudaya initiative, started in 2008, works to empower underprivileged communities from lower-income neighbourhoods in Mumbai’s ‘K-Ward’ around the SPJIMR campus. Abhyudaya provides mentoring, enrichment activities, and financial support to underprivileged students (fondly called ‘Sitaras’ or ‘stars’), their families and schools.</p>
+            <img src='https://www.spjimr.org/wp-content/uploads/2024/05/positive-impact-rating.png' className='societal-image-1'/>
+        </div>
+        <div className='my-4'>
+            <h1>Impact</h1>
+            <img src='https://www.spjimr.org/wp-content/uploads/2025/06/Total-Sitaras-2025.webp'/>
+        </div>
+        <div>
+            <h1>Impact stories</h1>
+            <div className='d-flex flex-lg-row flex-column gap-4'>
+            <div className='societal-campus-youtube'>
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              title="Sonam Wangchuk Keynote"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+            <div className='societal-campus-youtube'>
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              title="Sonam Wangchuk Keynote"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+            </div>
+            <Button className='my-4 p-3' style={{backgroundColor:"#5ac501",border:"none"}}>Know more about Abhyudaya</Button>
+        </div>
+                <div className='d-flex flex-lg-row flex-md-row flex-column gap-3 '>
+            <p className='col-lg-9 col-md-7  fw-normal fs-6'>Sashakt is crafted to support entrepreneurs from low-income backgrounds in growing their businesses and fostering economic resilience. Participants are selected largely from SPJIMR’s Abhyudaya programme or through its networks. Through a structured, hands-on curriculum, Sashakt will provide education and mentorship, equipping participants with essential skills in finance, marketing, business operations, and leadership. Each session will include practical learning in Hindi to ensure accessibility and maximise impact.</p>
+            <img src='https://www.spjimr.org/wp-content/uploads/images/sashakt.png' className='societal-image-1'/>
+        </div>
+         <Button className='my-4 p-3' style={{backgroundColor:"#5ac501",border:"none"}}>Know more about Abhyudaya</Button>
+            </Accordion.Body>
+          </Accordion.Item>
+
+        {/* Accordion box-2 */}
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Engaging the social sector at the grassroots level</Accordion.Header>
+            <Accordion.Body>
+              <p>
+The Development of Corporate Citizenship (DoCC) initiative, started in the 1990s, engages with hundreds of NGOs through mandatory student internships, fairs, and discussion forums that provide market access and learning opportunities to NGOs, and through awards that recognise innovation in the social sector.
+              </p>
+              <div>
+                <div>
+                    {boxTwoData.map((item,index)=>(
+                        <div>
+                            <img src={item.image}/>
+                            <p>{item.head}</p>
+                        </div>
+                    ))}
+                </div>
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+        </div>
+    </div>
+  )
+}
+
+export default SocietalFocus
