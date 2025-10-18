@@ -38,6 +38,7 @@
   .industry-card {
     width: 100%;
     max-width: 320px;
+    height: 60vh;
   }
 
   .i-frame {
