@@ -52,17 +52,83 @@ height: 100%;
   height: 100%;
 }
 .box-two-data-card{
-  background-color: blue;
-  height: 30vh;
+  background-color: #005bd4;
+  height: 40vh;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  gap: 10px;
+    position: relative; /* important for hover text positioning */
+  overflow: hidden;
+  transition: background-color 0.3s ease;
 }
+.box-two-data-card:hover{
+  background-color:#5ac501 ;
+}
+.box-two-data-card:hover .hover-societal-text {
+  opacity: 1;
+}
+
+.box-two-data-card:hover img,
+.box-two-data-card:hover p {
+  opacity: 0;
+}
+
+.hover-societal-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  font-size: 16px;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+}
+
+/* show only when card is hovered */
+.box-two-data-card:hover .hover-societal-text {
+  opacity: 1;
+}
+
 .box-two-data-card img{
   width: 100px;
   height: 100px;
 }
-
-
-
+.societal-brand{
+  background-color: white;
+  height: 10vh;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.societal-brand img{
+  width: 100%;
+  height: 100%;
+}
+.societal-tag-two-swiper{
+  display: flex;
+  width: 100%;
+  padding:0 0 60px;
+}
+.societal-box-two-card-div{
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.societal-box-two-card-div img{
+  border-radius: 5px 5px 0 0;
+}
 
 @media (max-width: 768px) {
 .societal-video-1 iframe{

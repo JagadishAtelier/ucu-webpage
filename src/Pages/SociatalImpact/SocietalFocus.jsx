@@ -1,7 +1,12 @@
+import { ChevronRight } from 'lucide-react';
 import React from 'react'
 import { Accordion } from "react-bootstrap";
 import {Button} from 'react-bootstrap';
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 const boxTwoData = [
     {
         image : "https://www.spjimr.org/wp-content/uploads/2024/05/social-sector-internship.png",
@@ -32,6 +37,48 @@ const boxTwoData = [
         image : "https://www.spjimr.org/wp-content/uploads/2024/05/social-sector-internship.png",
         head : "Social Sector Intership",
         hoverText : "Contributing to the societal issue of grassroots communities"
+    },
+]
+const boxTwoData2 = [
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/images/ashish-kothari.jpg",
+        name : "Ashish kothari",
+        hoverText : "Founder of Kothari"
+    },
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/images/t-m-krishna.jpg",
+        name : "Ashish kothari",
+        hoverText : "Founder of Kothari"
+    },
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/2024/12/nidhi-jamwal-new.webp",
+        name : "Ashish kothari",
+        hoverText : "Founder of Kothari"
+    },
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/images/sumana-roy.jpg",
+        name : "Ashish kothari",
+        hoverText : "Founder of Kothari"
+    },
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/images/ashish-kothari.jpg",
+        name : "Ashish kothari",
+        hoverText : "Founder of Kothari"
+    },
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/images/ashish-kothari.jpg",
+        name : "Ashish kothari",
+        hoverText : "Founder of Kothari"
+    },
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/images/ashish-kothari.jpg",
+        name : "Ashish kothari",
+        hoverText : "Founder of Kothari"
+    },
+    {
+        image : "https://www.spjimr.org/wp-content/uploads/images/ashish-kothari.jpg",
+        name : "Ashish kothari",
+        hoverText : "Founder of Kothari"
     },
 ]
 function SocietalFocus() {
@@ -93,14 +140,75 @@ function SocietalFocus() {
 The Development of Corporate Citizenship (DoCC) initiative, started in the 1990s, engages with hundreds of NGOs through mandatory student internships, fairs, and discussion forums that provide market access and learning opportunities to NGOs, and through awards that recognise innovation in the social sector.
               </p>
               <div className='d-grid'>
-                <div className='row gap-2'>
+                <div className='row gap-2 mx-auto'>
                     {boxTwoData.map((item,index)=>(
                         <div className='col-2 box-two-data-card'>
                             <img src={item.image}/>
                             <p className='col-8'>{item.head}</p>
+                            <div className='hover-societal-text'>{item.hoverText}</div>
                         </div>
                     ))}
                 </div>
+              </div>
+              <div className='my-3'>
+                <h1>Partners</h1>
+                <div>
+                  <div className='d-flex align-items-center gap-2'>
+                    <ChevronRight/>
+                    <p className='m-0'>300+ social sector organisations across 26 Indian states</p>
+                  </div>
+                  <div className='d-flex align-items-center gap-2 mt-2'>
+                    <ChevronRight/>
+                    <p className='m-0'>300+ social sector organisations across 26 Indian states</p>
+                  </div>
+                </div>
+                <div className='my-4 d-flex gap-3'>
+                  <div className='societal-brand'>
+                    <img src='https://www.spjimr.org/wp-content/uploads/2024/05/un-prme.png'/>
+                  </div>
+                  <div className='societal-brand'>
+                    <img src='https://www.spjimr.org/wp-content/uploads/2024/05/m3m-foundation.png'/>
+                  </div>
+                  <div className='societal-brand'>
+                    <img src='https://www.spjimr.org/wp-content/uploads/2024/05/edhec-business-school.png'/>
+                  </div>
+                </div>
+              </div>
+              <div className='my-4'>
+                <h1>PRME India Chapter Meet 2024 Speakers</h1>
+                <div className='d-flex gap-3 justify-content-end'>
+                  <Button className='my-4 p-3' style={{backgroundColor:"#5ac501",border:"none"}}>Agenda 2024</Button>
+                  <Button className='my-4 p-3' style={{backgroundColor:"#5ac501",border:"none"}}>Know more </Button>
+                </div>
+                      <Swiper
+        modules={[Autoplay, Navigation, Pagination]}
+        spaceBetween={30}
+        slidesPerView={3}
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 250000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 4 },
+        }}
+        className="societal-tag-two-swiper"
+      >
+        {boxTwoData2.map((item,index)=>(
+          <SwiperSlide>
+          <div className='societal-box-two-card-div'>
+            <img src={item.image}/>
+            <div className='py-4 px-2'>
+            <p className='fw-bold fs-5 m-0'>{item.name}</p>
+            <p>{item.hoverText}</p>
+            </div>
+          </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
               </div>
             </Accordion.Body>
           </Accordion.Item>
