@@ -40,7 +40,7 @@
     width: 100%; /* each card fills most of screen */
     max-width: 320px;
     scroll-snap-align: center; /* snap to center */
-    height: 60vh;
+    height: 50vh;
   }
 
   .asp-i-frame {
