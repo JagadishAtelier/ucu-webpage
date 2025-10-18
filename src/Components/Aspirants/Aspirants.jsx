@@ -30,6 +30,13 @@ const data = [
     proffection: "Chief Human Resources Officer, Global Dynamics",
     para: "UCU is cultivating the next generation of business leaders through practical, industry-focused learning.",
   },
+  {
+    videoUrl: "https://youtu.be/ulaQhIpWY98?si=O_Ofh6g_EBIawX-C",
+    thumbnail: "https://th.bing.com/th/id/R.3bcbeff4ee0abb81ef150c9ea7e35730?rik=t3aMo1m4uUQi6g&riu=http%3a%2f%2fwww.newdesignfile.com%2fpostpic%2f2010%2f05%2ffree-stock-photos-people_102217.jpg&ehk=vGjIrntn5QyP%2fIXY2Ei7Iiz4%2fy%2byXvP8I8j0XxemwjI%3d&risl=&pid=ImgRaw&r=0",
+    author: "Vikram Sethi",
+    proffection: "Chief Human Resources Officer, Global Dynamics",
+    para: "UCU is cultivating the next generation of business leaders through practical, industry-focused learning.",
+  },
 ];
 
 function convertToEmbedUrl(url) {
@@ -68,7 +75,7 @@ const [activeVideo, setActiveVideo] = useState(null);
         slidesPerView={3}
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 250000,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         loop={true}
@@ -109,11 +116,10 @@ const [activeVideo, setActiveVideo] = useState(null);
             <div className="asp-play-button-overlay">▶</div>
           </div>
         )}
-
-        <p className="program-description">{item.para}</p>
         <p className="program-description">
-          <strong>-{item.author}</strong>, {item.proffection}
+          <strong>-{item.author}</strong>
         </p>
+        <p className="program-description">{item.proffection}</p>
       </div>
       </SwiperSlide>
     ))}

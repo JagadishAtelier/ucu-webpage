@@ -12,7 +12,7 @@
 
 .asp-industry-card {
   width: 350px;
-  height: 70vh;
+  height: 60vh;
   padding: 15px;
   border: 1px solid white;
   background-color: white;
@@ -35,14 +35,6 @@
 
 /* ✅ Mobile horizontal scroll */
 @media (max-width: 768px) {
-  .asp-industry-card-div {
-    flex-wrap: nowrap;           /* row only */
-    overflow-x: auto;            /* horizontal scroll */
-    gap: 15px;
-    padding: 10px;
-    justify-content: flex-start; /* align left */
-    scroll-snap-type: x mandatory; /* smooth snap */
-  }
 
   .asp-industry-card {
     width: 100%; /* each card fills most of screen */
