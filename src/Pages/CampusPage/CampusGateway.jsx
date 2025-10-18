@@ -33,7 +33,7 @@ function CampusGateway() {
              slidesPerView={1}
              navigation
             //  pagination={{clickable:true}}
-             autoplay={{delay : 300000 ,disableOnInteraction : false}}
+             autoplay={{delay : 3000 ,disableOnInteraction : false}}
              loop={true}
                observer={true}
   observeParents={true}
