@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { menuData } from "./menuData";
+import { menuData,menuDataMobile } from "./menuData";
 import "./Navbar.css";
 import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
 import logoImg from "../../Assets/aac/Copy of Webpage_20250924_151944_0001.png";
@@ -11,7 +11,13 @@ const Navbar = () => {
   const [openMenus, setOpenMenus] = useState({});
   const [hoverMenus, setHoverMenus] = useState({});
   const [searchDrodow , setSearchDropdown] = useState(false)
+const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
 
+React.useEffect(() => {
+  const handleResize = () => setIsMobile(window.innerWidth < 992);
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
   const toggleMobile = () => setMobileOpen(!mobileOpen);
 
   const toggleSearch = () => setSearchDropdown(!searchDrodow)
@@ -398,7 +404,10 @@ const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
                   <X size={28} />
                 </button>
               </div>
-              <div className="drawer-content">{renderMenuItems(menuData)}</div>
+<div className="drawer-content">
+  {renderMenuItems(isMobile ? menuDataMobile : menuData)}
+</div>
+
             </div>
           </>
         )}

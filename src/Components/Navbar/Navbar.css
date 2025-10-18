@@ -93,6 +93,10 @@
 }
 
 
+.dropdown-menu.budding-talent {
+  left: 70% !important;
+  width: 15vw !important;
+}
 .dropdown-menu.advisory-councils {
   left: 110% !important;
 }
@@ -892,7 +896,7 @@ li:hover .career-reboot-heading {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 2px;
+  height: 1.5px;
   width: 0;
   background-color: #74e974;
   transition: width 0.3s ease;
@@ -907,7 +911,7 @@ li:hover .career-reboot-heading {
 /* Remove li padding only for this link */
 .submenu-item.no-padding {
   padding: 0;
-  margin: 0 0 5%;
+  margin: 7% 0 5%;
   color: white;
 }
 .submenu-item.no-padding a {
@@ -930,7 +934,7 @@ content: "";
     position: absolute;
     left: 0;
     bottom: -10% !important;
-    height: 2px;
+    height: 1.5px;
     width: 0;
     background-color: #74e974;
     transition: width 0.3s 
@@ -947,10 +951,25 @@ color: white !important;
   border-left: none !important;
   color: white !important
 }
-.submenu.no-border a {
+/* .submenu.no-border a {
   border-left: none !important;
   color: white !important;
   cursor: pointer;
+} */
+/* Only add border to li that has a ul, but the ul does NOT have class sublink-custom */
+.submenu.no-border li:has(> ul:not(.sublink-custom)) {
+  color: white !important;
+  border-left: 1px solid #ddd !important;
+  cursor: pointer;
+}
+
+/* Optional: remove border for sublink-custom ul items */
+.submenu.no-border li:has(> ul.sublink-custom) {
+  border-left: none !important;
+}
+
+.submenu.no-border a:hover{
+  color: white !important;
 }
 /* Remove hover background for this specific custom link */
 .submenu-link.sublink-custom:hover {
@@ -964,14 +983,69 @@ color: white !important;
 .submenu-item.sublink-custom:hover {
   background-color: transparent !important;
 }
-
+  .list-inline-item:not(:last-child){
+    margin-right: 0.5rem !important;
+  }
 @media only screen and (min-width: 992px) and (max-width: 1499px) {
   .navbar-nav .nav-link {
     font-size: 12px !important;
             padding-left: 5px !important;
   }
   .online-program-link{
-    padding: 0.6rem 1rem !important;
-    font-size: 0.75rem !important;
+    padding: 0.6rem 0.5rem !important;
+    font-size: 0.60rem !important;
+  }
+  .top-bar a{
+    margin-left: 0 !important;
+  }
+  .list-inline-item:not(:last-child){
+    margin-right: 0.7rem !important;
   }
 } 
+
+/* ==== FIX: Keep submenu white under FLEXI PROGRAM (sublink-custom) ==== */
+
+/* Prevent hover background & black text inside FLEXI PROGRAM */
+.dropdown-menu-col ul li:has(.sublink-custom),
+.dropdown-menu-col ul li:has(.sublink-custom) a {
+  background-color: transparent !important;
+  color: #fff !important;
+  /* border-left: 1px solid #ddd !important; */
+}
+.dropdown-menu-col ul li:has(.submenu.no-border) .submenu {
+    border-left: 1px solid #ddd !important;
+}
+.dropdown-menu-col ul li:has(.sublink-custom) .submenu {
+    border-left: 1px solid #ddd !important;
+}
+/* When hovering the items under FLEXI PROGRAM */
+.dropdown-menu-col ul li:has(.sublink-custom) li:hover,
+.dropdown-menu-col ul li:has(.sublink-custom) li:hover a {
+  color: black !important;
+}
+
+/* Make sure the submenu stays white always */
+.dropdown-menu-col ul li:has(.sublink-custom) {
+  border-left: none !important;
+}
+
+
+/* Add left border only for submenus under .sublink-custom */
+.dropdown-menu-col ul li:has(.sublink-custom) > .submenu {
+  border-left: 1.5px solid #d4d4d4 !important;
+  padding-left: 1rem; /* optional for spacing */
+  margin-left: 0.5rem;
+}
+
+/* Optional: soften the look */
+.dropdown-menu-col ul li:has(.sublink-custom) > .submenu li a {
+  font-size: 0.72rem;
+  color: #f0f0f0 !important;
+}
+
+/* Keep hover clean (only affect submenu links) */
+.dropdown-menu-col ul li:has(.sublink-custom) > .submenu li:hover a {
+  color: black !important;
+  background: #ffffffb6;
+  border-radius: 2px;
+}

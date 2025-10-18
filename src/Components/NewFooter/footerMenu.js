@@ -14,12 +14,12 @@ export const  footerMenu = [
     items: [
       "Full Time Programs",
       "Executive Post Graduate Certificate Programs",
-      "Functional Certifications",
-      "Industry-Sector Offerings",
+      // "Functional Certifications",
+      // "Industry-Sector Offerings",
       "Career Reboot for Women",
       "Executive Education",
       "Online Programs",
-      "Industry-Sector Specialization",
+      // "Industry-Sector Specialization",
     ],
   },
   {
@@ -39,7 +39,10 @@ export const  footerMenu = [
   {
     title: "Other",
     items: [
-      
+            "Faculty",
+      "Campus Placements",
+       "Industry Engagement",
+       "Strategic Collaborations",
       "News & Blogs",
       "Admissions",
       "Contact Us",
@@ -48,10 +51,6 @@ export const  footerMenu = [
       "Consortium",
       "Careers",
       "Budding Talent",
-      "Faculty",
-      "Campus Placements",
-       "Industry Engagement",
-       "Strategic Collaborations",
     ],
   },
   // {

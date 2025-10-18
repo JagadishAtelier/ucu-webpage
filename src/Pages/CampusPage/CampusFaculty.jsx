@@ -34,7 +34,7 @@ const data = [
 ]
 function CampusFaculty() {
   return (
-    <div className='captital-campus-content-sec my-5'>
+    <div className='captital-campus-content-sec'>
         <h1 className='mb-4'>Facilities</h1>
         <div className='d-grid'>
             <div className='row row-gap-4'>
