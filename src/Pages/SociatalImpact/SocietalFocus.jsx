@@ -140,9 +140,9 @@ function SocietalFocus() {
 The Development of Corporate Citizenship (DoCC) initiative, started in the 1990s, engages with hundreds of NGOs through mandatory student internships, fairs, and discussion forums that provide market access and learning opportunities to NGOs, and through awards that recognise innovation in the social sector.
               </p>
               <div className='d-grid'>
-                <div className='row gap-2 mx-auto'>
+                <div className='row gap-2 mx-auto col-6'>
                     {boxTwoData.map((item,index)=>(
-                        <div className='col-2 box-two-data-card'>
+                        <div className='box-two-data-card'>
                             <img src={item.image}/>
                             <p className='col-8'>{item.head}</p>
                             <div className='hover-societal-text'>{item.hoverText}</div>
@@ -162,7 +162,7 @@ The Development of Corporate Citizenship (DoCC) initiative, started in the 1990s
                     <p className='m-0'>300+ social sector organisations across 26 Indian states</p>
                   </div>
                 </div>
-                <div className='my-4 d-flex gap-3'>
+                <div className='my-4 d-flex gap-3 flex-wrap mx-auto m-lg-0'>
                   <div className='societal-brand'>
                     <img src='https://www.spjimr.org/wp-content/uploads/2024/05/un-prme.png'/>
                   </div>
