@@ -37,11 +37,11 @@
 @media (max-width: 768px) {
   .industry-card {
     width: 100%;
-    max-width: 350px;
+    max-width: 320px;
   }
 
   .i-frame {
-    height: 40vh;
+    height: 200px;
   }
 }
 
