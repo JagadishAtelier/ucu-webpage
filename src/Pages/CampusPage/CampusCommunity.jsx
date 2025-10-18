@@ -22,7 +22,7 @@ const data = [
 ]
 function CampusCommunity() {
   return (
-    <div className='captital-campus-content-sec mt-5'>
+    <div className='captital-campus-content-sec my-5'>
         <h1 className='mb-4'>Insights from the SPJIMR community</h1>
         <Swiper
   modules={[Navigation, Pagination, Autoplay]} // include Autoplay
@@ -39,7 +39,7 @@ function CampusCommunity() {
   }}
 >
         {data.map((item, index) => (
-          <SwiperSlide key={index} className="text-center">
+          <SwiperSlide key={index} className="text-center mb-5">
             <img
               src={item.image}
               className="campus-faculity-image"

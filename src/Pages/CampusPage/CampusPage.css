@@ -20,12 +20,14 @@
   color: white;
   font-size: 1rem;
   padding:0 1rem 0 4rem;
+  border-radius:5px 5px 0 0;
 
 }
 .campus-gateway-slider-image{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius:0 0 5px 5px ;
 }
 .campus-gateway-swiper{
     width: 100%;
@@ -95,6 +97,7 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  border-radius: 12px;
 }
 
 .campus-faculity-image {
@@ -103,6 +106,7 @@
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
+  border-radius: 5px 5px 0 0 ;
 
 }
 
@@ -182,6 +186,7 @@
     gap: 10px;
     justify-content: center;
     padding: 0 20px;
+    border-radius: 0 0 5px 5px;
 }
 .campus-community-km-btn{
     background-color: transparent !important;
@@ -246,12 +251,13 @@
     }
     .campus-gateway-slider-image{
     width: 100%;
+
 }
 .captital-campus-content-sec{
     padding: 0 3%;
 }
 .campus-gateway-slider-swiper-div{
-    height: 70vh;
+    height: fit-content;
     width: 100%;
     margin: auto;
 }
@@ -263,7 +269,9 @@
   right: 3%;
 }
 .campus-gateway-slider-content{
-    padding: 2rem;
+    padding: 1rem;
+      justify-content: start;
+      height: fit-content;
 }
 }
 @media (max-width: 480px)  {
@@ -271,6 +279,21 @@
         justify-content: center;
         padding-left: 0;
     }
+        .campus-gateway-slider-image{
+    width: 100%;
+height: 30vh;
+}
+.custom-prev {
+  left: 0;
+}
+
+.custom-next {
+  right: 0;
+}
+.custom-prev,
+.custom-next {
+  top: 50%;
+}
     .campus-choose-item:nth-last-child(n) {
     border-bottom: none;
 }
