@@ -2,8 +2,10 @@ import React, { useEffect,useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "./Aspirants.css";
 
 const data = [
@@ -60,8 +62,25 @@ const [activeVideo, setActiveVideo] = useState(null);
     </p>
   </div>
 
-  <div className="asp-industry-card-div">
+      <Swiper
+        modules={[Autoplay, Navigation, Pagination]}
+        spaceBetween={30}
+        slidesPerView={3}
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 250000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="asp-industry-card-div"
+      >
     {data.map((item, index) => (
+    <SwiperSlide key={index}>
       <div
         key={index}
         className="asp-industry-card"
@@ -96,8 +115,9 @@ const [activeVideo, setActiveVideo] = useState(null);
           <strong>-{item.author}</strong>, {item.proffection}
         </p>
       </div>
+      </SwiperSlide>
     ))}
-  </div>
+    </Swiper>
 </div>
 
   );

@@ -3,16 +3,16 @@
 }
 
 .asp-industry-card-div {
+  width: 100%;
+  max-width: 1200px;
   display: flex;
+  padding: 40px 40px;
   gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap; /* desktop: side by side */
-  width: 1162px;
-  margin: auto;
 }
 
 .asp-industry-card {
   width: 350px;
+  height: 70vh;
   padding: 15px;
   border: 1px solid white;
   background-color: white;
@@ -21,6 +21,7 @@
   border-radius: 10px;
   transition: all 0.3s ease;
   flex-shrink: 0; /* ✅ ensures card doesn’t shrink in horizontal scroll */
+  margin: auto;
 }
 
 .asp-i-frame {
@@ -44,9 +45,10 @@
   }
 
   .asp-industry-card {
-    width: 80%; /* each card fills most of screen */
+    width: 100%; /* each card fills most of screen */
     max-width: 320px;
     scroll-snap-align: center; /* snap to center */
+    height: 60vh;
   }
 
   .asp-i-frame {
