@@ -8,6 +8,7 @@ import SummerDifferent from './SummerDifferent'
 import SummerPilars from './SummerPilars'
 import SummerSchedule from './SummerSchedule'
 import SummerOverview from './SummerOverview'
+import SummerDetails from './SummerDetails'
 function SummerProgram() {
   return (
     <div>
@@ -43,6 +44,7 @@ function SummerProgram() {
     <SummerPilars/>
     <SummerSchedule/>
     <SummerOverview/>
+    <SummerDetails/>
         <NewFooter/>
     </div>
   )
