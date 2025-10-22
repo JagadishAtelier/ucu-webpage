@@ -32,6 +32,7 @@ import LeaderShipPage from "./Pages/LeaderShipPage/LeaderShipPage";
 import CampusPage from "./Pages/CampusPage/CampusPage";
 import SociatalImpact from "./Pages/SociatalImpact/SociatalImpact";
 import OpenPrograms from "./Pages/OpenPrograms/OpenPrograms";
+import SummerProgram from "./Pages/SummerProgram/SummerProgram";
 
 function App() {
   useEffect(() => {
@@ -66,6 +67,7 @@ function App() {
         <Route path="/campus-ambience" element={<CampusPage/>} />
         <Route path="/csr" element={<SociatalImpact/>} />
         <Route path="/open-programs" element={<OpenPrograms/>} />
+        <Route path="/summer-programs" element={<SummerProgram/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>
