@@ -157,7 +157,7 @@ function CareerSection() {
             <div className="mx-2 d-flex flex-lg-column flex-column text-center align-items-lg-center justify-content-lg-center" data-aos="fade-up">
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center"><span style={{color:"#5ac501"}}>Flexi  </span>Programs
         </h1>
-        <p className="mb-0 sort-disc col-lg-10 text-center" style={{width:"100%"}}>
+        <p className="mb-0 sort-disc col-lg-12 text-center" style={{width:"100%",maxWidth:"100"}}>
         Fast track your career with our specialized management programs without taking a break from your career
         </p>
       </div>

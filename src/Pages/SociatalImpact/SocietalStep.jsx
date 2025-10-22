@@ -36,11 +36,11 @@ function SocietalStep() {
   </p>
   <div className='d-flex flex-wrap gap-4 align-items-center'>
   <p className='m-0 col-12 col-lg-3'>Learn more about his work:</p>
-<BsLinkedin size={20} style={{ color: "#0A66C2" }} />   {/* LinkedIn Blue */}
-<BsInstagram size={20} style={{ color: "#E4405F" }} />  {/* Instagram Pink/Red */}
-<BsTwitterX size={20} style={{ color: "#000000" }} />   {/* X (Twitter) Black */}
-<FaFacebook size={20} style={{ color: "#1877F2" }} />   {/* Facebook Blue */}
-<BsYoutube size={20} style={{ color: "#FF0000" }} />    {/* YouTube Red */}
+<BsLinkedin size={20} style={{ color: "#5ac501" }} />   {/* LinkedIn Blue */}
+<BsInstagram size={20} style={{ color: "#5ac501" }} />  {/* Instagram Pink/Red */}
+<BsTwitterX size={20} style={{ color: "#5ac501" }} />   {/* X (Twitter) Black */}
+<FaFacebook size={20} style={{ color: "#5ac501" }} />   {/* Facebook Blue */}
+<BsYoutube size={20} style={{ color: "#5ac501" }} />    {/* YouTube Red */}
 
   </div>
 </div>

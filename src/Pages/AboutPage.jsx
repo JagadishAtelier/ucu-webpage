@@ -53,7 +53,7 @@ function AboutPage() {
       <AboutPageHero
         title="About UCU"
         breadcrumb={["Home", "About Us"]}
-        bgImage={heroImage}
+        bgImage="https://img.freepik.com/free-photo/front-view-people-meeting-cup-coffee_23-2148817096.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
       />
       <div ref={refs["our-story"]}>
         <AboutStory />
