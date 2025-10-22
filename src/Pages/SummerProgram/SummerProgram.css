@@ -8,7 +8,8 @@
 }
 .summer-different-container{
     background-color: rgb(239, 239, 239);
-    padding: 3% 0;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 .summer-pillar-content-head{
     background-color:#5ac501 ;
@@ -31,7 +32,11 @@
     color: white;
     padding: 3% 5%;
 }
-
+.summer-details-container{
+    background-color: rgb(239, 239, 239);
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
 
 @media (max-width:768px) {
     .summer-program-about-image{

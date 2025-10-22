@@ -60,7 +60,7 @@ function SummerDetails() {
     setMobileOpen((prev) => (prev === id ? null : id));
   };
   return (
-    <div className='captital-campus-content-sec my-4'>
+    <div className='captital-campus-content-sec my-4 summer-details-container'>
         <h1 className='text-center mb-3'>Program Details</h1>
         <p>We are looking for students who are outgoing, curious, and wish to discover more about the world around them and the opportunities ahead. BU Summer School is open for students from Class 9th to 12th with a good command of English. However, what matters is an open mind and a wish to learn, discover, and create lasting memories. Apply Now</p>
       <div className="d-flex gap-5">     
