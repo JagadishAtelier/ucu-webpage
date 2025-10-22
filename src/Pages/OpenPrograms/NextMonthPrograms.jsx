@@ -2,55 +2,19 @@ import { Clock, File } from 'lucide-react'
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import { BiRupee } from 'react-icons/bi'
-
 const data = [
-    { date : "18",month : "OCT",
-        courseHead : "Acquiring Leadership Qualities Early in Life",
+    { date : "01",month : "NOV",
+        courseHead : "Discovering Your Career Path",
         time : "9:30 am - 11:00 am",
         fees : "200.00",
         pdf : "View PDF"
     },
-    { date : "18",month : "OCT",
-        courseHead : "Seven Habits of Successful Teens",
-        time : "9:30 am - 11:00 am",
-        fees : "200.00",
-        pdf : "View PDF"
-    },
-    { date : "18",month : "OCT",
-        courseHead : "Managing Mental Health",
-        time : "9:30 am - 11:00 am",
-        fees : "200.00",
-        pdf : "View PDF"
-    },
-    { date : "18",month : "OCT",
-        courseHead : "Kaizen: Cultivating Habits of Continual Improvement and Learning",
-        time : "9:30 am - 11:00 am",
-        fees : "200.00",
-        pdf : "View PDF"
-    },
-    { date : "18 - 19",month : "OCT",
-        courseHead : "Humans of Science – A STEAM Adventure for Curious Kids",
-        time : "9:30 am - 11:00 am",
-        fees : "200.00",
-        pdf : "View PDF"
-    },
-    { date : "18 - 19",month : "OCT",
-        courseHead : "How to Achieve a Winning Personality",
-        time : "9:30 am - 11:00 am",
-        fees : "200.00",
-        pdf : "View PDF"
-    },
-    { date : "18 - 19",month : "OCT",
-        courseHead : "5S – Organizing Self, Surrounding: Way to Excellence",
-        time : "9:30 am - 11:00 am",
-        fees : "200.00",
-        pdf : "View PDF"
-    },
+    
 ]
-function CurrentMonthPrograms() {
+export default function NextMonthPrograms() {
   return (
-    <div className='captital-campus-content-sec my-4'>
-        <Button className='cmp-mont-btn py-2 mb-5'>October 2025</Button>
+    <div className='captital-campus-content-sec my-5'>
+        <Button className='cmp-mont-btn py-2 mb-5'>November 2025</Button>
     <div>
         {data.map((item,index)=>(
             <div className='d-flex flex-column flex-lg-row flex-md-row justify-content-between align-items-center cmp-data-hr-line'>
@@ -88,5 +52,3 @@ function CurrentMonthPrograms() {
     </div>
   )
 }
-
-export default CurrentMonthPrograms

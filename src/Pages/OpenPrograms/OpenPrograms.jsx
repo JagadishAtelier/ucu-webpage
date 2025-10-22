@@ -4,6 +4,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 import NewFooter from '../../Components/NewFooter/NewFooter'
 import { FaChevronRight } from 'react-icons/fa';
 import CurrentMonthPrograms from './CurrentMonthPrograms';
+import NextMonthPrograms from './NextMonthPrograms';
 function OpenPrograms() {
   return (
     <div>
@@ -34,6 +35,7 @@ function OpenPrograms() {
               </div>
     </div>
     <CurrentMonthPrograms/>
+    <NextMonthPrograms/>
         <NewFooter/>
     </div>
   )

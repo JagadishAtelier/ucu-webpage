@@ -19,6 +19,9 @@
     color: #5ac501;
     cursor: pointer;
 }
+.cmp-duration-div{
+    align-items: baseline;
+}
 
 @media (max-width:480px) {
     .cmp-data-hr-line{
