@@ -1,0 +1,28 @@
+.cmp-mont-btn{
+    background-color: #005bd4 ;
+    width: 100%;
+}
+.cmp-date-text{
+    background-color: #5ac501;
+    color: white;
+}
+.cmp-month-text{
+    background-color: #3e8901;
+    color: white;
+}
+.cmp-data-hr-line{
+    border-bottom: 1px solid rgb(218, 217, 217);
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+.cmp-courseHead:hover{
+    color: #5ac501;
+    cursor: pointer;
+}
+
+@media (max-width:480px) {
+    .cmp-data-hr-line{
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+}

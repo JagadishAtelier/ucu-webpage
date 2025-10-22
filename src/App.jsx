@@ -31,6 +31,7 @@ import PgprogramPage from "./Pages/pgprogramPage";
 import LeaderShipPage from "./Pages/LeaderShipPage/LeaderShipPage";
 import CampusPage from "./Pages/CampusPage/CampusPage";
 import SociatalImpact from "./Pages/SociatalImpact/SociatalImpact";
+import OpenPrograms from "./Pages/OpenPrograms/OpenPrograms";
 
 function App() {
   useEffect(() => {
@@ -64,6 +65,7 @@ function App() {
         <Route path="/leader-ship" element={<LeaderShipPage/>} />
         <Route path="/campus-ambience" element={<CampusPage/>} />
         <Route path="/csr" element={<SociatalImpact/>} />
+        <Route path="/open-programs" element={<OpenPrograms/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>
