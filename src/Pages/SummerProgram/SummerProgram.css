@@ -26,6 +26,12 @@
 .pillar-content-div{
     width: 100%;
 }
+.Residential-programs-div{
+    width: 100%;
+    color: white;
+    padding: 3% 5%;
+}
+
 
 @media (max-width:768px) {
     .summer-program-about-image{
