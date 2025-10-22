@@ -5,7 +5,7 @@ function SummerSchedule() {
         <div className='captital-campus-content-sec my-4'>
             <h1 className='text-center'>Summer UCU Programs</h1>
             <p className='text-center'>Two Week Residential Program || Option to choose any one program</p>
-            <div className='d-flex'>
+            <div className='d-flex flex-lg-row flex-column'>
                 <div className='Residential-programs-div' style={{backgroundColor:"#2f59bb"}}>
                     <p className='fs-5 fw-bold text-center'>Science, Technology</p>
                     <ul className=''>

@@ -7,6 +7,7 @@ import "./SummerProgram.css"
 import SummerDifferent from './SummerDifferent'
 import SummerPilars from './SummerPilars'
 import SummerSchedule from './SummerSchedule'
+import SummerOverview from './SummerOverview'
 function SummerProgram() {
   return (
     <div>
@@ -41,6 +42,7 @@ function SummerProgram() {
     <SummerDifferent/>
     <SummerPilars/>
     <SummerSchedule/>
+    <SummerOverview/>
         <NewFooter/>
     </div>
   )
