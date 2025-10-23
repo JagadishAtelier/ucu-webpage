@@ -22,7 +22,9 @@
 .cmp-duration-div{
     align-items: baseline;
 }
-
+.cmp-apply-btn{
+    width: 220px;
+}
 @media (max-width:480px) {
     .cmp-data-hr-line{
     padding-bottom: 5%;
