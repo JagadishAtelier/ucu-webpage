@@ -34,6 +34,7 @@ import SociatalImpact from "./Pages/SociatalImpact/SociatalImpact";
 import OpenPrograms from "./Pages/OpenPrograms/OpenPrograms";
 import SummerProgram from "./Pages/SummerProgram/SummerProgram";
 import AdmissionPage from "./Pages/AdmissionPage/AdmissionPage";
+import CareersPage from "./Pages/CareersPage/CareersPage";
 
 function App() {
   useEffect(() => {
@@ -61,7 +62,7 @@ function App() {
         <Route path="/auth/forgot-password" element={<ForgotPassPage />} />
         <Route path="/auth/reset" element={<ResetPassPage />} />
         <Route path="/:type" element={<Advisory/>} />
-        <Route path="/Careers" element={<Careers/>} />
+        <Route path="/Careers" element={<CareersPage/>} />
         <Route path="/founder-message" element={<FounderMessage/>} />
         <Route path="/pgprogram" element={<PgprogramPage/>} />
         <Route path="/leader-ship" element={<LeaderShipPage/>} />
