@@ -45,10 +45,10 @@ function CampusCommunity() {
               className="campus-faculity-image"
             />
             <div className='campus-community-grid-data'>
-            <p className="text-start fs-5 fw-bold">
+            <p className="text-start fs-5 fw-bold mb-0">
               {item.text}
             </p>
-            <p className="text-start sort-disc">{item.prof}</p>
+            <p className="text-start sort-disc mb-0">{item.prof}</p>
              <button onClick={()=>navigate(`${activeItem.link}`)} className="btn-cta campus-community-km-btn">know more <span className="chev">›</span></button>
             </div>
            
