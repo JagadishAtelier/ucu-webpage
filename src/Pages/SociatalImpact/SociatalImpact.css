@@ -218,6 +218,16 @@ height: 100%;
 
 }
 @media (max-width: 480px) {
+  .societal-campus-youtube{
+    height: 30vh;
+  }
+  .social-impact-table-scroll-container{
+    height: 100%;
+    max-height: fit-content;
+  }
+  .societal-impact-table td{
+    padding: 0.5rem;
+  }
   .box-four-data-card{
   width:100%;
   position: relative;
@@ -232,6 +242,11 @@ height: 100%;
 }
 .box-two-data-card{
   width: 100%;
+  height: 30vh;
+}
+.box-two-data-card img{
+  height: 80px;
+  width: 80px;
 }
 .societal-video-1{
     height: 30vh;
