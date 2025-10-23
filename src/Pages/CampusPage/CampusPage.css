@@ -83,7 +83,7 @@
     height: 60px;
 }
 .campus-choose-item {
-    padding-bottom: 4%; /* space for the line */
+    padding-bottom: 2%; /* space for the line */
     border-bottom: 1px solid #ccc; /* vertical line */
 }
 

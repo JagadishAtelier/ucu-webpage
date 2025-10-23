@@ -22,10 +22,10 @@ const data = [
 ]
 function CampusChoose() {
   return (
-    <div className='captital-campus-content-sec my-5'>
+    <div className='captital-campus-content-sec mt-5 mb-3'>
         <h1>Why choose UCU?</h1>
-        <div className='d-grid mt-lg-5 mt-md-5 mt-4'>
-            <div className='row row-gap-lg-5 row-gap-md-5 row-gap-3'>
+        <div className='d-grid mt-lg-3 mt-md-5 mt-4'>
+            <div className='row row-gap-lg-4 row-gap-md-4 row-gap-3'>
                 {data.map((item,index)=>(
                     <div className='d-flex flex-lg-row flex-md-row flex-column text-center gap-lg-4 gap-2 col-lg-4 col-md-4 col-6 align-items-center campus-choose-item'>
                         <img src={item.image} className='campus-choose-data-image'/>

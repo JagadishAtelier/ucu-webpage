@@ -22,13 +22,13 @@ const data = [
 ]
 function CampusCommunity() {
   return (
-    <div className='captital-campus-content-sec my-5'>
+    <div className='captital-campus-content-sec mt-5'>
         <h1 className='mb-4'>Insights from the UCU community</h1>
         <Swiper
   modules={[Navigation, Pagination, Autoplay]} // include Autoplay
   spaceBetween={20}
   slidesPerView={3}
-  className="participant-sec-swiper"
+  className="participant-sec-swiper pb-0"
   navigation
   pagination={{ clickable: true }}
   autoplay={{ delay: 3000, disableOnInteraction: false }} // autoplay config

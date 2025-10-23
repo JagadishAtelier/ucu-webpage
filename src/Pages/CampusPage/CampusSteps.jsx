@@ -30,7 +30,7 @@ function CampusSteps() {
     <div className='captital-campus-content-sec'>
         <h1>Everything you need, just steps away</h1>
         <div className='d-grid mt-5 '>
-            <div className='row row-gap-lg-5 row-gap-md-5 row-gap-3'>
+            <div className='row row-gap-lg-4 row-gap-md-5 row-gap-3'>
                 {data.map((item,index)=>(
                     <div className='d-flex gap-lg-2 gap-2 col-lg-4 col-md-4 col-12 align-items-start campus-choose-item'>
                         <img src={item.image} className='campus-steps-data-image mt-1'/>
