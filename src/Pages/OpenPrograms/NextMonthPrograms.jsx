@@ -43,9 +43,9 @@ export default function NextMonthPrograms() {
                     </div>
                 </div>
                 </div>
-                <div className='d-flex flex-lg-row flex-md-column flex-row gap-3'>
-                    <Button className='px-lg-5 py-lg-2 mt-lg-4 mt-md-0 mt-lg-0 text-black cmp-apply-btn fs-6 fw-light' style={{backgroundColor:"white",border:"1px solid black"}}>Apply Now</Button>
-                    <Button className='px-lg-2 py-lg-2 mt-lg-4 mt-md-0 mt-lg-0 cmp-download-btn fs-6 fw-light' style={{backgroundColor:"#5ac501",border:"none"}}>Download Broucher</Button>
+                <div className='d-flex flex-lg-row flex-md-column flex-column gap-3 mt-4 mt-md-0 mt-lg-0'>
+                    <Button className='px-lg-5 py-lg-2 mt-0 mt-md-0 mt-lg-0 text-black cmp-apply-btn fs-6 fw-light' style={{backgroundColor:"white",border:"1px solid black"}}>Apply Now</Button>
+                    <Button className='px-lg-2 py-lg-2 mt-0 mt-md-0 mt-lg-0 cmp-download-btn fs-6 fw-light' style={{backgroundColor:"#5ac501",border:"none"}}>Download Broucher</Button>
                 </div>
             </div>
         ))}
