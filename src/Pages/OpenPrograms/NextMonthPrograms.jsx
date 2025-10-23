@@ -14,7 +14,7 @@ const data = [
 export default function NextMonthPrograms() {
   return (
     <div className='captital-campus-content-sec my-5'>
-        <Button className='cmp-mont-btn py-2 mb-5'>November 2025</Button>
+        <Button className='cmp-mont-btn py-2'>November 2025</Button>
     <div>
         {data.map((item,index)=>(
             <div className='d-flex flex-column flex-lg-row flex-md-row justify-content-between align-items-center cmp-data-hr-line'>
