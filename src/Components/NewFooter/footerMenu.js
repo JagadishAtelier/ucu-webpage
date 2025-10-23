@@ -47,7 +47,7 @@ export const  footerMenu = [
       "Admissions",
       "Contact Us",
       "Campus Ambience",
-      "SOCIETAL IMPACT",
+      "Societal Impact",
       "Consortium",
       "Careers",
       "Budding Talent",

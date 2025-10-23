@@ -1049,3 +1049,24 @@ color: white !important;
   background: #ffffffb6;
   border-radius: 2px;
 }
+
+@media (max-width: 1349px) {
+  /* Override uppercase text on mobile */
+  .navbar-nav .nav-link,
+  .dropdown-menu-col .top-head,
+  .dropdown-menu-col .top-head a,
+  .dropdown-menu-col ul li a,
+  .submenu-link.sublink-custom,
+  .drawer-content .menu-btn,
+  .drawer-content .menu-link {
+    text-transform: none !important;
+  }
+}
+@media (max-width: 1349px) {
+  .dropdown-menu-col .top-head,
+  .dropdown-menu-col ul li a {
+    text-transform: none !important;
+  }
+}
+
+
