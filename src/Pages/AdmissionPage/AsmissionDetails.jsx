@@ -29,9 +29,9 @@ const ITEMS = [
       </ul>
       <div class="d-grid">
         <div class='row gap-3'>
-          <div class="adp-fee-payment-box"><p>Advance Fees for PGDM-Business</p><p>Management</p><p>Click here to pay</p></div>
-          <div class="adp-fee-payment-box"><p>Advance Fees for PGDM-Business</p><p>Management</p><p>Click here to pay</p></div>
-          <div class="adp-fee-payment-box"><p>Advance Fees for PGDM-Business</p><p>Management</p><p>Click here to pay</p></div>
+          <div class="adp-fee-payment-box"><p>Advance Fees for PGDM-Business</p><p>Management</p><button class="chtp-btn">Click here to pay</button></div>
+          <div class="adp-fee-payment-box"><p>Advance Fees for PGDM-Business</p><p>Management</p><button class="chtp-btn">Click here to pay</button></div>
+          <div class="adp-fee-payment-box"><p>Advance Fees for PGDM-Business</p><p>Management</p><button class="chtp-btn">Click here to pay</button></div>
         </div>
       </div>
     `,
