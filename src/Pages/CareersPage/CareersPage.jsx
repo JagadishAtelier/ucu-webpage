@@ -6,6 +6,7 @@ import CareersPageBuild from './CareersPageBuild'
 import './CareersPage.css'
 import CareersPageOpening from './CareersPageOpening'
 import CareesrContact from './CareesrContact'
+import CareersWork from './CareersWork'
 function CareersPage() {
   return (
     <div>
@@ -38,6 +39,7 @@ function CareersPage() {
     <CareersPageBuild/>
     <CareersPageOpening/>
     <CareesrContact/>
+    <CareersWork/>
         <NewFooter/>
     </div>
   )
