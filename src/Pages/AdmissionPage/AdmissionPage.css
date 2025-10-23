@@ -32,16 +32,23 @@
 .apd-custom-table{
     border: transparent;
 }
-/* in your CSS file */
-.apd-custom-table tbody tr.alternatives-row {
-  background-color: #d9f2d9 !important; /* use !important to override bootstrap */
+.alternatives-row td{
+  background-color: #f2f2f2 !important;
 }
 
-.apd-custom-table tbody tr:nth-child(even):not(.alternatives-row) {
-  background-color: #f2f2f2; /* even rows except alternatives row */
+.alt-row td{
+  background-color: #f2f2f2 !important;
 }
-
-.apd-custom-table tbody tr:nth-child(odd):not(.alternatives-row) {
-  background-color: white; /* odd rows except alternatives row */
+.adp-left-container{
+  position: sticky;
+  height: fit-content;
+  top: 5%;
 }
-
+.adp-right-container{
+  position: relative;
+}
+@media (max-width:768px) {
+  .adp-fee-payment-box{
+    width: 100%;
+  }
+}

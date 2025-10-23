@@ -156,7 +156,7 @@
 }
 
 .mobile-content.show {
-  max-height: 500px; /* enough for content height */
+  max-height: max-content; /* enough for content height */
   opacity: 1;
   transform: translateY(0);
   margin-top: 40px !important;
