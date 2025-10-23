@@ -70,7 +70,7 @@ function App() {
         <Route path="/csr" element={<SociatalImpact/>} />
         <Route path="/open-programs" element={<OpenPrograms/>} />
         <Route path="/summer-programs" element={<SummerProgram/>} />
-        <Route path="/admission" element={<AdmissionPage/>} />
+        <Route path="/admissions" element={<AdmissionPage/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>
