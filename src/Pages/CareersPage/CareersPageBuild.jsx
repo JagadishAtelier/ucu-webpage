@@ -9,7 +9,7 @@ const data = [
 ]
 function CareersPageBuild() {
   return (
-    <div className="captital-campus-content-sec my-5">
+    <div className="captital-campus-content-sec mt-5">
         <h1 className='display-4 fw-bold col-12'>Build a Career <span style={{color:"#5ac501"}}>with ISB</span></h1>
         <p>UCU intends to work with people who ensure a learning and progressive environment; and to provide them with an enriching career journey. We can stay true to our vision and mission only with the right talent and diverse teams. If you intend to make a difference in the education sector, ISB would like to hear from you.</p>
     <div className='d-grid cpb-data-grid'>

@@ -7,3 +7,74 @@
     color: white;
     padding: 5%;
 }
+.cpo-data-div {
+  width: 100%;
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.cpo-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.cpo-data-div img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Overlay above image */
+.cpo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 1, 66, 0.4);
+  transition: background 0.5s ease;
+}
+
+/* Hover effects */
+.cpo-data-div:hover img {
+  transform: scale(1.1);
+}
+
+.cpo-data-div:hover .overlay {
+  background: rgba(12, 1, 66, 0.6);
+}
+
+/* Text above image */
+.cpo-data-header-div {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  right: 5%;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.cpo-data-para {
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    background-color: rgb(229, 227, 227);
+    width: 80%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+
+}
+.cpo-data-para:hover{
+    border-bottom: 3px solid #5ac501;
+    
+}

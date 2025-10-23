@@ -4,6 +4,7 @@ import NewFooter from '../../Components/NewFooter/NewFooter'
 import { ChevronRight } from 'lucide-react'
 import CareersPageBuild from './CareersPageBuild'
 import './CareersPage.css'
+import CareersPageOpening from './CareersPageOpening'
 function CareersPage() {
   return (
     <div>
@@ -34,6 +35,7 @@ function CareersPage() {
               </div>
     </div>
     <CareersPageBuild/>
+    <CareersPageOpening/>
         <NewFooter/>
     </div>
   )
