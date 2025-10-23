@@ -200,7 +200,7 @@ The Development of Corporate Citizenship (DoCC) initiative, started in the 1990s
                     {boxTwoData.map((item,index)=>(
                         <div className='box-two-data-card'>
                             <img src={item.image}/>
-                            <p className='col-8'>{item.head}</p>
+                            <p className='col-8 mb-0'>{item.head}</p>
                             <div className='hover-societal-text'>{item.hoverText}</div>
                         </div>
                     ))}
