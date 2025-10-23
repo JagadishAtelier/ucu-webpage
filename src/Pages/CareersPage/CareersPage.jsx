@@ -5,6 +5,7 @@ import { ChevronRight } from 'lucide-react'
 import CareersPageBuild from './CareersPageBuild'
 import './CareersPage.css'
 import CareersPageOpening from './CareersPageOpening'
+import CareesrContact from './CareesrContact'
 function CareersPage() {
   return (
     <div>
@@ -36,6 +37,7 @@ function CareersPage() {
     </div>
     <CareersPageBuild/>
     <CareersPageOpening/>
+    <CareesrContact/>
         <NewFooter/>
     </div>
   )

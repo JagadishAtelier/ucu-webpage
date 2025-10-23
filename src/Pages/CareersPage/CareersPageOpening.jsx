@@ -18,7 +18,7 @@ function CareersPageOpening() {
   return (
     <div className="captital-campus-content-sec mt-5">
       <h1>Current Job Openings</h1>
-      <div className="d-flex gap-3">
+      <div className="d-flex flex-column flex-lg-row gap-3">
         {data.map((item, index) => (
           <div key={index} className="cpo-data-div">
             <div className="cpo-image-container">

@@ -72,9 +72,51 @@
     justify-content: center;
     align-items: center;
     padding: 5%;
-
 }
 .cpo-data-para:hover{
     border-bottom: 3px solid #5ac501;
     
+}
+.contact-cpo-container{
+    margin-top: 8%;
+}
+.cpo-contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding:3% 5%;
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+    width: 50%;
+    height: 30vh;
+    color: black;
+    background-color: rgb(229, 227, 227);
+}
+.cpo-contact-bg-image{
+    position: relative;
+    overflow: visible;
+}
+
+@media (max-width:768px) {
+    .cpo-data-para{
+        bottom: -5%;
+        width: 100%;
+    }
+    .cpo-contact-details{
+        position: relative;
+        width: 100%;
+    }
+        .connect-section{
+        padding: 30px 20px;
+    }
+}
+@media (max-width:480px) {
+    .cpo-data-para{
+        bottom: -5%;
+        width: 100%;
+    }
+    .connect-section{
+        padding: 30px 20px;
+    }
 }
