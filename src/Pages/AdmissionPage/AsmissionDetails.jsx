@@ -3,7 +3,7 @@ import { FiMapPin, FiUsers, FiBriefcase, FiAward } from "react-icons/fi";
 import { ArrowDown, ChevronDown } from "lucide-react";
 import { line } from "framer-motion/client";
 import { useNavigate } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Button,Accordion,Table } from "react-bootstrap";
 const ITEMS = [
   {
     id: "location",
@@ -74,6 +74,53 @@ const ITEMS = [
     { name: "IDBI Bank Special Education Loan Scheme", img: "https://mdi.ac.in/resources/admin_uploads/logo-IDBI-Bank.png" },
     { name: "Bank of India", img: "https://mdi.ac.in/resources/admin_uploads/logo-bank-of-india.png" },
   ]
+},
+{
+  id: "AdmissionsFAQ",
+  label: "Admissions FAQ's",
+  icon: <FiBriefcase size={20} />,
+  title: "Admissions FAQ's",
+  link: "/placements/recruiters",
+faq: [
+  {
+    question: "How many two year full time PGDM programmes are offered by MDI Gurgaon?",
+    answer: `
+      <ul>
+        <li><p>Post Graduate Diploma in Management (PGDM)</p></li>
+        <li><p>Post Graduate Diploma in Management - Human Resource Management (PGDM-HRM)</p></li>
+        <li><p>Post Graduate Diploma in Management - International Business (PGDM-IB)</p></li>
+        <li><p>Post Graduate Diploma in Management-Business Analytics (PGDM-Business Analytics)</p></li>
+      </ul>
+    `
+  },
+  {
+    question: "How can one apply?",
+    answer: `<p>One can apply online after registering for Common Admissions Test (CAT). GMAT is applicable only for foreign nationals, NRIs, and PIOs.</p>`
+  },
+  {
+    question: "What is the selection process?",
+    answer: `<p>MDI Gurgaon follows a two-phase admissions process i. e. shortlisting and final WAT-GD-PI process conducted at various cities in India.</p>`
+  },
+]
+
+},
+{
+  id: "GrievanceCommittee",
+  label: "Grievance Committee",
+  icon: <FiBriefcase size={20} />,
+  title: "Grievance Committee",
+  link: "/placements/recruiters",
+  text : `
+  <p>The Students' Grievance Redressal Committee:</p>
+  `,
+table: [
+  ["Prof. Jyotsna Bhatnagar", "Chairperson",],
+  ["Prof. Sangeeta Shah Bharadwaj", "Member",],
+  ["Prof. P. C. Biswal", "Member",],
+  ["CAO (Academics)", "Member",],
+  ["Prof. Sumita Rai", "Member",],
+]
+
 }
 
 ];
@@ -184,7 +231,37 @@ function AsmissionDetails() {
   </div>
 )}
 
-
+{activeItem.faq && (
+  <Accordion defaultActiveKey="0" className="mt-4">
+    {activeItem.faq.map((faqItem, index) => (
+      <Accordion.Item eventKey={index.toString()} key={index}>
+        <Accordion.Header>{faqItem.question}</Accordion.Header>
+        <Accordion.Body>
+          <div
+            className="faq-answer"
+            dangerouslySetInnerHTML={{ __html: faqItem.answer }}
+          />
+        </Accordion.Body>
+      </Accordion.Item>
+    ))}
+  </Accordion>
+)}
+{activeItem.table && (
+  <Table  responsive className="apd-custom-table">
+    <tbody>
+      {activeItem.table.map((row, rowIndex) => (
+        <tr
+          key={rowIndex}
+          className={rowIndex === 1 ? "alternatives-row" : ""}
+        >
+          {row.map((cell, cellIndex) => (
+            <td key={cellIndex} className="py-3">{cell}</td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </Table>
+)}
 
     {activeItem.action &&(
          <Button className='my-4 p-3' style={{backgroundColor:"#5ac501",border:"none",width:"fit-content"}}>{activeItem.action}</Button>
