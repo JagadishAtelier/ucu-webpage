@@ -208,7 +208,7 @@ The Development of Corporate Citizenship (DoCC) initiative, started in the 1990s
               </div>
               <div className='my-3'>
                 <h1>Partners</h1>
-                <div>
+                <div className='mb-4'>
                   <div className='d-flex align-items-center gap-2'>
                     <ChevronRight/>
                     <p className='m-0'>300+ social sector organisations across 26 Indian states</p>
@@ -218,7 +218,7 @@ The Development of Corporate Citizenship (DoCC) initiative, started in the 1990s
                     <p className='m-0'>300+ social sector organisations across 26 Indian states</p>
                   </div>
                 </div>
-                <div className='my-4 d-flex gap-3 flex-wrap mx-auto m-lg-0'>
+                <div className='my-4 d-flex gap-3 flex-wrap mx-auto mx-lg-0'>
                   <div className='societal-brand'>
                     <img src='https://www.spjimr.org/wp-content/uploads/2024/05/un-prme.png'/>
                   </div>
