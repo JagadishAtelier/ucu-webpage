@@ -1,0 +1,25 @@
+.adp-content-card{
+  border-radius: 4px;
+  min-height: 245px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.adp-fee-payment-box{
+    background-color: #005bd4;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.adp-fee-payment-box p{
+    margin: 0;
+}
+.adp-fee-payment-box-div{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}

@@ -33,6 +33,7 @@ import CampusPage from "./Pages/CampusPage/CampusPage";
 import SociatalImpact from "./Pages/SociatalImpact/SociatalImpact";
 import OpenPrograms from "./Pages/OpenPrograms/OpenPrograms";
 import SummerProgram from "./Pages/SummerProgram/SummerProgram";
+import AdmissionPage from "./Pages/AdmissionPage/AdmissionPage";
 
 function App() {
   useEffect(() => {
@@ -68,6 +69,7 @@ function App() {
         <Route path="/csr" element={<SociatalImpact/>} />
         <Route path="/open-programs" element={<OpenPrograms/>} />
         <Route path="/summer-programs" element={<SummerProgram/>} />
+        <Route path="/admissions" element={<AdmissionPage/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>

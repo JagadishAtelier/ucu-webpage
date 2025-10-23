@@ -14,7 +14,7 @@
 .summer-pillar-content-head{
     background-color:#5ac501 ;
     color: white;
-    height: 15vh;
+    height: 10vh;
     width: 100%;
     font-size: 1.5rem;
     display: flex;
@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .pillar-content-div{
     width: 100%;
