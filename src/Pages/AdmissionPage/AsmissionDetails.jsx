@@ -21,7 +21,7 @@ const ITEMS = [
     icon: <FiUsers size={20} />,
     title: "Fee Payment",
     text:`
-    <p>Instructions for Fee payment:</p>
+    <p class='fw-bold text-black'>Instructions for Fee payment:</p>
     <ul>
       <li class='fw-bold'>
       <p>Ensure there are no blank spaces in your enrollment number.</p>
@@ -42,17 +42,17 @@ const ITEMS = [
     </ul>
     <div class="d-grid">
     <div class='row gap-3'>
-        <div class="adp-fee-payment-box col-5">
+        <div class="adp-fee-payment-box">
             <p>Advance Fees for PGDM-Business</p>
             <p>Management</p>
             <p>Click here to pay</p>
         </div>
-        <div class="adp-fee-payment-box col-5">
+        <div class="adp-fee-payment-box">
             <p>Advance Fees for PGDM-Business</p>
             <p>Management</p>
             <p>Click here to pay</p>
         </div>
-        <div class="adp-fee-payment-box col-5">
+        <div class="adp-fee-payment-box">
             <p>Advance Fees for PGDM-Business</p>
             <p>Management</p>
             <p>Click here to pay</p>
@@ -60,18 +60,22 @@ const ITEMS = [
         </div>
     </div>
     `,
-    action: "Find out how",
-        link : "/industry-approach"
   },
-  {
-    id: "placements",
-    label: "Accommodation & Transport",
-    icon: <FiBriefcase size={20} />,
-    title: "Accommodation & Transport",
-    text:
-     `<p>Twin-sharing accommodation at the BU Campus Hostel.One-time pick-and-drop facility from the Airport/Railway Station can be arranged on request and at additional cost.</p>`,
-    link:"/placements/recruiters"
-  },
+{
+  id: "placements",
+  label: "Financial Aid",
+  icon: <FiBriefcase size={20} />,
+  title: "Financial Aid",
+  link: "/placements/recruiters",
+  brands: [
+    { name: "Credila Education Loan", img: "https://mdi.ac.in/resources/admin_uploads/Credila-Logo-Sept24.png" },
+    { name: "Bank of Maharashtra Education Loan Scheme", img: "https://mdi.ac.in/resources/admin_uploads/logo-bank-of-maharashtra.png" },
+    { name: "Union Bank Education Loan Scheme", img: "https://mdi.ac.in/resources/admin_uploads/logo-union-bank-of-india.png" },
+    { name: "IDBI Bank Special Education Loan Scheme", img: "https://mdi.ac.in/resources/admin_uploads/logo-IDBI-Bank.png" },
+    { name: "Bank of India", img: "https://mdi.ac.in/resources/admin_uploads/logo-bank-of-india.png" },
+  ]
+}
+
 ];
 function AsmissionDetails() {
           const navigate = useNavigate()
@@ -138,6 +142,50 @@ function AsmissionDetails() {
       className="content-text"
       dangerouslySetInnerHTML={{ __html: activeItem.text }}
     />
+{activeItem.brands && (
+  <div className="brand-section">
+    <div className="d-flex flex-wrap align-items-start gap-4">
+      {activeItem.brands.map((brand, i) => (
+        <div
+          key={i}
+          className=" d-flex flex-column align-items-center"
+          style={{ width: "180px", minHeight: "140px" }}
+        >
+          <div
+            className="brand-card bg-white rounded shadow-sm p-3 d-flex align-items-center justify-content-center"
+            style={{ width: "100%", height: "80px" }}
+          >
+            <img
+              src={brand.img}
+              alt={brand.name}
+              title={brand.name}
+              style={{
+                maxWidth: "100%",
+                maxHeight: "60px",
+                objectFit: "contain",
+              }}
+            />
+          </div>
+          <p
+            className="mt-2 mb-0 text-muted fw-semibold"
+            style={{
+              fontSize: "14px",
+              minHeight: "20px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {brand.name}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
+
+
     {activeItem.action &&(
          <Button className='my-4 p-3' style={{backgroundColor:"#5ac501",border:"none",width:"fit-content"}}>{activeItem.action}</Button>
     )}

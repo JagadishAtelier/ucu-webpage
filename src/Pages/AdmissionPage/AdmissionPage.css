@@ -14,6 +14,8 @@
     justify-content: center;
     align-items: center;
     padding: 20px 0;
+    width: 49%;
+    border-radius: 5px;
 }
 .adp-fee-payment-box p{
     margin: 0;
@@ -22,4 +24,7 @@
     display: flex;
     gap: 10px;
     width: 100%;
+}
+.brand-card{
+    border: 1px solid rgb(207, 206, 206);
 }
