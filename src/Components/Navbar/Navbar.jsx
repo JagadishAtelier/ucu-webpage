@@ -39,15 +39,19 @@ React.useEffect(() => {
     }
   };
 
-  const handleHover = (label) => {
-    setHoverMenus((prev) => ({ ...prev, [label]: true }));
-  };
+const hoverTimeouts = {};
 
-  const handleLeave = (label) => {
-    setTimeout(() => {
-      setHoverMenus((prev) => ({ ...prev, [label]: false }));
-    }, 300); // quick hover delay
-  };
+const handleLeave = (label) => {
+  hoverTimeouts[label] = setTimeout(() => {
+    setHoverMenus((prev) => ({ ...prev, [label]: false }));
+  }, 500);
+};
+
+const handleHover = (label) => {
+  if (hoverTimeouts[label]) clearTimeout(hoverTimeouts[label]);
+  setHoverMenus((prev) => ({ ...prev, [label]: true }));
+};
+
 
   // ✅ Recursive submenu renderer
 const renderNestedMenu = (submenu, depth = 1) => {
@@ -213,6 +217,8 @@ const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
                             className={`dropdown-menu top-dropdown ${menu.label
                               ?.replace(/\s+/g, "-")
                               .toLowerCase()}`}
+                                  onMouseEnter={() => handleHover(menu.label)}  
+    onMouseLeave={() => handleLeave(menu.label)}
                             style={{
                               display: hoverMenus[menu.label]
                                 ? "block"
