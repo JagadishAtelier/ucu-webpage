@@ -105,6 +105,8 @@
 }
 .dropdown-menu.industry-partnership{
   left: 150% !important;
+  z-index: 99999 !important;
+  top: 50%;
 }
 .dropdown-menu.online-programs{
   left: -60% !important;
