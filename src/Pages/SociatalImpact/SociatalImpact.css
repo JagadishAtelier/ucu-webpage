@@ -53,7 +53,7 @@ height: 100%;
 }
 .box-two-data-card{
   background-color: #005bd4;
-  height: 40vh;
+  height: 20vh;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -101,8 +101,9 @@ height: 100%;
 }
 
 .box-two-data-card img{
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
 }
 .societal-brand{
   background-color: white;

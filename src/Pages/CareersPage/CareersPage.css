@@ -33,7 +33,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(12, 1, 66, 0.4);
+background: rgba(0, 0, 0, 0.3);
+
   transition: background 0.5s ease;
 }
 
@@ -43,7 +44,8 @@
 }
 
 .cpo-data-div:hover .overlay {
-  background: rgba(12, 1, 66, 0.6);
+background: rgba(0, 0, 0, 0.6);
+
 }
 
 /* Text above image */
@@ -65,7 +67,8 @@
     position: absolute;
     bottom: -20%;
     left: 0;
-    background-color: rgb(229, 227, 227);
+    color: white;
+    background-color:#0c0142;
     width: 80%;
     height: 20vh;
     display: flex;
@@ -90,8 +93,8 @@
     right: 0;
     width: 50%;
     height: 30vh;
-    color: black;
-    background-color: rgb(229, 227, 227);
+    color: white;
+    background-color: #0c0142;
 }
 .cpo-contact-bg-image{
     position: relative;
