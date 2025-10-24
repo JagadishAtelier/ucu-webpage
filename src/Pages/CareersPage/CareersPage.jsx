@@ -16,7 +16,7 @@ function CareersPage() {
       data-aos="fade-down"
       className="fac-hero-section d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-md-start text-lg-start p-3 p-lg-5 p-lg-7"
       style={{
-        backgroundImage: `url(https://img.freepik.com/premium-photo/group-people-walking-up-flight-stairs_319816-196.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80)`,
+        backgroundImage: `url(https://wallpaperaccess.com/full/1393520.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
