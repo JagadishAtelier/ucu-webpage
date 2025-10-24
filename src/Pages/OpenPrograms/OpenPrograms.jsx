@@ -28,7 +28,7 @@ function OpenPrograms() {
                 <h1 className="fw-bold fs-1 fs-lg-1">Chennai Campus</h1>
               </div>
 
-              <div className='position-absolute bottom-0 left-0 d-flex align-items-center campus-route-bg py-2'>
+              <div className='position-absolute bottom-0 left-0 d-flex align-items-center campus-route-bg py-3'>
                 <p className='m-0'>UCU</p>
                 <FaChevronRight/>
                 <p className='m-0'>Chennai Campus</p>

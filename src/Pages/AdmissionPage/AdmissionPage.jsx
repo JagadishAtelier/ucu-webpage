@@ -27,7 +27,7 @@ function AdmissionPage() {
                 <h1 className="fw-bold fs-1 fs-lg-1">Admissions</h1>
               </div>
 
-              <div className='position-absolute bottom-0 left-0 d-flex align-items-center campus-route-bg py-2'>
+              <div className='position-absolute bottom-0 left-0 d-flex align-items-center campus-route-bg py-3'>
                 <p className='m-0'>UCU</p>
                 <ChevronRight/>
                 <p className='m-0'>Admissions</p>
