@@ -6,7 +6,7 @@ function CareersQuery() {
     <div className="captital-campus-content-sec mt-5">
         <div className='d-flex flex-lg-row flex-md-row flex-column gap-3 p-lg-5 p-3' style={{backgroundColor:"#0c0142",color:"white"}}>
             <div className='col-lg-6 col-md-6 col-12 d-flex flex-column gap-3'>
-                <p className='mb-0'>Have a Query?</p>
+                <p className='mb-0 fs-5'>Have a Query?</p>
                 <h1>For Prospective Hires</h1>
                 <p className='mb-0'>Feel free to reach out to us for any questions or clarifications regarding opportunities at UCU. We’re here to assist you! Our working hours are Monday - Friday, 10:00 am - 05:00 pm UCU.</p>
                 <div className='d-flex align-items-center gap-2'>
@@ -23,7 +23,7 @@ function CareersQuery() {
 
 
             <div className='col-lg-6 col-md-6 col-12 d-flex flex-column gap-3'>
-                <p className='mb-0'>Need Help with Documentation?</p>
+                <p className='mb-0 fs-5'>Need Help with Documentation?</p>
                 <h1>For Past ISB Staff Members</h1>
                 <p className='mb-0'>We are here to assist with any documentation-related queries or concerns you may have. Our working hours are Monday - Friday, 10:00 am - 05:00 pm UCU.</p>
                 <div className='d-flex align-items-center gap-2'>

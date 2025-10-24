@@ -4,8 +4,8 @@ function AboutSummer() {
   return (
     <div className='captital-campus-content-sec my-4'>
         <h1 className='display-4 col-12 fw-bold'>About <span style={{color:"#5ac501"}}> Summer School Program</span></h1>
-        <div className='d-flex flex-lg-row flex-column gap-2'>
-            <div>
+        <div className='d-flex flex-lg-row flex-column gap-5'>
+            <div className=''>
                 <p>Taking forward our mission of creating future leaders, Bennett University is excited to introduce the inaugural edition of the Bennett University Summer School - a holistic, collaborative, and industry-focused initiative. The Summer School promises to be a unique opportunity to enhance the educational experience of students.</p>
                 <p>Bennett University’s Summer School for Future Leaders presents a diverse array of courses meticulously crafted to broaden students' knowledge and skills, providing a unique platform for academic growth and personal development. Encompassing courses in Science & Technology, Economics, Finance & Business, Law, Literature, Media & Design, the program aims to provide a taste of interdisciplinary education before students embark on their higher education journey.</p>
                 <p className='fw-bold'>Program dates:</p>

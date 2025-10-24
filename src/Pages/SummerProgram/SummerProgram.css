@@ -2,6 +2,13 @@
     height: 50vh;
     width: 45%;
     border-radius: 5px;
+    object-fit: cover;
+}
+.sd-logo-image{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 .summer-different-image{
     height: 40vh;
