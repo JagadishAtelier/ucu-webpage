@@ -1,31 +1,25 @@
 export const menuData = [
   // 🔝 Top Menu
   { label: "Home", link: "/", placement: "top" },
-    {
+  {
     label: "Industry Partnership",
     placement: "top",
     submenu: [
       {
-        label: "Industry Engagement",
+        label: "corporate Engagement",
         submenu: [
-          { label: "CXO Series",className: "sublink-custom",
-            submenu:[
-          { label: "CIO ", link: "/engagement/cio" },
-          { label: "CTO ", link: "/engagement/cto" },
-          { label: "CMO ", link: "/engagement/cmo" },
-          { label: "CHRO", link: "/engagement/chro" },
-          { label: "CFO ", link: "/engagement/cfo" },
-          { label: "CPO ", link: "/engagement/cpo" },
           {
-            label: "Career Accelerator Program (CAP)",
-            link: "/engagement/cap",
+            label: "CXO Series",
+            className: "sublink-custom",
+            submenu: [
+              { label: "CIO ", link: "/engagement/cio" },
+              { label: "CTO ", link: "/engagement/cto" },
+              { label: "CMO ", link: "/engagement/cmo" },
+              { label: "CHRO", link: "/engagement/chro" },
+              { label: "CFO ", link: "/engagement/cfo" },
+              { label: "CPO ", link: "/engagement/cpo" },
+            ],
           },
-          {
-            label: "Career Transformation to Career Acceleration (CT 2 CA)",
-            link: "/engagement/ct-to-ca",
-          },
-            ]
-           },
         ],
       },
       {
@@ -64,18 +58,27 @@ export const menuData = [
             ],
           },
         ],
+      },{
+        label: "Career Accelerator Program (CAP)",
+        link: "/engagement/cap",
+      },
+      {
+        label: "Career Transformation to Career Acceleration (CT 2 CA)",
+        link: "/engagement/ct-to-ca",
       },
     ],
   },
-    { label: "Campus", link: "/campus-ambience", placement: "top" },
+  { label: "Campus", link: "/campus-ambience", placement: "top" },
   { label: "Societal impact", link: "/csr", placement: "top" },
-    { label: "Budding Talent", placement: "top",
-      submenu:[
-        {label: "Open Programs", link: "/open-programs"},
-        {label: "Summer Programs", link: "/summer-programs"},
-      ]
-     },
-      { label: "Careers", link: "/careers", placement: "top" },
+  {
+    label: "Budding Talent",
+    placement: "top",
+    submenu: [
+      { label: "Open Programs", link: "/open-programs" },
+      { label: "Summer Programs", link: "/summer-programs" },
+    ],
+  },
+  { label: "Careers", link: "/careers", placement: "top" },
   { label: "News & Blog", link: "/news-blogs", placement: "top" },
   // { label: "contact", link: "/contact", placement: "top" },
   {
@@ -85,43 +88,43 @@ export const menuData = [
   },
 
   // ✅ Industry Partnership (Merged)
-        {
-        label: "Online Programs",
-        placement:"top",
-        link: "/program/online-program",
+  {
+    label: "Online Programs",
+    placement: "top",
+    link: "/program/online-program",
+    submenu: [
+      { label: "Product Management", link: "/program/product-management" },
+      { label: "Cybersecurity", link: "/program/cybersecurity" },
+      { label: "Digital Marketing", link: "/program/digital-marketing" },
+      {
+        label: "Mobility & Sustainability",
+        link: "/program/mobility-sustainability",
+      },
+      { label: "Consulting", link: "/program/consulting" },
+      { label: "Banking & Finance", link: "/program/banking-finance" },
+      { label: "Business Analytics", link: "/program/business-analytics" },
+      { label: "Data Science", link: "/program/data-science" },
+      {
+        label: "Industry Sector Specific Offerings",
+        link: "/program/industry-sector",
         submenu: [
-          { label: "Product Management", link: "/program/product-management" },
-          { label: "Cybersecurity", link: "/program/cybersecurity" },
-          { label: "Digital Marketing", link: "/program/digital-marketing" },
+          { label: "FinTech", link: "/program/fintech" },
           {
-            label: "Mobility & Sustainability",
-            link: "/program/mobility-sustainability",
+            label: "Global Capability Centers (GCC)",
+            link: "/program/gcc",
           },
-          { label: "Consulting", link: "/program/consulting" },
-          { label: "Banking & Finance", link: "/program/banking-finance" },
-          { label: "Business Analytics", link: "/program/business-analytics" },
-          { label: "Data Science", link: "/program/data-science" },
           {
-            label: "Industry Sector Specific Offerings",
-            link: "/program/industry-sector",
-            submenu: [
-              { label: "FinTech", link: "/program/fintech" },
-              {
-                label: "Global Capability Centers (GCC)",
-                link: "/program/gcc",
-              },
-                            {
-                label: "Semi conductors",
-                link: "/program/semi-conductors",
-              },
-              {
-                label: "Health Care & Life Science. ",
-                link: "/program/hc-ls",
-              },
-            ],
+            label: "Semi conductors",
+            link: "/program/semi-conductors",
+          },
+          {
+            label: "Health Care & Life Science. ",
+            link: "/program/hc-ls",
           },
         ],
       },
+    ],
+  },
 
   // 🧭 Nav Bar (Main Menu - Bottom Placement)
   {
@@ -129,8 +132,8 @@ export const menuData = [
     placement: "bottom",
     link: "/about-ucu",
     submenu: [
-      { label: "Our Story", scrollId: "our-story"  },
-      { label: "Vision & Mission",scrollId: "vision-mission"  },
+      { label: "Our Story", scrollId: "our-story" },
+      { label: "Vision & Mission", scrollId: "vision-mission" },
       { label: "Founder's Message", link: "/founder-message" },
       { label: "Leadership", link: "/leader-ship" },
       { label: "Industry First Approach", link: "/industry-approach" },
@@ -147,12 +150,14 @@ export const menuData = [
         submenu: [
           { label: "PGPM-ELITE", link: "/program/pgpm-elite" },
           { label: "PGDM", link: "/program/pgdm" },
-          { label: "Flexi Program",className: "sublink-custom",
-            submenu:[
-          { label: "PGPM Flex", link: "/program/pgpm" },
-          { label: "PGXPM ", link: "/program/pgxpm" },
-            ]
-           },
+          {
+            label: "Flexi Program",
+            className: "sublink-custom",
+            submenu: [
+              { label: "PGPM Flex", link: "/program/pgpm" },
+              { label: "PGXPM ", link: "/program/pgxpm" },
+            ],
+          },
           // {
           //   label: "Executive Post Graduate Certificate Programs",
           //   link: "/program/executive-pgcp",
@@ -217,40 +222,39 @@ export const menuData = [
           },
         ],
       },
-      
     ],
   },
+  {
+    label: "Executive Education",
+    placement: "bottom",
+    link: "/program-customised-learning-programs-for-corporate-professionals",
+    submenu: [
       {
-        label: "Executive Education",
-        placement: "bottom",
-        link: "/program-customised-learning-programs-for-corporate-professionals",
+        label: "Customised Learning Programs for Corporate Professionals",
+        link: "/program/program-customised-learning-programs-for-corporate-professionals",
         submenu: [
-          {
-            label: "Customised Learning Programs for Corporate Professionals",
-            link: "/program/program-customised-learning-programs-for-corporate-professionals",
-                        submenu: [
           {
             label: "Management Development Programs (MDPs)",
             link: "/program/MDPs",
-className: "sublink-custom",
- customHover: false,
-          },
-                        ]
-          },
-          {
-            label: "1 Year CXO Accelerator Program with Campus Immersion",
-            submenu: [
-              { label: "CXO", link: "/program/CXO" },
-              { label: "CIO", link: "/program/CIO" },
-              { label: "CTO", link: "/program/CTO" },
-              { label: "CMO", link: "/program/CMO" },
-              { label: "CHRO", link: "/program/CHRO" },
-              { label: "CFO", link: "/program/CFO" },
-              { label: "CPO", link: "/program/CPO" },
-            ],
+            className: "sublink-custom",
+            customHover: false,
           },
         ],
       },
+      {
+        label: "1 Year CXO Accelerator Program with Campus Immersion",
+        submenu: [
+          { label: "CXO", link: "/program/CXO" },
+          { label: "CIO", link: "/program/CIO" },
+          { label: "CTO", link: "/program/CTO" },
+          { label: "CMO", link: "/program/CMO" },
+          { label: "CHRO", link: "/program/CHRO" },
+          { label: "CFO", link: "/program/CFO" },
+          { label: "CPO", link: "/program/CPO" },
+        ],
+      },
+    ],
+  },
   {
     label: "Faculty",
     placement: "bottom",
@@ -275,17 +279,47 @@ className: "sublink-custom",
     label: "Advisory Councils",
     placement: "bottom",
     submenu: [
-      { label: "Business Advisory Council", link: "/bac",
-                    submenu: [
-      { label: "Academic Advisory Council", link: "/aac",className: "sublink-custom", },
-      { label: "CHRO Advisory Council", link: "/chro",className: "sublink-custom", },
-      { label: "Talent Advisory Council", link: "/tac",className: "sublink-custom", },
-      { label: "L&D Advisory Council", link: "/ldac",className: "sublink-custom", },
-      { label: "Young CXO Council", link: "/ycxoc",className: "sublink-custom", },
-      { label: "Rising Leaders' Council", link: "/rlc",className: "sublink-custom", },   
-      { label: "Our Brand Ambassadors", link: "/oba" ,className: "sublink-custom",},
-        ]
-       },
+      {
+        label: "Business Advisory Council",
+        link: "/bac",
+        submenu: [
+          {
+            label: "Academic Advisory Council",
+            link: "/aac",
+            className: "sublink-custom",
+          },
+          {
+            label: "CHRO Advisory Council",
+            link: "/chro",
+            className: "sublink-custom",
+          },
+          {
+            label: "Talent Advisory Council",
+            link: "/tac",
+            className: "sublink-custom",
+          },
+          {
+            label: "L&D Advisory Council",
+            link: "/ldac",
+            className: "sublink-custom",
+          },
+          {
+            label: "Young CXO Council",
+            link: "/ycxoc",
+            className: "sublink-custom",
+          },
+          {
+            label: "Rising Leaders' Council",
+            link: "/rlc",
+            className: "sublink-custom",
+          },
+          {
+            label: "Our Brand Ambassadors",
+            link: "/oba",
+            className: "sublink-custom",
+          },
+        ],
+      },
 
       {
         label: "SME Program Advisory Council",
@@ -316,7 +350,6 @@ className: "sublink-custom",
     link: "/consortium",
     placement: "bottom",
   },
-
 
   {
     label: "Campus Placements",
@@ -333,13 +366,13 @@ className: "sublink-custom",
 export const menuDataMobile = [
   // 🔝 Top Menu
   { label: "Home", link: "/", placement: "top" },
-   {
+  {
     label: "About",
     placement: "bottom",
     link: "/about-ucu",
     submenu: [
-      { label: "Our Story", scrollId: "our-story"  },
-      { label: "Vision & Mission",scrollId: "vision-mission"  },
+      { label: "Our Story", scrollId: "our-story" },
+      { label: "Vision & Mission", scrollId: "vision-mission" },
       { label: "Founder's Message", link: "/founder-message" },
       { label: "Leadership", link: "/leader-ship" },
       { label: "Industry First Approach", link: "/industry-approach" },
@@ -356,12 +389,14 @@ export const menuDataMobile = [
         submenu: [
           { label: "PGPM-ELITE", link: "/program/pgpm-elite" },
           { label: "PGDM", link: "/program/pgdm" },
-          { label: "Flexi Program",className: "sublink-custom",
-            submenu:[
-          { label: "PGPM Flex", link: "/program/pgpm" },
-          { label: "PGXPM ", link: "/program/pgxpm" },
-            ]
-           },
+          {
+            label: "Flexi Program",
+            className: "sublink-custom",
+            submenu: [
+              { label: "PGPM Flex", link: "/program/pgpm" },
+              { label: "PGXPM ", link: "/program/pgxpm" },
+            ],
+          },
           // {
           //   label: "Executive Post Graduate Certificate Programs",
           //   link: "/program/executive-pgcp",
@@ -426,40 +461,39 @@ export const menuDataMobile = [
           },
         ],
       },
-      
     ],
   },
+  {
+    label: "Executive Education",
+    placement: "bottom",
+    link: "/program-customised-learning-programs-for-corporate-professionals",
+    submenu: [
       {
-        label: "Executive Education",
-        placement: "bottom",
-        link: "/program-customised-learning-programs-for-corporate-professionals",
+        label: "Customised Learning Programs for Corporate Professionals",
+        link: "/program/program-customised-learning-programs-for-corporate-professionals",
         submenu: [
-          {
-            label: "Customised Learning Programs for Corporate Professionals",
-            link: "/program/program-customised-learning-programs-for-corporate-professionals",
-                        submenu: [
           {
             label: "Management Development Programs (MDPs)",
             link: "/program/MDPs",
-className: "sublink-custom",
- customHover: false,
-          },
-                        ]
-          },
-          {
-            label: "1 Year CXO Accelerator Program with Campus Immersion",
-            submenu: [
-              { label: "CXO", link: "/program/CXO" },
-              { label: "CIO", link: "/program/CIO" },
-              { label: "CTO", link: "/program/CTO" },
-              { label: "CMO", link: "/program/CMO" },
-              { label: "CHRO", link: "/program/CHRO" },
-              { label: "CFO", link: "/program/CFO" },
-              { label: "CPO", link: "/program/CPO" },
-            ],
+            className: "sublink-custom",
+            customHover: false,
           },
         ],
       },
+      {
+        label: "1 Year CXO Accelerator Program with Campus Immersion",
+        submenu: [
+          { label: "CXO", link: "/program/CXO" },
+          { label: "CIO", link: "/program/CIO" },
+          { label: "CTO", link: "/program/CTO" },
+          { label: "CMO", link: "/program/CMO" },
+          { label: "CHRO", link: "/program/CHRO" },
+          { label: "CFO", link: "/program/CFO" },
+          { label: "CPO", link: "/program/CPO" },
+        ],
+      },
+    ],
+  },
   {
     label: "Faculty",
     placement: "bottom",
@@ -484,17 +518,47 @@ className: "sublink-custom",
     label: "Advisory Councils",
     placement: "bottom",
     submenu: [
-      { label: "Business Advisory Council", link: "/bac",
-                    submenu: [
-      { label: "Academic Advisory Council", link: "/aac",className: "sublink-custom", },
-      { label: "CHRO Advisory Council", link: "/chro",className: "sublink-custom", },
-      { label: "Talent Advisory Council", link: "/tac",className: "sublink-custom", },
-      { label: "L&D Advisory Council", link: "/ldac",className: "sublink-custom", },
-      { label: "Young CXO Council", link: "/ycxoc",className: "sublink-custom", },
-      { label: "Rising Leaders' Council", link: "/rlc",className: "sublink-custom", },   
-      { label: "Our Brand Ambassadors", link: "/oba" ,className: "sublink-custom",},
-        ]
-       },
+      {
+        label: "Business Advisory Council",
+        link: "/bac",
+        submenu: [
+          {
+            label: "Academic Advisory Council",
+            link: "/aac",
+            className: "sublink-custom",
+          },
+          {
+            label: "CHRO Advisory Council",
+            link: "/chro",
+            className: "sublink-custom",
+          },
+          {
+            label: "Talent Advisory Council",
+            link: "/tac",
+            className: "sublink-custom",
+          },
+          {
+            label: "L&D Advisory Council",
+            link: "/ldac",
+            className: "sublink-custom",
+          },
+          {
+            label: "Young CXO Council",
+            link: "/ycxoc",
+            className: "sublink-custom",
+          },
+          {
+            label: "Rising Leaders' Council",
+            link: "/rlc",
+            className: "sublink-custom",
+          },
+          {
+            label: "Our Brand Ambassadors",
+            link: "/oba",
+            className: "sublink-custom",
+          },
+        ],
+      },
 
       {
         label: "SME Program Advisory Council",
@@ -526,7 +590,6 @@ className: "sublink-custom",
     placement: "bottom",
   },
 
-
   {
     label: "Campus Placements",
     placement: "bottom",
@@ -538,7 +601,7 @@ className: "sublink-custom",
       { label: "Live Projects", link: "/placements/projects" },
     ],
   },
-    {
+  {
     label: "Industry Partnership",
     placement: "top",
     submenu: [
@@ -601,15 +664,17 @@ className: "sublink-custom",
       },
     ],
   },
-    { label: "Campus", link: "/campus-ambience", placement: "top" },
+  { label: "Campus", link: "/campus-ambience", placement: "top" },
   { label: "Societal impact", link: "/csr", placement: "top" },
-    { label: "Budding Talent", placement: "top",
-      submenu:[
-        {label: "Open Programs", link: "/open-programs"},
-        {label: "Summer Programs", link: "/summer-programs"},
-      ]
-     },
-      { label: "Careers", link: "/careers", placement: "top" },
+  {
+    label: "Budding Talent",
+    placement: "top",
+    submenu: [
+      { label: "Open Programs", link: "/open-programs" },
+      { label: "Summer Programs", link: "/summer-programs" },
+    ],
+  },
+  { label: "Careers", link: "/careers", placement: "top" },
   { label: "News & Blog", link: "/news-blogs", placement: "top" },
   // { label: "contact", link: "/contact", placement: "top" },
   {
@@ -619,46 +684,45 @@ className: "sublink-custom",
   },
 
   // ✅ Industry Partnership (Merged)
-        {
-        label: "Online Programs",
-        placement:"top",
-        link: "/program/online-program",
+  {
+    label: "Online Programs",
+    placement: "top",
+    link: "/program/online-program",
+    submenu: [
+      { label: "Product Management", link: "/program/product-management" },
+      { label: "Cybersecurity", link: "/program/cybersecurity" },
+      { label: "Digital Marketing", link: "/program/digital-marketing" },
+      {
+        label: "Mobility & Sustainability",
+        link: "/program/mobility-sustainability",
+      },
+      { label: "Consulting", link: "/program/consulting" },
+      { label: "Banking & Finance", link: "/program/banking-finance" },
+      { label: "Business Analytics", link: "/program/business-analytics" },
+      { label: "Data Science", link: "/program/data-science" },
+      {
+        label: "Industry Sector Specific Offerings",
+        link: "/program/industry-sector",
         submenu: [
-          { label: "Product Management", link: "/program/product-management" },
-          { label: "Cybersecurity", link: "/program/cybersecurity" },
-          { label: "Digital Marketing", link: "/program/digital-marketing" },
+          { label: "FinTech", link: "/program/fintech" },
           {
-            label: "Mobility & Sustainability",
-            link: "/program/mobility-sustainability",
+            label: "Global Capability Centers (GCC)",
+            link: "/program/gcc",
           },
-          { label: "Consulting", link: "/program/consulting" },
-          { label: "Banking & Finance", link: "/program/banking-finance" },
-          { label: "Business Analytics", link: "/program/business-analytics" },
-          { label: "Data Science", link: "/program/data-science" },
           {
-            label: "Industry Sector Specific Offerings",
-            link: "/program/industry-sector",
-            submenu: [
-              { label: "FinTech", link: "/program/fintech" },
-              {
-                label: "Global Capability Centers (GCC)",
-                link: "/program/gcc",
-              },
-                            {
-                label: "Semi conductors",
-                link: "/program/semi-conductors",
-              },
-              {
-                label: "Health Care & Life Science. ",
-                link: "/program/hc-ls",
-              },
-            ],
+            label: "Semi conductors",
+            link: "/program/semi-conductors",
+          },
+          {
+            label: "Health Care & Life Science. ",
+            link: "/program/hc-ls",
           },
         ],
       },
+    ],
+  },
 
   // 🧭 Nav Bar (Main Menu - Bottom Placement)
 ];
 
 // ✅ Custom order for mobile menu
-
