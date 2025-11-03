@@ -35,6 +35,7 @@ import OpenPrograms from "./Pages/OpenPrograms/OpenPrograms";
 import SummerProgram from "./Pages/SummerProgram/SummerProgram";
 import AdmissionPage from "./Pages/AdmissionPage/AdmissionPage";
 import CareersPage from "./Pages/CareersPage/CareersPage";
+import Consortium from "./Pages/Consortium/Consortium";
 
 function App() {
   useEffect(() => {
@@ -71,6 +72,7 @@ function App() {
         <Route path="/open-programs" element={<OpenPrograms/>} />
         <Route path="/summer-programs" element={<SummerProgram/>} />
         <Route path="/admissions" element={<AdmissionPage/>} />
+        <Route path="/consortium" element={<Consortium/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>

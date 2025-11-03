@@ -1,0 +1,100 @@
+.consortium-page-logo {
+    height: 50px;
+    width: 50px;
+}
+
+.consortium-pilklar-image {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.consoritum-para-text {
+    color: rgb(184, 183, 183);
+}
+
+.consoritum-pillar-line {
+    border: 2px solid white;
+    margin-bottom: 10px;
+    width: 20%;
+}
+
+.card-consortium-founder {
+   background: linear-gradient(205deg, #07baf3 1%, #1703a9 100%);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    height: 39vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.consortium-founder-name {
+    border-right: 1px solid black;
+    height: fit-content;
+    padding-right: 10px;
+}
+
+.consortium-founder-image {
+    position: absolute;
+    left: 10%;
+    top: -25%;
+    width: 25%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.consortium-founder-container {
+    margin: 9% 0 5%;
+}
+
+.quotes-consortium {
+    position: absolute;
+    top: -25%;
+    left: 2%;
+    transform: rotate(180deg);
+    font-size: 5rem;
+    color: #5ac501;
+}
+.consortium-number-div{
+    height: 75vh;
+    display: flex;
+}
+.consortium-number-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+.consortium-number-image-div{
+    height: 100%;
+    width: 50%;
+}
+.consortium-number-div-left{
+    width: 50%;
+    height: 100%;
+    /* background: linear-gradient(205deg, #07baf3 1%, #1703a9 100%); */
+    background-color: #0c0142;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.left-consotium-number{
+    border-left: 5px solid white;
+    height: fit-content;
+}
+.left-consotium-number-p2{
+    color: rgb(228, 227, 227);
+}
+.consortium-number-container{
+    background-color: white;
+    color: black;
+    border-left: 10px solid #5ac501;
+}
+.consortium-numberr-grid{
+    position: absolute;
+    top: 15%;
+    left: 0;
+}
