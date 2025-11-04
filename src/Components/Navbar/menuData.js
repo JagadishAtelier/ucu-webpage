@@ -9,13 +9,20 @@ export const menuData = [
         label: "corporate Engagement",
         submenu: [
           {
+            label: "Career Accelerator Program (CAP)",
+            link: "/engagement/cap",
+          },
+          {
+            label: "Career Transformation to Career Acceleration (CT 2 CA)",
+            link: "/engagement/ct-to-ca",
+          },
+          {
             label: "CXO Series",
-            className: "sublink-custom",
             submenu: [
               { label: "CIO ", link: "/engagement/cio" },
               { label: "CTO ", link: "/engagement/cto" },
               { label: "CMO ", link: "/engagement/cmo" },
-              { label: "CHRO", link: "/engagement/chro" },
+              { label: "CHRO", link: "/engagement/chro"},
               { label: "CFO ", link: "/engagement/cfo" },
               { label: "CPO ", link: "/engagement/cpo" },
             ],
@@ -58,13 +65,6 @@ export const menuData = [
             ],
           },
         ],
-      },{
-        label: "Career Accelerator Program (CAP)",
-        link: "/engagement/cap",
-      },
-      {
-        label: "Career Transformation to Career Acceleration (CT 2 CA)",
-        link: "/engagement/ct-to-ca",
       },
     ],
   },

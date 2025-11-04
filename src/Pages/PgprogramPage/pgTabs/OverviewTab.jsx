@@ -7,7 +7,6 @@ import OverviewIndustryconnect from "./OverviewTab/OverviewIndustryconnect";
 import OverviewParticipant from "./OverviewTab/OverviewParticipant";
 
 
-
 function OverviewTab() {
     return (
         <>
