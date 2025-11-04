@@ -55,16 +55,20 @@ const data = [
 const secondRowdata = [
   {
     image: "https://plus.unsplash.com/premium_photo-1691849271953-5f727dfaf1ae?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    heading: "PGPM FLEX",
-    para: `A one-year PGPM FLEX designed for experienced professionals—integrating executive leadership frameworks with real-world business insight to accelerate career impact`,
+    heading: "PGPM Flex – Weekend MBA for Working Professionals",
+    para: `A one-year Post Graduate Program in Management crafted for professionals with 3+ years of experience, merging executive leadership principles with real-world industry
+ insights to accelerate careers into FinTech, AI consulting, or the GCC economy.`,
     buttonText:"Explore More",
     elgible : "3+ years of experience",
     duration : "18 months",
   },
   {
     image: "https://plus.unsplash.com/premium_photo-1691844987876-e27e1b502338?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    heading: "PGXPM",
-    para: `A two-year UCU’s PGXPM for Freshers is designed to launch high-potential talent into the business world—building strong foundations and accelerating their journey into impactful careers.
+    heading: "PGXPM – Executive Leadership Program for High-Potential Professionals",
+    para: `A Two-Year PGPM pairs core management education with immersive industry
+     projects for candidates with 0–3 years of experience. Fast-track your entry into new-age job
+    roles through global internships, live labs, and executive mentorship—building the leadership
+   skills of tomorrow's market demands.
     `,
     buttonText:"Explore More",
     elgible : "0 - 3 years of experience",
