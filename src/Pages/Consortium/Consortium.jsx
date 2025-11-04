@@ -7,6 +7,8 @@ import ConsortiumDesc from './ConsortiumDesc'
 import ConsotiumPillars from './ConsotiumPillars'
 import ConsortiumFounder from './ConsortiumFounder'
 import ConsortiumNumbers from './ConsortiumNumbers'
+import ConsortiumLeader from './ConsortiumLeader'
+import ConsortiumStrategic from './ConsortiumStrategic'
 function Consortium() {
   return (
     <div>
@@ -44,6 +46,8 @@ Sample
     <ConsotiumPillars/>
     <ConsortiumFounder/>
     <ConsortiumNumbers/>
+    <ConsortiumLeader/>
+    <ConsortiumStrategic/>
     <NewFooter/>
     </div>
   )

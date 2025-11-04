@@ -32,9 +32,9 @@ function ConsotiumPillars() {
       </h1>
 
       <div className='d-grid'>
-        <div className='row'>
+        <div className='row row-gap-3'>
           {data.map((item, index) => (
-            <div key={index} className='col-md-3 d-flex'>
+            <div key={index} className='col-lg-3 col-md-6 col-12 d-flex'>
               <div className='card bg-transparent text-left text-white border-0 w-100 d-flex flex-column justify-content-between align-items-start'>
 
                 <div>

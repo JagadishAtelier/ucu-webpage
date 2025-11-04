@@ -98,3 +98,128 @@
     top: 15%;
     left: 0;
 }
+.consortium-leader-image{
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
+}
+.consortium-strategic-container {
+  background: linear-gradient(205deg, #07baf3 1%, #1703a9 100%);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  height: 39vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 👇 Move pagination below the box */
+.strategic-swiper {
+  position: relative;
+  padding-bottom: 40px; /* space for pagination dots */
+}
+
+.strategic-swiper .swiper-pagination {
+  position: absolute;
+  bottom: 0; /* below the box */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Optional: Dot style */
+.strategic-swiper .swiper-pagination-bullet {
+  background:black;
+  opacity: 0.5;
+}
+
+.strategic-swiper .swiper-pagination-bullet-active {
+  background: #07baf3;
+  opacity: 1;
+}
+@media (max-width:768px) {
+    .consortium-founder-image{
+        position: relative;
+        width: 100%;
+        height: 40vh;
+        border-radius: 10px;
+        left: 0;
+        top: 0;
+    }
+    .card-consortium-founder{
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+    .consortium-founder-container{
+        margin-top: 7%;
+    }
+    .consortium-number-div{
+        flex-direction: column;
+    }
+    .consortium-number-div-left{
+        width: 100%;
+        padding: 7% 0;
+    }
+    .consortium-number-image-div{
+        width: 100%;
+    }
+    .consortium-numberr-grid{
+        left: 10%;
+        top: 7%;
+    }
+    .consortium-number-container{
+        width: 46%;
+    }
+    .consortium-number-image{
+        height: 90%;
+    }
+    .consortium-leader-container{
+        margin-top: 48% !important;
+    }
+    .consortium-strategic-container{
+        height: fit-content;
+    }
+}
+@media (max-width:480px) {
+    .consortium-founder-image{
+        position: relative;
+        width: 100%;
+        height: 30vh;
+        border-radius: 10px;
+        left: 0;
+        top: 0;
+    }
+    .card-consortium-founder{
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+    .consortium-leader-container{
+        margin-top: 100% !important;
+    }
+    .consortium-number-container{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .consortium-number-image{
+        height: 75vh;
+    }
+    .consortium-numberr-grid{
+        top: 0;
+        left: 8%;
+    }
+}
+@media (max-width:380px) {
+        .consortium-leader-container{
+        margin-top: 120% !important;
+    }
+}
+@media (max-width:320px) {
+        .consortium-leader-container{
+        margin-top: 140% !important;
+    }
+}
