@@ -183,6 +183,9 @@
     }
 }
 @media (max-width:480px) {
+    .consortium-leader-image{
+        height: 35vh;
+    }
     .consortium-founder-image{
         position: relative;
         width: 100%;

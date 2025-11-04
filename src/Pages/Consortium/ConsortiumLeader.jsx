@@ -33,12 +33,12 @@ function ConsortiumLeader() {
       <h1 className='fw-bold text-center display-5 col-10 mx-auto text-uppercase'>
         Our Leadership Team
       </h1>
-      <p className='text-center col-9 mx-auto mb-5'>At the Consortium, “Representation” and “Inclusion” are not just buzzwords; they are the credo we live by and the thoughtful actions that define us. Meet the inspiring people who live and breathe our mission.</p>
+      <p className='text-center col-lg-9 col-md-9 col-12 mx-auto mb-5'>At the Consortium, “Representation” and “Inclusion” are not just buzzwords; they are the credo we live by and the thoughtful actions that define us. Meet the inspiring people who live and breathe our mission.</p>
       <div className='d-grid'>
         <div className='row row-gap-2'>
           {data.map((item, index) => (
             <div key={index} className='col-lg-3 col-md-6 d-flex'>
-              <div className='card bg-transparent text-left text-white border-0 w-100 d-flex flex-column align-items-start'>
+              <div className='card bg-transparent text-left text-white border-0 w-100 d-flex flex-column align-items-lg-start'>
                   <img src={item.image} alt={item.head} className='img-fluid rounded mb-3 consortium-leader-image' />
                   <div className='consotium-text-box'>
                     <h4 className='text-uppercase fw-bold text-center'>{item.head}</h4>

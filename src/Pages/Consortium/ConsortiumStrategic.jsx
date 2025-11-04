@@ -34,7 +34,7 @@ function ConsortiumStrategic() {
           <SwiperSlide key={index}>
             <div className="consortium-strategic-container">
               <h1 className="text-uppercase fw-bold display-4">{item.head}</h1>
-              <p className="mt-3 col-10 text-center mx-auto">{item.para}</p>
+              <p className="mt-3 col-lg-10 col-12 text-center mx-auto">{item.para}</p>
             </div>
           </SwiperSlide>
         ))}
