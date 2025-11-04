@@ -1,0 +1,255 @@
+.offer-card {
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.offer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.offer-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.offer-head {
+  color: #043873;
+  margin-top: 10px;
+}
+
+.offer-para ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.offer-para li {
+  list-style-type: disc;
+  margin-bottom: 5px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Responsive spacing */
+.offerings-container {
+  max-width: 1200px;
+}
+.og-image{
+  height: 150px;
+  width: 150px;
+      filter: brightness(0) invert(1);
+}
+.og-blue-box{
+  background: linear-gradient(205deg, #07baf3 1%, #1703a9 100%);
+  color: white;
+  width: 24%;
+  border-radius: 5px;
+}
+.og-para-color{
+  color: gainsboro;
+}
+.op-image{
+  width: 50%;
+  height: 45vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.op-blue-box{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: rgb(107, 107, 107);
+}
+
+
+.custom-modal .modal-content {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background: #fdfdfd;
+}
+
+.custom-modal-header {
+  background: linear-gradient(205deg, #07baf3 1%, #1703a9 100%);
+  color: white !important;
+  border-bottom: none;
+  text-align: center;
+}
+
+.custom-modal-header .modal-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.custom-modal-body {
+  padding: 25px 30px;
+  background: #ffffff;
+}
+
+.custom-modal-body .form-label {
+  font-weight: 500;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.custom-modal-body .form-control,
+.custom-modal-body .form-select {
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  font-size: 0.9rem;
+  padding: 10px 12px;
+  transition: all 0.2s ease;
+}
+
+.custom-modal-body .form-control:focus,
+.custom-modal-body .form-select:focus {
+  border-color: #2193b0;
+  box-shadow: 0 0 0 0.15rem rgba(33, 147, 176, 0.25);
+}
+
+.custom-modal-footer {
+  border-top: none;
+  background: #f9fafc;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.submit-btn {
+  background-color: #5ac501;
+  font-size: 14px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 25px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+}
+
+.open-modal-btn {
+  background: linear-gradient(90deg, #43cea2, #185a9d);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.open-modal-btn:hover {
+  background: linear-gradient(90deg, #2b5876, #4e4376);
+}
+.cancelop-btn{
+    background-color: white;
+  font-size: 14px;
+  border: 1px solid gainsboro;
+  color: black;
+  font-weight: 600;
+  padding: 8px 25px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+.oc-card-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.oc-card-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.oc-data-image {
+  height: 40vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.oc-text-div {
+  background: linear-gradient(205deg, #07baf3 1%, #1703a9 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 25vh;
+}
+
+.oc-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.oc-desc {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.oc-btn-primary {
+  background-color: #5ac501 !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.oc-btn-primary:hover {
+  background-color: #4db000 !important;
+}
+
+.oc-btn-secondary {
+  background-color: white !important;
+  color: #000 !important;
+  border: none !important;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.oc-btn-secondary:hover {
+  background-color: #f1f1f1 !important;
+}
+
+@media (max-width: 768px) {
+  .offer-head {
+    font-size: 1.1rem;
+  }
+  .offer-para li {
+    font-size: 14px;
+  }
+  .og-blue-box{
+  width: 49%;
+}
+.op-image{
+  width: 100%;
+}
+.oc-text-div{
+  height: fit-content;
+}
+}
+@media (max-width: 480px) {
+.og-blue-box{
+  width: 96%;
+  margin: auto;
+}
+.op-image{
+  width: 100%;
+}
+.oc-text-div{
+  height: fit-content;
+}
+}

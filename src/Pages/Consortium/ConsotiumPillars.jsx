@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-
+import { useNavigate } from 'react-router-dom'
 const data = [
   {
     image: "https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -25,6 +25,7 @@ const data = [
 ]
 
 function ConsotiumPillars() {
+  const navigate = useNavigate()
   return (
     <div className='captital-campus-content-sec mt-4 text-white py-5' style={{ backgroundColor: "#0c0142" }}>
       <h1 className='fw-bold text-center display-5 col-10 mx-auto text-uppercase mb-5'>
@@ -45,7 +46,7 @@ function ConsotiumPillars() {
                 </div>
 
                 <div className='mt-auto text-center pb-2'>
-                  <Button variant='light' className='text-black fw-semibold px-4'>
+                  <Button onClick={()=>navigate('/offerings')} variant='light' className='text-black fw-semibold px-4'>
                     Offerings
                   </Button>
                 </div>
