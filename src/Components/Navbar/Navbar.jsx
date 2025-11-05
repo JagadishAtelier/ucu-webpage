@@ -1,6 +1,6 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { menuData,menuDataMobile } from "./menuData";
+import { menuData, menuDataMobile } from "./menuData";
 import "./Navbar.css";
 import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
 import logoImg from "../../Assets/aac/Copy of Webpage_20250924_151944_0001.png";
@@ -10,14 +10,14 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenus, setOpenMenus] = useState({});
   const [hoverMenus, setHoverMenus] = useState({});
-  const [searchDrodow , setSearchDropdown] = useState(false)
-const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
+  const [searchDrodow, setSearchDropdown] = useState(false)
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
 
-React.useEffect(() => {
-  const handleResize = () => setIsMobile(window.innerWidth < 992);
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
+  React.useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 992);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const toggleMobile = () => setMobileOpen(!mobileOpen);
 
   const toggleSearch = () => setSearchDropdown(!searchDrodow)
@@ -39,52 +39,52 @@ React.useEffect(() => {
     }
   };
 
-const hoverTimeouts = {};
+  const hoverTimeouts = {};
 
-const handleLeave = (label) => {
-  hoverTimeouts[label] = setTimeout(() => {
-    setHoverMenus((prev) => ({ ...prev, [label]: false }));
-  }, 500);
-};
+  const handleLeave = (label) => {
+    hoverTimeouts[label] = setTimeout(() => {
+      setHoverMenus((prev) => ({ ...prev, [label]: false }));
+    }, 500);
+  };
 
-const handleHover = (label) => {
-  if (hoverTimeouts[label]) clearTimeout(hoverTimeouts[label]);
-  setHoverMenus((prev) => ({ ...prev, [label]: true }));
-};
+  const handleHover = (label) => {
+    if (hoverTimeouts[label]) clearTimeout(hoverTimeouts[label]);
+    setHoverMenus((prev) => ({ ...prev, [label]: true }));
+  };
 
 
   // ✅ Recursive submenu renderer
-const renderNestedMenu = (submenu, depth = 1) => {
-  if (!submenu || !submenu.length) return null;
-const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
-  return (
-    <ul className={`submenu depth-${depth} ${hasCustomLink ? "no-border" : ""}`}>
-      {submenu.map((sub) => (
-        <li key={sub.label} className={`submenu-item ${sub.className === "sublink-custom" ? "no-padding" : ""}`}>
-          {sub.submenu && sub.submenu.length > 0 ? (
-            <div className="submenu-parent">
+  const renderNestedMenu = (submenu, depth = 1) => {
+    if (!submenu || !submenu.length) return null;
+    const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
+    return (
+      <ul className={`submenu depth-${depth} ${hasCustomLink ? "no-border" : ""}`}>
+        {submenu.map((sub) => (
+          <li key={sub.label} className={`submenu-item ${sub.className === "sublink-custom" ? "no-padding" : ""}`}>
+            {sub.submenu && sub.submenu.length > 0 ? (
+              <div className="submenu-parent">
+                <Link
+                  to={sub.link || "#"}
+                  className={`submenu-link ${sub.className || ""}`}
+                >
+                  {sub.label}
+                </Link>
+                <ChevronRight size={12} className="submenu-arrow" />
+                {renderNestedMenu(sub.submenu, depth + 1)}
+              </div>
+            ) : (
               <Link
                 to={sub.link || "#"}
                 className={`submenu-link ${sub.className || ""}`}
               >
                 {sub.label}
               </Link>
-              <ChevronRight size={12} className="submenu-arrow" />
-              {renderNestedMenu(sub.submenu, depth + 1)}
-            </div>
-          ) : (
-            <Link
-              to={sub.link || "#"}
-              className={`submenu-link ${sub.className || ""}`}
-            >
-              {sub.label}
-            </Link>
-          )}
-        </li>
-      ))}
-    </ul>
-  );
-};
+            )}
+          </li>
+        ))}
+      </ul>
+    );
+  };
 
 
   // ✅ Render menu recursively (for mobile)
@@ -96,25 +96,22 @@ const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
             {item.submenu && item.submenu.length > 0 ? (
               <>
                 <button
-                  className={`menu-btn depth-${depth} ${
-                    openMenus[item.label] ? "open" : ""
-                  }`}
+                  className={`menu-btn depth-${depth} ${openMenus[item.label] ? "open" : ""
+                    }`}
                   onClick={() => toggleSubmenu(item.label)}
                 >
                   {item.label}
                   {depth === 0 ? (
                     <ChevronDown
                       size={16}
-                      className={`chevron ${
-                        openMenus[item.label] ? "rotated" : ""
-                      }`}
+                      className={`chevron ${openMenus[item.label] ? "rotated" : ""
+                        }`}
                     />
                   ) : (
                     <ChevronRight
                       size={16}
-                      className={`chevron ${
-                        openMenus[item.label] ? "rotated" : ""
-                      }`}
+                      className={`chevron ${openMenus[item.label] ? "rotated" : ""
+                        }`}
                     />
                   )}
                 </button>
@@ -186,9 +183,8 @@ const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
                   .map((menu) => (
                     <li
                       key={menu.label}
-                      className={`list-inline-item nav-item dropdown ${
-                        menu.submenu ? "has-mega" : ""
-                      }`}
+                      className={`list-inline-item nav-item dropdown ${menu.submenu ? "has-mega" : ""
+                        }`}
                       onMouseEnter={() => handleHover(menu.label)}
                       onMouseLeave={() => handleLeave(menu.label)}
                     >
@@ -204,12 +200,12 @@ const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
                               {menu.label.toUpperCase()}
                             </button>
                           ) : (
-<Link
-  to={menu.link || "#"}
-  className={`nav-link dropdown-toggle ${menu.label === "Online Programs" ? "online-program-link" : ""}`}
->
-  {menu.label.toUpperCase()}
-</Link>
+                            <Link
+                              to={menu.link || "#"}
+                              className={`nav-link dropdown-toggle ${menu.label === "Online Programs" ? "online-program-link" : ""}`}
+                            >
+                              {menu.label.toUpperCase()}
+                            </Link>
 
                           )}
 
@@ -217,8 +213,8 @@ const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
                             className={`dropdown-menu top-dropdown ${menu.label
                               ?.replace(/\s+/g, "-")
                               .toLowerCase()}`}
-                                  onMouseEnter={() => handleHover(menu.label)}  
-    onMouseLeave={() => handleLeave(menu.label)}
+                            onMouseEnter={() => handleHover(menu.label)}
+                            onMouseLeave={() => handleLeave(menu.label)}
                             style={{
                               display: hoverMenus[menu.label]
                                 ? "block"
@@ -282,24 +278,25 @@ const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
 
               {/* Search & Login */}
               {/* <div className="search-box ms-3"> */}
-                {/* <input type="text" placeholder="Search" /> */}
-                <div className="ms-2 search-icon-nab-bg" onClick={toggleSearch}>
-                  <Search size={17} />
-                </div>
-                {searchDrodow && (
-                  <div className="search-dropdown-box-div">
-                     <input type="text" className="search-dropdown-box" placeholder="Search ...." />
-                <div className="dropdown-search-icon">
-                  <Search size={20} />
-                </div>
+              {/* <input type="text" placeholder="Search" /> */}
+              <div className="ms-2 search-icon-nab-bg" onClick={toggleSearch}>
+                <Search size={17} className="nav-bar-search-icon" />
+              </div>
+              {searchDrodow && (
+                <div className="search-dropdown-box-div">
+                  <input type="text" className="search-dropdown-box" placeholder="Search ...." />
+                  <div className="dropdown-search-icon">
+                    <Search size={20} />
                   </div>
-                )}
+                </div>
+              )}
               {/* </div> */}
               <div className="d-flex gap-2 ms-2 profile-icon-nab-bg">
                 <User
                   onClick={() => navigate("/auth/login")}
-                  className=""
+                  className="nav-bar-search-icon"
                   size={18}
+                  
                 />
               </div>
             </div>
@@ -311,9 +308,8 @@ const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
                 .map((menu) => (
                   <li
                     key={menu.label}
-                    className={`nav-item dropdown ${
-                      menu.submenu ? "has-mega" : ""
-                    }`}
+                    className={`nav-item dropdown ${menu.submenu ? "has-mega" : ""
+                      }`}
                     onMouseEnter={() => handleHover(menu.label)}
                     onMouseLeave={() => handleLeave(menu.label)}
                   >
@@ -410,9 +406,9 @@ const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
                   <X size={28} />
                 </button>
               </div>
-<div className="drawer-content">
-  {renderMenuItems(isMobile ? menuDataMobile : menuData)}
-</div>
+              <div className="drawer-content">
+                {renderMenuItems(isMobile ? menuDataMobile : menuData)}
+              </div>
 
             </div>
           </>
