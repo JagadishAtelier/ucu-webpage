@@ -91,7 +91,6 @@ export const menuData = [
   {
     label: "Online Programs",
     placement: "top",
-    link: "/program/online-program",
     submenu: [
       { label: "Product Management", link: "/program/product-management" },
       { label: "Cybersecurity", link: "/program/cybersecurity" },
@@ -130,7 +129,6 @@ export const menuData = [
   {
     label: "About",
     placement: "bottom",
-    link: "/about-ucu",
     submenu: [
       { label: "Our Story", scrollId: "our-story" },
       { label: "Vision & Mission", scrollId: "vision-mission" },
@@ -142,7 +140,6 @@ export const menuData = [
 
   {
     label: "Programs",
-    link: "/program",
     placement: "bottom",
     submenu: [
       {
@@ -227,7 +224,6 @@ export const menuData = [
   {
     label: "Executive Education",
     placement: "bottom",
-    link: "/program-customised-learning-programs-for-corporate-professionals",
     submenu: [
       {
         label: "Customised Learning Programs for Corporate Professionals",
