@@ -1104,7 +1104,7 @@ li:hover .career-reboot-heading {
   margin-right: 0.5rem !important;
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1499px) {
+@media only screen and (min-width: 1351px) and (max-width: 1499px) {
   .navbar-nav .nav-link {
     font-size: 12px !important;
     padding-left: 5px !important;
@@ -1123,7 +1123,111 @@ li:hover .career-reboot-heading {
     margin-right: 0.7rem !important;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width:1201px) and (max-width: 1350px) {
+  .navbar-nav .nav-link {
+    font-size: 10px !important;
+    padding-left: 0px !important;
+  }
+
+  .online-program-link {
+    padding: 0.5rem 0.2rem !important;
+    font-size: 0.3rem !important;
+  }
+    .top-bar a {
+    margin-left: 0 !important;
+    font-size: 9px !important;
+  }
+  .logo{
+    height: 100px !important;
+  }
+  .logo-text span{
+    font-size: 20px !important;
+  }
+  .logo-text{
+    font-size: 15px !important;
+  }
+  .search-icon-nab-bg{
+    padding: 2px 3px;
+  }
+  .nav-bar-search-icon{
+    height: 12px !important;
+  }
+  .profile-icon-nab-bg{
+        padding: 6px 3px;
+  }
+  .logo-box{
+    height: 100px;
+  }
+  .dropdown-menu-col .top-head{
+    font-size: 0.60rem !important;
+    padding-bottom: 0 !important;
+  }
+  .dropdown-menu-col ul li a{
+    font-size: 0.60rem !important;
+  }
+  .top-bar .dropdown-menu .dropdown-menu-col .top-head a{
+    font-size: 0.60rem !important;
+  }
+  .top-bar .dropdown-menu .dropdown-menu-col ul li a{
+    font-size: 0.60rem !important;
+  }
+  .dropdown-menu{
+    padding: 1rem !important;
+  }
+}
+@media only screen and (min-width:1025px) and (max-width: 1200px) {
+  .navbar-nav .nav-link {
+    font-size: 9px !important;
+    padding-left: 0px !important;
+  }
+
+  .online-program-link {
+    padding: 0.5rem 0.2rem !important;
+    font-size: 0.3rem !important;
+  }
+    .top-bar a {
+    margin-left: 0 !important;
+    font-size: 8px !important;
+  }
+  .logo{
+    height: 100px !important;
+  }
+  .logo-text span{
+    font-size: 20px !important;
+  }
+  .logo-text{
+    font-size: 15px !important;
+  }
+  .search-icon-nab-bg{
+    padding: 2px 3px;
+  }
+  .nav-bar-search-icon{
+    height: 12px !important;
+  }
+  .profile-icon-nab-bg{
+        padding: 6px 3px;
+  }
+  .logo-box{
+    height: 100px;
+  }
+  .dropdown-menu-col .top-head{
+    font-size: 0.50rem !important;
+    padding-bottom: 0 !important;
+  }
+  .dropdown-menu-col ul li a{
+    font-size: 0.50rem !important;
+  }
+  .top-bar .dropdown-menu .dropdown-menu-col .top-head a{
+    font-size: 0.50rem !important;
+  }
+  .top-bar .dropdown-menu .dropdown-menu-col ul li a{
+    font-size: 0.50rem !important;
+  }
+  .dropdown-menu{
+    padding: 1rem !important;
+  }
+}
+@media only screen and (min-width:991px) and (max-width: 1024px) {
   .navbar-nav .nav-link {
     font-size: 8.5px !important;
     padding-left: 0px !important;
