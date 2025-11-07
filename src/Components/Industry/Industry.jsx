@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Industry.css";
@@ -7,7 +7,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import { getAllIndustryIcon } from "../../Api/HomePageApi/IndustryIconsApi";
 const data = [
   {
     videoUrl: "https://youtu.be/uvyTVoElld4?si=ET5MBHw44ReoNMhG",
@@ -41,6 +41,20 @@ function convertToEmbedUrl(url) {
 }
 
 function Industry() {
+  const [ iconsData , setIconsData ] = useState([])
+
+  useEffect(()=>{
+    const fetchData = async() =>{
+      try {
+        const res = await getAllIndustryIcon()
+        setIconsData(res.data || res)
+        console.log("Iconsdata : ",res.data || res)
+      } catch (error) {
+        console.log("Failed to fetch data : ",error)
+      }
+    }
+    fetchData()
+  },[])
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -82,7 +96,7 @@ function Industry() {
         }}
         className="industry-card-div"
       >
-        {data.map((item, index) => (
+        {iconsData.map((item, index) => (
           <SwiperSlide key={index}>
             <div
               className="industry-card"
@@ -91,15 +105,15 @@ function Industry() {
             >
               <iframe
                 className="i-frame"
-                src={convertToEmbedUrl(item.videoUrl)}
+                src={convertToEmbedUrl(item.VideoUrl)}
                 title={item.author}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
-              <p className="program-description">{item.para}</p>
+              <p className="program-description">{item.authorDesc}</p>
               <p className="program-description">
-                <strong>-{item.author}</strong>, {item.proffection}
+                <strong>-{item.author}</strong>, {item.authorProf}
               </p>
             </div>
           </SwiperSlide>
