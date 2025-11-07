@@ -56,7 +56,7 @@
 /* ------------------------------
    Mega Menu (SP Jain Style)
 --------------------------------*/
-.navbar-nav>.dropdown .dropdown-menu {
+.navbar-nav > .dropdown .dropdown-menu {
   position: absolute;
   top: 100%;
   left: 50%;
@@ -86,12 +86,11 @@
 
   transition: opacity 0.5s ease, width 0.5s ease-in-out,
     max-height 0.3s ease-in-out 0.8s,
-    /* start after width finishes */
-    padding 0.3s ease-in-out 0.8s,
+    /* start after width finishes */ padding 0.3s ease-in-out 0.8s,
     transform 0.5s ease, visibility 0.5s ease;
 }
 
-.navbar-nav>.dropdown:hover .dropdown-menu {
+.navbar-nav > .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   width: 100vw;
@@ -100,7 +99,6 @@
   padding: 2rem;
   transform: translateX(-50%) translateY(0);
 }
-
 
 .dropdown-menu.budding-talent {
   left: 70% !important;
@@ -166,7 +164,7 @@
   width: 600px !important;
 }
 
-.navbar-nav>.dropdown:hover .dropdown-menu {
+.navbar-nav > .dropdown:hover .dropdown-menu {
   display: block;
 }
 
@@ -186,7 +184,6 @@
   gap: 1rem;
   /* spacing between items */
 }
-
 
 /* individual column */
 .dropdown-menu-col {
@@ -478,8 +475,6 @@ button {
   display: flex !important;
   flex-direction: column;
   margin-bottom: 0;
-
-
 }
 
 .border-l {
@@ -597,7 +592,6 @@ button {
   .logo-text {
     font-size: 14px;
   }
-
 }
 
 .drawer-content .menu.depth-0 {
@@ -656,7 +650,6 @@ button {
   background-color: #ebebeb;
 }
 
-
 .drawer-content .menu-link {
   display: block;
   padding: 1rem;
@@ -684,7 +677,6 @@ button {
   transform: rotate(180deg);
   /* For ChevronDown at depth 0 */
 }
-
 
 /* --- Desktop Mega Menu Specific Styling for 3rd/4th levels --- */
 .third-level-menu {
@@ -762,12 +754,9 @@ button {
   padding-left: 0 !important;
 }
 
-
-
 .fourth-level-parent:hover .third-level-link {
   color: rgb(0, 0, 0) !important;
 }
-
 
 .right-arrow-icon {
   color: #181717;
@@ -800,7 +789,6 @@ button {
 .fourth-level-menu li:hover a {
   color: white !important;
 }
-
 
 .career-reboot-heading {
   position: relative;
@@ -859,10 +847,6 @@ li:hover .career-reboot-heading {
   color: white !important;
 }
 
-
-
-
-
 /* Show dropdown on hover for desktop */
 .navbar-nav .dropdown:hover .dropdown-menu,
 .list-inline .dropdown:hover .dropdown-menu {
@@ -878,8 +862,7 @@ li:hover .career-reboot-heading {
   visibility: hidden;
   transition: opacity 0.5s ease, width 0.5s ease-in-out,
     max-height 0.3s ease-in-out 0.8s,
-    /* start after width finishes */
-    padding 0.3s ease-in-out 0.8s,
+    /* start after width finishes */ padding 0.3s ease-in-out 0.8s,
     transform 0.5s ease, visibility 0.5s ease;
   margin-top: 0%;
   /* prevent jump */
@@ -975,13 +958,11 @@ li:hover .career-reboot-heading {
   transition: 0.3s ease;
 }
 
-
 .normal-submenu-item {
   font-weight: normal !important;
   color: #333 !important;
   text-transform: none !important;
 }
-
 
 .submenu-link.sublink-custom {
   position: relative;
@@ -1013,7 +994,6 @@ li:hover .career-reboot-heading {
 .submenu-link.sublink-custom:hover::after {
   width: 100%;
 }
-
 
 /* Remove li padding only for this link */
 .submenu-item.no-padding {
@@ -1060,7 +1040,7 @@ li:hover .career-reboot-heading {
 
 .submenu.no-border:hover {
   border-left: none !important;
-  color: white !important
+  color: white !important;
 }
 
 /* .submenu.no-border a {
@@ -1112,7 +1092,7 @@ li:hover .career-reboot-heading {
 
   .online-program-link {
     padding: 0.6rem 0.5rem !important;
-    font-size: 0.60rem !important;
+    font-size: 0.6rem !important;
   }
 
   .top-bar a {
@@ -1123,7 +1103,7 @@ li:hover .career-reboot-heading {
     margin-right: 0.4rem !important;
   }
 }
-@media only screen and (min-width:1201px) and (max-width: 1350px) {
+@media only screen and (min-width: 1201px) and (max-width: 1350px) {
   .navbar-nav .nav-link {
     font-size: 10px !important;
     padding-left: 0px !important;
@@ -1133,49 +1113,49 @@ li:hover .career-reboot-heading {
     padding: 0.5rem 0.2rem !important;
     font-size: 0.3rem !important;
   }
-    .top-bar a {
+  .top-bar a {
     margin-left: 0 !important;
     font-size: 9px !important;
   }
-  .logo{
+  .logo {
     height: 100px !important;
   }
-  .logo-text span{
+  .logo-text span {
     font-size: 20px !important;
   }
-  .logo-text{
+  .logo-text {
     font-size: 15px !important;
   }
-  .search-icon-nab-bg{
+  .search-icon-nab-bg {
     padding: 2px 3px;
   }
-  .nav-bar-search-icon{
+  .nav-bar-search-icon {
     height: 12px !important;
   }
-  .profile-icon-nab-bg{
-        padding: 6px 3px;
+  .profile-icon-nab-bg {
+    padding: 6px 3px;
   }
-  .logo-box{
+  .logo-box {
     height: 100px;
   }
-  .dropdown-menu-col .top-head{
-    font-size: 0.60rem !important;
+  .dropdown-menu-col .top-head {
+    font-size: 0.6rem !important;
     padding-bottom: 0 !important;
   }
-  .dropdown-menu-col ul li a{
-    font-size: 0.60rem !important;
+  .dropdown-menu-col ul li a {
+    font-size: 0.6rem !important;
   }
-  .top-bar .dropdown-menu .dropdown-menu-col .top-head a{
-    font-size: 0.60rem !important;
+  .top-bar .dropdown-menu .dropdown-menu-col .top-head a {
+    font-size: 0.6rem !important;
   }
-  .top-bar .dropdown-menu .dropdown-menu-col ul li a{
-    font-size: 0.60rem !important;
+  .top-bar .dropdown-menu .dropdown-menu-col ul li a {
+    font-size: 0.6rem !important;
   }
-  .dropdown-menu{
+  .dropdown-menu {
     padding: 1rem !important;
   }
 }
-@media only screen and (min-width:768px) and (max-width: 1200px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
   .navbar-nav .nav-link {
     font-size: 9px !important;
     padding-left: 0px !important;
@@ -1185,112 +1165,55 @@ li:hover .career-reboot-heading {
     padding: 0.5rem 0.2rem !important;
     font-size: 0.3rem !important;
   }
-    .top-bar a {
+  .top-bar a {
     margin-left: 0 !important;
     font-size: 8px !important;
   }
-  .logo{
+  .logo {
     height: 100px !important;
   }
-  .logo-text span{
+  .logo-text span {
     font-size: 20px !important;
   }
-  .logo-text{
+  .logo-text {
     font-size: 15px !important;
   }
-  .search-icon-nab-bg{
+  .search-icon-nab-bg {
     padding: 2px 3px;
   }
-  .nav-bar-search-icon{
+  .nav-bar-search-icon {
     height: 12px !important;
   }
-  .profile-icon-nab-bg{
-        padding: 6px 3px;
+  .profile-icon-nab-bg {
+    padding: 6px 3px;
   }
-  .logo-box{
+  .logo-box {
     height: 100px;
   }
-  .dropdown-menu-col .top-head{
-    font-size: 0.50rem !important;
+  .dropdown-menu-col .top-head {
+    font-size: 0.5rem !important;
     padding-bottom: 0 !important;
   }
-  .dropdown-menu-col ul li a{
-    font-size: 0.50rem !important;
+  .dropdown-menu-col ul li a {
+    font-size: 0.5rem !important;
   }
-  .top-bar .dropdown-menu .dropdown-menu-col .top-head a{
-    font-size: 0.50rem !important;
+  .top-bar .dropdown-menu .dropdown-menu-col .top-head a {
+    font-size: 0.5rem !important;
   }
-  .top-bar .dropdown-menu .dropdown-menu-col ul li a{
-    font-size: 0.50rem !important;
+  .top-bar .dropdown-menu .dropdown-menu-col ul li a {
+    font-size: 0.5rem !important;
   }
-  .dropdown-menu{
+  .dropdown-menu {
     padding: 1rem !important;
   }
 }
-@media only screen and (min-width:768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .navbar-nav .nav-link {
     font-size: 8.5px !important;
     padding-left: 0px !important;
-     padding-right:10px !important
+    padding-right: 10px !important;
   }
-
-  .online-program-link {
-    padding: 0.5rem 0.2rem !important;
-    font-size: 0.3rem !important;
-  }
-    .top-bar a {
-    margin-left: 0 !important;
-    font-size: 7.5px !important;
-  }
-  .logo{
-    height: 75px !important;
-  }
-  .logo-text span{
-    font-size: 20px !important;
-  }
-  .logo-text{
-    font-size: 9px !important;
-    margin-left: 8%;
-    margin-top: -9.5%;
-    margin-bottom: -8%;
-  }
-  .search-icon-nab-bg{
-    padding: 2px 3px;
-  }
-  .nav-bar-search-icon{
-    height: 12px !important;
-  }
-  .profile-icon-nab-bg{
-        padding: 6px 3px;
-  }
-  .logo-box{
-    height: 50px;
-  }
-  .dropdown-menu-col .top-head{
-    font-size: 0.50rem !important;
-    padding-bottom: 0 !important;
-  }
-  .dropdown-menu-col ul li a{
-    font-size: 0.50rem !important;
-  }
-  .top-bar .dropdown-menu .dropdown-menu-col .top-head a{
-    font-size: 0.50rem !important;
-  }
-  .top-bar .dropdown-menu .dropdown-menu-col ul li a{
-    font-size: 0.50rem !important;
-  }
-  .dropdown-menu{
-    padding: 1rem !important;
-  }
-  
-}
-@media only screen and (min-width:992px) and (max-width: 1024px) {
-  .navbar-nav .nav-link {
-    font-size: 7.5px !important;
-    padding-left: 0px !important;
-    padding-right:5px !important
-  }
-  .navbar-main-container .container-fluid{
+    .container-nowrap {
     flex-wrap: nowrap !important;
   }
 
@@ -1298,45 +1221,102 @@ li:hover .career-reboot-heading {
     padding: 0.5rem 0.2rem !important;
     font-size: 0.3rem !important;
   }
-    .top-bar a {
+  .top-bar a {
     margin-left: 0 !important;
     font-size: 7.5px !important;
   }
-  .logo{
-    height: 100px !important;
+  .logo {
+    height: 75px !important;
   }
-  .logo-text span{
+  .logo-text span {
     font-size: 20px !important;
   }
-  .logo-text{
-    font-size: 15px !important;
+  .logo-text {
+    font-size: 9px !important;
+    margin-left: 8%;
+    margin-top: -9.5%;
+    margin-bottom: -8%;
   }
-  .search-icon-nab-bg{
+  .search-icon-nab-bg {
     padding: 2px 3px;
   }
-  .nav-bar-search-icon{
+  .nav-bar-search-icon {
     height: 12px !important;
   }
-  .profile-icon-nab-bg{
-        padding: 6px 3px;
+  .profile-icon-nab-bg {
+    padding: 6px 3px;
   }
-  .logo-box{
-    height: 100px;
+  .logo-box {
+    height: 50px;
   }
-  .dropdown-menu-col .top-head{
-    font-size: 0.50rem !important;
+  .dropdown-menu-col .top-head {
+    font-size: 0.5rem !important;
     padding-bottom: 0 !important;
   }
-  .dropdown-menu-col ul li a{
-    font-size: 0.50rem !important;
+  .dropdown-menu-col ul li a {
+    font-size: 0.5rem !important;
   }
-  .top-bar .dropdown-menu .dropdown-menu-col .top-head a{
-    font-size: 0.50rem !important;
+  .top-bar .dropdown-menu .dropdown-menu-col .top-head a {
+    font-size: 0.5rem !important;
   }
-  .top-bar .dropdown-menu .dropdown-menu-col ul li a{
-    font-size: 0.50rem !important;
+  .top-bar .dropdown-menu .dropdown-menu-col ul li a {
+    font-size: 0.5rem !important;
   }
-  .dropdown-menu{
+  .dropdown-menu {
+    padding: 1rem !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+  .navbar-nav .nav-link {
+    font-size: 7.5px !important;
+    padding-left: 0px !important;
+    padding-right: 5px !important;
+  }
+
+
+  .online-program-link {
+    padding: 0.5rem 0.2rem !important;
+    font-size: 0.3rem !important;
+  }
+  .top-bar a {
+    margin-left: 0 !important;
+    font-size: 7.5px !important;
+  }
+  .logo {
+    height: 100px !important;
+  }
+  .logo-text span {
+    font-size: 20px !important;
+  }
+  .logo-text {
+    font-size: 15px !important;
+  }
+  .search-icon-nab-bg {
+    padding: 2px 3px;
+  }
+  .nav-bar-search-icon {
+    height: 12px !important;
+  }
+  .profile-icon-nab-bg {
+    padding: 6px 3px;
+  }
+  .logo-box {
+    height: 100px;
+  }
+  .dropdown-menu-col .top-head {
+    font-size: 0.5rem !important;
+    padding-bottom: 0 !important;
+  }
+  .dropdown-menu-col ul li a {
+    font-size: 0.5rem !important;
+  }
+  .top-bar .dropdown-menu .dropdown-menu-col .top-head a {
+    font-size: 0.5rem !important;
+  }
+  .top-bar .dropdown-menu .dropdown-menu-col ul li a {
+    font-size: 0.5rem !important;
+  }
+  .dropdown-menu {
     padding: 1rem !important;
   }
 }
@@ -1369,9 +1349,8 @@ li:hover .career-reboot-heading {
   border-left: none !important;
 }
 
-
 /* Add left border only for submenus under .sublink-custom */
-.dropdown-menu-col ul li:has(.sublink-custom)>.submenu {
+.dropdown-menu-col ul li:has(.sublink-custom) > .submenu {
   border-left: 1.5px solid #d4d4d4 !important;
   padding-left: 1rem;
   /* optional for spacing */
@@ -1379,20 +1358,19 @@ li:hover .career-reboot-heading {
 }
 
 /* Optional: soften the look */
-.dropdown-menu-col ul li:has(.sublink-custom)>.submenu li a {
+.dropdown-menu-col ul li:has(.sublink-custom) > .submenu li a {
   font-size: 0.72rem;
   color: #f0f0f0 !important;
 }
 
 /* Keep hover clean (only affect submenu links) */
-.dropdown-menu-col ul li:has(.sublink-custom)>.submenu li:hover a {
+.dropdown-menu-col ul li:has(.sublink-custom) > .submenu li:hover a {
   color: black !important;
   background: #ffffffb6;
   border-radius: 2px;
 }
 
 @media (max-width: 768px) {
-
   /* Override uppercase text on mobile */
   .navbar-nav .nav-link,
   .dropdown-menu-col .top-head,
@@ -1406,20 +1384,19 @@ li:hover .career-reboot-heading {
 }
 
 @media (max-width: 768px) {
-
   .dropdown-menu-col .top-head,
   .dropdown-menu-col ul li a {
     text-transform: none !important;
   }
 }
 @media (min-width: 768px) {
-    .navbar-expand-lg .navbar-nav {
-        flex-direction: row;
-    }
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+  }
 }
 @media (min-width: 768px) {
-    .navbar-expand-lg .navbar-collapse {
-        display: flex !important;
-        flex-basis: auto;
-    }
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
 }

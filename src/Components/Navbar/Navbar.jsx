@@ -147,7 +147,7 @@ const Navbar = () => {
   return (
     <header className="position-relative">
       <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-md py-0 navbar-main-container">
-        <div className="container-fluid">
+        <div className="container-fluid container-nowrap">
           {/* Logo */}
           <Link
             className="navbar-brand d-flex align-items-center logo-box m-lg-0"
