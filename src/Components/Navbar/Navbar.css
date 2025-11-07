@@ -457,7 +457,7 @@ button {
   display: none !important;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   .mobile-toggle {
     display: inline-flex;
     align-items: center;
@@ -557,7 +557,7 @@ button {
   display: none;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   .navbar-brand.mobile-only {
     display: block;
     display: block;
@@ -1104,7 +1104,7 @@ li:hover .career-reboot-heading {
   margin-right: 0.5rem !important;
 }
 
-@media only screen and (min-width: 1351px) and (max-width: 1499px) {
+@media only screen and (min-width: 768px) and (max-width: 1499px) {
   .navbar-nav .nav-link {
     font-size: 12px !important;
     padding-left: 5px !important;
@@ -1120,7 +1120,7 @@ li:hover .career-reboot-heading {
   }
 
   .list-inline-item:not(:last-child) {
-    margin-right: 0.7rem !important;
+    margin-right: 0.4rem !important;
   }
 }
 @media only screen and (min-width:1201px) and (max-width: 1350px) {
@@ -1175,7 +1175,7 @@ li:hover .career-reboot-heading {
     padding: 1rem !important;
   }
 }
-@media only screen and (min-width:1025px) and (max-width: 1200px) {
+@media only screen and (min-width:768px) and (max-width: 1200px) {
   .navbar-nav .nav-link {
     font-size: 9px !important;
     padding-left: 0px !important;
@@ -1227,10 +1227,68 @@ li:hover .career-reboot-heading {
     padding: 1rem !important;
   }
 }
-@media only screen and (min-width:991px) and (max-width: 1024px) {
+@media only screen and (min-width:768px) and (max-width: 992px) {
   .navbar-nav .nav-link {
     font-size: 8.5px !important;
     padding-left: 0px !important;
+     padding-right:10px !important
+  }
+
+  .online-program-link {
+    padding: 0.5rem 0.2rem !important;
+    font-size: 0.3rem !important;
+  }
+    .top-bar a {
+    margin-left: 0 !important;
+    font-size: 7.5px !important;
+  }
+  .logo{
+    height: 75px !important;
+  }
+  .logo-text span{
+    font-size: 20px !important;
+  }
+  .logo-text{
+    font-size: 9px !important;
+    margin-left: 8%;
+    margin-top: -9.5%;
+    margin-bottom: -8%;
+  }
+  .search-icon-nab-bg{
+    padding: 2px 3px;
+  }
+  .nav-bar-search-icon{
+    height: 12px !important;
+  }
+  .profile-icon-nab-bg{
+        padding: 6px 3px;
+  }
+  .logo-box{
+    height: 50px;
+  }
+  .dropdown-menu-col .top-head{
+    font-size: 0.50rem !important;
+    padding-bottom: 0 !important;
+  }
+  .dropdown-menu-col ul li a{
+    font-size: 0.50rem !important;
+  }
+  .top-bar .dropdown-menu .dropdown-menu-col .top-head a{
+    font-size: 0.50rem !important;
+  }
+  .top-bar .dropdown-menu .dropdown-menu-col ul li a{
+    font-size: 0.50rem !important;
+  }
+  .dropdown-menu{
+    padding: 1rem !important;
+  }
+  
+}
+@media only screen and (min-width:992px) and (max-width: 1024px) {
+  .navbar-nav .nav-link {
+    font-size: 7.5px !important;
+    padding-left: 0px !important;
+    padding-right:5px !important
   }
 
   .online-program-link {
@@ -1330,7 +1388,7 @@ li:hover .career-reboot-heading {
   border-radius: 2px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
 
   /* Override uppercase text on mobile */
   .navbar-nav .nav-link,
@@ -1344,10 +1402,21 @@ li:hover .career-reboot-heading {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
 
   .dropdown-menu-col .top-head,
   .dropdown-menu-col ul li a {
     text-transform: none !important;
   }
+}
+@media (min-width: 768px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+    }
+}
+@media (min-width: 768px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
 }

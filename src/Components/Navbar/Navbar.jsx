@@ -11,10 +11,10 @@ const Navbar = () => {
   const [openMenus, setOpenMenus] = useState({});
   const [hoverMenus, setHoverMenus] = useState({});
   const [searchDrodow, setSearchDropdown] = useState(false)
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 760);
 
   React.useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 992);
+    const handleResize = () => setIsMobile(window.innerWidth < 760);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
