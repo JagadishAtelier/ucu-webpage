@@ -67,10 +67,10 @@ function CurrentMonthPrograms() {
                         <p  className='m-0' style={{color:"gray"}}>{item.time}</p>
                         </div>
 
-                        <div className='d-flex align-items-center gap-1 pe-3' style={{borderRight:"1px solid gray"}}>
+                        {/* <div className='d-flex align-items-center gap-1 pe-3' style={{borderRight:"1px solid gray"}}>
                             <File size={18} style={{color:"gray"}}/>
                         <p className='m-0' style={{color:"gray"}}>{item.pdf}</p>
-                        </div>
+                        </div> */}
 
                         <div className='d-flex align-items-center gap-1 pe-3' style={{borderRight:"1px solid gray"}}>
                         <BiRupee size={18} style={{color:"gray"}}/>

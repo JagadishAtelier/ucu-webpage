@@ -32,15 +32,15 @@ function ConsortiumNumbers() {
             <div className='consortium-number-div'>
                 <div className='consortium-number-div-left'>
                     <h1 className='text-uppercase col-10 mx-auto'>UCU Consortium By The Numbers</h1>
-                    <p className='col-10 mx-auto'>Our facts and figures are a testament to our efforts to drive impactful change:</p>
+                    <p className='col-10 mx-auto text-white'>Our facts and figures are a testament to our efforts to drive impactful change:</p>
                     <div className='col-10 mx-auto left-consotium-number'>
                         <p className='fs-2 mb-0 ps-3 fw-bold'>20,000+ </p>
-                        <p className='left-consotium-number-p2 ps-3'>Leading academicians & industry professionals
+                        <p className='left-consotium-number-p2 ps-3 text-white'>Leading academicians & industry professionals
                         </p>
                     </div>
                     <div className='col-10 mx-auto left-consotium-number mt-4'>
                         <p className='fs-2 mb-0 ps-3 fw-bold'>2000 </p>
-                        <p className='left-consotium-number-p2 ps-3'> CXOs associated with us</p>
+                        <p className='left-consotium-number-p2 ps-3 text-white'> CXOs associated with us</p>
                     </div>
                 </div>
                 <div className='consortium-number-image-div position-relative'>

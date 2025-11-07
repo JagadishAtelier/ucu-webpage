@@ -9,7 +9,7 @@
 }
 
 .consoritum-para-text {
-    color: rgb(184, 183, 183);
+    color: white;
 }
 
 .consoritum-pillar-line {
@@ -104,12 +104,12 @@
     object-fit: cover;
 }
 .consortium-strategic-container {
-  background: linear-gradient(205deg, #07baf3 1%, #1703a9 100%);
-  color: white;
+  /* background: linear-gradient(205deg, #07baf3 1%, #1703a9 100%); */
+  color: black;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); */
   padding: 20px;
-  height: 39vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -123,7 +123,7 @@
 
 .strategic-swiper .swiper-pagination {
   position: absolute;
-  bottom: 0; /* below the box */
+  bottom: 20px; /* below the box */
   left: 50%;
   transform: translateX(-50%);
 }

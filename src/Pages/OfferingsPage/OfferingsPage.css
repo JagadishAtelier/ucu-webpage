@@ -18,7 +18,6 @@
 }
 
 .offer-head {
-  color: #043873;
   margin-top: 10px;
 }
 
@@ -51,7 +50,7 @@
   border-radius: 5px;
 }
 .og-para-color{
-  color: gainsboro;
+  color: white;
 }
 .op-image{
   width: 50%;
@@ -62,7 +61,7 @@
 .op-blue-box{
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  color: rgb(107, 107, 107);
+  color: black;
 }
 
 
@@ -94,7 +93,7 @@
 
 .custom-modal-body .form-label {
   font-weight: 500;
-  color: #333;
+  color: black;
   font-size: 0.95rem;
 }
 
