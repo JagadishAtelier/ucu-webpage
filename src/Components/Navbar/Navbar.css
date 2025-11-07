@@ -1290,6 +1290,9 @@ li:hover .career-reboot-heading {
     padding-left: 0px !important;
     padding-right:5px !important
   }
+  .navbar-main-container .container-fluid{
+    flex-wrap: nowrap !important;
+  }
 
   .online-program-link {
     padding: 0.5rem 0.2rem !important;
