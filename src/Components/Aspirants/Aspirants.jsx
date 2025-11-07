@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./Aspirants.css";
-
+import { getAllAspirants } from "../../Api/HomePageApi/AspirantsApi";
 const data = [
   {
     videoUrl: "https://youtu.be/uvyTVoElld4?si=ET5MBHw44ReoNMhG",
@@ -45,7 +45,21 @@ function convertToEmbedUrl(url) {
 }
 
 function Aspirants() {
+  const [aspirantData , setAspirantData] = useState([])
 const [activeVideo, setActiveVideo] = useState(null);
+
+useEffect(()=>{
+  const fetchData = async() =>{
+    try {
+      const res = await getAllAspirants()
+      setAspirantData(res.data || res)
+      console.log("Aspirant data : ",res.data || res)
+    } catch (error) {
+      console.log("Failed to fetch data",error)
+    }
+  }
+  fetchData()
+},[])
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -86,7 +100,7 @@ const [activeVideo, setActiveVideo] = useState(null);
         }}
         className="asp-industry-card-div"
       >
-    {data.map((item, index) => (
+    {aspirantData.map((item, index) => (
     <SwiperSlide key={index}>
       <div
         key={index}
@@ -97,7 +111,7 @@ const [activeVideo, setActiveVideo] = useState(null);
         {activeVideo === index ? (
           <iframe
             className="asp-i-frame"
-            src={convertToEmbedUrl(item.videoUrl)}
+            src={convertToEmbedUrl(item.VideoUrl)}
             title={item.author}
             frameBorder="0"
             allow="autoplay; encrypted-media"
@@ -109,7 +123,7 @@ const [activeVideo, setActiveVideo] = useState(null);
             onClick={() => setActiveVideo(index)}
           >
             <img
-              src={item.thumbnail}
+              src={item.thumbNailUrl}
               alt={item.author}
               className="asp-participant-play-thumbnail"
             />
@@ -119,7 +133,7 @@ const [activeVideo, setActiveVideo] = useState(null);
         <p className="program-description">
           <strong>-{item.author}</strong>
         </p>
-        <p className="program-description">{item.proffection}</p>
+        <p className="program-description">{item.authorProf}</p>
       </div>
       </SwiperSlide>
     ))}
