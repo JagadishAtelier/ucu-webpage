@@ -11,3 +11,211 @@
   width: 100%;
   object-fit: cover;
 }
+
+.course-select-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 1rem;
+}
+
+.course-input {
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.plus-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  cursor: pointer;
+}
+
+.course-dropdown {
+  position: absolute;
+  width:70%;
+  background: #fff;
+  color: #000;
+  z-index: 1000;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-top: 4px;
+  padding: 10px 10px 50px !important;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  row-gap: 10px;
+  font-size: 15px;
+}
+
+.course-option {
+  margin-bottom: 6px;
+}
+
+.done-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  border-radius: 6px;
+  background-color: #5ac501;
+  border: none;
+}
+.duration-time-eep-finder{
+    display: flex;
+    gap: 10px;
+    width: 69%;
+}
+
+.drop-down-format{
+    top:120%;
+    right: -10%;
+}
+
+
+.eep-upcoming-section {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+}
+
+.eep-programme-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.eep-programme-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.eep-programme-title {
+  color: #0b2b6a;
+  margin-bottom: 0.75rem;
+  height: 10vh;
+}
+
+.eep-programme-desc {
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.eep-programme-info {
+  background-color: #f0f4fb;
+  border-radius: 10px;
+  height: 30vh;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.eep-programme-footer {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.eep-know-btn {
+  background-color: #0066ff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.25rem;
+}
+
+.eep-know-btn:hover {
+  background-color: #004cc4;
+}
+
+
+
+
+.eepim-industry-container {
+  padding: 0 0;
+}
+
+.eepim-industry-card-div {
+  width: 100%;
+  max-width: 1320px;
+  display: flex;
+  padding: 40px 0;
+  gap: 30px;
+}
+
+.eepim-industry-card {
+  height: 40vh;
+  padding: 15px;
+  border: 1px solid white;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.eepim-i-frame {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.eepim-industry-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* ✅ Responsive Swiper settings */
+@media (max-width: 768px) {
+  .eepim-industry-card {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .eepim-i-frame {
+    height: 200px;
+  }
+}
+
+/* ✅ Swiper UI tweaks (optional) */
+.eepim-swiper-button-next,
+.eepim-swiper-button-prev {
+  color: #5ac501;
+}
+
+.eepim-swiper-pagination-bullet {
+  background-color: #5ac501;
+}
+
+
+@media (max-width: 768px) {
+    .duration-time-eep-finder{
+        flex-direction: column;
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .course-dropdown{
+        display: flex;
+        flex-direction: column;
+    }
+    .plus-icon-finder{
+        top: 10% !important;
+    }
+    .drop-down-format{
+        right: 0;
+    }
+    .eepim-industry-card{
+        flex-direction: column;
+    }
+}
