@@ -302,7 +302,7 @@ const Navbar = () => {
             </div>
 
             {/* Bottom/Main Menu */}
-            <ul className="navbar-nav navbar-main d-flex justify-content-end align-items-center">
+            <ul className="navbar-nav navbar-main d-flex justify-content-end align-items-center gap-2">
               {menuData
                 .filter((menu) => menu.placement === "bottom")
                 .map((menu) => (

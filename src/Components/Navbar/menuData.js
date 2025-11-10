@@ -2,7 +2,7 @@ export const menuData = [
   // 🔝 Top Menu
   { label: "Home", link: "/", placement: "top" },
   {
-    label: "Industry Partnership",
+    label: "Partnership",
     placement: "top",
     submenu: [
       {
@@ -69,17 +69,22 @@ export const menuData = [
     ],
   },
   { label: "Campus", link: "/campus-ambience", placement: "top" },
-  { label: "Societal impact", link: "/csr", placement: "top" },
-  {
-    label: "Budding Talent",
+    {
+    label: "Consortium",
+    link: "/consortium",
     placement: "top",
-    submenu: [
-      { label: "Open Programs", link: "/open-programs" },
-      { label: "Summer Programs", link: "/summer-programs" },
-    ],
   },
+  // { label: "Societal impact", link: "/csr", placement: "top" },
+  // {
+  //   label: "Budding Talent",
+  //   placement: "top",
+  //   submenu: [
+  //     { label: "Open Programs", link: "/open-programs" },
+  //     { label: "Summer Programs", link: "/summer-programs" },
+  //   ],
+  // },
   { label: "Careers", link: "/careers", placement: "top" },
-  { label: "News & Blog", link: "/news-blogs", placement: "top" },
+  // { label: "Media", link: "/media", placement: "top" },
   // { label: "contact", link: "/contact", placement: "top" },
   {
     label: "Contact Us",
@@ -342,12 +347,6 @@ export const menuData = [
   },
 
   {
-    label: "Consortium",
-    link: "/consortium",
-    placement: "bottom",
-  },
-
-  {
     label: "Campus Placements",
     placement: "bottom",
     submenu: [
@@ -598,7 +597,7 @@ export const menuDataMobile = [
     ],
   },
   {
-    label: "Industry Partnership",
+    label: "Partnership",
     placement: "top",
     submenu: [
       {
@@ -661,17 +660,17 @@ export const menuDataMobile = [
     ],
   },
   { label: "Campus", link: "/campus-ambience", placement: "top" },
-  { label: "Societal impact", link: "/csr", placement: "top" },
-  {
-    label: "Budding Talent",
-    placement: "top",
-    submenu: [
-      { label: "Open Programs", link: "/open-programs" },
-      { label: "Summer Programs", link: "/summer-programs" },
-    ],
-  },
+  // { label: "Societal impact", link: "/csr", placement: "top" },
+  // {
+  //   label: "Budding Talent",
+  //   placement: "top",
+  //   submenu: [
+  //     { label: "Open Programs", link: "/open-programs" },
+  //     { label: "Summer Programs", link: "/summer-programs" },
+  //   ],
+  // },
   { label: "Careers", link: "/careers", placement: "top" },
-  { label: "News & Blog", link: "/news-blogs", placement: "top" },
+  // { label: "News & Blog", link: "/news-blogs", placement: "top" },
   // { label: "contact", link: "/contact", placement: "top" },
   {
     label: "Contact Us",

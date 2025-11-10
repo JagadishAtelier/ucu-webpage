@@ -1,0 +1,13 @@
+.eep-journey-head{
+    background-image: url(../../Assets/EEPage/program-finder-bg.webp);
+    color: white;
+    padding: 2rem;
+    text-align: left;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.eep-journey-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}

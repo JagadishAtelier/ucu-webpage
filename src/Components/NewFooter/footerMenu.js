@@ -43,7 +43,7 @@ export const  footerMenu = [
       "Campus Placements",
        "Industry Engagement",
        "Strategic Collaborations",
-      "News & Blogs",
+      "Media",
       "Admissions",
       "Contact Us",
       "Campus Ambience",

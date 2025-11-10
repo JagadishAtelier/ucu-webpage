@@ -7,9 +7,9 @@
 }
 
 .top-bar a {
-  color: rgb(12, 12, 12);
-  font-size: 11px;
-  font-weight: 400;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
   letter-spacing: 1px;
   text-decoration: none;
   text-transform: capitalize !important;
@@ -29,11 +29,11 @@
    Navbar Links
 --------------------------------*/
 .navbar-nav .nav-link {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #000 !important;
+  color: black !important;
   position: relative;
   padding: 15px 15px;
 }
@@ -1081,7 +1081,7 @@ li:hover .career-reboot-heading {
 }
 
 .list-inline-item:not(:last-child) {
-  margin-right: 0.5rem !important;
+  margin-right: 1rem !important;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1499px) {
@@ -1096,7 +1096,9 @@ li:hover .career-reboot-heading {
   }
 
   .top-bar a {
-    margin-left: 0 !important;
+    margin-left: 10px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
   }
 
   .list-inline-item:not(:last-child) {
