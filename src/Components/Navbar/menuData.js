@@ -232,7 +232,7 @@ export const menuData = [
     submenu: [
       {
         label: "Customised Learning Programs for Corporate Professionals",
-        link: "/program/program-customised-learning-programs-for-corporate-professionals",
+        link: "/executive-edu",
         submenu: [
           {
             label: "Management Development Programs (MDPs)",
