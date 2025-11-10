@@ -1,0 +1,234 @@
+/* Main container */
+
+/* Card grid row */
+.Cpp-full-row {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+  row-gap: 2rem;
+}
+
+/* Each card */
+.Cpp-full-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.Cpp-full-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Card title */
+.Cpp-full-card p:first-child {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: #e9e9e9;
+  border-bottom: 4px solid #5ac501;
+  padding-bottom: 0.5rem;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 1rem 0;
+}
+
+/* Info rows */
+.Cpp-full-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+}
+
+.Cpp-full-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Left info with icon */
+.Cpp-full-info-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icon color */
+.Cpp-full-info-left svg {
+  color: #5ac501;
+  width: 18px;
+  height: 18px;
+}
+
+/* Button section */
+.Cpp-full-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.Cpp-full-buttons button {
+  flex: 1;
+  font-size: 0.7rem;
+  margin: 0 4px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Button styles */
+.Cpp-full-buttons button:first-child {
+  background-color: #5ac501;
+  color: white;
+  border: none;
+}
+
+.Cpp-full-buttons button:first-child:hover {
+  background-color: #5ac501;
+}
+
+.Cpp-full-buttons button:last-child {
+  background-color: #fff;
+  color: #5ac501;
+  border: 1px solid #5ac501;
+}
+
+.Cpp-full-buttons button:last-child:hover {
+  background-color: #5ac501;
+  color: #fff;
+}
+
+
+.Cpp-req-title {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Two-column layout */
+.Cpp-req-layout {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Left sidebar */
+.Cpp-req-sidebar {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: 5%;
+  height: fit-content;
+}
+
+/* Sidebar buttons */
+.Cpp-req-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Cpp-req-btn:hover {
+  background-color: #f0f8ff;
+  color: black;
+}
+
+.Cpp-req-active {
+  background-color: #5ac501 !important;
+  color: #fff !important;
+  border-color: #5ac501 !important;
+}
+
+/* Right side content */
+.Cpp-req-content {
+  position: relative;
+}
+
+.Cpp-req-content h2 {
+  color: #5ac501;
+  margin-bottom: 0.5rem;
+}
+
+.Cpp-req-content p {
+  color: #444;
+  line-height: 1.5;
+}
+
+.Cpp-tab-buttons button {
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.Cpp-tab-buttons .btn-primary {
+  background-color: #5ac501;
+  border: none;
+}
+
+.Cpp-tab-buttons .btn-outline-primary {
+  border-color: #5ac501;
+  color: black;
+}
+
+.Cpp-tab-buttons .btn-outline-primary:hover {
+  background-color: #5ac501;
+  color: #fff;
+}
+
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .Cpp-req-layout {
+    flex-direction: column;
+  }
+  .Cpp-req-sidebar {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    position: relative;
+  }
+  .Cpp-req-btn {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+  .Cpp-full-row{
+    grid-template-columns: repeat(2,1fr);
+    padding: 0 5%;
+  }
+}
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .Cpp-full-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px){
+  .Cpp-full-row{
+    grid-template-columns: repeat(1,1fr);
+    padding: 0 5%;
+  }
+}
