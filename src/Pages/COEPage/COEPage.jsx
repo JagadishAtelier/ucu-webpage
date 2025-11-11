@@ -4,6 +4,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 import NewFooter from '../../Components/NewFooter/NewFooter'
 import './COEPage.css'
 import COEAbout from './COEAbout'
+import COEBenefactors from './COEBenefactors'
 function COEPage() {
     return (
         <div>
@@ -34,6 +35,7 @@ function COEPage() {
                 </div>
             </div>
             <COEAbout/>
+            <COEBenefactors/>
             <NewFooter/>
         </div>
     )

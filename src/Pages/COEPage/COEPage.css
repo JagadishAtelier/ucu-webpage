@@ -1,0 +1,35 @@
+.coe-benfactor-grid-div{
+    height: 25vh;
+    background-color: white;
+    border-radius: 10px;
+}
+.coe-benfactor-grid-div img{
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.coe-benfactor-d-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+    row-gap: 3rem;
+
+}
+
+
+
+@media (max-width:768px) {
+    .coe-benfactor-d-grid{
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 2rem;
+    }
+    .coe-benfactor-grid-div{
+    height: 30vh;
+}
+}
+@media (max-width:480px) {
+    .coe-benfactor-d-grid{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 2rem;
+    }
+}
