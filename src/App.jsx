@@ -40,6 +40,7 @@ import OfferingsPage from "./Pages/OfferingsPage/OfferingsPage";
 import EEPHome from "./Pages/ExecutiveeduPage/EEPHome";
 import ContactUsPage from "./Pages/ContactUsPage/ContactUsPage";
 import CampusPlacementsPage from "./Pages/CampusPlacementsPage/CampusPlacementsPage";
+import COEPage from "./Pages/COEPage/COEPage";
 
 function App() {
   useEffect(() => {
@@ -80,6 +81,7 @@ function App() {
         <Route path="/offerings" element={<OfferingsPage/>} />
         <Route path="/executive-edu/*" element={<EEPHome/>} />
         <Route path="/placements/*" element={<CampusPlacementsPage/>} />
+        <Route path="/coe/*" element={<COEPage/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>

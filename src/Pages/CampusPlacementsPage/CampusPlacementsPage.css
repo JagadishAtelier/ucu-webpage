@@ -28,11 +28,11 @@
 .Cpp-full-card p:first-child {
   font-weight: 600;
   font-size: 1rem;
-  color: #222;
   margin-bottom: 1rem;
   text-align: center;
-  background-color: #e9e9e9;
-  border-bottom: 4px solid #5ac501;
+    background: linear-gradient(205deg, rgb(7, 186, 243)  1% , rgb(23, 3, 169) 100%) !important;
+    color: white;
+  /* border-bottom: 4px solid #5ac501; */
   padding-bottom: 0.5rem;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -62,7 +62,7 @@
 
 /* Icon color */
 .Cpp-full-info-left svg {
-  color: #5ac501;
+  color: #005bd4;
   width: 18px;
   height: 18px;
 }
@@ -149,9 +149,9 @@
 }
 
 .Cpp-req-active {
-  background-color: #5ac501 !important;
+  background-color: #005bd4 !important;
   color: #fff !important;
-  border-color: #5ac501 !important;
+  border-color: #005bd4 !important;
 }
 
 /* Right side content */
