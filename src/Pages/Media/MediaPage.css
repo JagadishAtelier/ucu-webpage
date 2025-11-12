@@ -1,0 +1,32 @@
+.ucu-media-page-card {
+    background: linear-gradient(205deg, rgb(7, 186, 243) 1%, rgb(23, 3, 169) 100%) !important;
+    color: white !important;
+}
+
+.med-route-bg {
+    padding-right: 8%;
+}
+
+.med-image {
+    height: 40vh;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media (max-width:768px) {
+    .ucu-media-page-card {
+        height: fit-content !important;
+    }
+
+}
+
+@media (max-width:480px) {
+    .med-route-bg {
+        padding: 0 3%;
+    }
+
+    .ucu-media-page-card {
+        flex-direction: column !important;
+    }
+}

@@ -22,7 +22,7 @@ export const menuData = [
               { label: "CIO ", link: "/engagement/cio" },
               { label: "CTO ", link: "/engagement/cto" },
               { label: "CMO ", link: "/engagement/cmo" },
-              { label: "CHRO", link: "/engagement/chro"},
+              { label: "CHRO", link: "/engagement/chro" },
               { label: "CFO ", link: "/engagement/cfo" },
               { label: "CPO ", link: "/engagement/cpo" },
             ],
@@ -69,7 +69,7 @@ export const menuData = [
     ],
   },
   { label: "Campus", link: "/campus-ambience", placement: "top" },
-    {
+  {
     label: "Consortium",
     link: "/consortium",
     placement: "top",
@@ -84,7 +84,15 @@ export const menuData = [
   //   ],
   // },
   { label: "Careers", link: "/careers", placement: "top" },
-  // { label: "Media", link: "/media", placement: "top" },
+  {
+    label: "Media", placement: "top",
+    submenu: [
+      { label: "UCU Chennai in the Media", link: "/media/ucu-media" },
+      { label: "What’s on at UCU Chennai", link: "/media/ucu-on-at" },
+      { label: "Gallery", link: "/media/gallery" },
+      { label: "UCU Chennai Blog", link: "/media/blog" },
+    ]
+  },
   // { label: "contact", link: "/contact", placement: "top" },
   {
     label: "Contact Us",
