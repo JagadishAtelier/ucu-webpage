@@ -43,6 +43,8 @@ import CampusPlacementsPage from "./Pages/CampusPlacementsPage/CampusPlacementsP
 import COEPage from "./Pages/COEPage/COEPage";
 import UCUMedia from "./Pages/Media/UCUMedia";
 import MediaEventDetails from "./Pages/Media/MediaEventDetails";
+import UCUMediaEventsPage from "./Pages/UCUMediaEventsPage/UCUMediaEventsPage";
+import UCUMediaEventsPageDetails from "./Pages/UCUMediaEventsPage/UCUMediaEventsPageDetails";
 
 function App() {
   useEffect(() => {
@@ -86,6 +88,8 @@ function App() {
         <Route path="/coe/*" element={<COEPage/>} />
         <Route path="/media/ucu-media" element={<UCUMedia/>} />
         <Route path="/media/ucu-media/*" element={<MediaEventDetails/>} />
+        <Route path="/media/ucu-on-at" element={<UCUMediaEventsPage/>} />
+        <Route path="/media/ucu-on-at/*" element={<UCUMediaEventsPageDetails/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>

@@ -1,0 +1,44 @@
+.ucu-mepd-card{
+    height: 40vh;
+    background: linear-gradient(205deg, #07baf3 1%, #1703a9 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    z-index: 99;
+    top: 20%;
+    left: 5%;
+    padding: 20px;
+    border-radius: 5px;
+    width: 40%;
+    gap: 20px;
+}
+.ucu-mepd-card h1{
+    margin: 0;
+}
+.hr-line-mepd-page{
+    border: 3px solid white; 
+    width: 20%;
+}
+.ucu-mepd-image{
+    height: 80vh;
+    width: 65%;
+    margin-left: auto;
+    object-fit: cover;
+}
+
+@media (max-width:768px) {
+    .ucu-mepd-card{
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 35vh;
+    }
+    .ucu-mepd-image{
+        margin: 0;
+        width: 100%;
+        height: 40vh;
+    }
+}
