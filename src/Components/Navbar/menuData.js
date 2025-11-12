@@ -668,6 +668,7 @@ export const menuDataMobile = [
     ],
   },
   { label: "Campus", link: "/campus-ambience", placement: "top" },
+
   // { label: "Societal impact", link: "/csr", placement: "top" },
   // {
   //   label: "Budding Talent",
@@ -678,6 +679,15 @@ export const menuDataMobile = [
   //   ],
   // },
   { label: "Careers", link: "/careers", placement: "top" },
+    {
+    label: "Media", placement: "top",
+    submenu: [
+      { label: "UCU Chennai in the Media", link: "/media/ucu-media" },
+      { label: "What’s on at UCU Chennai", link: "/media/ucu-on-at" },
+      { label: "Gallery", link: "/media/gallery" },
+      { label: "UCU Chennai Blog", link: "/media/blog" },
+    ]
+  },
   // { label: "News & Blog", link: "/news-blogs", placement: "top" },
   // { label: "contact", link: "/contact", placement: "top" },
   {
