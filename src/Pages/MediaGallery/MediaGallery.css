@@ -19,10 +19,11 @@
 }
 
 .mga-para {
-    background-color: rgb(207, 207, 207);
+    background: linear-gradient(205deg, rgb(7, 186, 243) 1%, rgb(23, 3, 169) 100%) !important;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 10px;
+    height: 10vh;
 }
 
 .tab-button {
@@ -46,4 +47,11 @@
   font-weight: 600;
   border-bottom: 3px solid #5ac501;
 }
-
+.mga-card-div{
+    border-radius: 10px;
+    color: white;
+}
+.mga-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}

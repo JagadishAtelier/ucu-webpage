@@ -68,7 +68,8 @@ function MediaGalleryAbout() {
             </p>
 
             <div>
-                <h1 className='mb-3'>OUR VIDEO GALLERY</h1>
+                {/* <h1 className='my-3 display-4 fw-bold text-center' style={{color: "#005bd4"}}>OUR VIDEO GALLERY</h1> */}
+                <h1 className='my-4 display-4 fw-bold text-center'>OUR VIDEO GALLERY</h1>
 
                 {/* Tabs Section */}
                 <div className='d-flex flex-wrap gap-3 mb-4'>
@@ -86,21 +87,19 @@ function MediaGalleryAbout() {
 
 
                 {/* Grid Section (unchanged design) */}
-                <div className='d-grid'>
-                    <div className='row row-gap-4'>
+                    <div className='row row-gap-4 mga-grid'>
                         {filteredData.map((item, index) => (
-                            <div key={index} className="text-center col-lg-4 col-md-6 col-12">
+                            <div key={index} className="text-center mga-card-div" >
                                 <img
                                     src={item.thumbnail}
                                     alt={item.para}
                                     onClick={() => setModalVideo(item.videoUrl)}
                                     className="media-play-thumbnail"
                                 />
-                                <p className="text-start m-0 sort-disc mga-para">{item.para}</p>
+                                <p className="text-start m-0 mga-para">{item.para}</p>
                             </div>
                         ))}
                     </div>
-                </div>
 
                 {/* Modal (unchanged design) */}
                 {modalVideo && (
