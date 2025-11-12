@@ -45,6 +45,7 @@ import UCUMedia from "./Pages/Media/UCUMedia";
 import MediaEventDetails from "./Pages/Media/MediaEventDetails";
 import UCUMediaEventsPage from "./Pages/UCUMediaEventsPage/UCUMediaEventsPage";
 import UCUMediaEventsPageDetails from "./Pages/UCUMediaEventsPage/UCUMediaEventsPageDetails";
+import MediagalleryBanner from "./Pages/MediaGallery/MediagalleryBanner";
 
 function App() {
   useEffect(() => {
@@ -90,6 +91,7 @@ function App() {
         <Route path="/media/ucu-media/*" element={<MediaEventDetails/>} />
         <Route path="/media/ucu-on-at" element={<UCUMediaEventsPage/>} />
         <Route path="/media/ucu-on-at/*" element={<UCUMediaEventsPageDetails/>} />
+        <Route path="/media/gallery" element={<MediagalleryBanner/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>
