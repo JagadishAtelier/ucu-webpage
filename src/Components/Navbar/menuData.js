@@ -32,9 +32,9 @@ export const menuData = [
       {
         label: "Strategic Collaborations",
         submenu: [
-          { label: "Strategic Partners", link: "/partners" },
-          { label: "International Collaborations", link: "/collaborations" },
-          { label: "Industry Partners", link: "/Industry-partners" },
+          { label: "Strategic Partners", link: "/strategic/partners" },
+          { label: "International Collaborations", link: "/strategic/collaborations" },
+          { label: "Industry Partners", link: "/strategic/Industry-partners" },
           {
             label: "Centers of Excellence (CoEs)",
             submenu: [

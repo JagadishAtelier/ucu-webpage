@@ -48,6 +48,7 @@ import UCUMediaEventsPageDetails from "./Pages/UCUMediaEventsPage/UCUMediaEvents
 import MediagalleryBanner from "./Pages/MediaGallery/MediagalleryBanner";
 import MediablogBanner from "./Pages/MediaBlog/MediablogBanner";
 import CorparateBanner from "./Pages/CorparetePage/CorparateBanner";
+import StrategicCollabBanner from "./Pages/StrategicCollab/StrategicCollabBanner";
 
 function App() {
   useEffect(() => {
@@ -96,6 +97,7 @@ function App() {
         <Route path="/media/gallery" element={<MediagalleryBanner/>} />
         <Route path="/media/blog" element={<MediablogBanner/>} />
         <Route path="/engagement/*" element={<CorparateBanner/>} />
+        <Route path="/strategic/*" element={<StrategicCollabBanner/>} />
         {/* <Route path="/contact-us" element={<ContactUsPage/>} /> */}
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
