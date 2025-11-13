@@ -94,6 +94,7 @@ function App() {
         <Route path="/media/ucu-on-at/*" element={<UCUMediaEventsPageDetails/>} />
         <Route path="/media/gallery" element={<MediagalleryBanner/>} />
         <Route path="/media/blog" element={<MediablogBanner/>} />
+        {/* <Route path="/contact-us" element={<ContactUsPage/>} /> */}
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>

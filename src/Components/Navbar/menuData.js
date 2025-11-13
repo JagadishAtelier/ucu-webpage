@@ -62,6 +62,15 @@ export const menuData = [
                 label: "Entrepreneurship",
                 link: "/coe/entrepreneurship",
               },
+              {
+                label: "Emerging Enterprise & Innovation (EEI)",
+                link: "/coe/EmergingEnterpriseInnovation",
+              },
+              {
+                label: "Faculty Chairs",
+                link: "/coe/FacultyChairs",
+                className: "rainbow-link"
+              },
             ],
           },
         ],
@@ -638,28 +647,36 @@ export const menuDataMobile = [
             label: "Centers of Excellence (CoEs)",
             submenu: [
               {
-                label: "Center of Excellence in Marketing",
+                label: "Marketing",
                 link: "/coe/marketing",
               },
               {
-                label: "Center of Excellence in Finance",
+                label: "Finance",
                 link: "/coe/finance",
               },
               {
-                label: "Center of Excellence in Operations",
+                label: "Operations",
                 link: "/coe/operations",
               },
               {
-                label: "Center of Excellence in Analytics, Data & AI",
+                label: "Analytics, Data & AI",
                 link: "/coe/analytics-ai",
               },
               {
-                label: "Center of Excellence in Consulting",
+                label: "Consulting",
                 link: "/coe/consulting",
               },
               {
-                label: "Center of Excellence in Entrepreneurship",
+                label: "Entrepreneurship",
                 link: "/coe/entrepreneurship",
+              },
+                            {
+                label: "Emerging Enterprise & Innovation (EEI)",
+                link: "/coe/EmergingEnterpriseInnovation",
+              },
+              {
+                label: "Faculty Chairs",
+                link: "/coe/FacultyChairs",
               },
             ],
           },

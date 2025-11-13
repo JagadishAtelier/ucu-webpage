@@ -1402,3 +1402,45 @@ li:hover .career-reboot-heading {
     flex-basis: auto;
   }
 }
+
+
+/* 🌈 Rainbow gradient animation for Faculty Chairs */
+.rainbow-link {
+  /* position: relative;
+  background: linear-gradient(270deg, #ff005e, #ffbb00, #00ff6a, #007bff, #b700ff, #ff005e);
+  background-size: 600% 600%;
+  color: white !important;
+  border-radius: 6px;
+  padding: 6px 12px !important;
+  font-weight: bold !important;
+  animation: rainbowShift 6s ease infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  font-weight: bold !important;
+}
+
+/* .rainbow-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+} */
+
+/* ✨ Animation keyframes */
+/* @keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.rainbow-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  padding: 2px;
+  background: linear-gradient(270deg, #ff005e, #ffbb00, #00ff6a, #007bff, #b700ff, #ff005e);
+  background-size: 400% 400%;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: rainbowShift 4s linear infinite;
+} */
