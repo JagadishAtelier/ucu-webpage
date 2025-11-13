@@ -18,13 +18,41 @@
     padding: 10px;
 }
 
-.mga-para {
-    background: linear-gradient(205deg, rgb(7, 186, 243) 1%, rgb(23, 3, 169) 100%) !important;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 10px;
-    height: 10vh;
+/* Overlay gradient from bottom to top */
+.mga-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.90),rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  transition: all 0.3s ease;
 }
+
+/* Text on top of overlay */
+.mga-overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  right: 15px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  z-index: 2;
+  text-align: left;
+}
+.mga-card-div {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Hover effect (optional) */
+/* .mga-card-div:hover .mga-overlay {
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.90),rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+} */
 
 .tab-button {
   background: none;
@@ -54,6 +82,7 @@
 .mga-grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    gap: 20px;
 }
 @media (max-width:768px) {
     .mga-grid{

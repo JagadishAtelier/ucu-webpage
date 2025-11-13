@@ -87,19 +87,20 @@ function MediaGalleryAbout() {
 
 
                 {/* Grid Section (unchanged design) */}
-                    <div className='row row-gap-4 mga-grid'>
-                        {filteredData.map((item, index) => (
-                            <div key={index} className="text-center mga-card-div" >
-                                <img
-                                    src={item.thumbnail}
-                                    alt={item.para}
-                                    onClick={() => setModalVideo(item.videoUrl)}
-                                    className="media-play-thumbnail"
-                                />
-                                <p className="text-start m-0 mga-para">{item.para}</p>
-                            </div>
-                        ))}
-                    </div>
+                <div className='mga-grid'>
+                    {filteredData.map((item, index) => (
+                        <div key={index} className="mga-card-div position-relative" onClick={() => setModalVideo(item.videoUrl)}>
+                            <img
+                                src={item.thumbnail}
+                                alt={item.para}
+                                className="media-play-thumbnail"
+                            />
+                            <div className="mga-overlay"></div>
+                            <p className="mga-overlay-text">{item.para}</p>
+                        </div>
+
+                    ))}
+                </div>
 
                 {/* Modal (unchanged design) */}
                 {modalVideo && (

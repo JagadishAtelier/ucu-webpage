@@ -1,0 +1,106 @@
+.cap-card-div {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.cap-card-div:hover {
+  transform: translateY(-5px);
+}
+
+.media-play-thumbnail {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.cap-cxo-title {
+  font-weight: 700;
+}
+
+.cap-cxo-tabs {
+  border-bottom: 2px solid #ddd;
+}
+
+.cap-cxo-tab {
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  color: #555;
+}
+
+.cap-cxo-tab.active {
+  color: #5ac501;
+  border-bottom: 3px solid #5ac501;
+  font-weight: 700;
+}
+
+.cap-cxo-tab.inactive:hover {
+  color: #5ac501;
+}
+
+.cap-cxo-swiper {
+  margin-top: 30px;
+}
+
+.cap-cxo-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.cap-cxo-card:hover {
+  transform: translateY(-5px);
+}
+
+.cap-cxo-thumb {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.cap-cxo-card-body {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.cap-cxo-author {
+  color: white;
+  font-size: 18px;
+}
+
+.cap-cxo-prof {
+  color: white;
+  font-size: 14px;
+}
+
+.cap-cxo-para {
+  font-size: 15px;
+  color: white;
+}
+
+.cap-cxo-view-btn {
+  background-color: #5ac501;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+}
+
+.cap-cxo-view-btn:hover {
+  background-color: #5ac501;
+}
