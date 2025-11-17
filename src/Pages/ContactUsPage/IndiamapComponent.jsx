@@ -101,7 +101,6 @@ export default function IndiamapComponent() {
         </MapContainer>
       </div>
 
-      {/* Right: Full list of expected states */}
       <div
       className="col-3 d-flex flex-column gap-3 justify-content-center mt-auto"
         style={{
