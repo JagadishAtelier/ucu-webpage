@@ -163,3 +163,36 @@
   border: none !important;
   text-align: center;
 }
+
+
+/* Example: you can position divs exactly over the states */
+.state-overlay {
+  position: absolute;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0); /* transparent */
+}
+
+/* Example positions — you must adjust these based on your SVG */
+.state-overlay.maharashtra {
+  top: 60%;
+  left: 30%;
+  width: 60px;
+  height: 60px;
+}
+.state-overlay.kerala {
+  top: 85%;
+  left: 35%;
+  width: 30px;
+  height: 30px;
+}
+.state-overlay.delhi {
+  top: 20%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+}
+/* Add all other states with approximate top, left, width, height */
+
+.leaflet-container {
+  background-color: white !important;
+}

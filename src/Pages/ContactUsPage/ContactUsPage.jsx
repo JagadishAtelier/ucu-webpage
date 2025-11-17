@@ -39,7 +39,7 @@ function ContactUsPage() {
             </div>
             <ContactPageForm />
             <ContactAccordion />
-            {/* <IndiamapComponent/> */}
+            <IndiamapComponent/>
             <NewFooter />
         </div>
     )
