@@ -98,7 +98,7 @@ function App() {
         <Route path="/media/blog" element={<MediablogBanner/>} />
         <Route path="/engagement/*" element={<CorparateBanner/>} />
         <Route path="/strategic/*" element={<StrategicCollabBanner/>} />
-        {/* <Route path="/contact-us" element={<ContactUsPage/>} /> */}
+        <Route path="/contact-us" element={<ContactUsPage/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>

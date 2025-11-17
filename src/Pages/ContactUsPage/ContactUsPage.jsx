@@ -4,10 +4,13 @@ import { ChevronRight } from 'lucide-react'
 import Navbar from '../../Components/Navbar/Navbar'
 import NewFooter from '../../Components/NewFooter/NewFooter'
 import ContactPageForm from './ContactPageForm'
+import ContactAccordion from './ContactAccordion'
+import IndiamapComponent from './IndiamapComponent'
+import IndiaMapWithPopup from './IndiaMapWithPopup'
 function ContactUsPage() {
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <div
                 data-aos="fade-down"
                 className="fac-hero-section d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-md-start text-lg-start p-3 p-lg-5 p-lg-7"
@@ -34,8 +37,10 @@ function ContactUsPage() {
                 </div>
 
             </div>
-            <ContactPageForm/>
-            <NewFooter/>
+            <ContactPageForm />
+            <ContactAccordion />
+            {/* <IndiamapComponent/> */}
+            <NewFooter />
         </div>
     )
 }

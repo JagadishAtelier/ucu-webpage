@@ -4,3 +4,162 @@
     width: 48%;
     background-color: white;
 }
+
+.contact-card {
+    width: 415px;
+  height: 270px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  gap: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.contact-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.77); /* dark overlay */
+  z-index: 1;
+}
+
+.contact-card * {
+  z-index: 2; /* bring text and icons above overlay */
+}
+
+
+
+.contact-form-card{
+      background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+.contact-form-wrapper{
+      background: #f6f8fb;
+      border-radius: 10px;
+            padding: 0 5%;
+}
+
+/* .floating-box {
+  position: relative;
+}
+
+.floating-box input {
+  padding-top: 18px;
+  border-radius: 8px;
+}
+
+.floating-box label {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  color: #777;
+  font-size: 15px;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.floating-box input:focus + label,
+.floating-box input:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 13px;
+  color: #0f1a48;
+  background: white;
+  padding: 0 4px;
+} */
+
+/* Label for selects + textarea */
+.form-label-uni {
+  font-weight: 600;
+  color: #0f1a48;
+}
+
+/* Submit button */
+.submit-btn-uni {
+  background-color: #0f1a48;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.submit-btn-uni:hover {
+  background-color: #16276b;
+  transform: translateY(-2px);
+}
+
+/* Parent container to center the map */
+.india-map-wrapper {
+  width: 100%;
+  height: 900px;
+  position: relative;
+}
+
+/* Adjust map size & responsiveness */
+.india-map-wrapper svg {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  left: 23% !important;
+}
+
+/* Default state color */
+.state {
+  fill: #dfe6e9; 
+  stroke: #636e72;
+  stroke-width: 1.2;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover state */
+.state:hover {
+  fill: #0984e3 !important;
+  stroke: #2d3436;
+  transform: scale(1.02);
+}
+
+/* Active state (highlight when clicked) */
+.state-active {
+  fill: #6c5ce7 !important;
+  stroke: #2d3436;
+}
+
+/* Tooltip styling */
+.datamaps-hover-tooltip {
+  position: absolute;
+  background: #2d3436;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 999;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Tooltip fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.hoverinfo {
+  background: #111 !important;
+  padding: 6px 10px !important;
+  border-radius: 6px !important;
+  color: white !important;
+  font-size: 14px !important;
+  font-weight: 500;
+  border: none !important;
+  text-align: center;
+}

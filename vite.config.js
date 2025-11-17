@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
-    include: ['swiper', 'react-slick', 'slick-carousel'],  // Add packages here
+    include: ['swiper', 'react-slick', 'slick-carousel',"jquery"],  // Add packages here
   },
   assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.svg',"**/*.rar"],  // Handle image files
 })
