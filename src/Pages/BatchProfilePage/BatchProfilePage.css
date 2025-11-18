@@ -30,3 +30,7 @@ filter: brightness(0) invert(1);
     align-items: center;
     text-align: center;
 }
+.BPP-progress-bar{
+    height: 30px;
+    border-radius: 40px;
+}

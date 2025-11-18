@@ -5,6 +5,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 import NewFooter from '../../Components/NewFooter/NewFooter'
 import BatchProfileClass from './BatchProfileClass'
 import BPCWorkExp from './BPCWorkExp'
+import BPPSpecializations from './BPPSpecializations'
 function BatchProfilePage() {
     return (
         <div>
@@ -37,6 +38,7 @@ function BatchProfilePage() {
             </div>
             <BatchProfileClass/>
             <BPCWorkExp/>
+            {/* <BPPSpecializations/> */}
             <NewFooter/>
         </div>
     )

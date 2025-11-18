@@ -1,4 +1,5 @@
 import React from 'react'
+import { ProgressBar } from 'react-bootstrap'
 
 const leftData = [
     {
@@ -85,6 +86,7 @@ function BPCWorkExp() {
                                     <div className='BPC-work-right-content-img-div'><img src={item.image}/></div>
                                     <p>{item.name}</p>
                                 </div>
+
                             ))}
                         </div>
                     </div>
