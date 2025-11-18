@@ -3,7 +3,7 @@
 /* Card grid row */
 .Cpp-full-row {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   row-gap: 2rem;
 }
@@ -30,8 +30,8 @@
   font-size: 1rem;
   margin-bottom: 1rem;
   text-align: center;
-    background: linear-gradient(205deg, rgb(7, 186, 243)  1% , rgb(23, 3, 169) 100%) !important;
-    color: white;
+  background: linear-gradient(205deg, rgb(7, 186, 243) 1%, rgb(23, 3, 169) 100%) !important;
+  color: white;
   /* border-bottom: 4px solid #5ac501; */
   padding-bottom: 0.5rem;
   border-top-left-radius: 12px;
@@ -192,23 +192,91 @@
 }
 
 
+
+
+
+
+
+.cpp-mindmap-container {
+  display: flex;
+  gap: 40px;
+  margin: auto;
+  height: 70vh;
+}
+
+.cpp-mindmap-left-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.cpp-mindmap-right-content {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.cpp-mindmap-vertical-line {
+  position: relative;
+  width: 4px;
+  background-color: #ccc;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.cpp-mindmap-indicator {
+  position: absolute;
+  left: -6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #5ac501;
+  transform: translateY(-50%);
+}
+
+.cpp-mindmap-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.cpp-mindmap-card {
+  background: linear-gradient(205deg, rgb(7, 186, 243) 1%, rgb(23, 3, 169) 100%) !important;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.cpp-mindmap-left-image{
+  width: 100%;
+}
+
 /* Responsive layout */
 @media (max-width: 768px) {
   .Cpp-req-layout {
     flex-direction: column;
   }
+
   .Cpp-req-sidebar {
     width: 100%;
     flex-wrap: wrap;
     gap: 0.5rem;
     position: relative;
   }
+
   .Cpp-req-btn {
     flex: 1 1 45%;
     text-align: center;
   }
-  .Cpp-full-row{
-    grid-template-columns: repeat(2,1fr);
+
+  .Cpp-full-row {
+    grid-template-columns: repeat(2, 1fr);
     padding: 0 5%;
   }
 }
@@ -226,9 +294,9 @@
   }
 }
 
-@media (max-width: 480px){
-  .Cpp-full-row{
-    grid-template-columns: repeat(1,1fr);
+@media (max-width: 480px) {
+  .Cpp-full-row {
+    grid-template-columns: repeat(1, 1fr);
     padding: 0 5%;
   }
 }

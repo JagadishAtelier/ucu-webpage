@@ -11,6 +11,7 @@ import Curriculum from '../PgprogramPage/pgTabs/Curriculum/Curriculum'
 import OverviewTab from '../PgprogramPage/pgTabs/OverviewTab'
 import CPPRequirements from './CPPRequirements'
 import CPPFullTimeProgram from './CPPFullTimeProgram'
+import CPPIntroduction from './CPPIntroduction'
 
 
 const TAB_LIST = [
@@ -49,10 +50,10 @@ function CampusPlacementsPage() {
     // returns different JSX per tab
     const renderContent = (tab) => {
         switch (tab) {
-            case "Overview":
+            case "Introduction":
                 return (
                     <section aria-labelledby="overview-heading">
-                        <OverviewTab />
+                        <CPPIntroduction />
                     </section>
                 );
 
