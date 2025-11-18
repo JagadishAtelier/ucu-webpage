@@ -73,7 +73,7 @@ export default function IndiamapComponent() {
 
   return (
     <div className="captital-campus-content-sec mt-5">
-      <div style={{ height: "730px", marginTop: "20px" }} className="d-flex gap-2">
+      <div style={{ height: "730px", marginTop: "20px" }} className="d-lg-flex gap-2 d-none">
       {/* Left: Map */}
       <div  className="col-lg-9 col-12">
         <MapContainer

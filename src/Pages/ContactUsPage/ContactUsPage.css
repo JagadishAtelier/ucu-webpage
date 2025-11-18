@@ -365,6 +365,15 @@
   margin: auto;
 }
 
+@media (max-width:768px) {
+  .contact-card{
+    width: 48%;
+    margin: auto;
+  }
+    .contact-form-wrapper{
+    padding: 0;
+  }
+}
 @media (max-width:480px) {
   .contact-card{
     width: 100%;
