@@ -72,7 +72,7 @@ useEffect(() => {
               key={index}
               ref={(el) => (cardsRef.current[index] = el)}
             >
-              {para}
+              <p>{para}</p>
             </div>
           ))}
         </div>
