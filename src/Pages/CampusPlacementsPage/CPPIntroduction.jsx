@@ -36,6 +36,9 @@ function CPPIntroduction() {
                         <strong> 25,000 corporate professionals and management graduates </strong>
                         through our executive education programs—empowering them to lead, adapt, and thrive in dynamic business environments. UCU was born from this experience—a university forged not in ivory towers, but in boardrooms, CXO conclaves, and the crucible of real-world leadership.
                     </p>
+                    <p className="story-paragraph">
+                        <strong>Here’s what makes UCU distinct:</strong>
+                    </p>
                     <CppMindMap />
 
                     <p className="story-paragraph mt-4">
