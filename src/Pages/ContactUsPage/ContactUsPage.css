@@ -196,3 +196,183 @@
 .leaflet-container {
   background-color: white !important;
 }
+
+.InternationalChapters__container {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  font-family: Arial;
+}
+
+/* Tabs Section */
+.InternationalChapters__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.InternationalChapters__tabButton {
+  padding: 10px 16px;
+  background: white;
+  border: 1px solid #5ac501;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.InternationalChapters__tabButton:hover {
+  background: #5ac501;
+  color: white;
+}
+
+.InternationalChapters__tabActive {
+  background: #5ac501;
+  color: #fff;
+}
+
+/* Content Area */
+.InternationalChapters__contentArea {
+  margin-top: 20px;
+}
+
+/* Single Card */
+/* .InternationalChapters__singleCard {
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  text-align: center;
+} */
+
+/* EU Cards Grid */
+.InternationalChapters__cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 20px;
+  margin: auto;
+}
+
+.InternationalChapters__countryCard {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.12);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flag Image */
+.InternationalChapters__flag {
+  width: 100px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+/* 
+.InternationalChapters__singleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border-radius: 14px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+} */
+
+.InternationalChapters__right {
+  width: 40%;
+  text-align: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.InternationalChapters__info {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.InternationalChapters__single-card-div{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.InternationalChapters__left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  border-radius: 20px;
+  color: white; /* text color */
+  font-weight: bold;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Blurred background */
+.InternationalChapters__left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit; /* same as inline backgroundImage */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(2px); /* only blur the background */
+  z-index: 0;
+  border-radius: 20px;
+}
+
+/* Dark overlay */
+.InternationalChapters__left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent overlay */
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* Content above overlay & blur */
+.InternationalChapters__left > * {
+  position: relative;
+  z-index: 999; /* above both overlay and blurred bg */
+  font-weight: bold !important;
+
+}
+
+
+.InternationalChapters__cardGrid{
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(350px, max-content)) !important;
+  gap: 20px;
+  justify-content: center !important; /* center cards when less than 3 */
+}
+
+.InternationalChapters__single-card-div {
+  display: flex;
+  width: 350px;
+  justify-content: center;
+  margin: auto;
+}
+
+@media (max-width:480px) {
+  .contact-card{
+    width: 100%;
+  }
+  .contact-form-wrapper{
+    padding: 0;
+  }
+  .InternationalChapters__single-card-div{
+    width: 100%;
+  }
+}

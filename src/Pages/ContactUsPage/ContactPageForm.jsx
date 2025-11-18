@@ -62,7 +62,7 @@ function ContactPageForm() {
             CONNECT WITH US THROUGH OUR
           </p>
           <div className="d-grid">
-            <div className="row column-gap-4">
+            <div className="row column-gap-4 row-gap-3">
               {/* Address */}
               <div
                 className="contact-card position-relative d-flex flex-column align-items-center justify-content-center text-white"

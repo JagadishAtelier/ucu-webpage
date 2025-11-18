@@ -75,7 +75,7 @@ export default function IndiamapComponent() {
     <div className="captital-campus-content-sec mt-5">
       <div style={{ height: "730px", marginTop: "20px" }} className="d-flex gap-2">
       {/* Left: Map */}
-      <div  className="col-9">
+      <div  className="col-lg-9 col-12">
         <MapContainer
           center={[23.0, 80.0]}
           zoom={5}
@@ -102,7 +102,7 @@ export default function IndiamapComponent() {
       </div>
 
       <div
-      className="col-3 d-flex flex-column gap-3 justify-content-center mt-auto"
+      className="col-3 d-lg-flex flex-column gap-3 justify-content-center mt-auto d-none"
         style={{
           borderRadius: "8px",
           padding: "15px",

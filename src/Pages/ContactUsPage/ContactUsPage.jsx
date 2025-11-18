@@ -6,7 +6,7 @@ import NewFooter from '../../Components/NewFooter/NewFooter'
 import ContactPageForm from './ContactPageForm'
 import ContactAccordion from './ContactAccordion'
 import IndiamapComponent from './IndiamapComponent'
-import IndiaMapWithPopup from './IndiaMapWithPopup'
+import InternationalChapters from './InternationalChapters'
 function ContactUsPage() {
     return (
         <div>
@@ -40,6 +40,7 @@ function ContactUsPage() {
             <ContactPageForm />
             <ContactAccordion />
             <IndiamapComponent/>
+            <InternationalChapters/>
             <NewFooter />
         </div>
     )
