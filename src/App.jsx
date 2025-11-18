@@ -49,6 +49,7 @@ import MediagalleryBanner from "./Pages/MediaGallery/MediagalleryBanner";
 import MediablogBanner from "./Pages/MediaBlog/MediablogBanner";
 import CorparateBanner from "./Pages/CorparetePage/CorparateBanner";
 import StrategicCollabBanner from "./Pages/StrategicCollab/StrategicCollabBanner";
+import BatchProfilePage from "./Pages/BatchProfilePage/BatchProfilePage";
 
 function App() {
   useEffect(() => {
@@ -99,6 +100,7 @@ function App() {
         <Route path="/engagement/*" element={<CorparateBanner/>} />
         <Route path="/strategic/*" element={<StrategicCollabBanner/>} />
         <Route path="/contact-us" element={<ContactUsPage/>} />
+        <Route path="/batch-profile" element={<BatchProfilePage/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>

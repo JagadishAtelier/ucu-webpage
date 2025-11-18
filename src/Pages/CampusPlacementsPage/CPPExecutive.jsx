@@ -1,7 +1,7 @@
 import { Briefcase, CalculatorIcon, Calendar1Icon, Laptop, MapPin, TimerIcon } from "lucide-react";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-
+import { useNavigate } from "react-router-dom";
 const functionalData = [
   {
     head: "Sales",
@@ -10,6 +10,7 @@ const functionalData = [
     mode: "Online",
     location: "Hyderabad",
     startDate: "March 2026",
+    link:"/program/sales"
   },
   {
     head: "Product Management",
@@ -18,6 +19,7 @@ const functionalData = [
     mode: "Hybrid",
     location: "Bangalore",
     startDate: "April 2026",
+    link:"/program/product-management"
   },
   {
     head: "Cybersecurity",
@@ -26,6 +28,7 @@ const functionalData = [
     mode: "Hybrid",
     location: "Bangalore",
     startDate: "April 2026",
+    link:"/program/cybersecurity"
   },
   {
     head: "Brand Management & Digital Marketing",
@@ -34,6 +37,7 @@ const functionalData = [
     mode: "Hybrid",
     location: "Bangalore",
     startDate: "April 2026",
+    link:"/program/bm-dm"
   },
   {
     head: "Mobility & Sustainability",
@@ -42,6 +46,7 @@ const functionalData = [
     mode: "Hybrid",
     location: "Bangalore",
     startDate: "April 2026",
+    link:"/program/mobility-sustainability"
   },
   {
     head: "Consulting",
@@ -50,6 +55,7 @@ const functionalData = [
     mode: "Hybrid",
     location: "Bangalore",
     startDate: "April 2026",
+    link:"/program/consulting"
   },
   {
     head: "Banking & Finance",
@@ -58,6 +64,7 @@ const functionalData = [
     mode: "Hybrid",
     location: "Bangalore",
     startDate: "April 2026",
+    link:"/program/banking-finance"
   },
   {
     head: "Business Analytics",
@@ -66,6 +73,7 @@ const functionalData = [
     mode: "Hybrid",
     location: "Bangalore",
     startDate: "April 2026",
+    link:"/program/business-analytics"
   },
   {
     head: "Data Science & AI",
@@ -74,6 +82,7 @@ const functionalData = [
     mode: "Hybrid",
     location: "Bangalore",
     startDate: "April 2026",
+    link:"/program/data-science"
   },
 ];
 
@@ -85,6 +94,7 @@ const industryData = [
     mode: "Online",
     location: "Mumbai",
     startDate: "July 2026",
+    link:"/program/fintech"
   },
   {
     head: "Global Capability Centers (GCC)",
@@ -93,6 +103,7 @@ const industryData = [
     mode: "Online",
     location: "Delhi",
     startDate: "August 2026",
+    link:"/program/gcc"
   },
   {
     head: "Semi conductors",
@@ -101,6 +112,7 @@ const industryData = [
     mode: "Online",
     location: "Delhi",
     startDate: "August 2026",
+    link:"/program/semi-conductors"
   },
   {
     head: "Health Care & Life Science. ",
@@ -109,12 +121,13 @@ const industryData = [
     mode: "Online",
     location: "Delhi",
     startDate: "August 2026",
+    link:"/program/hc-ls"
   },
 ];
 
 function CPPExecutive() {
   const [activeTab, setActiveTab] = useState("functional");
-
+  const navigate = useNavigate()
   const activeData = activeTab === "functional" ? functionalData : industryData;
 
   return (
@@ -182,8 +195,12 @@ function CPPExecutive() {
               </div>
 
               <div className="Cpp-full-buttons">
-                <Button>Admission open</Button>
-                <Button>Know more</Button>
+                <Button onClick={()=>navigate(`${item.link}`)}>Prgram Details</Button>
+                <Button>Batch Profile</Button>
+              </div>
+              <div className="Cpp-full-buttons">
+                <Button>Express Interest </Button>
+                <Button>Placement Calendar</Button>
               </div>
             </div>
           </div>

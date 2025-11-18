@@ -1,7 +1,7 @@
 import { Briefcase, CalculatorIcon, Calendar1Icon, Laptop, MapPin, TimerIcon } from "lucide-react";
 import React from "react";
 import { Button } from "react-bootstrap";
-
+import { useNavigate } from "react-router-dom";
 const data = [
     {
         head: "PGPM Flex",
@@ -10,6 +10,7 @@ const data = [
         mode: "Residential",
         location: "Chennai",
         startDate: "June 2026",
+        link:"/program/pgpm"
     },
     {
         head: "PGXPM",
@@ -18,10 +19,12 @@ const data = [
         mode: "Residential",
         location: "Chennai",
         startDate: "June 2026",
+        link:"/program/pgxpm"
     },
 ];
 
 function CPPFlexiProgram() {
+  const navigate = useNavigate()
   return (
       <div className="Cpp-full-row">
         {data.map((item, index) => (
@@ -69,8 +72,12 @@ function CPPFlexiProgram() {
               </div>
 
               <div className="Cpp-full-buttons">
-                <Button>Admission open</Button>
-                <Button>Know more</Button>
+                <Button onClick={()=>navigate(`${item.link}`)}>Prgram Details</Button>
+                <Button>Batch Profile</Button>
+              </div>
+              <div className="Cpp-full-buttons">
+                <Button>Express Interest </Button>
+                <Button>Placement Calendar</Button>
               </div>
             </div>
           </div>
