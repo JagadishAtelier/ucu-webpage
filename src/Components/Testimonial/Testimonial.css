@@ -1,0 +1,59 @@
+/* Wrapper */
+.testi-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Each card */
+.testi-card {
+  width: 350px;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: auto;
+}
+
+/* Black gradient overlay bottom -> top */
+.testi-overlay {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* Text content */
+.testi-content {
+  position: absolute;
+  bottom: 20px;
+  padding: 0 20px;
+  color: white;
+  z-index: 2;
+}
+
+.testi-name {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.testi-comment {
+  font-size: 15px;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+.testi-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}

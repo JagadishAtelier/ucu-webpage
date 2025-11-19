@@ -51,6 +51,7 @@ import CorparateBanner from "./Pages/CorparetePage/CorparateBanner";
 import StrategicCollabBanner from "./Pages/StrategicCollab/StrategicCollabBanner";
 import BatchProfilePage from "./Pages/BatchProfilePage/BatchProfilePage";
 import ExpressInterestPageBanner from "./Pages/ExpressInterestPage/ExpressInterestPageBanner";
+import IndustryFirstApproach from "./Pages/IndustryFirstApproach/IndustryFirstApproach";
 
 function App() {
   useEffect(() => {
@@ -103,6 +104,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUsPage/>} />
         <Route path="/batch-profile" element={<BatchProfilePage/>} />
         <Route path="/expression-of-interest" element={<ExpressInterestPageBanner/>} />
+        <Route path="/industry-approach" element={<IndustryFirstApproach/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>
