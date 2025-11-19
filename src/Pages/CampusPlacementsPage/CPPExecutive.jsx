@@ -196,11 +196,11 @@ function CPPExecutive() {
 
               <div className="Cpp-full-buttons">
                 <Button onClick={()=>navigate(`${item.link}`)}>Prgram Details</Button>
-                <Button>Batch Profile</Button>
+                <Button onClick={()=>navigate("/batch-profile")}>Batch Profile</Button>
               </div>
               <div className="Cpp-full-buttons">
-                <Button>Express Interest </Button>
-                <Button>Placement Calendar</Button>
+                <Button onClick={()=>navigate("/expression-of-interest")}>Express Interest </Button>
+                <Button onClick={() => navigate(`${item.link}#PlacementCalendar`)}>Placement Calendar</Button>
               </div>
             </div>
           </div>

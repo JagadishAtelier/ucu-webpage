@@ -18,6 +18,7 @@ const TAB_LIST = [
 
 export default function PgTabs() {
   const [active, setActive] = useState(TAB_LIST[0]);
+  const [selectedBtn, setSelectedBtn] = useState("intern");
   const navRef = useRef(null);
   const btnRefs = useRef({});
 
@@ -42,7 +43,30 @@ useEffect(() => {
   }
 }, []);
 
+// Auto-open tab based on hash navigation
+useEffect(() => {
+  const hash = window.location.hash;
 
+  if (hash === "#PlacementCalendar") {
+    setActive("Placements"); // open the Placements main tab
+  }
+}, []);
+
+  // Handle scrolling when navigating with hash
+  useEffect(() => {
+    const hash = window.location.hash;
+
+    if (hash === "#PlacementCalendar") {
+      // ensure "Internship Placement Process" is open
+      setSelectedBtn("intern");
+
+      // Delay required because content renders after state update
+      setTimeout(() => {
+        const el = document.querySelector(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 300);
+    }
+  }, []);
 
   // returns different JSX per tab
   const renderContent = (tab) => {
