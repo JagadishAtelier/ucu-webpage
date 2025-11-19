@@ -38,7 +38,7 @@ function BatchProfilePage() {
             </div>
             <BatchProfileClass/>
             <BPCWorkExp/>
-            {/* <BPPSpecializations/> */}
+            <BPPSpecializations/>
             <NewFooter/>
         </div>
     )

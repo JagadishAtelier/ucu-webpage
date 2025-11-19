@@ -15,9 +15,10 @@
 .BPC-work-right-content-img-div img {
     height: 100%;
     width: 100%;
-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
 }
-.BPC-work-left-content{
+
+.BPC-work-left-content {
     height: 200px;
     width: 200px;
     padding: 10px;
@@ -30,7 +31,33 @@ filter: brightness(0) invert(1);
     align-items: center;
     text-align: center;
 }
-.BPP-progress-bar{
-    height: 30px;
+
+.BPP-progress-bar {
+    height: 35px;
     border-radius: 40px;
+}
+
+.two-column-list {
+    columns: 2;
+    /* or use column-count: 2; */
+    column-gap: 40px;
+    /* space between columns */
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.two-column-list li {
+    margin-bottom: 10px;
+}
+
+
+@media (max-width:768px) {
+    .BPC-work-left-content{
+        height: 120px;
+        width: 120px;
+    }
+    .BPC-work-left-content h1{
+       font-size: 2rem;
+       margin: 0;
+    }
 }

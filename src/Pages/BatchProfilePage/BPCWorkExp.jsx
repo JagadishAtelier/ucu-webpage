@@ -61,13 +61,13 @@ const rightData = [
 function BPCWorkExp() {
     return (
         <div className='captital-campus-content-sec mt-5'>
-            <div className='d-flex gap-3 p-5 rounded'style={{backgroundColor:"#f6f6f8"}}>
+            <div className='d-flex flex-lg-row flex-column gap-lg-3 gap-5 p-lg-5 py-4 rounded'style={{backgroundColor:"#f6f6f8"}}>
                 <div>
-                    <h3>Work Experience (In Months)</h3>
+                    <h3 className='text-center text-lg-start'>Work Experience (In Months)</h3>
                     <div className='d-grid mt-4'>
-                        <div className='row gap-5 mx-auto justify-content-start'>
+                        <div className='row gap-5 mx-auto justify-content-lg-start justify-content-center'>
                             {leftData.map((item,index)=>(
-                                <div className='BPC-work-left-content col-6'>
+                                <div className='BPC-work-left-content col-lg-6 col-12'>
                                     <h1 className='fw-bold display-4'>{item.number}</h1>
                                     <p className='fw-bold fs-5'>{item.name}</p>
                                 </div>
@@ -78,7 +78,7 @@ function BPCWorkExp() {
 
 
                 <div>
-                    <h3>Industry Diversity</h3>
+                    <h3 className='text-center text-lg-start'>Industry Diversity</h3>
                     <div className='d-grid mt-4'>
                         <div className='row row-gap-4 mx-auto justify-content-center'>
                             {rightData.map((item,index)=>(
