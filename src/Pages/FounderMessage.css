@@ -99,22 +99,22 @@
 /* Responsive Typography */
 @media (min-width: 576px) {
   .story-heading { font-size: 2.25rem; }
-  .story-paragraph { font-size: 1.05rem; }
+  .story-paragraph { font-size: 0.9rem; }
 }
 
 @media (min-width: 768px) {
   .story-heading { font-size: 2.75rem; }
-  .story-paragraph { font-size: 1.15rem; }
+  .story-paragraph { font-size: 1.1rem; }
 }
 
 @media (min-width: 992px) {
   .story-heading { font-size: 3rem; }
-  .story-paragraph { max-width: 100%; font-size: 1.2rem; }
+  .story-paragraph { max-width: 100%; font-size: 1rem; }
 }
 
 @media (min-width: 1200px) {
   .story-heading { font-size: 3.5rem; }
-  .story-paragraph { font-size: 1.25rem; }
+  .story-paragraph { font-size: 1rem; }
 }
 
 .founder-section {

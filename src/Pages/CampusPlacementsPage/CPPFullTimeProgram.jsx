@@ -77,7 +77,7 @@ function CPPFullTimeProgram() {
               </div>
               <div className="Cpp-full-buttons">
                 <Button onClick={()=>navigate("/expression-of-interest")}>Express Interest </Button>
-                <Button onClick={() => navigate(`${item.link}#PlacementCalendar`)}>Placement Calendar</Button>
+                <Button onClick={() => navigate(`${item.link}#PlacementCalendar`)}>Placement Date</Button>
               </div>
             </div>
           </div>

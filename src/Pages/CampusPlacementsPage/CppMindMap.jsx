@@ -17,18 +17,7 @@ export default function CppMindMap() {
   const indicatorRef = useRef(null);
 
 useEffect(() => {
-  // Animate cards
-  gsap.from(cardsRef.current, {
-    x: 100,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.3,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".cpp-mindmap-cards-container",
-      start: "top 80%",
-    }
-  });
+  
 
   // Smooth scroll indicator animation
   ScrollTrigger.create({

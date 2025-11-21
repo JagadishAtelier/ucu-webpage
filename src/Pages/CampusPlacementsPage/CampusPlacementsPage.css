@@ -222,23 +222,25 @@
   width: 4px;
   background-color: #ccc;
   height: 100%;
+  border-radius: 100px;
   margin-right: 20px;
 }
 
 .cpp-mindmap-indicator {
   position: absolute;
-  left: -6px;
-  width: 16px;
-  height: 16px;
+  left: -8px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: #5ac501;
+  border: 2px solid #b6f583;
   transform: translateY(-50%);
 }
 
 .cpp-mindmap-cards-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px;
   width: 100%;
 }
 
@@ -249,8 +251,11 @@
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
-  opacity: 1 !important;
-  transform: none !important;
+  transition: all 0.4s ease;
+}
+.cpp-mindmap-card.active {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(90, 197, 1, 0.4);
 }
 
 .cpp-mindmap-left-image{

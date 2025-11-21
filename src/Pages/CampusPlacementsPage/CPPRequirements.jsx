@@ -32,8 +32,8 @@ function CPPRequirements() {
   };
 
   return (
-    <div className="Cpp-req-container mt-3">
-      <h1 className="text-center mb-5">
+    <div className="Cpp-req-container container-flued mt-3">
+      <h1 className="mb-5 mx-5">
         Find the programme that meets your requirements and aspirations:
       </h1>
 

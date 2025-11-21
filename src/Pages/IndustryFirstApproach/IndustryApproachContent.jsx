@@ -79,7 +79,7 @@ function IndustryApproachContent() {
 
   return (
     <section className="industry-approach-section py-5">
-      <div className="container-fluid mx-1">
+      <div className="container-flued mx-5">
         <div className="text-center mb-5">
           <h2 className="fw-bold display-6">
             Industry Aligned. Leadership Driven.

@@ -32,12 +32,6 @@
   border-color: #acb9ff;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.07);
 }
-/* Mobile center card active */
-.industry-card.active-card {
-  transform: translateY(-6px) scale(1.02);
-  border-color: #acb9ff;
-  box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.08);
-}
 
 
 .industry-icon {
@@ -77,6 +71,13 @@
   .industry-card p {
     font-size: 14px;
   }
+  /* Mobile center card active */
+.industry-card.active-card {
+  transform: translateY(-6px) scale(1.02);
+  border-color: #acb9ff;
+  box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.08);
+}
+
 }
 .industry-row {
   margin-bottom: 30px; /* adds vertical spacing */
