@@ -114,35 +114,12 @@ export const menuData = [
     label: "Online Programs",
     placement: "top",
     submenu: [
-      { label: "Product Management", link: "/program/product-management" },
-      { label: "Cybersecurity", link: "/program/cybersecurity" },
-      { label: "Digital Marketing", link: "/program/digital-marketing" },
+      { label: "Digital Marketing & AI", link: "/program/Digital-Marketing-AI" },
+      { label: "Product Management", link: "/program/Product-Management" },
+      { label: "Cybersecurity", link: "/program/Cybersecurity" },
       {
-        label: "Mobility & Sustainability",
-        link: "/program/mobility-sustainability",
-      },
-      { label: "Consulting", link: "/program/consulting" },
-      { label: "Banking & Finance", link: "/program/banking-finance" },
-      { label: "Business Analytics", link: "/program/business-analytics" },
-      { label: "Data Science", link: "/program/data-science" },
-      {
-        label: "Industry Sector Specific Offerings",
-        link: "/program/industry-sector",
-        submenu: [
-          { label: "FinTech", link: "/program/fintech" },
-          {
-            label: "Global Capability Centers (GCC)",
-            link: "/program/gcc",
-          },
-          {
-            label: "Semi conductors",
-            link: "/program/semi-conductors",
-          },
-          {
-            label: "Health Care & Life Science. ",
-            link: "/program/hc-ls",
-          },
-        ],
+        label: "AIMA AICTE Approved PGDM",
+        link: "/program/AIMA-AICTE-Approved-PGDM",
       },
     ],
   },
@@ -167,8 +144,8 @@ export const menuData = [
       {
         label: "Full Time Programs",
         submenu: [
-          { label: "PGPM-ELITE", link: "/program/pgpm-elite" },
-          { label: "PGDM", link: "/program/pgdm" },
+          { label: "PGPM ELITE | Career Accelerator Program", link: "/program/pgpm-elite" },
+          { label: "PGDM | Young Leaders' Program", link: "/program/pgdm" },
           {
             label: "Flexi Program",
             className: "sublink-custom",
@@ -199,43 +176,34 @@ export const menuData = [
             submenu: [
               { label: "Sales", link: "/program/sales" },
               {
-                label: "Product Management",
-                link: "/program/product-management",
-              },
-              { label: "Cybersecurity", link: "/program/cybersecurity" },
-              {
-                label: "Brand Management & Digital Marketing",
-                link: "/program/bm-dm",
-              },
-              {
-                label: "Mobility & Sustainability",
-                link: "/program/mobility-sustainability",
+                label: "Product",
+                link: "/program/product",
               },
               { label: "Consulting", link: "/program/consulting" },
-              { label: "Banking & Finance", link: "/program/banking-finance" },
+              { label: "Cybersecurity", link: "/program/cybersecurity" },
               {
-                label: "Business Analytics",
-                link: "/program/business-analytics",
+                label: "Digital Marketing & AI",
+                link: "/program/dm-ai",
               },
-              { label: "Data Science & AI", link: "/program/data-science" },
+              { label: "Banking & Finance", link: "/program/banking-finance" },
             ],
           },
           {
             label: "Industry Sector Specialization",
             link: "/program/industry-sector",
             submenu: [
-              { label: "FinTech", link: "/program/fintech" },
+              { label: "FinTech Genesis", link: "/program/fintech" },
               {
-                label: "Global Capability Centers (GCC)",
+                label: "GCC Launchpad",
                 link: "/program/gcc",
               },
               {
-                label: "Semi conductors",
-                link: "/program/semi-conductors",
+                label: "HealthTech Ignition",
+                link: "/program/HealthTech-Ignition",
               },
               {
-                label: "Health Care & Life Science. ",
-                link: "/program/hc-ls",
+                label: "Advanced Manufacturing",
+                link: "/program/Advanced-Manufacturing",
               },
             ],
           },
@@ -256,6 +224,43 @@ export const menuData = [
             link: "/program/MDPs",
             className: "sublink-custom",
             customHover: false,
+          },
+          {
+            label: "Industry Sector",
+            className: "sublink-custom",
+            customHover: false,
+            submenu: [
+              {
+                label: "FinTech Ascend",
+                link: "/program/FinTech-Ascend",
+                customHover: false,
+              },
+              {
+                label: "FinTech Vanguard",
+                link: "/program/FinTech-Vanguard",
+                customHover: false,
+              },
+              {
+                label: "GCC-Catalyst",
+                link: "/program/GCC-Catalyst",
+                customHover: false,
+              },
+              {
+                label: "GCC Elevate",
+                link: "/program/GCC-Elevate",
+                customHover: false,
+              },
+              {
+                label: "HealthTech Navigate",
+                link: "/program/HealthTech-Navigate",
+                customHover: false,
+              },
+              {
+                label: "HealthTech Pinnacle",
+                link: "/program/HealthTech-Pinnacle",
+                customHover: false,
+              },
+            ]
           },
         ],
       },
@@ -670,7 +675,7 @@ export const menuDataMobile = [
                 label: "Entrepreneurship",
                 link: "/coe/entrepreneurship",
               },
-                            {
+              {
                 label: "Emerging Enterprise & Innovation (EEI)",
                 link: "/coe/EmergingEnterpriseInnovation",
               },
@@ -696,7 +701,7 @@ export const menuDataMobile = [
   //   ],
   // },
   { label: "Careers", link: "/careers", placement: "top" },
-    {
+  {
     label: "Media", placement: "top",
     submenu: [
       { label: "UCU Chennai in the Media", link: "/media/ucu-media" },
