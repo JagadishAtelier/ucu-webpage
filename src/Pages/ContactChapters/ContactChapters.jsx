@@ -1,14 +1,10 @@
-import React from 'react'
-import './ContactUsPage.css'
 import { ChevronRight } from 'lucide-react'
+import React from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import NewFooter from '../../Components/NewFooter/NewFooter'
-import ContactPageForm from './ContactPageForm'
-import ContactAccordion from './ContactAccordion'
-import IndiamapComponent from './IndiamapComponent'
-import InternationalChapters from './InternationalChapters'
-import ContactUsCarousel from './ContactUsCarousel'
-function ContactUsPage() {
+import './ContactChapters.css'
+import ContactChapterGrid from './ContactChapterGrid'
+function ContactChapters() {
     return (
         <div>
             <Navbar />
@@ -28,22 +24,21 @@ function ContactUsPage() {
                     data-aos="fade-right"
                 >
                     {/* Dynamic Title */}
-                    <h1 className="fw-bold fs-1 fs-lg-1">Contact Us</h1>
+                    <h1 className="fw-bold fs-1 fs-lg-1">Chapters</h1>
+                    <p>Find chapters, blogs, Podcast and social chapters to level up your professional life.</p>
                 </div>
 
                 <div className='position-absolute bottom-0 left-0 d-flex align-items-center campus-route-bg py-3'>
                     <p className='m-0'><a href='/' className='text-decoration-none text-white'>UCU</a></p>
                     <ChevronRight />
-                    <p className='m-0'>Contact Us</p>
+                    <p className='m-0'>Chapters </p>
                 </div>
 
             </div>
-            <ContactPageForm />
-            <ContactAccordion />
-            <ContactUsCarousel/>
+            <ContactChapterGrid/>
             <NewFooter />
         </div>
     )
 }
 
-export default ContactUsPage
+export default ContactChapters
