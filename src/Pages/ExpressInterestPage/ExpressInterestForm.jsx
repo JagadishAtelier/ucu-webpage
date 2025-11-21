@@ -115,7 +115,7 @@ function ExpressInterestForm() {
                                 <Form>
                                     <Row>
                                         <Form.Group className='d-flex align-items-end flex-wrap mb-3 gap-lg-4 gap-0'>
-                                            <p className='col-fit mb-0'>Great Lakes Recruiter’s Expression of Interest in Class of</p>
+                                            <p className='col-fit mb-0'>UCU Recruiter’s Expression of Interest in Class of</p>
                                             <Form.Control className='input-EOI-drop' type="text" required />
                                         </Form.Group>
                                     </Row>
@@ -123,7 +123,7 @@ function ExpressInterestForm() {
                                         <Form.Group className='d-flex align-items-end flex-wrap mb-3 gap-lg-4 gap-0'>
                                             <p className='col-fit mb-0'>We understand that 2024-25 batch of Great Lakers will be ready to join us by</p>
                                             <Form.Control className='input-EOI-drop' type="text" required />
-                                            <p className='mb-0 mt-lg-0 mt-4'>and we are interested in recruiting from Great Lakes Chennai campus.</p>
+                                            <p className='mb-0 mt-lg-0 mt-4'>and we are interested in recruiting from UCU Chennai campus.</p>
                                         </Form.Group>
                                     </Row>
                                 </Form>
@@ -222,136 +222,136 @@ function ExpressInterestForm() {
                                 </div>
                                 <p>If No, please fill the following contact details: </p>
                                 <div className='EOI-table-div'>
-                                <table className="placement-table placement-table-EOI col-12">
-                                    <tbody>
-                                        <tr>
-                                            <td className='col-6'>Region/Location centric</td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Business/Project centric</td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Domain/Function centric </td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Level centric</td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Other</td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <table className="placement-table placement-table-EOI col-12">
+                                        <tbody>
+                                            <tr>
+                                                <td className='col-6'>Region/Location centric</td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Business/Project centric</td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Domain/Function centric </td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Level centric</td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Other</td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <p className='fs-5 fw-bold mt-4'>Scope of hiring in Great Lakes Chennai (Please fill in the following):</p>
+                                <p className='fs-5 fw-bold mt-4'>Scope of hiring in UCU Chennai (Please fill in the following):</p>
                                 <div className='EOI-table-div'>
-                                <table className="placement-table placement-table-EOI">
+                                    <table className="placement-table placement-table-EOI">
 
-                                    <thead>
-                                        <tr>
-                                            <th>Business Units</th>
-                                            <th>Function/Domain </th>
-                                            <th>Level/Designation </th>
-                                            <th>Roles</th>
-                                            <th>C range (Salary/Stipend)</th>
-                                            <th>Probable Number</th>
-                                            <th>Locations</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                        <thead>
+                                            <tr>
+                                                <th>Business Units</th>
+                                                <th>Function/Domain </th>
+                                                <th>Level/Designation </th>
+                                                <th>Roles</th>
+                                                <th>C range (Salary/Stipend)</th>
+                                                <th>Probable Number</th>
+                                                <th>Locations</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                            <tr>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                            <tr>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                            <tr>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <p className='fs-5 fw-bold mt-4'>Scope of hiring in Great Lakes Chennai (Please fill in the following):</p>
-<div className='EOI-table-div'>
-                                <table className="placement-table placement-table-EOI col-12">
-                                    <thead>
-                                        <tr>
-                                            <th>Criteria</th>
-                                            <th>Expected requirement</th>
-                                            <th>Preferable additions</th>
-                                            <th>Exceptions allowed</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td className='col-6'>Graduation-degree,
-                                                specialization, score, years. </td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Experience-industry,
-                                                domain, skill, level, years.</td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Specialisation, score,
-                                                expertise for Final
-                                                Placement </td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Pre requisite for Summer
-                                                Internship </td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Other requirements (if any)</td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                            <td contentEditable="true"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-</div>
+                                <p className='fs-5 fw-bold mt-4'>Scope of hiring in UCU Chennai (Please fill in the following):</p>
+                                <div className='EOI-table-div'>
+                                    <table className="placement-table placement-table-EOI col-12">
+                                        <thead>
+                                            <tr>
+                                                <th>Criteria</th>
+                                                <th>Expected requirement</th>
+                                                <th>Preferable additions</th>
+                                                <th>Exceptions allowed</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td className='col-6'>Graduation-degree,
+                                                    specialization, score, years. </td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Experience-industry,
+                                                    domain, skill, level, years.</td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Specialisation, score,
+                                                    expertise for Final
+                                                    Placement </td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pre requisite for Summer
+                                                    Internship </td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Other requirements (if any)</td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                                <td contentEditable="true"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <p className='fs-5 fw-bold mt-4'>Suggestions & Recommendations: </p>
                                 <Form>
                                     <div className="mb-4">
