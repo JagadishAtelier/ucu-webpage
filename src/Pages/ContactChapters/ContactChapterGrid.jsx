@@ -1,41 +1,95 @@
 import React from 'react';
 
-const data = [
+const cities = [
     {
-        image: "https://nimbuscluster.blob.core.windows.net/server01/nhrdn/image/image-DIaU9aIq5ni15te8YDKQu-1659430960",
-        place: "AGRA",
+        title: "DELHI & NCR",
         poc: {
             name: "Rahul Sharma",
             contact: "+91 9876543210",
             email: "agra@example.com"
-        }
+        },
+        img: "https://img.freepik.com/free-photo/typographic-optical-illusions-delhi_23-2150921914.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
     },
     {
-        image: "https://nimbuscluster.blob.core.windows.net/server01/nhrdn/image/image-dH_eUmwAtIZlvUtlUxAyh-1659429471",
-        place: "Ahmedabad",
+        title: "Mumbai",
         poc: {
-            name: "Priya Patel",
-            contact: "+91 9123456780",
-            email: "ahmedabad@example.com"
-        }
+            name: "Rahul Sharma",
+            contact: "+91 9876543210",
+            email: "agra@example.com"
+        },
+        img: "https://img.freepik.com/free-photo/high-angle-shot-bandra-worli-sealink-mumbai-enveloped-with-fog_181624-9734.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
     },
     {
-        image: "https://nimbuscluster.blob.core.windows.net/server01/nhrdn/image/image-gXYbYczFnCvOK9L7GE738-1719214655",
-        place: "Alwar and Rewari",
+        title: "Kolkata",
         poc: {
-            name: "Amit Verma",
-            contact: "+91 9988776655",
-            email: "alwar@example.com"
-        }
+            name: "Rahul Sharma",
+            contact: "+91 9876543210",
+            email: "agra@example.com"
+        },
+        img: "https://img.freepik.com/premium-photo/victoria-memorial-is-monument-museum-located-kolkata-west-bengal-india_459244-68.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
     },
     {
-        image: "https://nimbuscluster.blob.core.windows.net/server01/nhrdn/image/image-cmWvmon2e9du9aTpITX6G-1662549245",
-        place: "Assam",
+        title: "Bangalore",
         poc: {
-            name: "Sonia Das",
-            contact: "+91 9876123456",
-            email: "assam@example.com"
-        }
+            name: "Rahul Sharma",
+            contact: "+91 9876543210",
+            email: "agra@example.com"
+        },
+        img: "https://img.freepik.com/premium-photo/mysore-palace_78361-1014.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        title: "Hyderabad",
+        poc: {
+            name: "Rahul Sharma",
+            contact: "+91 9876543210",
+            email: "agra@example.com"
+        },
+        img: "https://img.freepik.com/free-photo/architecture-ancient-monument-world-heritage-day-celebration_23-2151297157.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        title: "Assam",
+        poc: {
+            name: "Rahul Sharma",
+            contact: "+91 9876543210",
+            email: "agra@example.com"
+        },
+        img: "https://img.freepik.com/premium-photo/scenic-view-mountains-against-cloudy-sky_1048944-16107144.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        title: "Ahmedabad",
+        poc: {
+            name: "Rahul Sharma",
+            contact: "+91 9876543210",
+            email: "agra@example.com"
+        },
+        img: "https://img.freepik.com/free-photo/mehrangarh-fort_1357-12.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        title: "Coimbatore",
+        poc: {
+            name: "Rahul Sharma",
+            contact: "+91 9876543210",
+            email: "agra@example.com"
+        },
+        img: "https://img.freepik.com/free-photo/temple-atop-clouds-sunrise_23-2152002049.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        title: "Kochi",
+        poc: {
+            name: "Rahul Sharma",
+            contact: "+91 9876543210",
+            email: "agra@example.com"
+        },
+        img: "https://img.freepik.com/free-photo/beautiful-sunrise-fishing-dip-nets-pakpra-phatthalung-thailand_335224-813.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        title: "Telangana ",
+        poc: {
+            name: "Rahul Sharma",
+            contact: "+91 9876543210",
+            email: "agra@example.com"
+        },
+        img: "https://img.freepik.com/free-photo/parinirvana-stupa-temple-kushinagar-india_554837-289.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
     },
 ];
 
@@ -43,15 +97,15 @@ function ContactChapterGrid() {
     return (
         <div className="container my-5">
             <div className="row">
-                {data.map((item, index) => (
+                {cities.map((item, index) => (
                     <div className="col-lg-4 col-md-6 mb-4" key={index}>
                         <div className="flip-card">
                             <div className="flip-card-inner">
                                 {/* Front Side */}
                                 <div className="flip-card-front">
-                                    <img src={item.image} alt={item.place} className="img-fluid" />
+                                    <img src={item.img} alt={item.title} className="img-fluid" />
                                     <div className="chapter-overlay"></div>
-                                    <div className="card-text">{item.place}</div>
+                                    <div className="card-text">{item.title}</div>
                                 </div>
                                 {/* Back Side */}
                                 <div className="flip-card-back">

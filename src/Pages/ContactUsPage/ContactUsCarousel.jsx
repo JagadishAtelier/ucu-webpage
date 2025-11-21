@@ -6,26 +6,51 @@ import { useNavigate } from "react-router-dom";
 const cities = [
     {
         title: "DELHI & NCR",
-        img: "https://nimbuscluster.blob.core.windows.net/server01/nhrdn/image/image-imV_BRs5Rzm2yGxB2g0-p-1659429933"
+        img: "https://img.freepik.com/free-photo/typographic-optical-illusions-delhi_23-2150921914.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
     },
     {
-        title: "GOA",
-        img: "https://nimbuscluster.blob.core.windows.net/server01/nhrdn/image/image-m1ESRKjRCnB33UJKVwdJr-1659429963"
+        title: "Mumbai",
+        img: "https://img.freepik.com/free-photo/high-angle-shot-bandra-worli-sealink-mumbai-enveloped-with-fog_181624-9734.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
     },
     {
-        title: "HOSUR",
-        img: "https://nimbuscluster.blob.core.windows.net/server01/nhrdn/image/image-upQmPVA0JnW-ORusew6G2-1659429987"
+        title: "Kolkata",
+        img: "https://img.freepik.com/premium-photo/victoria-memorial-is-monument-museum-located-kolkata-west-bengal-india_459244-68.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
     },
     {
-        title: "HOSUR",
-        img: "https://nimbuscluster.blob.core.windows.net/server01/nhrdn/image/image-upQmPVA0JnW-ORusew6G2-1659429987"
-    }
+        title: "Bangalore",
+        img: "https://img.freepik.com/premium-photo/mysore-palace_78361-1014.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        title: "Hyderabad",
+        img: "https://img.freepik.com/free-photo/architecture-ancient-monument-world-heritage-day-celebration_23-2151297157.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        title: "Assam",
+        img: "https://img.freepik.com/premium-photo/scenic-view-mountains-against-cloudy-sky_1048944-16107144.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        title: "Ahmedabad",
+        img: "https://img.freepik.com/free-photo/mehrangarh-fort_1357-12.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        title: "Coimbatore",
+        img: "https://img.freepik.com/free-photo/temple-atop-clouds-sunrise_23-2152002049.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        title: "Kochi",
+        img: "https://img.freepik.com/free-photo/beautiful-sunrise-fishing-dip-nets-pakpra-phatthalung-thailand_335224-813.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        title: "Telangana ",
+        img: "https://img.freepik.com/free-photo/parinirvana-stupa-temple-kushinagar-india_554837-289.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
 ];
 
 function ContactUsCarousel() {
     const navigate = useNavigate()
     return (
         <div className="captital-campus-content-sec mt-5">
+            <h1 className="mb-4">Regional Chapters</h1>
             <div className="row row-gap-5 align-items-stretch justify-content-center flex-lg-row flex-column">
 
                 {/* LEFT - SWIPER */}
