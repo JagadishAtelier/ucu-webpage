@@ -1,0 +1,106 @@
+.industry-approach-section {
+  background: #f7f9fc;
+  color: #1c1c1c;
+}
+
+.industry-approach-section h2 {
+  color: #111;
+  font-weight: 700;
+}
+
+.industry-approach-section p {
+  line-height: 1.7;
+  color: #4b5563;
+}
+.industry-approach-section .row > div:last-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.industry-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 26px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.industry-card:hover {
+  transform: translateY(-4px);
+  border-color: #acb9ff;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.07);
+}
+/* Mobile center card active */
+.industry-card.active-card {
+  transform: translateY(-6px) scale(1.02);
+  border-color: #acb9ff;
+  box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+.industry-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(205deg, #07baf3 1%, #1703a9 100%);
+  border-radius: 14px; /* More modern than circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0px 8px 18px rgba(90, 197, 1, 0.35);
+}
+
+.industry-card h5 {
+  margin-top: 16px;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.industry-card p {
+  font-size: 14.8px;
+  margin-top: 8px;
+}
+
+/* Responsive tuning */
+@media (max-width: 768px) {
+  .industry-card {
+    padding: 20px;
+  }
+
+  .industry-card h5 {
+    font-size: 16px;
+  }
+
+  .industry-card p {
+    font-size: 14px;
+  }
+}
+.industry-row {
+  margin-bottom: 30px; /* adds vertical spacing */
+}
+/* Row hidden initially */
+.reveal-row {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* When row becomes visible */
+.reveal-row.show-row {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay animation per row */
+.industry-row:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.industry-row:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.industry-row:nth-child(3) {
+  transition-delay: 0.6s;
+}

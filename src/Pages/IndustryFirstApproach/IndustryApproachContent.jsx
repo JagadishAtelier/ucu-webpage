@@ -1,51 +1,128 @@
-import { ArrowLeftCircle, BadgeCheck, GraduationCap, RefreshCcw, Rocket, Target, TestTube2, Timer } from 'lucide-react'
-import React from 'react'
+import React, { useEffect, useRef } from "react";
+import {
+  Rocket,
+  Timer,
+  GraduationCap,
+  BadgeCheck,
+  Target,
+  TestTube2,
+  RefreshCcw,
+} from "lucide-react";
+import "./IndustryFirstApproach.css";
+
+const features = [
+  { icon: <Rocket />, title: "Industry First. Future Ready. Always.", description: "At UCU, we don’t follow industry trends — we help create them. Every program is co-built with the industry, for the industry, and benchmarked against global best practices." },
+  { icon: <Timer />, title: "Strategy Powered by 100+ CXOs", description: "Our councils include CHROs, TA Heads, L&D leaders and CXOs from global MNCs who actively co-design our curriculum across domains like Product, Cybersecurity, FinTech, Digital Marketing, GCCs & more." },
+  { icon: <GraduationCap />, title: "Faculty of Titans", description: "Our Professors of Practice come from top consulting, finance and tech firms, delivering real-world insights, boardroom thinking and industry execution." },
+  { icon: <BadgeCheck />, title: "Day-Zero Industry Readiness", description: "Case-based learning, simulations, leadership labs and corporate grooming ensure graduates are job-ready from day one." },
+  { icon: <Target />, title: "Sector-Specific Leadership Tracks", description: "Specialized programs across FinTech, Mobility, BFSI, Manufacturing, Data & Analytics, Consulting, and Semiconductors — all built for future leadership." },
+  { icon: <TestTube2 />, title: "Faculty Certification with Corporate DNA", description: "Our Faculty Certification blends pedagogy with corporate acumen — reimagining how modern educators teach for industry outcomes." },
+  { icon: <RefreshCcw />, title: "Continuous Learning for Continuous Relevance", description: "Executive learning programs for professionals to stay updated with emerging tools, trends and enterprise transformations." },
+];
 
 function IndustryApproachContent() {
-    return (
-        <div className="captital-campus-content-sec mt-5">
-            <div className='d-flex gap-2 align-items-center mb-3'>
-                <div className='p-2 rounded-circle' style={{ backgroundColor: "#5ac501" }}><Rocket style={{ color: "white" }} /></div>
-                <p className='fs-5 fw-bold mb-0'>Industry First. Future Ready. Always.</p>
-            </div>
-            <p className=''>At Universal Corporate University (UCU), Chennai, we don’t just follow industry trends — we set them. Our programs are engineered for the boardroom, built with the boardroom, and benchmarked against global best practices. Here's how we lead the charge:</p>
-            <div className='d-flex gap-2 align-items-center mb-3'>
-                <div className='p-2 rounded-circle' style={{ backgroundColor: "#5ac501" }}><Timer style={{ color: "white" }} /></div>
-                <p className='fs-5 fw-bold mb-0'>Strategy Powered by 100+ CXOs:</p>
-            </div>
+  const rowsRef = useRef([]);
+  const cardsRef = useRef([]);
 
-            <p>Our Business Advisory Council, HR Leadership Panels (CHROs, TA Heads, L&D Experts), and Young CXO Council bring together over 100 top-tier industry leaders from global MNCs. These visionaries co-create UCU’s curriculum, ensuring every module is a direct response to what the market demands — not what academia assumes. - In addition, UCU is establishing sector-specific and program-led advisory councils in domains such as Sales, Product Management, Cybersecurity, Brand Management, Digital Marketing, FinTech, Global Capability Centres (GCCs), and more — enabling deep vertical alignment and precision-driven curriculum design for each specialized track.</p>
+  useEffect(() => {
+    // 🔹 Existing row animation observer
+    const rowObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show-row");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
 
-            <div className='d-flex gap-2 align-items-center mb-3'>
-                <div className='p-2 rounded-circle' style={{ backgroundColor: "#5ac501" }}><GraduationCap style={{ color: "white" }} /></div>
-                <p className='fs-5 fw-bold mb-0'>Faculty of Titans:</p>
-            </div>
+    rowsRef.current.forEach((row) => {
+      if (row) rowObserver.observe(row);
+    });
 
-            <p>UCU’s Professors of Practice and industry trainers hail from the world’s most respected firms in Consulting, Finance, Product Management, and Technology. They don’t just teach — they transfer wisdom, war stories, and winning strategies.</p>
-            <div className='d-flex gap-2 align-items-center mb-3'>
-                <div className='p-2 rounded-circle' style={{ backgroundColor: "#5ac501" }}><BadgeCheck style={{ color: "white" }} /></div>
-                <p className='fs-5 fw-bold mb-0'>Day-Zero Industry Readiness:</p>
-            </div>
+    // 🔹 NEW: Card active observer (for mobile)
+    let cardObserver;
 
-            <p>Our learners don’t wait to be industry-ready — they arrive that way. Every program is infused with real-world simulations, case-led learning, and leadership grooming, ensuring fresh graduates hit the ground sprinting and experienced professionals ascend to strategic roles.</p>
-            <div className='d-flex gap-2 align-items-center mb-3'>
-                <div className='p-2 rounded-circle' style={{ backgroundColor: "#5ac501" }}><Target style={{ color: "white" }} /></div>
-                <p className='fs-5 fw-bold mb-0'>Sector-Specific Leadership Tracks:</p>
-            </div>
-            <p>Whether it’s FinTech, Mobility, Sustainability, BFSI, IT/ITES, Manufacturing, Consulting, Data & Analytics, or Semiconductors — our curated programs are precision-built to meet the leadership needs of tomorrow’s enterprises.</p>
-            <div className='d-flex gap-2 align-items-center mb-3'>
-                <div className='p-2 rounded-circle' style={{ backgroundColor: "#5ac501" }}><TestTube2 style={{ color: "white" }} /></div>
-                <p className='fs-5 fw-bold mb-0'>Faculty Certification with Corporate DNA:</p>
-            </div>
-            <p>UCU’s pioneering Faculty Certification initiative reimagines academic excellence by blending traditional pedagogy with corporate acumen. We certify educators to teach with the pulse of the industry — not just the pages of a textbook.</p>
-            <div className='d-flex gap-2 align-items-center mb-3'>
-                <div className='p-2 rounded-circle' style={{ backgroundColor: "#5ac501" }}><RefreshCcw style={{ color: "white" }} /></div>
-                <p className='fs-5 fw-bold mb-0'>Continuous Learning for Continuous Relevance:</p>
-            </div>
-            <p>For working professionals, UCU is a lifelong partner. Our executive learning modules ensure you stay ahead of the curve — with the latest tools, trends, and transformations shaping your sector.</p>
+    if (window.innerWidth <= 768) {
+      cardObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active-card");
+            } else {
+              entry.target.classList.remove("active-card");
+            }
+          });
+        },
+        {
+          threshold: 0.6, // card must be 60% visible
+        }
+      );
 
+      cardsRef.current.forEach((card) => {
+        if (card) cardObserver.observe(card);
+      });
+    }
+
+    return () => {
+      rowObserver.disconnect();
+      if (cardObserver) cardObserver.disconnect();
+    };
+  }, []);
+
+  const rows = [
+    features.slice(0, 3),
+    features.slice(3, 6),
+    features.slice(6, 7),
+  ];
+
+  return (
+    <section className="industry-approach-section py-5">
+      <div className="container-fluid mx-1">
+        <div className="text-center mb-5">
+          <h2 className="fw-bold display-6">
+            Industry Aligned. Leadership Driven.
+          </h2>
+          <p className="text-muted mx-auto" style={{ maxWidth: "750px" }}>
+            UCU is built on a simple belief: education must move at the speed of
+            industry. Every program is engineered with corporate leaders to
+            create future-ready professionals.
+          </p>
         </div>
-    )
+
+        {rows.map((rowItems, rowIndex) => (
+          <div
+            key={rowIndex}
+            ref={(el) => (rowsRef.current[rowIndex] = el)}
+            className="row g-4 industry-row reveal-row justify-content-center"
+          >
+            {rowItems.map((item, index) => (
+              <div
+                className="col-lg-4 col-md-6 d-flex justify-content-center"
+                key={index}
+              >
+                <div
+                  className="industry-card text-left h-100 w-100"
+                  ref={(el) => (cardsRef.current.push(el))}
+                >
+                  <div className="d-flex justify-content-center">
+                    <div className="industry-icon">{item.icon}</div>
+                  </div>
+                  <h4 className="fw-bold mt-4 mb-3 text-center">
+                    {item.title}
+                  </h4>
+                  <p className="text-muted small text-center">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
 
-export default IndustryApproachContent
+export default IndustryApproachContent;
