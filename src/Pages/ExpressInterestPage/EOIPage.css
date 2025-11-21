@@ -1,0 +1,61 @@
+.EOI-logo{
+    height: 100px;
+}
+.input-EOI-drop {
+    border: none !important;
+    border-bottom: 1px solid gray !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    width: 30% !important;
+}
+/* Scroll container */
+.EOI-table-div {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;  /* smooth mobile scroll */
+    display: block;
+}
+
+/* Table */
+.placement-table-EOI {
+    min-width: 900px; /* IMPORTANT: ensures horizontal scroll */
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Table cells */
+.placement-table-EOI th,
+.placement-table-EOI td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* Mobile input */
+.input-EOI-drop {
+    border: none !important;
+    border-bottom: 1px solid gray !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    width: 30% !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .input-EOI-drop {
+        width: 100% !important;
+    }
+}
+
+@media (max-width:480px) {
+    .input-EOI-drop{
+        width: 100% !important;
+    }
+    .EOI-table-div{
+            width: 100%;
+    overflow-x: auto;
+    }
+}

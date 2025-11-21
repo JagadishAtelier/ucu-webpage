@@ -3,7 +3,7 @@ import React from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import NewFooter from '../../Components/NewFooter/NewFooter'
 import ExpressInterestForm from './ExpressInterestForm'
-
+import './EOIPage.css'
 function ExpressInterestPageBanner() {
     return (
         <div>
