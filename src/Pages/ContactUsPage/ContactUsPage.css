@@ -419,6 +419,9 @@
     .contact-form-wrapper{
     padding: 0;
   }
+    .contact-carousel-text{
+    height: fit-content;
+  }
 }
 @media (max-width:480px) {
   .contact-card{

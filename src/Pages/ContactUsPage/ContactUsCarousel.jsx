@@ -25,11 +25,11 @@ const cities = [
 function ContactUsCarousel() {
     const navigate = useNavigate()
     return (
-        <div className="contact-carousel-wrapper container-fluid py-5 mx-auto">
+        <div className="captital-campus-content-sec mt-5">
             <div className="row row-gap-5 align-items-stretch justify-content-center flex-lg-row flex-column">
 
                 {/* LEFT - SWIPER */}
-                <div className="col-lg-6">
+                <div className="col-lg-7">
                     <Swiper
                         modules={[Autoplay]}
                         slidesPerView={3}
@@ -41,22 +41,9 @@ function ContactUsCarousel() {
                             disableOnInteraction: false
                         }}
                         breakpoints={{
-                            0: {
-                                slidesPerView: 1,
-                                spaceBetween: 10
-                            },
-                            576: {
-                                slidesPerView: 2,
-                                spaceBetween: 15
-                            },
-                            992: {
-                                slidesPerView: 3,
-                                spaceBetween: 20
-                            },
-                            1200: {
-                                slidesPerView: 4,
-                                spaceBetween: 25
-                            }
+                            320: { slidesPerView: 1 },
+                            768: { slidesPerView: 2 },
+                            1024: { slidesPerView: 3 },
                         }}
                         className="contact-carousel-swiper"
                     >
@@ -72,7 +59,7 @@ function ContactUsCarousel() {
                 </div>
 
                 {/* RIGHT - TEXT BLOCK */}
-                <div className="contact-carousel-text col-lg-4 col-11 mx-auto bg-white p-3 shadow d-flex flex-column justify-content-between">
+                <div className="contact-carousel-text col-lg-5 col-11 mx-auto bg-white p-3 shadow d-flex flex-column justify-content-between">
                     <p className="fw-bold m-0" style={{ color: "#0f1a48" }}>UCU Chapters</p>
                     <h2 className="fw-bold mt-2">Presence across major cities in India</h2>
                     <p className="text-muted mt-3">
