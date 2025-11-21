@@ -98,9 +98,9 @@ function ContactChapterGrid() {
         <div className="container my-5">
             <div className="row">
                 {cities.map((item, index) => (
-                    <div className="col-lg-4 col-md-6 mb-4" key={index}>
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
+                    <div className="col-lg-4 col-md-6 mb-4 mx-auto" key={index}>
+                        <div className="flip-card ">
+                            <div className="flip-card-inner shadow">
                                 {/* Front Side */}
                                 <div className="flip-card-front">
                                     <img src={item.img} alt={item.title} className="img-fluid" />

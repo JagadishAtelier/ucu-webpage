@@ -90,7 +90,7 @@ function ExpressInterestForm() {
                                     <Form.Check type="checkbox" label="Annual Event"className='mb-2 fw-bold'  />
                                     <Form.Check type="checkbox" label="Industry Visit" className='mb-2 fw-bold' />
                                     <Form.Check type="checkbox" label="Corporate Day"className='mb-2 fw-bold'  />
-                                    <Form.Check type="checkbox" label="Summer Internship Hiring"className='mb-2 fw-bold'  />
+                                    <Form.Check type="checkbox" label="Full Time Hiring & Summer Internship"className='mb-2 fw-bold'  />
                                 </Form.Group>
 
                                 {/* reCAPTCHA box placeholder */}
@@ -118,7 +118,6 @@ function ExpressInterestForm() {
                                     <Form.Check type="checkbox" label="Corporate Competition"className='mb-2 fw-bold'  />
                                     <Form.Check type="checkbox" label="Co-branded Curriculum" className='mb-2 fw-bold' />
                                     <Form.Check type="checkbox" label="Live Project" className='mb-2 fw-bold' />
-                                    <Form.Check type="checkbox" label="Full-time Hiring" className='mb-2 fw-bold' />
                                 </Form.Group>
                             </Col>
                         </Row>
