@@ -106,9 +106,9 @@ function ExpressInterestForm() {
                             </Col>
                         </Row>
                         {openForm && (
-                            <div className='my-4'>
+                            <div className='my-4 contact-form-card bg-white p-4 p-md-5'>
                                 <Button className='col-12'>EXPRESSION OF INTEREST (EOI) </Button>
-                                <div className='d-flex align-items-center justify-content-center my-4 gap-5'>
+                                <div className=' d-flex align-items-center justify-content-center my-4 gap-5'>
                                     {/* <img src='/logo.svg' className='EOI-logo'/> */}
                                     <h3 className='text-center'>Corporate & Career Services- Chennai </h3>
                                 </div>
@@ -127,13 +127,13 @@ function ExpressInterestForm() {
                                         </Form.Group>
                                     </Row>
                                 </Form>
-                                <div className="contact-form-card mx-auto p-4 p-md-5">
-                                    <p className='fw-bold'>Our contact information for campus recruitment: </p>
+                                <div className="mx-auto ">
+                                    <p className='fw-bold fs-5'>Our contact information for campus recruitment: </p>
                                     <Form>
                                         <Row className="mb-4">
                                             <Col lg={6}>
                                                 <Form.Group className="floating-box">
-                                                    <Form.Label className="form-label-uni">Company Name:*</Form.Label>
+                                                    <Form.Label className="form-label-uni fs-6 fw-bold">Company Name:*</Form.Label>
                                                     <Form.Control type="text" required />
 
                                                 </Form.Group>
@@ -141,7 +141,7 @@ function ExpressInterestForm() {
 
                                             <Col lg={6}>
                                                 <Form.Group className="floating-box">
-                                                    <Form.Label className="form-label-uni">Company Address:*</Form.Label>
+                                                    <Form.Label className="form-label-uni fs-6 fw-bold">Company Address:*</Form.Label>
                                                     <Form.Control type="text" required />
 
                                                 </Form.Group>
@@ -151,7 +151,7 @@ function ExpressInterestForm() {
                                         <Row className="mb-4">
                                             <Col lg={6}>
                                                 <Form.Group className="floating-box">
-                                                    <Form.Label className="form-label-uni">Contact Person (1)</Form.Label>
+                                                    <Form.Label className="form-label-uni fs-6 fw-bold">Contact Person (1)</Form.Label>
                                                     <Form.Control type="text" required />
 
                                                 </Form.Group>
@@ -159,7 +159,7 @@ function ExpressInterestForm() {
 
                                             <Col lg={6}>
                                                 <Form.Group className="floating-box">
-                                                    <Form.Label className="form-label-uni">Contact Person (2)</Form.Label>
+                                                    <Form.Label className="form-label-uni fs-6 fw-bold">Contact Person (2)</Form.Label>
                                                     <Form.Control type="email" required />
 
                                                 </Form.Group>
@@ -169,14 +169,14 @@ function ExpressInterestForm() {
                                         <Row className="mb-4">
                                             <Col lg={6}>
                                                 <Form.Group className="floating-box">
-                                                    <Form.Label className="form-label-uni">Designation (1)</Form.Label>
+                                                    <Form.Label className="form-label-uni fs-6 fw-bold">Designation (1)</Form.Label>
                                                     <Form.Control type="text" required />
 
                                                 </Form.Group>
                                             </Col>
                                             <Col lg={6}>
                                                 <Form.Group className="floating-box">
-                                                    <Form.Label className="form-label-uni">Designation (2)</Form.Label>
+                                                    <Form.Label className="form-label-uni fs-6 fw-bold">Designation (2)</Form.Label>
                                                     <Form.Control type="text" required />
 
                                                 </Form.Group>
@@ -185,14 +185,14 @@ function ExpressInterestForm() {
                                         <Row className="mb-4">
                                             <Col lg={6}>
                                                 <Form.Group className="floating-box">
-                                                    <Form.Label className="form-label-uni">Telephone Number</Form.Label>
+                                                    <Form.Label className="form-label-uni fs-6 fw-bold">Telephone Number</Form.Label>
                                                     <Form.Control type="text" required />
 
                                                 </Form.Group>
                                             </Col>
                                             <Col lg={6}>
                                                 <Form.Group className="floating-box">
-                                                    <Form.Label className="form-label-uni">Mobile Number(s)</Form.Label>
+                                                    <Form.Label className="form-label-uni fs-6 fw-bold">Mobile Number(s)</Form.Label>
                                                     <Form.Control type="text" required />
 
                                                 </Form.Group>
@@ -201,7 +201,7 @@ function ExpressInterestForm() {
                                         <Row className="mb-4">
                                             <Col lg={12}>
                                                 <Form.Group className="floating-box">
-                                                    <Form.Label className="form-label-uni"> Email ID(s)</Form.Label>
+                                                    <Form.Label className="form-label-uni fs-6 fw-bold"> Email ID(s)</Form.Label>
                                                     <Form.Control type="text" required />
 
                                                 </Form.Group>

@@ -120,7 +120,8 @@
 }
 
 .dropdown-menu.online-programs {
-  left: -60% !important;
+  left: 50% !important;
+  width: 150%;
 }
 
 .dropdown-menu.programs {
