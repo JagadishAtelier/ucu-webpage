@@ -140,7 +140,11 @@
   transform: translateX(-65%) translateY(0) !important;
 }
 
-.dropdown-menu.about,
+.dropdown-menu.about{
+  width: 300px !important;
+  transform: translateX(-70%) translateY(0) !important;
+}
+
 .dropdown-menu.campus-placements {
   width: 300px !important;
   transform: translateX(-70%) translateY(0) !important;
@@ -1445,3 +1449,97 @@ li:hover .career-reboot-heading {
   mask-composite: exclude;
   animation: rainbowShift 4s linear infinite;
 } */
+/* ⭐ Custom Design for Campus Placement Dropdown */
+.menu-campus-custom-menu {
+  height: 100vh;
+  left: -240% !important;
+  background: #ffffff !important;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.menu-campus-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  position: relative;
+}
+.menu-campus-wrapper {
+  width: fit-content;     /* grid shrinks to content width */
+  margin: 0 auto;         /* centers the whole block */
+}
+.menu-campus-grid {
+  flex: 0 0 auto !important;   /* prevents stretching */
+  width: fit-content !important;  /* grid shrinks to its content */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-campus-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 12px;
+}
+
+
+.menu-campus-card {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+.navbar-nav > .dropdown .cam-drop-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  display: block;
+  transform: translateX(-50%) translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+
+  /* Glassmorphism background */
+  background: rgba(14, 14, 34, 0.37);
+  /* translucent blue */
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  /* Safari support */
+
+  border-top: 2px solid rgba(52, 140, 255, 0.5);
+  border-radius: 12px;
+
+  z-index: 1000;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+  width: 0;
+  max-width: 1400px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 2rem;
+
+  transition: opacity 0.5s ease, width 0.5s ease-in-out,
+    max-height 0.3s ease-in-out 0.8s,
+    /* start after width finishes */ padding 0.3s ease-in-out 0.8s,
+    transform 0.5s ease, visibility 0.5s ease;
+}
+.navbar-nav > .dropdown:hover .cam-drop-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  width: 100vw;
+  max-height: 600px;
+  /* enough to show content */
+  padding: 2rem;
+  transform: translateX(-50%) translateY(0);
+}
+.menu-campus-image{
+  height: 25vh;
+  width: 100%;
+  object-fit: cover;
+}
+.menu-item-campus-card{
+  height: 36vh;
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 23%;
+}
