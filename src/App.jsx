@@ -54,6 +54,7 @@ import ExpressInterestPageBanner from "./Pages/ExpressInterestPage/ExpressIntere
 import IndustryFirstApproach from "./Pages/IndustryFirstApproach/IndustryFirstApproach";
 import ContactChapters from "./Pages/ContactChapters/ContactChapters";
 import ContactChapterInternatinal from "./Pages/ContactChapters/ContactChapterInternatinal";
+import TalentPage from "./Pages/TalentPage/TalentPage";
 
 function App() {
   useEffect(() => {
@@ -109,6 +110,7 @@ function App() {
         <Route path="/industry-approach" element={<IndustryFirstApproach/>} />
         <Route path="/contact-chapters" element={<ContactChapters/>} />
         <Route path="/contact-chapters-international" element={<ContactChapterInternatinal/>} />
+        <Route path="/explore-talent" element={<TalentPage/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>

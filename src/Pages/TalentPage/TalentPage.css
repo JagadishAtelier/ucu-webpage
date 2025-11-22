@@ -1,0 +1,193 @@
+/* Container fade animation */
+.talent-container {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* CARD DESIGN */
+.talent-card {
+  position: relative;
+  background: #f3f7ff;
+  border-radius: 16px;
+  padding: 25px;
+  min-height: 360px;
+  border: 2px solid transparent;
+  background-image: 
+      linear-gradient(#f3f7ff, #f3f7ff),
+      linear-gradient(135deg, #64b5ff, #2e7dff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+/* Hover Lift */
+.talent-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 68, 255, 0.15);
+}
+
+/* Background Decoration */
+.talent-card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: rgba(0, 128, 255, 0.07);
+  border-radius: 50%;
+}
+
+.talent-card::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 128, 255, 0.05);
+  border-radius: 50%;
+}
+
+/* TOP BADGE */
+.talent-badge {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background: #2e7dff;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  box-shadow: 0 5px 15px rgba(0, 68, 255, 0.25);
+}
+
+/* TEXT HEADINGS */
+.talent-head {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0b2a5a;
+}
+
+.talent-subhead {
+  font-weight: 600;
+  color: #1a3c7c;
+}
+
+/* LIST */
+.talent-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.talent-list li {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #344767;
+}
+
+.talent-icon {
+  color: #2e7dff;
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* BUTTON */
+.talent-btn {
+  background: #2e7dff;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.talent-btn:hover {
+  background: #4da2ff;
+  transform: scale(1.03);
+  letter-spacing: 0.5px;
+}
+/* Make all cards equal height */
+.talent-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;     /* This forces equal height */
+}
+
+/* Push button to bottom */
+.talent-card .text-center {
+  margin-top: auto;   /* This pushes the button to the bottom */
+}
+
+
+
+
+/* TAB WRAPPER */
+.TP-custom-tabs {
+  border-bottom: none !important;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+  justify-content: center;
+}
+
+/* TAB BUTTON BASE */
+.TP-custom-tab-btn {
+  border: 2px solid #2e7dff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: white;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: #0b2a5a;
+  transition: all 0.3s ease;
+}
+
+/* ON HOVER */
+.TP-custom-tab-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 68, 255, 0.15);
+}
+
+/* ACTIVE TAB */
+.TP-custom-tab-btn.active {
+  background-color: #eaf3ff; /* mild matching card shade */
+  color: black !important;
+  box-shadow: 0 6px 18px rgba(0, 68, 255, 0.2);
+  letter-spacing: 0.3px;
+    border: 2px solid #2e7dff;
+}
+
+@media (max-width:768px) {
+    .TP-custom-tabs {
+        width: 100%;
+    }
+    .TP-custom-tab-btn{
+        width: 49%;
+    }
+    .talent-card{
+        min-height: 300px;
+        height: 100%;
+    }
+}
+@media (max-width:480px) {
+    .TP-custom-tabs {
+        width: 100%;
+    }
+    .TP-custom-tab-btn{
+        width: 100%;
+    }
+    .talent-card{
+        min-height: 0%;
+        height: 100%;
+    }
+}
