@@ -4,7 +4,7 @@ function TalentBottomDetails() {
     return (
         <div className='captital-campus-content-sec my-4'>
             <section
-                className="connect-section text-center p-3 rounded"
+                className="connect-section m-0 text-center p-3 rounded"
                 style={{ backgroundImage: `url("https://img.freepik.com/free-photo/hercules-hall-surrounded-by-greenery-sunlight-daytime-munich-germany_181624-17876.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80")` }}
             >
                 <Container>
