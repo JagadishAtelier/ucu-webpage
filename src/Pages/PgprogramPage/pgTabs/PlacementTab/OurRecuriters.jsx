@@ -49,8 +49,8 @@ function OurRecuriters() {
         >
           {data.map((item, index) => (
             <SwiperSlide key={index} >
-              <div className="text-center recruiter-card p-3 border">
-                <h5>{item}</h5>
+              <div className="text-center recruiter-card rounded p-3 border">
+                <h5 className='mb-0'>{item}</h5>
               </div>
             </SwiperSlide>
           ))}

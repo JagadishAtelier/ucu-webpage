@@ -35,9 +35,10 @@ function PlacementTab() {
 
             <h1 className='fs-2 fw-medium mt-5'>Tentative placement timelines</h1>
 
-            <div className='mt-3' id='PlacementCalendar'>
-              <p className='placement-table-head m-0'>Internship timelines</p>
-              <table className="placement-table">
+            <div className="d-flex gap-3 mt-4">
+              <div className='d-inline w-50' id='PlacementCalendar'>
+              <p className='placement-table-head w-100 m-0'>Internship timelines</p>
+              <table className="placement-table w-100">
 
                 <thead>
                   <tr>
@@ -65,16 +66,16 @@ function PlacementTab() {
                 </tbody>
               </table>
             </div>
-            <div className='mt-0'>
-              <p className='placement-table-head m-0'>Final placement timelines</p>
-              <table className="placement-table">
+            <div className='mt-0 d-inline w-50'>
+              <p className='placement-table-head w-100 m-0'>Final placement timelines</p>
+              <table className="placement-table w-100">
 
-                {/* <thead>
+                <thead>
                 <tr>
                   <th>Internship cycle</th>
                   <th>Summer internship</th>
                 </tr>
-              </thead> */}
+              </thead>
                 <tbody>
                   <tr>
                     <td>Batch</td>
@@ -94,6 +95,7 @@ function PlacementTab() {
                   </tr>
                 </tbody>
               </table>
+            </div>
             </div>
 
             <PlacementCareerTab />

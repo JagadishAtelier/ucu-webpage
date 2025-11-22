@@ -3,11 +3,7 @@ import './PlacementTab.css'
 import { Mail, Phone } from 'lucide-react'
 function PlacementContact() {
   return (
-    //     <section
-    //   className="connect-section text-center"
-    //   style={{ backgroundImage: `url("https://img.freepik.com/free-photo/hercules-hall-surrounded-by-greenery-sunlight-daytime-munich-germany_181624-17876.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80")` }}
-    // ></section>
-    <div className='contact-place-con mt-5 mt-lg-0 mb-0 connect-section text-center d-flex flex-column justify-content-center'
+    <div className='contact-place-con rounded mt-5 mt-lg-0 mb-0 connect-section text-center d-flex flex-column justify-content-center'
     style={{ backgroundImage: `url("https://img.freepik.com/free-photo/hercules-hall-surrounded-by-greenery-sunlight-daytime-munich-germany_181624-17876.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80")` }}
     >
         <h1 className='fs-2 fw-medium mt-5 mb-3 position-relative'>Connect with us</h1>

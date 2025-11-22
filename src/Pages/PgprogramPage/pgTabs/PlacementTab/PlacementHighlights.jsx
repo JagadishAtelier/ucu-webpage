@@ -5,7 +5,7 @@ import { CircleArrowDown, CircleFadingArrowUp } from 'lucide-react'
 const data = [
     {number  : "224",para : "Participant Companies"},
     {number  : "224",para : "Participant in batch"},
-    {number  : "224",para : "Total number of pre-[lacement] offer"},
+    {number  : "224",para : "Total No.of Pre-Placement offer"},
     {number  : "224",para : "Average Salary "},
     {number  : "224",para : "Medium Salary "},
     {number  : "224",para :"High Salary "},
