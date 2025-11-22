@@ -94,7 +94,7 @@ const tabData = {
 const tabTitles = {
     fulltime: "Full-Time Programs",
     flexi: "Flexi Programs",
-    executive: "Short Term Programs",
+    executive: "Functional Specialization",
     career: "Career Reboot Program for Women",
 };
 
@@ -147,7 +147,6 @@ function TalentFullTime() {
                 {activeTab === "executive" ? (
                     <>
                         {/* Functional Title */}
-                        <h2 className="text-center">Functional Specialization</h2>
                         {tabData.executive.functional.map((item, index) => (
                             <div className="col-lg-4 col-md-6" key={index}>
                                 <div className="talent-card p-4 shadow">
@@ -173,7 +172,7 @@ function TalentFullTime() {
                         ))}
 
                         {/* Industry Sector Title */}
-                        <h2 className="text-center my-4">Industry Sector Specialization</h2>
+                        <h1 className="text-center my-4">Industry Sector Specialization</h1>
                         {tabData.executive.industrySector.map((item, index) => (
                             <div className="col-lg-4 col-md-6" key={index}>
                                 <div className="talent-card p-4 shadow">

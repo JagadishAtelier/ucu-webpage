@@ -374,7 +374,7 @@ export const menuData = [
     specialDropdown: "campusDropdown",
     submenu: [
       { label: "Campus Placement", link: "/placements/Campus-Placement",image:"https://img.freepik.com/free-photo/focus-indian-boy-who-standing-sepately-group-international-students-standing-together-park-university_1157-50077.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-      { label: "Explore Talent", link: "/placements/Explore-Talent",image:"https://img.freepik.com/premium-photo/pretty-brunette-holding-binoculars_13339-118544.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Explore Talent", link: "/explore-talent",image:"https://img.freepik.com/premium-photo/pretty-brunette-holding-binoculars_13339-118544.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
       { label: "Corporate Engagement", link: "/engagement/cap",image:"https://img.freepik.com/free-photo/cheerful-overjoyed-business-people-conference-room-celerating-diverse-colleagues-with-new-opportunity-enjoing-victory-meeting-broadroom-office_482257-5101.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
       { label: "Testimonials", link: "/placements/Testimonials",image:"https://img.freepik.com/premium-photo/happy-graduate-giving-thumbs-up_1152821-13729.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
     ],
@@ -603,7 +603,7 @@ export const menuDataMobile = [
     placement: "bottom",
     submenu: [
       { label: "Campus Placement", link: "/placements/Campus-Placement",image:"https://img.freepik.com/free-photo/focus-indian-boy-who-standing-sepately-group-international-students-standing-together-park-university_1157-50077.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-      { label: "Explore Talent", link: "/placements/Explore-Talent",image:"https://img.freepik.com/premium-photo/pretty-brunette-holding-binoculars_13339-118544.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Explore Talent", link: "/explore-talent",image:"https://img.freepik.com/premium-photo/pretty-brunette-holding-binoculars_13339-118544.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
       { label: "Corporate Engagement", link: "/engagement/cap",image:"https://img.freepik.com/free-photo/cheerful-overjoyed-business-people-conference-room-celerating-diverse-colleagues-with-new-opportunity-enjoing-victory-meeting-broadroom-office_482257-5101.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
       { label: "Testimonials", link: "/placements/Testimonials",image:"https://img.freepik.com/premium-photo/happy-graduate-giving-thumbs-up_1152821-13729.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
     ],
