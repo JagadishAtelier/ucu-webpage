@@ -83,7 +83,7 @@
 }
 
 /* Button styles */
-.Cpp-full-buttons button:first-child {
+/* .Cpp-full-buttons button:first-child {
   background-color: #0c0142;
   color: white;
   border: none;
@@ -96,16 +96,17 @@
   border: 1px solid #0c0142;
   box-shadow: 0px 10px 8px #0c01421e;
   transform: translateY(-4px);
-}
+} */
 
-.Cpp-full-buttons button:last-child {
+.Cpp-full-buttons button {
   background-color: #fff;
   color: #0c0142;
+  font-weight: 600;
   border: 1px solid #0c0142;
   transition: all 0.4s ease-in-out;
 }
 
-.Cpp-full-buttons button:last-child:hover {
+.Cpp-full-buttons button:hover {
   background-color: #0c0142;
   color: #fff;
   box-shadow: 0px 10px 8px #0c01421e;

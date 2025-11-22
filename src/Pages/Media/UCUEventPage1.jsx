@@ -165,15 +165,15 @@ function UCUEventPage1() {
                                         {item.head}
                                     </h5>
                                     <p
-                                        className={` ${index === 0 ? 'fs-6' : 'fs-6 text-white'
-                                            }`}
-                                        style={{ lineHeight: index === 0 ? '1.4' : '1.6' }}
+                                        className={` ${index === 0 ? 'fs-6' : 'text-white'
+                                            } mb-1`}
+                                        style={{ lineHeight: index === 0 ? '1.4' : '1.6', fontSize: index > 0 ? '0.75rem' : '' }}
                                     >
                                         {item.content}
                                     </p>
                                     <a
                                         href={item.link}
-                                        className="d-block mb-2 text-white"
+                                        className="d-block mb-1 text-white"
                                         style={{ fontSize: index === 0 ? '0.9rem' : '0.8rem', }}
                                     >
                                         {item.topic}
