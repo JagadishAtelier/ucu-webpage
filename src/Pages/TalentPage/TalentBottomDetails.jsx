@@ -8,7 +8,7 @@ function TalentBottomDetails() {
                 style={{ backgroundImage: `url("https://img.freepik.com/free-photo/hercules-hall-surrounded-by-greenery-sunlight-daytime-munich-germany_181624-17876.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80")` }}
             >
                 <Container>
-                    <Row className="justify-content-start text-left">
+                    <Row className="justify-content-start text-start">
                             <h2 className="connect-title fs-1 fw-bold">Explore Talent</h2>
                             <p className="position-relative">
                                 +91 9876543210

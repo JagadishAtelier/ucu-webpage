@@ -46,7 +46,7 @@ const tabData = {
                 listHead: "Talent Offerings",
                 list: ["Industry Based Capstone Projects", "Final Placements"]
             },
-                        {
+            {
                 head: "Digital Marketing & AI",
                 listHead: "Talent Offerings",
                 list: ["Industry Based Capstone Projects", "Final Placements"]
@@ -81,7 +81,7 @@ const tabData = {
             },
         ]
     },
-        career: [
+    career: [
         {
             head: "Career Reboot Program for Women",
             listHead: "Talent Offerings",
@@ -150,7 +150,7 @@ function TalentFullTime() {
                         {/* Functional Title */}
                         {tabData.executive.functional.map((item, index) => (
                             <div onClick={() => navigate("/talent-details", { state: { head: item.head } })}
- className="col-lg-4 col-md-6 cursor-pointer" key={index}>
+                                className="col-lg-4 col-md-6 cursor-pointer" key={index}>
                                 <div className="talent-card p-4 shadow">
                                     <h3 className="talent-head">{item.head}</h3>
                                     <p className="talent-subhead">{item.listHead}</p>
@@ -177,7 +177,7 @@ function TalentFullTime() {
                         <h1 className="text-center my-4">Industry Sector Specialization</h1>
                         {tabData.executive.industrySector.map((item, index) => (
                             <div onClick={() => navigate("/talent-details", { state: { head: item.head } })}
- className="col-lg-4 col-md-6" key={index}>
+                                className="col-lg-4 col-md-6" key={index}>
                                 <div className="talent-card p-4 shadow">
                                     <h3 className="talent-head">{item.head}</h3>
                                     <p className="talent-subhead">{item.listHead}</p>
@@ -204,7 +204,7 @@ function TalentFullTime() {
                     /* Default Fulltime & Flexi render */
                     tabData[activeTab].map((item, index) => (
                         <div onClick={() => navigate("/talent-details", { state: { head: item.head } })}
- className="col-lg-4 col-md-6" key={index}>
+                            className="col-lg-4 col-md-6" key={index}>
                             <div className="talent-card p-4 shadow">
                                 <h3 className="talent-head">{item.head}</h3>
                                 <p className="talent-subhead">{item.listHead}</p>
