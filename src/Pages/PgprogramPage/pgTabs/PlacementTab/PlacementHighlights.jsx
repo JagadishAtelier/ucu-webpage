@@ -27,8 +27,8 @@ function PlacementHighlights() {
       const isLastRow = i >= data.length - 3; // last 3 items (last row)
       
       const borderStyle = {
-        borderRight: isLastColumn ? "none" : "1px solid white",
-        borderBottom: isLastRow ? "none" : "1px solid white",
+        borderRight: isLastColumn ? "none" : "4px solid white",
+        borderBottom: isLastRow ? "none" : "4px solid white",
         padding: "5%",
       };
 

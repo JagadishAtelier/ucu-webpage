@@ -23,9 +23,9 @@ function PlacementTab() {
 
 
       {/* --- Conditional Content --- */}
-      <div className="mt-4">
+      <div className="mt-3">
         {selectedBtn === "intern" ? (
-          <div>
+          <div className='p-3 bg-light rounded'>
             <p>
               The Corporate Autumn/Summer Internship is a mandatory credit component of the Post Graduate Diploma in Management course. The current Class 2023-25 participants will see the last Autumns Internship. Starting the Class of 2024-26, students will be available for Summer Internships (Please refer to the placement timeline table).
             </p>
@@ -102,7 +102,7 @@ function PlacementTab() {
             <PlacementContact />
           </div>
         ) : (
-          <div>
+          <div className='p-3 bg-light rounded'>
             <p>
               The final placement process focuses on securing full-time job roles for students.
               Companies visit the campus, conduct pre-placement talks, assessments, and interviews
