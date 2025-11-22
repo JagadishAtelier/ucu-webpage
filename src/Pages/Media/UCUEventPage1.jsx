@@ -14,8 +14,8 @@ const data = [
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
-        head: "The Hindu features Dr Abhijit Dasgupta on early business & tech lessons for career success",
-        content: "In the article published in The Hindu, Dr Abhijit Dasgupta writes about the transformative impact of introducing business and technology to young minds.",
+        head: "The Hindu features Dr Abhijit Dasgupta.",
+        content: "In the article published in The Hindu, Dr Abhijit Dasgupta writes about the transformative.",
         topic: "SP Jain in the News",
         link: "/"
     },
@@ -159,15 +159,15 @@ function UCUEventPage1() {
                                         <small>{item.date}</small>
                                     </div>
                                     <h5 style={{ cursor: "pointer" }} onClick={() => navigate(`${item.head}`)}
-                                        className={`card-title fw-semibold text-white lh-sm ${index === 0 ? 'fs-5' : 'fsize-6'
+                                        className={`card-title  fw-semibold text-white lh-sm ${index === 0 ? 'fs-5' : 'fs-6'
                                             }`}
                                     >
                                         {item.head}
                                     </h5>
                                     <p
-                                        className={` ${index === 0 ? 'fs-6' : 'text-white'
-                                            } mb-1`}
-                                        style={{ lineHeight: index === 0 ? '1.4' : '1.6', fontSize: index > 0 ? '0.75rem' : '' }}
+                                        className={` ${index === 0 ? 'fs-6' : ' fsize-6 text-white'
+                                            } mb-1 `}
+                                        style={{ lineHeight: index === 0 ? '1.4' : '1.6' }}
                                     >
                                         {item.content}
                                     </p>
