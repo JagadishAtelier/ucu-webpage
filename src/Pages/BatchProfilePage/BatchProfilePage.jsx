@@ -32,7 +32,7 @@ function BatchProfilePage() {
                 <div className='position-absolute bottom-0 left-0 d-flex align-items-center campus-route-bg py-3'>
                     <p className='m-0'>UCU</p>
                     <ChevronRight />
-                    <p className='m-0'>atch Profile</p>
+                    <p className='m-0'>Batch Profile</p>
                 </div>
 
             </div>
