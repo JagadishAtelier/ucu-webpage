@@ -47,7 +47,7 @@ function NewFacDirectors() {
                     <h5 className="mb-2 fs-4">{person.name}</h5>
                     <p className="text-muted mb-0">{person.prof}</p>
                     <button
-              className="btn btn-link text-decoration-none p-0 mt-2"
+              className="btn btn-sm btn-link text-decoration-none p-0 mt-2"
               onClick={() => handleGoToCV(person)}
             >
               view CV
@@ -78,7 +78,7 @@ function NewFacDirectors() {
                     <h5 className="mb-2 fs-4">{person.name}</h5>
                     <p className="text-muted mb-0">{person.prof}</p>
                     <button
-              className="btn btn-link text-decoration-none p-0 mt-2"
+              className="btn btn-sm btn-link text-decoration-none p-0 mt-2"
               onClick={() => handleGoToCV(person)}
             >
               view CV

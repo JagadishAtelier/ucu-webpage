@@ -191,7 +191,7 @@ const FacultyPairCard = ({ pair }) => {
               <h5 className="mb-2 fs-4">{faculty.name}</h5>
               <p className="text-muted mb-1 white-space-pre-line">{faculty.prof}</p>
               <button
-              className="btn btn-link p-0"
+              className="btn btn-link btn-sm text-decoration-none p-0"
               onClick={() => handleGoToCV(faculty)}
             >
               View CV
