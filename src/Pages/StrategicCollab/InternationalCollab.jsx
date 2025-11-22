@@ -41,9 +41,9 @@ const data = [
 function InternationalCollab() {
     return (
         <div className="captital-campus-content-sec mt-4">
-            <h1 className="text-start">International Collaboration</h1>
+            <h1 className="text-start">International <span className="text-green">Collaboration</span></h1>
             <p>International Collaboration focuses on building strong partnerships with reputed global universities, research institutions, and industries to promote academic excellence and innovation. Through student and faculty exchange programs, joint research projects, and dual-degree opportunities, it aims to enhance cross-cultural understanding and global competence. The initiative encourages participation in international conferences, workshops, and collaborative learning platforms, providing exposure to diverse academic ecosystems. By fostering global networks and knowledge sharing, International Collaboration enables institutions to address global challenges, drive sustainable development, and prepare students to become globally responsible professionals.</p>
-            <h1 className="my-4 text-center">International Companies</h1>
+            <h1 className="my-4 text-center">International <span className="text-green">Companies</span></h1>
 
             <Swiper
                 modules={[Autoplay]}
@@ -83,7 +83,7 @@ function InternationalCollab() {
                 ))}
             </Swiper>
 
-            <h1 className="my-4 text-center">Universities</h1>
+            <h1 className="my-4 text-center text-green">Universities</h1>
 
             <Swiper
                 modules={[Autoplay]}

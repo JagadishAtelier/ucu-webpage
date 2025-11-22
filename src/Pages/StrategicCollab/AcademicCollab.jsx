@@ -42,7 +42,7 @@ const data = [
 function AcademicCollab() {
   return (
     <div className="captital-campus-content-sec mt-4">
-      <h1 className="mb-4 text-center">Academic Collaboration</h1>
+      <h1 className="mb-4 text-center">Academic <span className="text-green">Collaboration</span></h1>
 
       <Swiper
         modules={[Autoplay]}

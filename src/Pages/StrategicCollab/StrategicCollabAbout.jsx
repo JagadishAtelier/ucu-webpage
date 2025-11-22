@@ -40,7 +40,7 @@ function StrategicCollabAbout() {
     <div className="captital-campus-content-sec mt-5">
       <Container>
         <h1 className="text-center fw-bold mb-3">
-          Strategic Collaborations – Building Bridges for Impact
+          Strategic Collaborations – <span className="text-green">Building Bridges for Impact</span>
         </h1>
         <p className="text-center mx-auto mb-4" style={{ maxWidth: "800px", color: "#555" }}>
           At Universal Corporate University (UCU Chennai), strategic collaboration is not an add-on—it is a founding principle.
@@ -48,7 +48,7 @@ function StrategicCollabAbout() {
           co-create a future-ready ecosystem of business education.
         </p>
 
-        <h4 className="text-center fw-semibold mb-4">Our collaborations span:</h4>
+        <h4 className="text-center fw-semibold mb-4">Our <span className="text-green">collaborations</span> span</h4>
 
         <Row className="g-4">
           {data.map((item, index) => (

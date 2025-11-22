@@ -114,12 +114,9 @@ function MediablogData() {
             <p>Welcome to SP Jain Global Blogs – where the heart of our community comes alive through inspiring stories, industry insights, and first-hand experiences. From expert perspectives to real-life journeys, this is your space to explore, connect, and feel at home in a world of ideas and inspiration.</p>
             <div
                 data-aos="fade-down"
-                className="fac-hero-section d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-md-start text-lg-center p-3 px-lg-3"
+                className="rounded d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-md-start text-lg-center p-3 px-lg-3"
                 style={{
-                    backgroundImage: `url(https://execed.isb.edu/content/dam/sites/cee/images/Group%201182.png)`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
+                    backgroundColor:"#040928"
                 }}
             >
                 <div className="w-100 w-lg-75 w-md-50" data-aos="fade-right">
@@ -172,7 +169,7 @@ function MediablogData() {
                                                 {item.head}
                                             </h5>
                                             <p
-                                                className={`card-text ${index === 0 ? 'fs-6' : 'fs-7 text-white'}`}
+                                                className={`${index === 0 ? 'fs-6' : 'fs-7 text-white'}`}
                                                 style={{ lineHeight: index === 0 ? '1.4' : '1.2' }}
                                             >
                                                 {item.content}

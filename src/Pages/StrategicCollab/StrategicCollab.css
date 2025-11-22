@@ -1,7 +1,9 @@
 .collab-card {
     transition: all 0.3s ease;
 }
-
+.text-green{
+  color: #5bc500 !important;
+}
 
 .industry-collab-card {
     transition: all 0.3s ease;

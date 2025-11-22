@@ -98,9 +98,9 @@ function CampusPlacementsPage() {
 
             default:
                 return (
-                    <div>
-                        <h3 className="pg-panel-title">Section</h3>
-                        <p className="pg-panel-body">Content not available.</p>
+                    <div className='mx-auto text-center my-5'>
+                        <h1 className="display-4 fw-bold" style={{color:'#5ac501'}}>Coming Soon</h1>
+                        <p className="p">We are Cooking something Better.</p>
                     </div>
                 );
         }
