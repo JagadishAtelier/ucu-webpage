@@ -296,7 +296,7 @@ const Navbar = () => {
                   onClick={() => navigate("/auth/login")}
                   className="nav-bar-search-icon"
                   size={18}
-                  
+
                 />
               </div>
             </div>
@@ -323,42 +323,73 @@ const Navbar = () => {
                       </Link>
                     )}
                     {menu.submenu && (
-                      <div
-                        className={`dropdown-menu ${menu.label
-                          ?.replace(/\s+/g, "-")
-                          .toLowerCase()}`}
-                        style={{
-                          display: hoverMenus[menu.label] ? "block" : "none",
-                        }}
-                      >
-                        <div className="row dropdown-menu-container">
-                          {menu.submenu.map((col) => (
-                            <div className="dropdown-menu-col" key={col.label}>
-                              <div className="top-head">
-                                {col.scrollId ? (
-                                  <button
-                                    className="submenu-link bg-transparent border-0 p-0"
-                                    onClick={() =>
-                                      handleScrollNavigation(col.scrollId)
-                                    }
-                                  >
-                                    {col.label}
-                                  </button>
-                                ) : (
-                                  <Link
-                                    to={col.link || "#"}
-                                    className="submenu-link"
-                                  >
-                                    {col.label}
-                                  </Link>
-                                )}
+                      <>
+                        {menu.specialDropdown === "campusDropdown" ? (
+                          // ⭐ Custom dropdown design only for Campus Placements
+                          <div
+                            className="cam-drop-dropdown-menu menu-campus-custom-menu"
+                            style={{ display: hoverMenus[menu.label] ? "block" : "none" }}
+                          >
+                            <div className="d-flex gap-5 align-items-center">
+                              <div className="col-4">
+                                <p className="fs-4">“UCU is redefining the future of talent—rooted in India’s heartland, yet engineered for global impact. Its industry-first, future-ready model is a blueprint for inclusive excellence—powered by global faculty and industry leaders who mentor indigenous students into globally agile professionals.”
+                                </p>
+                                <p className="text-end">Ganesan Ramachandran</p>
+                                <p className="text-end">Managing Director, Accenture Strategy & Consulting</p>
                               </div>
-
-                              {col.submenu && renderNestedMenu(col.submenu, 2)}
+                              <div className="d-grid">
+                              <div className="row row-gap-3">
+                                {menu.submenu.map((item) => (
+                                  <div onClick={() => navigate(`${item.link}`)} className="mx-auto bg-white p-2 gap-2 justify-content-start shadow d-flex flex-column align-items-center menu-item-campus-card">
+                                    <img src={item.image} className="menu-campus-image" />
+                                    <Link key={item.label} to={item.link} className="menu-campus-card">
+                                      <span>{item.label}</span>
+                                    </Link>
+                                  </div>
+                                ))}
+                              </div>
+                              </div>
                             </div>
-                          ))}
-                        </div>
-                      </div>
+                          </div>
+                        ) : (
+                          <div
+                            className={`dropdown-menu ${menu.label
+                              ?.replace(/\s+/g, "-")
+                              .toLowerCase()}`}
+                            style={{
+                              display: hoverMenus[menu.label] ? "block" : "none",
+                            }}
+                          >
+                            <div className="row dropdown-menu-container">
+                              {menu.submenu.map((col) => (
+                                <div className="dropdown-menu-col" key={col.label}>
+                                  <div className="top-head">
+                                    {col.scrollId ? (
+                                      <button
+                                        className="submenu-link bg-transparent border-0 p-0"
+                                        onClick={() =>
+                                          handleScrollNavigation(col.scrollId)
+                                        }
+                                      >
+                                        {col.label}
+                                      </button>
+                                    ) : (
+                                      <Link
+                                        to={col.link || "#"}
+                                        className="submenu-link"
+                                      >
+                                        {col.label}
+                                      </Link>
+                                    )}
+                                  </div>
+
+                                  {col.submenu && renderNestedMenu(col.submenu, 2)}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </>
                     )}
                   </li>
                 ))}

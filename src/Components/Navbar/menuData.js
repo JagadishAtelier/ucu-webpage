@@ -371,12 +371,13 @@ export const menuData = [
   {
     label: "Campus Placements",
     placement: "bottom",
+    specialDropdown: "campusDropdown",
     submenu: [
-      { label: "Recruiting Partners", link: "/placements/recruiters" },
-      { label: "Placement Reports", link: "/placements/reports" },
-      { label: "Corporate Testimonials", link: "/placements/testimonials" },
-      { label: "Summer Internships", link: "/placements/internships" },
-      { label: "Live Projects", link: "/placements/projects" },
+      { label: "Recruiting Partners", link: "/placements/recruiters",image:"https://img.freepik.com/free-photo/business-team-joining-hands-teamwork-concept_1163-1636.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Placement Reports", link: "/placements/reports",image:"https://img.freepik.com/free-photo/smiley-business-man-checking-clipboard_23-2148514864.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Corporate Testimonials", link: "/placements/testimonials",image:"https://img.freepik.com/free-photo/discussing-business-plan_1098-15154.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Summer Internships", link: "/placements/internships",image:"https://img.freepik.com/free-photo/handsome-guy-study-grass_1157-22223.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Live Projects", link: "/placements/projects",image:"https://img.freepik.com/free-photo/happy-entrepreneur-analyzing-business-chart-web-conference-home_637285-12739.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
     ],
   },
 ];
