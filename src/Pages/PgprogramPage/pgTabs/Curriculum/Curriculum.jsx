@@ -36,7 +36,7 @@ A new-age curriculum co-created with the Industry, keeping corporate needs and e
         </div>
 
         {/* Programme Structure */}
-        <Accordion className="mb-5"  defaultActiveKey="0" alwaysOpen>
+        <Accordion className="mb-5">
           <Accordion.Item eventKey="0">
             <Accordion.Header>Year 1</Accordion.Header>
             <Accordion.Body>
@@ -50,8 +50,8 @@ A new-age curriculum co-created with the Industry, keeping corporate needs and e
             </Accordion.Body>
           </Accordion.Item>
           
-          <div className="my-5">
-              <p className="Summer-Internship-head mb-4">Summer Internship</p>
+          <div className="my-2">
+              <p className="Summer-Internship-head text-start">Summer Internship</p>
             {/* <SummerInternship/> */}
           </div>
 
