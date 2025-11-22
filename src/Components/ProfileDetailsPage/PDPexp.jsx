@@ -2,7 +2,7 @@ import React from "react";
 
 function PDPexp() {
   return (
-    <div className="d-flex flex-column gap-3 subject-container border border-3 border-green rounded">
+    <div className="d-flex flex-column gap-3 subject-container exp-border rounded">
       <div className="vertical-line-pdp"></div>
       <h4>EXPERIENCE</h4>
       <div className="d-flex gap-2">
