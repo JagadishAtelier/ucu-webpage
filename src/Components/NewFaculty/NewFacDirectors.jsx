@@ -43,14 +43,14 @@ function NewFacDirectors() {
                     alt={person.name}
                     className="rounded-circle me-md-3 mb-2 mb-md-0 director-img"
                   />
-                  <div className='mt-4 text-center text-lg-start'>
+                  <div className=' text-center text-lg-start'>
                     <h5 className="mb-2 fs-4">{person.name}</h5>
                     <p className="text-muted mb-0">{person.prof}</p>
                     <button
-              className="btn btn-link text-decoration-none p-0"
+              className="btn btn-link text-decoration-none p-0 mt-2"
               onClick={() => handleGoToCV(person)}
             >
-              GO TO CV
+              view CV
             </button>
                   </div>
                 </div>
@@ -74,14 +74,14 @@ function NewFacDirectors() {
                     alt={person.name}
                     className="rounded-circle me-md-3 mb-2 mb-md-0 director-img"
                   />
-                  <div className='mt-4 text-center text-lg-start'>
+                  <div className='text-center text-lg-start'>
                     <h5 className="mb-2 fs-4">{person.name}</h5>
                     <p className="text-muted mb-0">{person.prof}</p>
                     <button
-              className="btn btn-link text-decoration-none p-0"
+              className="btn btn-link text-decoration-none p-0 mt-2"
               onClick={() => handleGoToCV(person)}
             >
-              GO TO CV
+              view CV
             </button>
                   </div>
                 </div>
