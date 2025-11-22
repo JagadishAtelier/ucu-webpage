@@ -4,7 +4,8 @@
   height: 300px;
   width: 297px;
   top: 10%;
-  right: -10%;
+  border-radius: 0 0 10px 10px ;
+  right: -12%;
 }
 .pdp-hero-img-container {
   position: relative;
@@ -16,6 +17,8 @@
   height: 300px;
   width: 100%;
   position: relative;
+  object-fit: cover;
+  border-radius: 5px;
   z-index: 10;
 }
 .hero-white-container {
@@ -37,19 +40,21 @@
   font-weight: 300;
 }
 .pdp-carousel-text {
-  background-color: #003e68;
+  background-color: #1703a9;
   height: fit-content;
   position: absolute;
   z-index: 999;
   width: 50%;
   top: 20%;
   right: 45%;
+  border-radius: 0.5rem;
 }
 .pdp-carousel-img {
   height: 70vh;
   position: relative;
   object-fit: cover;
   width: 50%;
+  border-radius: 0.5rem;
 }
 .pdp-carousel-img-div {
   width: 90%;
