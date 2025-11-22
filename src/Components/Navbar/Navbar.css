@@ -1213,6 +1213,7 @@ li:hover .career-reboot-heading {
   .dropdown-menu {
     padding: 1rem !important;
   }
+  
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .navbar-nav .nav-link {
@@ -1272,6 +1273,34 @@ li:hover .career-reboot-heading {
   .dropdown-menu {
     padding: 1rem !important;
   }
+
+    .menu-campus-custom-menu {
+    height: 80vh !important;
+    left: -240% !important;
+  }
+.navbar-nav > .dropdown .cam-drop-dropdown-menu{
+  max-width: 900px !important;
+  width: 0;
+}
+.navbar-nav > .dropdown:hover .cam-drop-dropdown-menu {
+  width: 100vw !important;
+}
+.campus-text-right{
+  font-size: 0.9rem !important;
+}
+.campus-text-right-name{
+  font-size: 0.7rem !important;
+}
+.menu-campus-image{
+  height: 25vh !important;
+}
+.menu-item-campus-card{
+  height: 33vh !important;
+  width: 48%;
+}
+.menu-campus-card{
+    padding: 0 0 !important;
+}
 }
 @media only screen and (min-width: 992px) and (max-width: 1024px) {
   .navbar-nav .nav-link {
@@ -1279,8 +1308,33 @@ li:hover .career-reboot-heading {
     padding-left: 0px !important;
     padding-right: 5px !important;
   }
-
-
+  .menu-campus-custom-menu {
+    height: 80vh !important;
+    left: -280% !important;
+  }
+.navbar-nav > .dropdown .cam-drop-dropdown-menu{
+  max-width: 900px !important;
+  width: 0;
+}
+.navbar-nav > .dropdown:hover .cam-drop-dropdown-menu {
+  width: 80vw !important;
+}
+.campus-text-right{
+  font-size: 0.9rem !important;
+}
+.campus-text-right-name{
+  font-size: 0.7rem !important;
+}
+.menu-campus-image{
+  height: 28vh;
+}
+.menu-item-campus-card{
+  height: 33vh !important;
+  width: 48%;
+}
+.menu-campus-card{
+    padding: 0 0 !important;
+}
   .online-program-link {
     padding: 0.5rem 0.2rem !important;
     font-size: 0.3rem !important;
@@ -1452,11 +1506,24 @@ li:hover .career-reboot-heading {
 /* ⭐ Custom Design for Campus Placement Dropdown */
 .menu-campus-custom-menu {
   height: 100vh;
-  left: -240% !important;
-  background: #ffffff !important;
+  left: -240%;
+background: linear-gradient(to right, #ffffff, #d8f6c2)  !important;
+
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
+/* .menu-campus-left {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+    url(/bg-camp.png);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: max-content;
+} */
+
+
 
 .menu-campus-title {
   font-size: 18px;
@@ -1464,6 +1531,7 @@ li:hover .career-reboot-heading {
   color: black;
   text-align: center;
   position: relative;
+  height: 20vh;
 }
 .menu-campus-wrapper {
   width: fit-content;     /* grid shrinks to content width */
@@ -1488,6 +1556,7 @@ li:hover .career-reboot-heading {
   color: black;
   font-weight: 600;
   text-align: center;
+  padding: 10px 0;
 }
 .navbar-nav > .dropdown .cam-drop-dropdown-menu {
   position: absolute;
@@ -1504,7 +1573,7 @@ li:hover .career-reboot-heading {
   -webkit-backdrop-filter: blur(18px) saturate(180%);
   /* Safari support */
 
-  border-top: 2px solid rgba(52, 140, 255, 0.5);
+  /* border-top: 2px solid rgba(52, 140, 255, 0.5); */
   border-radius: 12px;
 
   z-index: 1000;
@@ -1531,9 +1600,10 @@ li:hover .career-reboot-heading {
   transform: translateX(-50%) translateY(0);
 }
 .menu-campus-image{
-  height: 25vh;
+  height: 28vh;
   width: 100%;
   object-fit: cover;
+    border-radius: 10px;
 }
 .menu-item-campus-card{
   height: 36vh;
@@ -1541,5 +1611,8 @@ li:hover .career-reboot-heading {
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  width: 23%;
+  width: 48%;
+}
+.cmapus-wrapper-div{
+  width: 100%;
 }

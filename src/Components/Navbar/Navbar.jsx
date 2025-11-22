@@ -332,12 +332,12 @@ const Navbar = () => {
                           >
                             <div className="d-flex gap-5 align-items-center">
                               <div className="col-4">
-                                <p className="fs-4">“UCU is redefining the future of talent—rooted in India’s heartland, yet engineered for global impact. Its industry-first, future-ready model is a blueprint for inclusive excellence—powered by global faculty and industry leaders who mentor indigenous students into globally agile professionals.”
+                                <p className="fs-5 campus-text-right">“UCU is redefining the future of talent—rooted in India’s heartland, yet engineered for global impact. Its industry-first, future-ready model is a blueprint for inclusive excellence—powered by global faculty and industry leaders who mentor indigenous students into globally agile professionals.”
                                 </p>
-                                <p className="text-end">Ganesan Ramachandran</p>
-                                <p className="text-end">Managing Director, Accenture Strategy & Consulting</p>
+                                <p className="text-end campus-text-right-name">Ganesan Ramachandran</p>
+                                <p className="text-end campus-text-right-name">Managing Director, Accenture Strategy & Consulting</p>
                               </div>
-                              <div className="d-grid">
+                              <div className="d-grid cmapus-wrapper-div">
                               <div className="row row-gap-3">
                                 {menu.submenu.map((item) => (
                                   <div onClick={() => navigate(`${item.link}`)} className="mx-auto bg-white p-2 gap-2 justify-content-start shadow d-flex flex-column align-items-center menu-item-campus-card">

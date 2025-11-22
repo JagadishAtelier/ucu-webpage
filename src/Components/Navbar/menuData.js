@@ -373,11 +373,10 @@ export const menuData = [
     placement: "bottom",
     specialDropdown: "campusDropdown",
     submenu: [
-      { label: "Recruiting Partners", link: "/placements/recruiters",image:"https://img.freepik.com/free-photo/business-team-joining-hands-teamwork-concept_1163-1636.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-      { label: "Placement Reports", link: "/placements/reports",image:"https://img.freepik.com/free-photo/smiley-business-man-checking-clipboard_23-2148514864.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-      { label: "Corporate Testimonials", link: "/placements/testimonials",image:"https://img.freepik.com/free-photo/discussing-business-plan_1098-15154.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-      { label: "Summer Internships", link: "/placements/internships",image:"https://img.freepik.com/free-photo/handsome-guy-study-grass_1157-22223.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-      { label: "Live Projects", link: "/placements/projects",image:"https://img.freepik.com/free-photo/happy-entrepreneur-analyzing-business-chart-web-conference-home_637285-12739.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Campus Placement", link: "/placements/Campus-Placement",image:"https://img.freepik.com/free-photo/focus-indian-boy-who-standing-sepately-group-international-students-standing-together-park-university_1157-50077.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Explore Talent", link: "/placements/Explore-Talent",image:"https://img.freepik.com/premium-photo/pretty-brunette-holding-binoculars_13339-118544.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Corporate Engagement", link: "/placements/Corporate-Engagement",image:"https://img.freepik.com/free-photo/cheerful-overjoyed-business-people-conference-room-celerating-diverse-colleagues-with-new-opportunity-enjoing-victory-meeting-broadroom-office_482257-5101.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Testimonials", link: "/placements/Testimonials",image:"https://img.freepik.com/premium-photo/happy-graduate-giving-thumbs-up_1152821-13729.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
     ],
   },
 ];
@@ -405,8 +404,8 @@ export const menuDataMobile = [
       {
         label: "Full Time Programs",
         submenu: [
-          { label: "PGPM-ELITE", link: "/program/pgpm-elite" },
-          { label: "PGDM", link: "/program/pgdm" },
+          { label: "PGPM ELITE | Career Accelerator Program", link: "/program/pgpm-elite" },
+          { label: "PGDM | Young Leaders' Program", link: "/program/pgdm" },
           {
             label: "Flexi Program",
             className: "sublink-custom",
@@ -437,43 +436,34 @@ export const menuDataMobile = [
             submenu: [
               { label: "Sales", link: "/program/sales" },
               {
-                label: "Product Management",
-                link: "/program/product-management",
-              },
-              { label: "Cybersecurity", link: "/program/cybersecurity" },
-              {
-                label: "Brand Management & Digital Marketing",
-                link: "/program/bm-dm",
-              },
-              {
-                label: "Mobility & Sustainability",
-                link: "/program/mobility-sustainability",
+                label: "Product",
+                link: "/program/product",
               },
               { label: "Consulting", link: "/program/consulting" },
-              { label: "Banking & Finance", link: "/program/banking-finance" },
+              { label: "Cybersecurity", link: "/program/cybersecurity" },
               {
-                label: "Business Analytics",
-                link: "/program/business-analytics",
+                label: "Digital Marketing & AI",
+                link: "/program/dm-ai",
               },
-              { label: "Data Science & AI", link: "/program/data-science" },
+              { label: "Banking & Finance", link: "/program/banking-finance" },
             ],
           },
           {
             label: "Industry Sector Specialization",
             link: "/program/industry-sector",
             submenu: [
-              { label: "FinTech", link: "/program/fintech" },
+              { label: "FinTech Genesis", link: "/program/fintech" },
               {
-                label: "Global Capability Centers (GCC)",
+                label: "GCC Launchpad",
                 link: "/program/gcc",
               },
               {
-                label: "Semi conductors",
-                link: "/program/semi-conductors",
+                label: "HealthTech Ignition",
+                link: "/program/HealthTech-Ignition",
               },
               {
-                label: "Health Care & Life Science. ",
-                link: "/program/hc-ls",
+                label: "Advanced Manufacturing",
+                link: "/program/Advanced-Manufacturing",
               },
             ],
           },
@@ -612,11 +602,10 @@ export const menuDataMobile = [
     label: "Campus Placements",
     placement: "bottom",
     submenu: [
-      { label: "Recruiting Partners", link: "/placements/recruiters" },
-      { label: "Placement Reports", link: "/placements/reports" },
-      { label: "Corporate Testimonials", link: "/placements/testimonials" },
-      { label: "Summer Internships", link: "/placements/internships" },
-      { label: "Live Projects", link: "/placements/projects" },
+      { label: "Campus Placement", link: "/placements/Campus-Placement",image:"https://img.freepik.com/free-photo/focus-indian-boy-who-standing-sepately-group-international-students-standing-together-park-university_1157-50077.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Explore Talent", link: "/placements/Explore-Talent",image:"https://img.freepik.com/premium-photo/pretty-brunette-holding-binoculars_13339-118544.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Corporate Engagement", link: "/placements/Corporate-Engagement",image:"https://img.freepik.com/free-photo/cheerful-overjoyed-business-people-conference-room-celerating-diverse-colleagues-with-new-opportunity-enjoing-victory-meeting-broadroom-office_482257-5101.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Testimonials", link: "/placements/Testimonials",image:"https://img.freepik.com/premium-photo/happy-graduate-giving-thumbs-up_1152821-13729.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
     ],
   },
   {
@@ -725,35 +714,12 @@ export const menuDataMobile = [
     placement: "top",
     link: "/program/online-program",
     submenu: [
-      { label: "Product Management", link: "/program/product-management" },
-      { label: "Cybersecurity", link: "/program/cybersecurity" },
-      { label: "Digital Marketing", link: "/program/digital-marketing" },
+      { label: "Digital Marketing & AI", link: "/program/Digital-Marketing-AI" },
+      { label: "Product Management", link: "/program/Product-Management" },
+      { label: "Cybersecurity", link: "/program/Cybersecurity" },
       {
-        label: "Mobility & Sustainability",
-        link: "/program/mobility-sustainability",
-      },
-      { label: "Consulting", link: "/program/consulting" },
-      { label: "Banking & Finance", link: "/program/banking-finance" },
-      { label: "Business Analytics", link: "/program/business-analytics" },
-      { label: "Data Science", link: "/program/data-science" },
-      {
-        label: "Industry Sector Specific Offerings",
-        link: "/program/industry-sector",
-        submenu: [
-          { label: "FinTech", link: "/program/fintech" },
-          {
-            label: "Global Capability Centers (GCC)",
-            link: "/program/gcc",
-          },
-          {
-            label: "Semi conductors",
-            link: "/program/semi-conductors",
-          },
-          {
-            label: "Health Care & Life Science. ",
-            link: "/program/hc-ls",
-          },
-        ],
+        label: "AIMA AICTE Approved PGDM",
+        link: "/program/AIMA-AICTE-Approved-PGDM",
       },
     ],
   },
