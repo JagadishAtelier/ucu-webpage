@@ -25,7 +25,7 @@
   height: 70vh;
   width: 80%;
   padding: 60px 100px;
-  border-bottom: 10px solid #003e68;
+  border-bottom: 10px solid #07baf3;  
 }
 .vertical-line-pdp {
   border: 1px solid #5ac501;
@@ -154,11 +154,19 @@
     text-align: center;
   }
 }
+.shadow-on-hover{
+  transition: all .4s ease-in-out;
+}
+.shadow-on-hover:hover {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.11)!important; /* Example shadow */
+  transform: translateY(-4px);
+}
 
 .subject-container {
-  padding-left: 6%;
+  padding-left: 3%;
   padding-top: 5%;
   padding-bottom: 4%;
+  padding-right:4%;
 }
 .pdp-sub li {
   margin-top: 12px;
@@ -175,6 +183,6 @@
   justify-content: space-between;
 }
 .border-line-fac {
-  border: 2px solid gainsboro;
+  border: 2px solid rgba(231, 231, 231, 0.658);
   width: 100%;
 }

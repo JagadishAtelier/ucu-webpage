@@ -24,7 +24,7 @@ function PDPhero() {
           minHeight: "60vh",
         }}
       >
-        <div className="bg-white d-flex flex-column flex-md-row flex-lg-row gap-5 mx-lg-5 hero-white-container align-items-lg-center">
+        <div className="bg-white rounded d-flex flex-column flex-md-row flex-lg-row gap-5 mx-lg-5 hero-white-container align-items-lg-center">
           <div className="pdp-hero-img-container">
             <img src={faculty.image} className="pdp-hero-img" />
             <div className="pdp-hero-img-div"></div>
@@ -57,8 +57,10 @@ function PDPhero() {
         </div>
       </div>
       <PDPcarousel />
-      <PDPsubjects />
+      <div className="d-flex gap-3 justify-content-center">
+        <PDPsubjects />
       <PDPexp />
+      </div>
       <NewFooter />
     </>
   );
