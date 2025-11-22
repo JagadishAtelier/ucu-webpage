@@ -7,7 +7,7 @@ import PlacementContact from './PlacementContact';
 function PlacementTab() {
   const [selectedBtn, setSelectedBtn] = useState("intern");
   return (
-    <div className='p-3 mx-auto placement-tab-div my-1'>
+    <div className='p-3 mx-auto container my-1'>
       <h1 className="display-6 fw-bold col-12 col-lg-12"><span style={{ color: "#5ac501" }} className=''>UCU Chennai:  </span> Gateway to the World of Opportunity
       </h1>
 

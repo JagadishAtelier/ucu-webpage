@@ -6,7 +6,7 @@ import HostelSection from "./HostelSection";
 
 const FeeStructure = () => {
   return (
-    <section className="fee-structure p-3 mx-auto placement-tab-div my-1">
+    <section className="container p-3 mx-auto  my-1">
       <h3 className="display-6 fw-bold col-12 col-lg-12"><span className="program">PGDM</span> Fee Structure</h3>
 
       {/* ================= Fee Info ================= */}

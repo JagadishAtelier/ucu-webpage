@@ -35,7 +35,7 @@
 }
 
 .placement-table th {
-  background-color: #0c0142;
+  background-color: #1703a9;
   color: white;
 }
 
@@ -47,8 +47,8 @@
   background-color: #e6f2d6;
 }
 .placement-table-head{
-    border: 1px solid #0c0142;
-    background-color: #0c0142;
+    border: 1px solid #1703a9;
+    background-color: #1703a9;
     color: white;
     padding: 1rem;
     width: 50%;
@@ -89,7 +89,7 @@
   padding: 5%;
 }
 .highlight-box{
-  background-color: #0c0142;
+  background-color: #1703a9;
   color: white;
   padding: 3rem;
 }
@@ -116,7 +116,7 @@
   padding: 3% 0;
 }
 .contact-place-con{
-  /* background-color: #0c0142; */
+  /* background-color: #1703a9; */
   color: white;
   padding: 3%;
 }

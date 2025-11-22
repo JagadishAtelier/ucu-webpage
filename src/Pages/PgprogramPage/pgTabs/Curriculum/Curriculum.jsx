@@ -118,7 +118,7 @@ A new-age curriculum co-created with the Industry, keeping corporate needs and e
               <Tab.Content>
                 <Tab.Pane eventKey="operations" active={key === "operations"}>
                   <div className="tab-content-box shadow-sm p-4">
-                    <h5 className="gradient-text hero-gradient-1">
+                    <h5 className="text-dark1">
                       Operations and Supply Chain
                     </h5>
                     <p>
@@ -131,7 +131,7 @@ A new-age curriculum co-created with the Industry, keeping corporate needs and e
 
                 <Tab.Pane eventKey="info" active={key === "info"}>
                   <div className="tab-content-box shadow-sm p-4">
-                    <h5 className="gradient-text hero-gradient-1">Information Management</h5>
+                    <h5 className="text-dark1">Information Management</h5>
                     <p>
                       Focuses on technology-driven strategies, data analytics,
                       and digital transformation to enable business growth.
@@ -141,7 +141,7 @@ A new-age curriculum co-created with the Industry, keeping corporate needs and e
 
                 <Tab.Pane eventKey="marketing" active={key === "marketing"}>
                   <div className="tab-content-box shadow-sm p-4">
-                    <h5 className="gradient-text hero-gradient-1">Marketing</h5>
+                    <h5 className="text-dark1">Marketing</h5>
                     <p>
                       PGDM’s Marketing specialisation ranks amongst the top 5 in
                       India and the top 50 in the world by QS Global rankings. It
@@ -154,7 +154,7 @@ A new-age curriculum co-created with the Industry, keeping corporate needs and e
 
                 <Tab.Pane eventKey="finance" active={key === "finance"}>
                   <div className="tab-content-box shadow-sm p-4">
-                    <h5 className="gradient-text hero-gradient-1">Finance</h5>
+                    <h5 className="text-dark1">Finance</h5>
                     <p>
                       This specialisation builds expertise in financial analysis,
                       investments, corporate finance, and risk management.
@@ -163,7 +163,7 @@ A new-age curriculum co-created with the Industry, keeping corporate needs and e
                 </Tab.Pane>
                 <Tab.Pane eventKey="finance" active={key === "hr-ob"}>
                   <div className="tab-content-box shadow-sm p-4">
-                    <h5 className="gradient-text hero-gradient-1">HR & OB</h5>
+                    <h5 className="text-dark1">HR & OB</h5>
                     <p>
 Focus on Talent Management in New Age Industries with AI applications
                     </p>
@@ -171,7 +171,7 @@ Focus on Talent Management in New Age Industries with AI applications
                 </Tab.Pane>
                 <Tab.Pane eventKey="finance" active={key === "bussiness"}>
                   <div className="tab-content-box shadow-sm p-4">
-                    <h5 className="gradient-text hero-gradient-1">Business Analytics & AI </h5>
+                    <h5 className="text-dark1">Business Analytics & AI </h5>
                     <p>
 A program with cutting-edge analytics, industry co-creation, and global relevance
                     </p>

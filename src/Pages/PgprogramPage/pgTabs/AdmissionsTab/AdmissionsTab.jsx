@@ -3,7 +3,7 @@ import "./AdmissionsTab.css";
 
 export default function AdmissionsTab() {
   return (
-    <section className="admissions-tab p-3 mx-auto placement-tab-div my-1">
+    <section className="admissions-tab container p-3 mx-auto  my-1">
       {/* Title */}
       <h3 className="display-6 fw-bold col-12 col-lg-12"><span className="program">PGDM</span> Admission Process</h3>
 
