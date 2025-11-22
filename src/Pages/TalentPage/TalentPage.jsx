@@ -4,6 +4,7 @@ import './TalentPage.css'
 import TalentFullTime from './TalentFullTime'
 import Navbar from '../../Components/Navbar/Navbar'
 import NewFooter from '../../Components/NewFooter/NewFooter'
+import TalentBottomDetails from './TalentBottomDetails'
 function TalentPage() {
     return (
         <div>
@@ -35,6 +36,7 @@ function TalentPage() {
 
             </div>
             <TalentFullTime/>
+            <TalentBottomDetails/>
             <NewFooter/>
         </div>
     )
