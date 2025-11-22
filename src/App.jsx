@@ -55,6 +55,7 @@ import IndustryFirstApproach from "./Pages/IndustryFirstApproach/IndustryFirstAp
 import ContactChapters from "./Pages/ContactChapters/ContactChapters";
 import ContactChapterInternatinal from "./Pages/ContactChapters/ContactChapterInternatinal";
 import TalentPage from "./Pages/TalentPage/TalentPage";
+import TalentNavigationPage from "./Pages/TalentPage/TalentNavigationPage";
 
 function App() {
   useEffect(() => {
@@ -106,6 +107,7 @@ function App() {
         <Route path="/strategic/*" element={<StrategicCollabBanner/>} />
         <Route path="/contact-us" element={<ContactUsPage/>} />
         <Route path="/batch-profile" element={<BatchProfilePage/>} />
+        <Route path="/talent-details" element={<TalentNavigationPage/>} />
         <Route path="/expression-of-interest" element={<ExpressInterestPageBanner/>} />
         <Route path="/industry-approach" element={<IndustryFirstApproach/>} />
         <Route path="/contact-chapters" element={<ContactChapters/>} />

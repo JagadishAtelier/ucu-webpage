@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const tabData = {
     fulltime: [
         {
@@ -99,6 +99,7 @@ const tabTitles = {
 };
 
 function TalentFullTime() {
+    const navigate = useNavigate()
     const [activeTab, setActiveTab] = useState("fulltime");
 
     return (
@@ -148,7 +149,8 @@ function TalentFullTime() {
                     <>
                         {/* Functional Title */}
                         {tabData.executive.functional.map((item, index) => (
-                            <div className="col-lg-4 col-md-6" key={index}>
+                            <div onClick={() => navigate("/talent-details", { state: { head: item.head } })}
+ className="col-lg-4 col-md-6 cursor-pointer" key={index}>
                                 <div className="talent-card p-4 shadow">
                                     <h3 className="talent-head">{item.head}</h3>
                                     <p className="talent-subhead">{item.listHead}</p>
@@ -174,7 +176,8 @@ function TalentFullTime() {
                         {/* Industry Sector Title */}
                         <h1 className="text-center my-4">Industry Sector Specialization</h1>
                         {tabData.executive.industrySector.map((item, index) => (
-                            <div className="col-lg-4 col-md-6" key={index}>
+                            <div onClick={() => navigate("/talent-details", { state: { head: item.head } })}
+ className="col-lg-4 col-md-6" key={index}>
                                 <div className="talent-card p-4 shadow">
                                     <h3 className="talent-head">{item.head}</h3>
                                     <p className="talent-subhead">{item.listHead}</p>
@@ -200,7 +203,8 @@ function TalentFullTime() {
                 ) : (
                     /* Default Fulltime & Flexi render */
                     tabData[activeTab].map((item, index) => (
-                        <div className="col-lg-4 col-md-6" key={index}>
+                        <div onClick={() => navigate("/talent-details", { state: { head: item.head } })}
+ className="col-lg-4 col-md-6" key={index}>
                             <div className="talent-card p-4 shadow">
                                 <h3 className="talent-head">{item.head}</h3>
                                 <p className="talent-subhead">{item.listHead}</p>
