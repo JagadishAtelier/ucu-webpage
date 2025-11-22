@@ -191,10 +191,10 @@ const FacultyPairCard = ({ pair }) => {
               <h5 className="mb-2 fs-4">{faculty.name}</h5>
               <p className="text-muted mb-1 white-space-pre-line">{faculty.prof}</p>
               <button
-              className="btn btn-link text-decoration-none p-0"
+              className="btn btn-link p-0"
               onClick={() => handleGoToCV(faculty)}
             >
-              GO TO CV
+              View CV
             </button>
             </div>
           </div>
@@ -215,7 +215,7 @@ const DepartmentSection = ({ department, isOpen, onToggle }) => {
     <div className="my-4 w-100">
       <button
         onClick={onToggle}
-        className="dept-btn border-0 w-100 p-4 bg-light rounded d-flex justify-content-between align-items-center fw-lg-bold fs-5 fs-lg-3 "
+        className="dept-btn text-dark border-0 w-100 p-4 bg-light rounded d-flex justify-content-between align-items-center fw-lg-bold fs-5 fs-lg-3 "
       >
         {department.title}
         {isOpen ? <FaChevronUp /> : <FaChevronDown />}

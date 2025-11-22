@@ -22,7 +22,7 @@
     transition: max-height 10s ease-in-out;
   }
   .bg-color-card {
-    background-color: #f9f9f9; /* customize card background */
+    background-color: #ffffff; /* customize card background */
   }
   .dept-btn {
     cursor: pointer;
@@ -83,3 +83,13 @@
         object-fit: cover;
       }
   }
+
+.icon-circle{
+  background-color: #5ac501;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.icon-circle:hover{
+background-color: #b3b2ff;
+color: #003E68;
+}

@@ -17,7 +17,9 @@ function NewFacMoreBanner() {
     >
       <h1 className='fs-2'>More about Faculty & Research</h1>
       <p className='display-6'>Centers of Excellence</p>
-      <FaArrowRight size={24}/>
+      <div className="mt-2 p-3 rounded-circle icon-circle">
+        <FaArrowRight size={24}/>
+      </div>
     </div>
   )
 }

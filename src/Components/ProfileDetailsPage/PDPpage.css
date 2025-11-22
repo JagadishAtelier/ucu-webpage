@@ -1,5 +1,5 @@
 .pdp-hero-img-div{
-    background-color: orange;
+    background-color: #5ac501;
     position: absolute;
     height: 300px;
     width: 297px;
@@ -8,6 +8,9 @@
 }
 .pdp-hero-img-container{
     position: relative;
+}
+.border-green{
+  border-color: #c6ff94 !important;
 }
 .pdp-hero-img{
     height: 300px;
@@ -22,7 +25,7 @@
     border-bottom: 10px solid #003E68;
 }
 .vertical-line-pdp{
-    border: 1px solid orange;
+    border: 1px solid #5ac501;
     width: 100px;
     margin-bottom: 10px;
 }
@@ -59,7 +62,7 @@
 .rma-btn{
     width: fit-content;
     padding: 5px 20px;
-    background-color: orange;
+    background-color: #5ac501;
     border: none;
 }
 
@@ -154,8 +157,10 @@
     padding-bottom: 4%;
   }
   .pdp-sub li{
-    margin-top: 5px;
+        margin-top: 12px;
     font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 400;
   }
   
   .pdp-exp{

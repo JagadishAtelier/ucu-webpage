@@ -29,7 +29,7 @@ function NewFacDirectors() {
   return (
     <div>
     <div className="py-5 bg-light px-lg-5 px-4">
-      <h2 className="display-4 fw-100">UCU <span style={{ color: "#5ac501" }}>Directors</span></h2>
+      <h2 className="display-4 fw-bold">UCU <span style={{ color: "#5ac501" }}>Directors</span></h2>
 
       <div className="row gy-4 gx-0">
         {pairs.map((pair, idx) => (
