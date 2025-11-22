@@ -7,7 +7,7 @@ const data = [
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
         head: "The Hindu features Dr Abhijit Dasgupta on early business & tech lessons for career success",
-        content: "In the article published in The Hindu, Dr Abhijit Dasgupta (Assistant Professor and Director - Bachelor of Data Science), SP Jain Global, writes about the transformative impact of introducing business and technology to young minds at an early age.",
+        content: "In the article published in The Hindu, Dr Abhijit Dasgupta (Assistant Professor and Director - Bachelor of Data Science), UCU, writes about the transformative impact of introducing business and technology to young minds at an early age.",
         topic: "Faculty in the News, SP Jain in the News",
         link: "/The Hindu features Dr Abhijit Dasgupta on early business & tech lessons for career success"
     },
@@ -39,7 +39,7 @@ const data = [
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
         head: "Empowering Students with Data Skills",
-        content: "SP Jain Global continues to emphasize early adoption of data-driven decision-making education.",
+        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
         topic: "Faculty Research",
         link: "/"
     },
@@ -47,7 +47,7 @@ const data = [
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
         head: "Empowering Students with Data Skills",
-        content: "SP Jain Global continues to emphasize early adoption of data-driven decision-making education.",
+        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
         topic: "Faculty Research",
         link: "/"
     },
@@ -55,7 +55,7 @@ const data = [
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
         head: "Empowering Students with Data Skills",
-        content: "SP Jain Global continues to emphasize early adoption of data-driven decision-making education.",
+        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
         topic: "Faculty Research",
         link: "/"
     },
@@ -63,7 +63,7 @@ const data = [
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
         head: "Empowering Students with Data Skills",
-        content: "SP Jain Global continues to emphasize early adoption of data-driven decision-making education.",
+        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
         topic: "Faculty Research",
         link: "/"
     },
@@ -71,7 +71,7 @@ const data = [
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
         head: "Empowering Students with Data Skills",
-        content: "SP Jain Global continues to emphasize early adoption of data-driven decision-making education.",
+        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
         topic: "Faculty Research",
         link: "/"
     },
@@ -79,7 +79,7 @@ const data = [
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
         head: "Empowering Students with Data Skills",
-        content: "SP Jain Global continues to emphasize early adoption of data-driven decision-making education.",
+        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
         topic: "Faculty Research",
         link: "/"
     },
@@ -87,7 +87,7 @@ const data = [
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
         head: "Empowering Students with Data Skills",
-        content: "SP Jain Global continues to emphasize early adoption of data-driven decision-making education.",
+        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
         topic: "Faculty Research",
         link: "/"
     },
@@ -95,7 +95,7 @@ const data = [
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
         head: "Empowering Students with Data Skills",
-        content: "SP Jain Global continues to emphasize early adoption of data-driven decision-making education.",
+        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
         topic: "Faculty Research",
         link: "/"
     },
@@ -159,15 +159,15 @@ function UCUEventPage1() {
                                         <small>{item.date}</small>
                                     </div>
                                     <h5 style={{ cursor: "pointer" }} onClick={() => navigate(`${item.head}`)}
-                                        className={`card-title fw-semibold text-white ${index === 0 ? 'fs-5' : 'fs-6'
+                                        className={`card-title fw-semibold text-white lh-sm ${index === 0 ? 'fs-5' : 'fsize-6'
                                             }`}
                                     >
                                         {item.head}
                                     </h5>
                                     <p
-                                        className={`card-text ${index === 0 ? 'fs-6' : 'fs-7 text-white'
+                                        className={` ${index === 0 ? 'fs-6' : 'fs-6 text-white'
                                             }`}
-                                        style={{ lineHeight: index === 0 ? '1.4' : '1.2' }}
+                                        style={{ lineHeight: index === 0 ? '1.4' : '1.6' }}
                                     >
                                         {item.content}
                                     </p>

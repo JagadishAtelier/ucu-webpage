@@ -24,7 +24,7 @@ function InternationalCollabSwiper() {
     return (
         <div className="captital-campus-content-sec mt-4">
             <h1 className="text-center mb-4">Industry & Professional Associations</h1>
-            <div style={{ backgroundColor: "#0c0142", padding: "30px 10px" }}>
+            <div style={{ backgroundColor: "#0c0142", padding: "30px 10px",borderRadius:'15px' }}>
                 <Swiper
                     modules={[Autoplay]}
                     loop={true}
@@ -42,7 +42,8 @@ function InternationalCollabSwiper() {
                         1024: { slidesPerView: 5, spaceBetween: 20 },
                     }}
                     style={{
-                        transitionTimingFunction: "linear", // continuous movement
+                        transitionTimingFunction: "linear",
+                         borderRadius:'7px' // continuous movement
                     }}
                 >
                     {images.map((img, index) => (
@@ -66,7 +67,6 @@ function InternationalCollabSwiper() {
                                         width: "100%",
                                         height: "50px",
                                         objectFit: "contain",
-                                        // 👇 Apply special style only for CII logo
                                         filter:
                                             img === "https://www.cii.in/images_new/cii-logoNew.png"
                                                 ? "invert(1)"
@@ -84,7 +84,7 @@ function InternationalCollabSwiper() {
             </div>
 
             <h1 className="text-center my-4">Government Associations</h1>
-            <div style={{ backgroundColor: "#0c0142", padding: "30px 10px" }}>
+            <div style={{ backgroundColor: "#0c0142", padding: "30px 10px",borderRadius:'10px' }}>
                 <Swiper
                     modules={[Autoplay]}
                     loop={true}
@@ -103,6 +103,7 @@ function InternationalCollabSwiper() {
                     }}
                     style={{
                         transitionTimingFunction: "linear", // continuous movement
+                        borderRadius:'7px'
                     }}
                 >
                     {gImag.map((img, index) => (
