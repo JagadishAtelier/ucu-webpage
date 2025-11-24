@@ -50,7 +50,7 @@ function ContactUsCarousel() {
     const navigate = useNavigate()
     return (
         <div className="captital-campus-content-sec mt-5">
-            <h1 className="mb-4">Regional Chapters</h1>
+            <h1 className="mb-4 display-5 fw-bold"><span style={{ color: "#5ac501" }}>Regional</span> Chapters</h1>
             <div className="row row-gap-5 align-items-stretch justify-content-center flex-lg-row flex-column">
 
                 {/* LEFT - SWIPER */}

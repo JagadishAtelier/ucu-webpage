@@ -45,21 +45,21 @@ function ContactPageForm() {
       >
         {/* LEFT SIDE CONTENT */}
         <div className="col-lg-12 col-md-12 col-12 d-flex justify-content-center text-center flex-column gap-3">
-          <p className="mb-0 col-9 mx-auto">
+          <p className="mb-0 col-9 mx-auto pt">
             At UCU School of Global Management, we put the student first. We are
             here to talk to you about our programs, help you choose the right
             one and discuss your career prospects.
           </p>
-          <p className="mb-0">
+          <p className="mb-0 pt">
             Please fill out the form and we will get in touch with you shortly.
           </p>
           <div className="d-flex align-items-center">
             <div className="cpf-hr-line"></div>
-            <p className="mb-0">OR</p>
+            <p className="mb-0 pt">OR</p>
             <div className="cpf-hr-line"></div>
           </div>
-          <p className="mb-0 fw-bold fs-5">
-            CONNECT WITH US THROUGH OUR
+          <p className="mb-0 display-5 fw-bold">
+            <span style={{ color: "#5ac501" }}>CONNECT WITH US </span> THROUGH OUR
           </p>
           <div className="d-grid">
             <div className="row column-gap-4 row-gap-3">
