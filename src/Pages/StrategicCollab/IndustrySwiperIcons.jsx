@@ -88,7 +88,7 @@ function InternationalCollabSwiper() {
                 <Swiper
                     modules={[Autoplay]}
                     loop={true}
-                    slidesPerView={1}
+                    slidesPerView={5}
                     spaceBetween={30}
                     speed={4000} // smooth scroll speed
                     autoplay={{
@@ -99,7 +99,7 @@ function InternationalCollabSwiper() {
                     breakpoints={{
                         320: { slidesPerView: 1, spaceBetween: 10 },
                         640: { slidesPerView: 1, spaceBetween: 15 },
-                        1024: { slidesPerView: 1, spaceBetween: 20 },
+                        1024: { slidesPerView: 5, spaceBetween: 20 },
                     }}
                     style={{
                         transitionTimingFunction: "linear", // continuous movement
@@ -107,8 +107,8 @@ function InternationalCollabSwiper() {
                     }}
                 >
                     {gImag.map((img, index) => (
-                        <SwiperSlide key={index}>
-                            <div
+                        <SwiperSlide key={index} className="mx-lg-auto">
+                            <div className="col-fit justify-content-center"
                                 style={{
                                     background: "#fff",
                                     borderRadius: "12px",
