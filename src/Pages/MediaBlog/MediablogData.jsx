@@ -120,7 +120,7 @@ function MediablogData() {
                 }}
             >
                 <div className="w-100 w-lg-75 w-md-50" data-aos="fade-right">
-                    <Form className='col-12'>
+                    <Form className='col-lg-6'>
                         <div className='d-flex flex-row gap-5 align-items-center'>
                             <Form.Label className='text-white text-start fs-5'>Categories</Form.Label>
                             <Form.Select

@@ -52,3 +52,9 @@
   }
 } */
 /* With .hero-content-wrapper and specific lg breakpoint, the above might be redundant */
+
+@media (max-width:480px) {
+    .about-hero-banner-bg{
+        min-height: 40vh !important;
+    }
+}

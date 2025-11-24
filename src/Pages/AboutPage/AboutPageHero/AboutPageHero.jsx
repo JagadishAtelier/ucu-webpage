@@ -6,7 +6,7 @@ function AboutPageHero({ title,sub, breadcrumb = [], bgImage }) {
   return (
     <div
       data-aos="fade-down"
-      className="hero-section d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-lg-start p-3 p-md-5 p-lg-7"
+      className="hero-section about-hero-banner-bg d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-lg-start p-3 p-md-5 p-lg-7"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",

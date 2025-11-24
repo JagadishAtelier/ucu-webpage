@@ -4,6 +4,7 @@ import image3 from "../../Assets/acp/image3.jpg";
 import aacImage3 from "../../Assets/linkedin profilea/Dr. Vaidy Jayaraman.jpg";
 import pI from "../../Assets/acp/profileImg.webp";
 import { ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 const data = [
   {
     image: image3,
@@ -28,6 +29,7 @@ const data = [
 
 
 function ConsortiumLeader() {
+  const navigate = useNavigate()
   return (
     <div className='captital-campus-content-sec text-white py-5 consortium-leader-container' style={{ backgroundColor: "#0c0142" }}>
       <h1 className='fw-bold text-center display-5 col-10 mx-auto text-uppercase'>
@@ -52,7 +54,7 @@ function ConsortiumLeader() {
       </div>
 
       <div className='text-center pb-2 mt-5'>
-        <Button variant='light' className='text-black fw-semibold px-4 m-0'>
+        <Button onClick={()=>navigate("/aac")} variant='light' className='text-black fw-semibold px-4 m-0'>
           MEET OUR FULL TEAM
         </Button>
       </div>

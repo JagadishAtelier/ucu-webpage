@@ -9,7 +9,7 @@ function TalentBottomDetails() {
             >
                 <Container>
                     <Row className="justify-content-start text-start">
-                            <h2 className="connect-title fs-1 fw-bold">Explore Talent</h2>
+                            <h2 className="connect-title fs-1 fw-bold">Contact us</h2>
                             <p className="position-relative">
                                 +91 9876543210
                             </p>
