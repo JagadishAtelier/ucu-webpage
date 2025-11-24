@@ -56,7 +56,7 @@ function CXOSeriesHome() {
 
   return (
     <div className="captital-campus-content-sec mt-5">
-      <h1 className="cap-cxo-title text-center">CXO Series</h1>
+      <h1 className="cap-cxo-title text-center display-4 fw-bold"><span style={{color:"#5ac501"}}>CXO </span> Series</h1>
       <p className="cap-cxo-desc text-center">
 UCU’s CXO Series is a marquee leadership engagement platform where top business leaders, BU heads, and global strategists share firsthand insights with students. These high-impact sessions offer a rare window into boardroom thinking, industry foresight, and leadership journeys—bridging the gap between classroom learning and executive decision-making.
 From navigating digital disruption to decoding global business models, the CXO Series equips learners with strategic exposure, career clarity, and the mindset required to lead in tomorrow’s enterprises.

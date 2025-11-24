@@ -30,3 +30,9 @@ section {
     GradientType=0
   );
 }
+
+.pt{
+  font-size: 1.1rem;
+  line-height: 1.7;
+
+}
