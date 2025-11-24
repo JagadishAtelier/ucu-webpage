@@ -15,7 +15,7 @@ function CareersWork() {
       </h1>
 
       <p className="pt">
-        At ISB, we offer competitive benefits, a culture of integrity, innovation, and collaboration.
+        At UCU, we offer competitive benefits, a culture of integrity, innovation, and collaboration.
       </p>
 
       <div className="d-flex justify-content-between flex-lg-row flex-md-row flex-column">

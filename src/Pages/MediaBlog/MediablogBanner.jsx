@@ -24,7 +24,7 @@ function MediablogBanner() {
                     data-aos="fade-right"
                 >
                     {/* Dynamic Title */}
-                    <h1 className="fw-bold fs-1 fs-lg-1">UCU Chennai Blog</h1>
+                    <h1 className="fw-bold fs-1 fs-lg-1">UCU <span style={{ color: "#5ac501" }}> Chennai Blog</span></h1>
                 </div>
 
                 <div className='position-absolute bottom-0 left-0 d-flex align-items-center campus-route-bg py-3'>

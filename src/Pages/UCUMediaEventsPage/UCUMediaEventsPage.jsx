@@ -25,7 +25,7 @@ function UCUMediaEventsPage() {
                     data-aos="fade-right"
                 >
                     {/* Dynamic Title */}
-                    <h1 className="fw-bold fs-1 fs-lg-1">What’s on at UCU Chennai</h1>
+                    <h1 className="fw-bold fs-1 fs-lg-1">What’s on <span style={{ color: "#5ac501" }}> at UCU Chennai </span></h1>
                 </div>
 
                 <div className='position-absolute bottom-0 left-0 d-flex align-items-center campus-route-bg py-3'>
