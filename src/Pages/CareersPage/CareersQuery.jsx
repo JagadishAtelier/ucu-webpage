@@ -4,7 +4,7 @@ import React from 'react'
 function CareersQuery() {
   return (
     <div className="captital-campus-content-sec mt-5">
-        <div className='d-flex flex-lg-row flex-md-row flex-column gap-3 p-lg-5 p-3' style={{backgroundColor:"#0c0142",color:"white"}}>
+        <div className='d-flex flex-lg-row flex-md-row flex-column gap-3 p-lg-5 p-3 rounded' style={{backgroundColor:"#0c0142",color:"white"}}>
             <div className='col-lg-6 col-md-6 col-12 d-flex flex-column gap-3'>
                 <p className='mb-0 fs-5'>Have a Query?</p>
                 <h1>For Prospective Hires</h1>
