@@ -14,7 +14,7 @@ function CampusLocation() {
         ></iframe>
       </div>
       <div className='campus-address-location'>
-        <h1>How to reach campus</h1>
+        <h1 className='display-5 fw-bold'>How to <span style={{color:"#5ac501"}}>reach campus</span></h1>
         <p>UCU Chennai</p>
         <p>UCU Campus</p>
         <p>UCU Road</p>

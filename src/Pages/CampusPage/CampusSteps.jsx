@@ -28,7 +28,7 @@ const data = [
 function CampusSteps() {
   return (
     <div className='captital-campus-content-sec'>
-        <h1>Everything you need, just steps away</h1>
+        <h1 className='display-5 fw-bold'>Everything you need, <span style={{color:"#5ac501"}}>just steps away</span></h1>
         <div className='d-grid mt-5 '>
             <div className='row row-gap-lg-4 row-gap-md-5 row-gap-3'>
                 {data.map((item,index)=>(

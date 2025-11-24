@@ -23,7 +23,7 @@ const data = [
 function CampusCommunity() {
   return (
     <div className='captital-campus-content-sec mt-5'>
-        <h1 className='mb-4'>Insights from the UCU community</h1>
+        <h1 className='mb-4 display-5 fw-bold'>Insights from the <span style={{color:"#5ac501"}}>UCU community</span></h1>
         <Swiper
   modules={[Navigation, Pagination, Autoplay]} // include Autoplay
   spaceBetween={20}

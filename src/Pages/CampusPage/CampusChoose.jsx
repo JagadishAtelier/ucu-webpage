@@ -23,7 +23,7 @@ const data = [
 function CampusChoose() {
   return (
     <div className='captital-campus-content-sec mt-5 mb-3'>
-        <h1>Why choose UCU?</h1>
+        <h1 className='display-5 fw-bold'>Why <span style={{color:"#5ac501"}}>choose UCU?</span></h1>
         <div className='d-grid mt-lg-3 mt-md-5 mt-4'>
             <div className='row row-gap-lg-4 row-gap-md-4 row-gap-3'>
                 {data.map((item,index)=>(

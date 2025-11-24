@@ -35,7 +35,7 @@ const data = [
 function CampusFaculty() {
   return (
     <div className='captital-campus-content-sec'>
-        <h1 className='mb-4'>Facilities</h1>
+        <h1 className='mb-4 display-5 fw-bold' style={{color:"#5ac501"}}>Facilities</h1>
         <div className='d-grid'>
             <div className='row row-gap-4'>
                 {data.map((item,index)=>(
