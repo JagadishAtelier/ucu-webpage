@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap';
-
+import { useNavigate } from 'react-router-dom';
 const data = [
   {
     image:
@@ -23,6 +23,7 @@ const data = [
 ];
 
 function EEPJourney() {
+  const navigate = useNavigate()
   return (
     <div className='captital-campus-content-sec mt-4'>
       <h3>Transformational learning journeys designed to equip executives across multiple business areas.</h3>
@@ -45,7 +46,7 @@ function EEPJourney() {
 
                   {/* Keep button pinned to bottom */}
                   <div className="mt-auto text-start">
-                    <Button className="know-more-btn"style={{backgroundColor:"#5ac501",border:"none"}}>Know more</Button>
+                    <Button onClick={()=>navigate("/programs-for-individuals")} className="know-more-btn"style={{backgroundColor:"#5ac501",border:"none"}}>Know more</Button>
                   </div>
                 </div>
               </div>

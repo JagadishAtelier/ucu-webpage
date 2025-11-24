@@ -26,3 +26,8 @@
     left: 0 !important;
 }
 
+@media (max-width:480px) {
+    .PFI-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
