@@ -26,7 +26,7 @@ function Consortium() {
       >
         <div className="w-100 w-lg-75 w-lg-50 ms-lg-5" data-aos="fade-right">
           {/* Dynamic Title */}
-          <h1 className="fw-bold fs-1 fs-lg-1">UCU Consortium </h1>
+          <h1 className="fw-bold fs-1 fs-lg-1">UCU <span style={{color:"#5ac501"}}> Consortium </span></h1>
           <p>
             Advancing inclusion in education and empowering institutions Sample
           </p>

@@ -31,7 +31,7 @@ function ConsortiumNumbers() {
         <div className='captital-campus-content-sec my-4'>
             <div className='consortium-number-div'>
                 <div className='consortium-number-div-left'>
-                    <h1 className='text-uppercase col-10 mx-auto'>UCU Consortium By The Numbers</h1>
+                    <h1 className='text-uppercase col-10 mx-auto display-5 fw-bold'>UCU Consortium By The Numbers</h1>
                     <p className='col-10 mx-auto text-white'>Our facts and figures are a testament to our efforts to drive impactful change:</p>
                     <div className='col-10 mx-auto left-consotium-number'>
                         <p className='fs-2 mb-0 ps-3 fw-bold'>20,000+ </p>
