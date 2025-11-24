@@ -1,0 +1,28 @@
+.PFI-page-grid-image{
+    height: 34vh;
+    object-fit: cover;
+    width: 100%;
+}
+.PFI-page-grid-content{
+    border: 1px solid gray;
+}
+.PFI-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+}
+.PFI-plus-icon{
+       position: absolute;
+    right: 0px;
+    top: 73%;
+    transform: translateY(-50%);
+    color: #555;
+    cursor: pointer;
+}
+.PFI-Course-finder{
+    width: 100% !important;
+    bottom: 0 !important;
+    height: max-content !important;
+    left: 0 !important;
+}
+

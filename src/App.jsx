@@ -57,6 +57,7 @@ import ContactChapterInternatinal from "./Pages/ContactChapters/ContactChapterIn
 import TalentPage from "./Pages/TalentPage/TalentPage";
 import TalentNavigationPage from "./Pages/TalentPage/TalentNavigationPage";
 import BlogPageBanner from "./Pages/BlogPage/BlogPageBanner";
+import ProgramsForIndividualsBanner from "./Pages/ProgramsForIndividuals/ProgramsForIndividualsBanner";
 
 function App() {
   useEffect(() => {
@@ -115,6 +116,7 @@ function App() {
         <Route path="/contact-chapters-international" element={<ContactChapterInternatinal/>} />
         <Route path="/explore-talent" element={<TalentPage/>} />
         <Route path="/blog" element={<BlogPageBanner/>} />
+        <Route path="/programs-for-individuals" element={<ProgramsForIndividualsBanner/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>
