@@ -5,7 +5,7 @@
 }
 .footer-links-content-con{
     position: relative !important;
-    z-index: 999 !important;
+    z-index: 49 !important;
 }
 /* .bg-overlay-footer {
     background-image: linear-gradient(180deg, white, #f5f4fd00); 
