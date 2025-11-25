@@ -35,4 +35,8 @@
     .ucu-event-page-image{
         height: 30vh !important;
     }
+    .med-image{
+        height: 30vh;
+        object-fit: cover;
+    }
 }
