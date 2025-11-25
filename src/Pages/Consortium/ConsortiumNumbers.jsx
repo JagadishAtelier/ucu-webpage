@@ -43,9 +43,9 @@ function ConsortiumNumbers() {
                         <p className='left-consotium-number-p2 ps-3 text-white'> CXOs associated with us</p>
                     </div>
                 </div>
-                <div className='consortium-number-image-div position-relative'>
-                    <img src='https://cgsm.org/wp-content/uploads/2023/12/52973348930_ea9a52cd24_o-3-resized-min.jpg' className='consortium-number-image' />
-                    <div className='d-grid consortium-numberr-grid'>
+                <div className='consortium-number-image-div position-relative d-flex align-items-center'>
+                    {/* <img src='https://cgsm.org/wp-content/uploads/2023/12/52973348930_ea9a52cd24_o-3-resized-min.jpg' className='consortium-number-image' /> */}
+                    <div className='d-grid consortium-numberr-grid '>
                         <div className='row row-gap-3 gap-2'>
                             {data.map((item, index) => (
                                 <div className='consortium-number-container col-lg-5 p-lg-3 p-md-3 p-2 text-center text-md-start text-lg-start'>
