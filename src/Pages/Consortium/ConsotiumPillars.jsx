@@ -28,7 +28,7 @@ function ConsotiumPillars() {
   const navigate = useNavigate()
   return (
     <div className='captital-campus-content-sec mt-4 text-white py-5' style={{ backgroundColor: "#0c0142" }}>
-      <h1 className='fw-bold text-center display-5 col-10 mx-auto text-uppercase mb-5'>
+      <h1 className='fw-bold text-center display-5 col-10 mx-auto text-uppercase mb-lg-5 mb-2'>
         Our network is built on these four foundational pillars :
       </h1>
 
