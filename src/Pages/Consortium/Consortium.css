@@ -204,7 +204,7 @@
 }
 @media (max-width:480px) {
     .consortium-leader-image{
-        height: 35vh;
+        height: 30vh;
     }
     .consortium-founder-image{
         position: relative;
@@ -234,5 +234,10 @@
     .consortium-number-div{
         height: auto;
         flex-direction: column-reverse;
+    }
+    .consortium-pillar-image{
+        height: 30vh;
+        width: 100%;
+        object-fit: cover;
     }
 }
