@@ -181,7 +181,8 @@
         margin-top: 7%;
     }
     .consortium-number-div{
-        flex-direction: column;
+        flex-direction: column-reverse;
+        height: auto;
     }
     .consortium-number-div-left{
         width: 100%;
@@ -189,9 +190,10 @@
     }
     .consortium-number-image-div{
         width: 100%;
+        padding: 20px;
     }
     .consortium-number-container{
-        width: 46%;
+        width: 49%;
     }
     .consortium-number-image{
         height: 90%;
