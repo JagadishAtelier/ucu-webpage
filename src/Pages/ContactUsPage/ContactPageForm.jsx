@@ -50,70 +50,82 @@ function ContactPageForm() {
             here to talk to you about our programs, help you choose the right
             one and discuss your career prospects.
           </p>
-          <p className="mb-0 pt">
-            Please fill out the form and we will get in touch with you shortly.
-          </p>
-          <div className="d-flex align-items-center">
+          {/* <div className="d-flex align-items-center">
             <div className="cpf-hr-line"></div>
             <p className="mb-0 pt">OR</p>
             <div className="cpf-hr-line"></div>
-          </div>
+          </div> */}
           <p className="mb-0 display-5 fw-bold">
             <span style={{ color: "#5ac501" }}>CONNECT WITH US </span> THROUGH OUR
           </p>
-          <div className="d-grid">
-            <div className="row column-gap-4 row-gap-3">
-              {/* Address */}
-              <div
-                className="contact-card position-relative d-flex flex-column align-items-center justify-content-center text-white"
-                style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80')",
-                }}
-              >
-                <div className="overlay"></div>
+<div className="contactSection-container">
+  <div className="contactSection-grid">
 
-                <MapPin size={32} />
-                <h3 className="mb-1 mt-2">Address</h3>
-                <p className="mb-0">UCU Road, UCU University</p>
-                <p className="mb-0">Chennai - 600 025</p>
-                <p className="mb-0">Tamil Nadu</p>
-              </div>
+    {/* Address */}
+    <div
+      className="contactSection-card"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=900&q=80')",
+      }}
+    >
+      <div className="contactSection-overlay"></div>
 
-              {/* Email */}
-              <div
-                className="contact-card position-relative d-flex flex-column align-items-center justify-content-center text-white"
-                style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=80')",
-                }}
-              >
-                <div className="overlay"></div>
+      <div className="contactSection-icon">
+        <MapPin size={28} />
+      </div>
 
-                <MailOpen size={32} />
-                <h3 className="mb-1 mt-2">Email</h3>
-                <p className="mb-0">Admissions : Admissions@gmail.com</p>
-                <p className="mb-0">Administration : Administration@gmail.com</p>
-                <p className="mb-0">Examinations : Examinations@gmail.com</p>
-              </div>
+      <h3>Address</h3>
+      <p>UCU Road, UCU University</p>
+      <p>Chennai - 600 025</p>
+      <p>Tamil Nadu</p>
+    </div>
 
-              {/* Phone */}
-              <div
-                className="contact-card position-relative d-flex flex-column align-items-center justify-content-center text-white"
-                style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80')",
-                }}
-              >
-                <div className="overlay"></div>
+    {/* Email */}
+    <div
+      className="contactSection-card"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=900&q=80')",
+      }}
+    >
+      <div className="contactSection-overlay"></div>
 
-                <PhoneCall size={32} />
-                <h3 className="mb-1 mt-2">Phone</h3>
-                <p className="mb-0">Admissions : 9876543210</p>
-                <p className="mb-0">Administration : 8765432109</p>
-                <p className="mb-0">Examinations : 7654321098</p>
-              </div>
+      <div className="contactSection-icon-email">
+        <MailOpen size={28} />
+      </div>
 
-            </div>
+      <h3>Email</h3>
+      <p>Admissions : Admissions@gmail.com</p>
+      <p>Administration : Administration@gmail.com</p>
+      <p>Examinations : Examinations@gmail.com</p>
+    </div>
 
-          </div>
+    {/* Phone */}
+    <div
+      className="contactSection-card"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80')",
+      }}
+    >
+      <div className="contactSection-overlay"></div>
+
+      <div className="contactSection-icon">
+        <PhoneCall size={28} />
+      </div>
+
+      <h3>Phone</h3>
+      <p>Admissions : 9876543210</p>
+      <p>Administration : 8765432109</p>
+      <p>Examinations : 7654321098</p>
+    </div>
+
+  </div>
+</div>
+
+
+
         </div>
 
         {/* RIGHT SIDE FORM */}
@@ -229,8 +241,10 @@ function ContactPageForm() {
             </Form>
           </Container>
         </div> */}
-
-        <div className="contact-form-wrapper py-5 mt-5">
+        <p className="mt-5 text-center pt">
+          Please fill out the form and we will get in touch with you shortly.
+        </p>
+        <div className="contact-form-wrapper py-5">
           <Container>
 
             <div className="contact-form-card mx-auto p-4 p-md-5">
