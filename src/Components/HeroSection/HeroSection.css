@@ -262,3 +262,62 @@
     display: none;
   }
 }
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .hero-section-data-div {
+    flex-direction: column-reverse;
+  }
+
+  .hero-section-left {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    margin-left: auto;
+  }
+
+  .hero-section-left h1 {
+    width: 100%;
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  .hero-section-left p {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .hero-btn {
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero-image {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .hero-image img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .custom-prev,
+  .custom-next {
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+  }
+
+  .custom-prev {
+    left: 10px;
+  }
+  .custom-next {
+    right: 10px;
+  }
+  .hero-image::before {
+    display: none;
+  }
+}

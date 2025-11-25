@@ -100,3 +100,8 @@
     height: 200px;
   }
 }
+@media (max-width: 480px) {
+  .asp-industry-card-div {
+  padding: 10px 0 40px;
+}
+}

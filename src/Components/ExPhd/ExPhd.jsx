@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 import { FaUserTie } from "react-icons/fa"; 
 import { User } from "lucide-react";
+import ExpandableText from "../CareerSection/ExpandableText";
 const data = [
     {
       image: image1,
@@ -75,7 +76,8 @@ function ExPhd() {
               </div>
               <div className="car-right">
                 {/* <h1 className="title mb-3">{item.heading}</h1> */}
-                <p className="program-description mt-3">{item.para}</p>
+ <ExpandableText text={item.para} limit={120} color="#fff" />
+
                 <div className="d-flex flex-row gap-2 items-center">
                   <User size={18} color="#07b5f1" />
                   <p className="program-description">{item.eligible}</p>

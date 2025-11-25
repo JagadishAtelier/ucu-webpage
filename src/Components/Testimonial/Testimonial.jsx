@@ -6,6 +6,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import ExpandableText from "../CareerSection/ExpandableText";
 
 const testimonials = [
     {
@@ -71,7 +72,8 @@ function Testimonial() {
 
                             <div className="testi-content">
                                 <h3 className="testi-name">{item.name}</h3>
-                                <p className="testi-comment">{item.comment}</p>
+<ExpandableText text={item.comment} limit={120} color="#fff" />
+
                             </div>
                         </div>
                     </SwiperSlide>

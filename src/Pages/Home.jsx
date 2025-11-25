@@ -43,14 +43,14 @@ const Home = () => {
         <Platforms />
 
         {/* Industry */}
-        <div data-aos="fade-up" data-aos-delay="100" className="my-5">
+        <div data-aos="fade-up" data-aos-delay="100" className="my-4">
           <Industry />
         </div>
-        <div className="my-5 mx-lg-5 mx-0 text-center">
+        <div className=" mx-lg-5 mx-0 text-center">
           <Aspirants/>
         </div>
 
-        <div className="my-5 mx-lg-5 mx-0 text-center">
+        <div className="my-4 mx-lg-5 mx-0 text-center">
           <Testimonial/>
         </div>
         {/* Events */}

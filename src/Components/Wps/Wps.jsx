@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
+import ExpandableText from "../CareerSection/ExpandableText";
 
 const data = [
   {
@@ -84,7 +85,8 @@ function Wps() {
               </div>
               <div className="car-right ">
                 <h1 className="title mb-3 text-white">{item.heading}</h1>
-                <p className="program-description mt-3 text-white">{item.para1}</p>
+<ExpandableText text={item.para1} limit={120} color="#fff" />
+
 
                 <div className="car-explore-btn-div">
                   <button className="btn car-apply-btn py-2">EXPLORE</button>
