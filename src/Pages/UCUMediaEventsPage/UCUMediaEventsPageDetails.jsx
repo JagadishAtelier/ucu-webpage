@@ -9,7 +9,7 @@ const data = `
     </p>
 
     <p>
-        Companies that hired SP Jain Global’s BDS graduates include organisations such as Greenstone Financials, Telstra Corporation Limited, Ingrity Pty Ltd, TAL Australia, Eucalyptus Australia, Bupa Australia Pty Ltd, Epicentre Engineers Pty Ltd, and Morgan Stanley Capital International et al. Graduates have secured positions in diverse sectors, including IT Services & Consulting (46%), Financial Services (23%), Telecommunications (8%), and Healthcare (8%). The program’s rigorous curriculum and hands-on learning approach have equipped students to excel in roles such as data analysts, data scientists, IT consultants, and business intelligence specialists.
+        Companies that hired UCU’s BDS graduates include organisations such as Greenstone Financials, Telstra Corporation Limited, Ingrity Pty Ltd, TAL Australia, Eucalyptus Australia, Bupa Australia Pty Ltd, Epicentre Engineers Pty Ltd, and Morgan Stanley Capital International et al. Graduates have secured positions in diverse sectors, including IT Services & Consulting (46%), Financial Services (23%), Telecommunications (8%), and Healthcare (8%). The program’s rigorous curriculum and hands-on learning approach have equipped students to excel in roles such as data analysts, data scientists, IT consultants, and business intelligence specialists.
     </p>
 
     <p>
@@ -34,27 +34,27 @@ const data = `
     </p>
 `
 function UCUMediaEventsPageDetails() {
-  return (
-    <div>
-        <Navbar/>
-        <div className='d-flex flex-lg-row flex-column position-relative'>
-            <div className='ucu-mepd-card'>
-                <h1>Finding focus in the present:</h1>
-                <h3>Highlights from the ‘Be Here Now’ workshop</h3>
-                <div className='hr-line-mepd-page'></div>
-                <div className='d-flex gap-2 align-items-center'>
-                    <Calendar1Icon/>
-                    <p className='mb-0'>October 23, 2025</p>
+    return (
+        <div>
+            <Navbar />
+            <div className='d-flex flex-lg-row flex-column position-relative'>
+                <div className='ucu-mepd-card'>
+                    <h1>Finding focus in the present:</h1>
+                    <h3>Highlights from the ‘Be Here Now’ workshop</h3>
+                    <div className='hr-line-mepd-page'></div>
+                    <div className='d-flex gap-2 align-items-center'>
+                        <Calendar1Icon />
+                        <p className='mb-0'>October 23, 2025</p>
+                    </div>
                 </div>
+                <img src='https://www.spjain.org/hubfs/Be-Here-Now-workshop-Masterclass-with-coach-Alekh-Sangal-and-Ankita-Brahmi-Luxury-MGLuxM-HBL-students-SP-Jain-Global-MAIN-EVENT-ARTICLE-PAGE.jpg' className='ucu-mepd-image' />
             </div>
-            <img src='https://www.spjain.org/hubfs/Be-Here-Now-workshop-Masterclass-with-coach-Alekh-Sangal-and-Ankita-Brahmi-Luxury-MGLuxM-HBL-students-SP-Jain-Global-MAIN-EVENT-ARTICLE-PAGE.jpg' className='ucu-mepd-image'/>
-        </div>
-                    <div className='captital-campus-content-sec my-4'>
+            <div className='captital-campus-content-sec my-4'>
                 <div dangerouslySetInnerHTML={{ __html: data }} />
             </div>
-        <NewFooter/>
-    </div>
-  )
+            <NewFooter />
+        </div>
+    )
 }
 
 export default UCUMediaEventsPageDetails

@@ -111,7 +111,7 @@ function MediablogData() {
     const handlePageChange = (pageNumber) => setCurrentPage(pageNumber)
     return (
         <div className='captital-campus-content-sec my-4'>
-            <p>Welcome to SP Jain Global Blogs – where the heart of our community comes alive through inspiring stories, industry insights, and first-hand experiences. From expert perspectives to real-life journeys, this is your space to explore, connect, and feel at home in a world of ideas and inspiration.</p>
+            <p>Welcome to UCU Blogs – where the heart of our community comes alive through inspiring stories, industry insights, and first-hand experiences. From expert perspectives to real-life journeys, this is your space to explore, connect, and feel at home in a world of ideas and inspiration.</p>
             <div
                 data-aos="fade-down"
                 className="rounded d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-md-start text-lg-center p-3 px-lg-3"
