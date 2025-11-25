@@ -112,7 +112,7 @@ function CPPIntroduction() {
               </ul>
             </div>
             <div className="d-flex flex-column align-items-start w-lg-50">
-              <p className="story-paragraph">
+              <p className="story-paragraph text-start mx-0">
                 <strong>
                   Specializations in both traditional and emerging domains :</strong>
               </p>
