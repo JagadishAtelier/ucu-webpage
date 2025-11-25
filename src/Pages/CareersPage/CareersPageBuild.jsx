@@ -48,7 +48,7 @@ function CareersPageBuild() {
       </h1>
 
       <p className='pt'>
-        UCU intends to work with people...
+        UCU intends to work with people
       </p>
 
       <div className='d-grid cpb-data-grid rounded'>

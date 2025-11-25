@@ -5,7 +5,7 @@ function CareesrContact() {
   return (
     <div className="captital-campus-content-sec contact-cpo-container">
             <section
-      className="connect-section cpo-contact-bg-image rounded"
+      className="connect-section cpo-contact-bg-image"
       style={{ backgroundImage: `url("https://img.freepik.com/free-photo/hercules-hall-surrounded-by-greenery-sunlight-daytime-munich-germany_181624-17876.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80")` }}
     >
     <div className='col-lg-6 col-12'>
