@@ -137,7 +137,7 @@ function MediablogData() {
                 </div>
             </div>
 
-            <Container className="my-4">
+            <Container className="my-4 p-0">
                 <Row className="g-4">
                     {currentData.length > 0 ? (
                         currentData.map((item, index) => (
@@ -150,12 +150,12 @@ function MediablogData() {
                                         <img
                                             src={item.image}
                                             alt={item.head}
-                                            className="img-fluid w-100 object-fit-cover"
+                                            className="img-fluid w-100 object-fit-cover ucu-event-page-image"
                                             style={{ height: '100%' }}
                                         />
                                     </div>
 
-                                    <div className={`card-body d-flex flex-column justify-content-between ${index === 0 ? '' : 'p-3'}`}>
+                                    <div className={`p-lg-3 p-md-3 py-3 d-flex flex-column justify-content-between ${index === 0 ? '' : 'p-lg-3 p-md-3 py-3'}`}>
                                         <div>
                                             <div className="d-flex align-items-center mb-2 text-white">
                                                 <Calendar1Icon size={index === 0 ? 18 : 14} className="me-2" />
@@ -184,7 +184,7 @@ function MediablogData() {
                                         </div>
                                         <Button
                                             size={index === 0 ? 'md' : 'sm'}
-                                            className="align-self-start border-0"
+                                            className="align-self-start border-0 mt-3"
                                             style={{ backgroundColor: "#5ac501" }}
                                             onClick={() => navigate(item.head)}
                                         >
