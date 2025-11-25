@@ -32,4 +32,7 @@
     .ucu-media-page-card {
         flex-direction: column !important;
     }
+    .ucu-event-page-image{
+        height: 30vh !important;
+    }
 }

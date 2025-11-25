@@ -141,7 +141,7 @@ function UCUEventPage1() {
                                 <img
                                     src={item.image}
                                     alt={item.head}
-                                    className="img-fluid w-100 object-fit-cover"
+                                    className="img-fluid w-100 object-fit-cover ucu-event-page-image"
                                     style={{
                                         height: index === 0 ? '100%' : '100%',
                                     }}
@@ -150,7 +150,7 @@ function UCUEventPage1() {
 
                             {/* Content section */}
                             <div
-                                className={`card-body d-flex flex-column justify-content-between ${index === 0 ? '' : 'p-3'
+                                className={`p-lg-3 p-md-3 py-3 d-flex flex-column justify-content-between ${index === 0 ? '' : 'p-lg-3 py-3'
                                     }`}
                             >
                                 <div>
@@ -181,7 +181,7 @@ function UCUEventPage1() {
                                 </div>
                                 <Button
                                     size={index === 0 ? 'md' : 'sm'}
-                                    className="align-self-start border-0"
+                                    className="align-self-start border-0 mt-3"
                                     style={{ backgroundColor: "#5ac501" }}
                                     onClick={() => navigate(`${item.head}`)}
                                 >
