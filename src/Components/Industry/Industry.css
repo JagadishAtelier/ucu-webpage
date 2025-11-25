@@ -55,3 +55,10 @@
 .swiper-pagination-bullet {
   background-color: #5ac501;
 }
+
+
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .industry-card {
+    height: 48vh;
+  }
+}

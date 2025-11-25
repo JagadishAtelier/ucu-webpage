@@ -105,3 +105,11 @@
   padding: 10px 0 40px;
 }
 }
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .asp-industry-card {
+    height: 40vh;
+  }
+    .asp-industry-card-div {
+  padding: 10px 0 40px;
+}
+}
