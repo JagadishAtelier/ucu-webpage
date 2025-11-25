@@ -311,4 +311,13 @@ height: 30vh;
   padding-bottom: 20px;
   height: auto;
 }
+.campus-faculity-image-div{
+  height: 30vh;
+}
+.campus-faculity-image{
+  height: 30vh;
+}
+.campus-map-wrapper{
+  height: 30vh;
+}
 }
