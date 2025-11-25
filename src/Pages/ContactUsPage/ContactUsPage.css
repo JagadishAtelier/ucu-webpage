@@ -426,6 +426,13 @@
 @media (max-width:480px) {
   .contact-card{
     width: 100%;
+    height: 30vh;
+  }
+  .contact-us-swiper-div{
+    height: 35vh;
+  }
+  .contact-carousel-card{
+    height: 35vh;
   }
   .contact-form-wrapper{
     padding: 0;

@@ -170,7 +170,7 @@ function ContactUsCarouselInternational() {
             <div className="row row-gap-5 align-items-stretch justify-content-center flex-lg-row flex-column">
 
                 {/* LEFT - SWIPER */}
-                <div className="col-lg-7">
+                <div className="col-lg-7 contact-us-swiper-div">
                     <Swiper
                         modules={[Autoplay]}
                         slidesPerView={3}
