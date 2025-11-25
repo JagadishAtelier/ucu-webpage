@@ -31,12 +31,12 @@ const data = [
 function ConsortiumLeader() {
   const navigate = useNavigate()
   return (
-    <div className='captital-campus-content-sec text-white py-5 consortium-leader-container' style={{ backgroundColor: "#0c0142" }}>
+    <div className='captital-campus-content-sec text-white py-lg-5 py-3 consortium-leader-container consortium-pillars-container' style={{ backgroundColor: "#0c0142" }}>
       <h1 className='fw-bold text-center display-5 col-10 mx-auto text-uppercase'>
         Our Leadership Team
       </h1>
       <p className='text-center col-lg-9 col-md-9 col-12 mx-auto mb-lg-5 mb-3'>At the Consortium, “Representation” and “Inclusion” are not just buzzwords; they are the credo we live by and the thoughtful actions that define us. Meet the inspiring people who live and breathe our mission.</p>
-      <div className='d-grid'>
+      <div className='d-grid px-3'>
         <div className='row row-gap-2'>
           {data.map((item, index) => (
             <div key={index} className='col-lg-3 col-md-6 d-flex'>
