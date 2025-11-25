@@ -150,3 +150,21 @@
     100% { opacity: 0; }
   }
 }
+
+
+.fixed-left-arrow-btn {
+  position: fixed;
+  right: 25px;
+  bottom: 9%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  background: black;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bolder;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

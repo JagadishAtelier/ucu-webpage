@@ -62,3 +62,12 @@
 .hostel-sec-head{
   color: #005bd4 !important;
 }
+
+@media (max-width:480px) {
+  .fee-info{
+    flex-direction: column;
+  }
+  .fee-image{
+    width: 100%;
+  }
+}
