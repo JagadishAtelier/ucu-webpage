@@ -57,8 +57,20 @@
 }
 
 
-@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-    .industry-card {
-    height: 48vh;
+/* -------------------------------------- */
+/* 1️⃣ DEFAULT — All normal mobiles (<480px) */
+/* -------------------------------------- */
+@media (max-width: 480px) {
+  .industry-card {
+    height: fit-content !important;   /* ANDROID MOBILES */
+  }
+}
+
+/* -------------------------------------- */
+/* 2️⃣ iPhones ONLY — override Android rule */
+/* -------------------------------------- */
+@supports (-webkit-touch-callout: none) {
+  .industry-card {
+    height: fit-content !important;  /* ALL iPHONES */
   }
 }
