@@ -55,9 +55,9 @@ function ContactPageForm() {
             <p className="mb-0 pt">OR</p>
             <div className="cpf-hr-line"></div>
           </div> */}
-          <p className="mb-0 display-5 fw-bold">
-            <span style={{ color: "#5ac501" }}>CONNECT WITH US </span> THROUGH OUR
-          </p>
+          <h1 className="mb-0 display-5 fw-bold text-uppercase">
+            <span style={{ color: "#5ac501" }}>connect with us </span> through our
+          </h1>
 <div className="contactSection-container">
   <div className="contactSection-grid">
 
