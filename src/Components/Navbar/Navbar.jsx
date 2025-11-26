@@ -176,7 +176,7 @@ const Navbar = () => {
             className="collapse navbar-collapse justify-content-end flex-column align-items-end"
             id="mainNavbar"
           >
-            <div className="top-bar d-flex justify-content-end align-items-center pt-3 bg-white">
+            <div className="top-bar d-flex justify-content-end align-items-center pt-3">
               <ul className="list-inline mb-0">
                 {menuData
                   .filter((menu) => menu.placement === "top")

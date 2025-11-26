@@ -2,7 +2,6 @@
    Top Bar
 --------------------------------*/
 .top-bar {
-  background: #f8f8f8;
   font-size: 0.85rem;
 }
 
@@ -45,7 +44,7 @@
   left: 0;
   height: 2px;
   width: 0;
-  background: #0d6efd;
+  background: #74e974;
   transition: width 0.3s ease;
 }
 
@@ -913,7 +912,7 @@ li:hover .career-reboot-heading {
 }
 
 .search-icon-nab-bg {
-  background-color: #5ac501;
+  background-color: #0d6efd;
   color: white;
   border-radius: 50%;
   padding: 7px 8px;
@@ -921,7 +920,7 @@ li:hover .career-reboot-heading {
 }
 
 .profile-icon-nab-bg {
-  background-color: #5ac501;
+  background-color: #0d6efd;
   color: white;
   border-radius: 50%;
   padding: 8px;
@@ -957,7 +956,7 @@ li:hover .career-reboot-heading {
 .online-program-link {
   font-weight: 600;
   border-radius: 8px;
-  background-color: #5ac501;
+  background-color: #0d6efd;
   color: white !important;
   position: relative;
   padding: 0.8rem 2rem;
