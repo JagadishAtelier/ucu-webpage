@@ -40,13 +40,13 @@ export const  footerMenu = [
     title: "Other",
     items: [
             "Faculty",
-      "Campus Placements",
-       "Industry Engagement",
-       "Strategic Collaborations",
+      
+       "Partnership",
       "Media",
       "Admissions",
       "Contact Us",
-      "Campus Ambience",
+      "Campus",
+      "Campus Placements",
       "Societal Impact",
       "Consortium",
       "Careers",

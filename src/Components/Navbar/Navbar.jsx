@@ -10,7 +10,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenus, setOpenMenus] = useState({});
   const [hoverMenus, setHoverMenus] = useState({});
-  const [searchDrodow, setSearchDropdown] = useState(false)
+  const [searchDrodow, setSearchDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 760);
 
   React.useEffect(() => {
@@ -20,7 +20,7 @@ const Navbar = () => {
   }, []);
   const toggleMobile = () => setMobileOpen(!mobileOpen);
 
-  const toggleSearch = () => setSearchDropdown(!searchDrodow)
+  const toggleSearch = () => setSearchDropdown(!searchDrodow);
 
   const toggleSubmenu = (label) => {
     setOpenMenus((prev) => ({
@@ -52,15 +52,23 @@ const Navbar = () => {
     setHoverMenus((prev) => ({ ...prev, [label]: true }));
   };
 
-
   // ✅ Recursive submenu renderer
   const renderNestedMenu = (submenu, depth = 1) => {
     if (!submenu || !submenu.length) return null;
-    const hasCustomLink = submenu.some(sub => sub.className === "sublink-custom");
+    const hasCustomLink = submenu.some(
+      (sub) => sub.className === "sublink-custom"
+    );
     return (
-      <ul className={`submenu depth-${depth} ${hasCustomLink ? "no-border" : ""}`}>
+      <ul
+        className={`submenu depth-${depth} ${hasCustomLink ? "no-border" : ""}`}
+      >
         {submenu.map((sub) => (
-          <li key={sub.label} className={`submenu-item ${sub.className === "sublink-custom" ? "no-padding" : ""}`}>
+          <li
+            key={sub.label}
+            className={`submenu-item ${
+              sub.className === "sublink-custom" ? "no-padding" : ""
+            }`}
+          >
             {sub.submenu && sub.submenu.length > 0 ? (
               <div className="submenu-parent">
                 <Link
@@ -86,7 +94,6 @@ const Navbar = () => {
     );
   };
 
-
   // ✅ Render menu recursively (for mobile)
   const renderMenuItems = (items, depth = 0) => {
     return (
@@ -96,22 +103,25 @@ const Navbar = () => {
             {item.submenu && item.submenu.length > 0 ? (
               <>
                 <button
-                  className={`menu-btn depth-${depth} ${openMenus[item.label] ? "open" : ""
-                    }`}
+                  className={`menu-btn depth-${depth} ${
+                    openMenus[item.label] ? "open" : ""
+                  }`}
                   onClick={() => toggleSubmenu(item.label)}
                 >
                   {item.label}
                   {depth === 0 ? (
                     <ChevronDown
                       size={16}
-                      className={`chevron ${openMenus[item.label] ? "rotated" : ""
-                        }`}
+                      className={`chevron ${
+                        openMenus[item.label] ? "rotated" : ""
+                      }`}
                     />
                   ) : (
                     <ChevronRight
                       size={16}
-                      className={`chevron ${openMenus[item.label] ? "rotated" : ""
-                        }`}
+                      className={`chevron ${
+                        openMenus[item.label] ? "rotated" : ""
+                      }`}
                     />
                   )}
                 </button>
@@ -146,29 +156,37 @@ const Navbar = () => {
 
   return (
     <header className="position-relative">
-      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-md py-0 navbar-main-container">
+      <nav className="navbar navbar-expand-lg navbar-light shadow-md py-0 navbar-main-container">
         <div className="container-fluid container-nowrap">
           {/* Logo */}
           <Link
-            className="navbar-brand d-flex align-items-center logo-box m-lg-0"
+            className="navbar-brand position-relative d-flex flex-column pb-4 logo-box m-lg-0"
             to="/"
           >
-            <img
-              src={logoImg}
-              alt="Universal Corporate University Logo"
-              className="logo"
-            />
-            <div className="border-l">
-              <p className="logo-text" style={{ color: "#1703a9" }}>
-                <span style={{ color: "#1703a9" }}>U</span>niversal
-              </p>
-              <p className="logo-text" style={{ color: "#5bc500" }}>
-                <span style={{ color: "#5bc500" }}>C</span>orporate
-              </p>
-              <p className="logo-text" style={{ color: "#07baf3" }}>
-                <span style={{ color: "#07baf3" }}>U</span>niversity
-              </p>
+            <div className="d-flex align-items-center">
+              <img
+                src={logoImg}
+                alt="Universal Corporate University Logo"
+                className="logo"
+              />
+              <div className="border-l">
+                <p className="logo-text" style={{ color: "#1703a9" }}>
+                  <span style={{ color: "#1703a9" }}>U</span>niversal
+                </p>
+                <p className="logo-text" style={{ color: "#5bc500" }}>
+                  <span style={{ color: "#5bc500" }}>C</span>orporate
+                </p>
+                <p className="logo-text" style={{ color: "#07baf3" }}>
+                  <span style={{ color: "#07baf3" }}>U</span>niversity
+                </p>
+              </div>
             </div>
+            <p
+              className="fs-6 mb-0 position-absolute logo-text-under"
+              style={{ color: "#26252cff",bottom: "0.2rem" }}
+            >
+              Business School
+            </p>
           </Link>
 
           {/* Top Menu */}
@@ -176,15 +194,16 @@ const Navbar = () => {
             className="collapse navbar-collapse justify-content-end flex-column align-items-end"
             id="mainNavbar"
           >
-            <div className="top-bar d-flex justify-content-end align-items-center pt-3 bg-white">
+            <div className="top-bar d-flex justify-content-end align-items-center pt-3">
               <ul className="list-inline mb-0">
                 {menuData
                   .filter((menu) => menu.placement === "top")
                   .map((menu) => (
                     <li
                       key={menu.label}
-                      className={`list-inline-item nav-item dropdown ${menu.submenu ? "has-mega" : ""
-                        }`}
+                      className={`list-inline-item nav-item dropdown ${
+                        menu.submenu ? "has-mega" : ""
+                      }`}
                       onMouseEnter={() => handleHover(menu.label)}
                       onMouseLeave={() => handleLeave(menu.label)}
                     >
@@ -202,11 +221,14 @@ const Navbar = () => {
                           ) : (
                             <Link
                               to={menu.link || "#"}
-                              className={`nav-link dropdown-toggle ${menu.label === "Online Programs" ? "online-program-link" : ""}`}
+                              className={`nav-link dropdown-toggle ${
+                                menu.label === "Online Programs"
+                                  ? "online-program-link"
+                                  : ""
+                              }`}
                             >
                               {menu.label.toUpperCase()}
                             </Link>
-
                           )}
 
                           <div
@@ -284,7 +306,11 @@ const Navbar = () => {
               </div>
               {searchDrodow && (
                 <div className="search-dropdown-box-div">
-                  <input type="text" className="search-dropdown-box" placeholder="Search ...." />
+                  <input
+                    type="text"
+                    className="search-dropdown-box"
+                    placeholder="Search ...."
+                  />
                   <div className="dropdown-search-icon">
                     <Search size={20} />
                   </div>
@@ -296,7 +322,6 @@ const Navbar = () => {
                   onClick={() => navigate("/auth/login")}
                   className="nav-bar-search-icon"
                   size={18}
-
                 />
               </div>
             </div>
@@ -308,8 +333,9 @@ const Navbar = () => {
                 .map((menu) => (
                   <li
                     key={menu.label}
-                    className={`nav-item dropdown ${menu.submenu ? "has-mega" : ""
-                      }`}
+                    className={`nav-item dropdown ${
+                      menu.submenu ? "has-mega" : ""
+                    }`}
                     onMouseEnter={() => handleHover(menu.label)}
                     onMouseLeave={() => handleLeave(menu.label)}
                   >
@@ -328,26 +354,52 @@ const Navbar = () => {
                           // ⭐ Custom dropdown design only for Campus Placements
                           <div
                             className="cam-drop-dropdown-menu menu-campus-custom-menu"
-                            style={{ display: hoverMenus[menu.label] ? "block" : "none" }}
+                            style={{
+                              display: hoverMenus[menu.label]
+                                ? "block"
+                                : "none",
+                            }}
                           >
                             <div className="d-flex gap-5 align-items-center">
                               <div className="col-4">
-                                <p className="fs-5 campus-text-right">“UCU is redefining the future of talent—rooted in India’s heartland, yet engineered for global impact. Its industry-first, future-ready model is a blueprint for inclusive excellence—powered by global faculty and industry leaders who mentor indigenous students into globally agile professionals.”
+                                <p className="fs-5 campus-text-right">
+                                  “UCU is redefining the future of talent—rooted
+                                  in India’s heartland, yet engineered for
+                                  global impact. Its industry-first,
+                                  future-ready model is a blueprint for
+                                  inclusive excellence—powered by global faculty
+                                  and industry leaders who mentor indigenous
+                                  students into globally agile professionals.”
                                 </p>
-                                <p className="text-end campus-text-right-name">Ganesan Ramachandran</p>
-                                <p className="text-end campus-text-right-name">Managing Director, Accenture Strategy & Consulting</p>
+                                <p className="text-end campus-text-right-name">
+                                  Ganesan Ramachandran
+                                </p>
+                                <p className="text-end campus-text-right-name">
+                                  Managing Director, Accenture Strategy &
+                                  Consulting
+                                </p>
                               </div>
                               <div className="d-grid cmapus-wrapper-div">
-                              <div className="row row-gap-3">
-                                {menu.submenu.map((item) => (
-                                  <div onClick={() => navigate(`${item.link}`)} className="mx-auto bg-white p-2 gap-2 justify-content-start shadow d-flex flex-column align-items-center menu-item-campus-card">
-                                    <img src={item.image} className="menu-campus-image" />
-                                    <Link key={item.label} to={item.link} className="menu-campus-card">
-                                      <span>{item.label}</span>
-                                    </Link>
-                                  </div>
-                                ))}
-                              </div>
+                                <div className="row row-gap-3">
+                                  {menu.submenu.map((item) => (
+                                    <div
+                                      onClick={() => navigate(`${item.link}`)}
+                                      className="mx-auto bg-white p-2 gap-2 justify-content-start shadow d-flex flex-column align-items-center menu-item-campus-card"
+                                    >
+                                      <img
+                                        src={item.image}
+                                        className="menu-campus-image"
+                                      />
+                                      <Link
+                                        key={item.label}
+                                        to={item.link}
+                                        className="menu-campus-card"
+                                      >
+                                        <span>{item.label}</span>
+                                      </Link>
+                                    </div>
+                                  ))}
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -357,12 +409,17 @@ const Navbar = () => {
                               ?.replace(/\s+/g, "-")
                               .toLowerCase()}`}
                             style={{
-                              display: hoverMenus[menu.label] ? "block" : "none",
+                              display: hoverMenus[menu.label]
+                                ? "block"
+                                : "none",
                             }}
                           >
                             <div className="row dropdown-menu-container">
                               {menu.submenu.map((col) => (
-                                <div className="dropdown-menu-col" key={col.label}>
+                                <div
+                                  className="dropdown-menu-col"
+                                  key={col.label}
+                                >
                                   <div className="top-head">
                                     {col.scrollId ? (
                                       <button
@@ -383,7 +440,8 @@ const Navbar = () => {
                                     )}
                                   </div>
 
-                                  {col.submenu && renderNestedMenu(col.submenu, 2)}
+                                  {col.submenu &&
+                                    renderNestedMenu(col.submenu, 2)}
                                 </div>
                               ))}
                             </div>
@@ -440,7 +498,6 @@ const Navbar = () => {
               <div className="drawer-content">
                 {renderMenuItems(isMobile ? menuDataMobile : menuData)}
               </div>
-
             </div>
           </>
         )}

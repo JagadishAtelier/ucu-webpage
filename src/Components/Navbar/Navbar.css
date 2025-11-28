@@ -2,14 +2,14 @@
    Top Bar
 --------------------------------*/
 .top-bar {
-  background: #f8f8f8;
+  /* background: #f8f8f8; */
   font-size: 0.85rem;
 }
 
 .top-bar a {
-  color: black;
+  color: #45007e;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 1px;
   text-decoration: none;
   text-transform: capitalize !important;
@@ -18,13 +18,16 @@
 
 .top-bar a:hover {
   text-decoration: underline;
-  color: #333;
+  color: #7514c4;
 }
 
 .navbar {
   box-shadow: 0px 4px 7px 1px #312f2f52 !important;
 }
 
+.navbar > .container-nowrap{
+  padding-left: 0 !important;
+}
 /* ------------------------------
    Navbar Links
 --------------------------------*/
@@ -33,7 +36,7 @@
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: black !important;
+  color: #45007e !important;
   position: relative;
   padding: 15px 15px;
 }
@@ -45,7 +48,7 @@
   left: 0;
   height: 2px;
   width: 0;
-  background: #74e974;
+  background: #1703a9;
   transition: width 0.3s ease;
 }
 
@@ -217,7 +220,7 @@
   height: 2px;
   width: 0;
   background-color: #74e974;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
 }
 
 /* expand border on hover */
@@ -516,11 +519,16 @@ button {
     rgba(0, 0, 0, 0.3) 2%,
     rgba(255, 255, 255, 0) 60%
   ); */
-  padding: 0;
-  height: 125px;
-  width: 100%;
+  padding: 0 30px 0px 20px;
+  background-color: white;
+  border-radius: 0 100px 100px 0;
+  box-shadow: 10px 1px 10px #acaf003a;
+  height: 140px;
+  width: fit-content;
 }
-
+.submenu-link{
+  color: #fff !important;
+}
 .navbar {
   padding: 0 !important;
 }
@@ -543,7 +551,7 @@ button {
 /* z-index: -1; */
 /* } */
 .logo {
-  height: 130px !important;
+  height: 125px !important;
 }
 
 .logo-img {
@@ -814,7 +822,7 @@ button {
   height: 2px;
   width: 0;
   background-color: #74e974;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
 }
 
 .career-reboot-heading:hover::after {
@@ -896,6 +904,9 @@ li:hover .career-reboot-heading {
   /* larger than default 0.75rem */
 }
 
+.bg-gradient{
+  background: linear-gradient(to right, #ffffff, #d8f6c2) !important;
+}
 .top-bar .dropdown-menu .dropdown-menu-col ul li a:hover {
   font-size: 0.75rem !important;
   /* larger than default 0.75rem */
@@ -913,16 +924,18 @@ li:hover .career-reboot-heading {
 }
 
 .search-icon-nab-bg {
-  background-color: #005bd4;
-  color: white;
+  background-color: white;
+  color: #1535b4 !important;
+  box-shadow: 0px 5px 9px #3f3b0030;
   border-radius: 50%;
   padding: 7px 8px;
   cursor: pointer;
 }
 
 .profile-icon-nab-bg {
-  background-color: #005bd4;
-  color: white;
+  background-color: white;
+  color: #1535b4 !important;
+  box-shadow: 0px 5px 9px #3f3b0030;
   border-radius: 50%;
   padding: 8px;
   cursor: pointer;
@@ -956,8 +969,10 @@ li:hover .career-reboot-heading {
 
 .online-program-link {
   font-weight: 600;
-  background-color: #005bd4;
-  color: white !important;
+  background-color: white;
+  color: #1535b4 !important;
+  box-shadow: 0px 5px 9px #3f3b0030;
+  border-radius: 100px;
   position: relative;
   padding: 0.8rem 2rem;
   transition: 0.3s ease;
@@ -1093,17 +1108,18 @@ li:hover .career-reboot-heading {
   .navbar-nav .nav-link {
     font-size: 12px !important;
     padding-left: 5px !important;
+    font-weight: 800;
   }
 
   .online-program-link {
-    padding: 0.6rem 0.5rem !important;
+    padding: 0.6rem 1rem !important;
     font-size: 0.6rem !important;
   }
 
   .top-bar a {
     margin-left: 10px !important;
     font-size: 12px !important;
-    font-weight: 600 !important;
+    font-weight: 800 !important;
   }
 
   .list-inline-item:not(:last-child) {
@@ -1166,6 +1182,7 @@ li:hover .career-reboot-heading {
   .navbar-nav .nav-link {
     font-size: 9px !important;
     padding-left: 0px !important;
+    font-weight: 800;
   }
 
   .online-program-link {
