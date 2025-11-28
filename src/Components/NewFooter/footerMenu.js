@@ -39,18 +39,15 @@ export const  footerMenu = [
   {
     title: "Other",
     items: [
-            "Faculty",
-      
-       "Partnership",
+      "Faculty",
+      "Partnership",
       "Media",
       "Admissions",
       "Contact Us",
       "Campus",
       "Campus Placements",
-      "Societal Impact",
       "Consortium",
       "Careers",
-      "Budding Talent",
     ],
   },
   // {
