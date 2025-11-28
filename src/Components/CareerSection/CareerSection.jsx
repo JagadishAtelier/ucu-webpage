@@ -16,7 +16,7 @@ import ExpandableText from "./ExpandableText";
 const data = [
   {
     image: image1,
-    heading: "Post Graduate Program in Management - ELITE (PGPM-ELITE)",
+    heading: "PGPM ELITE | Career Accelerator Program",
     para: `A one-year Post Graduate Program in Management designed for experienced professionals—integrating executive leadership frameworks with real-world business insight to accelerate career impact`,
     buttonText:"Explore More",
     elgible : "3+ years of experience",
@@ -24,9 +24,8 @@ const data = [
   },
   {
     image: image2,
-    heading: "Post Graduate Diploma in Management (PGDM)",
-    para: `A two-year UCU’s Post Graduate Diploma in Management (PGDM) for Freshers is designed to launch high-potential talent into the business world—building strong foundations and accelerating their journey into impactful careers.
-    `,
+    heading: "PGDM | Young Leaders' Program",
+    para: `A two-year UCU’s Post Graduate Diploma in Management (PGDM) for Freshers is designed to launch high-potential talent into the business world—building strong foundations and accelerating their journey into impactful careers.`,
     buttonText:"Explore More",
     elgible : "0 - 3 years of experience",
     duration : "24 months"
