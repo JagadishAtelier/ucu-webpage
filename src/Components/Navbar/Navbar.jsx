@@ -183,7 +183,7 @@ const Navbar = () => {
             </div>
             <p
               className="fs-6 mb-0 position-absolute logo-text-under"
-              style={{ color: "#26252cff",bottom: "0.2rem" }}
+              style={{ color: "#07baf3",bottom: "0.2rem" }}
             >
               Business School
             </p>
