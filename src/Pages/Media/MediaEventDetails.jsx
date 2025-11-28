@@ -38,7 +38,7 @@ function MediaEventDetails() {
             <Navbar />
             <div
                 data-aos="fade-down"
-                className="fac-hero-section d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-md-start text-lg-center p-3 p-lg-5 p-lg-7"
+                className="fac-hero-section d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-md-start text-lg-center p-3 p-lg-5"
                 style={{
                     backgroundImage: `url(https://execed.isb.edu/content/dam/sites/cee/images/Group%201182.png)`,
                     backgroundSize: "cover",

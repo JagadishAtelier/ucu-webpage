@@ -153,3 +153,12 @@
     padding: 1.2rem;
   }
 }
+@media (max-width:480px) {
+  .admissions-buttons{
+    flex-direction: column;
+  }
+  .admissions-columns{
+    min-height: 250px;
+    justify-content: center;
+  }
+}

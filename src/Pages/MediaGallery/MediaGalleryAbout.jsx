@@ -69,7 +69,7 @@ function MediaGalleryAbout() {
 
             <div>
                 {/* <h1 className='my-3 display-4 fw-bold text-center' style={{color: "#005bd4"}}>OUR VIDEO GALLERY</h1> */}
-                <h1 className='my-4 display-4 fw-bold text-center'>OUR VIDEO GALLERY</h1>
+                <h1 className='my-4 display-5 fw-bold text-center'>OUR <span style={{color:"#5ac501"}}> VIDEO </span> GALLERY</h1>
 
                 {/* Tabs Section */}
                 <div className='d-flex flex-wrap gap-3 mb-4'>

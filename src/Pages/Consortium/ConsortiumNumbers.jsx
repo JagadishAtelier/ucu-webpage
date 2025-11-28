@@ -31,7 +31,7 @@ function ConsortiumNumbers() {
         <div className='captital-campus-content-sec my-4'>
             <div className='consortium-number-div'>
                 <div className='consortium-number-div-left'>
-                    <h1 className='text-uppercase col-10 mx-auto'>UCU Consortium By The Numbers</h1>
+                    <h1 className='text-uppercase col-10 mx-auto display-5 fw-bold'>UCU Consortium By The Numbers</h1>
                     <p className='col-10 mx-auto text-white'>Our facts and figures are a testament to our efforts to drive impactful change:</p>
                     <div className='col-10 mx-auto left-consotium-number'>
                         <p className='fs-2 mb-0 ps-3 fw-bold'>20,000+ </p>
@@ -43,9 +43,9 @@ function ConsortiumNumbers() {
                         <p className='left-consotium-number-p2 ps-3 text-white'> CXOs associated with us</p>
                     </div>
                 </div>
-                <div className='consortium-number-image-div position-relative'>
-                    <img src='https://cgsm.org/wp-content/uploads/2023/12/52973348930_ea9a52cd24_o-3-resized-min.jpg' className='consortium-number-image' />
-                    <div className='d-grid consortium-numberr-grid'>
+                <div className='consortium-number-image-div position-relative d-flex align-items-center'>
+                    {/* <img src='https://cgsm.org/wp-content/uploads/2023/12/52973348930_ea9a52cd24_o-3-resized-min.jpg' className='consortium-number-image' /> */}
+                    <div className='d-grid consortium-numberr-grid '>
                         <div className='row row-gap-3 gap-2'>
                             {data.map((item, index) => (
                                 <div className='consortium-number-container col-lg-5 p-lg-3 p-md-3 p-2 text-center text-md-start text-lg-start'>

@@ -100,3 +100,39 @@
     height: 200px;
   }
 }
+/* Normal mobile screens */
+@media (max-width: 480px) {
+  .asp-industry-card {
+    height: fit-content;   /* for all normal mobiles */
+  }
+  .asp-industry-card-div {
+    padding: 10px 0 40px;
+  }
+}
+
+/* -------------------------------------- */
+/* ALL iPhones (any model, any size)      */
+/* -------------------------------------- */
+@media screen 
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (hover: none)
+  and (pointer: coarse) {
+
+  .asp-industry-card {
+    height: fit-content !important;
+  }
+}
+
+
+/* -------------------------------------- */
+/* ONLY iPhone SE  (320px width models)   */
+/* -------------------------------------- */
+@media screen
+  and (device-width: 375px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .asp-industry-card {
+    height:fit-content !important; /* your custom height for SE */
+  }
+}

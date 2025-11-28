@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { menuData, menuDataMobile } from "./menuData";
 import "./Navbar.css";
@@ -13,7 +13,7 @@ const Navbar = () => {
   const [searchDrodow, setSearchDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 760);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 760);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);

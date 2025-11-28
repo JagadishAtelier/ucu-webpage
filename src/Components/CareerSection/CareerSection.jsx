@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { CalendarDays, User } from "lucide-react";
+import ExpandableText from "./ExpandableText";
 const data = [
   {
     image: image1,
@@ -138,7 +139,8 @@ function CareerSection() {
               </div>
               <div className="car-right">
                 <h1 className="title mb-lg-3 mb-0">{item.heading}</h1>
-                <p className="program-description mb-0 mb-lg-2">{item.para}</p>
+<ExpandableText text={item.para} limit={120} color="#fff" />
+
                 <div className="d-flex flex-row gap-2 items-center">
                   <User size={18} color="#07b5f1"/>
                   <p className="program-description">{item.elgible}</p>
@@ -183,7 +185,8 @@ function CareerSection() {
               </div>
               <div className="car-right">
                 <h1 className="title mb-lg-3 mb-0">{item.heading}</h1>
-                <p className="program-description mb-0 mb-lg-2">{item.para}</p>
+<ExpandableText text={item.para} limit={120} color="#fff" />
+
                 <div className="d-flex flex-row gap-2 items-center">
                   <User size={18} color="#07b5f1" className=""/>
                   <p className="program-description">{item.elgible}</p>

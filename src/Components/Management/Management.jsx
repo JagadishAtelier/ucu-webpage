@@ -4,6 +4,7 @@ import image1 from "../../Assets/ucu (1)/Rectangle 154.jpg";
 import image2 from "../../Assets/ucu (1)/Rectangle 100.jpg";
 import Aos from "aos";
 import Platforms from "../Platforms/Platforms";
+import ExpandableText from "../CareerSection/ExpandableText";
 const data = [
   {
     image: image1,
@@ -55,7 +56,8 @@ function Management() {
                 <div className="man-item-content">
                   {/* <h1>{item.heading}</h1> */}
                   <h1 className="top-text-man my-0 ms-0 h3 fw-semibold">{item.top}</h1>
-                  <p className="program-description text-white">{item.para}</p>
+<ExpandableText text={item.para} limit={120} color="#fff" />
+
                   <a className="EXPLORE-MDPS ">{item.btntext}</a>
                 </div>
               </div>

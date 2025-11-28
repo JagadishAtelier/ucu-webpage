@@ -6,7 +6,7 @@
   width: 100%;
   max-width: 1320px;
   display: flex;
-  padding: 40px 0;
+  padding: 10px 0 40px;
   gap: 30px;
 }
 
@@ -54,4 +54,23 @@
 
 .swiper-pagination-bullet {
   background-color: #5ac501;
+}
+
+
+/* -------------------------------------- */
+/* 1️⃣ DEFAULT — All normal mobiles (<480px) */
+/* -------------------------------------- */
+@media (max-width: 480px) {
+  .industry-card {
+    height: fit-content !important;   /* ANDROID MOBILES */
+  }
+}
+
+/* -------------------------------------- */
+/* 2️⃣ iPhones ONLY — override Android rule */
+/* -------------------------------------- */
+@supports (-webkit-touch-callout: none) {
+  .industry-card {
+    height: fit-content !important;  /* ALL iPHONES */
+  }
 }

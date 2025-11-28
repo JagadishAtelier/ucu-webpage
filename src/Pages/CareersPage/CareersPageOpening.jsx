@@ -17,19 +17,19 @@ const data = [
 function CareersPageOpening() {
   return (
     <div className="captital-campus-content-sec mt-5">
-      <h1>Current Job Openings</h1>
+      <h1 className='display-5 fw-bold'>Current <span style={{color:"#5ac501"}}> Job Openings </span></h1>
       <div className="d-flex flex-column flex-lg-row gap-3">
         {data.map((item, index) => (
-          <div key={index} className="cpo-data-div">
+          <div key={index} className="cpo-data-div rounded">
             <div className="cpo-image-container">
-              <img src={item.image} alt={item.header} />
-              <div className="cpo-overlay"></div>
+              <img src={item.image} alt={item.header} className='rounded'/>
+              <div className="cpo-overlay rounded"></div>
               <div className="cpo-data-header-div">
                 <p>{item.header}</p>
                 <ArrowRight />
               </div>
             </div>
-            <p className="cpo-data-para">{item.para}</p>
+            <p className="cpo-data-para rounded">{item.para}</p>
           </div>
         ))}
       </div>

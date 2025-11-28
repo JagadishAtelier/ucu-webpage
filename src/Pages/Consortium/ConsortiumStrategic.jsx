@@ -6,15 +6,15 @@ import "swiper/css/pagination";
 
 const data = [
   {
-    head: "Strategic Partners",
+    head: `Our <span style="color:#5ac501">Strategic Partners</span>`,
     para: "Our strategic partners share our deep commitment to enhance inclusion in global business education and leadership. Thanks to them, students are redefining the world of business from the classroom to the boardroom — and heading confidently towards a successful future. The Consortium values its strategic partnerships with the following organisations and institutions",
   },
   {
-    head: "Our Corporate Partners",
+    head: `Our <span style="color:#5ac501">Corporate Partners</span>`,
     para: "Our strategic partners share our deep commitment to enhance inclusion in global business education and leadership. Thanks to them, students are redefining the world of business from the classroom to the boardroom — and heading confidently towards a successful future. The Consortium values its strategic partnerships with the following organisations and institutions",
   },
   {
-    head: "Our Academic Partners",
+    head: `Our <span style="color:#5ac501">Academic Partners</span>`,
     para: "Our strategic partners share our deep commitment to enhance inclusion in global business education and leadership. Thanks to them, students are redefining the world of business from the classroom to the boardroom — and heading confidently towards a successful future. The Consortium values its strategic partnerships with the following organisations and institutions",
   },
 ];
@@ -33,8 +33,12 @@ function ConsortiumStrategic() {
         {data.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="consortium-strategic-container">
-              <h1 className="text-uppercase fw-bold display-4">{item.head}</h1>
-              <p className="mt-3 col-lg-10 col-12 text-center mx-auto">{item.para}</p>
+              <h1
+                className="text-uppercase fw-bold display-5"
+                dangerouslySetInnerHTML={{ __html: item.head }}
+              ></h1>
+
+              <p className="mt-3 col-lg-10 col-12 text-center mx-auto pt">{item.para}</p>
             </div>
           </SwiperSlide>
         ))}

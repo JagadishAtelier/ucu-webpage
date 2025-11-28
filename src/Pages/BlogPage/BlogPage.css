@@ -1,0 +1,16 @@
+.vertical-line-blog-page{
+    height: auto;
+    border: 1px solid gray;
+    width: 2px;
+    background-color: gray;
+}
+.blog-page-swiper-image{
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.blog-page-right-head{
+    border-bottom: 3px solid black;
+    width: fit-content;
+}

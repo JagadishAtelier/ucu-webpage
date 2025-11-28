@@ -19,8 +19,8 @@ const data = [
 function CampusExplore() {
   return (
     <div className='captital-campus-content-sec my-5'>
-        <h1 className='mb-4'>Explore student life at UCU</h1>
-        <p>At UCU, participants lead clubs, host nationally recognised student fests, and celebrate festivals from across India. The campus buzzes with vibrant energy and reflects the rich cultural diversity of its community. These experiences provide students opportunities to pursue their passions, grow as leaders, and build meaningful connections. By engaging with alumni and industry experts, they gain real-world insights and forge lifelong bonds that extend well beyond the classroom.</p>
+        <h1 className='mb-4 display-4 fw-bold'><span style={{color:"#5ac501"}}>Explore student </span> life at UCU</h1>
+        <p className='pt'>At UCU, participants lead clubs, host nationally recognised student fests, and celebrate festivals from across India. The campus buzzes with vibrant energy and reflects the rich cultural diversity of its community. These experiences provide students opportunities to pursue their passions, grow as leaders, and build meaningful connections. By engaging with alumni and industry experts, they gain real-world insights and forge lifelong bonds that extend well beyond the classroom.</p>
             <div className='d-grid'>
             <div className='row row-gap-4'>
                 {data.map((item,index)=>(

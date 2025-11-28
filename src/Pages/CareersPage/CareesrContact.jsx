@@ -12,7 +12,7 @@ function CareesrContact() {
         <h1 className='text-white position-relative'>Got Talent? We’re always looking for great people!</h1>
         <p className='text-white position-relative'>If there’s no immediate match, don’t worry! We welcome speculative applications and encourage you to send your profile for future opportunities. We’re committed to finding top talent. Working Hours: Monday – Friday, 10:00 am IST to 05:00 pm IST.</p>
     </div>
-    <div className='cpo-contact-details'>
+    <div className='cpo-contact-details rounded'>
         <h1 className='fw-bold'>Contact Us</h1>
         <div className='d-flex align-items-center gap-2'>
             <Phone size={18}/>

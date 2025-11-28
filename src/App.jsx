@@ -54,6 +54,10 @@ import ExpressInterestPageBanner from "./Pages/ExpressInterestPage/ExpressIntere
 import IndustryFirstApproach from "./Pages/IndustryFirstApproach/IndustryFirstApproach";
 import ContactChapters from "./Pages/ContactChapters/ContactChapters";
 import ContactChapterInternatinal from "./Pages/ContactChapters/ContactChapterInternatinal";
+import TalentPage from "./Pages/TalentPage/TalentPage";
+import TalentNavigationPage from "./Pages/TalentPage/TalentNavigationPage";
+import BlogPageBanner from "./Pages/BlogPage/BlogPageBanner";
+import ProgramsForIndividualsBanner from "./Pages/ProgramsForIndividuals/ProgramsForIndividualsBanner";
 
 function App() {
   useEffect(() => {
@@ -105,10 +109,14 @@ function App() {
         <Route path="/strategic/*" element={<StrategicCollabBanner/>} />
         <Route path="/contact-us" element={<ContactUsPage/>} />
         <Route path="/batch-profile" element={<BatchProfilePage/>} />
+        <Route path="/talent-details" element={<TalentNavigationPage/>} />
         <Route path="/expression-of-interest" element={<ExpressInterestPageBanner/>} />
         <Route path="/industry-approach" element={<IndustryFirstApproach/>} />
         <Route path="/contact-chapters" element={<ContactChapters/>} />
         <Route path="/contact-chapters-international" element={<ContactChapterInternatinal/>} />
+        <Route path="/explore-talent" element={<TalentPage/>} />
+        <Route path="/blog" element={<BlogPageBanner/>} />
+        <Route path="/programs-for-individuals" element={<ProgramsForIndividualsBanner/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <WhatsAppButton/>

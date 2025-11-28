@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+import { useNavigate } from 'react-router-dom';
 // Import modules from the new path
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 const data = [
@@ -21,9 +21,10 @@ const data = [
     },
 ]
 function CampusCommunity() {
+  const navigate = useNavigate()
   return (
     <div className='captital-campus-content-sec mt-5'>
-        <h1 className='mb-4'>Insights from the UCU community</h1>
+        <h1 className='mb-4 display-5 fw-bold'>Insights from the <span style={{color:"#5ac501"}}>UCU community</span></h1>
         <Swiper
   modules={[Navigation, Pagination, Autoplay]} // include Autoplay
   spaceBetween={20}
@@ -49,7 +50,7 @@ function CampusCommunity() {
               {item.text}
             </p>
             <p className="text-start sort-disc mb-0">{item.prof}</p>
-             <button onClick={()=>navigate(`${activeItem.link}`)} className="btn-cta campus-community-km-btn">know more <span className="chev">›</span></button>
+             <button onClick={()=>navigate(`/blog`)} className="btn-cta campus-community-km-btn">know more <span className="chev">›</span></button>
             </div>
            
             </SwiperSlide>

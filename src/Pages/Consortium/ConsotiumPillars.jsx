@@ -27,12 +27,12 @@ const data = [
 function ConsotiumPillars() {
   const navigate = useNavigate()
   return (
-    <div className='captital-campus-content-sec mt-4 text-white py-5' style={{ backgroundColor: "#0c0142" }}>
-      <h1 className='fw-bold text-center display-5 col-10 mx-auto text-uppercase mb-5'>
+    <div className='captital-campus-content-sec mt-4 text-white py-lg-5 py-3 consortium-pillars-container' style={{ backgroundColor: "#0c0142" }}>
+      <h1 className='fw-bold text-center display-5 col-10 mx-auto text-uppercase mb-lg-5 mb-2'>
         Our network is built on these four foundational pillars :
       </h1>
 
-      <div className='d-grid'>
+      <div className='d-grid px-3'>
         <div className='row row-gap-3'>
           {data.map((item, index) => (
             <div key={index} className='col-lg-3 col-md-6 col-12 d-flex'>

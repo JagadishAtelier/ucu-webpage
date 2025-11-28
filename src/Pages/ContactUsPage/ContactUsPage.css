@@ -426,6 +426,13 @@
 @media (max-width:480px) {
   .contact-card{
     width: 100%;
+    height: 30vh;
+  }
+  .contact-us-swiper-div{
+    height: 35vh;
+  }
+  .contact-carousel-card{
+    height: 35vh;
   }
   .contact-form-wrapper{
     padding: 0;
@@ -436,4 +443,99 @@
   .contact-carousel-text{
     height: fit-content;
   }
+}
+/* MAIN WRAPPER */
+.contactSection-container {
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* GRID */
+.contactSection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;     /* THIS keeps grid centered */
+}
+
+.contactSection-grid > :only-child {
+  width: 100%;
+  max-width: 380px;
+  justify-self: center;
+}
+
+/* CARD */
+.contactSection-card {
+  position: relative;
+  height: 280px;
+  border-radius: 20px;
+  padding: 28px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: all 0.35s ease-in-out;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* COLORFUL OVERLAY */
+.contactSection-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.35)
+  );
+  z-index: 1;
+}
+
+/* ICON STYLING (better visual weight) */
+.contactSection-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto;
+  z-index: 2;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+.contactSection-icon-email{
+    width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto;
+  z-index: 2;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+/* TEXT ABOVE OVERLAY */
+.contactSection-card > * {
+  z-index: 2;
+}
+
+/* HEADINGS */
+.contactSection-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* MOTION ON HOVER */
+.contactSection-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
 }

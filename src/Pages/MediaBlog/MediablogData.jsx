@@ -111,7 +111,7 @@ function MediablogData() {
     const handlePageChange = (pageNumber) => setCurrentPage(pageNumber)
     return (
         <div className='captital-campus-content-sec my-4'>
-            <p>Welcome to SP Jain Global Blogs – where the heart of our community comes alive through inspiring stories, industry insights, and first-hand experiences. From expert perspectives to real-life journeys, this is your space to explore, connect, and feel at home in a world of ideas and inspiration.</p>
+            <p>Welcome to UCU Blogs – where the heart of our community comes alive through inspiring stories, industry insights, and first-hand experiences. From expert perspectives to real-life journeys, this is your space to explore, connect, and feel at home in a world of ideas and inspiration.</p>
             <div
                 data-aos="fade-down"
                 className="rounded d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-md-start text-lg-center p-3 px-lg-3"
@@ -120,7 +120,7 @@ function MediablogData() {
                 }}
             >
                 <div className="w-100 w-lg-75 w-md-50" data-aos="fade-right">
-                    <Form className='col-12'>
+                    <Form className='col-lg-6'>
                         <div className='d-flex flex-row gap-5 align-items-center'>
                             <Form.Label className='text-white text-start fs-5'>Categories</Form.Label>
                             <Form.Select
@@ -137,7 +137,7 @@ function MediablogData() {
                 </div>
             </div>
 
-            <Container className="my-4">
+            <Container className="my-4 p-0">
                 <Row className="g-4">
                     {currentData.length > 0 ? (
                         currentData.map((item, index) => (
@@ -150,12 +150,12 @@ function MediablogData() {
                                         <img
                                             src={item.image}
                                             alt={item.head}
-                                            className="img-fluid w-100 object-fit-cover"
+                                            className="img-fluid w-100 object-fit-cover ucu-event-page-image"
                                             style={{ height: '100%' }}
                                         />
                                     </div>
 
-                                    <div className={`card-body d-flex flex-column justify-content-between ${index === 0 ? '' : 'p-3'}`}>
+                                    <div className={`p-lg-3 p-md-3 py-3 d-flex flex-column justify-content-between ${index === 0 ? '' : 'p-lg-3 p-md-3 py-3'}`}>
                                         <div>
                                             <div className="d-flex align-items-center mb-2 text-white">
                                                 <Calendar1Icon size={index === 0 ? 18 : 14} className="me-2" />
@@ -184,7 +184,7 @@ function MediablogData() {
                                         </div>
                                         <Button
                                             size={index === 0 ? 'md' : 'sm'}
-                                            className="align-self-start border-0"
+                                            className="align-self-start border-0 mt-3"
                                             style={{ backgroundColor: "#5ac501" }}
                                             onClick={() => navigate(item.head)}
                                         >

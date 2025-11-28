@@ -289,7 +289,7 @@ align-items: center;
   .bg-chro,
   .bg-cfo,
   .bg-cpo{
-    min-height: 40vh;
+    min-height: 30vh;
   }
 }
 

@@ -166,11 +166,11 @@ function ContactUsCarouselInternational() {
     const navigate = useNavigate()
     return (
         <div className="captital-campus-content-sec mt-5">
-            <h1 className="mb-4">International Chapters</h1>
+            <h1 className="mb-4 display-5 fw-bold"><span style={{ color: "#5ac501" }}>International </span> Chapters</h1>
             <div className="row row-gap-5 align-items-stretch justify-content-center flex-lg-row flex-column">
 
                 {/* LEFT - SWIPER */}
-                <div className="col-lg-7">
+                <div className="col-lg-7 contact-us-swiper-div">
                     <Swiper
                         modules={[Autoplay]}
                         slidesPerView={3}
@@ -179,7 +179,8 @@ function ContactUsCarouselInternational() {
                         speed={1200}
                         autoplay={{
                             delay: 2000,
-                            disableOnInteraction: false
+                            disableOnInteraction: false,
+                            reverseDirection: true, 
                         }}
                         breakpoints={{
                             320: { slidesPerView: 1 },

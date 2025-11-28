@@ -85,9 +85,9 @@ function CPPIntroduction() {
             <CppMindMap />
           </div>
 
-          <div className="d-flex gap-4 py-4">
-            <div className="d-flex flex-column align-items-start w-50">
-              <p className="story-paragraph inline-block mx-0 mt-4">
+          <div className="d-flex flex-lg-row flex-column gap-lg-4 py-4">
+            <div className="d-flex flex-column align-items-start w-lg-50">
+              <p className="story-paragraph inline-block mx-0 mt-3">
                 <strong>Diverse program offerings including :</strong>
               </p>
               <ul>
@@ -111,8 +111,8 @@ function CPPIntroduction() {
                 </p>
               </ul>
             </div>
-            <div className="d-flex flex-column align-items-start w-50">
-              <p className="story-paragraph mt-4">
+            <div className="d-flex flex-column align-items-start w-lg-50">
+              <p className="story-paragraph text-start mx-0">
                 <strong>
                   Specializations in both traditional and emerging domains :</strong>
               </p>

@@ -26,7 +26,7 @@ function CorparateBanner() {
                     data-aos="fade-right"
                 >
                     {/* Dynamic Title */}
-                    <h1 className="fw-bold fs-1 fs-lg-1">Corporate Engagement</h1>
+                    <h1 className="fw-bold fs-1 fs-lg-1"><span style={{color:"#5ac501"}}>Corporate </span> Engagement</h1>
                 </div>
 
                 <div className='position-absolute bottom-0 left-0 d-flex align-items-center campus-route-bg py-3'>

@@ -712,10 +712,12 @@ XLRI, Jamshedpur`,
     sec2Para:
       "The Talent Advisory Council (TAC) is a distinguished panel of industry leaders, academic professionals, and organizational experts who collaborate with the university to shape strategies for talent development and career readiness. TAC focuses on identifying emerging skill requirements, enhancing curriculum relevance, and strengthening industry–academia partnerships. The council provides valuable guidance on internships, placements, and professional development opportunities, ensuring that students are well-prepared to excel in competitive global markets. By fostering innovation and aligning academic learning with real-world expectations, TAC plays a vital role in nurturing future-ready graduates.",
     staff: [
-      // { image :image1,
-      //   name :"Dr. M. Balaji (BALA)",
-      //   prof : "Founder, CU"
-      // },
+      { image :"https://media.licdn.com/dms/image/v2/D5603AQGPtVv6IueM8A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1726118821230?e=1765411200&v=beta&t=tW20a_SQGJqk6jsA9onaul4rztCECDZppm7rmRoSblc",
+        name :"Paul Arun ",
+        prof : "Chief of Staff / Senior Vice President – Guidance Tamil Nadu",
+        comText:"Guidance Tamil Nadu",
+        comLogo:"https://investingintamilnadu.com/DIGIGOV/themes/tnswp/images/homepage-images/header-section-images/gui-logo-black.png"
+      },
       // { image :image2,
       //   name :"Ritwick Banerjea",
       //   prof : "Student Mentorship & Welfare"
@@ -1159,7 +1161,7 @@ function Advisory() {
                   ) : null}
                 </div>
 
-                <div className="mt-3">
+                <div className="">
                   <p className="fs-5 mb-2 font-bold">{person.comText}</p>
                   <h4 className="fs-4 fw-bold text-uppercase mb-2">
                     {person.name}

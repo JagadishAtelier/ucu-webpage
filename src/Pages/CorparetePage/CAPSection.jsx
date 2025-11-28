@@ -57,8 +57,8 @@ const data = [
 function CAPSection() {
     return (
         <div className="captital-campus-content-sec mt-4">
-            <h1 className="text-center">Career Acceleration Program (CAP)</h1>
-            <p className="text-center">
+            <h1 className="text-center display-5 fw-bold">Career <span style={{color:"#5ac501"}}> Acceleration </span> Program <span style={{color:"#5ac501"}}>(CAP)</span></h1>
+            <p className="text-center pt">
                 Career Acceleration Program (CAP) is UCU’s signature industry
                 interaction series where CXOs, BU heads, and domain leaders engage
                 directly with students—sharing insights, career journeys, and sectoral

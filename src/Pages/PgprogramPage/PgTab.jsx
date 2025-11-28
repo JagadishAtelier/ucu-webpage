@@ -6,6 +6,7 @@ import Curriculum from "./pgTabs/Curriculum/Curriculum";
 import FeeStructure from "./pgTabs/FeeStructure/FeeStructure";
 import AdmissionsTab from "./pgTabs/AdmissionsTab/AdmissionsTab";
 import PlacementTab from "./pgTabs/PlacementTab/PlacementTab";
+import { ArrowUp } from "lucide-react";
 
 const TAB_LIST = [
   "Overview",
@@ -22,6 +23,13 @@ export default function PgTabs() {
   const navRef = useRef(null);
   const btnRefs = useRef({});
 
+
+    const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   // keep the active tab visible (center if possible)
   useEffect(() => {
     const btn = btnRefs.current[active];
@@ -129,12 +137,19 @@ useEffect(() => {
 
   return (
     <div className="pg-tabs-root">
+            <button
+        className="fixed-left-arrow-btn"
+        onClick={() => scrollTo("overview-section")}
+      >
+        <ArrowUp/>
+      </button>
       <nav className="pg-tabs-nav " role="tablist" aria-label="Page sections" ref={navRef}>
         {TAB_LIST.map((tab) => (
           <button
             key={tab}
             ref={(el) => (btnRefs.current[tab] = el)}
             role="tab"
+            id="overview-section"
             aria-selected={active === tab}
             aria-controls={`panel-${tab.replace(/\s+/g, "-").toLowerCase()}`}
             className={`pg-tab-btn ${active === tab ? "pg-tab-btn--active" : ""}`}

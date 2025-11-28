@@ -85,7 +85,7 @@ function Industry() {
         slidesPerView={3}
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 2500,
+          delay: 2500000,
           disableOnInteraction: false,
         }}
         loop={true}

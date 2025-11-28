@@ -67,10 +67,35 @@
     object-fit: cover;
     opacity: 0.6;
 }
-.consortium-number-image-div{
+.consortium-number-image-div {
+    position: relative;
     height: 100%;
     width: 50%;
+    background-image: url(https://cgsm.org/wp-content/uploads/2023/12/52973348930_ea9a52cd24_o-3-resized-min.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: visible;
 }
+
+/* DARK OVERLAY */
+.consortium-number-image-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);  /* control overlay darkness */
+    z-index: 1;
+}
+
+/* Ensure content stays above overlay */
+.consortium-number-image-div > * {
+    position: relative;
+    z-index: 2;
+}
+
 .consortium-number-div-left{
     width: 50%;
     height: 100%;
@@ -94,9 +119,9 @@
     border-left: 10px solid #5ac501;
 }
 .consortium-numberr-grid{
-    position: absolute;
+    /* position: absolute;
     top: 15%;
-    left: 0;
+    left: 0; */
 }
 .consortium-leader-image{
     height: 40vh;
@@ -156,7 +181,8 @@
         margin-top: 7%;
     }
     .consortium-number-div{
-        flex-direction: column;
+        flex-direction: column-reverse;
+        height: auto;
     }
     .consortium-number-div-left{
         width: 100%;
@@ -164,19 +190,13 @@
     }
     .consortium-number-image-div{
         width: 100%;
-    }
-    .consortium-numberr-grid{
-        left: 10%;
-        top: 7%;
+        padding: 20px;
     }
     .consortium-number-container{
-        width: 46%;
+        width: 49%;
     }
     .consortium-number-image{
         height: 90%;
-    }
-    .consortium-leader-container{
-        margin-top: 48% !important;
     }
     .consortium-strategic-container{
         height: fit-content;
@@ -184,7 +204,9 @@
 }
 @media (max-width:480px) {
     .consortium-leader-image{
-        height: 35vh;
+        height: 30vh;
+        width: 70%;
+        margin: auto;
     }
     .consortium-founder-image{
         position: relative;
@@ -199,11 +221,8 @@
         height: auto;
         gap: 10px;
     }
-    .consortium-leader-container{
-        margin-top: 100% !important;
-    }
     .consortium-number-container{
-        width: 45%;
+        width: 48%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -211,18 +230,21 @@
     .consortium-number-image{
         height: 75vh;
     }
-    .consortium-numberr-grid{
-        top: 0;
-        left: 8%;
+    .consortium-number-image-div{
+        padding: 20px;
     }
-}
-@media (max-width:380px) {
-        .consortium-leader-container{
-        margin-top: 120% !important;
+    .consortium-number-div{
+        height: auto;
+        flex-direction: column-reverse;
     }
-}
-@media (max-width:320px) {
-        .consortium-leader-container{
-        margin-top: 140% !important;
+    .consortium-pillar-image{
+        height: 30vh;
+        width: 100%;
+        object-fit: cover;
+    }
+    .consortium-pillars-container{
+        width: 95%;
+        margin: auto;
+        border-radius: 10px;
     }
 }

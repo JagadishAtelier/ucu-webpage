@@ -81,7 +81,7 @@ function Events() {
                 </button>
               ))}
             </div>
-            <a href="/" className="event-view-all-a-tag">
+            <a href="/open-programs" className="event-view-all-a-tag">
               View all
             </a>
           </div>

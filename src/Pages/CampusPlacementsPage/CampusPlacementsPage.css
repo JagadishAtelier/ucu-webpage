@@ -307,11 +307,68 @@
   .Cpp-full-card {
     width: 100%;
   }
+    .Cpp-req-sidebar{
+    padding: 0 10px;
+  }
+    .founder-section{
+    padding: 1rem;
+    gap: 2rem;
+    border-radius: 10px;
+  }
+  .founder-name{
+    font-size: 1.8rem;
+  }
+  .founder-content{
+    margin: 0;
+  }
+  .cpp-mindmap-container{
+    flex-direction: column;
+    height: auto;
+  }
+  .cpp-mindmap-vertical-line{
+    display: none;
+  }
+  .cpp-mindmap-cards-container{
+    gap: 15px;
+  }
+  .cpp-mindmap-left-image{
+    height: 50vh;
+  }
+  .Cpp-req-sidebar{
+    padding: 0 10px;
+  }
 }
 
 @media (max-width: 480px) {
   .Cpp-full-row {
     grid-template-columns: repeat(1, 1fr);
     padding: 0 5%;
+  }
+  .founder-section{
+    padding: 1rem;
+    gap: 2rem;
+    border-radius: 10px;
+  }
+  .founder-name{
+    font-size: 1.8rem;
+  }
+  .founder-content{
+    margin: 0;
+  }
+  .cpp-mindmap-container{
+    flex-direction: column;
+    height: auto;
+  }
+  .cpp-mindmap-vertical-line{
+    display: none;
+  }
+  .cpp-mindmap-cards-container{
+    gap: 15px;
+  }
+  .cpp-mindmap-left-image{
+    height: 30vh;
+  }
+  .Cpp-req-sidebar{
+    padding: 0 10px;
   }
 }

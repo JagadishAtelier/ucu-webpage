@@ -78,10 +78,13 @@
 .captital-campus-content-sec{
     padding: 0 8%;
 }
-.campus-choose-data-image{
+.campus-choose-data-image {
     width: 60px;
     height: 60px;
+    filter: brightness(0) saturate(100%) invert(28%) sepia(87%) saturate(2000%) hue-rotate(210deg) brightness(95%) contrast(90%);
 }
+
+
 .campus-choose-item {
     padding-bottom: 2%; /* space for the line */
     border-bottom: 1px solid #ccc; /* vertical line */
@@ -307,5 +310,14 @@ height: 30vh;
   padding-top: 20px;
   padding-bottom: 20px;
   height: auto;
+}
+.campus-faculity-image-div{
+  height: 30vh;
+}
+.campus-faculity-image{
+  height: 30vh;
+}
+.campus-map-wrapper{
+  height: 30vh;
 }
 }

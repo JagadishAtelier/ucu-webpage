@@ -57,8 +57,8 @@ const data = [
 function CTCASection() {
     return (
         <div className="captital-campus-content-sec mt-5">
-            <h1 className="text-center">Career Transformation 2 Career Acceleration (CT2CA)</h1>
-            <p className="text-center">
+            <h1 className="text-center display-5 fw-bold">Career <span style={{color:"#5ac501"}}>Transformation</span> 2 Career <span style={{color:"#5ac501"}}>Acceleration (CT2CA)</span></h1>
+            <p className="text-center pt">
                 CT2CA is UCU’s career advancement track for professionals seeking strategic elevation. Through masterclasses, leadership dialogues, and domain-deepening modules, it empowers experienced learners to pivot, accelerate, or reinvent their careers in high-growth sectors.
                 Then have a section to add photos + industry leader’s names
 

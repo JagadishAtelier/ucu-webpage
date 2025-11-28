@@ -18,7 +18,7 @@ const data = [
 function CampusGateway() {
   return (
     <div className="captital-campus-content-sec">
-        <h1 className=" mb-3">Chennai: Gateway to opportunity</h1>
+        <h1 className=" mb-3 display-5 fw-bold">Chennai: <span style={{color:"#5ac501"}}>Gateway to opportunity</span></h1>
       <div className="campus-gateway-slider-container">
         {/* Custom Navigation Buttons */}
         <div className="swiper-button-prev custom-prev">
