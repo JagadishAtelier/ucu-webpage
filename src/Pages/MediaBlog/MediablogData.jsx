@@ -114,13 +114,15 @@ function MediablogData() {
             <p>Welcome to UCU Blogs – where the heart of our community comes alive through inspiring stories, industry insights, and first-hand experiences. From expert perspectives to real-life journeys, this is your space to explore, connect, and feel at home in a world of ideas and inspiration.</p>
             <div
                 data-aos="fade-down"
-                className="rounded d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start  text-center text-md-start text-lg-center p-3 px-lg-3"
+                className="rounded d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start  text-center text-md-start text-lg-center p-3 px-lg-3 w-50"
                 style={{
-                    backgroundColor:"#081672ff"
+                    backgroundColor:"#081672ff",
+                    marginLeft:'auto',
+                    marginRight:'auto',
                 }}
             >
-                <div className="w-100 w-lg-75 w-md-50" data-aos="fade-right">
-                    <Form className='col-lg-6'>
+                <div className="w-100 w-lg-100 w-md-100" data-aos="fade-right">
+                    <Form className='col-lg-12'>
                         <div className='d-flex flex-row gap-5 align-items-center'>
                             <Form.Label className='text-start fs-5 text-white  '>Categories</Form.Label>
                             <Form.Select
