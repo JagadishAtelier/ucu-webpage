@@ -154,11 +154,7 @@ const cities = [
         img: "https://img.freepik.com/free-photo/table-mountain-cape-town-south-africa_181624-38822.jpg?w=740"
     },
     
-    {
-        title: "Pune",
-        img: "https://img.freepik.com/premium-photo/tourist-enjoying-architectural-wonder-anand-sagar-shri-saint-gajanan-maharaj-sansthan-anand-sagar-is-tourist-attraction-place-shegaon-maharashtra-india_136354-12665.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
-    },
-
+   
 ];
 
 
@@ -166,7 +162,7 @@ function ContactUsCarouselInternational() {
     const navigate = useNavigate()
     return (
         <div className="captital-campus-content-sec mt-5">
-            <h1 className="mb-4 display-5 fw-bold"><span style={{ color: "#5ac501" }}>International </span> Chapters</h1>
+            <h1 className="mb-4 display-5 fw-bold"><span style={{ color: "#5ac501" }}>International </span> Centers</h1>
             <div className="row row-gap-5 align-items-stretch justify-content-center flex-lg-row flex-column">
 
                 {/* LEFT - SWIPER */}

@@ -91,6 +91,17 @@ const cities = [
         },
         img: "https://img.freepik.com/free-photo/parinirvana-stupa-temple-kushinagar-india_554837-289.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
     },
+    {
+        title: "Pune ",
+        poc: {
+            name: "Rahul Sharma",
+            contact: "+91 9876543210",
+            email: "agra@example.com"
+        },
+        img: "https://img.freepik.com/premium-photo/tourist-enjoying-architectural-wonder-anand-sagar-shri-saint-gajanan-maharaj-sansthan-anand-sagar-is-tourist-attraction-place-shegaon-maharashtra-india_136354-12665.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+    },
+     
+
 ];
 
 function ContactChapterGrid() {

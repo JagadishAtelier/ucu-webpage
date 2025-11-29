@@ -17,6 +17,7 @@ function ContactPageForm() {
     { name: "I am Preparing for Competitive Exams" },
     { name: "I am Looking for Admission" },
     { name: "I am a Parent / Guardian" },
+    { name: "I am a UCU Alumin" },
     { name: "Other" }
   ];
 

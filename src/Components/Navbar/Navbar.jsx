@@ -183,7 +183,7 @@ const Navbar = () => {
             </div>
             <p
               className="fs-6 mb-0 position-absolute logo-text-under"
-              style={{ color: "#07baf3",bottom: "0.2rem" }}
+              style={{ color: "#1703a9",bottom: "0.2rem" }}
             >
               Business School
             </p>
@@ -357,12 +357,12 @@ const Navbar = () => {
                             style={{
                               display: hoverMenus[menu.label]
                                 ? "block"
-                                : "none",
+                                : "block",
                             }}
                           >
                             <div className="d-flex gap-5 align-items-center">
                               <div className="col-4">
-                                <p className="fs-5 campus-text-right">
+                                <p className="fs-6 campus-text-right">
                                   “UCU is redefining the future of talent—rooted
                                   in India’s heartland, yet engineered for
                                   global impact. Its industry-first,
@@ -371,10 +371,10 @@ const Navbar = () => {
                                   and industry leaders who mentor indigenous
                                   students into globally agile professionals.”
                                 </p>
-                                <p className="text-end campus-text-right-name">
+                                <p className="text-end fs-5 fw-bold mb-0 campus-text-right-name">
                                   Ganesan Ramachandran
                                 </p>
-                                <p className="text-end campus-text-right-name">
+                                <p className="text-end campus-text-right-name" style={{fontSize:'12px'}}>
                                   Managing Director, Accenture Strategy &
                                   Consulting
                                 </p>
@@ -397,6 +397,7 @@ const Navbar = () => {
                                       >
                                         <span>{item.label}</span>
                                       </Link>
+                                      <p style={{fontSize:'13px',color:'#333'}}> {item.description} </p>
                                     </div>
                                   ))}
                                 </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutPhil.css";
-import bgImage from "../../../Assets/aboutPageImage/vision_mission_bg1.png";
+import bgImage from "../../../Assets/aboutPageImage/vision_mission_bg2.png";
 import iconVision from "../../../Assets/aboutPageImage/vision.svg"; // replace with actual icon
 import iconMission from "../../../Assets/aboutPageImage/mission.svg"; // replace with actual icon
 import visionImage from "../../../Assets/aboutPageImage/vision_image1.jpg"; // new image for vision
@@ -55,7 +55,7 @@ function AboutPhil() {
   return (
     <div
       data-aos="fade-up"
-      className="aboutphil-container text-white p-3 p-lg-5"
+      className="aboutphil-container text-white "
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundPosition: "center",
@@ -64,6 +64,13 @@ function AboutPhil() {
         minHeight: "60vh",
       }}
     >
+      <div 
+        className="w-100 h-100 p-3 p-lg-5" 
+        style={{ 
+          backgroundColor: 'rgba(0, 0, 0, 0.58)', // Adjust the '0.4' value to control opacity
+          padding: '1px' // Add a small padding to ensure the overlay takes effect
+        }}
+      >
       <div className="row w-lg-100 py-4 py-lg-0 justify-content-center">
         {data.map((item, index) => (
           <div
@@ -105,6 +112,7 @@ function AboutPhil() {
             )}
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

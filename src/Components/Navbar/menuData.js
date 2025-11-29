@@ -369,16 +369,36 @@ export const menuData = [
   },
 
   {
-    label: "Campus Placements",
-    placement: "bottom",
-    specialDropdown: "campusDropdown",
-    submenu: [
-      { label: "Campus Placement", link: "/placements/Campus-Placement",image:"https://img.freepik.com/free-photo/focus-indian-boy-who-standing-sepately-group-international-students-standing-together-park-university_1157-50077.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-      { label: "Explore Talent", link: "/explore-talent",image:"https://img.freepik.com/premium-photo/pretty-brunette-holding-binoculars_13339-118544.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-      { label: "Corporate Engagement", link: "/engagement/cap",image:"https://img.freepik.com/free-photo/cheerful-overjoyed-business-people-conference-room-celerating-diverse-colleagues-with-new-opportunity-enjoing-victory-meeting-broadroom-office_482257-5101.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-      { label: "Testimonials", link: "/placements/Testimonials",image:"https://img.freepik.com/premium-photo/happy-graduate-giving-thumbs-up_1152821-13729.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-    ],
-  },
+  label: "Campus Placements",
+  placement: "bottom",
+  specialDropdown: "campusDropdown",
+  submenu: [
+    {
+      label: "Campus Placement",
+      link: "/placements/Campus-Placement",
+      image: "https://img.freepik.com/free-photo/friendly-team-members-chatting-laughing-together-office-break_1163-4701.jpg?t=st=1764411900~exp=1764415500~hmac=dd8c5cc0b0e97035629767ed530ab96c16c7a47cd8b49021c052fab2689bc0a4&w=1060",
+      description: "Connect students with top industry roles and opportunities through our structured placement process.", // 13 words
+    },
+    {
+      label: "Explore Talent",
+      link: "/explore-talent",
+      image: "https://img.freepik.com/premium-photo/human-resources-hr-management-recruitment-employment-headhunting-concept_1294533-966.jpg?ga=GA1.1.216810021.1750942177&semt=ais_hybrid&w=740&q=80",
+      description: "Discover a diverse pool of highly skilled and career-ready graduates for your recruitment needs.", // 13 words
+    },
+    {
+      label: "Corporate Engagement",
+      link: "/engagement/cap",
+      image: "https://img.freepik.com/free-photo/corporate-businessman-giving-presentation-large-audience_53876-101865.jpg?t=st=1764411983~exp=1764415583~hmac=e2f5b1328916ad38e02481f5336bfe748bef7bd491e44104cdef0550d97b5cf0&w=1060",
+      description: "Build strategic partnerships with the university through workshops, internships, and industry projects.", // 13 words
+    },
+    {
+      label: "Testimonials",
+      link: "/placements/Testimonials",
+      image: "https://img.freepik.com/premium-photo/happy-graduate-giving-thumbs-up_1152821-13729.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
+      description: "Read success stories and firsthand accounts from students and corporate partners about their experience.", // 13 words
+    },
+  ],
+},
 ];
 export const menuDataMobile = [
   // 🔝 Top Menu

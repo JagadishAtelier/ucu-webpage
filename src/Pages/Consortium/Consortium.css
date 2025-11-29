@@ -43,6 +43,7 @@
     width: 25%;
     height: 60vh;
     object-fit: cover;
+    border-radius: 12px;
 }
 
 .consortium-founder-container {

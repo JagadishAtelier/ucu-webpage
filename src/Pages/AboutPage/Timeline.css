@@ -55,7 +55,6 @@
   width: 100%;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-carousel .image-auto img {
@@ -72,6 +71,8 @@
   margin-bottom: 1rem;
   width: 95%;
   margin-left: 0.5rem;
+  border-radius: 12px;
+  box-shadow: -1px 4px 10px #00000023;
 }
 /* .timeline-row.reverse{
   align-items: flex-start !important;
@@ -258,3 +259,4 @@
   position: relative;
   z-index: 2;
 }
+

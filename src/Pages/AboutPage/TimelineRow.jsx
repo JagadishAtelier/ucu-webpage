@@ -1,33 +1,61 @@
 import React from "react";
-import { Row, Col, Carousel } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
-const TimelineRow = ({ title, description, images = [], reverse }) => {
+import "swiper/css";
+
+const TimelineRow = ({ title, description, images = [], images1 = [], reverse }) => {
   return (
-    <Row className={`timeline-row ${reverse ? "reverse" : ""} active `}>
+    <Row className={`timeline-row ${reverse ? "reverse" : ""} active`}>
       <div className="timeline-point"></div>
 
       <Col md={6} className="image">
+
+        {/* MAIN SLIDER */}
         {images.length > 0 && (
-          <Carousel
-            indicators={false}
-            controls={false}
-            interval={3000}
-            pause={false}
-            className="timeline-carousel"
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            loop={true}
+            allowTouchMove={false}
+            speed={1200}  
+            className="timeline-carousel mb-3"
           >
             {images.map((imgSrc, idx) => (
-              <Carousel.Item key={idx}>
+              <SwiperSlide key={idx}>
                 <div className="image-auto">
                   <img src={imgSrc} alt={`${title} ${idx + 1}`} />
                 </div>
-              </Carousel.Item>
+              </SwiperSlide>
             ))}
-          </Carousel>
+          </Swiper>
         )}
+
+        {/* SECOND SLIDER — reverse direction */}
+        {images1.length > 0 && (
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{ delay: 3000, reverseDirection: true, disableOnInteraction: false }}
+            loop={true}
+            allowTouchMove={false}
+            speed={1200}  
+            className="timeline-carousel"
+          >
+            {images1.map((imgSrc, idx) => (
+              <SwiperSlide key={idx}>
+                <div className="image-auto">
+                  <img src={imgSrc} alt={`${title} extra ${idx + 1}`} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
+
       </Col>
 
       <Col md={6} className="content">
-        <h3 dangerouslySetInnerHTML={{ __html: title }}></h3>
+        <h3 dangerouslySetInnerHTML={{ __html: title }} />
         <p dangerouslySetInnerHTML={{ __html: description }} />
       </Col>
     </Row>
