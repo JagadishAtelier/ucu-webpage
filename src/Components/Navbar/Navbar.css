@@ -7,7 +7,7 @@
 }
 
 .top-bar a {
-  color: #45007e;
+  color: #fff;
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 1px;
@@ -18,7 +18,7 @@
 
 .top-bar a:hover {
   text-decoration: underline;
-  color: #7514c4;
+  color: #fefefe;
 }
 
 .navbar {
@@ -36,7 +36,7 @@
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #45007e !important;
+  color: #fff !important;
   position: relative;
   padding: 15px 15px;
 }
@@ -48,7 +48,7 @@
   left: 0;
   height: 2px;
   width: 0;
-  background: #1703a9;
+  background: #74e974;
   transition: width 0.3s ease;
 }
 
@@ -522,7 +522,7 @@ button {
   padding: 0 35px 0px 20px;
   background-color: white;
   border-radius: 0 100px 100px 0;
-  box-shadow: 10px 1px 10px #acaf003a;
+  box-shadow: 10px 1px 10px #000caf3a;
   height: 140px;
   width: fit-content;
 }
@@ -905,7 +905,7 @@ li:hover .career-reboot-heading {
 }
 
 .bg-gradient{
-  background: linear-gradient(to right, #ffffff, #d8f6c2) !important;
+  background: linear-gradient(to right, #5de0e6, #004aad) !important;
 }
 .top-bar .dropdown-menu .dropdown-menu-col ul li a:hover {
   font-size: 0.75rem !important;
