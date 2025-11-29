@@ -1244,7 +1244,7 @@ li:hover .career-reboot-heading {
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .navbar-nav .nav-link {
-    font-size: 8.5px !important;
+    font-size: 6.5px !important;
     padding-left: 0px !important;
     padding-right: 10px !important;
   }
@@ -1253,7 +1253,7 @@ li:hover .career-reboot-heading {
   }
 
   .online-program-link {
-    padding: 0.5rem 0.2rem !important;
+    padding: 0.5rem 0.7rem !important;
     font-size: 0.3rem !important;
   }
   .top-bar a {
@@ -1371,7 +1371,7 @@ li:hover .career-reboot-heading {
     padding: 0 0 !important;
 }
   .online-program-link {
-    padding: 0.5rem 0.2rem !important;
+    padding: 0.5rem 0.7rem !important;
     font-size: 0.3rem !important;
   }
   .top-bar a {
