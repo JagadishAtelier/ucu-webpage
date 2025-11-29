@@ -114,20 +114,21 @@ function MediablogData() {
             <p>Welcome to UCU Blogs – where the heart of our community comes alive through inspiring stories, industry insights, and first-hand experiences. From expert perspectives to real-life journeys, this is your space to explore, connect, and feel at home in a world of ideas and inspiration.</p>
             <div
                 data-aos="fade-down"
-                className="rounded d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-md-start text-lg-center p-3 px-lg-3"
+                className="rounded d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start  text-center text-md-start text-lg-center p-3 px-lg-3"
                 style={{
-                    backgroundColor:"#040928"
+                    backgroundColor:"#081672ff"
                 }}
             >
                 <div className="w-100 w-lg-75 w-md-50" data-aos="fade-right">
                     <Form className='col-lg-6'>
                         <div className='d-flex flex-row gap-5 align-items-center'>
-                            <Form.Label className='text-white text-start fs-5'>Categories</Form.Label>
+                            <Form.Label className='text-start fs-5 text-white  '>Categories</Form.Label>
                             <Form.Select
                                 value={selectedTopic}
                                 onChange={(e) => { setSelectedTopic(e.target.value); setCurrentPage(1) }}
                             >
-                                <option value="">Please Select Category</option>
+                                <option value="" disabled>Please Select Category</option>
+                                <option value="" >All Blogs</option>
                                 {uniqueTopics.map((topic, idx) => (
                                     <option key={idx} value={topic}>{topic}</option>
                                 ))}
@@ -143,7 +144,7 @@ function MediablogData() {
                         currentData.map((item, index) => (
                             <Col key={index} xs={12} md={12} lg={index === 0 ? 12 : 6} className="mx-auto">
                                 <div
-                                    className={`card shadow-sm d-flex overflow-hidden ucu-media-page-card border-0 ${index === 0 ? 'flex-row p-3 large-card' : 'flex-row small-card p-3'}`}
+                                    className={`card d-flex overflow-hidden ucu-media-page-card  ${index === 0 ? 'flex-row p-3 large-card' : 'flex-row small-card p-3'}`}
                                     style={{ height: index === 0 ? '320px' : '40vh' }}
                                 >
                                     <div style={{ flex: index === 0 ? '0 0 45%' : '0 0 35%', overflow: 'hidden' }}>
@@ -157,26 +158,26 @@ function MediablogData() {
 
                                     <div className={`p-lg-3 p-md-3 py-3 d-flex flex-column justify-content-between ${index === 0 ? '' : 'p-lg-3 p-md-3 py-3'}`}>
                                         <div>
-                                            <div className="d-flex align-items-center mb-2 text-white">
+                                            <div className="d-flex align-items-center mb-2 ">
                                                 <Calendar1Icon size={index === 0 ? 18 : 14} className="me-2" />
                                                 <small>{item.date}</small>
                                             </div>
                                             <h5
                                                 style={{ cursor: "pointer" }}
                                                 onClick={() => navigate(item.head)}
-                                                className={`card-title fw-semibold text-white ${index === 0 ? 'fs-5' : 'fs-6'}`}
+                                                className={`card-title fw-semibold  ${index === 0 ? 'fs-5' : 'fs-6'}`}
                                             >
                                                 {item.head}
                                             </h5>
                                             <p
-                                                className={`${index === 0 ? 'fs-6' : 'fs-7 text-white'}`}
+                                                className={`${index === 0 ? 'fs-6' : 'fs-7 '}`}
                                                 style={{ lineHeight: index === 0 ? '1.4' : '1.2' }}
                                             >
                                                 {item.content}
                                             </p>
                                             <a
                                                 href={item.link}
-                                                className="d-block mb-2 text-white"
+                                                className="d-block mb-2 "
                                                 style={{ fontSize: index === 0 ? '0.9rem' : '0.8rem' }}
                                             >
                                                 {item.topic}
@@ -195,7 +196,7 @@ function MediablogData() {
                             </Col>
                         ))
                     ) : (
-                        <p className="text-center text-white">No results found.</p>
+                        <p className="text-center ">No results found.</p>
                     )}
                 </Row>
 
