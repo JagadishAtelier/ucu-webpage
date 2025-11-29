@@ -154,18 +154,18 @@ function UCUEventPage1() {
                                     }`}
                             >
                                 <div>
-                                    <div className="d-flex align-items-center mb-2 text-white">
+                                    <div className="d-flex align-items-center mb-2 ">
                                         <Calendar1Icon size={index === 0 ? 18 : 14} className="me-2" />
                                         <small>{item.date}</small>
                                     </div>
                                     <h5 style={{ cursor: "pointer" }} onClick={() => navigate(`${item.head}`)}
-                                        className={`card-title  fw-semibold text-white lh-sm ${index === 0 ? 'fs-5' : 'fs-6'
+                                        className={`card-title  fw-semibold  lh-sm ${index === 0 ? 'fs-5' : 'fs-6'
                                             }`}
                                     >
                                         {item.head}
                                     </h5>
                                     <p
-                                        className={` ${index === 0 ? 'fs-6' : ' fsize-6 text-white'
+                                        className={` ${index === 0 ? 'fs-6' : ' fsize-6 '
                                             } mb-1 `}
                                         style={{ lineHeight: index === 0 ? '1.4' : '1.6' }}
                                     >
@@ -173,7 +173,7 @@ function UCUEventPage1() {
                                     </p>
                                     <a
                                         href={item.link}
-                                        className="d-block mb-1 text-white"
+                                        className="d-block mb-1 "
                                         style={{ fontSize: index === 0 ? '0.9rem' : '0.8rem', }}
                                     >
                                         {item.topic}

@@ -116,7 +116,7 @@ function UCUMepData() {
                 data-aos="fade-down"
                 className=" d-flex rounded flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-md-start text-lg-center p-3 px-lg-3"
                 style={{
-                    backgroundColor: "#040928"
+                    backgroundColor: "#081672ff"
                 }}
             >
                 <div className="w-100 w-lg-75 w-md-50" data-aos="fade-right">
@@ -170,26 +170,26 @@ function UCUMepData() {
 
                                     <div className={`p-lg-3 py-3 p-md-3 d-flex flex-column justify-content-between ${index === 0 ? '' : 'p-lg-3 py-3 p-md-3'}`}>
                                         <div>
-                                            <div className="d-flex align-items-center mb-2 text-white">
+                                            <div className="d-flex align-items-center mb-2 ">
                                                 <Calendar1Icon size={index === 0 ? 18 : 14} className="me-2" />
                                                 <small>{item.date}</small>
                                             </div>
                                             <h5
                                                 style={{ cursor: "pointer" }}
                                                 onClick={() => navigate(item.head)}
-                                                className={`card-title fw-semibold text-white ${index === 0 ? 'fs-5' : 'fs-6'}`}
+                                                className={`card-title fw-semibold  ${index === 0 ? 'fs-5' : 'fs-6'}`}
                                             >
                                                 {item.head}
                                             </h5>
                                             <p
-                                                className={`${index === 0 ? 'fs-6' : 'fs-7 text-white'}`}
+                                                className={`${index === 0 ? 'fs-6' : 'fs-7 '}`}
                                                 style={{ lineHeight: index === 0 ? '1.4' : '1.2' }}
                                             >
                                                 {item.content}
                                             </p>
                                             <a
                                                 href={item.link}
-                                                className="d-block mb-2 text-white"
+                                                className="d-block mb-2 "
                                                 style={{ fontSize: index === 0 ? '0.9rem' : '0.8rem' }}
                                             >
                                                 {item.topic}
@@ -208,7 +208,7 @@ function UCUMepData() {
                             </Col>
                         ))
                     ) : (
-                        <p className="text-center text-white">No results found.</p>
+                        <p className="text-center ">No results found.</p>
                     )}
                 </Row>
 
