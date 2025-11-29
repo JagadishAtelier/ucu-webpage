@@ -456,15 +456,15 @@ const Navbar = () => {
 
           {/* Mobile Buttons */}
           <div className="d-flex gap-2 mobile-right">
-            <Search className="icon " size={24} color="#333" />
+            <Search className="icon " size={24} color="#fff" />
             <User
               className="icon"
               size={24}
-              color="#333"
+              color="#fff"
               onClick={() => navigate("/auth/login")}
             />
             <button className="mobile-toggle" onClick={toggleMobile}>
-              {mobileOpen ? <X /> : <Menu />}
+              {mobileOpen ? <X color="#fff" /> : <Menu color="#fff" />}
             </button>
           </div>
         </div>
@@ -476,7 +476,7 @@ const Navbar = () => {
             <div className="drawer">
               <div className="drawer-header">
                 <Link
-                  className="navbar-brand d-flex align-items-center logo-box m-lg-0"
+                  className="navbar-brand d-flex align-items-center  m-lg-0"
                   to="/"
                 >
                   <div className="border-l border-white">

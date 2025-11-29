@@ -580,9 +580,12 @@ button {
   }
 
   .logo-box {
-    display: none;
-    width: auto;
-    height: 100%;
+        display: none;
+        width: auto;
+        padding-left: 5px;
+        /* padding-right: 4px; */
+        margin-right: 0;
+        height: 100px;
   }
 
   .logo-img {
@@ -595,7 +598,14 @@ button {
   }
 
   .logo {
-    height: 90px !important;
+    height: 80px !important;
+  }
+  .border-l{
+    height: 70px;
+  }
+  .logo-text-under{
+    font-size: 0.9rem !important;
+    left: 13%;
   }
 
   .logo-text span {
@@ -1159,7 +1169,7 @@ li:hover .career-reboot-heading {
     padding: 6px 3px;
   }
   .logo-box {
-    height: 100px;
+    height: 120px;
   }
   .dropdown-menu-col .top-head {
     font-size: 0.6rem !important;
@@ -1272,7 +1282,15 @@ li:hover .career-reboot-heading {
     padding: 6px 3px;
   }
   .logo-box {
-    height: 50px;
+    height: 100px;
+    padding-left: 10px;
+  }
+  .logo-text-under{
+    font-size: 0.8rem !important;
+    left: 15%;
+  }
+  .border-l {
+    height: 70px;
   }
   .dropdown-menu-col .top-head {
     font-size: 0.5rem !important;
@@ -1378,8 +1396,12 @@ li:hover .career-reboot-heading {
   .profile-icon-nab-bg {
     padding: 6px 3px;
   }
+  .logo-text-under{
+font-size: 0.8rem !important;
+    left: 20%;
+  }
   .logo-box {
-    height: 100px;
+    height: 120px;
   }
   .dropdown-menu-col .top-head {
     font-size: 0.5rem !important;
@@ -1470,6 +1492,7 @@ li:hover .career-reboot-heading {
 @media (min-width: 768px) {
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
+    gap: 0 !important;
   }
 }
 @media (min-width: 768px) {
