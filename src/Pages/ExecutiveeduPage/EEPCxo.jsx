@@ -76,7 +76,7 @@ function EEPCxo() {
             <p className='my-4 pt'>The Academy is not just about preparing leaders—it is about accelerating transformation. By combining academic rigor with corporate relevance, the CXO Leadership Academy @ UCU positions itself as the definitive destination for professionals ready to step into enterprise leadership and shape the future of business.</p>
             <h3 className='mb-4'>CXO Leadership Programs – UCU Chennai</h3>
             <div className="EEPCxo-responsive-table-wrapper">
-                <table className="EEPCxo-placement-table w-100 overflow-hidden">
+                <table className="EEPCxo-placement-table placement-table w-100 overflow-hidden">
                     <thead>
                         <tr>
                             <th>CXO Role</th>

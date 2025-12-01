@@ -481,3 +481,138 @@
     display: none;
   }
 }
+
+
+
+
+
+/* Wrapper */
+.eep-phd-wrapper {
+  padding: 20px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Title Section */
+.eep-phd-title-box {
+  border-left: 6px solid #5ac501;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+.eep-phd-title span {
+  color: #5ac501;
+  font-weight: 700;
+}
+
+/* Card */
+.eep-phd-card {
+  background: #f7fdf2;
+  border: 1px solid #d7f3c3;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.eep-phd-text {
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* Sections */
+.eep-phd-section {
+  background: #ffffff;
+  border: 1px solid #eee;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+.eep-phd-heading {
+  font-weight: 700;
+  color: #5ac501;
+  margin-bottom: 15px;
+}
+
+/* List */
+.eep-phd-list {
+  padding-left: 18px;
+}
+
+.eep-phd-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Timeline */
+.eep-phd-timeline {
+  position: relative;
+  padding-left: 25px;
+}
+
+.eep-phd-timeline li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.eep-phd-timeline li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #5ac501;
+  border-radius: 50%;
+  position: absolute;
+  left: -18px;
+  top: 6px;
+}
+
+.eep-phd-timeline::before {
+  content: "";
+  position: absolute;
+  left: -13px;
+  top: 5px;
+  height: 100%;
+  width: 2px;
+  background: #5ac50130;
+}
+
+/* CTA */
+.eep-phd-cta {
+  padding: 20px;
+  border-radius: 12px;
+  background: #f0ffe8;
+  border: 1px solid #c8efb4;
+  text-align: left;
+}
+
+.eep-phd-btn-group {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.eep-phd-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #5ac501;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+.eep-phd-btn:hover {
+  background: #4ca300;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
