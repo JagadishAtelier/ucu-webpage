@@ -38,7 +38,7 @@ function FixedSideBar() {
             className="sidebarItem"
             onClick={item.action ? item.action : undefined}
           >
-            <span className="sidebarIcon">{item.icon}</span>
+            <span className="sidebarIcon animatedIcon">{item.icon}</span>
             <span className="sidebarLabel">{item.label}</span>
           </a>
         ))}
