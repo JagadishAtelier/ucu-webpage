@@ -4,6 +4,8 @@ import { Calendar1, ChevronRight } from 'lucide-react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Button } from "react-bootstrap";
+import XELEnterprise from "./XELEnterprise";
+import EEPCxo from "./EEPCxo";
 const bannerImages = [
     'https://img.freepik.com/premium-photo/corporate-business-people-working-busy-marketing-office-space-planning-strategy-books-reading-email-laptop-work_146105-104477.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80',
     'https://img.freepik.com/premium-photo/young-indian-businesswoman-blue-suit-giving-thumbs-up-with-one-hand-holding-documents-standing-office-other-people-background_872074-31460.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80',
@@ -24,8 +26,8 @@ const TAB_LIST = [
 
 const TAB_COMPONENTS = [
     <ProgramsForIndividualsBanner />, // Individuals Professional
-    <div>XEL Enterprise Program Content</div>, // XEL Enterprise Program
-    <div>CXO Academy Content</div>, // CXO Academy
+    <XELEnterprise />,
+    <EEPCxo/>,
     <div>Executive PhD Content</div>, // Executive phD
     <div>Academic Accelerator Content</div>, // Academic Accelerator
     <div>Leadership Coach Academy Content</div>, // Leadership Coach Academy
@@ -34,6 +36,28 @@ const TAB_COMPONENTS = [
     <div>XEL Contact Content</div>, // XEL Contact
 ];
 
+const BANNER_HEADINGS = [
+    "Individuals Professional",
+    "XEL Enterprise Program",
+    " UCU CXO Leadership Academy",
+    "Executive phD",
+    "Academic Accelerator",
+    "Leadership Coach Academy",
+    "Executive pg Certificate",
+    "MDPs",
+    "XEL Contact"
+];
+const BANNER_DESCRIPTIONS = [
+    "",
+    "",
+    "Where Leaders Become Visionaries",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+];
 
 function ExecutiveEducationTabs() {
     const [activeTab, setActiveTab] = useState(0);
@@ -81,7 +105,16 @@ function ExecutiveEducationTabs() {
                             }}
                         >
                             <div className="w-100 w-lg-75 w-lg-50 ms-lg-5">
-                                <h1 className="fw-bold fs-1 fs-lg-1">Executive Programs</h1>
+                                <h1 className="fw-bold fs-1 fs-lg-1">
+                                    {BANNER_HEADINGS[activeTab]}
+                                </h1>
+                                {BANNER_DESCRIPTIONS[activeTab] && (
+                                    <p className="mt-2 mb-3 fs-5">
+                                        {BANNER_DESCRIPTIONS[activeTab]}
+                                    </p>
+                                )}
+
+
                                 <div className='d-flex gap-2'>
                                     <Calendar1 />
                                     <p>Nov 10,2025</p>

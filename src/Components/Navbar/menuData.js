@@ -226,7 +226,7 @@ export const menuData = [
             customHover: false,
           },
           {
-            label: "Industry Sector",
+            label: "Executive & Advanced Executive PG Certificate Programs",
             className: "sublink-custom",
             customHover: false,
             submenu: [

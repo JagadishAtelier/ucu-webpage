@@ -235,12 +235,15 @@
 .eep-tab-item {
   flex: 1;
   text-align: center;
-  padding: 10px 0;
+  padding: 10px 5px;
   cursor: pointer;
   font-weight: 500;
   font-size: 13px;
   color: hsl(0, 0%, 33%);
   transition: all 0.3s ease;
+  min-width: max-content;
+  white-space: nowrap;
+  border-right: 1px solid white;
 }
 
 .eep-tab-item:hover {
@@ -251,8 +254,6 @@
   color: #fff;
   font-weight: 500;
   background-color: #1535b4;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 
 .eep-tab-indicator {
@@ -264,4 +265,219 @@
   background:  #5ac501;
   border-radius: 4px 4px 0 0;
   transition: transform 0.3s ease;
+}
+
+
+
+
+/* Wrapper */
+.xel-wrapper {
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+  color: #1c1c1c;
+}
+
+/* Header Section */
+.xel-header {
+  text-align: center;
+  padding: 50px 20px;
+    background: linear-gradient(205deg, rgb(23, 3, 169) 1%, rgb(7, 186, 243) 100%);
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  margin-bottom: 40px;
+}
+
+.xel-header h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.xel-header h1 span {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
+.xel-header .sub {
+  font-size: 20px;
+  margin-top: -10px;
+  opacity: 0.85;
+}
+
+.xel-header .tagline {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 850px;
+  margin: auto;
+}
+
+/* About Section */
+.xel-about p {
+  font-size: 18px;
+  line-height: 1.7;
+  padding: 20px;
+  background: #f8f9fc;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+
+/* Section Heading */
+.xel-section {
+  margin-top: 50px;
+}
+
+.xel-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.xel-section h2::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #5ac501;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 3px;
+}
+
+/* Cards Grid */
+.xel-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.xel-card {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.xel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.xel-card svg {
+  font-size: 40px;
+  color: #005bd4;
+  margin-bottom: 12px;
+}
+
+/* Bullet List */
+.xel-bullet-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.xel-bullet-list li {
+  font-size: 18px;
+  padding: 12px 0;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.xel-bullet-list li::before {
+  content: "•";
+  color: #5ac501;
+  font-size: 26px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Alternate background */
+.alt-bg {
+  background: #f4f7ff;
+  padding: 30px;
+  border-radius: 18px;
+}
+.EEP-cxo-table-btn{
+  font-size: 12px;
+}
+
+
+
+
+/* Wrapper for mobile scroll */
+.EEPCxo-responsive-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Improve table layout */
+.EEPCxo-placement-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.EEPCxo-placement-table th,
+.EEPCxo-placement-table td {
+  padding: 12px 16px;
+  white-space: nowrap; /* prevents breaking */
+}
+
+.EEPCxo-placement-table thead {
+  background: #f3f3f3;
+}
+
+.EEPCxo-placement-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* On small screens add slight shadow */
+@media (max-width: 768px) {
+  .EEPCxo-placement-table {
+    min-width: 600px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .eep-tabs-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    padding: 5px 0;
+  }
+
+  .eep-tabs-container::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .eep-tabs-container::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 10px;
+  }
+
+  .eep-tab-item {
+    flex: none;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .eep-tab-indicator {
+    display: none;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .eep-tab-item {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+
+  .eep-tab-indicator {
+    display: none;
+  }
 }
