@@ -7,19 +7,22 @@ function ContactPageForm() {
   const [states, setStates] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("");
 
-  const describesYou = [
-    { name: "I am a School Student" },
-    { name: "I am a College Student" },
-    { name: "I am a University Student" },
-    { name: "I am a Research Scholar" },
-    { name: "I am a Professor / Lecturer" },
-    { name: "I am a Working Professional" },
-    { name: "I am Preparing for Competitive Exams" },
-    { name: "I am Looking for Admission" },
-    { name: "I am a Parent / Guardian" },
-    { name: "I am a UCU Alumin" },
-    { name: "Other" }
-  ];
+const describesYou = [
+  // { name: "I'm a student looking for an undergraduate course" },
+  // { name: "I want to pursue a Full-time Master's program and have a Work-exp of 0-3 years" },
+  // { name: "I want to pursue a Full-time Master's program and have a Work-exp of 3+ years" },
+  // { name: "I want to pursue a part-time Executive MBA - Online (via ELO) (Work Ex. > 3 Years)" },
+  // { name: "I want to pursue a Luxury Management Program" },
+  // { name: "I want to pursue a Full-time Master's program and have graduated from a quantitative discipline" },
+  { name: "I want to further my family business with education" },
+  // { name: "I want to be a Data Scientist" },
+  // { name: "I want to Join Financial Technology Program" },
+  // { name: "I want to do a Doctorate in Business Administration" },
+  { name: "I'm a parent of a future student and I'm looking for options" },
+  { name: "I'm an SP Jain Alumni and I'd love to keep in touch" },
+  { name: "I'm looking to recruit from the best business schools" }
+];
+
 
   // Fetch all countries with states
   useEffect(() => {
@@ -95,11 +98,10 @@ function ContactPageForm() {
       <div className="contactSection-icon-email">
         <MailOpen size={28} />
       </div>
-
+      <div className="d-flex flex-column justify-contnet-center align-items-center my-auto">
       <h3>Email</h3>
-      <p>Admissions : Admissions@gmail.com</p>
-      <p>Administration : Administration@gmail.com</p>
-      <p>Examinations : Examinations@gmail.com</p>
+      <p>University : ucu@gmail.com</p>
+      </div>
     </div>
 
     {/* Phone */}
@@ -115,11 +117,10 @@ function ContactPageForm() {
       <div className="contactSection-icon">
         <PhoneCall size={28} />
       </div>
-
+      <div className="d-flex flex-column justify-contnet-center align-items-center my-auto">
       <h3>Phone</h3>
-      <p>Admissions : 9876543210</p>
-      <p>Administration : 8765432109</p>
-      <p>Examinations : 7654321098</p>
+      <p>Office : 9876543210</p>
+      </div>
     </div>
 
   </div>

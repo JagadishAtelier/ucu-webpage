@@ -104,25 +104,32 @@ function ContactAccordion() {
                     <Accordion.Header>Founder’s Office</Accordion.Header>
                     <Accordion.Body>
                         <div>
-                            <h3>Bhishm Chugani </h3>
-                            <p className='fs-5'>Director – Career Services</p>
-                            <div className='d-flex gap-3'>
+                            <h3>Mumbai </h3>
+
+                            <div className='d-flex gap-3 my-3'>
                                 <PhoneCall style={{ color: "#5ac501" }} size={22} />
                                 <p className='mb-0 fw-bold'>9876543210</p>
                             </div>
-                            <div className='d-flex gap-3 mt-3'>
+                            <div className='d-flex gap-3 my-3'>
+                                <PhoneCall style={{ color: "#5ac501" }} size={22} />
+                                <p className='mb-0 fw-bold'>9876543210</p>
+                            </div>
+                            <div className='d-flex gap-3'>
                                 <MailOpen style={{ color: "#5ac501" }} size={22} />
                                 <p className='mb-0 fw-bold'>ucu@gmail.com</p>
                             </div>
                         </div>
                         <div className='mt-5'>
-                            <h3>Hema Sisodia  </h3>
-                            <p className='fs-5'>Deputy Director – External Relations & Career Services</p>
-                            <div className='d-flex gap-3'>
+                            <h3>Chennai  </h3>
+                            <div className='d-flex gap-3 my-3'>
                                 <PhoneCall style={{ color: "#5ac501" }} size={22} />
                                 <p className='mb-0 fw-bold'>9876543210</p>
                             </div>
-                            <div className='d-flex gap-3 mt-3'>
+                            <div className='d-flex gap-3 my-3'>
+                                <PhoneCall style={{ color: "#5ac501" }} size={22} />
+                                <p className='mb-0 fw-bold'>9876543210</p>
+                            </div>
+                            <div className='d-flex gap-3'>
                                 <MailOpen style={{ color: "#5ac501" }} size={22} />
                                 <p className='mb-0 fw-bold'>ucu@gmail.com</p>
                             </div>
@@ -202,25 +209,32 @@ function ContactAccordion() {
                     <Accordion.Header>Executive Education</Accordion.Header>
                     <Accordion.Body>
                         <div>
-                            <h3>Bhishm Chugani </h3>
-                            <p className='fs-5'>Director – Career Services</p>
-                            <div className='d-flex gap-3'>
+                            <h3>Mumbai </h3>
+
+                            <div className='d-flex gap-3 my-3'>
                                 <PhoneCall style={{ color: "#5ac501" }} size={22} />
                                 <p className='mb-0 fw-bold'>9876543210</p>
                             </div>
-                            <div className='d-flex gap-3 mt-3'>
+                            <div className='d-flex gap-3 my-3'>
+                                <PhoneCall style={{ color: "#5ac501" }} size={22} />
+                                <p className='mb-0 fw-bold'>9876543210</p>
+                            </div>
+                            <div className='d-flex gap-3'>
                                 <MailOpen style={{ color: "#5ac501" }} size={22} />
                                 <p className='mb-0 fw-bold'>ucu@gmail.com</p>
                             </div>
                         </div>
                         <div className='mt-5'>
-                            <h3>Hema Sisodia  </h3>
-                            <p className='fs-5'>Deputy Director – External Relations & Career Services</p>
-                            <div className='d-flex gap-3'>
+                            <h3>Chennai  </h3>
+                            <div className='d-flex gap-3 my-3'>
                                 <PhoneCall style={{ color: "#5ac501" }} size={22} />
                                 <p className='mb-0 fw-bold'>9876543210</p>
                             </div>
-                            <div className='d-flex gap-3 mt-3'>
+                            <div className='d-flex gap-3 my-3'>
+                                <PhoneCall style={{ color: "#5ac501" }} size={22} />
+                                <p className='mb-0 fw-bold'>9876543210</p>
+                            </div>
+                            <div className='d-flex gap-3'>
                                 <MailOpen style={{ color: "#5ac501" }} size={22} />
                                 <p className='mb-0 fw-bold'>ucu@gmail.com</p>
                             </div>
@@ -266,27 +280,17 @@ function ContactAccordion() {
                     <Accordion.Header>Alumni Relations</Accordion.Header>
                     <Accordion.Body>
                         <div>
-                            <h3>Bhishm Chugani </h3>
-                            <p className='fs-5'>Director – Career Services</p>
-                            <div className='d-flex gap-3'>
+                           <div className='d-flex gap-3 my-3'>
                                 <PhoneCall style={{ color: "#5ac501" }} size={22} />
                                 <p className='mb-0 fw-bold'>9876543210</p>
                             </div>
-                            <div className='d-flex gap-3 mt-3'>
-                                <MailOpen style={{ color: "#5ac501" }} size={22} />
-                                <p className='mb-0 fw-bold'>ucu@gmail.com</p>
-                            </div>
-                        </div>
-                        <div className='mt-5'>
-                            <h3>Hema Sisodia  </h3>
-                            <p className='fs-5'>Deputy Director – External Relations & Career Services</p>
-                            <div className='d-flex gap-3'>
+                            <div className='d-flex gap-3 my-3'>
                                 <PhoneCall style={{ color: "#5ac501" }} size={22} />
                                 <p className='mb-0 fw-bold'>9876543210</p>
                             </div>
-                            <div className='d-flex gap-3 mt-3'>
+                            <div className='d-flex gap-3'>
                                 <MailOpen style={{ color: "#5ac501" }} size={22} />
-                                <p className='mb-0 fw-bold'>ucu@gmail.com</p>
+                                <p className='mb-0 fw-bold'>alumni.adminucu@gmail.com</p>
                             </div>
                         </div>
                     </Accordion.Body>
