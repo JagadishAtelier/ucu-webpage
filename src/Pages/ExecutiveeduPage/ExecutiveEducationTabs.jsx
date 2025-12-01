@@ -7,6 +7,8 @@ import { Button } from "react-bootstrap";
 import XELEnterprise from "./XELEnterprise";
 import EEPCxo from "./EEPCxo";
 import EEPPhd from "./EEPPhd";
+import EEPMdps from "./EEPMdps";
+import { useNavigate } from "react-router-dom";
 const bannerImages = [
     'https://img.freepik.com/premium-photo/corporate-business-people-working-busy-marketing-office-space-planning-strategy-books-reading-email-laptop-work_146105-104477.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80',
     'https://img.freepik.com/premium-photo/young-indian-businesswoman-blue-suit-giving-thumbs-up-with-one-hand-holding-documents-standing-office-other-people-background_872074-31460.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80',
@@ -33,7 +35,7 @@ const TAB_COMPONENTS = [
     <div>Academic Accelerator Content</div>, // Academic Accelerator
     <div>Leadership Coach Academy Content</div>, // Leadership Coach Academy
     <div>Executive PG Certificate Content</div>, // Executive pg Certificate
-    <div>MDPs Content</div>, // MDPs
+    <EEPMdps/>, // MDPs
     <div>XEL Contact Content</div>, // XEL Contact
 ];
 
@@ -45,7 +47,7 @@ const BANNER_HEADINGS = [
     "Academic Accelerator",
     "Leadership Coach Academy",
     "Executive pg Certificate",
-    "MDPs",
+    "Management Development Programs",
     "XEL Contact"
 ];
 const BANNER_DESCRIPTIONS = [
@@ -56,13 +58,22 @@ const BANNER_DESCRIPTIONS = [
     "",
     "",
     "",
-    "",
+    " For Individual Professionals",
     "",
 ];
 
 function ExecutiveEducationTabs() {
     const [activeTab, setActiveTab] = useState(0);
+    const navigate = useNavigate()
+        const handleTabClick = (index) => {
+        // If XEL Contact tab (last one) clicked → navigate
+        if (index === 8) {
+            navigate("/contact-us");
+            return;
+        }
 
+        setActiveTab(index);
+    };
     return (
         <div>
             <div className="eep-tabs-container">
@@ -70,7 +81,7 @@ function ExecutiveEducationTabs() {
                     <div
                         key={index}
                         className={`eep-tab-item ${activeTab === index ? "active" : ""}`}
-                        onClick={() => setActiveTab(index)}
+                        onClick={() => handleTabClick(index)}
                     >
                         {tab}
                     </div>
