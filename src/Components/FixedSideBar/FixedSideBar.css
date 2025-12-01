@@ -1,0 +1,159 @@
+.fixedSidebar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 10vh;
+background: linear-gradient(135deg, #005bd4, #000000);
+  padding: 12px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px 0 0 8px;
+  z-index: 9999;
+  
+}
+
+.sidebarItem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color:white ;
+}
+
+.sidebarIcon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebarLabel {
+  font-size: 12px;
+}
+
+/* ===========================
+   Full Overlay
+=========================== */
+.proModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+  z-index: 10000;
+}
+
+/* ===========================
+   Modal Card
+=========================== */
+.proModalCard {
+  width: 450px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Top color bar */
+.proModalTopBar {
+  height: 8px;
+}
+
+/* Content */
+.proModalContent {
+  padding: 28px;
+}
+
+.proModalTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.proModalSubtitle {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #666;
+}
+
+/* Input Groups */
+.proInputGroup {
+  margin: 15px 0;
+}
+
+.proInputGroup label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.proInputGroup input,
+.proInputGroup textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1.5px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: 0.25s;
+}
+
+.proInputGroup input:focus,
+.proInputGroup textarea:focus {
+  border-color: #005bd4;
+}
+
+/* Submit Button */
+.proSubmitBtn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  background: linear-gradient(135deg, #005bd4, #5ac501);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.proSubmitBtn:hover {
+  opacity: 0.9;
+}
+
+/* Close btn */
+.proCloseBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+

@@ -58,6 +58,7 @@ import TalentPage from "./Pages/TalentPage/TalentPage";
 import TalentNavigationPage from "./Pages/TalentPage/TalentNavigationPage";
 import BlogPageBanner from "./Pages/BlogPage/BlogPageBanner";
 import ProgramsForIndividualsBanner from "./Pages/ProgramsForIndividuals/ProgramsForIndividualsBanner";
+import FixedSideBar from "./Components/FixedSideBar/FixedSideBar";
 
 function App() {
   useEffect(() => {
@@ -119,7 +120,8 @@ function App() {
         <Route path="/programs-for-individuals" element={<ProgramsForIndividualsBanner/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
-      <WhatsAppButton/>
+      <FixedSideBar/>
+      {/* <WhatsAppButton/> */}
       </ModalProvider>
     </Router>
   );
