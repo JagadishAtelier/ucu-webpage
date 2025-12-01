@@ -15,6 +15,7 @@ import EEPUpcomming from './EEPUpcomming'
 import EEPAdvantage from './EEPAdvantage'
 import EEPImpact from './EEPImpact'
 import EEPRanking from './EEPRanking'
+import ExecutiveEducationTabs from './ExecutiveEducationTabs'
 
 function EEPHome() {
   const bannerImages = [
@@ -26,8 +27,8 @@ function EEPHome() {
   return (
     <div>
       <Navbar />
-
-      <Swiper
+      <ExecutiveEducationTabs/>
+      {/* <Swiper
         modules={[Autoplay, Pagination]}
         spaceBetween={0}
         slidesPerView={1}
@@ -63,13 +64,13 @@ function EEPHome() {
             </div>
           </SwiperSlide>
         ))}
-      </Swiper>
-      <EEPJourney />
+      </Swiper> */}
+      {/* <EEPJourney />
           <EEPFinder/>
           <EEPUpcomming/>
           <EEPAdvantage/>
           <EEPImpact/>
-          <EEPRanking/>
+          <EEPRanking/> */}
       <NewFooter />
     </div>
   )

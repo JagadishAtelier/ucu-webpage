@@ -1,4 +1,4 @@
-import { Facebook } from 'lucide-react'
+import { Facebook, MailCheck } from 'lucide-react'
 import React, { useState } from 'react'
 import { BsFacebook, BsLinkedin, BsShare, BsTwitter } from 'react-icons/bs'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,7 +6,9 @@ import { Autoplay } from "swiper/modules";
 import { Plus } from "lucide-react";
 import "swiper/css";
 import { Button, Form } from 'react-bootstrap';
-
+import { Col, Container, Row } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
+import MultiSelectDropdown from './MultiSelectDropdown';
 const rightData = [
     {
         image: "https://www.spjimr.org/wp-content/uploads/2025/11/learning-to-stand-out-insights-from-the-linkedin-masterclass-at-spimr.webp",
@@ -41,6 +43,7 @@ const data = [
 
 
 function ProgramsForIndividualsData() {
+    const navigate = useNavigate()
     return (
         <div className='captital-campus-content-sec my-4'>
             <div className='d-flex flex-lg-row flex-column gap-5'>
@@ -173,7 +176,7 @@ function ProgramsForIndividualsData() {
                                     rows={3}   // optional height
                                 />
                             </div>
-                    <Button style={{ backgroundColor: "#5ac501", border: "none" }} className='col-12'>Submit</Button>
+                            <Button style={{ backgroundColor: "#5ac501", border: "none" }} className='col-12'>Submit</Button>
                         </div>
                     </div>
                     <p className='fs-4 fw-bold mt-4'>Write to Us</p>
@@ -182,6 +185,118 @@ function ProgramsForIndividualsData() {
                     <p style={{ color: "#0d89de" }} className='text-decoration-underline'>execed@ucu.edu</p>
                 </div>
             </div>
+            <div className='mt-5 mb-3'>
+                <h1>Register Your Interest</h1>
+            </div>
+            <Container>
+
+                <div className="contact-form-card mx-auto p-4 p-md-5">
+                    <Form>
+                        <Row className="mb-4">
+                            <Col lg={12}>
+                                <Form.Group className="d-flex flex-lg-row flex-column">
+                                    <Form.Label className="PFID-form-label">Salutation*</Form.Label>
+
+                                    <Form.Select required className="PFID-form-input">
+                                        <option value="">--None--</option>
+                                        <option value="Mr">Mr</option>
+                                        <option value="Ms">Ms</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Dr">Dr</option>
+                                        <option value="Prof">Prof</option>
+                                    </Form.Select>
+
+                                </Form.Group>
+                            </Col>
+                        </Row>
+
+                        <Row className=" mb-4">
+                            <Col lg={12}>
+                                <Form.Group className="d-flex flex-lg-row flex-column">
+                                    <Form.Label className="PFID-form-label">First Name*</Form.Label>
+                                    <Form.Control type="text" required />
+
+                                </Form.Group>
+                            </Col>
+                        </Row>
+                        <Row className=" mb-4">
+                            <Col lg={12}>
+                                <Form.Group className="d-flex flex-lg-row flex-column">
+                                    <Form.Label className="PFID-form-label">Last  Name*</Form.Label>
+                                    <Form.Control type="text" required />
+
+                                </Form.Group>
+                            </Col>
+                        </Row>
+
+                        <Row className="mb-4">
+
+                            <Col lg={12}>
+                                <Form.Group className="d-flex flex-lg-row flex-column">
+                                    <Form.Label className="PFID-form-label">Email*</Form.Label>
+                                    <Form.Control type="email" required />
+
+                                </Form.Group>
+                            </Col>
+                        </Row>
+
+                        <Row className="mb-4">
+                            <Col lg={12}>
+                                <Form.Group className="d-flex flex-lg-row flex-column">
+                                    <Form.Label className="PFID-form-label">Phone*</Form.Label>
+                                    <Form.Control type="text" required />
+
+                                </Form.Group>
+                            </Col>
+
+                        </Row>
+                        <Row className="mb-4">
+                            <Col lg={12}>
+                                <Form.Group className="d-flex flex-lg-row flex-column">
+                                    <Form.Label className="PFID-form-label">Company*</Form.Label>
+                                    <Form.Control type="text" required />
+
+                                </Form.Group>
+                            </Col>
+
+                        </Row>
+                        <Row className="mb-4">
+                            <Col lg={12}>
+                                <Form.Group className="d-flex flex-lg-row flex-column">
+                                    <Form.Label className="PFID-form-label">City*</Form.Label>
+                                    <Form.Control type="text" required />
+
+                                </Form.Group>
+                            </Col>
+
+                        </Row>
+
+                        <Row className="mb-4">
+                            <Col lg={12}>
+                                <MultiSelectDropdown label="Programs Interested In" />
+                            </Col>
+                        </Row>
+
+
+                        <div className="mb-4">
+                            <Form.Group className="d-flex flex-lg-row flex-column">
+                                <Form.Label className="PFID-form-label">Description*</Form.Label>
+                                <Form.Control as="textarea" rows={4} placeholder="Write your Description..." />
+                            </Form.Group>
+                        </div>
+
+                        <div className="text-center">
+                            <button className="submit-btn-uni px-5 py-2">Submit</button>
+                        </div>
+
+                        <p className='mt-5 text-center'>Partner with UCU to design leadership journeys that transform your organization. Should you wish to speak to our Customer Success Specialist, please follow the link below</p>
+                        <div onClick={() => navigate("/contact-us")} className='d-flex gap-3 align-items-center mt-3 col-lg-2 text-white justify-content-center py-2 rounded mx-auto' style={{ backgroundColor: "#5ac501", cursor: "pointer" }}>
+                            <MailCheck />
+                            <p className='mb-0'>Reach out to Us</p>
+                        </div>
+                    </Form>
+                </div>
+            </Container>
         </div>
     )
 }
