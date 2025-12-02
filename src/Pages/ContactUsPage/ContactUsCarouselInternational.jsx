@@ -199,7 +199,7 @@ function ContactUsCarouselInternational() {
                 {/* RIGHT - TEXT BLOCK */}
                 <div className="contact-carousel-text col-lg-5 col-11 mx-auto bg-white p-3 shadow d-flex flex-column justify-content-between">
                     <p className="fw-bold m-0" style={{ color: "#0f1a48" }}>UCU Chapters</p>
-                    <h2 className="fw-bold mt-2">Presence across major cities in India</h2>
+                    <h2 className="fw-bold mt-2">Presence across leading countries worldwide</h2>
                     <p className="text-muted mt-3">
                         With a strong community of global HR leaders, UCU actively conducts networking events
                         and activities in over 30 cities across India. Discover all the updates and key highlights

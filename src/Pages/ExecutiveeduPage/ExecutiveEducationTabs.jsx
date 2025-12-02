@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ProgramsForIndividualsBanner from "../ProgramsForIndividuals/ProgramsForIndividualsBanner";
-import { Calendar1, ChevronRight } from 'lucide-react'
+import { Calendar1, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Button } from "react-bootstrap";
@@ -32,12 +32,12 @@ const TAB_LIST = [
 const TAB_COMPONENTS = [
     <ProgramsForIndividualsBanner />, // Individuals Professional
     <XELEnterprise />,
-    <EEPCxo/>,
-    <EEPPhd/>, // Executive phD
-    <EEPAcademy/>, // Academic Accelerator
-    <LCPBanner/>, // Leadership Coach Academy
+    <EEPCxo />,
+    <EEPPhd />, // Executive phD
+    <EEPAcademy />, // Academic Accelerator
+    <LCPBanner />, // Leadership Coach Academy
     <div>Executive PG Certificate Content</div>, // Executive pg Certificate
-    <EEPMdps/>, // MDPs
+    <EEPMdps />, // MDPs
     <div>XEL Contact Content</div>, // XEL Contact
 ];
 
@@ -67,7 +67,7 @@ const BANNER_DESCRIPTIONS = [
 function ExecutiveEducationTabs() {
     const [activeTab, setActiveTab] = useState(0);
     const navigate = useNavigate()
-        const handleTabClick = (index) => {
+    const handleTabClick = (index) => {
         // If XEL Contact tab (last one) clicked → navigate
         if (index === 8) {
             navigate("/contact-us");
@@ -76,23 +76,50 @@ function ExecutiveEducationTabs() {
 
         setActiveTab(index);
     };
+    const scrollTabs = (direction) => {
+        const box = document.getElementById("tabsScrollBox");
+        const scrollAmount = 200; // how much to move per click
+
+        if (direction === "right") {
+            box.scrollLeft += scrollAmount;
+        } else {
+            box.scrollLeft -= scrollAmount;
+        }
+    };
+
     return (
         <div>
-            <div className="eep-tabs-container">
-                {TAB_LIST.map((tab, index) => (
-                    <div
-                        key={index}
-                        className={`eep-tab-item ${activeTab === index ? "active" : ""}`}
-                        onClick={() => handleTabClick(index)}
-                    >
-                        {tab}
-                    </div>
-                ))}
-                <div
-                    className="eep-tab-indicator"
-                    style={{ transform: `translateX(${activeTab * 100}%)` }}
-                />
+            <div className="eep-tabs-wrapper">
+                {/* Left Arrow */}
+                <button
+                    className="eep-tab-arrow left"
+                    onClick={() => scrollTabs("left")}
+                >
+                    <ChevronLeft/>
+                </button>
+
+                {/* Scrollable Tabs */}
+                <div className="eep-tabs-scroll" id="tabsScrollBox">
+                    {TAB_LIST.map((tab, index) => (
+                        <div
+                            key={index}
+                            className={`eep-tab-item ${activeTab === index ? "active" : ""}`}
+                            onClick={() => handleTabClick(index)}
+                        >
+                            {tab}
+                        </div>
+                    ))}
+                </div>
+
+                {/* Right Arrow */}
+                <button
+                    className="eep-tab-arrow right"
+                    onClick={() => scrollTabs("right")}
+                >
+                    <ChevronRight/>
+                </button>
             </div>
+
             <Swiper
                 modules={[Autoplay, Pagination]}
                 spaceBetween={0}
