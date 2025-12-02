@@ -20,10 +20,10 @@ function CXOAttended() {
           <h2 className='text-decoration-underline'>Who Attended This Programme Previously</h2>
         </div>
 
-        <div className="row cxo-attended-graph align-items-center">
+        <div className="row flex-column flex-lg-row cxo-attended-graph align-items-center">
 
           {/* LEFT BOX — TOP INDUSTRIES */}
-          <div className="col-md-6">
+          <div className="col-lg-6">
             <div className="cxo-attended-box">
               <p><strong>Top Industries</strong></p>
 
@@ -40,7 +40,7 @@ function CXOAttended() {
           </div>
 
           {/* RIGHT BOX — TOP GRADES */}
-          <div className="col-md-6">
+          <div className="col-lg-6">
             <div className="cxo-attended-box">
               <p><strong>Top Grades</strong></p>
 

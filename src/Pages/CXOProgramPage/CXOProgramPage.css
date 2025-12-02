@@ -229,7 +229,6 @@
   padding: 15px 20px;
   background: white;
   border-radius: 10px;
-  text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -238,10 +237,6 @@
   .cxomasterclass-left,
   .cxomasterclass-right {
     flex: 0 0 100%;
-  }
-
-  .cxomasterclass-card {
-    width: 45%;
   }
 }
 .cxo-session-grid-img-tag{
@@ -444,4 +439,34 @@
   .cxoprofessor-content {
     text-align: center;
   }
+  .cxo-banner-tab-box{
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  .cxo-banner-wrapper {
+    height: 40vh;
+}
+.cxo-program-grid-con{
+    margin-top: 27%;
+}
+.cxomasterclass-main-img{
+    width: auto;
+}
+.cxomasterclass-left{
+    height: 40vh;
+}
+.cxocertificate-image{
+    height: 40vh;
+    width: auto;
+}
+}
+
+@media (max-width:480px) {
+    .cxo-program-grid-con{
+        margin-top: 50%;
+    }
+    .cxomasterclass-card-container{
+        grid-template-columns: repeat(1,1fr);
+    }
 }

@@ -59,7 +59,7 @@ function CXOPageBanner() {
                         <h1 className="fw-bold fs-1 text-white">CXO</h1>
                         <p>Redefining C-Suite acumen for Current and Aspiring CEOs !</p>
                     </div>
-                    <div className="cxo-proModalContent bg-white p-3 d-flex flex-column gap-3">
+                    <div className="cxo-proModalContent bg-white p-3 d-lg-flex d-none flex-column gap-3">
                         <h4 className='text-black text-center'>Download Brochure</h4>
                         <div className="proInputGroup m-0">
                             <input type="text" placeholder="Name" />

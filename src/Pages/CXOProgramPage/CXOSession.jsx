@@ -9,13 +9,13 @@ const dataApply = [
 ]
 function CXOSession() {
     return (
-        <div>
+        <div className='captital-campus-content-sec'>
             <h3 className="text-center text-decoration-underline mb-3">Your Session Schedule</h3>
 
             <div className='d-grid'>
                 <div className='row column-gap-3'>
                     {dataApply.map((item, index) => (
-                        <div className='d-flex col-5 justify-content-center mx-auto cxo-program-grid'>
+                        <div className='d-flex col-lg-5 justify-content-center mx-auto cxo-program-grid'>
                             <div className='cxo-program-grid-image p-3 d-flex justify-content-center align-items-center'><img src={item.image} className='cxo-session-grid-img-tag' /></div>
                             <div className='cxo-program-grid-text p-3'>
                             <p className='mb-0 fw-bold'>{item.text}</p>

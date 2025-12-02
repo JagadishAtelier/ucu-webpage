@@ -41,7 +41,7 @@ function CXOProgramGrid() {
             <div className='d-grid'>
                 <div className='row column-gap-3'>
                     {dataApply.map((item, index) => (
-                        <div className='d-flex col-5 justify-content-center mx-auto cxo-program-grid'>
+                        <div className='d-flex col-lg-5 justify-content-center mx-auto cxo-program-grid'>
                             <div className='cxo-program-grid-image p-3 d-flex justify-content-center align-items-center'><img src={item.image} className='cxo-program-grid-img-tag' /></div>
                             <p className='cxo-program-grid-text p-3 mb-0'>{item.text}</p>
                         </div>
@@ -55,7 +55,7 @@ function CXOProgramGrid() {
             <div className='d-grid'>
                 <div className='row row-gap-4'>
                     {data.map((item, index) => (
-                        <div className='d-flex col-4 justify-content-center mx-auto cxo-program-grid'>
+                        <div className='d-flex col-lg-4 col-md-6 justify-content-center mx-auto cxo-program-grid'>
                             <div className='cxo-program-grid-image p-3 d-flex justify-content-center align-items-center'><img src={item.image} className='' /></div>
                             <p className='cxo-program-grid-text p-3 mb-0 d-flex justify-content-center align-items-center'>{item.text}</p>
                         </div>
