@@ -616,3 +616,84 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+
+
+.eepa-wrapper {
+  padding: 30px;
+  background: #f9fafb;
+  border-radius: 15px;
+}
+
+.eepa-intro-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.eepa-intro-icon {
+  color: #004aad;
+}
+
+.eepa-intro-text {
+  color: #4a4a4a;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.eepa-section {
+  margin-top: 40px;
+}
+
+.eepa-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #003f8c;
+  margin-bottom: 20px;
+}
+
+.eepa-title-icon {
+  color: #005fcc;
+}
+
+.eepa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.eepa-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.eepa-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.eepa-card-icon {
+  color: #00a86b;
+}
+
+.eepa-card-text {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
