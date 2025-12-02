@@ -59,6 +59,7 @@ import TalentNavigationPage from "./Pages/TalentPage/TalentNavigationPage";
 import BlogPageBanner from "./Pages/BlogPage/BlogPageBanner";
 import ProgramsForIndividualsBanner from "./Pages/ProgramsForIndividuals/ProgramsForIndividualsBanner";
 import FixedSideBar from "./Components/FixedSideBar/FixedSideBar";
+import CXOPageBanner from "./Pages/CXOProgramPage/CXOPageBanner";
 
 function App() {
   useEffect(() => {
@@ -118,6 +119,7 @@ function App() {
         <Route path="/explore-talent" element={<TalentPage/>} />
         <Route path="/blog" element={<BlogPageBanner/>} />
         <Route path="/programs-for-individuals" element={<ProgramsForIndividualsBanner/>} />
+        <Route path="/cxo-series/*" element={<CXOPageBanner/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <FixedSideBar/>

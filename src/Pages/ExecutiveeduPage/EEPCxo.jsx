@@ -93,7 +93,7 @@ function EEPCxo() {
                                 <td>{row.ProgramName}</td>
                                 <td>{row.FocusArea}</td>
                                 <td className='text-center'>
-                                    <Button onClick={() => navigate(`${row.link}`)} className="EEP-cxo-table-btn" style={{ backgroundColor: "#5ac501", border: "none" }}>view more </Button>
+                                    <Button onClick={() => navigate(`/cxo-series/${row.CXORole}`)} className="EEP-cxo-table-btn" style={{ backgroundColor: "#5ac501", border: "none" }}>view more </Button>
                                 </td>
                             </tr>
                         ))}

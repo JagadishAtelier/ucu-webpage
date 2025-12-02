@@ -1,0 +1,447 @@
+.cxo-banner-wrapper {
+    position: relative;
+    height: 78vh;
+}
+
+.cxo-bg-swiper,
+.cxo-bg-slide {
+    height: 100%;
+    width: 100%;
+}
+
+.cxo-bg-slide {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.cxo-bg-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    /* ← adjust darkness here */
+    z-index: 1;
+}
+
+
+.cxo-fixed-content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: white;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cxo-proModalContent {
+    width: 35%;
+    border-radius: 30px;
+}
+
+.proInputGroup select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1.5px solid #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: 0.25s;
+}
+
+.disclamier-text-cxo {
+    font-size: 12px;
+}
+
+.cxo-banner-tab-box {
+    position: absolute;
+    bottom: -10%;
+    left: 8%;
+    z-index: 99;
+    border-radius: 20px !important;
+}
+
+.cxo-program-grid-con {
+    margin-top: 7%;
+}
+
+.cxo-program-grid-img-tag {
+    width: 150px;
+    height: 70px;
+}
+
+.cxo-program-grid-image {
+    background-color: #0b69f12b;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.cxo-program-grid-text {
+    background-color: #89b7f72b;
+    height: 100%;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.cxo-program-grid {
+    min-height: 10vh;
+}
+
+
+
+
+/* MAIN SECTION */
+.cxocurriculam-course-content {
+  padding: 60px 0;
+  background: #fafafa;
+}
+
+/* SECTION TITLE */
+.cxocurriculam-course-content h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+/* SUB HEADINGS */
+.cxocurriculam-section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 40px 0 20px;
+  color: #111;
+  border-left: 5px solid #004aad;
+  padding-left: 10px;
+  border-bottom: 1px solid black;
+}
+
+/* COLUMN BOXES */
+.cxocurriculam-col {
+  margin-bottom: 25px;
+}
+
+.cxocurriculam-col p strong {
+  font-size: 17px;
+  color: #004aad;
+}
+
+/* LIST STYLE */
+.cxocurriculam-col ul {
+  padding-left: 18px;
+  margin: 10px 0 0;
+}
+
+.cxocurriculam-col ul li {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .cxocurriculam-course-content h2 {
+    font-size: 26px;
+  }
+
+  .cxocurriculam-section-title {
+    font-size: 20px;
+  }
+
+  .cxocurriculam-col {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+.cxomasterclass-section {
+  padding: 60px 0;
+}
+
+.cxomasterclass-container {
+  width: 90%;
+  margin: auto;
+}
+
+.cxomasterclass-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.cxomasterclass-left {
+  flex: 0 0 33.33%; /* same as col-4 */
+  background: #0b4da1;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.cxomasterclass-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT SIDE */
+.cxomasterclass-right {
+  flex: 0 0 66.66%; /* same as col-8 */
+  background: #d8ecff;
+  padding: 40px;
+}
+
+.cxomasterclass-right h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.cxomasterclass-right h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.cxomasterclass-right p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Cards */
+.cxomasterclass-card-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.cxomasterclass-card {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  padding: 15px 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cxomasterclass-left,
+  .cxomasterclass-right {
+    flex: 0 0 100%;
+  }
+
+  .cxomasterclass-card {
+    width: 45%;
+  }
+}
+.cxo-session-grid-img-tag{
+    height: 50px;
+}
+
+.cxocertificate-section {
+  padding: 60px 0;
+  background: #fafafa;
+}
+
+.cxocertificate-container {
+  width: 90%;
+  margin: auto;
+}
+
+.cxocertificate-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+/* LEFT SIDE */
+.cxocertificate-left {
+  flex: 0 0 55%;
+}
+
+.cxocertificate-title h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.cxocertificate-left p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.cxocertificate-list {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.cxocertificate-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* NOTE */
+.cxocertificate-note p {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* RIGHT SIDE IMAGE */
+.cxocertificate-right {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.cxocertificate-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cxocertificate-left,
+  .cxocertificate-right {
+    flex: 0 0 100%;
+  }
+}
+
+
+
+
+.cxo-attended-section {
+  padding: 50px 0;
+}
+
+.cxo-attended-graph {
+  margin-top: 20px;
+}
+
+.cxo-attended-box {
+  background: #eaf3ff;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.cxo-attended-box ul {
+  margin-right: 30px;
+}
+
+.cxo-attended-box li {
+  margin-bottom: 8px;
+  list-style-type: disc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cxo-attended-box {
+    margin-bottom: 20px;
+  }
+}
+
+
+.cxoprofessor-section {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.cxoprofessor-container {
+  width: 90%;
+  margin: auto;
+}
+
+.cxoprofessor-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cxoprofessor-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Image */
+.cxoprofessor-img {
+  flex: 0 0 120px;
+}
+
+.cxoprofessor-img img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Content */
+.cxoprofessor-content {
+  flex: 1;
+}
+
+.cxoprofessor-content h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.cxoprofessor-content h6 {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.cxoprofessor-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.cxoprofessor-more {
+  margin-top: 10px;
+}
+
+.cxoprofessor-toggle {
+  color: #004aad;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cxoprofessor-row {
+    flex-direction: column;
+  }
+
+  .cxoprofessor-img {
+    flex: 0 0 auto;
+    width: 150px;
+    margin: auto;
+  }
+
+  .cxoprofessor-content {
+    text-align: center;
+  }
+}
