@@ -1,72 +1,164 @@
 import React from 'react'
 import { GraduationCap, Users, Target, CheckCircle } from 'lucide-react'
+import { Clock, File } from 'lucide-react'
+import { Button } from 'react-bootstrap'
+import { BiRupee } from 'react-icons/bi'
 
+const data = [
+    {
+        date: "18", month: "OCT",
+        courseHead: "Acquiring Leadership Qualities Early in Life",
+        time: "9:30 am - 11:00 am",
+        fees: "200.00",
+        pdf: "View PDF"
+    },
+    {
+        date: "19", month: "OCT",
+        courseHead: "Seven Habits of Successful Teens",
+        time: "9:30 am - 11:00 am",
+        fees: "200.00",
+        pdf: "View PDF"
+    },
+    {
+        date: "20", month: "OCT",
+        courseHead: "Managing Mental Health",
+        time: "9:30 am - 11:00 am",
+        fees: "200.00",
+        pdf: "View PDF"
+    },
+    {
+        date: "21", month: "OCT",
+        courseHead: "Kaizen: Cultivating Habits of Continual Improvement and Learning",
+        time: "9:30 am - 11:00 am",
+        fees: "200.00",
+        pdf: "View PDF"
+    },
+    {
+        date: "22 - 23", month: "OCT",
+        courseHead: "Humans of Science – A STEAM Adventure for Curious Kids",
+        time: "9:30 am - 11:00 am",
+        fees: "200.00",
+        pdf: "View PDF"
+    },
+    {
+        date: "24 - 29", month: "OCT",
+        courseHead: "How to Achieve a Winning Personality",
+        time: "9:30 am - 11:00 am",
+        fees: "200.00",
+        pdf: "View PDF"
+    },
+    {
+        date: "31", month: "OCT",
+        courseHead: "5S – Organizing Self, Surrounding: Way to Excellence ",
+        time: "9:30 am - 11:00 am",
+        fees: "200.00",
+        pdf: "View PDF"
+    },
+]
 function EEPAcademy() {
-  return (
-    <div className='captital-campus-content-sec mt-4'>
+    return (
+        <div className='captital-campus-content-sec mt-4'>
 
-      {/* Intro Section */}
-      {/* <div className="eepa-intro-card"> */}
-      <div>
-        {/* <GraduationCap className="eepa-intro-icon" /> */}
-        <h1 className='display-5 fw-bold'>UCU’s <span style={{ color: "#5ac501" }}> Faculty Development </span> Programs</h1>
-</div>
-        <p className="pt">
-          UCU’s Faculty Development Programs (FDPs) are designed to strengthen academic delivery, 
-          enhance pedagogical excellence, and align faculty capabilities with industry and 
-          regulatory benchmarks. Through structured workshops, curated decks, and hands-on adoption 
-          evidence, FDPs empower educators to integrate contemporary curriculum frameworks, 
-          case-based learning, and simulation-driven teaching. Each program emphasizes professional 
-          rigor, continuous improvement, and measurable outcomes, ensuring faculty are equipped to 
-          champion innovation, compliance, and thought leadership. By investing in FDPs, institutions 
-          build sustainable academic capacity and position themselves as regional talent hubs with 
-          globally benchmarked standards.
-        </p>
-      {/* </div> */}
-
-      {/* Target Audience */}
-      <div className="eepa-section">
-        <h2 className="eepa-section-title">
-          <Users className="eepa-title-icon" /> Target Audience
-        </h2>
-
-        <div className="eepa-grid">
-          {["Junior Faculty", "Assistant/Associate Professors", "Senior Professors", "Dean/Principal"].map((item, index) => (
-            <div key={index} className="eepa-card">
-              <CheckCircle className="eepa-card-icon" />
-              <p className="eepa-card-text mb-0">{item}</p>
+            {/* Intro Section */}
+            {/* <div className="eepa-intro-card"> */}
+            <div>
+                {/* <GraduationCap className="eepa-intro-icon" /> */}
+                <h1 className='display-5 fw-bold'>UCU’s <span style={{ color: "#5ac501" }}> Faculty Development </span> Programs</h1>
             </div>
-          ))}
-        </div>
-      </div>
+            <p className="pt">
+                UCU’s Faculty Development Programs (FDPs) are designed to strengthen academic delivery,
+                enhance pedagogical excellence, and align faculty capabilities with industry and
+                regulatory benchmarks. Through structured workshops, curated decks, and hands-on adoption
+                evidence, FDPs empower educators to integrate contemporary curriculum frameworks,
+                case-based learning, and simulation-driven teaching. Each program emphasizes professional
+                rigor, continuous improvement, and measurable outcomes, ensuring faculty are equipped to
+                champion innovation, compliance, and thought leadership. By investing in FDPs, institutions
+                build sustainable academic capacity and position themselves as regional talent hubs with
+                globally benchmarked standards.
+            </p>
+            {/* </div> */}
 
-      {/* Areas */}
-      <div className="eepa-section">
-        <h2 className="eepa-section-title">
-          <Target className="eepa-title-icon" /> Areas Covered
-        </h2>
+            {/* Target Audience */}
+            <div className="eepa-section">
+                <h2 className="eepa-section-title">
+                    <Users className="eepa-title-icon" /> Target Audience
+                </h2>
 
-        <div className="eepa-grid">
-          {[
-            "Sales & Marketing",
-            "Operations",
-            "Finance",
-            "HR",
-            "Analytics",
-            "Consulting",
-            "Product Management",
-            "Data Science & Gen AI",
-            "Brand Management"
-          ].map((item, index) => (
-            <div key={index} className="eepa-card">
-              <CheckCircle className="eepa-card-icon" />
-              <p className="eepa-card-text mb-0">{item}</p>
+                <div className="eepa-grid">
+                    {["Junior Faculty", "Assistant/Associate Professors", "Senior Professors", "Dean/Principal"].map((item, index) => (
+                        <div key={index} className="eepa-card">
+                            <CheckCircle className="eepa-card-icon" />
+                            <p className="eepa-card-text mb-0">{item}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-          ))}
+
+            {/* Areas */}
+            <div className="eepa-section">
+                <h2 className="eepa-section-title">
+                    <Target className="eepa-title-icon" /> Areas Covered
+                </h2>
+
+                <div className="eepa-grid">
+                    {[
+                        "Sales & Marketing",
+                        "Operations",
+                        "Finance",
+                        "HR",
+                        "Analytics",
+                        "Consulting",
+                        "Product Management",
+                        "Data Science & Gen AI",
+                        "Brand Management"
+                    ].map((item, index) => (
+                        <div key={index} className="eepa-card">
+                            <CheckCircle className="eepa-card-icon" />
+                            <p className="eepa-card-text mb-0">{item}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className='my-5'>
+                <Button className='cmp-mont-btn py-2'>October 2025</Button>
+                <div>
+                    {data.map((item, index) => (
+                        <div className='d-flex flex-column flex-lg-row flex-md-row justify-content-between align-items-center cmp-data-hr-line'>
+                            <div className='d-flex gap-3 align-items-center flex-column flex-lg-row flex-md-row'>
+                                <div className='d-flex flex-row flex-md-column flex-lg-column items-center justify-center text-center'>
+                                    <p className='m-0 cmp-date-text px-3 py-2'>{item.date}</p>
+                                    <p className='m-0 cmp-month-text px-3 py-lg-1 py-md-1 py-2'>{item.month}</p>
+                                </div>
+                                <div className='d-flex flex-column gap-2 text-center text-lg-start text-md-start'>
+                                    <p className='fs-5 fw-bold cmp-courseHead m-0'>{item.courseHead}</p>
+                                    <div className='d-flex mx-auto m-lg-0 m-md-0 flex-wrap align-items-center justify-content-center align-items-lg-start justify-content-lg-start justify-content-md-start gap-3'>
+                                        <div className='d-flex align-items-center gap-1 pe-3' style={{ borderRight: "1px solid gray" }}>
+                                            <Clock size={18} style={{ color: "gray" }} />
+                                            <p className='m-0' style={{ color: "gray" }}>{item.time}</p>
+                                        </div>
+
+                                        {/* <div className='d-flex align-items-center gap-1 pe-3' style={{borderRight:"1px solid gray"}}>
+                            <File size={18} style={{color:"gray"}}/>
+                        <p className='m-0' style={{color:"gray"}}>{item.pdf}</p>
+                        </div> */}
+
+                                        <div className='d-flex align-items-center gap-1 pe-3' style={{ borderRight: "1px solid gray" }}>
+                                            <BiRupee size={18} style={{ color: "gray" }} />
+                                            <p className='m-0' style={{ color: "gray" }}>{item.fees}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='d-flex gap-3 flex-lg-row flex-md-column flex-column cmp-btns-div mt-4 mt-md-0 mt-lg-0' >
+                                <Button className='px-lg-5 py-lg-2 mt-0 mt-md-0 mt-lg-0 text-black cmp-apply-btn fs-6 fw-light' style={{ backgroundColor: "white", border: "1px solid black" }}>Apply Now</Button>
+                                <Button className='px-lg-2 py-lg-2 mt-0 mt-md-0 mt-lg-0 cmp-download-btn fs-6 fw-light' style={{ backgroundColor: "#5ac501", border: "none" }}>Download Broucher</Button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  )
+    )
 }
 
 export default EEPAcademy

@@ -60,6 +60,7 @@ import BlogPageBanner from "./Pages/BlogPage/BlogPageBanner";
 import ProgramsForIndividualsBanner from "./Pages/ProgramsForIndividuals/ProgramsForIndividualsBanner";
 import FixedSideBar from "./Components/FixedSideBar/FixedSideBar";
 import CXOPageBanner from "./Pages/CXOProgramPage/CXOPageBanner";
+import LCPBanner from "./Pages/LeaderShipCoachPage/LCPBanner";
 
 function App() {
   useEffect(() => {
@@ -120,6 +121,7 @@ function App() {
         <Route path="/blog" element={<BlogPageBanner/>} />
         <Route path="/programs-for-individuals" element={<ProgramsForIndividualsBanner/>} />
         <Route path="/cxo-series/*" element={<CXOPageBanner/>} />
+        <Route path="/lcp" element={<LCPBanner/>} />
         {/* <Route path="/account" element={<ProfilePage />} /> */}
       </Routes>
       <FixedSideBar/>

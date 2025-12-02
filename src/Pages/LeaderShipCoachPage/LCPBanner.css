@@ -1,0 +1,603 @@
+/* MAIN SECTION */
+.eepLeadership-banner {
+  width: 100%;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #004aad, #6f00ff);
+  color: #fff;
+}
+
+/* CONTAINER */
+.eepLeadership-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* ROW */
+.eepLeadership-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.eepLeadership-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.eepLeadership-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.eepLeadership-subtitle {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 450px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.eepLeadership-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #000;
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.eepLeadership-btn:hover {
+  background: #f1f1f1;
+}
+
+/* RIGHT SIDE BG IMAGE */
+.eepLeadership-right {
+  flex: 1;
+  min-width: 320px;
+  height: 380px;
+  background-image: url("https://coachingfederation.org/wp-content/uploads/2024/11/icf-about-business-coaching-in-office-1200x800.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .eepLeadership-title {
+    font-size: 1.8rem;
+  }
+
+  .eepLeadership-right {
+    height: 260px;
+  }
+}
+
+.lcpPower-row {
+  display: flex;
+  width: 100%;
+}
+
+.lcpPower-col-group {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.lcpPower-image-col img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.lcpPower-content-col {
+  padding: 1rem;
+}
+
+.lcpPower-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.blue-text {
+  color: #5ac501;
+}
+
+.lcpPower-rich-text p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lcpenrollment-section {
+  padding: 70px 0;
+  background: #001033; 
+  background-size: cover;
+  color: #fff;
+}
+
+.lcpenrollment-container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.lcpenrollment-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.lcpenrollment-gold {
+  color: #d4af37;
+}
+
+.lcpenrollment-text {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lcpenrollment-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.lcpenrollment-btn {
+  padding: 12px 28px;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.lcpenrollment-btn:hover {
+  background: #d4af37;
+  color: #000;
+  border-color: #d4af37;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .lcpenrollment-title {
+    font-size: 26px;
+  }
+  .lcpenrollment-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.lcpGrid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.lcpGrid-card {
+  background: #F4F4F4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.lcpGrid-title {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.lcpGrid-list li {
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .lcpGrid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .lcpGrid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.clientProfile-section {
+  background: #f2f2f2;
+  padding: 40px 0;
+}
+
+.clientProfile-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+}
+
+/* LEFT SIDE */
+.clientProfile-heading {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.clientProfile-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.clientProfile-subtitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.clientProfile-list li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.clientProfile-logos {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* NEW: Logo container box */
+.clientProfile-logoBox {
+  width: 90px;
+  height: 70px;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+/* Logo inside the box */
+.clientProfile-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+.clientProfile-logo {
+  height: 40px;
+  object-fit: contain;
+}
+
+/* RIGHT SIDE */
+.clientProfile-right {
+  background: #4a4a4a;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.clientProfile-testimonial-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.clientProfile-testimonial-text {
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.clientProfile-author {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .clientProfile-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  .clientProfile-logos {
+  grid-template-columns: repeat(3,1fr);
+}
+}
+
+
+
+/* OurExperts.css */
+.ourExperts-section {
+  text-align: center;
+}
+
+.ourExperts-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #222;
+}
+
+.ourExperts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.ourExperts-card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.ourExperts-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.ourExperts-card:hover .ourExperts-image {
+  transform: scale(1.05);
+}
+
+.ourExperts-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* semi-transparent overlay */
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.ourExperts-name {
+  background-color: #fff; /* white background for text */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  width: 100%;
+}
+
+
+.LCPWhy-section {
+  width: 100%;
+}
+
+.LCPWhy-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.LCPWhy-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
+}
+
+.LCPWhy-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  border: 1px solid #ececec;
+}
+
+.LCPWhy-card:hover {
+  transform: translateY(-6px);
+}
+
+.LCPWhy-icon {
+  width: 50px;
+  height: 50px;
+  background: #0056d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.LCPWhy-text {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+
+.LCPContact-wrapper {
+  padding:20px;
+  background: #f9fafc;
+  width: 100%;
+}
+
+.LCPContact-heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.LCPContact-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* LEFT CONTACT PERSON CARDS */
+.LCPContact-team {
+  flex: 1;
+  min-width: 320px;
+}
+
+.LCPContact-person {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+
+.LCPContact-person-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.LCPContact-person-role {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.LCPContact-person-detail {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.LCPContact-person-detail span {
+  font-weight: 600;
+}
+
+/* RIGHT FORM BOX */
+.LCPContact-formBox {
+  flex: 1;
+  min-width: 360px;
+}
+
+.LCPContact-form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.07);
+  border: 1px solid #e5e5e5;
+}
+
+.LCPContact-formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.LCPContact-formGroup label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.LCPContact-formGroup input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.LCPContact-formGroup input:focus {
+  border-color: #0077ff;
+}
+
+.LCPContact-submitBtn {
+  width: 100%;
+  padding: 14px;
+  background: #0056d2;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.LCPContact-submitBtn:hover {
+  background: #003f9e;
+}
+
+@media (max-width:768px) {
+  .LCPWhy-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .clientProfile-logos{
+    grid-template-columns: repeat(5,1fr);
+  }
+  .ourExperts-grid{
+     grid-template-columns: repeat(2,1fr);
+  }
+  .ourExperts-card{
+    margin: auto;
+    width: 100%;
+  }
+  .lcpPower-col-group{
+    flex-direction: column;
+
+  }
+  .lcpPower-image-col img{
+    height: 30vh;
+    object-fit: cover;
+  }
+  .lcpPower-image-col{
+    width: 100%;
+  }
+}
+@media (max-width:480px) {
+  .LCPWhy-grid{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .ourExperts-grid{
+     grid-template-columns: repeat(1,1fr);
+  }
+  .ourExperts-card{
+    margin: auto;
+    width: 100%;
+  }
+  .lcpPower-col-group{
+    flex-direction: column;
+
+  }
+  .lcpPower-image-col img{
+    height: 30vh;
+    object-fit: cover;
+  }
+  .lcpPower-image-col{
+    width: 100%;
+  }
+}

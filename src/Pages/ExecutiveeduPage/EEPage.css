@@ -697,3 +697,86 @@
   color: #333;
   font-weight: 500;
 }
+
+
+
+/* MAIN SECTION */
+.eepLeadership-banner {
+  width: 100%;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #004aad, #6f00ff);
+  color: #fff;
+}
+
+/* CONTAINER */
+.eepLeadership-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* ROW */
+.eepLeadership-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.eepLeadership-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.eepLeadership-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.eepLeadership-subtitle {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 450px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.eepLeadership-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #000;
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.eepLeadership-btn:hover {
+  background: #f1f1f1;
+}
+
+/* RIGHT SIDE BG IMAGE */
+.eepLeadership-right {
+  flex: 1;
+  min-width: 320px;
+  height: 380px;
+  background-image: url("./your-image-path.webp");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .eepLeadership-title {
+    font-size: 1.8rem;
+  }
+
+  .eepLeadership-right {
+    height: 260px;
+  }
+}

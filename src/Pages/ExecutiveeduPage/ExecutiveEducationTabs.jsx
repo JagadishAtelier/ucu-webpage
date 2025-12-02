@@ -10,6 +10,7 @@ import EEPPhd from "./EEPPhd";
 import EEPMdps from "./EEPMdps";
 import { useNavigate } from "react-router-dom";
 import EEPAcademy from "./EEPAcademy";
+import LCPBanner from "../LeaderShipCoachPage/LCPBanner";
 const bannerImages = [
     'https://img.freepik.com/premium-photo/corporate-business-people-working-busy-marketing-office-space-planning-strategy-books-reading-email-laptop-work_146105-104477.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80',
     'https://img.freepik.com/premium-photo/young-indian-businesswoman-blue-suit-giving-thumbs-up-with-one-hand-holding-documents-standing-office-other-people-background_872074-31460.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80',
@@ -34,7 +35,7 @@ const TAB_COMPONENTS = [
     <EEPCxo/>,
     <EEPPhd/>, // Executive phD
     <EEPAcademy/>, // Academic Accelerator
-    <div>Leadership Coach Academy Content</div>, // Leadership Coach Academy
+    <LCPBanner/>, // Leadership Coach Academy
     <div>Executive PG Certificate Content</div>, // Executive pg Certificate
     <EEPMdps/>, // MDPs
     <div>XEL Contact Content</div>, // XEL Contact
@@ -46,7 +47,7 @@ const BANNER_HEADINGS = [
     " UCU CXO Leadership Academy",
     "UCU Executive PhD in Management (EFPM)",
     "Faculty Development Program",
-    "Leadership Coach Academy",
+    "Leadership Coaching Program",
     "Executive pg Certificate",
     "Management Development Programs",
     "XEL Contact"
@@ -57,7 +58,7 @@ const BANNER_DESCRIPTIONS = [
     "Where Leaders Become Visionaries",
     "Where Practice Meets Research, and Leaders Become Scholars.",
     "Empowering Educators, Elevating Institutions",
-    "",
+    "Turning Experience into Executive Excellence",
     "",
     " For Individual Professionals",
     "",
