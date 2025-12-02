@@ -246,9 +246,9 @@
   border-right: 1px solid white;
 }
 
-.eep-tab-item:hover {
+/* .eep-tab-item:hover {
   background: #e0e0e0;
-}
+} */
 
 .eep-tab-item.active {
   color: #fff;
@@ -779,24 +779,29 @@
   .eepLeadership-right {
     height: 260px;
   }
+  .eep-tabs-wrapper{
+    width: 100% !important;
+  }
 }
 .eep-tabs-wrapper {
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 90%;
     position: relative;
     margin: 1% auto;
 }
 
 .eep-tab-arrow {
-    background: #5ac501;
+    background: #f2f2f2;
+    border-radius: 50%;
     border: none;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    padding: 4px 12px;
+    padding: 4px 6px;
     z-index: 2;
-    border-radius: 5px;
+    color: black;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
 .eep-tabs-scroll {
@@ -815,8 +820,7 @@
 
 .eep-tab-item {
     padding: 10px 20px;
-    background: #f2f2f2;
-    border-radius: 8px;
+    /* background: #f2f2f2; */
     cursor: pointer;
     font-weight: 500;
     user-select: none;
@@ -825,9 +829,13 @@
 }
 
 .eep-tab-item.active {
-    background: #5ac501;
-    color: white;
+    border-bottom:3px solid #5ac501;
+    background: none;
+    color: black;
 }
 .eep-tab-arrow.right{
-  margin-left: 10px;
+  margin-left: 30px;
+}
+.eep-tab-arrow.left{
+  margin-right: 30px;
 }
