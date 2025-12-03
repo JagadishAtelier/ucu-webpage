@@ -20,10 +20,7 @@ function XELEnterprise() {
       {/* ABOUT SECTION */}
       <section className="xel-about">
         <p>
-          At UCU, we recognize that every organization’s leadership challenges are unique.
-          Our Enterprise Programs are fully customized learning journeys co-created with client
-          organizations to deliver measurable business outcomes. These programs engineer long-term
-          transformation beyond training.
+          At UCU, we recognize that every organization’s leadership challenges are unique. Our <straon> Enterprise Programs </straon> are fully customized learning journeys co-created with client organizations to deliver measurable business outcomes. Designed for corporates, government bodies, and institutions seeking transformation, these programs go beyond training to engineer sustainable change.
         </p>
       </section>
 

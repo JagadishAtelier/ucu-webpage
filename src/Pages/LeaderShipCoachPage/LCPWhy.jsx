@@ -16,8 +16,7 @@ function LCPWhy() {
               </svg>
             </div>
             <p className="LCPWhy-text">
-              <strong>Global Gold Standard:</strong> Coaching defined as a thought-provoking,
-              creative partnership enabling individuals to maximize potential.
+              <strong>Global Gold Standard:</strong>  Inspired by the definition of coaching as “partnering with clients in a thought-provoking and creative process that inspires them to maximize their personal and professional potential
             </p>
           </div>
 
@@ -29,8 +28,8 @@ function LCPWhy() {
               </svg>
             </div>
             <p className="LCPWhy-text">
-              <strong>Professionalism & Integrity:</strong> Built on responsibility, respect,
-              competence & excellence.
+              <strong>Professionalism & Integrity:</strong> Programs built on responsibility, respect, competence, and excellence
+
             </p>
           </div>
 
@@ -42,8 +41,8 @@ function LCPWhy() {
               </svg>
             </div>
             <p className="LCPWhy-text">
-              <strong>Human-Centric Approach:</strong> Compassionate, equitable, and personalized
-              for every learner.
+              <strong>Human-Centric Approach:</strong> Compassionate, equitable, and tailored to individual journeys
+
             </p>
           </div>
 
@@ -56,8 +55,7 @@ function LCPWhy() {
               </svg>
             </div>
             <p className="LCPWhy-text">
-              <strong>Impact-Driven:</strong> Coaching outcomes measured through real behavioral
-              change & organizational impact.
+              <strong>Impact-Driven:</strong>  Every coaching engagement is measured through behavioral shifts and organizational outcomes
             </p>
           </div>
 

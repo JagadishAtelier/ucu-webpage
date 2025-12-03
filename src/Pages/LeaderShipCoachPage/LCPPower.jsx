@@ -38,10 +38,10 @@ function LCPPower() {
 
                                 <div className="lcpPower-rich-text">
                                     <p className="pt">
-                                        The Leadership Coaching Program at UCU is a high-impact, 6–9 month, one-on-one coaching journey designed exclusively for experienced professionals and emerging senior leaders. Rooted in global coaching standards and aligned with a transformative vision, this program accelerates leadership growth by combining diagnostics, personalized goal-setting, and immersive coaching sessions.
+                                        The <strong>Leadership Coaching Program at UCU </strong> is a high-impact, 6–9 month, one-on-one coaching journey designed exclusively for experienced professionals and emerging senior leaders. Rooted in global coaching standards and aligned with a transformative vision, this program accelerates leadership growth by combining diagnostics, personalized goal-setting, and immersive coaching sessions.
 
                                     </p>
-                                    <p className="pt">Participants engage in tailored development plans, experiential learning, and structured reflection, ensuring measurable transformation in communication, influence, and organizational impact. With its emphasis on leadership identity, stakeholder management, and readiness for complex corporate challenges, the program empowers leaders to evolve into visionary executives prepared to drive enterprise success and societal impact.</p>
+                                    <p className="pt">Participants engage in <strong> tailored development plans, experiential learning, and structured reflection,</strong> ensuring measurable transformation in communication, influence, and organizational impact. With its emphasis on leadership identity, stakeholder management, and readiness for complex corporate challenges, the program empowers leaders to evolve into visionary executives prepared to drive enterprise success and societal impact.</p>
                                 </div>
 
                             </div>

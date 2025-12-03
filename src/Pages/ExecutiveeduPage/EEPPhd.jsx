@@ -62,7 +62,7 @@ function EEPPhd() {
                     <li className='pt'><strong>For the Organization : </strong> Neutral, research-driven insights to solve strategic challenges and accelerate innovation.</li>
                     <li className='pt'><strong>For Society : </strong> Contributions to policy, governance, and sustainable business practices.</li>
                 </ul>
-                <p className="eep-phd-text">Graduates of the EFPM will emerge as scholar-practitioners—leaders who combine executive experience with doctoral-level research to influence boardrooms, classrooms, and policy platforms.</p>
+                <p className="eep-phd-text">Graduates of the EFPM will emerge as <strong> scholar-practitioners—leaders </strong> who combine executive experience with doctoral-level research to influence boardrooms, classrooms, and policy platforms.</p>
             </div>
 
             {/* Why UCU */}
