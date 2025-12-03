@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Rocket,
   Timer,
@@ -11,19 +11,22 @@ import {
 import "./IndustryFirstApproach.css";
 
 const features = [
-  { icon: <Rocket />, title: "Industry First. Future Ready. Always.", description: "At UCU, we don’t follow industry trends — we help create them. Every program is co-built with the industry, for the industry, and benchmarked against global best practices." },
-  { icon: <Timer />, title: "Strategy Powered by 100+ CXOs", description: "Our councils include CHROs, TA Heads, L&D leaders and CXOs from global MNCs who actively co-design our curriculum across domains like Product, Cybersecurity, FinTech, Digital Marketing, GCCs & more." },
-  { icon: <GraduationCap />, title: "Faculty of Titans", description: "Our Professors of Practice come from top consulting, finance and tech firms, delivering real-world insights, boardroom thinking and industry execution." },
-  { icon: <BadgeCheck />, title: "Day-Zero Industry Readiness", description: "Case-based learning, simulations, leadership labs and corporate grooming ensure graduates are job-ready from day one." },
-  { icon: <Target />, title: "Sector-Specific Leadership Tracks", description: "Specialized programs across FinTech, Mobility, BFSI, Manufacturing, Data & Analytics, Consulting, and Semiconductors — all built for future leadership." },
-  { icon: <TestTube2 />, title: "Faculty Certification with Corporate DNA", description: "Our Faculty Certification blends pedagogy with corporate acumen — reimagining how modern educators teach for industry outcomes." },
-  { icon: <RefreshCcw />, title: "Continuous Learning for Continuous Relevance", description: "Executive learning programs for professionals to stay updated with emerging tools, trends and enterprise transformations." },
+  { icon: <Rocket />, title: "Industry First. Future Ready. Always.", description: "At Universal Corporate University (UCU), Chennai, we don’t just follow industry trends — we set them. Our programs are engineered for the boardroom, built with the boardroom, and benchmarked against global best practices. Here's how we lead the charge:" },
+  { icon: <Timer />, title: "Strategy Powered by 100+ CXOs", description: "Our Business Advisory Council, HR Leadership Panels (CHROs, TA Heads, L&D Experts), and Young CXO Council bring together over 100 top-tier industry leaders from global MNCs. These visionaries co-create UCU’s curriculum, ensuring every module is a direct response to what the market demands — not what academia assumes. - In addition, UCU is establishing sector-specific and program-led advisory councils in domains such as Sales, Product Management, Cybersecurity, Brand Management, Digital Marketing, FinTech, Global Capability Centres (GCCs), and more — enabling deep vertical alignment and precision-driven curriculum design for each specialized track." },
+  { icon: <GraduationCap />, title: "Faculty of Titans", description: "UCU’s Professors of Practice and industry trainers hail from the world’s most respected firms in Consulting, Finance, Product Management, and Technology. They don’t just teach — they transfer wisdom, war stories, and winning strategies." },
+  { icon: <BadgeCheck />, title: "Day-Zero Industry Readiness", description: "Our learners don’t wait to be industry-ready — they arrive that way. Every program is infused with real-world simulations, case-led learning, and leadership grooming, ensuring fresh graduates hit the ground sprinting and experienced professionals ascend to strategic roles." },
+  { icon: <Target />, title: "Sector-Specific Leadership Tracks", description: "Whether it’s FinTech, Mobility, Sustainability, BFSI, IT/ITES, Manufacturing, Consulting, Data & Analytics, or Semiconductors — our curated programs are precision-built to meet the leadership needs of tomorrow’s enterprises." },
+  { icon: <TestTube2 />, title: "Faculty Certification with Corporate DNA", description: "UCU’s pioneering Faculty Certification initiative reimagines academic excellence by blending traditional pedagogy with corporate acumen. We certify educators to teach with the pulse of the industry — not just the pages of a textbook." },
+  { icon: <RefreshCcw />, title: "Continuous Learning for Continuous Relevance", description: "For working professionals, UCU is a lifelong partner. Our executive learning modules ensure you stay ahead of the curve — with the latest tools, trends, and transformations shaping your sector." },
 ];
 
 function IndustryApproachContent() {
   const rowsRef = useRef([]);
   const cardsRef = useRef([]);
-
+const [expandedIndex, setExpandedIndex] = useState(null);
+  const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
   useEffect(() => {
     // 🔹 Existing row animation observer
     const rowObserver = new IntersectionObserver(
@@ -97,27 +100,38 @@ function IndustryApproachContent() {
             ref={(el) => (rowsRef.current[rowIndex] = el)}
             className="row g-4 industry-row reveal-row justify-content-center"
           >
-            {rowItems.map((item, index) => (
-              <div
-                className="col-lg-4 col-md-6 d-flex justify-content-center"
-                key={index}
-              >
-                <div
-                  className="industry-card text-left h-100 w-100"
-                  ref={(el) => (cardsRef.current.push(el))}
-                >
-                  <div className="d-flex justify-content-center">
-                    <div className="industry-icon">{item.icon}</div>
+            {rowItems.map((item, index) => {
+              const cardIndex = rowIndex * 3 + index;
+              const isExpanded = expandedIndex === cardIndex;
+
+              return (
+                <div className="col-lg-4 col-md-6 d-flex justify-content-center" key={index}>
+                  <div
+                    className="industry-card text-left h-100 w-100"
+                    ref={(el) => cardsRef.current.push(el)}
+                  >
+                    <div className="d-flex justify-content-center">
+                      <div className="industry-icon">{item.icon}</div>
+                    </div>
+                    <h4 className="fw-bold mt-4 mb-3 text-center">{item.title}</h4>
+
+                    <p className="text-muted small text-center">
+                      {isExpanded
+                        ? item.description
+                        : item.description.slice(0, 120) + "..."}
+                    </p>
+
+                    <p
+                      className="text-primary text-center fw-bold mt-1"
+                      style={{ cursor: "pointer" }}
+                      onClick={() => toggleExpand(cardIndex)}
+                    >
+                      {isExpanded ? "Read Less" : "Read More"}
+                    </p>
                   </div>
-                  <h4 className="fw-bold mt-4 mb-3 text-center">
-                    {item.title}
-                  </h4>
-                  <p className="text-muted small text-center">
-                    {item.description}
-                  </p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         ))}
       </div>
