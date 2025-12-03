@@ -43,7 +43,7 @@ function StrategicCollabAbout() {
           Strategic Collaborations – <span className="text-green">Building Bridges for Impact</span>
         </h1>
         <p className="text-center mx-auto mb-4" style={{ maxWidth: "800px", color: "#555" }}>
-          At Universal Corporate University (UCU Chennai), strategic collaboration is not an add-on—it is a founding principle.
+          At <strong>Universal Corporate University (UCU Chennai),</strong> strategic collaboration is not an add-on—it is a founding principle.
           UCU actively partners with leading institutions, industries, SMEs, and government bodies across India and abroad to
           co-create a future-ready ecosystem of business education.
         </p>
@@ -65,7 +65,7 @@ function StrategicCollabAbout() {
         </Row>
       </Container>
 
-      <p className="mt-4">These partnerships power UCU’s mission to deliver industry-aligned, globally benchmarked, and socially inclusive business education—ensuring that every learner is equipped not just with knowledge, but with opportunity.</p>
+      <p className="mt-4">These partnerships power UCU’s mission to deliver <strong>industry-aligned, globally benchmarked, and socially inclusive business education</strong>—ensuring that every learner is equipped not just with knowledge, but with opportunity.</p>
     </div>
   );
 }

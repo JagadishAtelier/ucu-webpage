@@ -50,7 +50,11 @@ function AcademicCollab() {
         slidesPerView={3}
         navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          reverseDirection: true,
+        }}
         loop
         breakpoints={{
           320: { slidesPerView: 1 },
@@ -65,7 +69,7 @@ function AcademicCollab() {
               className="industry-collab-card shadow d-flex flex-column align-items-center text-center"
             >
               <div className="industry-collab-image"
-              style={{ height: "30vh", width: "100%", objectFit: "cover" }}
+                style={{ height: "30vh", width: "100%", objectFit: "cover" }}
               >
                 <img
                   src={item.image}
@@ -74,8 +78,8 @@ function AcademicCollab() {
                 />
               </div>
               <div className="industry-collab-bg">
-              <h5 className="fw-bold mb-2" style={{color:"white"}}>{item.head}</h5>
-              <p style={{ fontSize: "0.9rem" }}>{item.desc}</p>
+                <h5 className="fw-bold mb-2" style={{ color: "white" }}>{item.head}</h5>
+                <p style={{ fontSize: "0.9rem" }}>{item.desc}</p>
               </div>
             </div>
           </SwiperSlide>

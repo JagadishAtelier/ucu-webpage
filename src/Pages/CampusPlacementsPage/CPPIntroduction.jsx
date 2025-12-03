@@ -9,7 +9,7 @@ function CPPIntroduction() {
       </h1>
       <p className="story-paragraph">
         India’s most visionary companies are increasingly recognizing the
-        potential of Universal Corporate University (UCU Chennai)—an emerging
+        potential of <strong> Universal Corporate University (UCU Chennai) </strong> —an emerging
         business school built on the pillars of industry alignment, inclusive
         access, and global ambition. Though pre-launch, UCU has already captured
         attention for its bold vision and differentiated, career-first approach
@@ -28,10 +28,12 @@ function CPPIntroduction() {
       <p className="story-paragraph">
         Backed by a robust pipeline of corporate partnerships, government
         alliances, and global academic engagement, UCU is poised to become a
-        launchpad for next-generation business talent—rooted in India, yet
-        engineered for global impact. Our commitment transcends education; it is
-        a mission of career transformation at scale.
+        launchpad for next-generation business talent—<strong>rooted in India, yet
+        engineered for global impact.</strong> Our commitment transcends education; it is
+        a mission of <strong> career transformation at scale.</strong>
       </p>
+      <h5> Why Recruit from UCU?</h5>
+      <p>UCU is proud to be the <strong>school built for corporate partners.</strong> Our highest priority is listening to you—our industry collaborators—to co-create curriculum, co-deliver programs, and co-own the transformation of our talent pool. This is not just partnership; it is shared purpose.</p>
 
       <section className="founder-section">
         <div className="founder-image-wrapper">

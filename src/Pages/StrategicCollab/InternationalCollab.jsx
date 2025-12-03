@@ -91,7 +91,11 @@ function InternationalCollab() {
                 slidesPerView={3}
                 navigation
                 pagination={{ clickable: true }}
-                autoplay={{ delay: 3000 }}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                    reverseDirection: true,
+                }}
                 loop
                 breakpoints={{
                     320: { slidesPerView: 1 },
