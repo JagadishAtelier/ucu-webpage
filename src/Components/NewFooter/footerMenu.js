@@ -46,6 +46,8 @@ export const  footerMenu = [
       "Contact Us",
       "Campus",
       "Campus Placements",
+      "Societal impact",
+      "Budding Talent",
       "Consortium",
       "Careers",
     ],
