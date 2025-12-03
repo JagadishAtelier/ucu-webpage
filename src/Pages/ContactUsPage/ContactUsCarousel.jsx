@@ -93,9 +93,7 @@ function ContactUsCarousel() {
                     <p className="fw-bold m-0" style={{ color: "#0f1a48" }}>UCU Chapters</p>
                     <h2 className="fw-bold mt-2">Presence across major cities in India</h2>
                     <p className="text-muted mt-3">
-                        With a strong community of global HR leaders, UCU actively conducts networking events
-                        and activities in over 30 cities across India. Discover all the updates and key highlights
-                        of HR industry’s most happening episodes.
+                        India’s leading brands continue to strengthen their presence across major cities, ensuring that customers in metropolitan and Tier-1 locations have easy access to their products and services.
                     </p>
 
                     <div className="d-flex gap-3 mt-4">

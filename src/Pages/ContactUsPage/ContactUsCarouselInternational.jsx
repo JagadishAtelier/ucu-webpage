@@ -201,9 +201,7 @@ function ContactUsCarouselInternational() {
                     <p className="fw-bold m-0" style={{ color: "#0f1a48" }}>UCU Chapters</p>
                     <h2 className="fw-bold mt-2">Presence across leading countries worldwide</h2>
                     <p className="text-muted mt-3">
-                        With a strong community of global HR leaders, UCU actively conducts networking events
-                        and activities in over 30 cities across India. Discover all the updates and key highlights
-                        of HR industry’s most happening episodes.
+                        With a strong international footprint, the organization has established a presence across leading countries worldwide, ensuring global accessibility and seamless service delivery.
                     </p>
 
                     <div className="d-flex gap-3 mt-4">
