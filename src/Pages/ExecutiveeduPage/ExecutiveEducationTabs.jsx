@@ -68,7 +68,7 @@ function ExecutiveEducationTabs() {
     const [activeTab, setActiveTab] = useState(0);
     const navigate = useNavigate()
     const [showLeftArrow, setShowLeftArrow] = useState(false);
-const [showRightArrow, setShowRightArrow] = useState(true);
+    const [showRightArrow, setShowRightArrow] = useState(true);
 
     const handleTabClick = (index) => {
         // If XEL Contact tab (last one) clicked → navigate
@@ -79,45 +79,45 @@ const [showRightArrow, setShowRightArrow] = useState(true);
 
         setActiveTab(index);
     };
-const scrollTabs = (direction) => {
-    const box = document.getElementById("tabsScrollBox");
-    const scrollAmount = 200;
+    const scrollTabs = (direction) => {
+        const box = document.getElementById("tabsScrollBox");
+        const scrollAmount = 200;
 
-    if (!box) return;
+        if (!box) return;
 
-    if (direction === "right") {
-        box.scrollLeft += scrollAmount;
-    } else {
-        box.scrollLeft -= scrollAmount;
-    }
+        if (direction === "right") {
+            box.scrollLeft += scrollAmount;
+        } else {
+            box.scrollLeft -= scrollAmount;
+        }
 
-    setTimeout(() => handleScroll(), 100); // update arrow visibility
-};
+        setTimeout(() => handleScroll(), 100); // update arrow visibility
+    };
 
     const handleScroll = () => {
-    const box = document.getElementById("tabsScrollBox");
+        const box = document.getElementById("tabsScrollBox");
 
-    if (!box) return;
+        if (!box) return;
 
-    const maxScroll = box.scrollWidth - box.clientWidth;
+        const maxScroll = box.scrollWidth - box.clientWidth;
 
-    setShowLeftArrow(box.scrollLeft > 0);
-    setShowRightArrow(box.scrollLeft < maxScroll);
-};
+        setShowLeftArrow(box.scrollLeft > 0);
+        setShowRightArrow(box.scrollLeft < maxScroll);
+    };
 
 
     return (
         <div>
             <div className="eep-tabs-wrapper">
                 {/* Left Arrow */}
-{showLeftArrow && (
-    <button
-        className="eep-tab-arrow left"
-        onClick={() => scrollTabs("left")}
-    >
-        <ChevronLeft />
-    </button>
-)}
+                {showLeftArrow && (
+                    <button
+                        className="eep-tab-arrow left"
+                        onClick={() => scrollTabs("left")}
+                    >
+                        <ChevronLeft />
+                    </button>
+                )}
 
                 {/* Scrollable Tabs */}
                 <div className="eep-tabs-scroll" id="tabsScrollBox" onScroll={handleScroll}>
@@ -133,14 +133,14 @@ const scrollTabs = (direction) => {
                 </div>
 
                 {/* Right Arrow */}
-{showRightArrow && (
-    <button
-        className="eep-tab-arrow right"
-        onClick={() => scrollTabs("right")}
-    >
-        <ChevronRight />
-    </button>
-)}
+                {showRightArrow && (
+                    <button
+                        className="eep-tab-arrow right"
+                        onClick={() => scrollTabs("right")}
+                    >
+                        <ChevronRight />
+                    </button>
+                )}
             </div>
 
             <Swiper

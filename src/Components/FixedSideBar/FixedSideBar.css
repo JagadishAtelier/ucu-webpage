@@ -164,6 +164,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #1535b4 ;
   font-size: 18px;
   transition: transform 0.3s ease, color 0.3s ease;
   animation: floatIcon 3s ease-in-out infinite;
@@ -186,3 +187,70 @@
 .sidebarItem:hover .animatedIcon {
   text-shadow: 0 0 10px rgba(0, 255, 120, 0.5);
 }
+
+
+/* -----------------------
+   MOBILE SLIDE BEHAVIOR
+------------------------*/
+@media (max-width: 768px) {
+  .fixedSidebar {
+    right: -70px; /* hide completely */
+    transition: right 0.35s ease-in-out;
+  }
+
+  .fixedSidebar.openSidebar {
+    right: 0; /* Slide in */
+  }
+}
+
+/* -----------------------
+   MOBILE ARROW BUTTON
+------------------------*/
+/* ===========================
+   ARROW BUTTON (DESKTOP + MOBILE)
+=========================== */
+.sidebarArrowBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: gainsboro;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 8px 0 0 8px;
+  font-size: 20px;
+  z-index: 1000000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .sidebarArrowBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: gainsboro;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+    font-size: 20px;
+    z-index: 1000000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  }
+    .openSidebar + .sidebarArrowBtn {
+    top: 10%; /* Place arrow at top */
+    transform: translateY(0);
+    display: none;
+  }
+}
+
+

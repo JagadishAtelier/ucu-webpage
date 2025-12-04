@@ -238,7 +238,7 @@
   padding: 10px 5px;
   cursor: pointer;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 16px;
   color: hsl(0, 0%, 33%);
   transition: all 0.3s ease;
   min-width: max-content;
@@ -786,7 +786,7 @@
 .eep-tabs-wrapper {
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 95%;
     position: relative;
     margin: 1% auto;
 }
