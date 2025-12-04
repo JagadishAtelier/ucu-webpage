@@ -494,19 +494,14 @@ export const menuDataMobile = [
   {
     label: "Executive Education",
     placement: "bottom",
-    link: "/program-customised-learning-programs-for-corporate-professionals",
     submenu: [
       {
         label: "Customised Learning Programs for Corporate Professionals",
-        link: "/program/program-customised-learning-programs-for-corporate-professionals",
-        submenu: [
-          {
-            label: "Management Development Programs (MDPs)",
-            link: "/program/MDPs",
-            className: "sublink-custom",
-            customHover: false,
-          },
-        ],
+        link: "/executive-edu",
+      },
+      {
+        label: "Management Development Programs (MDPs)",
+        link:"/program/MDPs"
       },
       {
         label: "1 Year CXO Accelerator Program with Campus Immersion",

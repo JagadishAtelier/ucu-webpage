@@ -102,29 +102,27 @@ const Navbar = () => {
           <li key={item.label} className="menu-item">
             {item.submenu && item.submenu.length > 0 ? (
               <>
-                <button
-                  className={`menu-btn depth-${depth} ${
-                    openMenus[item.label] ? "open" : ""
-                  }`}
-                  onClick={() => toggleSubmenu(item.label)}
-                >
-                  {item.label}
-                  {depth === 0 ? (
-                    <ChevronDown
-                      size={16}
-                      className={`chevron ${
-                        openMenus[item.label] ? "rotated" : ""
-                      }`}
-                    />
-                  ) : (
-                    <ChevronRight
-                      size={16}
-                      className={`chevron ${
-                        openMenus[item.label] ? "rotated" : ""
-                      }`}
-                    />
-                  )}
-                </button>
+<button
+  className={`menu-btn depth-${depth} ${openMenus[item.label] ? "open" : ""}`}
+  onClick={() => {
+    toggleSubmenu(item.label); // open submenu
+    if (item.link) navigate(item.link); // navigate if link exists
+  }}
+>
+  {item.label}
+  {depth === 0 ? (
+    <ChevronDown
+      size={16}
+      className={`chevron ${openMenus[item.label] ? "rotated" : ""}`}
+    />
+  ) : (
+    <ChevronRight
+      size={16}
+      className={`chevron ${openMenus[item.label] ? "rotated" : ""}`}
+    />
+  )}
+</button>
+
                 {openMenus[item.label] &&
                   renderMenuItems(item.submenu, depth + 1)}
               </>
