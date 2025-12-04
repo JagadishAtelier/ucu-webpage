@@ -24,7 +24,7 @@ const TAB_LIST = [
     "Executive phD",
     "Academic Accelerator",
     "Leadership Coach Academy",
-    "Executive pg Certificate",
+    // "Executive pg Certificate",
     "MDPs",
     "XEL Contact"
 ];
