@@ -7,21 +7,21 @@ function ContactPageForm() {
   const [states, setStates] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("");
 
-const describesYou = [
-  { name: "I'm a student looking for an undergraduate course" },
-  { name: "I want to pursue a Full-time Master's program and have a Work-exp of 0-3 years" },
-  { name: "I want to pursue a Full-time Master's program and have a Work-exp of 3+ years" },
-  { name: "I want to pursue a part-time Executive MBA - Online (via ELO) (Work Ex. > 3 Years)" },
-  { name: "I want to pursue a Luxury Management Program" },
-  { name: "I want to pursue a Full-time Master's program and have graduated from a quantitative discipline" },
-  { name: "I want to further my family business with education" },
-  { name: "I want to be a Data Scientist" },
-  { name: "I want to Join Financial Technology Program" },
-  { name: "I want to do a Doctorate in Business Administration" },
-  { name: "I'm a parent of a future student and I'm looking for options" },
-  { name: "I'm an UCU Alumni and I'd love to keep in touch" },
-  { name: "I'm looking to recruit from the best business schools" }
-];
+  const describesYou = [
+    { name: "I'm a student looking for an undergraduate course" },
+    { name: "I want to pursue a Full-time Master's program and have a Work-exp of 0-3 years" },
+    { name: "I want to pursue a Full-time Master's program and have a Work-exp of 3+ years" },
+    { name: "I want to pursue a part-time Executive MBA - Online (via ELO) (Work Ex. > 3 Years)" },
+    { name: "I want to pursue a Luxury Management Program" },
+    { name: "I want to pursue a Full-time Master's program and have graduated from a quantitative discipline" },
+    { name: "I want to further my family business with education" },
+    { name: "I want to be a Data Scientist" },
+    { name: "I want to Join Financial Technology Program" },
+    { name: "I want to do a Doctorate in Business Administration" },
+    { name: "I'm a parent of a future student and I'm looking for options" },
+    { name: "I'm an UCU Alumni and I'd love to keep in touch" },
+    { name: "I'm looking to recruit from the best business schools" }
+  ];
 
 
   // Fetch all countries with states
@@ -62,69 +62,69 @@ const describesYou = [
           <h1 className="mb-0 display-5 fw-bold text-uppercase">
             <span style={{ color: "#5ac501" }}>connect with us </span> through our
           </h1>
-<div className="contactSection-container">
-  <div className="contactSection-grid">
+          <div className="contactSection-container">
+            <div className="contactSection-grid">
 
-    {/* Address */}
-    <div
-      className="contactSection-card"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=900&q=80')",
-      }}
-    >
-      <div className="contactSection-overlay"></div>
+              {/* Address */}
+              <div
+                className="contactSection-card"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=900&q=80')",
+                }}
+              >
+                <div className="contactSection-overlay"></div>
 
-      <div className="contactSection-icon">
-        <MapPin size={28} />
-      </div>
+                <div className="contactSection-icon">
+                  <MapPin size={28} />
+                </div>
 
-      <h3>Address</h3>
-      <p>UCU Road, UCU University</p>
-      <p>Chennai - 600 025</p>
-      <p>Tamil Nadu</p>
-    </div>
+                <h3>Address</h3>
+                <p>UCU Road, UCU University</p>
+                <p>Chennai - 600 025</p>
+                <p>Tamil Nadu</p>
+              </div>
 
-    {/* Email */}
-    <div
-      className="contactSection-card"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=900&q=80')",
-      }}
-    >
-      <div className="contactSection-overlay"></div>
+              {/* Email */}
+              <div
+                className="contactSection-card"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=900&q=80')",
+                }}
+              >
+                <div className="contactSection-overlay"></div>
 
-      <div className="contactSection-icon-email">
-        <MailOpen size={28} />
-      </div>
-      <div className="d-flex flex-column justify-contnet-center align-items-center my-auto">
-      <h3>Email</h3>
-      <p>University : ucu@gmail.com</p>
-      </div>
-    </div>
+                <div className="contactSection-icon-email">
+                  <MailOpen size={28} />
+                </div>
+                <div className="d-flex flex-column justify-contnet-center align-items-center my-auto">
+                  <h3>Email</h3>
+                  <p>University : ucu@gmail.com</p>
+                </div>
+              </div>
 
-    {/* Phone */}
-    <div
-      className="contactSection-card"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80')",
-      }}
-    >
-      <div className="contactSection-overlay"></div>
+              {/* Phone */}
+              <div
+                className="contactSection-card"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80')",
+                }}
+              >
+                <div className="contactSection-overlay"></div>
 
-      <div className="contactSection-icon">
-        <PhoneCall size={28} />
-      </div>
-      <div className="d-flex flex-column justify-contnet-center align-items-center my-auto">
-      <h3>Phone</h3>
-      <p>Office : 9876543210</p>
-      </div>
-    </div>
+                <div className="contactSection-icon">
+                  <PhoneCall size={28} />
+                </div>
+                <div className="d-flex flex-column justify-contnet-center align-items-center my-auto">
+                  <h3>Phone</h3>
+                  <p>Office : 9876543210</p>
+                </div>
+              </div>
 
-  </div>
-</div>
+            </div>
+          </div>
 
 
 
@@ -323,21 +323,21 @@ const describesYou = [
                   </Col>
 
                   <Col lg={6}>
-<Form.Group>
-  <Form.Label className="form-label-uni">What Describes You Best?*</Form.Label>
+                    <Form.Group>
+                      <Form.Label className="form-label-uni">What Describes You Best?*</Form.Label>
 
-  <Dropdown className="describes-dropdown-contact-us">
-    <Dropdown.Toggle className="describes-btn-contact-us w-100">
-      -- Choose Option --
-    </Dropdown.Toggle>
+                      <Dropdown className="describes-dropdown-contact-us">
+                        <Dropdown.Toggle className="describes-btn-contact-us w-100">
+                          -- Choose Option --
+                        </Dropdown.Toggle>
 
-    <Dropdown.Menu className="describes-menu-contact-us w-100">
-      {describesYou.map((d) => (
-        <Dropdown.Item key={d.name}>{d.name}</Dropdown.Item>
-      ))}
-    </Dropdown.Menu>
-  </Dropdown>
-</Form.Group>
+                        <Dropdown.Menu className="describes-menu-contact-us w-100 px-0 py-2 transition-none">
+                          {describesYou.map((d) => (
+                            <Dropdown.Item key={d.name}>{d.name}</Dropdown.Item>
+                          ))}
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </Form.Group>
                   </Col>
                 </Row>
 
