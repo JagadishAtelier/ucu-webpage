@@ -21,7 +21,7 @@ const data = [
     head: "<span > Mission</span>",
     para: (
       <>
-      
+
         <ul className="mission-list text-lg-right">
           <li className="mb-2">
             To co-create and co-deliver cutting-edge, contemporary, and
@@ -64,55 +64,61 @@ function AboutPhil() {
         minHeight: "60vh",
       }}
     >
-      <div 
-        className="w-100 h-100 p-3 p-lg-5" 
-        style={{ 
+      <div
+        className="w-100 h-100 p-3 p-lg-5"
+        style={{
           backgroundColor: 'rgba(0, 0, 0, 0.58)', // Adjust the '0.4' value to control opacity
           padding: '1px' // Add a small padding to ensure the overlay takes effect
         }}
       >
-      <div className="row w-lg-100 py-4 py-lg-0 justify-content-center">
-        {data.map((item, index) => (
-          <div
-            key={index}
-            className={`col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start mb-4 px-3 ${
-              index === 0
+        <div className="row w-lg-100 py-4 py-lg-0 justify-content-center">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className={`col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start mb-4 px-3 ${index === 0
                 ? "text-left align-items-lg-start border-end-lg"
                 : "text-right align-items-lg-start"
-            }`}
-            data-aos={index === 0 ? "fade-right" : "fade-left"}
-          >
-            <div
-              className="d-flex justify-content-center align-items-center my-2 p-2 rounded-circle"
-              style={{ width: "60px", height: "60px",backgroundColor: "rgba(255, 255, 255, 0.93)", border:'3px solid rgb(152 159 208)' }}
+                }`}
+              data-aos={
+                window.innerWidth < 768
+                  ? ""
+                  : index === 0
+                    ? "fade-right"
+                    : "fade-left"
+              }
+
             >
-              <img
-                src={item.icon}
-                alt={item.head}
-                style={{ width: "100%", height: "100%", objectFit: "contain" }}
-              />
+              <div
+                className="d-flex justify-content-center align-items-center my-2 p-2 rounded-circle"
+                style={{ width: "60px", height: "60px", backgroundColor: "rgba(255, 255, 255, 0.93)", border: '3px solid rgb(152 159 208)' }}
+              >
+                <img
+                  src={item.icon}
+                  alt={item.head}
+                  style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                />
+              </div>
+
+              <h1 className="fw-bold vission-h1 fs-2 mb-3 text-center text-lg-start" dangerouslySetInnerHTML={{ __html: item.head }}>
+              </h1>
+              {typeof item.para === "string" ? (
+                <p className=" vission-p fs-6 mb-3 text-lg-start">{item.para}</p>
+              ) : (
+                <div className=" vission-p fs-6 mb-3 text-lg-right">{item.para}</div>
+              )}
+
+              {/* Add supplementary image under Vision */}
+              {item.image && index === 0 && (
+                <img
+                  src={item.image}
+                  alt="Vision Illustration"
+                  className="vision-supplementary-image mt-0"
+                  style={{ maxWidth: "100%", borderRadius: "10px" }}
+                />
+              )}
             </div>
-
-            <h1 className="fw-bold vission-h1 fs-2 mb-3 text-center text-lg-start" dangerouslySetInnerHTML={{ __html: item.head }  }>
-            </h1>
-            {typeof item.para === "string" ? (
-              <p className=" vission-p fs-6 mb-3 text-lg-start">{item.para}</p>
-            ) : (
-              <div className=" vission-p fs-6 mb-3 text-lg-right">{item.para}</div>
-            )}
-
-            {/* Add supplementary image under Vision */}
-            {item.image && index === 0 && (
-              <img
-                src={item.image}
-                alt="Vision Illustration"
-                className="vision-supplementary-image mt-0"
-                style={{ maxWidth: "100%", borderRadius: "10px" }}
-              />
-            )}
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </div>
   );

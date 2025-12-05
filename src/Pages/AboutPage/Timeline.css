@@ -139,7 +139,7 @@
     transform: none;
   }
   .timeline-carousel{
-    margin: 0 !important;
+    margin: 0 0 2rem !important;
   }
 
   .timeline-row {
