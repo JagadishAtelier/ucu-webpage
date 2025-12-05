@@ -36,7 +36,6 @@ const TAB_COMPONENTS = [
     <EEPPhd />, // Executive phD
     <EEPAcademy />, // Academic Accelerator
     <LCPBanner />, // Leadership Coach Academy
-    <div>Executive PG Certificate Content</div>, // Executive pg Certificate
     <EEPMdps />, // MDPs
     <div>XEL Contact Content</div>, // XEL Contact
 ];
