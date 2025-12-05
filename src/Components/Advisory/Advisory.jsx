@@ -682,7 +682,7 @@ XLRI, Jamshedpur`,
         image: "/pandi.jpeg",
         name: "Pandiarajan K",
         prof: "Executive Chairman, CIEL HR Group",
-        comLogo: `https://media.licdn.com/dms/image/v2/D560BAQF4pRssWlcueA/company-logo_200_200/company-logo_200_200/0/1730888965775/cielhr_logo?e=1766620800&v=beta&t=lf2lAxHTH-nhZ5s50HASS0JzsaXphA7s0cOcGMSEwg0`,
+        comLogo: `/celLogo.jpeg`,
         linkedIn:"https://www.linkedin.com/posts/cielhr_familyvalues-workplaceculture-leadershipinsights-ugcPost-7399871995070464000-NLFL?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAARVYN8BNToQ-t-WTTd7nyJAovNE7C3Pv78&utm_campaign=whatsapp"
       },
       // { image :image2,
