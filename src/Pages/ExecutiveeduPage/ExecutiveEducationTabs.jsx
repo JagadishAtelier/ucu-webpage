@@ -47,7 +47,6 @@ const BANNER_HEADINGS = [
     "UCU Executive PhD in Management (EFPM)",
     "Faculty Development Program",
     "Leadership Coaching Program",
-    "Executive pg Certificate",
     "Management Development Programs",
     "XEL Contact"
 ];

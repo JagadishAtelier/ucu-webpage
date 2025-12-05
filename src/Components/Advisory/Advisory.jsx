@@ -678,10 +678,13 @@ XLRI, Jamshedpur`,
     sec2Para:
       "The CHRO Advisory Council (CHRAC) serves as a strategic body that brings together senior human resource leaders, academic experts, and industry professionals to guide the university on matters related to workforce development, talent management, and organizational growth. The council provides insights on aligning HR strategies with institutional goals, fostering diversity and inclusion, and preparing students for the evolving demands of the global workplace. By bridging academia and industry, CHRAC ensures that the university’s policies, programs, and initiatives remain innovative, future-focused, and responsive to the needs of both students and employers.",
     staff: [
-      // { image :image1,
-      //   name :"Dr. M. Balaji (BALA)",
-      //   prof : "Founder, CU"
-      // },
+      {
+        image: "https://media.licdn.com/dms/image/v2/D5603AQFoPDZZvjUwPA/profile-displayphoto-scale_200_200/B56Zi86ypNG4Ag-/0/1755516186164?e=1766620800&v=beta&t=D0R0YK5cmfmTFp2Xs6rv7rW4xj3xtDEYKxD9D_k7xJ8",
+        name: "Pandiarajan K",
+        prof: "Executive Chairman, CIEL HR Group",
+        comLogo: `https://media.licdn.com/dms/image/v2/D560BAQF4pRssWlcueA/company-logo_200_200/company-logo_200_200/0/1730888965775/cielhr_logo?e=1766620800&v=beta&t=lf2lAxHTH-nhZ5s50HASS0JzsaXphA7s0cOcGMSEwg0`,
+        linkedIn:"https://www.linkedin.com/posts/cielhr_familyvalues-workplaceculture-leadershipinsights-ugcPost-7399871995070464000-NLFL?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAARVYN8BNToQ-t-WTTd7nyJAovNE7C3Pv78&utm_campaign=whatsapp"
+      },
       // { image :image2,
       //   name :"Ritwick Banerjea",
       //   prof : "Student Mentorship & Welfare"
