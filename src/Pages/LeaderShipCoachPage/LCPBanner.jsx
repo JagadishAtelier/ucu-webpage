@@ -6,10 +6,12 @@ import ClientProfile from "./ClientProfile";
 import LCPWhy from "./LCPWhy";
 import LCPContact from "./LCPContact";
 import OurExperts from './OurExperts'
+import EEPPhase from "./EEPPhase";
 function LCPBanner() {
     return (
         <div className='captital-campus-content-sec mt-4'>
             <LCPPower />
+            <EEPPhase/>
             <LCPGrid />
             <ClientProfile />
             <OurExperts/>

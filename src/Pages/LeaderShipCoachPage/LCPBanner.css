@@ -600,4 +600,7 @@
   .lcpPower-image-col{
     width: 100%;
   }
+  .clientProfile-logos{
+    grid-template-columns: repeat(3,1fr);
+  }
 }
