@@ -429,7 +429,20 @@
   max-height: 250px;
   overflow-y: auto;
   background-color: white;
+  transition: none !important;
 }
+
+
+/* Form dropdown disables hover */
+.describes-dropdown-contact-us:hover .dropdown-menu {
+  display: none !important;
+}
+
+/* Form dropdown shows correctly on click */
+.describes-dropdown-contact-us .dropdown-menu.show {
+  display: block !important;
+}
+
 
 
 
