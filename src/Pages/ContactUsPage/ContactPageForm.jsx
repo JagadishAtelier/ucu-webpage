@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Mail, MailOpen, Map, MapPin, Phone, PhoneCall } from "lucide-react";
-import { Col, Container, Form, Row, Button } from "react-bootstrap";
+import { Col, Container, Form, Row, Button, Dropdown } from "react-bootstrap";
 
 function ContactPageForm() {
   const [countries, setCountries] = useState([]);
@@ -323,15 +323,21 @@ const describesYou = [
                   </Col>
 
                   <Col lg={6}>
-                    <Form.Group>
-                      <Form.Label className="form-label-uni">What Describes You Best?*</Form.Label>
-                      <Form.Select className="describes-select" disabled={!describesYou.length}>
-                        <option value="">-- Choose Option --</option>
-                        {describesYou.map((d) => (
-                          <option key={d.name} value={d.name}>{d.name}</option>
-                        ))}
-                      </Form.Select>
-                    </Form.Group>
+<Form.Group>
+  <Form.Label className="form-label-uni">What Describes You Best?*</Form.Label>
+
+  <Dropdown className="describes-dropdown-contact-us">
+    <Dropdown.Toggle className="describes-btn-contact-us w-100">
+      -- Choose Option --
+    </Dropdown.Toggle>
+
+    <Dropdown.Menu className="describes-menu-contact-us w-100">
+      {describesYou.map((d) => (
+        <Dropdown.Item key={d.name}>{d.name}</Dropdown.Item>
+      ))}
+    </Dropdown.Menu>
+  </Dropdown>
+</Form.Group>
                   </Col>
                 </Row>
 

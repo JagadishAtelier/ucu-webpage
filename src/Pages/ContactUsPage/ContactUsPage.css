@@ -410,11 +410,28 @@
   background-color: #5ac501;
   color: white;
 }
-.describes-select option {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
+.describes-dropdown-contact-us {
+  width: 100%;
 }
+
+.describes-btn-contact-us {
+  width: 100%;
+  text-align: left;
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.describes-menu-contact-us {
+  white-space: normal !important;
+  width: 100% !important;
+  max-height: 250px;
+  overflow-y: auto;
+  background-color: white;
+}
+
+
 
 
 @media (max-width:768px) {
