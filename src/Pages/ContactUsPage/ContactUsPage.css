@@ -430,6 +430,7 @@
   overflow-y: auto;
   background-color: white;
   transition: none !important;
+  font-size: 14px;
 }
 
 

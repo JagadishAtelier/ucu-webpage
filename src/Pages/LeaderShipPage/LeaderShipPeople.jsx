@@ -18,6 +18,7 @@ const data = [
 ]
 function LeaderShipPeople() {
   return (
+    <>
     <div className='mt-5'>
         <p className='text-center leader-top-head mb-3'>LEADERSHIP</p>
 
@@ -37,6 +38,26 @@ function LeaderShipPeople() {
             </div>
         </div>
     </div>
+    <div className='mt-5'>
+        <p className='text-center leader-top-head mb-3'>LEADERSHIP</p>
+
+        <h1 className='text-center mb-5 display-4 fw-bold col-12'>Meet our <span style={{color:"#5ac501"}}> leadership team.</span></h1>
+
+        <div className='d-grid px-3 px-lg-5'>
+            <div className='row row-gap-5'>
+            {data.map((item , i)=>(
+               <div className='col-lg-3 col-12 col-md-6 d-flex flex-column gap-2 align-items-center'>
+                    <div className='leader-ship-bg-design'>
+                        <img src={item.image} className='leader-ship-bg-design-img'/>
+                    </div>
+                    <p className='m-0 leader-name-color fs-3'>{item.name}</p>
+                    <p className='m-0'>{item.prof}</p>
+                </div>
+            ))}
+            </div>
+        </div>
+    </div>
+    </>
   )
 }
 
