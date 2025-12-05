@@ -8,18 +8,18 @@ function ContactPageForm() {
   const [selectedCountry, setSelectedCountry] = useState("");
 
 const describesYou = [
-  // { name: "I'm a student looking for an undergraduate course" },
-  // { name: "I want to pursue a Full-time Master's program and have a Work-exp of 0-3 years" },
-  // { name: "I want to pursue a Full-time Master's program and have a Work-exp of 3+ years" },
-  // { name: "I want to pursue a part-time Executive MBA - Online (via ELO) (Work Ex. > 3 Years)" },
-  // { name: "I want to pursue a Luxury Management Program" },
-  // { name: "I want to pursue a Full-time Master's program and have graduated from a quantitative discipline" },
+  { name: "I'm a student looking for an undergraduate course" },
+  { name: "I want to pursue a Full-time Master's program and have a Work-exp of 0-3 years" },
+  { name: "I want to pursue a Full-time Master's program and have a Work-exp of 3+ years" },
+  { name: "I want to pursue a part-time Executive MBA - Online (via ELO) (Work Ex. > 3 Years)" },
+  { name: "I want to pursue a Luxury Management Program" },
+  { name: "I want to pursue a Full-time Master's program and have graduated from a quantitative discipline" },
   { name: "I want to further my family business with education" },
-  // { name: "I want to be a Data Scientist" },
-  // { name: "I want to Join Financial Technology Program" },
-  // { name: "I want to do a Doctorate in Business Administration" },
+  { name: "I want to be a Data Scientist" },
+  { name: "I want to Join Financial Technology Program" },
+  { name: "I want to do a Doctorate in Business Administration" },
   { name: "I'm a parent of a future student and I'm looking for options" },
-  { name: "I'm an SP Jain Alumni and I'd love to keep in touch" },
+  { name: "I'm an UCU Alumni and I'd love to keep in touch" },
   { name: "I'm looking to recruit from the best business schools" }
 ];
 
@@ -325,7 +325,7 @@ const describesYou = [
                   <Col lg={6}>
                     <Form.Group>
                       <Form.Label className="form-label-uni">What Describes You Best?*</Form.Label>
-                      <Form.Select disabled={!describesYou.length}>
+                      <Form.Select className="describes-select" disabled={!describesYou.length}>
                         <option value="">-- Choose Option --</option>
                         {describesYou.map((d) => (
                           <option key={d.name} value={d.name}>{d.name}</option>

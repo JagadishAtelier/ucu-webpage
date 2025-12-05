@@ -410,6 +410,12 @@
   background-color: #5ac501;
   color: white;
 }
+.describes-select option {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 
 @media (max-width:768px) {
   .contact-card{
