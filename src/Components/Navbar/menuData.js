@@ -225,10 +225,50 @@ export const menuData = [
             className: "sublink-custom",
             customHover: false,
           },
+          // {
+          //   label: "Executive & Advanced Executive PG Certificate Programs",
+          //   className: "sublink-custom",
+          //   customHover: false,
+          //   submenu: [
+          //     {
+          //       label: "FinTech Ascend",
+          //       link: "/program/FinTech-Ascend",
+          //       customHover: false,
+          //     },
+          //     {
+          //       label: "FinTech Vanguard",
+          //       link: "/program/FinTech-Vanguard",
+          //       customHover: false,
+          //     },
+          //     {
+          //       label: "GCC-Catalyst",
+          //       link: "/program/GCC-Catalyst",
+          //       customHover: false,
+          //     },
+          //     {
+          //       label: "GCC Elevate",
+          //       link: "/program/GCC-Elevate",
+          //       customHover: false,
+          //     },
+          //     {
+          //       label: "HealthTech Navigate",
+          //       link: "/program/HealthTech-Navigate",
+          //       customHover: false,
+          //     },
+          //     {
+          //       label: "HealthTech Pinnacle",
+          //       link: "/program/HealthTech-Pinnacle",
+          //       customHover: false,
+          //     },
+          //   ]
+          // },
+        {
+        label: "Executive Post Graduate Certificate Programmes",
+        className: "sublink-custom",
+        customHover: false,
+        submenu: [
           {
-            label: "Executive & Advanced Executive PG Certificate Programs",
-            className: "sublink-custom",
-            customHover: false,
+            label: "Industry Sector Programs",
             submenu: [
               {
                 label: "FinTech Ascend",
@@ -260,8 +300,10 @@ export const menuData = [
                 link: "/program/HealthTech-Pinnacle",
                 customHover: false,
               },
-            ]
+          ]
           },
+        ],
+      },
         ],
       },
       {
