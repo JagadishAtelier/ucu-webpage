@@ -4,8 +4,11 @@ import { LuHourglass } from "react-icons/lu";
 import "./PgApplications.css";
 import { div } from "framer-motion/client";
 import { PersonStanding, User } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 export default function PgApplications() {
+      const { pathname } = useLocation();
+      const isPGdM = pathname.includes("pgdm");
   return (
     <div className="pg-applications">
       {/* Applications Open */}
@@ -37,7 +40,7 @@ export default function PgApplications() {
         <div className="icon"><LuHourglass size={24} /></div>
         <div>
           <p className="text-small">Duration</p>
-          <p className="text-large">1 years</p>
+          <p className="text-large">{isPGdM ? 2 : 1} years</p>
         </div>
       </div>
 
