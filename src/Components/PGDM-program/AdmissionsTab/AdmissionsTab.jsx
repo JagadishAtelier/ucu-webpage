@@ -1,7 +1,7 @@
 import React from "react";
 import "./AdmissionsTab.css";
 import { useLocation } from "react-router-dom";
-import PGPMAdmission from "../PGPMAdmission/PGPMAdmission";
+import PGPMAdmission from "../../../Pages/PgprogramPage/pgTabs/PGPMAdmission/PGPMAdmission";
 
 export default function AdmissionsTab() {
   const { pathname } = useLocation();
@@ -10,7 +10,7 @@ export default function AdmissionsTab() {
     <>
       {isPGPM ? (
         <section className="admissions-tab container p-3 mx-auto  my-1">
-          <PGPMAdmission />
+          <PGPMAdmission/>
         </section>
       ) : (
         <section className="admissions-tab container p-3 mx-auto  my-1">

@@ -91,8 +91,7 @@ function SpecificationSection() {
             </h1>
 
             <p className="pt">
-                The PGPM program offers specialisations allowing students to gain deep
-                expertise in two disciplines...
+The PGPM program offers specialisations allowing students to gain deep expertise in two disciplines. In addition to Finance, Marketing, and Operations, you can pursue dual majors in Analytics, Data Science, Consulting and Strategy, gaining expertise tailored to today’s complex business environment. These specialisations, designed in consultation with industry leaders, emphasize problem-solving and in-depth industry competencies.
             </p>
 
             <div className="row mt-5 mb-3">

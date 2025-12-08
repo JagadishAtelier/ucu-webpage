@@ -16,13 +16,23 @@ import SummerInternship from "./SummerInternship";
 import Electives from "./Electives";
 import OerationTable from "./OerationTable";
 import AimlaTable from "./AimlaTable";
-
+import { useLocation } from "react-router-dom";
+import PGPMCurricullam from "../../../Pages/PgprogramPage/pgTabs/PGPMCurricullam/PGPMCurricullam";
 
 const Curriculum = () => {
   // const [key, setKey] = useState("marketing");
-
+    const { pathname } = useLocation();
+    const isPGPM = pathname.includes("pgpm");
   return (
-    <section className="pgdm-section">
+    <>
+    {isPGPM ? (
+          <section className="pgdm-section">
+      <div className="container my-4">
+        <PGPMCurricullam/>
+      </div>
+    </section>
+    ):(
+          <section className="pgdm-section">
       <div className="container my-4">
         {/* Header */}
         <div className="text-left mb-5">
@@ -220,6 +230,9 @@ A program with cutting-edge analytics, industry co-creation, and global relevanc
         </div>
       </div>
     </section>
+    )
+    }
+    </>
   );
 };
 
