@@ -1,0 +1,66 @@
+.thought-section {
+  background: #f7f7f7;
+}
+
+
+
+.number-big {
+  font-size: 58px;
+  font-weight: 700;
+  color: rgb(90, 197, 1);;
+  margin-bottom: 10px;
+}
+
+.content-text {
+  font-size: 16px;
+  color: #444;
+  width: 90%;
+}
+
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 180px);
+  gap: 0;
+}
+
+.leader-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.leader-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.leader-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+}
+
+.leader-info h5 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.leader-info p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .leaders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}

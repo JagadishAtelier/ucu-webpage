@@ -1,0 +1,37 @@
+.curriculum-section {
+  background-color: #005bd4; /* same as screenshot */
+}
+
+.highlight-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: #63db00;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 100%;
+}
+.curiculum.image-wrapper{
+    width: 100% !important;
+}
+.image-wrapper img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+.link-underline {
+  color: #5ac501;
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .highlight-number {
+    font-size: 40px;
+  }
+  .description {
+    max-width: 100%;
+  }
+}

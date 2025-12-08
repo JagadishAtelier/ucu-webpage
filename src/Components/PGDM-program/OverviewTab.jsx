@@ -1,12 +1,14 @@
 import React from "react";
 import OverviewAbout from "./OverviewTab/OverviewAbout";
 import OverviewObjective from "./OverviewTab/OverviewObjective";
-import bgImage from "../../../Assets/aboutPageImage/vision_mission_bg1.png";
+import bgImage from "../../Assets/aboutPageImage/vision_mission_bg1.png";
 import OverviewKeyhighlights from "./OverviewTab/OverviewKeyhighlights";
 import OverviewIndustryconnect from "./OverviewTab/OverviewIndustryconnect";
 import OverviewParticipant from "./OverviewTab/OverviewParticipant";
 import { useLocation } from "react-router-dom";
 import SpecificationSection from "./SpecificationSection/SpecificationSection";
+import ThoughtLeadersSection from "./OverviewTab/ThoughtLeadersSection";
+import CurriculumOverview from "./OverviewTab/CurriculumOverview";
 function OverviewTab() {
     const { pathname } = useLocation();
     const isPGPM = pathname.includes("pgpm");
@@ -33,14 +35,18 @@ function OverviewTab() {
             <div className="container my-1 p-3">
                 <OverviewKeyhighlights />
             </div>
+           
+            <ThoughtLeadersSection/>
             {isPGPM && (
                 <div className="container my-1 p-3">
                     <SpecificationSection />
                 </div>
             )}
+             
             <div className="container my-1 p-3">
                 <OverviewParticipant />
             </div>
+            <CurriculumOverview/>
         </>
     );
 }

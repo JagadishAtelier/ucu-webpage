@@ -1,7 +1,7 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
 import "./FeeStructure.css";
-import feeImage from "../../../../Assets/aboutPageImage/fee.jpg"; // update with actual path or import
+import feeImage from "../../../Assets/aboutPageImage/fee.jpg"; // update with actual path or import
 import HostelSection from "./HostelSection";
 
 const FeeStructure = () => {

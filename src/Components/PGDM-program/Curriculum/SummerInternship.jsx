@@ -5,7 +5,7 @@ function SummerInternship() {
 
   const tableData = [
     {
-      Trimester1: [-
+      Trimester1: [
         "Understanding Emerging markets",
         "Human Resource Management",
         "Elective-1",
