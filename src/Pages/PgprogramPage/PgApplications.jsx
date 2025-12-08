@@ -37,7 +37,7 @@ export default function PgApplications() {
         <div className="icon"><LuHourglass size={24} /></div>
         <div>
           <p className="text-small">Duration</p>
-          <p className="text-large">2 years</p>
+          <p className="text-large">1 years</p>
         </div>
       </div>
 
