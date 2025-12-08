@@ -74,8 +74,6 @@ export default function OverviewKeyhighlights() {
         <li>Integrating environmental and social considerations into strategicbusiness decisions.</li>
       </ol>
     `,
-      action: "Learn More",
-      link: "/pgdm/special"
     });
     tabs.push({
       id: "uculearning",
@@ -83,10 +81,18 @@ export default function OverviewKeyhighlights() {
       icon: <FiAward size={20} />,
       title: "Learning Through Labs",
       text: `
-    <p>Labs focus on honing real-world skills across domains, including soft and hard skills. These labs ensure that you are not just learning theory but are equipped to apply your knowledge in practical, impactful ways and are business ready from Day 1.</p>
+<ul>
+  <li><p class="mb-1">Impact Skill Labs</p></li>
+  <li><p class="mb-1">Analytics</p></li>
+  <li><p class="mb-1">Marketing</p></li>
+  <li><p class="mb-1">Product Management</p></li>
+  <li><p class="mb-1">Finance</p></li>
+  <li><p class="mb-1">Consulting</p></li>
+  <li><p class="mb-1">Operation</p></li>
+  <li><p class="mb-1">Data Science</p></li>
+</ul>
+
     `,
-      action: "Learn More",
-      // link: "/pgdm/special"
     });
   }
   if (isPGPM) {
@@ -104,8 +110,6 @@ export default function OverviewKeyhighlights() {
         <li>Integrating environmental and social considerations into strategicbusiness decisions.</li>
       </ol>
     `,
-      action: "Learn More",
-      // link: "/pgdm/special"
     });
     tabs.push({
       id: "uculearning",
@@ -113,10 +117,17 @@ export default function OverviewKeyhighlights() {
       icon: <FiAward size={20} />,
       title: "Learning Through Labs",
       text: `
-    <p>Labs focus on honing real-world skills across domains, including soft and hard skills. These labs ensure that you are not just learning theory but are equipped to apply your knowledge in practical, impactful ways and are business ready from Day 1.</p>
+<ul>
+  <li><p class="mb-1">Impact Skill Labs</p></li>
+  <li><p class="mb-1">Analytics</p></li>
+  <li><p class="mb-1">Marketing</p></li>
+  <li><p class="mb-1">Product Management</p></li>
+  <li><p class="mb-1">Finance</p></li>
+  <li><p class="mb-1">Consulting</p></li>
+  <li><p class="mb-1">Operation</p></li>
+  <li><p class="mb-1">Data Science</p></li>
+</ul>
     `,
-      action: "Learn More",
-      // link: "/pgdm/special"
     });
   }
 
@@ -163,6 +174,7 @@ export default function OverviewKeyhighlights() {
                 <div className={`mobile-content bg-light p-3 mt-2 rounded shadow-sm d-lg-none ${isOpen ? "show" : ""}`}>
                   <h5>{item.title}</h5>
                   <div className="content-text" dangerouslySetInnerHTML={{ __html: item.text }} />
+
                   <button className="btn-cta" onClick={() => navigate(item.link)}>
                     {item.action} <span className="chev">›</span>
                   </button>
@@ -178,9 +190,12 @@ export default function OverviewKeyhighlights() {
         <div className="content-card p-4 shadow-sm">
           <h3 className="content-title">{activeItem.title}</h3>
           <div className="content-text" dangerouslySetInnerHTML={{ __html: activeItem.text }} />
-          <button onClick={() => navigate(activeItem.link)} className="btn-cta">
-            {activeItem.action} <span className="chev">›</span>
-          </button>
+          {activeItem.action && (
+            <button onClick={() => navigate(activeItem.link)} className="btn-cta">
+              {activeItem.action} <span className="chev">›</span>
+            </button>
+          )}
+
         </div>
       </div>
     </div>
