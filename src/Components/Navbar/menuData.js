@@ -211,64 +211,55 @@ export const menuData = [
       },
     ],
   },
+
+    //   "Individuals Professional",
+    // "XEL Enterprise Program",
+    // "CXO Academy",
+    // "Executive phD",
+    // "Academic Accelerator",
+    // "Leadership Coach Academy",
+    // "MDPs",
+    // "XEL Contact"
   {
     label: "Executive Education",
     placement: "bottom",
     submenu: [
+    {
+      label: "Individuals Professional",
+      link: "/executive-edu?tab=0",
+    },
+    {
+      label: "XEL Enterprise Program",
+      link: "/executive-edu?tab=1",
+    },
+    {
+      label: "CXO Academy",
+      link: "/executive-edu?tab=2",
+    },
+    {
+      label: "Executive PhD",
+      link: "/executive-edu?tab=3",
+    },
+    {
+      label: "Academic Accelerator",
+      link: "/executive-edu?tab=4",
+    },
+    {
+      label: "Leadership Coach Academy",
+      link: "/executive-edu?tab=5",
+    },
+    {
+      label: "MDPs",
+      link: "/executive-edu?tab=6",
+    },
+    {
+      label: "XEL Contact",
+      link: "/contact-us",
+    },
       {
-        label: "Customised Learning Programs for Corporate Professionals",
-        link: "/executive-edu",
-        submenu: [
-          {
-            label: "Management Development Programs (MDPs)",
-            link: "/program/MDPs",
+            label: "Executive & Advanced Executive PG Certificate Programs",
             className: "sublink-custom",
             customHover: false,
-          },
-          // {
-          //   label: "Executive & Advanced Executive PG Certificate Programs",
-          //   className: "sublink-custom",
-          //   customHover: false,
-          //   submenu: [
-          //     {
-          //       label: "FinTech Ascend",
-          //       link: "/program/FinTech-Ascend",
-          //       customHover: false,
-          //     },
-          //     {
-          //       label: "FinTech Vanguard",
-          //       link: "/program/FinTech-Vanguard",
-          //       customHover: false,
-          //     },
-          //     {
-          //       label: "GCC-Catalyst",
-          //       link: "/program/GCC-Catalyst",
-          //       customHover: false,
-          //     },
-          //     {
-          //       label: "GCC Elevate",
-          //       link: "/program/GCC-Elevate",
-          //       customHover: false,
-          //     },
-          //     {
-          //       label: "HealthTech Navigate",
-          //       link: "/program/HealthTech-Navigate",
-          //       customHover: false,
-          //     },
-          //     {
-          //       label: "HealthTech Pinnacle",
-          //       link: "/program/HealthTech-Pinnacle",
-          //       customHover: false,
-          //     },
-          //   ]
-          // },
-        {
-        label: "Executive Post Graduate Certificate Programmes",
-        className: "sublink-custom",
-        customHover: false,
-        submenu: [
-          {
-            label: "Industry Sector Programs",
             submenu: [
               {
                 label: "FinTech Ascend",
@@ -300,24 +291,111 @@ export const menuData = [
                 link: "/program/HealthTech-Pinnacle",
                 customHover: false,
               },
-          ]
+            ]
           },
-        ],
-      },
-        ],
-      },
-      {
-        label: "1 Year CXO Accelerator Program with Campus Immersion",
-        submenu: [
-          { label: "CXO", link: "/program/CXO" },
-          { label: "CIO", link: "/program/CIO" },
-          { label: "CTO", link: "/program/CTO" },
-          { label: "CMO", link: "/program/CMO" },
-          { label: "CHRO", link: "/program/CHRO" },
-          { label: "CFO", link: "/program/CFO" },
-          { label: "CPO", link: "/program/CPO" },
-        ],
-      },
+      // {
+      //   label: "Individuals Professional",
+      //   link: "/executive-edu",
+      //   submenu: [
+      //     {
+      //       label: "Management Development Programs (MDPs)",
+      //       link: "/program/MDPs",
+      //       className: "sublink-custom",
+      //       customHover: false,
+      //     },
+      //     // {
+      //     //   label: "Executive & Advanced Executive PG Certificate Programs",
+      //     //   className: "sublink-custom",
+      //     //   customHover: false,
+      //     //   submenu: [
+      //     //     {
+      //     //       label: "FinTech Ascend",
+      //     //       link: "/program/FinTech-Ascend",
+      //     //       customHover: false,
+      //     //     },
+      //     //     {
+      //     //       label: "FinTech Vanguard",
+      //     //       link: "/program/FinTech-Vanguard",
+      //     //       customHover: false,
+      //     //     },
+      //     //     {
+      //     //       label: "GCC-Catalyst",
+      //     //       link: "/program/GCC-Catalyst",
+      //     //       customHover: false,
+      //     //     },
+      //     //     {
+      //     //       label: "GCC Elevate",
+      //     //       link: "/program/GCC-Elevate",
+      //     //       customHover: false,
+      //     //     },
+      //     //     {
+      //     //       label: "HealthTech Navigate",
+      //     //       link: "/program/HealthTech-Navigate",
+      //     //       customHover: false,
+      //     //     },
+      //     //     {
+      //     //       label: "HealthTech Pinnacle",
+      //     //       link: "/program/HealthTech-Pinnacle",
+      //     //       customHover: false,
+      //     //     },
+      //     //   ]
+      //     // },
+      //   {
+      //   label: "Executive Post Graduate Certificate Programmes",
+      //   className: "sublink-custom",
+      //   customHover: false,
+      //   submenu: [
+      //     {
+      //       label: "Industry Sector Programs",
+      //       submenu: [
+      //         {
+      //           label: "FinTech Ascend",
+      //           link: "/program/FinTech-Ascend",
+      //           customHover: false,
+      //         },
+      //         {
+      //           label: "FinTech Vanguard",
+      //           link: "/program/FinTech-Vanguard",
+      //           customHover: false,
+      //         },
+      //         {
+      //           label: "GCC-Catalyst",
+      //           link: "/program/GCC-Catalyst",
+      //           customHover: false,
+      //         },
+      //         {
+      //           label: "GCC Elevate",
+      //           link: "/program/GCC-Elevate",
+      //           customHover: false,
+      //         },
+      //         {
+      //           label: "HealthTech Navigate",
+      //           link: "/program/HealthTech-Navigate",
+      //           customHover: false,
+      //         },
+      //         {
+      //           label: "HealthTech Pinnacle",
+      //           link: "/program/HealthTech-Pinnacle",
+      //           customHover: false,
+      //         },
+      //     ]
+      //     },
+      //   ],
+      // },
+      //   ],
+      // },
+      // {
+      //   label: "1 Year CXO Accelerator Program with Campus Immersion",
+      //   submenu: [
+      //     { label: "CXO", link: "/program/CXO" },
+      //     { label: "CIO", link: "/program/CIO" },
+      //     { label: "CTO", link: "/program/CTO" },
+      //     { label: "CMO", link: "/program/CMO" },
+      //     { label: "CHRO", link: "/program/CHRO" },
+      //     { label: "CFO", link: "/program/CFO" },
+      //     { label: "CPO", link: "/program/CPO" },
+      //   ],
+      // },
     ],
   },
   {

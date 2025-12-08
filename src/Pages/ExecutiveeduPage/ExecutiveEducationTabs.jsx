@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProgramsForIndividualsBanner from "../ProgramsForIndividuals/ProgramsForIndividualsBanner";
 import { Calendar1, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -9,6 +9,7 @@ import EEPCxo from "./EEPCxo";
 import EEPPhd from "./EEPPhd";
 import EEPMdps from "./EEPMdps";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import EEPAcademy from "./EEPAcademy";
 import LCPBanner from "../LeaderShipCoachPage/LCPBanner";
 const bannerImages = [
@@ -24,7 +25,6 @@ const TAB_LIST = [
     "Executive phD",
     "Academic Accelerator",
     "Leadership Coach Academy",
-    // "Executive pg Certificate",
     "MDPs",
     "XEL Contact"
 ];
@@ -63,20 +63,32 @@ const BANNER_DESCRIPTIONS = [
 ];
 
 function ExecutiveEducationTabs() {
-    const [activeTab, setActiveTab] = useState(0);
+        const location = useLocation();
+
+    // read tab from URL
+    const queryParams = new URLSearchParams(location.search);
+    const tabFromUrl = parseInt(queryParams.get("tab"));
+
+    const [activeTab, setActiveTab] = useState(tabFromUrl || 0);
     const navigate = useNavigate()
     const [showLeftArrow, setShowLeftArrow] = useState(false);
     const [showRightArrow, setShowRightArrow] = useState(true);
 
     const handleTabClick = (index) => {
         // If XEL Contact tab (last one) clicked → navigate
-        if (index === 8) {
+        if (index === 7) {
             navigate("/contact-us");
             return;
         }
 
         setActiveTab(index);
     };
+    useEffect(() => {
+    if (!isNaN(tabFromUrl)) {
+        setActiveTab(tabFromUrl);
+    }
+}, [tabFromUrl]);
+
     const scrollTabs = (direction) => {
         const box = document.getElementById("tabsScrollBox");
         const scrollAmount = 200;
