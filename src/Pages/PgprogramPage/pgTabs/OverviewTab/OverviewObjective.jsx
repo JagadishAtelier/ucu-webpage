@@ -5,8 +5,8 @@ import { FaPlayCircle } from "react-icons/fa";
 function OverviewObjective() {
   const [playVideo, setPlayVideo] = useState(false);
 
-  // Replace this with your YouTube video ID
-  const youtubeId = "REFbLK1iank";
+  const youtubeId = "REFbLK1iank"; // same ID unless you change
+
   return (
     <div
       style={{ paddingBottom: "150px", position: "relative" }}
@@ -15,113 +15,120 @@ function OverviewObjective() {
       <h1 className="display-4 fw-bold col-12 col-lg-12 mb-3">
         <span style={{ color: "#fff" }}>Objective</span>
       </h1>
+
       <p className="font-weight-normal">
-        The PGDM program is designed to nurture globally attuned, socially
-        conscious leaders who embody UCU’s mission to influence managerial
-        practice and drive value-based growth through wise innovation. The
-        program’s core objectives are:
+        The PGPM Elite Program is crafted to shape future-ready leaders who are
+        agile, industry-immersed, and capable of driving high-impact decisions in
+        dynamic business environments. Rooted in UCU’s mission of wise
+        innovation, the program focuses on accelerated learning, global exposure,
+        and career transformation.
       </p>
+
       <ul>
         <p className="fw-light">
           <li>
             <span className="fw-bold">
-              Empower students with robust conceptual foundations and
-              interpersonal acumen ,{" "}
+              Build strong managerial foundations with analytical depth and
+              leadership agility,
             </span>{" "}
-            fostering collaboration and a deep sense of social responsibility in
-            managerial decision-making{" "}
-          </li>
-        </p>
-        <p className="fw-light">
-          <li>
-            <span className="fw-bold">
-              Cultivate a hands-on, action-oriented learning culture,{" "}
-            </span>{" "}
-            where students are encouraged to engage deeply, take initiative, and
-            embrace real-world challenges Create immersive environments that
-            spark innovation, enabling students to think creatively, challenge
-            conventions, and develop breakthrough solutions{" "}
+            enabling learners to make confident, responsible, and
+            multi-dimensional decisions in fast-paced professional settings.
           </li>
         </p>
 
         <p className="fw-light">
           <li>
             <span className="fw-bold">
-              Deliver a pedagogical experience that harmonizes academic rigor
-              with industry relevance,{" "}
-            </span>
-            ensuring that learning is both intellectually rich and practically
-            applicable{" "}
+              Promote experiential, hands-on learning culture,
+            </span>{" "}
+            where participants engage in real-world industry projects, case
+            sprints, simulations, and high-impact challenges that accelerate
+            managerial maturity.
           </li>
         </p>
+
         <p className="fw-light">
           <li>
             <span className="fw-bold">
-              Embed domain-centric exposure throughout the program,
-            </span>
-            so students graduate with firsthand experience and are equipped to
-            contribute from Day One—not as novices, but as prepared
-            professionals
+              Integrate academic depth with contemporary industry relevance,
+            </span>{" "}
+            ensuring each learner builds competencies aligned with modern
+            business expectations and leadership roles.
+          </li>
+        </p>
+
+        <p className="fw-light">
+          <li>
+            <span className="fw-bold">
+              Provide domain-driven specialization exposure,
+            </span>{" "}
+            empowering learners to transition into roles with practical expertise,
+            industry insights, and Day-One readiness.
           </li>
         </p>
       </ul>
 
-      <p className="">PGDM Competency Goals at UCU:</p>
+      <p className="">PGPM Elite Competency Goals:</p>
+
       <ol>
         <p>
           <li>
             <span className="fw-bold ">
-              Develop Responsible, Socially Conscious Leaders
+              Develop Ethical, Purpose-Driven Managers
             </span>
           </li>
         </p>
         <p className="fw-light mt-2">
-          Cultivate ethical leadership grounded in empathy, sustainability, and
-          societal impact.{" "}
+          Inspire leaders who demonstrate responsibility, integrity, and
+          sustainable thinking in every business decision.
         </p>
-        <p>
-          <li>
-            <span className="fw-bold">Build Global Management Capability</span>
-          </li>
-        </p>
-        <p className="fw-light mt-2">
-          Equip students to navigate complex, cross-border business environments
-          with cultural fluency and strategic agility.{" "}
-        </p>
+
         <p>
           <li>
             <span className="fw-bold">
-              Ensure Functional and Cross-Functional Mastery
+              Strengthen Global Mindset & Business Fluency
             </span>
           </li>
         </p>
         <p className="fw-light mt-2">
-          Foster deep expertise across core business domains while enabling
-          integrative thinking across functions.{" "}
+          Equip participants to operate confidently in global markets, adapt to
+          cultural diversity, and lead cross-border teams.
         </p>
+
         <p>
           <li>
-            <span className="fw-bold">Strengthen Decision-Making Acumen</span>
+            <span className="fw-bold">
+              Attain Multi-Domain Business Mastery
+            </span>
           </li>
         </p>
         <p className="fw-light mt-2">
-          {" "}
-          Train students to make data-driven, context-aware, and ethically sound
-          managerial decisions.{" "}
+          Build refined expertise across marketing, finance, strategy, analytics,
+          and operations with strong cross-functional problem-solving skills.
         </p>
+
         <p>
           <li>
-            <span className="fw-bold">Ignite Innovative Leadership</span>
+            <span className="fw-bold">Enhance Strategic Decision-Making</span>
           </li>
         </p>
         <p className="fw-light mt-2">
-          {" "}
-          Empower students to lead transformation through creativity,
-          entrepreneurial thinking, and future-focused vision.
+          Train learners to evaluate complex scenarios using data-driven,
+          innovative, and ethically sound frameworks.
+        </p>
+
+        <p>
+          <li>
+            <span className="fw-bold">Nurture Transformational Leaders</span>
+          </li>
+        </p>
+        <p className="fw-light mt-2">
+          Empower learners to drive innovation, manage change, and lead with
+          vision in evolving business landscapes.
         </p>
       </ol>
 
-      {/* VIDEO CONTAINER */}
+      {/* VIDEO SECTION */}
       <div
         className="my-4 position-absolute overview-video video-con-objectives"
         style={{

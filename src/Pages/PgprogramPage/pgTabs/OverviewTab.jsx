@@ -33,11 +33,11 @@ function OverviewTab() {
             <div className="container my-1 p-3">
                 <OverviewKeyhighlights />
             </div>
-            {/* {isPGPM && (
+            {isPGPM && (
                 <div className="container my-1 p-3">
                     <SpecificationSection />
                 </div>
-            )} */}
+            )}
             <div className="container my-1 p-3">
                 <OverviewParticipant />
             </div>
