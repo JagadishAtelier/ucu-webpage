@@ -1,6 +1,6 @@
 import React from "react";
 
-function SpecificationSection() {
+function PGPMSpecification() {
     const industry = [
         {
             heading: "Product Management",
@@ -180,8 +180,8 @@ function SpecificationSection() {
 
             </div>
 
-            <div className="d-flex gap-5 flex-wrap mt-5 justify-content-center">
-                <div className="text-center p-4 shadow rounded-4 bg-light col-12 col-md-5">
+            <div className="d-flex gap-5 flex-wrap mt-5 justify-contnet-center">
+                <div className="text-center p-4 shadow rounded-4 bg-light col-12 col-lg-5">
                     <i className="bi bi-people-fill fs-1 text-success"></i>
                     <h4 className="mt-3 fw-semibold">Real-World Perspectives Delivered by Industry Leaders</h4>
                     <p className="text-muted">
@@ -190,7 +190,7 @@ function SpecificationSection() {
                     </p>
                 </div>
 
-                <div className="text-center p-4 shadow rounded-4 bg-light col-12 col-md-5">
+                <div className="text-center p-4 shadow rounded-4 bg-light col-12 col-lg-5">
                     <i className="bi bi-mortarboard-fill fs-1 text-primary"></i>
                     <h4 className="mt-3 fw-semibold">Structured Student Mentoring by Faculty</h4>
                     <p className="text-muted">
@@ -204,4 +204,4 @@ function SpecificationSection() {
     );
 }
 
-export default SpecificationSection;
+export default PGPMSpecification;

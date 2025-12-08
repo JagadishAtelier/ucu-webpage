@@ -1,0 +1,66 @@
+
+
+.why-curricullam-image {
+    border-radius: 10px;
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.academic-text {
+    font-weight: 600;
+    font-size: 14px;
+    position: absolute;
+    bottom: 3%;
+    left: 5%;
+}
+
+.row-new-block {
+    display: flex;
+    align-items: flex-start;
+}
+
+.why-curricullam-image-div {
+    position: relative;
+}
+
+.pgpm-wrapper {
+  width: 100%;
+}
+
+.term-box {
+  padding: 20px 10px;
+}
+
+.term-heading {
+  font-weight: 600;
+  padding: 10px;
+  background: #f4f4f4;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.green-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #8bc34a;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.pgpm-concentrate-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 30px;
+    column-gap: 20px;
+}
+@media (max-width:480px) {
+    .pgpm-concentrate-grid{
+    grid-template-columns: repeat(1,1fr);
+}
+.why-curricullam-image {
+    border-radius: 10px;
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+}
+}
