@@ -7,7 +7,6 @@ import FeeStructure from "./pgTabs/FeeStructure/FeeStructure";
 import AdmissionsTab from "./pgTabs/AdmissionsTab/AdmissionsTab";
 import PlacementTab from "./pgTabs/PlacementTab/PlacementTab";
 import { ArrowUp } from "lucide-react";
-
 const TAB_LIST = [
   "Overview",
   "Curriculum",

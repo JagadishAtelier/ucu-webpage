@@ -6,8 +6,8 @@ import OverviewKeyhighlights from "./OverviewTab/OverviewKeyhighlights";
 import OverviewIndustryconnect from "./OverviewTab/OverviewIndustryconnect";
 import OverviewParticipant from "./OverviewTab/OverviewParticipant";
 
-
 function OverviewTab() {
+    
     return (
         <>
             <div data-aos="fade-up" className="container my-1 p-3">
