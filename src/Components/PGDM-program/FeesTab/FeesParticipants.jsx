@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../../../Assets/aboutPageImage/vision_image1.jpg";
+import image from "../../../Assets/aboutPageImage/vision_image1.jpg";
 
 function FeesParticipants() {
     return (

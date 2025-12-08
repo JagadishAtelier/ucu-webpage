@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import videoimage from "../../../../Assets/aboutPageImage/vision_image1.jpg";
+import videoimage from "../../../Assets/aboutPageImage/vision_image1.jpg";
 import { FaPlayCircle } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 
@@ -247,11 +247,11 @@ function OverviewObjective() {
           </p>
         </ul>
 
-        <p className="">PGDM Competency Goals at UCU:</p>
-        <ol>
+        <h3 className="mt-4 fs-4" style={{ color: "#ffffffff" }}>PGDM Competency Goals at UCU:</h3>
+        <ol className="ms-4">
           <p>
             <li>
-              <span className="fw-bold ">
+              <span className="fw-bold " style={{ color: "#5ac501" }}>
                 Develop Responsible, Socially Conscious Leaders
               </span>
             </li>
@@ -262,7 +262,7 @@ function OverviewObjective() {
           </p>
           <p>
             <li>
-              <span className="fw-bold">Build Global Management Capability</span>
+              <span className="fw-bold" style={{ color: "#5ac501" }}>Build Global Management Capability</span>
             </li>
           </p>
           <p className="fw-light mt-2">
@@ -271,7 +271,7 @@ function OverviewObjective() {
           </p>
           <p>
             <li>
-              <span className="fw-bold">
+              <span className="fw-bold" style={{ color: "#5ac501" }}>
                 Ensure Functional and Cross-Functional Mastery
               </span>
             </li>
@@ -282,7 +282,7 @@ function OverviewObjective() {
           </p>
           <p>
             <li>
-              <span className="fw-bold">Strengthen Decision-Making Acumen</span>
+              <span className="fw-bold" style={{ color: "#5ac501" }}>Strengthen Decision-Making Acumen</span>
             </li>
           </p>
           <p className="fw-light mt-2">
@@ -292,7 +292,7 @@ function OverviewObjective() {
           </p>
           <p>
             <li>
-              <span className="fw-bold">Ignite Innovative Leadership</span>
+              <span className="fw-bold" style={{ color: "#5ac501" }}>Ignite Innovative Leadership</span>
             </li>
           </p>
           <p className="fw-light mt-2">

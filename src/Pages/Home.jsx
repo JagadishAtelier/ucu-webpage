@@ -12,7 +12,7 @@ import NewFooter from "../Components/NewFooter/NewFooter";
 import Platforms from "../Components/Platforms/Platforms";
 import ExPhd from "../Components/ExPhd/ExPhd";
 import Wps from "../Components/Wps/Wps";
-import OverviewParticipant from "./PgprogramPage/pgTabs/OverviewTab/OverviewParticipant";
+import OverviewParticipant from "../Components/PGDM-program/OverviewTab/OverviewParticipant";
 import Aspirants from "../Components/Aspirants/Aspirants";
 import Testimonial from "../Components/Testimonial/Testimonial";
 

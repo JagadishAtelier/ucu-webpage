@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import OverviewTab from "./pgTabs/OverviewTab";
-import FeesTab from "./pgTabs/FeesTab";
+import OverviewTab from "../../Components/PGDM-program/OverviewTab";
+import FeesTab from "../../Components/PGDM-program/FeesTab";
 import "./pgtab.css";
-import Curriculum from "./pgTabs/Curriculum/Curriculum";
-import FeeStructure from "./pgTabs/FeeStructure/FeeStructure";
-import AdmissionsTab from "./pgTabs/AdmissionsTab/AdmissionsTab";
-import PlacementTab from "./pgTabs/PlacementTab/PlacementTab";
+import Curriculum from "../../Components/PGDM-program/Curriculum/Curriculum";
+import FeeStructure from "../../Components/PGDM-program/FeeStructure/FeeStructure";
+import AdmissionsTab from "../../Components/PGDM-program/AdmissionsTab/AdmissionsTab";
+import PlacementTab from "../../Components/PGDM-program/PlacementTab/PlacementTab";
 import { ArrowUp } from "lucide-react";
 const TAB_LIST = [
   "Overview",

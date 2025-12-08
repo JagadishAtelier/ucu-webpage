@@ -1,12 +1,12 @@
-import Navbar from "../Components/Navbar/Navbar";
-import NewFooter from "../Components/NewFooter/NewFooter";
-import AboutPageHero from "./AboutPage/AboutPageHero/AboutPageHero";
-import heroImage from "../Assets/aboutPageImage/ucu-About us.svg";
-import PgTabs from "./PgprogramPage/PgTab";
-import PgApplications from "./PgprogramPage/PgApplications";
+import Navbar from "../Navbar/Navbar";
+import NewFooter from "../NewFooter/NewFooter";
+import AboutPageHero from "../../Pages/AboutPage/AboutPageHero/AboutPageHero";
+import heroImage from "../../Assets/aboutPageImage/ucu-About us.svg";
+import PgTabs from "../../Pages/PgprogramPage/PgTab";
+import PgApplications from "../../Pages/PgprogramPage/PgApplications";
 import { useLocation } from "react-router-dom";
 
-function PgprogramPage() {
+function PgdmprogramPage() {
     const { pathname } = useLocation();
 
     const pathSegments = pathname.split("/").filter(Boolean); // split and remove empty segments
@@ -42,4 +42,4 @@ function PgprogramPage() {
     );
 }
 
-export default PgprogramPage;
+export default PgdmprogramPage;

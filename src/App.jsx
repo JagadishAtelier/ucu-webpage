@@ -27,7 +27,7 @@ import Advisory from "./Components/Advisory/Advisory";
 import WhatsAppButton from "./Components/WhatsAppButton/WhatsAppButton";
 import Careers from "./Components/Careers/Careers";
 import FounderMessage from "./Pages/FounderMessage";
-import PgprogramPage from "./Pages/pgprogramPage";
+import PgprogramPage from "./Components/PGDM-program/PgdmprogramPage";
 import LeaderShipPage from "./Pages/LeaderShipPage/LeaderShipPage";
 import CampusPage from "./Pages/CampusPage/CampusPage";
 import SociatalImpact from "./Pages/SociatalImpact/SociatalImpact";
@@ -61,6 +61,7 @@ import ProgramsForIndividualsBanner from "./Pages/ProgramsForIndividuals/Program
 import FixedSideBar from "./Components/FixedSideBar/FixedSideBar";
 import CXOPageBanner from "./Pages/CXOProgramPage/CXOPageBanner";
 import LCPBanner from "./Pages/LeaderShipCoachPage/LCPBanner";
+import PgdmprogramPage from "./Components/PGDM-program/PgdmprogramPage";
 
 function App() {
   useEffect(() => {
@@ -81,6 +82,7 @@ function App() {
         <Route path="/about-ucu" element={<AboutPage />} />
         <Route path="/faculty/*" element={<NewFaculty/>} />
         <Route path="/profile/details" element={<PDPhero/>} />
+        <Route path="/program/pgdm" element={<PgdmprogramPage/>} />
         <Route path="/program/*" element={<PgprogramPage/>} />
         <Route path="/auth/register" element={<SignUpPage />} />
         <Route path="/auth/login" element={<LoginPage />} />
