@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FiMapPin, FiUsers, FiBriefcase, FiAward } from "react-icons/fi";
-import "./OverviewKeyhighlights.css";
 import { BaggageClaim, Book, ChevronDown, Lightbulb, Sun } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FaFly } from "react-icons/fa";
@@ -76,9 +75,7 @@ const ITEMS = [
   },
 ];
 
-export default function OverviewKeyhighlights() {
-  const { pathname } = useLocation();
-  const isPGDM = pathname.includes("pgdm");
+export default function PGPMKeyHighlights() {
   const navigate = useNavigate();
 
   const [active, setActive] = useState("programhighlights");
@@ -86,7 +83,6 @@ export default function OverviewKeyhighlights() {
 
   // Create a copy of ITEMS and add PGDM-specific tab if needed
   const tabs = [...ITEMS];
-  if (isPGDM) {
     tabs.push({
       id: "summerinternship",
       label: "Summer Internship",
@@ -110,7 +106,40 @@ export default function OverviewKeyhighlights() {
 </ul>
     `,
     })
-  }
+    tabs.push({
+      id: "ucudetails",
+      label: "Why is PGPM",
+      icon: <FiAward size={20} />,
+      title: "PGDM Exclusive Highlights",
+      text: `
+    <p>The extensive research, discussions and feedback from CXOs, senior alumni and corporate recruiters across various sectors and cities revealed a demand for professionals who are good at:</p>
+      <ol>
+        <li>Demonstrating structured problem-solving and strong decision-making skills grounded in data-driven insights.</li>
+        <li>Utilizing and implementing disruptive tools like Generative AI andstaying ahead of Industry 4.0 trends.</li>
+        <li>Being able to articulate ideas, problems, and solutions effectively,and leverage storytelling</li>
+        <li>Integrating environmental and social considerations into strategicbusiness decisions.</li>
+      </ol>
+    `,
+    });
+    tabs.push({
+      id: "uculearning",
+      label: "Learning Through Labs",
+      icon: <FiAward size={20} />,
+      title: "Learning Through Labs",
+      text: `
+<ul>
+  <li><p class="mb-1">Impact Skill Labs</p></li>
+  <li><p class="mb-1">Analytics</p></li>
+  <li><p class="mb-1">Marketing</p></li>
+  <li><p class="mb-1">Product Management</p></li>
+  <li><p class="mb-1">Finance</p></li>
+  <li><p class="mb-1">Consulting</p></li>
+  <li><p class="mb-1">Operation</p></li>
+  <li><p class="mb-1">Data Science</p></li>
+</ul>
+    `,
+    });
+
 
   const activeItem = tabs.find((i) => i.id === active) || tabs[0];
 
@@ -121,7 +150,7 @@ export default function OverviewKeyhighlights() {
   return (
     <div className="overview-keyhighlights row gx-4 mt-4">
       <h1 className="display-4 fw-bold col-12 col-lg-12 my-4">
-        <span style={{ color: "#5ac501" }}>PGDM Program </span>Highlights
+        <span style={{ color: "#5ac501" }}>PGPM Program </span>Highlights
       </h1>
 
       {/* LEFT NAV */}

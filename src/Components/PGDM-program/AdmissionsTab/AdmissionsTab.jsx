@@ -2,17 +2,10 @@ import React from "react";
 import "./AdmissionsTab.css";
 import { useLocation } from "react-router-dom";
 import PGPMAdmission from "../../../Pages/PgprogramPage/pgTabs/PGPMAdmission/PGPMAdmission";
+import PGPMBottomBanner from "../../../Pages/PGPMProgram/PGPMBottomBanner";
 
 export default function AdmissionsTab() {
-  const { pathname } = useLocation();
-  const isPGPM = pathname.includes("pgpm");
   return (
-    <>
-      {isPGPM ? (
-        <section className="admissions-tab container p-3 mx-auto  my-1">
-          <PGPMAdmission/>
-        </section>
-      ) : (
         <section className="admissions-tab container p-3 mx-auto  my-1">
           {/* Title */}
           <h3 className="display-6 fw-bold col-12 col-lg-12"><span className="program">PGDM</span> Admission Process</h3>
@@ -117,8 +110,9 @@ export default function AdmissionsTab() {
               Apply Now
             </button>
           </div>
+                <div className="mt-5">
+      <PGPMBottomBanner/>
+      </div>
         </section>
-      )}
-    </>
   );
 }

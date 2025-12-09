@@ -3,6 +3,7 @@ import { Accordion } from "react-bootstrap";
 import "./FeeStructure.css";
 import feeImage from "../../../Assets/aboutPageImage/fee.jpg"; // update with actual path or import
 import HostelSection from "./HostelSection";
+import PGPMBottomBanner from "../../../Pages/PGPMProgram/PGPMBottomBanner";
 
 const FeeStructure = () => {
   return (
@@ -90,6 +91,9 @@ two year PGDM.</p>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
+      </div>
+      <div className="mt-5">
+      <PGPMBottomBanner/>
       </div>
     </section>
   );

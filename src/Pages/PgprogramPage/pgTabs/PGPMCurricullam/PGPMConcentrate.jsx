@@ -69,7 +69,7 @@ function PGPMConcentrate() {
   ];
 
   return (
-    <div className="pgpm-wrapper mt-5">
+    <div className="pgpm-wrapper my-5">
       <h2 className="fw-bold"><span style={{color:"#5ac501"}}>Courses</span> and <span style={{color:"#5ac501"}}>Concentrations</span></h2>
 
       <p className="pt">

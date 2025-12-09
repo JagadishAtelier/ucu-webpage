@@ -25,13 +25,6 @@ const Curriculum = () => {
   const isPGPM = pathname.includes("pgpm");
   return (
     <div>
-      {isPGPM ? (
-        <section className="pgdm-section">
-          <div className="container my-4">
-            <PGPMCurricullam/>
-          </div>
-        </section>
-      ) : (
         <section className="pgdm-section">
           <div className="container my-4">
             {/* Header */}
@@ -227,7 +220,6 @@ const Curriculum = () => {
             </div>
           </div>
         </section>
-      )}
     </div>
   );
 };

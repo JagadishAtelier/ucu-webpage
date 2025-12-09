@@ -6,6 +6,7 @@ import PGPMAcademicAbilities from './PGPMAcademicAbilities'
 import PGPMApplicationGuidelines from './PGPMApplicationGuidelines'
 import PGPMEssay from './PGPMEssay'
 import PGPMEvaluationProcess from './PGPMEvaluationProcess'
+import PGPMBottomBanner from '../../../PGPMProgram/PGPMBottomBanner'
 const data = [
   {
     text: "Valid CAT*/GMATx/XAT+ scores. For PGPM admission process 2026-27, UCU Institute of Management will accept scores of GMAT taken after 1st January 2023, CAT taken in 2024/2025, or XAT taken in 2025/2026."
@@ -34,7 +35,8 @@ const data = [
 ]
 function PGPMAdmission() {
   return (
-    <div>
+          <section className="pgdm-section">
+      <div className="container my-4">
       <h1 className='display-5 fw-bold'><span style={{ color: "#5ac501" }}>Admission</span> Process</h1>
       <p>At UCU, we seek experienced professionals from diverse backgrounds with demonstrated track record of real world performance in business management and ability to lead as we aim to build a community of empathetic business leaders. As a top ranked business management school we continue to innovate business education to add value, not only to our candidates but also to our corporate stakeholders and society as a whole. This is reflected both in selection process and pedagogy of our One Year MBA Program. The admission process is based on a comprehensive evaluation of the candidates on multiple dimensions encompassing personal and professional track record, academic performance, management aptitude and demonstrated competencies.</p>
       <div className='mt-4'>
@@ -51,7 +53,11 @@ function PGPMAdmission() {
       <PGPMApplicationGuidelines/>
       <PGPMEssay/>
       <PGPMEvaluationProcess/>
+            <div className="">
+      <PGPMBottomBanner/>
+      </div>
     </div>
+    </section>
   )
 }
 

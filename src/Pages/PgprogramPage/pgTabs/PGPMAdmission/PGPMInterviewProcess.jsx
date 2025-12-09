@@ -55,7 +55,7 @@ function PGPMInterviewProcess() {
           {/* Right Image */}
           <div className="col-md-5 text-center">
             <img
-              src="https://www.ucu.edu.in/chennai/assets/greatlakes/images/eligibility-pic.webp"
+              src="https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/eligibility-pic.webp"
               alt="Eligibility"
               className="img-fluid ip-image"
               loading="lazy"

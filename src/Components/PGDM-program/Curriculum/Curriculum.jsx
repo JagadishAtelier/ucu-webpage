@@ -18,20 +18,11 @@ import OerationTable from "./OerationTable";
 import AimlaTable from "./AimlaTable";
 import { useLocation } from "react-router-dom";
 import PGPMCurricullam from "../../../Pages/PgprogramPage/pgTabs/PGPMCurricullam/PGPMCurricullam";
+import PGPMBottomBanner from "../../../Pages/PGPMProgram/PGPMBottomBanner";
 
 const Curriculum = () => {
   // const [key, setKey] = useState("marketing");
-    const { pathname } = useLocation();
-    const isPGPM = pathname.includes("pgpm");
   return (
-    <>
-    {isPGPM ? (
-          <section className="pgdm-section">
-      <div className="container my-4">
-        <PGPMCurricullam/>
-      </div>
-    </section>
-    ):(
           <section className="pgdm-section">
       <div className="container my-4">
         {/* Header */}
@@ -229,10 +220,10 @@ A program with cutting-edge analytics, industry co-creation, and global relevanc
           <AimlaTable/>
         </div>
       </div>
+            <div className="mt-5">
+      <PGPMBottomBanner/>
+      </div>
     </section>
-    )
-    }
-    </>
   );
 };
 

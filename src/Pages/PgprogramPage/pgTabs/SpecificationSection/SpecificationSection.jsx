@@ -180,7 +180,7 @@ function SpecificationSection() {
 
             </div>
 
-            <div className="d-flex gap-5 flex-wrap mt-5 justify-content-center">
+            <div className="d-flex gap-5 flex-wrap mt-5">
                 <div className="text-center p-4 shadow rounded-4 bg-light col-12 col-md-5">
                     <i className="bi bi-people-fill fs-1 text-success"></i>
                     <h4 className="mt-3 fw-semibold">Real-World Perspectives Delivered by Industry Leaders</h4>

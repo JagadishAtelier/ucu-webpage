@@ -4,6 +4,7 @@ import './PGPMCurricullam.css'
 import RevampedSec from './RevampedSec'
 import PGPMSpecification from './PGPMSpecification'
 import PGPMConcentrate from './PGPMConcentrate'
+import PGPMBottomBanner from '../../../PGPMProgram/PGPMBottomBanner'
 const data = [
     {
         head: "Communicate with Impact & Lead with Confidence",
@@ -25,7 +26,8 @@ const data = [
 function PGPMCurricullam() {
 
     return (
-        <div>
+          <section className="pgdm-section">
+      <div className="container my-4">
             <h1 className='display-5 fw-bold'><span style={{color:"#5ac501"}}>PGPM-Elite,</span> India’s Most Innovative and Industry Focused Curriculum</h1>
             <p className='pt'>The UCU PGPM has been among top ranked one year MBA programs in the country since its inception. This year the program has been meticulously redesigned to stay ahead of industry needs, ensuring that young professionals like you are equipped to lead in an ever-changing business landscape.</p>
             <h2 className='mt-4 fw-bold'>As a <span style={{color:"#5ac501"}}>PGPM-Elite graduate from UCU</span>, you will be able to:</h2>
@@ -44,7 +46,9 @@ function PGPMCurricullam() {
             <RevampedSec/>
             {/* <PGPMSpecification/> */}
             <PGPMConcentrate/>
+            <PGPMBottomBanner/>
         </div>
+        </section>
     )
 }
 
