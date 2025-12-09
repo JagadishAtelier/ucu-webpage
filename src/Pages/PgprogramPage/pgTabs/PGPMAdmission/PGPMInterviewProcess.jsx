@@ -14,7 +14,7 @@ function PGPMInterviewProcess() {
             <p>
               UCU will conduct early interviews for{" "}
               <a
-                href="https://www.greatlakes.edu.in/chennai/pgpm/"
+                href="https://www.ucu.edu.in/chennai/pgpm/"
                 className="ip-link"
               >
                 PGPM
@@ -55,7 +55,7 @@ function PGPMInterviewProcess() {
           {/* Right Image */}
           <div className="col-md-5 text-center">
             <img
-              src="https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/eligibility-pic.webp"
+              src="https://www.ucu.edu.in/chennai/assets/greatlakes/images/eligibility-pic.webp"
               alt="Eligibility"
               className="img-fluid ip-image"
               loading="lazy"
