@@ -62,6 +62,8 @@ import FixedSideBar from "./Components/FixedSideBar/FixedSideBar";
 import CXOPageBanner from "./Pages/CXOProgramPage/CXOPageBanner";
 import LCPBanner from "./Pages/LeaderShipCoachPage/LCPBanner";
 import PgdmprogramPage from "./Components/PGDM-program/PgdmprogramPage";
+import PGPMApplications from "./Pages/PGPMProgram/PGPMApplications";
+import PGPMProgramPage from "./Pages/PGPMProgram/PGPMProgramPage";
 
 function App() {
   useEffect(() => {
@@ -83,6 +85,7 @@ function App() {
         <Route path="/faculty/*" element={<NewFaculty/>} />
         <Route path="/profile/details" element={<PDPhero/>} />
         <Route path="/program/pgdm" element={<PgdmprogramPage/>} />
+        <Route path="/pgpm" element={<PGPMProgramPage/>} />
         <Route path="/program/*" element={<PgprogramPage/>} />
         <Route path="/auth/register" element={<SignUpPage />} />
         <Route path="/auth/login" element={<LoginPage />} />

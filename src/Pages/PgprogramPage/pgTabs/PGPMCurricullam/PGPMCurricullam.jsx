@@ -42,7 +42,7 @@ function PGPMCurricullam() {
             </div>
             <WhyPgpmSection/>
             <RevampedSec/>
-            <PGPMSpecification/>
+            {/* <PGPMSpecification/> */}
             <PGPMConcentrate/>
         </div>
     )
