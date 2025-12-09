@@ -26,9 +26,9 @@ function PGPMCurricullam() {
 
     return (
         <div>
-            <h1 className='display-5 fw-bold'><span style={{color:"#5ac501"}}>PGPM 2.0,</span> India’s Most Innovative and Industry Focused Curriculum</h1>
+            <h1 className='display-5 fw-bold'><span style={{color:"#5ac501"}}>PGPM-Elite,</span> India’s Most Innovative and Industry Focused Curriculum</h1>
             <p className='pt'>The UCU PGPM has been among top ranked one year MBA programs in the country since its inception. This year the program has been meticulously redesigned to stay ahead of industry needs, ensuring that young professionals like you are equipped to lead in an ever-changing business landscape.</p>
-            <h2 className='mt-4'>As a PGPM graduate from UCU, you will be able to:</h2>
+            <h2 className='mt-4 fw-bold'>As a <span style={{color:"#5ac501"}}>PGPM-Elite graduate from UCU</span>, you will be able to:</h2>
             <div className='mt-4'>
             {data.map((item, index) => (
                 <div className='d-flex gap-3 align-items-baseline'>

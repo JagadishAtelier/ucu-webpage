@@ -19,8 +19,6 @@ const ITEMS = [
 	<li>Optional semester abroad program [SAP]</li>
 	<li>Short term international immersions</li>
 	<li>Entrepreneurial Incubation</li>
-	<li>Chinese (Mandarin) Language taught as a mandatory course</li>
-	<li><a href="https://www.greatlakes.edu.in/chennai/pgdm/karmayoga">Karma Yoga</a> - A Leadership Experiential Program</li>
 	<li>Empirical study under Great Lakes Research Centre</li>
 	<li>Rigorous 12 week <a href="https://www.greatlakes.edu.in/chennai/pgdm/summer-internship-report">summer internship</a></li>
 	<li>AICTE approved</li>

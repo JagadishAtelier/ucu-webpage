@@ -2,7 +2,7 @@ import React from "react";
 
 function PGPMInterviewProcess() {
   return (
-    <section className="InterviewProcess">
+    <section className="InterviewProcess rounded">
       <div className="container">
         
         <h2 className="ip-title">Profile-based Early Interview Process:</h2>

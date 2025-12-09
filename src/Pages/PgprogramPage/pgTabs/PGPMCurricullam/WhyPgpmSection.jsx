@@ -4,7 +4,7 @@ function WhyPgpmSection() {
     return (
         <section className="mt-4">
             <div className="custom-container-inner">
-                <h2>Why is PGPM 2.0 the most innovative and industry focused curriculum?</h2>
+                <h2 className="fw-bold"><span style={{color:"#5ac501"}}>Why is PGPM-Elite</span> the most innovative and industry focused curriculum?</h2>
 
                 <div className="col-md-12">
                     <div className="row row-new-block row-gap-4">

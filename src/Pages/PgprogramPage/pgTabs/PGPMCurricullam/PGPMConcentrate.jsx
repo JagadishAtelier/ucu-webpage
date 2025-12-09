@@ -70,7 +70,7 @@ function PGPMConcentrate() {
 
   return (
     <div className="pgpm-wrapper mt-5">
-      <h2>Courses and Concentrations</h2>
+      <h2 className="fw-bold"><span style={{color:"#5ac501"}}>Courses</span> and <span style={{color:"#5ac501"}}>Concentrations</span></h2>
 
       <p className="pt">
         The rigorous one year residential program is designed to make the
@@ -78,7 +78,7 @@ function PGPMConcentrate() {
         requirements that arise in a changing global business environment.
       </p>
 
-      <p className="fw-bold pt">Core Courses</p>
+      <h3 className="fw-bold ">Core Courses</h3>
 
       {/* EXACT 3-COLUMN DESIGN */}
       <div className="pgpm-concentrate-grid">

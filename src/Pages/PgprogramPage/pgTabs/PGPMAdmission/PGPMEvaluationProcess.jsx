@@ -58,11 +58,11 @@ function PGPMEvaluationProcess() {
               The above conditions may be revised periodically. Candidates are advised to
               visit the UCU website for updates:{" "}
               <a
-                href="https://www.greatlakes.edu.in"
+                href="https://www.ucu.edu.in"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                www.greatlakes.edu.in
+                www.ucu.edu.in
               </a>
             </p>
 

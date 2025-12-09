@@ -84,10 +84,10 @@ function RevampedSec() {
     const maxRows = Math.max(industry.length, functional.length);
     return (
         <div className='mt-4'>
-            <h2>The revamped curriculum at UCU focuses on empowering tomorrow’s Innovators, Strategists, and Changemakers through various innovations:</h2>
+            <h2 className="fw-bold"><span style={{color:"#5ac501"}}>The revamped curriculum at UCU</span> focuses on empowering tomorrow’s Innovators, Strategists, and Changemakers through various innovations:</h2>
             <h4 className='my-4'>Applied Learning Through Labs</h4>
             <p className='pt'>Labs focus on honing real-world skills across domains, including soft and hard skills. These labs ensure that you are not just learning theory but are equipped to apply your knowledge in practical, impactful ways and are business ready from Day 1.</p>
-            <p className='fw-bold pt'>Labs</p>
+            <h4>Labs</h4>
 
             {/* Perfectly Balanced Columns */}
             {[...Array(maxRows)].map((_, index) => (

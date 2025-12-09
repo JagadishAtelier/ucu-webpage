@@ -2,7 +2,7 @@ import React from "react";
 
 function PGPMAcademicAbilities() {
   return (
-    <section className="PGPMAcademicAbilities mt-5">
+    <section className="PGPMAcademicAbilities mt-5 rounded shadow">
       <div className="container">
         <div className="inner-section mb-5">
 

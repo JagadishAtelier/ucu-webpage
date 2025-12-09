@@ -2,8 +2,8 @@ import React from "react";
 
 function PGPMEssay() {
   return (
-    <section className="PGPMEssay mt-5">
-      <div className="container">
+    <section className="PGPMEssay mt-5 rounded">
+      <div className="container rounded">
         <div className="recruit">
 
           <h2>Essay</h2>
