@@ -3,28 +3,29 @@ import './PlacementTab.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-const data = [
+export const data = [
   {
-    image: "https://www.UCU.org/wp-content/uploads/2022/09/c2e511cc-7525-48fa-a85f-cfcd06c9f61c-1-jpeg.webp",
+    image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
     head: "Mock interviews and group discussion preparations",
     para: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
   },
   {
-    image: "	https://www.UCU.org/wp-content/uploads/2022/09/Copy-of-IMG_6701-scaled.webp",
+    image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg",
     head: "CV Reviews",
     para: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
   },
   {
-    image: "https://www.UCU.org/wp-content/uploads/2022/09/79c6e77a-73a9-489c-afc8-2bec1f90b2e3-jpeg.webp",
+    image: "https://images.pexels.com/photos/1181715/pexels-photo-1181715.jpeg",
     head: "Mentorship",
     para: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
   },
   {
-    image: "https://www.UCU.org/wp-content/uploads/2022/09/2415d2ff-cacc-419b-94eb-bb1caa8956ab-jpeg.webp",
+    image: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
     head: "Industry and Role",
     para: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
   },
 ];
+
 
 function PlacementCareerTab() {
   return (

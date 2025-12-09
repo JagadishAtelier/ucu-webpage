@@ -61,10 +61,10 @@ function NewFooter() {
                 {menu.items.map((item, i) => (
                   <a
                     key={i}
-                    href="#"
+                    href={item.link}
                     className="new-footer-text-a text-decoration-none"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 ))}
               </div>
