@@ -6,11 +6,11 @@ import { div } from "framer-motion/client";
 import { PersonStanding, User } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
-export default function PgApplications() {
+export default function PgApplications({ className = "" }) {
       const { pathname } = useLocation();
       const isPGdM = pathname.includes("pgdm");
   return (
-    <div className="pg-applications">
+       <div className={`pg-applications ${className}`}>
       {/* Applications Open */}
       <div className="app-box box-1">
         <div className="icon d-lg-block d-none"><FiClock size={24} /></div>

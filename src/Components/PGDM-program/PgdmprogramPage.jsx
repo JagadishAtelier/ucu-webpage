@@ -2,7 +2,7 @@ import Navbar from "../Navbar/Navbar";
 import NewFooter from "../NewFooter/NewFooter";
 import AboutPageHero from "../../Pages/AboutPage/AboutPageHero/AboutPageHero";
 import heroImage from "../../Assets/aboutPageImage/ucu-About us.svg";
-import PgTabs from "../../Pages/PgprogramPage/PgTab";
+import PgTabs from "./PgTab";
 import PgApplications from "../../Pages/PgprogramPage/PgApplications";
 import { useLocation } from "react-router-dom";
 
@@ -25,14 +25,12 @@ function PgdmprogramPage() {
             <div>
 
                 <Navbar />
-                <AboutPageHero title={heading} 
+                {/* <AboutPageHero title={heading} 
                     sub={subText} 
                     breadcrumb={["Home", "PGDM Programs"]} 
-                    bgImage="https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" />
+                    bgImage="https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" /> */}
 
-                <div>
-                    <PgApplications />
-                </div>
+                
 
                 <PgTabs />
 

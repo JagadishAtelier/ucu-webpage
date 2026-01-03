@@ -4,7 +4,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 import NewFooter from '../../Components/NewFooter/NewFooter'
 import './CampusPlacementsPage.css'
 import { useState, useRef, useEffect } from "react";
-import PlacementTab from '../../Components/PGDM-program/PlacementTab/PlacementTab'
+import PlacementTab from '../PgprogramPage/pgTabs/PlacementTab/PlacementTab'
 import AdmissionsTab from '../../Components/PGDM-program/AdmissionsTab/AdmissionsTab'
 import FeeStructure from '../../Components/PGDM-program/FeeStructure/FeeStructure'
 import Curriculum from '../../Components/PGDM-program/Curriculum/Curriculum'

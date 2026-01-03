@@ -64,12 +64,6 @@ function HostelSection() {
 </li>
         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat eros non augue facilisis, vel commodo felis tincidunt.
 </li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat eros non augue facilisis, vel commodo felis tincidunt.
-</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat eros non augue facilisis, vel commodo felis tincidunt.
-</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat eros non augue facilisis, vel commodo felis tincidunt.
-</li>
       </ul>
     </div>
   )

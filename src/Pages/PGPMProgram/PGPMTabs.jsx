@@ -3,12 +3,15 @@ import { ArrowUp } from "lucide-react";
 import PGPMCurricullam from "../PgprogramPage/pgTabs/PGPMCurricullam/PGPMCurricullam";
 import FeeStructure from "../../Components/PGDM-program/FeeStructure/FeeStructure";
 import PGPMAdmission from "../PgprogramPage/pgTabs/PGPMAdmission/PGPMAdmission";
-import PlacementTab from "../../Components/PGDM-program/PlacementTab/PlacementTab";
+import PlacementTab from "../PgprogramPage/pgTabs/PlacementTab/PlacementTab";
 import PGPMOverViewTab from "./PGPMOverViewTab";
+import AboutPageHero from "../AboutPage/AboutPageHero/AboutPageHero";
+import PgApplications from "../PgprogramPage/PgApplications";
+import PGPMFeeStructure from "./PGPMFeeStructure";
 const TAB_LIST = [
   "Overview",
   "Curriculum",
-  "Fees and Scholarships",
+  "Fees",
   "Admissions",
   // "International Immersion",
   "Placements",
@@ -20,8 +23,7 @@ export default function PGPMTabs() {
   const navRef = useRef(null);
   const btnRefs = useRef({});
 
-
-    const scrollTo = (id) => {
+  const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -31,31 +33,35 @@ export default function PGPMTabs() {
   useEffect(() => {
     const btn = btnRefs.current[active];
     if (btn?.scrollIntoView) {
-      btn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      btn.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
     }
   }, [active]);
 
   // 👇 Mobile auto-scroll nudge (runs once)
-useEffect(() => {
-  const nav = navRef.current;
+  useEffect(() => {
+    const nav = navRef.current;
 
-  if (window.innerWidth <= 768 && nav) {
-    const interval = setInterval(() => {
-      nav.scrollTo({ left: 60, behavior: "smooth" });
-      setTimeout(() => nav.scrollTo({ left: 0, behavior: "smooth" }), 1500);
-    }, 3000); // every 3 seconds
-    return () => clearInterval(interval);
-  }
-}, []);
+    if (window.innerWidth <= 768 && nav) {
+      const interval = setInterval(() => {
+        nav.scrollTo({ left: 60, behavior: "smooth" });
+        setTimeout(() => nav.scrollTo({ left: 0, behavior: "smooth" }), 1500);
+      }, 3000); // every 3 seconds
+      return () => clearInterval(interval);
+    }
+  }, []);
 
-// Auto-open tab based on hash navigation
-useEffect(() => {
-  const hash = window.location.hash;
+  // Auto-open tab based on hash navigation
+  useEffect(() => {
+    const hash = window.location.hash;
 
-  if (hash === "#PlacementCalendar") {
-    setActive("Placements"); // open the Placements main tab
-  }
-}, []);
+    if (hash === "#PlacementCalendar") {
+      setActive("Placements"); // open the Placements main tab
+    }
+  }, []);
 
   // Handle scrolling when navigating with hash
   useEffect(() => {
@@ -84,19 +90,13 @@ useEffect(() => {
         );
 
       case "Curriculum":
-        return (
-          <PGPMCurricullam/>
-        );
+        return <PGPMCurricullam />;
 
-      case "Fees and Scholarships":
-        return (
-          <FeeStructure/>
-        );
+      case "Fees":
+        return <PGPMFeeStructure />;
 
       case "Admissions":
-        return (
-          <PGPMAdmission/>
-        );
+        return <PGPMAdmission />;
 
       // case "International Immersion":
       //   return (
@@ -118,9 +118,7 @@ useEffect(() => {
       //   );
 
       case "Placements":
-        return (
-          <PlacementTab/>
-        );
+        return <PlacementTab />;
 
       default:
         return (
@@ -134,13 +132,18 @@ useEffect(() => {
 
   return (
     <div className="pg-tabs-root">
-            <button
+      <button
         className="fixed-left-arrow-btn"
         onClick={() => scrollTo("overview-section")}
       >
-        <ArrowUp/>
+        <ArrowUp />
       </button>
-      <nav className="pg-tabs-nav " role="tablist" aria-label="Page sections" ref={navRef}>
+      <nav
+        className="pg-tabs-nav justify-content-end "
+        role="tablist"
+        aria-label="Page sections"
+        ref={navRef}
+      >
         {TAB_LIST.map((tab) => (
           <button
             key={tab}
@@ -149,7 +152,9 @@ useEffect(() => {
             id="overview-section"
             aria-selected={active === tab}
             aria-controls={`panel-${tab.replace(/\s+/g, "-").toLowerCase()}`}
-            className={`pg-tab-btn ${active === tab ? "pg-tab-btn--active" : ""}`}
+            className={`pg-tab-btn ${
+              active === tab ? "pg-tab-btn--active" : ""
+            }`}
             onClick={() => setActive(tab)}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {
@@ -162,6 +167,17 @@ useEffect(() => {
           </button>
         ))}
       </nav>
+
+      <AboutPageHero
+        title="PGPM ELITE"
+        sub="Post Graduate Program in Management"
+        breadcrumb={["Home", "PGPM Programs"]}
+        bgImage="https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+      />
+
+      <div>
+        <PgApplications className="under-banner" />
+      </div>
 
       <div
         className="pg-tabs-panel"

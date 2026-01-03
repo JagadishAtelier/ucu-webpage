@@ -1,31 +1,28 @@
 import React from "react";
 
 function PGPMOverviewAbout() {
-    return (
-        <div >
-            <h1 className="display-4 fw-bold col-12 col-lg-12"><span style={{ color: "#5ac501" }}>About </span>Programs</h1>
-            <p style={{ textAlign: "justify" }}>
-                The UCU Post Graduate Program in Management (PGPM) is the institution’s
-                flagship full-time MBA program offered in an intensive one-year format.
-                It is specifically designed for ambitious, high-potential professionals
-                who aspire to transition into leadership and managerial roles. The PGPM
-                is an AICTE-approved postgraduate certificate in management, featuring an
-                industry-aligned curriculum, innovative pedagogy, and a diverse cohort
-                that enhances learning through strong peer interaction.
-            </p>
+  return (
+    <div>
+      <h1 className="display-4 fw-bold col-12 col-lg-12">
+        About<span style={{ color: "#5ac501" }}> PGPM ELITE</span>
+      </h1>
+      <p style={{ textAlign: "justify" }}>
+        The PGPM ELITE is UCU’s flagship one-year, full-time MBA-equivalent
+        program. Designed for ambitious professionals with 3-5 years of work
+        experience, aiming to step into high impact, new age management roles.
+        To incorporate industry relevance, PGPM ELITE is curated and
+        co-delivered by leading industry professionals.
+      </p>
 
-            <p style={{ textAlign: "justify" }}>
-                In addition to academic rigor, the PGPM at UCU emphasizes industry
-                immersion, experiential learning, and real-world application. Through
-                hands-on projects, expert-led sessions, and strong corporate engagement,
-                learners gain practical insights and leadership capabilities that prepare
-                them to excel in competitive business environments. This holistic
-                approach ensures that every participant graduates with the confidence,
-                competence, and skills needed to drive meaningful impact in their
-                careers.
-            </p>
-        </div>
-    );
+      <p style={{ textAlign: "justify" }}>
+        Featuring an innovative pedagogy, and a diverse peer group, the program
+        fosters dynamic learning and collaboration. Beyond classroom excellence,
+        PGPM emphasizes industry immersion, experiential projects, and corporate
+        engagement, equipping participants with practical insights and
+        leadership skills.
+      </p>
+    </div>
+  );
 }
 
 export default PGPMOverviewAbout;

@@ -10,9 +10,9 @@ function AboutPageHero({ title,sub, breadcrumb = [], bgImage }) {
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "top center",
         backgroundRepeat: "no-repeat",
-        minHeight: "60vh",
+        minHeight: "50vh",
       }}
     >
       <div className="hero-content-wrapper" data-aos="fade-right">

@@ -11,19 +11,23 @@ const ITEMS = [
     label: "Program Highlights",
     icon: <Lightbulb size={20} />,
     title: "Program Highlights",
-    text: `<ul class="clear-div bottom10">
-	<li>Two year Fully Residential program</li>
-	<li>Emerging economy centric curriculum</li>
-	<li>Delivered by the best faculty and industry leaders from across the globe</li>
-	<li>Optional semester abroad program [SAP]</li>
-	<li>Short term international immersions</li>
-	<li>Entrepreneurial Incubation</li>
-	<li>Empirical study under Great Lakes Research Centre</li>
-	<li>Rigorous 12 week <a href="https://www.greatlakes.edu.in/chennai/pgdm/summer-internship-report">summer internship</a></li>
-	<li>AICTE approved</li>
-</ul>`,
-    action: "Know more",
-    link: "/campus-ambience",
+    text: `
+      <ul class="clear-div">
+        <li>1 year residential program</li>
+        <li>Diverse cohort with professionals in the work experience range of 3–5 years</li>
+        <li>Delivered by the best faculty and industry leaders from across the globe</li>
+        <li>
+          Curriculum co-created and co-delivered by CXOs and professionals to maximise
+          corporate relevance and post-program outcomes
+        </li>
+        <li>
+          Early networking opportunities with CXOs and BU leaders of leading corporates
+        </li>
+        <li>Access to premium live projects</li>
+      </ul>
+    `,
+    action: "",
+    link: "",
   },
   {
     id: "learningexperience",
@@ -31,49 +35,65 @@ const ITEMS = [
     icon: <Book size={20} />,
     title: "Learning Experience",
     text: `
-    <h4 class="fs-5" style="color:#5ac501">Value-adds Inside Classrooms</h4>
-      <ul class="clear-div ms-3">
-	<li>Emerging economy centric curriculum</li>
-	<li>Foreign language learning [Mandarin &amp; Spanish]</li>
-	<li>Horizontal function + Vertical domain focus</li>
-	<li>Study of PEST environment of specific emerging economy clusters</li>
-	<li>Experiential learning through simulations</li>
-	<li>Technology driven virtual classrooms with global connectivity</li>
-	<li>Emotional and ethical quotient building</li>
-	<li>Exposure to latest curriculum with faculty from across the globe</li>
-</ul>
-    <h4 class="mt-4 fs-5" style="color:#5ac501">Value-adds Outside Classrooms</h4>
-    <ul class="clear-div ms-3">
-	<li>Entrepreneurial incubation</li>
-	<li>Technopreneurship with focus on emerging markets</li>
-	<li>Emerging economy centric empirical study</li>
-	<li>Internship with Indian companies having operations abroad</li>
-	<li>Karma Yoga - A Leadership Experiential Program</li>
-</ul>
+      <ul class="clear-div">
+        <li>
+          Learn by leveraging the knowledge of CXOs and business leaders via courses
+          delivered by Professors of Practice & industry professionals
+        </li>
+        <li>Case-based learning to maximise hands-on experience</li>
+        <li>
+          Specialise with two majors – a functional major and an industry sector major
+        </li>
+      </ul>
     `,
-    action: "Find out how",
-    link: "/industry-approach",
+    action: "",
+    link: "",
   },
   {
-    id: "internationaltieups",
-    label: "International <br/> Tie-ups",
+    id: "liveprojects",
+    label: "Live Projects",
     icon: <BsSuitcase size={20} />,
-    title: "International  Tie-ups",
-    text: `<ul class="clear-div">
-	<li>Tie ups with Schools in Emerging Economies, Europe &amp; USA</li>
-	<li>Faculty &amp; student exchange programs across the globe</li>
-	<li>MOUs for consulting, knowledge exchange with leading global schools</li>
-	<li>Short term international immersions</li>
-	<li>SAP [Semester Abroad Program]</li>
-	<li>Term structure in sync with international schools</li>
-	<li>Sharing of online resources with global schools</li>
-	<li>Free boarding / lodging on reciprocal basis for students during exchange</li>
-	<li>Joint global summers [8-12 weeks]</li>
-</ul>`,
-    action: "View placements",
-    link: "/placements/recruiters",
+    title: "Live Projects",
+    text: `
+      <ul class="clear-div">
+        <li>
+          Apply your learning via optional live projects with leading corporations in
+          consulting, sales, marketing, finance, technology, and many more
+        </li>
+        <li>
+          Get one-on-one mentorship from managers, leaders, and experts to hone your skills
+        </li>
+      </ul>
+    `,
+    action: "",
+    link: "",
+  },
+  {
+    id: "whyucu",
+    label: "Why UCU PGPM ELITE?",
+    icon: <FiAward size={20} />,
+    title: "Why UCU PGPM ELITE?",
+    text: `
+      <ul class="clear-div">
+        <li>
+          Access CXO-level leaders and learn through their vast experience within classrooms
+        </li>
+        <li>Leverage opportunities for live projects</li>
+        <li>
+          Specialise in new-age MBA domains like Fin-Tech, Consulting, Product Management,
+          Data Science and AI
+        </li>
+        <li>
+          Complement your industry sector major with conventional functional majors from
+          Finance, Marketing, Operations, Sales, etc.
+        </li>
+      </ul>
+    `,
+    action: "",
+    link: "",
   },
 ];
+
 
 export default function PGPMKeyHighlights() {
   const navigate = useNavigate();
@@ -83,62 +103,62 @@ export default function PGPMKeyHighlights() {
 
   // Create a copy of ITEMS and add PGDM-specific tab if needed
   const tabs = [...ITEMS];
-    tabs.push({
-      id: "summerinternship",
-      label: "Summer Internship",
-      icon: <Sun size={20} />,
-      title: "Summer Internship",
-      text: `
-    <p>The summer internship of Great Lakes is structured more in tune with the traditional summer internships offered across B-schools. It involves rigorous hands on, on-site industry exposure spread over a duration of 8- 10 weeks. If empirical study takes on a theoretical flavor in terms of problem analysis, the summer internship takes on a hands-on applications flavor.</p>
-    <h4 class="fs-5" style="color:#5ac501">Some of the salient features of the summer internship are:</h4>
-      <ul class="clear-div">
-	<li>Runs through the months of April-May-June at the end of the first year.</li>
-	<li>Students will be required to put in not less than 120 hours of input.</li>
-	<li>This study is done either individually or by groups of two or three students jointly.</li>
-	<li>The internship would be mentored by a Great Lakes faculty as well as by an industry mentor.</li>
-</ul>
- <h4 class="fs-5" style="color:#5ac501">The benefits that are common to both summer internship and empirical study are:</h4>
- <ul class="clear-div">
-	<li>Global academic exposure</li>
-	<li>Working with globally connected student teams</li>
-	<li>On-field, real time experience</li>
-	<li>Building live business solving capabilities</li>
-</ul>
-    `,
-    })
-    tabs.push({
-      id: "ucudetails",
-      label: "Why is PGPM",
-      icon: <FiAward size={20} />,
-      title: "PGDM Exclusive Highlights",
-      text: `
-    <p>The extensive research, discussions and feedback from CXOs, senior alumni and corporate recruiters across various sectors and cities revealed a demand for professionals who are good at:</p>
-      <ol>
-        <li>Demonstrating structured problem-solving and strong decision-making skills grounded in data-driven insights.</li>
-        <li>Utilizing and implementing disruptive tools like Generative AI andstaying ahead of Industry 4.0 trends.</li>
-        <li>Being able to articulate ideas, problems, and solutions effectively,and leverage storytelling</li>
-        <li>Integrating environmental and social considerations into strategicbusiness decisions.</li>
-      </ol>
-    `,
-    });
-    tabs.push({
-      id: "uculearning",
-      label: "Learning Through Labs",
-      icon: <FiAward size={20} />,
-      title: "Learning Through Labs",
-      text: `
-<ul>
-  <li><p class="mb-1">Impact Skill Labs</p></li>
-  <li><p class="mb-1">Analytics</p></li>
-  <li><p class="mb-1">Marketing</p></li>
-  <li><p class="mb-1">Product Management</p></li>
-  <li><p class="mb-1">Finance</p></li>
-  <li><p class="mb-1">Consulting</p></li>
-  <li><p class="mb-1">Operation</p></li>
-  <li><p class="mb-1">Data Science</p></li>
-</ul>
-    `,
-    });
+//     tabs.push({
+//       id: "summerinternship",
+//       label: "Summer Internship",
+//       icon: <Sun size={20} />,
+//       title: "Summer Internship",
+//       text: `
+//     <p>The summer internship of Great Lakes is structured more in tune with the traditional summer internships offered across B-schools. It involves rigorous hands on, on-site industry exposure spread over a duration of 8- 10 weeks. If empirical study takes on a theoretical flavor in terms of problem analysis, the summer internship takes on a hands-on applications flavor.</p>
+//     <h4 class="fs-5" style="color:#5ac501">Some of the salient features of the summer internship are:</h4>
+//       <ul class="clear-div">
+// 	<li>Runs through the months of April-May-June at the end of the first year.</li>
+// 	<li>Students will be required to put in not less than 120 hours of input.</li>
+// 	<li>This study is done either individually or by groups of two or three students jointly.</li>
+// 	<li>The internship would be mentored by a Great Lakes faculty as well as by an industry mentor.</li>
+// </ul>
+//  <h4 class="fs-5" style="color:#5ac501">The benefits that are common to both summer internship and empirical study are:</h4>
+//  <ul class="clear-div">
+// 	<li>Global academic exposure</li>
+// 	<li>Working with globally connected student teams</li>
+// 	<li>On-field, real time experience</li>
+// 	<li>Building live business solving capabilities</li>
+// </ul>
+//     `,
+//     })
+//     tabs.push({
+//       id: "ucudetails",
+//       label: "Why is PGPM",
+//       icon: <FiAward size={20} />,
+//       title: "PGDM Exclusive Highlights",
+//       text: `
+//     <p>The extensive research, discussions and feedback from CXOs, senior alumni and corporate recruiters across various sectors and cities revealed a demand for professionals who are good at:</p>
+//       <ol>
+//         <li>Demonstrating structured problem-solving and strong decision-making skills grounded in data-driven insights.</li>
+//         <li>Utilizing and implementing disruptive tools like Generative AI andstaying ahead of Industry 4.0 trends.</li>
+//         <li>Being able to articulate ideas, problems, and solutions effectively,and leverage storytelling</li>
+//         <li>Integrating environmental and social considerations into strategicbusiness decisions.</li>
+//       </ol>
+//     `,
+//     });
+//     tabs.push({
+//       id: "uculearning",
+//       label: "Learning Through Labs",
+//       icon: <FiAward size={20} />,
+//       title: "Learning Through Labs",
+//       text: `
+// <ul>
+//   <li><p class="mb-1">Impact Skill Labs</p></li>
+//   <li><p class="mb-1">Analytics</p></li>
+//   <li><p class="mb-1">Marketing</p></li>
+//   <li><p class="mb-1">Product Management</p></li>
+//   <li><p class="mb-1">Finance</p></li>
+//   <li><p class="mb-1">Consulting</p></li>
+//   <li><p class="mb-1">Operation</p></li>
+//   <li><p class="mb-1">Data Science</p></li>
+// </ul>
+//     `,
+//     });
 
 
   const activeItem = tabs.find((i) => i.id === active) || tabs[0];
@@ -148,7 +168,7 @@ export default function PGPMKeyHighlights() {
   };
 
   return (
-    <div className="overview-keyhighlights row gx-4 mt-4">
+    <div className="items-start row gx-4 mt-0">
       <h1 className="display-4 fw-bold col-12 col-lg-12 my-4">
         <span style={{ color: "#5ac501" }}>PGPM Program </span>Highlights
       </h1>

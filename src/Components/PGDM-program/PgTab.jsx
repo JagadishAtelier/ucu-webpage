@@ -1,12 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
-import OverviewTab from "../../Components/PGDM-program/OverviewTab";
-import FeesTab from "../../Components/PGDM-program/FeesTab";
+import OverviewTab from "./OverviewTab";
+import FeesTab from "./FeesTab";
 import "./pgtab.css";
-import Curriculum from "../../Components/PGDM-program/Curriculum/Curriculum";
-import FeeStructure from "../../Components/PGDM-program/FeeStructure/FeeStructure";
-import AdmissionsTab from "../../Components/PGDM-program/AdmissionsTab/AdmissionsTab";
-import PlacementTab from "../../Components/PGDM-program/PlacementTab/PlacementTab";
+import Curriculum from "./Curriculum/Curriculum";
+import FeeStructure from "./FeeStructure/FeeStructure";
+import AdmissionsTab from "./AdmissionsTab/AdmissionsTab";
+import PlacementTab from "../../Pages/PgprogramPage/pgTabs/PlacementTab/PlacementTab";
 import { ArrowUp } from "lucide-react";
+import { useLocation } from "react-router-dom";
+import AboutPageHero from "../../Pages/AboutPage/AboutPageHero/AboutPageHero";
+import PgApplications from "../../Pages/PgprogramPage/PgApplications";
 const TAB_LIST = [
   "Overview",
   "Curriculum",
@@ -22,8 +25,7 @@ export default function PgTabs() {
   const navRef = useRef(null);
   const btnRefs = useRef({});
 
-
-    const scrollTo = (id) => {
+  const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -33,31 +35,35 @@ export default function PgTabs() {
   useEffect(() => {
     const btn = btnRefs.current[active];
     if (btn?.scrollIntoView) {
-      btn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      btn.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
     }
   }, [active]);
 
   // 👇 Mobile auto-scroll nudge (runs once)
-useEffect(() => {
-  const nav = navRef.current;
+  useEffect(() => {
+    const nav = navRef.current;
 
-  if (window.innerWidth <= 768 && nav) {
-    const interval = setInterval(() => {
-      nav.scrollTo({ left: 60, behavior: "smooth" });
-      setTimeout(() => nav.scrollTo({ left: 0, behavior: "smooth" }), 1500);
-    }, 3000); // every 3 seconds
-    return () => clearInterval(interval);
-  }
-}, []);
+    if (window.innerWidth <= 768 && nav) {
+      const interval = setInterval(() => {
+        nav.scrollTo({ left: 60, behavior: "smooth" });
+        setTimeout(() => nav.scrollTo({ left: 0, behavior: "smooth" }), 1500);
+      }, 3000); // every 3 seconds
+      return () => clearInterval(interval);
+    }
+  }, []);
 
-// Auto-open tab based on hash navigation
-useEffect(() => {
-  const hash = window.location.hash;
+  // Auto-open tab based on hash navigation
+  useEffect(() => {
+    const hash = window.location.hash;
 
-  if (hash === "#PlacementCalendar") {
-    setActive("Placements"); // open the Placements main tab
-  }
-}, []);
+    if (hash === "#PlacementCalendar") {
+      setActive("Placements"); // open the Placements main tab
+    }
+  }, []);
 
   // Handle scrolling when navigating with hash
   useEffect(() => {
@@ -86,19 +92,13 @@ useEffect(() => {
         );
 
       case "Curriculum":
-        return (
-          <Curriculum/>
-        );
+        return <Curriculum />;
 
       case "Fees and Scholarships":
-        return (
-          <FeeStructure/>
-        );
+        return <FeeStructure />;
 
       case "Admissions":
-        return (
-          <AdmissionsTab/>
-        );
+        return <AdmissionsTab />;
 
       // case "International Immersion":
       //   return (
@@ -120,9 +120,7 @@ useEffect(() => {
       //   );
 
       case "Placements":
-        return (
-          <PlacementTab/>
-        );
+        return <PlacementTab />;
 
       default:
         return (
@@ -133,16 +131,32 @@ useEffect(() => {
         );
     }
   };
+  const { pathname } = useLocation();
+
+  const pathSegments = pathname.split("/").filter(Boolean); // split and remove empty segments
+  const lastSegment = pathSegments[pathSegments.length - 1]; // get only the last segment
+  const heading = lastSegment
+    ? lastSegment.replace(/-/g, " ").toUpperCase()
+    : "HOME";
+  const subText =
+    heading === "PGPM ELITE"
+      ? "Post Graduate Program in Management" // when PGPM Elite
+      : "UCU Post Graduate Program in Management"; // default
 
   return (
     <div className="pg-tabs-root">
-            <button
+      <button
         className="fixed-left-arrow-btn"
         onClick={() => scrollTo("overview-section")}
       >
-        <ArrowUp/>
+        <ArrowUp />
       </button>
-      <nav className="pg-tabs-nav " role="tablist" aria-label="Page sections" ref={navRef}>
+      <nav
+        className="pg-tabs-nav "
+        role="tablist"
+        aria-label="Page sections"
+        ref={navRef}
+      >
         {TAB_LIST.map((tab) => (
           <button
             key={tab}
@@ -151,7 +165,9 @@ useEffect(() => {
             id="overview-section"
             aria-selected={active === tab}
             aria-controls={`panel-${tab.replace(/\s+/g, "-").toLowerCase()}`}
-            className={`pg-tab-btn ${active === tab ? "pg-tab-btn--active" : ""}`}
+            className={`pg-tab-btn ${
+              active === tab ? "pg-tab-btn--active" : ""
+            }`}
             onClick={() => setActive(tab)}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {
@@ -164,7 +180,15 @@ useEffect(() => {
           </button>
         ))}
       </nav>
-
+      <AboutPageHero
+        title={heading}
+        sub={subText}
+        breadcrumb={["Home", "PGDM Programs"]}
+        bgImage="https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+      />
+      <div>
+        <PgApplications className="under-banner" />
+      </div>
       <div
         className="pg-tabs-panel"
         id={`panel-${active.replace(/\s+/g, "-").toLowerCase()}`}

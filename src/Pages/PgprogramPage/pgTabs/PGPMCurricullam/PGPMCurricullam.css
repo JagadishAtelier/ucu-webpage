@@ -6,6 +6,9 @@
     width: 100%;
     object-fit: cover;
 }
+.border-color-green{
+    border-color: #5ac501 !important;
+}
 
 .academic-text {
     font-weight: 600;

@@ -5,7 +5,7 @@ import PlacementHighlights from './PlacementHighlights';
 import OurRecuriters from './OurRecuriters';
 import PlacementContact from './PlacementContact';
 function PlacementTab() {
-  const [selectedBtn, setSelectedBtn] = useState("intern");
+  const [selectedBtn, setSelectedBtn] = useState("final");
   return (
     <div className='p-3 mx-auto container my-1'>
       <h1 className="display-6 fw-bold col-12 col-lg-12"><span style={{ color: "#5ac501" }} className=''>UCU Chennai:  </span> Gateway to the World of Opportunity
@@ -17,7 +17,7 @@ function PlacementTab() {
       <p>The placement process happens in two hiring cycles:</p>
 
       <div className='d-flex gap-3 flex-lg-row flex-column'>
-        <button className={`placement-btns-intern py-3 ${selectedBtn === "intern" ? "active" : ""}`} onClick={() => setSelectedBtn("intern")}>Internship Placement Process</button>
+        {/* <button className={`placement-btns-intern py-3 ${selectedBtn === "intern" ? "active" : ""}`} onClick={() => setSelectedBtn("intern")}>Internship Placement Process</button>  */}
         <button className={`placement-btns-intern py-3 ${selectedBtn === "final" ? "active" : ""}`} onClick={() => setSelectedBtn("final")}>Final Placement Process</button>
       </div>
 
