@@ -1,6 +1,6 @@
 /* SECTION */
 .industry-section {
-    padding: 80px 16px;
+    padding: 80px 0px 0px;
     /* Extra bottom padding necessary to allow the last card to travel up to the stack position */
     position: relative;
     /* background: #fdfdfd; */
@@ -114,19 +114,75 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .section-title {
-        font-size: 24px;
-        top: 60px;
+    .industry-section {
+        padding: 40px 0px 0px;
     }
 
-    .card-content {
-        flex-direction: column;
-        gap: 16px;
-        padding: 24px;
+    .section-title {
+        font-size: 24px;
+        position: static;
+        /* Remove sticky on mobile */
+        margin-bottom: 30px;
+    }
+
+    .card-stack {
+        padding-bottom: 0;
     }
 
     .major-card {
-        margin-bottom: 80px;
-        /* More space on mobile to see stack */
+        position: static;
+        /* Remove sticky positioning on mobile */
+        margin-bottom: 32px;
+    }
+
+    .card-content {
+        flex-direction: row;
+        /* Keep horizontal layout */
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    /* Icon stays on left, smaller */
+    .icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+    }
+
+    /* Remove all card styling on mobile */
+    .card-header {
+        background: transparent;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: auto;
+        transition: none;
+    }
+
+    .card-header:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    /* Title next to icon */
+    .card-header h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #0b1c3d;
+    }
+
+    /* List styling for mobile */
+    .major-card li {
+        font-size: 14px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    .bullet {
+        width: 6px;
+        height: 6px;
+        margin-top: 6px;
     }
 }

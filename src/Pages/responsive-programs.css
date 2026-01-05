@@ -1,0 +1,172 @@
+/* ========================================
+   RESPONSIVE UTILITIES FOR ALL PROGRAM PAGES
+   (PGXPM, PGPM, PGDM)
+   ======================================== */
+
+/* Tablet Breakpoint (992px and below) */
+@media (max-width: 992px) {
+
+    /* Container padding adjustments */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Typography scaling */
+    h1,
+    .display-4,
+    .display-5 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.75rem !important;
+    }
+
+    h3 {
+        font-size: 1.5rem !important;
+    }
+
+    /* Section padding */
+    section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    /* Grid adjustments */
+    .row {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    .row>* {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+/* Mobile Breakpoint (768px and below) */
+@media (max-width: 768px) {
+
+    /* Typography */
+    h1,
+    .display-4,
+    .display-5 {
+        font-size: 1.75rem !important;
+        line-height: 1.3 !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.25rem !important;
+    }
+
+    p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Container */
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Section spacing */
+    section {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    /* Button sizing */
+    .btn,
+    button {
+        font-size: 0.9rem !important;
+        padding: 10px 20px !important;
+    }
+
+    /* Image responsiveness */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Table responsiveness */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        font-size: 0.85rem !important;
+    }
+
+    /* Card adjustments */
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    /* Remove excessive margins */
+    .my-5 {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .my-4 {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+/* Small Mobile (576px and below) */
+@media (max-width: 576px) {
+
+    h1,
+    .display-4,
+    .display-5 {
+        font-size: 1.5rem !important;
+    }
+
+    h2 {
+        font-size: 1.3rem !important;
+    }
+
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    p {
+        font-size: 0.9rem !important;
+    }
+
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* Buttons full width on very small screens */
+    .btn-block-mobile {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Fix for overflow issues */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .overflow-visible {
+        overflow: visible !important;
+    }
+
+    /* Ensure containers don't cause horizontal scroll */
+    .container-fluid,
+    .container {
+        overflow-x: hidden;
+    }
+}

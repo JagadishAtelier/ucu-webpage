@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
+import "../responsive-programs.css";
 import PGDMCurricullam from "./PGDMCurricullam";
 import AdmissionsTab from "../../Components/PGDM-program/AdmissionsTab/AdmissionsTab";
 import PlacementTab from "../PgprogramPage/pgTabs/PlacementTab/PlacementTab";

@@ -11,9 +11,11 @@
   gap: 2rem;
   margin-top: 1rem;
 }
-.fee-image{
-    width: 50%;
+
+.fee-image {
+  width: 50%;
 }
+
 .fee-image img {
   width: 100%;
   height: 100%;
@@ -52,22 +54,61 @@
   font-weight: 500;
 }
 
-.hostel-sec{
-    background: linear-gradient(205deg, rgb(7, 186, 243)  1% , rgb(23, 3, 169) 100%) !important;
-    border: none !important;
+.hostel-sec {
+  background: linear-gradient(205deg, rgb(7, 186, 243) 1%, rgb(23, 3, 169) 100%) !important;
+  border: none !important;
 }
-.hostel-sec-table-data{
+
+.hostel-sec-table-data {
   background-color: #f8f6fb;
 }
-.hostel-sec-head{
+
+.hostel-sec-head {
   color: #005bd4 !important;
 }
 
-@media (max-width:480px) {
-  .fee-info{
-    flex-direction: column;
+
+/* Tablet Responsive */
+@media (max-width: 992px) {
+  .fee-info {
+    gap: 1.5rem;
   }
-  .fee-image{
+
+  .fee-details p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .fee-info {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .fee-image {
     width: 100%;
+  }
+
+  .fee-details {
+    min-width: 100%;
+  }
+
+  .fee-details p {
+    font-size: 1rem;
+  }
+
+  .scholarship-section {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fee-details h5 {
+    font-size: 1.1rem;
+  }
+
+  .fee-details p {
+    font-size: 0.95rem;
   }
 }

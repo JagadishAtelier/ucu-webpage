@@ -1,0 +1,179 @@
+/* PGXPM 360 Section */
+.pgxpm-360-section {
+    /* background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%); */
+    padding: 10px 0;
+    position: relative;
+    overflow: visible;
+}
+
+.pgxpm-360-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    /* background: radial-gradient(circle, rgba(90, 197, 1, 0.05) 0%, transparent 70%); */
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Section Header */
+.pgxpm-360-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0b1c3d;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.brand-text {
+    color: #5ac501;
+    position: relative;
+}
+
+.pgxpm-360-subtitle {
+    font-size: 18px;
+    color: #6b7280;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pgxpm-360-footer {
+    font-size: 16px;
+    color: #6b7280;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Pillars Grid */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 60px;
+}
+
+/* Pillar Card */
+.pillar-card {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-8px);
+}
+
+.pillar-card-inner {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 32px;
+    box-shadow: 0 10px 40px rgba(11, 28, 61, 0.08);
+    border: 1px solid rgba(11, 28, 61, 0.06);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pillar-card.active .pillar-card-inner {
+    box-shadow: 0 20px 60px rgba(11, 28, 61, 0.15);
+    border-color: rgba(90, 197, 1, 0.2);
+}
+
+/* Icon Wrapper */
+.pillar-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.pillar-card:hover .pillar-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Content */
+.pillar-content {
+    flex: 1;
+}
+
+.pillar-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b1c3d;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.pillar-description {
+    font-size: 15px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Decorative Element */
+.pillar-decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pillar-card.active .pillar-decoration {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .pgxpm-360-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pgxpm-360-section {
+        padding: 60px 0;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pgxpm-360-title {
+        font-size: 32px;
+    }
+
+    .pillar-card-inner {
+        padding: 32px 24px;
+        min-height: 280px;
+    }
+
+    .pillar-icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+}

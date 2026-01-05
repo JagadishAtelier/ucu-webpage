@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
+import "../responsive-programs.css";
 import AboutPageHero from "../AboutPage/AboutPageHero/AboutPageHero";
 import PGXPMOverview from "./PGXPMOverview";
 import PGXPMFeeStructure from "./PGXPMFeeStructure";

@@ -2,6 +2,8 @@
 // Reuse or placeholder components
 // import IndustryConnect from "../../Pages/PGPMProgram/IndustryConnect";
 import PGPMBottomBanner from "../../Pages/PGPMProgram/PGPMBottomBanner";
+import CourseStructure from "./CourseStructure";
+import PGXPM360 from "./PGXPM360";
 import WhoIsFor from "./WhoIsFor";
 
 export default function PGXPMOverview() {
@@ -21,18 +23,15 @@ export default function PGXPMOverview() {
             <div className="container p-3">
                 <WhoIsFor />
             </div>
-
-            <div className="container p-3">
-                {/* Placeholder for Key Highlights */}
-                <h3>Program Highlights</h3>
-                <ul>
-                    <li>Designed for working professionals</li>
-                    <li>Flexible schedule</li>
-                    <li>Industry-aligned curriculum</li>
-                </ul>
+            
+            <div className="container overflow-visible">
+                <PGXPM360/>
+            </div>
+            <div className="container overflow-visible">
+                <CourseStructure/>
             </div>
 
-            <PGPMBottomBanner />
+            {/* <PGPMBottomBanner /> */}
         </>
     );
 }

@@ -21,7 +21,7 @@
     /* More comfortable padding */
     color: #fff;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     /* Icon on top looks more modern for 4-col layout */
     align-items: flex-start;
     /* Left align content */
@@ -31,7 +31,7 @@
     /* Brand highlight */
     box-shadow: 0 10px 30px rgba(11, 28, 61, 0.15);
     transition: all 0.3s ease;
-    min-height: 175px;
+    /* min-height: 175px; */
     /* Taller to accommodate column layout */
     position: relative;
     overflow: hidden;
@@ -41,6 +41,7 @@
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(11, 28, 61, 0.25);
     background: linear-gradient(145deg, #0f2550, #163673);
+    display: flex;
     /* Slightly lighter on hover */
 }
 
@@ -59,10 +60,11 @@
     margin-bottom: 8px;
 }
 
-.card-text {
+.who-card-text {
     font-size: 15px;
-    line-height: 1.4;
+    line-height: 1.6;
     font-weight: 500;
+    letter-spacing: 0.5px;
     text-transform: capitalize;
     margin: 0 auto;
     text-align: left;

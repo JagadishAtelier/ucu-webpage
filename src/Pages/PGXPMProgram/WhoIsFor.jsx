@@ -32,7 +32,7 @@ export default function WhoIsFor() {
                 {data.map((item, index) => (
                     <div key={index} className="who-card">
                         <div className="icon-wrapper">{item.icon}</div>
-                        <p className="card-text">{item.text}</p>
+                        <p className="who-card-text">{item.text}</p>
                     </div>
                 ))}
             </div>

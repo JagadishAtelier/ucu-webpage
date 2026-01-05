@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
+import "../responsive-programs.css";
 import PGPMCurricullam from "../PgprogramPage/pgTabs/PGPMCurricullam/PGPMCurricullam";
 import FeeStructure from "../../Components/PGDM-program/FeeStructure/FeeStructure";
 import PGPMAdmission from "../PgprogramPage/pgTabs/PGPMAdmission/PGPMAdmission";
@@ -152,9 +153,8 @@ export default function PGPMTabs() {
             id="overview-section"
             aria-selected={active === tab}
             aria-controls={`panel-${tab.replace(/\s+/g, "-").toLowerCase()}`}
-            className={`pg-tab-btn ${
-              active === tab ? "pg-tab-btn--active" : ""
-            }`}
+            className={`pg-tab-btn ${active === tab ? "pg-tab-btn--active" : ""
+              }`}
             onClick={() => setActive(tab)}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {

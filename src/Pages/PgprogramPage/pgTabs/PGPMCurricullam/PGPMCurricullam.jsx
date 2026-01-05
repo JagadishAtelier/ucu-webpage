@@ -91,7 +91,7 @@ function PGPMCurricullam() {
         <RevampedSec />
         {/* <PGPMSpecification/> 
         <PGPMConcentrate /> */}
-        <PGPMBottomBanner />
+        {/* <PGPMBottomBanner /> */}
       </div>
     </section>
   );
