@@ -101,7 +101,7 @@ function ContactPageForm() {
 
     {/* Card 3: Student Helpline */}
     <div className="CRTContact-univ-card">
-      <div className="CRTContact-univ-banner" style={{ backgroundImage: "url('https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=800')" }}>
+      <div className="CRTContact-univ-banner" style={{ backgroundImage: "url('https://img.freepik.com/free-photo/happy-customer-service-representative-using-computer-while-communicating-with-clients-online_637285-6679.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80')" }}>
         <div className="CRTContact-univ-label">Helpline</div>
       </div>
       <div className="CRTContact-univ-body">
