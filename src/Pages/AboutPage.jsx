@@ -64,7 +64,7 @@ function AboutPage() {
       {/* <AboutJourney/> */}
       <Timeline />
       <AboutYears />
-      <ConnectWithUs />
+      {/* <ConnectWithUs /> */}
       {/* <AboutTour/>
         <AboutGraduation/>
         <AboutBrand/> */}

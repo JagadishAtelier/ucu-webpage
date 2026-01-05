@@ -60,69 +60,65 @@ function ContactPageForm() {
           <h1 className="mb-0 display-5 fw-bold text-uppercase">
             <span style={{ color: "#5ac501" }}>connect with us </span> through our
           </h1>
-          <div className="contactSection-container">
-            <div className="contactSection-grid">
+<div className="CRTContact-universe-section">
+  <div className="CRTContact-universe-grid">
+    
+    {/* Card 1: Campus Headquarters */}
+    <div className="CRTContact-univ-card">
+      <div className="CRTContact-univ-banner" style={{ backgroundImage: "url('https://images.pexels.com/photos/159490/yale-university-landscape-universities-schools-159490.jpeg?auto=compress&cs=tinysrgb&w=800')" }}>
+        <div className="CRTContact-univ-label">Main Campus</div>
+      </div>
+      <div className="CRTContact-univ-body">
+        <div className="CRTContact-univ-icon"><MapPin size={22} /></div>
+        <div className="CRTContact-univ-info">
+          <h3>University Headquarters</h3>
+          <p>UCU Road, University Campus</p>
+          <p>Chennai, TN - 600 025</p>
+        </div>
+        <div className="CRTContact-univ-footer">
+          <a href="#" className="CRTContact-univ-link">Get Directions →</a>
+        </div>
+      </div>
+    </div>
 
-              {/* Address */}
-              <div
-                className="contactSection-card"
-                style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=900&q=80')",
-                }}
-              >
-                <div className="contactSection-overlay"></div>
+    {/* Card 2: Academic Registry */}
+    <div className="CRTContact-univ-card">
+      <div className="CRTContact-univ-banner" style={{ backgroundImage: "url('https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=800')" }}>
+        <div className="CRTContact-univ-label">Administration</div>
+      </div>
+      <div className="CRTContact-univ-body">
+        <div className="CRTContact-univ-icon"><MailOpen size={22} /></div>
+        <div className="CRTContact-univ-info">
+          <h3>Academic Registry</h3>
+          <p>Primary: ucu@gmail.com</p>
+          <p>Admissions: reg@university.edu</p>
+        </div>
+        <div className="CRTContact-univ-footer">
+          <a href="mailto:ucu@gmail.com" className="CRTContact-univ-link">Compose Email →</a>
+        </div>
+      </div>
+    </div>
 
-                <div className="contactSection-icon">
-                  <MapPin size={28} />
-                </div>
+    {/* Card 3: Student Helpline */}
+    <div className="CRTContact-univ-card">
+      <div className="CRTContact-univ-banner" style={{ backgroundImage: "url('https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=800')" }}>
+        <div className="CRTContact-univ-label">Helpline</div>
+      </div>
+      <div className="CRTContact-univ-body">
+        <div className="CRTContact-univ-icon"><PhoneCall size={22} /></div>
+        <div className="CRTContact-univ-info">
+          <h3>Information Desk</h3>
+          <p>General: +91 98765 43210</p>
+          <p>Registrar: (044) 2345 6789</p>
+        </div>
+        <div className="CRTContact-univ-footer">
+          <a href="tel:+919876543210" className="CRTContact-univ-link">Call Support →</a>
+        </div>
+      </div>
+    </div>
 
-                <h3>Address</h3>
-                <p>UCU Road, UCU University</p>
-                <p>Chennai - 600 025</p>
-                <p>Tamil Nadu</p>
-              </div>
-
-              {/* Email */}
-              <div
-                className="contactSection-card"
-                style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=900&q=80')",
-                }}
-              >
-                <div className="contactSection-overlay"></div>
-
-                <div className="contactSection-icon-email">
-                  <MailOpen size={28} />
-                </div>
-                <div className="d-flex flex-column justify-contnet-center align-items-center my-auto">
-                  <h3>Email</h3>
-                  <p>University : ucu@gmail.com</p>
-                </div>
-              </div>
-
-              {/* Phone */}
-              <div
-                className="contactSection-card"
-                style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80')",
-                }}
-              >
-                <div className="contactSection-overlay"></div>
-
-                <div className="contactSection-icon">
-                  <PhoneCall size={28} />
-                </div>
-                <div className="d-flex flex-column justify-contnet-center align-items-center my-auto">
-                  <h3>Phone</h3>
-                  <p>Office : 9876543210</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
+  </div>
+</div>
 
 
 

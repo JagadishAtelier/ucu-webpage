@@ -110,9 +110,9 @@ export default function AdmissionsTab() {
               Apply Now
             </button>
           </div>
-                <div className="mt-5">
+                {/* <div className="mt-5">
       <PGPMBottomBanner/>
-      </div>
+      </div> */}
         </section>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./AboutYears.css";
 import CountUp from "react-countup";
-import bgImage from "../../../Assets/aboutPageImage/vision_mission_bg1.png";
+import bgImage from "../../../Assets/aboutPageImage/vision_mission_bg2.png";
 
 const data = [
   {
@@ -51,7 +51,7 @@ function AboutYears() {
   return (
     <div
       ref={sectionRef}
-      className="about-years-section d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-lg-start py-5 px-3 px-lg-5"
+      className="about-years-section d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-lg-start "
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundPosition: "center",
@@ -59,6 +59,13 @@ function AboutYears() {
         backgroundRepeat: "no-repeat",
       }}
     >
+            <div
+        className="w-100 h-100 py-5 px-3 px-lg-5"
+        style={{
+          backgroundColor: 'rgba(0, 0, 0, 0.58)', // Adjust the '0.4' value to control opacity
+          padding: '1px' // Add a small padding to ensure the overlay takes effect
+        }}
+      >
       <div className="d-flex flex-column justify-content-between flex-lg-row justify-content-lg-between align-items-lg-start w-100">
         {data.map((item, index) => (
           <div
@@ -84,6 +91,7 @@ function AboutYears() {
             <p className="counter-paragraph mb-0">{item.para}</p>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

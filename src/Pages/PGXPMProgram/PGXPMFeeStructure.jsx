@@ -39,9 +39,9 @@ const PGXPMFeeStructure = () => {
                 <p className="text-muted">*Accommodation during campus immersion modules will be charged separately.</p>
             </div>
 
-            <div className="mt-5">
+            {/* <div className="mt-5">
                 <PGPMBottomBanner />
-            </div>
+            </div> */}
         </section>
     );
 };

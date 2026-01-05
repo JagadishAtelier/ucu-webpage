@@ -22,7 +22,7 @@ const data = [
     para: (
       <>
 
-        <ul className="mission-list text-lg-right">
+        <ul className="mission-list text-lg-justify">
           <li className="mb-2">
             To co-create and co-deliver cutting-edge, contemporary, and
             future-ready curricula in active collaboration with industry
@@ -102,9 +102,9 @@ function AboutPhil() {
               <h1 className="fw-bold vission-h1 fs-2 mb-3 text-center text-lg-start" dangerouslySetInnerHTML={{ __html: item.head }}>
               </h1>
               {typeof item.para === "string" ? (
-                <p className=" vission-p fs-6 mb-3 text-lg-start">{item.para}</p>
+                <p className=" vission-p fs-6 mb-3 text-lg-justify ap-text-p">{item.para}</p>
               ) : (
-                <div className=" vission-p fs-6 mb-3 text-lg-right">{item.para}</div>
+                <div className=" vission-p fs-6 mb-3 text-lg-right ap-text-p">{item.para}</div>
               )}
 
               {/* Add supplementary image under Vision */}

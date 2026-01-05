@@ -277,12 +277,15 @@ const cities = [
     },
 ];
 
-
+// ✅ Sort alphabetically
+const sortedCities = [...cities].sort((a, b) =>
+  a.title.localeCompare(b.title, "en", { sensitivity: "base" })
+);
 function ContactChapterInternatinalGrid() {
     return (
         <div className="container my-5">
             <div className="row">
-                {cities.map((item, index) => (
+                {sortedCities.map((item, index) => (
                     <div className="col-lg-4 col-md-6 mb-4 mx-auto" key={index}>
                         <div className="flip-card">
                             <div className="flip-card-inner shadow">
