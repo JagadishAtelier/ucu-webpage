@@ -43,7 +43,7 @@ function OverviewTab() {
             </div>
             <CurriculumOverview/>
                   <div className="mt-5">
-      <PGPMBottomBanner/>
+      {/* <PGPMBottomBanner/> */}
       </div>
         </>
     );

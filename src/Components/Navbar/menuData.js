@@ -171,8 +171,8 @@ export const menuData = [
         link: "/program/career-reboot",
         submenu: [
           {
-            label: "Functional Specialization",
-            link: "/program/functional-certifications",
+            label: "Domain Specialization",
+            // link: "/program/functional-certifications",
             submenu: [
               { label: "Sales", link: "/program/sales" },
               {
@@ -189,8 +189,8 @@ export const menuData = [
             ],
           },
           {
-            label: "Industry Sector Specialization",
-            link: "/program/industry-sector",
+            label: "Career Lane Specialization",
+            // link: "/program/industry-sector",
             submenu: [
               { label: "FinTech Genesis", link: "/program/fintech" },
               {

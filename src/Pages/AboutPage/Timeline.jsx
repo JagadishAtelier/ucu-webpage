@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col  } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "./Timeline.css";
 import TimelineRow from "./TimelineRow";
 import image1 from '../../Assets/about-page-images/image-1.jpg'
@@ -41,7 +41,7 @@ const Timeline = () => {
         
         These milestones laid the foundation for his deep expertise in corporate and executive education ecosystems.
       `,
-      images: [image1,image2],
+      images: [image1, image2],
       reverse: false,
     },
     {
@@ -64,8 +64,8 @@ const Timeline = () => {
         Under his stewardship, the institute’s average campus CTC increased more than sevenfold within a decade,
         reflecting the transformative impact of his leadership.<br /><br />
       `,
-      images: ["/historyImages/2.jpg","/historyImages/3.jpg", "/historyImages/1.jpg", "histroy-5.jpg", "histroy-4.jpg", "histroy-7.jpg","histroy-8.jpg"],// replace with a collage or carousel image
-      images1: ["/historyImages/5.jpg", "/historyImages/6.jpg", "/historyImages/4.jpg","histroy-6.jpg","histroy-7.jpg"],// replace with a collage or carousel image
+      images: ["/historyImages/2.jpg", "/historyImages/3.jpg", "/historyImages/1.jpg", "histroy-5.jpg", "histroy-4.jpg", "histroy-7.jpg", "histroy-8.jpg"],// replace with a collage or carousel image
+      images1: ["/historyImages/5.jpg", "/historyImages/6.jpg", "/historyImages/4.jpg", "histroy-6.jpg", "histroy-7.jpg"],// replace with a collage or carousel image
       reverse: true,
     },
     {
@@ -87,23 +87,26 @@ const Timeline = () => {
         Every program is engineered for genuine impact, empowering learners to become agile, future-ready business leaders.
       `,
       images: ["/timeline-logo2.png"], // replace with actual image
+      images1: ["https://img.freepik.com/free-photo/shanghai-waitan_649448-3038.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
+         "https://img.freepik.com/free-photo/modern-amphitheater-usa_1268-14358.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
+          "https://img.freepik.com/premium-photo/aerial-drone-shot-waverly-hills-sanatorium-louisville-kentucky_665346-46385.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",],
       reverse: false,
     },
   ];
 
   return (
     <>
-    <h1 className="display-4 fw-bold col-12 text-center mt-4">
-       <span style={{color:'#5ac501'}}> Our</span> Journey
+      <h1 className="display-4 fw-bold col-12 text-center mt-4">
+        <span style={{ color: '#5ac501' }}> Our</span> Journey
       </h1>
-    <section className="timeline">
-      <div className="timeline-line"></div>
-      <div className="container-fluid">
-        {data.map((item, idx) => (
-          <TimelineRow key={idx} {...item} />
-        ))}
-      </div>
-    </section></>
+      <section className="timeline">
+        <div className="timeline-line"></div>
+        <div className="container-fluid">
+          {data.map((item, idx) => (
+            <TimelineRow key={idx} {...item} />
+          ))}
+        </div>
+      </section></>
   );
 };
 

@@ -48,7 +48,7 @@ function PGPMOverViewTab() {
       <div className="container my-1 p-3">
         <OverviewParticipant />
       </div>
-      <PGPMBottomBanner />
+      {/* <PGPMBottomBanner /> */}
     </>
   );
 }

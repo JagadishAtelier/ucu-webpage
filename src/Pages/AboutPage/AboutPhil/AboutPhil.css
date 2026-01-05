@@ -20,7 +20,7 @@
 
 /* Vision + Mission text styling */
 .mission-list {
-  text-align: left;
+  text-align: justify;
   list-style-type: disc;
   padding-left: 1.2rem;
   font-weight: 300;
@@ -35,6 +35,9 @@
     font-family: "Merriweather", serif !important;
   font-weight: 400 !important;
   letter-spacing: 1px;
+}
+.ap-text-p{
+  text-align: justify !important;
 }
 .vission-h1 span {
   color: #5ac501;

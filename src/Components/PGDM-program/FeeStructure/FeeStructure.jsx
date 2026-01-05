@@ -92,9 +92,9 @@ two year PGDM.</p>
           </Accordion.Item>
         </Accordion>
       </div>
-      <div className="mt-5">
+      {/* <div className="mt-5">
       <PGPMBottomBanner/>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -70,9 +70,9 @@ function PGPMAdmission() {
         <PGPMApplicationGuidelines />
         <PGPMEssay />
         <PGPMEvaluationProcess />
-        <div className="">
+        {/* <div className="">
           <PGPMBottomBanner />
-        </div>
+        </div> */}
       </div>
     </section>
   );

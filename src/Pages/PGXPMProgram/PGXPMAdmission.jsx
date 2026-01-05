@@ -35,9 +35,9 @@ function PGXPMAdmission() {
                     </ul>
                 </div>
 
-                <div className="">
+                {/* <div className="">
                     <PGPMBottomBanner />
-                </div>
+                </div> */}
             </div>
         </section>
     );

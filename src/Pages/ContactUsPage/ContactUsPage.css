@@ -576,3 +576,113 @@
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 12px 28px rgba(0,0,0,0.35);
 }
+
+
+
+.CRTContact-universe-section {
+  padding: 80px 0;
+  background-color: #f8fafc; /* Light slate professional background */
+}
+
+.CRTContact-universe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.CRTContact-univ-card {
+  background: #ffffff;
+  border-radius: 4px; /* Professional sharp edges or very slight roundness */
+  overflow: hidden;
+  border-top: 4px solid #1e3a8a; /* University Navy Blue Accent */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.CRTContact-univ-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.CRTContact-univ-banner {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.CRTContact-univ-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #1e3a8a; /* University Primary Color */
+  color: white;
+  padding: 8px 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.CRTContact-univ-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+
+.CRTContact-univ-icon {
+  width: 45px;
+  height: 45px;
+  background: #f1f5f9;
+  color: #1e3a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.CRTContact-univ-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif; /* Or any professional serif font */
+}
+
+.CRTContact-univ-info p {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.CRTContact-univ-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.CRTContact-univ-link {
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.CRTContact-univ-link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  .CRTContact-universe-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -157,7 +157,10 @@ const cities = [
    
 ];
 
-
+// ✅ Sort alphabetically
+const sortedCities = [...cities].sort((a, b) =>
+  a.title.localeCompare(b.title, "en", { sensitivity: "base" })
+);
 function ContactUsCarouselInternational() {
     const navigate = useNavigate()
     return (
@@ -185,7 +188,7 @@ function ContactUsCarouselInternational() {
                         }}
                         className="contact-carousel-swiper"
                     >
-                        {cities.map((city, index) => (
+                        {sortedCities.map((city, index) => (
                             <SwiperSlide key={index}>
                                 <div onClick={() => navigate('/contact-chapters-international')} className="contact-carousel-card">
                                     <img src={city.img} alt={city.title} className="contact-carousel-img" />

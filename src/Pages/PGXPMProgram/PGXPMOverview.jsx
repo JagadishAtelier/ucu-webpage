@@ -31,8 +31,8 @@ export default function PGXPMOverview() {
                     <li>Industry-aligned curriculum</li>
                 </ul>
             </div>
-
-            <PGPMBottomBanner />
+{/* 
+            <PGPMBottomBanner /> */}
         </>
     );
 }
