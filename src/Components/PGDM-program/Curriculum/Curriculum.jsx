@@ -220,9 +220,9 @@ A program with cutting-edge analytics, industry co-creation, and global relevanc
           <AimlaTable/>
         </div>
       </div>
-            <div className="mt-5">
+            {/* <div className="mt-5">
       <PGPMBottomBanner/>
-      </div>
+      </div> */}
     </section>
   );
 };

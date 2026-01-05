@@ -1,0 +1,132 @@
+/* SECTION */
+.industry-section {
+    padding: 80px 16px;
+    /* Extra bottom padding necessary to allow the last card to travel up to the stack position */
+    position: relative;
+    /* background: #fdfdfd; */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #0b1c3d;
+
+    /* Sticky Title Logic */
+    position: sticky;
+    top: 20px;
+    /* Adjust based on your Main Navbar height */
+    z-index: 50;
+    width: 100%;
+    margin-top: 0;
+}
+
+/* CONTAINER */
+.card-stack {
+    /* max-width: 800px; */
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* CARD WRAPPER (Motion Div) */
+.major-card {
+    position: sticky;
+    /* Top is set inline via JS */
+    margin-bottom: 250px;
+    /* Increased to visual separation and reading time */
+    display: flex;
+    justify-content: center;
+}
+
+
+/* CARD CONTENT (Visual Box) */
+.card-content {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+
+/* ICON */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Colors set inline */
+}
+
+/* HEADER & TEXT */
+.card-header {
+    flex: 1;
+    background: #fff;
+    padding: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 280px;
+}
+
+.card-header:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.card-header h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #0b1c3d;
+}
+
+/* LIST */
+.major-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.major-card li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: #4a5568;
+}
+
+/* Custom Bullet */
+.bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 24px;
+        top: 60px;
+    }
+
+    .card-content {
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px;
+    }
+
+    .major-card {
+        margin-bottom: 80px;
+        /* More space on mobile to see stack */
+    }
+}

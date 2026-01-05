@@ -6,12 +6,12 @@
   height: 450px;
   margin-top: 1%;
   color: white;
-
+  border-radius: 15px;
   display: flex;
-  flex-direction: column; /* stack text and buttons vertically */
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
-  text-align: center;      /* center text */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .banner-text h1 {
@@ -58,8 +58,8 @@
   }
 
   .banner-btns {
-    
-  flex-wrap: wrap;
+
+    flex-wrap: wrap;
     width: 100% !important;
     flex-direction: column;
     gap: 10px;

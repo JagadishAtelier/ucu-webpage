@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
-import Curriculum from "../../Components/PGDM-program/Curriculum/Curriculum";
+import PGDMCurricullam from "./PGDMCurricullam";
 import AdmissionsTab from "../../Components/PGDM-program/AdmissionsTab/AdmissionsTab";
 import PlacementTab from "../PgprogramPage/pgTabs/PlacementTab/PlacementTab";
 import PGDMOverViewTab from "./PGDMOverViewTab";
@@ -90,7 +90,7 @@ export default function PGDMTabs() {
                 );
 
             case "Curriculum":
-                return <Curriculum />;
+                return <PGDMCurricullam />;
 
             case "Fees":
                 return <PGDMFeeStructure />;

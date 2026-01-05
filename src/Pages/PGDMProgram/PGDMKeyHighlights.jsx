@@ -8,22 +8,17 @@ import { BsSuitcase } from "react-icons/bs";
 const ITEMS = [
     {
         id: "programhighlights",
-        label: "Program Highlights",
+        label: "About Program",
         icon: <Lightbulb size={20} />,
-        title: "Program Highlights",
+        title: "About Program",
         text: `
       <ul class="clear-div">
-        <li>2 year residential program</li>
-        <li>Diverse cohort with professionals</li>
+        <li>Two Year fully residential program</li>
+        <li>Rigorous 12 week summer internship</li>
         <li>Delivered by the best faculty and industry leaders from across the globe</li>
         <li>
-          Curriculum co-created and co-delivered by CXOs and professionals to maximise
-          corporate relevance and post-program outcomes
+          New Age specializations like GCC, Product Management, Fin-Tech and many more to enable future readiness
         </li>
-        <li>
-          Early networking opportunities with CXOs and BU leaders of leading corporates
-        </li>
-        <li>Access to premium live projects</li>
       </ul>
     `,
         action: "",
@@ -37,12 +32,14 @@ const ITEMS = [
         text: `
       <ul class="clear-div">
         <li>
-          Learn by leveraging the knowledge of CXOs and business leaders via courses
-          delivered by Professors of Practice & industry professionals
+          One on One Industry enabled mentorship
         </li>
-        <li>Case-based learning to maximise hands-on experience</li>
+        <li>CXOs in classroom to impart board wisdom in classroom interactions</li>
         <li>
-          Specialise with two majors – a functional major and an industry sector major
+          Technology driven virtual classrooms with global connectivity
+        </li>
+        <li>
+          Exposure to latest curriculum with faculty from across the globe
         </li>
       </ul>
     `,
@@ -50,42 +47,20 @@ const ITEMS = [
         link: "",
     },
     {
-        id: "liveprojects",
-        label: "Live Projects",
+        id: "summerinternship",
+        label: "Summer Internship",
         icon: <BsSuitcase size={20} />,
-        title: "Live Projects",
+        title: "Summer Internship",
         text: `
       <ul class="clear-div">
         <li>
-          Apply your learning via optional live projects with leading corporations in
-          consulting, sales, marketing, finance, technology, and many more
+          An on-site summer internship ranging 2-3 months 
         </li>
         <li>
-          Get one-on-one mentorship from managers, leaders, and experts to hone your skills
-        </li>
-      </ul>
-    `,
-        action: "",
-        link: "",
-    },
-    {
-        id: "whyucu",
-        label: "Why UCU PGDM?",
-        icon: <FiAward size={20} />,
-        title: "Why UCU PGDM?",
-        text: `
-      <ul class="clear-div">
-        <li>
-          Access CXO-level leaders and learn through their vast experience within classrooms
-        </li>
-        <li>Leverage opportunities for live projects</li>
-        <li>
-          Specialise in new-age MBA domains like Fin-Tech, Consulting, Product Management,
-          Data Science and AI
+          Premium Indian corporates providing early hands-on experience to UCU students
         </li>
         <li>
-          Complement your industry sector major with conventional functional majors from
-          Finance, Marketing, Operations, Sales, etc.
+          Opportunity to secure a performance driven PPO
         </li>
       </ul>
     `,
@@ -179,7 +154,7 @@ export default function PGDMKeyHighlights() {
 
             {/* RIGHT CONTENT */}
             <div className="col-12 col-lg-9 d-none d-lg-block">
-                <div className="content-card p-4 shadow-sm">
+                <div className="content-card p-4">
                     <h3 className="content-title">{activeItem.title}</h3>
                     <div
                         className="content-text"

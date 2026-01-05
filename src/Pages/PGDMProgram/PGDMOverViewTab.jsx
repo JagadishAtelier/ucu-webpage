@@ -37,12 +37,12 @@ function PGDMOverViewTab() {
         </div>
       </div> */}
 
-            <IndustryConnect />
+            {/* <IndustryConnect /> */}
 
             <div className="container my-1 p-3">
                 <OverviewParticipant />
             </div>
-            <PGDMBottomBanner />
+            {/* <PGDMBottomBanner /> */}
         </>
     );
 }

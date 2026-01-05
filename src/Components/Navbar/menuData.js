@@ -145,7 +145,7 @@ export const menuData = [
         label: "Full Time Programs",
         submenu: [
           { label: "PGPM ELITE | Career Accelerator Program", link: "/pgpm-elite" },
-          { label: "PGDM | Young Leaders' Program", link: "/program/pgdm" },
+          { label: "PGDM | Young Leaders' Program", link: "/program-pgdm" },
           {
             label: "Flexi Program",
             className: "sublink-custom",
@@ -544,8 +544,8 @@ export const menuDataMobile = [
       {
         label: "Full Time Programs",
         submenu: [
-          { label: "PGPM ELITE | Career Accelerator Program", link: "/program/pgpm-elite" },
-          { label: "PGDM | Young Leaders' Program", link: "/program/pgdm" },
+          { label: "PGPM ELITE | Career Accelerator Program", link: "/pgpm-elite" },
+          { label: "PGDM | Young Leaders' Program", link: "/program-pgdm" },
           {
             label: "Flexi Program",
             className: "sublink-custom",

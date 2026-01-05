@@ -5,6 +5,7 @@ import RevampedSec from "./RevampedSec";
 import PGPMSpecification from "./PGPMSpecification";
 import PGPMConcentrate from "./PGPMConcentrate";
 import PGPMBottomBanner from "../../../PGPMProgram/PGPMBottomBanner";
+import PGPMIndustrySectorMajor from "../../../PGPMProgram/PGPMIndustrySectorMajor";
 const data = [
   {
     head: "Communicate with Impact & Lead with Confidence",
@@ -43,7 +44,7 @@ function PGPMCurricullam() {
         <div className="row g-4 mt-3">
           {/* INDUSTRY SECTOR MAJORS */}
           <div className="col-lg-6">
-            <div className="border h-100 p-4 bg-light">
+            <div className="border h-100 p-4 bg-light rounded-2">
               {/* <h3 className="fw-bold mb-2">Industry Sector Majors</h3>
               <p className="text-muted small mb-3">
                 Designed for emerging roles in high-growth global sectors
@@ -70,7 +71,7 @@ function PGPMCurricullam() {
 
           {/* FUNCTIONAL MAJORS */}
           <div className="col-lg-6">
-            <div className="border h-100 p-4">
+            <div className="border h-100 p-4 rounded-2">
               <p className="small border-start ps-3 mb-3 border-color-green" >
                 Combined with the Industry Sector Majors, we offer the second
                 major in traditional functional domains:
@@ -85,10 +86,11 @@ function PGPMCurricullam() {
             </div>
           </div>
         </div>
-        <WhyPgpmSection />
+        <PGPMIndustrySectorMajor/>
+        {/* <WhyPgpmSection />
         <RevampedSec />
-        {/* <PGPMSpecification/> */}
-        <PGPMConcentrate />
+        {/* <PGPMSpecification/> 
+        <PGPMConcentrate /> */}
         <PGPMBottomBanner />
       </div>
     </section>

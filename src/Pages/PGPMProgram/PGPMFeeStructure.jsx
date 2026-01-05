@@ -24,7 +24,7 @@ const PGPMFeeStructure = () => {
 
         <div className="fee-details">
           <h5 className="gradient-text hero-gradient-1">
-            Indian Participants:
+            PGPM Fee Structure
           </h5>
           <p>
             The tuition and program fee is <strong> INR 8,00,000*</strong>.

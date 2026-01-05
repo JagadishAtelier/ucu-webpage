@@ -239,7 +239,7 @@ export default function PGPMKeyHighlights() {
 
       {/* RIGHT CONTENT */}
       <div className="col-12 col-lg-9 d-none d-lg-block">
-        <div className="content-card p-4 shadow-sm">
+        <div className="content-card p-4">
           <h3 className="content-title">{activeItem.title}</h3>
           <div
             className="content-text"
