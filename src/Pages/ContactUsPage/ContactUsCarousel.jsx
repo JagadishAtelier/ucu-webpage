@@ -93,7 +93,7 @@ function ContactUsCarousel() {
 
                 {/* RIGHT - TEXT BLOCK */}
                 <div className="contact-carousel-text col-lg-5 col-11 mx-auto bg-white p-3 shadow d-flex flex-column justify-content-between">
-                    <p className="fw-bold m-0" style={{ color: "#0f1a48" }}>UCU Chapters</p>
+                    <p className="fw-bold m-0" style={{ color: "#0f1a48" }}>UCU Centers</p>
                     <h2 className="fw-bold mt-2">Presence across major cities in India</h2>
                     <p className="text-muted mt-3">
                         India’s leading brands continue to strengthen their presence across major cities, ensuring that customers in metropolitan and Tier-1 locations have easy access to their products and services.
