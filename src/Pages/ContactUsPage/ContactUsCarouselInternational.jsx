@@ -201,7 +201,7 @@ function ContactUsCarouselInternational() {
 
                 {/* RIGHT - TEXT BLOCK */}
                 <div className="contact-carousel-text col-lg-5 col-11 mx-auto bg-white p-3 shadow d-flex flex-column justify-content-between">
-                    <p className="fw-bold m-0" style={{ color: "#0f1a48" }}>UCU Chapters</p>
+                    <p className="fw-bold m-0" style={{ color: "#0f1a48" }}>UCU Centers</p>
                     <h2 className="fw-bold mt-2">Presence across leading countries worldwide</h2>
                     <p className="text-muted mt-3">
                         With a strong international footprint, the organization has established a presence across leading countries worldwide, ensuring global accessibility and seamless service delivery.
