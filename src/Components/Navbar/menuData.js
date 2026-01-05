@@ -151,7 +151,7 @@ export const menuData = [
             className: "sublink-custom",
             submenu: [
               { label: "PGPM Flex", link: "/program/pgpm" },
-              { label: "PGXPM ", link: "/program/pgxpm" },
+              { label: "PGXPM ", link: "/program-pgxpm" },
             ],
           },
           // {
@@ -551,7 +551,7 @@ export const menuDataMobile = [
             className: "sublink-custom",
             submenu: [
               { label: "PGPM Flex", link: "/program/pgpm" },
-              { label: "PGXPM ", link: "/program/pgxpm" },
+              { label: "PGXPM ", link: "/program-pgxpm" },
             ],
           },
           // {

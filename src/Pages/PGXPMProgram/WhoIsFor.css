@@ -1,0 +1,82 @@
+.who-is-for-section {
+    padding: 20px 0;
+}
+
+.section-heading {
+    color: #0b1c3d;
+    font-weight: 800;
+    font-size: 36px;
+}
+
+.who-is-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.who-card {
+    background: linear-gradient(145deg, #0b1c3d, #122c5e);
+    /* Subtle gradient */
+    padding: 24px;
+    /* More comfortable padding */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* Icon on top looks more modern for 4-col layout */
+    align-items: flex-start;
+    /* Left align content */
+    gap: 16px;
+    border-radius: 12px;
+    border-left: 4px solid #5ac501;
+    /* Brand highlight */
+    box-shadow: 0 10px 30px rgba(11, 28, 61, 0.15);
+    transition: all 0.3s ease;
+    min-height: 175px;
+    /* Taller to accommodate column layout */
+    position: relative;
+    overflow: hidden;
+}
+
+.who-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(11, 28, 61, 0.25);
+    background: linear-gradient(145deg, #0f2550, #163673);
+    /* Slightly lighter on hover */
+}
+
+.icon-wrapper {
+    flex-shrink: 0;
+    color: #5ac501;
+    /* Green Icon */
+    background: rgba(90, 197, 1, 0.1);
+    /* Subtle green tint bg for icon */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.card-text {
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .who-is-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .who-is-grid {
+        grid-template-columns: 1fr;
+    }
+}

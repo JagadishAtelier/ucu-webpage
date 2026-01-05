@@ -64,6 +64,7 @@ import LCPBanner from "./Pages/LeaderShipCoachPage/LCPBanner";
 import PGDMProgramPage from "./Pages/PGDMProgram/PGDMProgramPage";
 import PGPMApplications from "./Pages/PGPMProgram/PGPMApplications";
 import PGPMProgramPage from "./Pages/PGPMProgram/PGPMProgramPage";
+import PGXPMProgramPage from "./Pages/PGXPMProgram/PGXPMProgramPage";
 
 function App() {
   useEffect(() => {
@@ -86,6 +87,7 @@ function App() {
           <Route path="/profile/details" element={<PDPhero />} />
           <Route path="/program-pgdm" element={<PGDMProgramPage />} />
           <Route path="/pgpm-elite" element={<PGPMProgramPage />} />
+          <Route path="/program-pgxpm" element={<PGXPMProgramPage />} />
           <Route path="/program/*" element={<PgprogramPage />} />
           <Route path="/auth/register" element={<SignUpPage />} />
           <Route path="/auth/login" element={<LoginPage />} />
