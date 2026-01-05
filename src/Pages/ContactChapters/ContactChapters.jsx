@@ -24,14 +24,14 @@ function ContactChapters() {
                     data-aos="fade-right"
                 >
                     {/* Dynamic Title */}
-                    <h1 className="fw-bold fs-1 fs-lg-1">Chapters</h1>
-                    <p>Find chapters, blogs, Podcast and social chapters to level up your professional life.</p>
+                    <h1 className="fw-bold fs-1 fs-lg-1">Centers</h1>
+                    <p>Find centers, blogs, Podcast and social centres to level up your professional life.</p>
                 </div>
 
                 <div className='position-absolute bottom-0 left-0 d-flex align-items-center campus-route-bg py-3'>
                     <p className='m-0'><a href='/' className='text-decoration-none text-white'>UCU</a></p>
                     <ChevronRight />
-                    <p className='m-0'>Chapters </p>
+                    <p className='m-0'>Centers </p>
                 </div>
 
             </div>
