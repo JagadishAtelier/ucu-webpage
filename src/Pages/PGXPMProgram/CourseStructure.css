@@ -114,6 +114,31 @@
     background: #f9fafc;
 }
 
+
+/* Custom styles for the PGPXM Download Buttons */
+.PGPXM-download-btnds .custom-download-btn {
+    background-color: #001f54; /* Deep blue color */
+    color: #ffffff;
+    border: none;
+    border-radius: 12px; /* Smooth rounded corners */
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.PGPXM-download-btnds .custom-download-btn:hover {
+    background-color: #00338d; /* Slightly lighter on hover */
+    color: #ffffff;
+}
+
+.PGPXM-download-btnds .custom-download-btn i {
+    font-size: 1.5rem; /* Makes icons larger like the image */
+}
+
+.PGPXM-download-btnds .custom-download-btn span {
+    font-size: 1rem;
+    white-space: nowrap;
+}
 /* RESPONSIVE */
 @media (max-width: 992px) {
     .cs-stats {

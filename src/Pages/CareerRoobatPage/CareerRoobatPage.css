@@ -1,0 +1,181 @@
+:root {
+    --uni-blue: #002147;
+    --royal-blue: #0056b3;
+    --accent-gold: #ffc107;
+    --text-muted: #556677;
+    --glass-white: rgba(255, 255, 255, 0.95);
+}
+
+.CRPFWPP-section {
+    background: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Elements */
+.CRPFWPP-badge {
+    color: black;
+    background: rgba(0, 86, 179, 0.1);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.CRPFWPP-main-title {
+    color: black;
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+.CRPFWPP-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.CRPFWPP-divider span {
+    width: 50px;
+    height: 4px;
+    background: #5ac501;
+    border-radius: 10px;
+}
+
+/* The Glass Card */
+.CRPFWPP-glass-card {
+    background: var(--glass-white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 40px 30px;
+    height: 100%;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0, 33, 71, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.CRPFWPP-glass-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 33, 71, 0.12);
+    border-top: 4px solid var(--royal-blue);
+}
+
+/* Animated Number Blob */
+.CRPFWPP-number-blob {
+    width: 45px;
+    height: 45px;
+    background: var(--uni-blue);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    box-shadow: 4px 4px 10px rgba(0, 33, 71, 0.2);
+    transform: rotate(-5deg);
+    transition: 0.3s ease;
+}
+
+.CRPFWPP-glass-card:hover .CRPFWPP-number-blob {
+    transform: rotate(0deg) scale(1.1);
+    background: var(--royal-blue);
+}
+
+/* Typography */
+.CRPFWPP-description {
+    color: black;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Subtle Footer Accent */
+.CRPFWPP-card-footer {
+    margin-top: 20px;
+    width: 30px;
+    height: 2px;
+    background: #dee2e6;
+    transition: 0.3s ease;
+}
+
+.CRPFWPP-glass-card:hover .CRPFWPP-card-footer {
+    width: 100%;
+    background: #5ac501;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .CRPFWPP-main-title {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+/* Section */
+.CRPFeatures {
+  background-color: #fdfefe;
+}
+
+/* Title */
+.CRPFeatures-title {
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: 6px solid #5ac501;
+  padding-left: 14px;
+}
+
+/* Panel */
+.CRPFeatures-panel {
+  border-left: 2px solid #dbe2ea;
+  padding-left: 30px;
+}
+
+/* Single Point */
+.CRPFeatures-point {
+  position: relative;
+  padding: 18px 0;
+  transition: all 0.3s ease;
+}
+
+/* Dot Indicator */
+.CRPFeatures-dot {
+  position: absolute;
+  left: -38px;
+  top: 26px;
+  width: 14px;
+  height: 14px;
+  background: #0d6efd;
+  border-radius: 50%;
+}
+
+/* Text */
+.CRPFeatures-point p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Hover */
+.CRPFeatures-point:hover {
+  padding-left: 10px;
+}
+
+.CRPFeatures-point:hover .CRPFeatures-dot {
+  background: #002855;
+  transform: scale(1.2);
+}

@@ -65,6 +65,8 @@ import PGDMProgramPage from "./Pages/PGDMProgram/PGDMProgramPage";
 import PGPMApplications from "./Pages/PGPMProgram/PGPMApplications";
 import PGPMProgramPage from "./Pages/PGPMProgram/PGPMProgramPage";
 import PGXPMProgramPage from "./Pages/PGXPMProgram/PGXPMProgramPage";
+import CareerRoobatPageTabs from "./Pages/CareerRoobatPage/CareerRoobatPageTabs";
+import CareerRoobatPage from "./Pages/CareerRoobatPage/CareerRoobatPage";
 
 function App() {
   useEffect(() => {
@@ -129,6 +131,7 @@ function App() {
           <Route path="/programs-for-individuals" element={<ProgramsForIndividualsBanner />} />
           <Route path="/cxo-series/*" element={<CXOPageBanner />} />
           <Route path="/lcp" element={<LCPBanner />} />
+          <Route path="/Career-Reboot-Program-for-Women" element={<CareerRoobatPage />} />
           {/* <Route path="/account" element={<ProfilePage />} /> */}
         </Routes>
         <FixedSideBar />

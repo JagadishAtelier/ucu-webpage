@@ -20,9 +20,9 @@ const FeeStructure = () => {
         </div>
 
         <div className="fee-details">
-          <h5 className="gradient-text hero-gradient-1">Indian Participants:</h5>
+          <h5 className="gradient-text hero-gradient-1">Fee Structure:</h5>
           <p>
-            The fee for Indian Participants is <strong> INR 10,00,000*</strong>.
+            The fee for Fee Structure is <strong> INR 10,00,000*</strong>.
           </p>
           <p>
             This fee is not inclusive of hostel accommodation, mess and other expenses.This includes only the tuition fee and is subject to revision.</p>
@@ -33,7 +33,7 @@ two year PGDM.</p>
             [The above mentioned fee does not include the Global Fast Track Immersion Program which is our exchange program crafted for the two year PGDM. ]
           </p> */}
 
-          <h5 className="gradient-text hero-gradient-1 mt-4">International Participants:</h5>
+          {/* <h5 className="gradient-text hero-gradient-1 mt-4">International Participants:</h5>
           <p>
             The fee for Indian Participants is  <strong> INR 16,00,000*</strong>.
           </p>
@@ -42,7 +42,7 @@ two year PGDM.</p>
           </p>
           <p> The above mentioned fee does not include the 
 Global Fast Track Immersion Program which is our exchange program crafted for the 
-two year PGDM.</p>
+two year PGDM.</p> */}
 
           {/* <p className="mt-3">
             [The Global Fast Track (GFT) and International Exchange are optional components of
@@ -60,7 +60,7 @@ two year PGDM.</p>
 
 
       {/* ================= Scholarships ================= */}
-      <div className="scholarship-section">
+      {/* <div className="scholarship-section">
         <h4 className="gradient-text hero-gradient-1">Financial Assistance and Scholarships</h4>
         <p>
           The main objective of financial assistance and scholarships is to provide monetary
@@ -91,7 +91,7 @@ two year PGDM.</p>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
-      </div>
+      </div> */}
       {/* <div className="mt-5">
       <PGPMBottomBanner/>
       </div> */}

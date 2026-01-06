@@ -160,7 +160,7 @@ export const menuData = [
           // },
           {
             label: "Career Reboot Program for Women",
-            link: "/program/career-reboot",
+            link: "/Career-Reboot-Program-for-Women",
             className: "sublink-custom",
           },
         ],

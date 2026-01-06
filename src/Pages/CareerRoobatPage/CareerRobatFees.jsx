@@ -4,11 +4,11 @@ import feeImage from "../../Assets/aboutPageImage/fee.jpg";
 import PGPMBottomBanner from "../../Pages/PGPMProgram/PGPMBottomBanner";
 import HostelSection from "../../Components/PGDM-program/FeeStructure/HostelSection";
 
-const PGXPMFeeStructure = () => {
+const CareerRobatFees = () => {
     return (
         <section className="container p-3 mx-auto  my-1">
             <h3 className="display-6 fw-bold col-12 col-lg-12">
-                <span className="program">PGXPM</span> Fee Structure
+                <span className="program">Career Reboot Program for Women </span> Fee Structure
             </h3>
 
             {/* ================= Fee Info ================= */}
@@ -22,15 +22,15 @@ const PGXPMFeeStructure = () => {
 
                 <div className="fee-details">
                     <h5 className="gradient-text hero-gradient-1">
-                        PGXPM Fee Structure
+                        Career Reboot Program for Women Fee Structure
                     </h5>
                     <p>
-                        Our fee is  <strong> INR 9,00,000*</strong> + applicable taxes.
+                        Plan 1 is  <strong> 75,000*</strong> + taxes INR in one instalment.
                     </p>
                     <p>
-                        Total cost is <strong> INR 10,00,000*</strong> + applicable taxes.payable in two installments of <strong>
-                            INR 5,00,000*
-                        </strong>
+                        Plan 2 is <strong> INR 45,000 + tax*</strong> and <strong>
+                            INR 40,000 + tax*
+                        </strong> in two installments.
                     </p>
                 </div>
             </div>
@@ -48,4 +48,4 @@ const PGXPMFeeStructure = () => {
     );
 };
 
-export default PGXPMFeeStructure;
+export default CareerRobatFees;

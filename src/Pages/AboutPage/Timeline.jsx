@@ -41,7 +41,11 @@ const Timeline = () => {
         
         These milestones laid the foundation for his deep expertise in corporate and executive education ecosystems.
       `,
-      images: [image1, image2],
+      images: [image1, image2,"/abt-story-1.jpeg","/abt-story-2.jpeg"
+        ,"/abt-story-3.jpeg"
+        ,"/abt-story-4.jpeg"
+        ,"/abt-story-5.jpeg"
+      ],
       reverse: false,
     },
     {
