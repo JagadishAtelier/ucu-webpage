@@ -1,0 +1,203 @@
+/* Container and Title */
+.PGPMFLEX .PGPMFLEX-section-title {
+    color: black; /* Navy Blue color */
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+/* Card Styling */
+.PGPMFLEX .PGPMFLEX-info-card {
+    background-color: #0C2340; /* Darker Navy */
+    color: #ffffff;
+    min-height: 30vh;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.PGPMFLEX .PGPMFLEX-info-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Icon Styling */
+.PGPMFLEX .PGPMFLEX-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px dashed #ffffff;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.PGPMFLEX .PGPMFLEX-icon-container {
+    flex-shrink: 0;
+}
+
+/* Center Dotted Divider */
+.PGPMFLEX .PGPMFLEX-vertical-divider {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    border-left: 1px dashed #cccccc;
+    z-index: 0;
+    transform: translateX(-50%);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .PGPMFLEX .PGPMFLEX-info-card {
+        min-height: auto;
+    }
+}
+
+
+
+
+/* ================================
+   PGPM FLEX INFO – PREMIUM DESIGN
+================================ */
+
+.PGPMFLEXINFO-container {
+    background: #f8f9fa;
+    padding: 80px 30px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ================================
+   CENTER CIRCLE
+================================ */
+
+.PGPMFLEXINFO-main-circle {
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+    border: 10px solid #5ac501;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    max-width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 35px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    position: relative;
+    transition: transform 0.4s ease;
+}
+
+.PGPMFLEXINFO-main-circle:hover {
+    transform: scale(1.05);
+}
+
+.PGPMFLEXINFO-circle-title {
+    font-weight: 900;
+    color: black;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+}
+
+.PGPMFLEXINFO-circle-title span {
+    font-size: 1.4rem;
+}
+
+/* ================================
+   RIGHT TIMELINE
+================================ */
+
+.PGPMFLEXINFO-list-wrapper {
+    position: relative;
+    padding-left: 60px;
+}
+
+/* Vertical Gradient Line */
+.PGPMFLEXINFO-list-wrapper::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #5ac501, #5ac501, #5ac501);
+    border-radius: 10px;
+}
+
+/* ================================
+   FEATURE ITEM
+================================ */
+
+.PGPMFLEXINFO-feature-item {
+    position: relative;
+    margin-bottom: 35px;
+    padding: 18px 25px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+}
+
+.PGPMFLEXINFO-feature-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* ================================
+   DOT WITH PULSE EFFECT
+================================ */
+
+.PGPMFLEXINFO-dot {
+    position: absolute;
+    left: -48px;
+    top: 28px;
+    width: 18px;
+    height: 18px;
+    background-color: #5ac501;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px #5ac501;
+    animation: PGPMFLEXINFO-pulse 2s infinite;
+}
+
+@keyframes PGPMFLEXINFO-pulse {
+    0% {
+        box-shadow: 0 0 0 0 #5ac501;
+    }
+    70% {
+        box-shadow: 0 0 0 14px rgba(230,126,34,0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(230,126,34,0);
+    }
+}
+
+/* ================================
+   TEXT
+================================ */
+
+.PGPMFLEXINFO-feature-text {
+    font-size: 1.05rem;
+    color: black;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+    .PGPMFLEXINFO-list-wrapper {
+        padding-left: 40px;
+    }
+
+    .PGPMFLEXINFO-dot {
+        left: -40px;
+    }
+
+    .PGPMFLEXINFO-main-circle {
+        max-width: 260px;
+    }
+}

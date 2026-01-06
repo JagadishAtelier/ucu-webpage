@@ -67,6 +67,7 @@ import PGPMProgramPage from "./Pages/PGPMProgram/PGPMProgramPage";
 import PGXPMProgramPage from "./Pages/PGXPMProgram/PGXPMProgramPage";
 import CareerRoobatPageTabs from "./Pages/CareerRoobatPage/CareerRoobatPageTabs";
 import CareerRoobatPage from "./Pages/CareerRoobatPage/CareerRoobatPage";
+import PGPMFlexPageHome from "./Pages/PGPMFlexPage/PGPMFlexPageHome";
 
 function App() {
   useEffect(() => {
@@ -132,6 +133,7 @@ function App() {
           <Route path="/cxo-series/*" element={<CXOPageBanner />} />
           <Route path="/lcp" element={<LCPBanner />} />
           <Route path="/Career-Reboot-Program-for-Women" element={<CareerRoobatPage />} />
+          <Route path="/PGPM-Flex" element={<PGPMFlexPageHome />} />
           {/* <Route path="/account" element={<ProfilePage />} /> */}
         </Routes>
         <FixedSideBar />

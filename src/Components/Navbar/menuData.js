@@ -150,7 +150,7 @@ export const menuData = [
             label: "Flexi Program",
             className: "sublink-custom",
             submenu: [
-              { label: "PGPM Flex", link: "/program/pgpm" },
+              { label: "PGPM Flex", link: "/PGPM-Flex" },
               { label: "PGXPM ", link: "/program-pgxpm" },
             ],
           },
