@@ -14,7 +14,6 @@ function CareerRobatApply() {
       <div className="container">
         <div className="row mb-5">
           <div className="col-12 text-center">
-            <span className="CRPFWPP-badge">Eligibility</span>
             <h2 className="CRPFWPP-main-title">Who Can Apply?</h2>
             <div className="CRPFWPP-divider">
               <span></span>
