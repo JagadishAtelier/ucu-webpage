@@ -8,7 +8,7 @@ import {
     PhoneCall
 } from 'lucide-react';
 
-const PGPMFlexApplication = () => {
+const PGXPMApp = () => {
     const steps = [
         {
             id: 1,
@@ -63,8 +63,7 @@ const PGPMFlexApplication = () => {
                         <Col
                             key={step.id}
                             xs={12}
-                            md={6}
-                            lg
+                            md
                             className="PGPMFLEX-admission-app-proc-col"
                         >
                             <Card className="PGPMFLEX-admission-app-proc-card h-100">
@@ -90,4 +89,4 @@ const PGPMFlexApplication = () => {
     );
 };
 
-export default PGPMFlexApplication;
+export default PGXPMApp;

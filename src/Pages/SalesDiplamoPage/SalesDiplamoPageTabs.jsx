@@ -2,12 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 import "../responsive-programs.css";
 import AboutPageHero from "../AboutPage/AboutPageHero/AboutPageHero";
-import PGXPMFeeStructure from "../PGXPMProgram/PGXPMFeeStructure";
-import PGXPMAdmission from "../PGXPMProgram/PGXPMAdmission";
-import "./CareerRoobatPage.css"; // Reuse tabs styling
-import CareerRobatOverview from "./CareerRobatOverview";
-import CareerRobatFees from "./CareerRobatFees";
-import CareerRobatAdmission from "./CareerRobatAdmission";
+import SalesDiplamoPageOverview from "./SalesDiplamoPageOverview";
+import SalesDiplamoFeesTab from "./SalesDiplamoFeesTab";
+import SalesDiplamoAdmission from "./SalesDiplamoAdmission";
 import PgApplications from "../PgprogramPage/PgApplications";
 
 const TAB_LIST = [
@@ -16,7 +13,7 @@ const TAB_LIST = [
     "Admissions",
 ];
 
-export default function CareerRoobatPageTabs() {
+export default function SalesDiplamoPageTabs() {
     const [active, setActive] = useState(TAB_LIST[0]);
     const navRef = useRef(null);
     const btnRefs = useRef({});
@@ -42,11 +39,11 @@ export default function CareerRoobatPageTabs() {
     const renderContent = (tab) => {
         switch (tab) {
             case "Overview":
-                return <CareerRobatOverview />;
+                return <SalesDiplamoPageOverview />;
             case "Fees":
-                return <CareerRobatFees />;
+                return <SalesDiplamoFeesTab />;
             case "Admissions":
-                return <CareerRobatAdmission />;
+                return <SalesDiplamoAdmission />;
             default:
                 return <div>Content not found</div>;
         }
@@ -92,9 +89,9 @@ export default function CareerRoobatPageTabs() {
             </nav>
 
             <AboutPageHero
-                title="Career Reboot Program for Women"
+                title="Sales Diploma"
                 // sub="Post Graduate Program for Executives"
-                breadcrumb={["Home", "Career Reboot Program for Women"]}
+                breadcrumb={["Home", "Sales Diploma"]}
                 bgImage="https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg"
             />
             <div>

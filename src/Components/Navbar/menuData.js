@@ -174,7 +174,7 @@ export const menuData = [
             label: "Domain Specialization",
             // link: "/program/functional-certifications",
             submenu: [
-              { label: "Sales", link: "/program/sales" },
+              { label: "Sales", link: "/SalesDiplamo" },
               {
                 label: "Product",
                 link: "/program/product",

@@ -6,6 +6,7 @@ import PGXPMOverview from "./PGXPMOverview";
 import PGXPMFeeStructure from "./PGXPMFeeStructure";
 import PGXPMAdmission from "./PGXPMAdmission";
 import "../PGDMProgram/PGDMProgram.css"; // Reuse tabs styling
+import PgApplications from "../PgprogramPage/PgApplications";
 
 const TAB_LIST = [
     "Overview",
@@ -94,7 +95,9 @@ export default function PGXPMTabs() {
                 breadcrumb={["Home", "PGXPM"]}
                 bgImage="https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg"
             />
-
+            <div>
+                <PgApplications className="under-banner" />
+            </div>
             <div className="pg-tabs-panel">
                 {renderContent(active)}
             </div>
