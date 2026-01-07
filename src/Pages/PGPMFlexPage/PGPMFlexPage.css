@@ -486,3 +486,28 @@
         display: none;
     }
 }
+
+@media (max-width:768px) {
+  .pgpm-flex-pillar-item{
+    width: 100%;
+    flex: 0 0 calc(50% - 24px);
+  }
+  .pgpm-flex-terms{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .PGPMFLEX-progress-section{
+    width: 50% !important;
+  }
+}
+@media (max-width:480px) {
+  .pgpm-flex-pillar-item{
+    width: 100%;
+    flex: 0 0 calc(100% - 24px);
+  }
+  .pgpm-flex-terms{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .PGPMFLEX-progress-section{
+    width: 50% !important;
+  }
+}

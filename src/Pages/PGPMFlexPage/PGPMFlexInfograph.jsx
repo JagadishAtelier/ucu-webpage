@@ -35,7 +35,7 @@ const pillars = [
 
   return (
     <section className="pgxpm-360-section">
-      <div className="container py-5">
+      <div className="container py-lg-5 py-0">
         {/* Section Header */}
         <motion.div
           className="text-center mb-5"
