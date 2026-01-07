@@ -2,6 +2,7 @@
 // Reuse or placeholder components
 // import IndustryConnect from "../../Pages/PGPMProgram/IndustryConnect";
 
+import PGPMFlexCourseStructure from "./PGPMFlexCourseStructure";
 import PGPMFlexInfograph from "./PGPMFlexInfograph";
 import PGPMFlexWho from "./PGPMFlexWho";
 
@@ -26,6 +27,9 @@ export default function PGPMFlexOverview() {
 
             <div className="container overflow-visible">
                 <PGPMFlexInfograph />
+            </div>
+            <div className="container overflow-visible">
+                <PGPMFlexCourseStructure />
             </div>
             {/* <div class="PGPXM-download-btnds d-flex flex-column flex-lg-row gap-3 container">
                 <button class="btn custom-download-btn d-flex align-items-center">

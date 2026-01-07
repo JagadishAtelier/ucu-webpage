@@ -1,50 +1,40 @@
-import React from 'react';
+import React from "react";
+import { Briefcase, TrendingUp, Users, Award } from "lucide-react";
 
-const PGPMFlexWho = () => {
-  const cards = [
+const data = [
     {
-      icon: "★",
-      text: " Professionals with 2+ years of working experience in the private or public sector wanting a business education while working"
+        icon: <Briefcase size={32} />,
+        text: "Professionals with 2+ years of working experience in the private or public sector wanting a business education while working",
     },
     {
-      icon: "⚙",
-      text: "Keep same till the word business"
+        icon: <Award size={32} />,
+        text: "2nd generation family business owner aiming to evolve the business",
     },
     {
-      icon: "♟",
-      text: "Start-up owners aiming to give direction to and strategically expand the business"
+        icon: <Users size={32} />,
+        text: "Start-up owners aiming to give direction to and strategically expand the business",
     },
     {
-      icon: "↗",
-      text: " Practitioners from non-business fields like doctors, lawyers, CAs and CSs wanting to scale up their practice or equip themselves for exploring interdisciplinary areas"
-    }
-  ];
+        icon: <TrendingUp size={32} />,
+        text: "Practitioners from non-business fields like doctors, lawyers, CAs and CSs wanting to scale up their practice or equip themselves for exploring interdisciplinary areas",
+    },
+];
 
-  return (
-    <section className="PGPMFLEX container">
-      <h2 className="PGPMFLEX-section-title text-center mb-5">
-        Who is the PGPM Flex For?
-      </h2>
+export default function PGPMFlexWho() {
+    return (
+        <section className="who-is-for-section container mb-5">
+            <h2 className="section-heading text-center mb-5">
+                Who is the <span style={{ color: "#0b1c3d" }}>PGPM Flex For?</span>
+            </h2>
 
-      <div className="row g-3 justify-content-center position-relative">
-        {/* Vertical divider */}
-        <div className="PGPMFLEX-vertical-divider d-none d-md-block"></div>
-
-        {cards.map((card, index) => (
-          <div key={index} className="col-12 col-md-6 col-lg-3">
-            <div className="PGPMFLEX-info-card d-flex align-items-start p-3 h-100 shadow">
-              <div className="PGPMFLEX-icon-container me-3">
-                <span className="PGPMFLEX-icon-box">{card.icon}</span>
-              </div>
-              <p className="PGPMFLEX-card-text mb-0">
-                {card.text}
-              </p>
+            <div className="who-is-grid">
+                {data.map((item, index) => (
+                    <div key={index} className="who-card">
+                        <div className="icon-wrapper">{item.icon}</div>
+                        <p className="who-card-text">{item.text}</p>
+                    </div>
+                ))}
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
-
-export default PGPMFlexWho;
+        </section>
+    );
+}

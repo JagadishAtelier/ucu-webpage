@@ -1,203 +1,488 @@
-/* Container and Title */
-.PGPMFLEX .PGPMFLEX-section-title {
-    color: black; /* Navy Blue color */
-    font-weight: 800;
+.pgpm-flex-pillar-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.pgpm-flex-pillar-item {
+    flex: 0 0 calc(33.333% - 24px);
+}
+
+.pgpm-flex-terms {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/* .pgpm-cs-stat-box {
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(230, 230, 230);
+    border-image: initial;
+    border-radius: 12px;
+    padding: 24px;
+    background: rgb(249, 250, 252);
+} */
+.pgpm-flex-stats {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.PGPMFLEX-learning-title {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Main progress bar container */
+.PGPMFLEX-custom-progress-wrapper {
+    height: 60px;
+    /* Adjust height to match image */
+    border-radius: 15px;
+    /* Rounded corners for the whole bar */
+    overflow: hidden;
+    /* Ensures sections don't spill out of radius */
+}
+
+/* Common styling for both sections */
+.PGPMFLEX-progress-section {
+    display: flex;
+    align-items: baseline;
+    /* Aligns text to bottom/baseline */
+    padding: 10px 15px;
+    position: relative;
+}
+
+/* Specific section colors */
+.PGPMFLEX-in-class {
+    background: rgb(249, 250, 252);
+    border-width: 1px;
+    /* border-style: solid; */
+    border-color: rgb(230, 230, 230);
+    color: #1a2b49;
+    /* Dark navy text */
+}
+
+.PGPMFLEX-digital {
+    background-color: #122647;
+    /* Dark navy background */
+    color: #ffffff;
+}
+
+/* Text styling */
+.PGPMFLEX-percent {
     font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-right: 5px;
+}
+
+.PGPMFLEX-label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+
+/* Section Wrapper */
+.PGPMFLEX-fees-tab-section {
+  padding: 80px 0;
+  background: #f6f8fb;
+}
+
+/* Header */
+.PGPMFLEX-fees-tab-header h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #002d5b;
+}
+
+.PGPMFLEX-fees-tab-header p {
+  margin-top: 10px;
+  color: #5f6f81;
+  font-size: 1.05rem;
+}
+
+/* Cards */
+.PGPMFLEX-fees-tab-card {
+  border: none;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  height: 100%;
+}
+
+.PGPMFLEX-fees-tab-highlighted {
+  border-top: 6px solid #5ac501;
+}
+
+/* Badge */
+.PGPMFLEX-fees-tab-badge {
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.PGPMFLEX-fees-tab-plan-one {
+  background: #002d5b;
+  color: #fff;
+}
+
+.PGPMFLEX-fees-tab-plan-two {
+  background: #0d6efd;
+  color: #fff;
+}
+
+/* Title */
+.PGPMFLEX-fees-tab-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1c2c3a;
+}
+
+/* Price */
+.PGPMFLEX-fees-tab-price-box {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+.PGPMFLEX-fees-tab-currency {
+  font-size: 1.5rem;
+  margin-right: 4px;
+  color: #0d6efd;
+}
+
+.PGPMFLEX-fees-tab-price {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+/* Description */
+.PGPMFLEX-fees-tab-desc {
+  font-size: 0.95rem;
+  color: #5f6f81;
+  line-height: 1.6;
+}
+
+/* Installments */
+.PGPMFLEX-fees-tab-installment-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.PGPMFLEX-fees-tab-installment-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #dce3ec;
+  font-size: 0.95rem;
+}
+
+.PGPMFLEX-fees-tab-installment-list li strong {
+  color: #002d5b;
+}
+
+/* Distribution Note */
+.PGPMFLEX-fees-tab-distribution {
+  margin-top: 15px;
+  padding: 12px;
+  background: #eef4ff;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #003c8f;
+  text-align: center;
+}
+
+/* Footer */
+.PGPMFLEX-fees-tab-footer {
+  margin-top: 35px;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+
+
+
+/* Section */
+.PGPMFLEX-admission-eligible-section {
+  background: #ffffff;
+}
+
+/* Header */
+.PGPMFLEX-admission-eligible-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #002d5b;
+}
+
+.PGPMFLEX-admission-eligible-header p {
+  color: #555;
+  margin-top: 8px;
+  margin-bottom: 60px;
+}
+
+/* Card */
+.PGPMFLEX-admission-eligible-card {
+  background: #f9f9fa;
+  border-radius: 16px;
+  padding: 36px 34px;
+  height: 100%;
+  border: 1px solid #e1e4e8;
+}
+
+/* Label */
+.PGPMFLEX-admission-eligible-label {
+  font-size: 13px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #0c0142;
+  display: block;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+/* Metric */
+.PGPMFLEX-admission-eligible-metric {
+  font-size: 52px;
+  font-weight: 800;
+  color: #5ac501;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.PGPMFLEX-admission-eligible-metric small {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+/* Subtext */
+.PGPMFLEX-admission-eligible-subtext {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+/* Content */
+.PGPMFLEX-admission-eligible-card p,
+.PGPMFLEX-admission-eligible-card li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #1f2937;
+}
+
+/* List */
+.PGPMFLEX-admission-eligible-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.PGPMFLEX-admission-eligible-card li {
+  margin-bottom: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .PGPMFLEX-admission-eligible-header h2 {
+    font-size: 28px;
+  }
+
+  .PGPMFLEX-admission-eligible-metric {
+    font-size: 42px;
+  }
+}
+
+
+
+
+
+
+/* Timeline */
+.PGPMFLEX-admission-app-proc-line-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto 40px;
+}
+
+.PGPMFLEX-admission-app-proc-progress-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #dcdcdc;
+  transform: translateY(-50%);
+}
+
+.PGPMFLEX-admission-app-proc-dots-row {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.PGPMFLEX-admission-app-proc-dot {
+  width: 42px;
+  height: 42px;
+  background: #5ac501;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  z-index: 2;
+}
+
+/* Cards */
+.PGPMFLEX-admission-app-proc-card {
+  background: #f9f9fa;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.PGPMFLEX-admission-app-proc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon Badge */
+.PGPMFLEX-admission-app-proc-icon {
+  width: 44px;
+  height: 44px;
+  color: #5ac501;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+/* Text */
+.PGPMFLEX-admission-app-proc-step-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+.PGPMFLEX-admission-app-proc-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1f2937;
+  line-height: 1.4;
+}
+
+
+
+
+.PGPMFLEX-admission-evavul-zig-container {
+    position: relative;
+    padding: 60px 0;
+}
+
+/* The Horizontal Connector Line */
+.PGPMFLEX-admission-evavul-connector-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #76bc43 0%, #00a0dc 50%, #76bc43 100%);
+    transform: translateY(-50%);
+    z-index: 1;
 }
 
 /* Card Styling */
-.PGPMFLEX .PGPMFLEX-info-card {
-    background-color: #0C2340; /* Darker Navy */
-    color: #ffffff;
-    min-height: 30vh;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
+.PGPMFLEX-admission-evavul-zig-card {
+    background: #ffffff;
+    width: 260px;
+    padding: 0;
+    border-radius: 15px 15px 40px 15px; /* Modern asymmetric corners */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
 }
 
-.PGPMFLEX .PGPMFLEX-info-card:hover {
-    transform: translateY(-5px);
+.PGPMFLEX-admission-evavul-zig-card:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
 }
 
+.card-inner {
+    padding: 30px 20px;
+}
 
-/* Icon Styling */
-.PGPMFLEX .PGPMFLEX-icon-box {
+.card-top-accent {
+    height: 6px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Logic for Card 1, 3 (Up) and 2, 4 (Down) */
+.move-up {
+    transform: translateY(-80px); /* Pushes Card 1 & 3 above the line */
+}
+
+.move-down {
+    transform: translateY(80px); /* Pushes Card 2 & 4 below the line */
+}
+
+/* Step Badge */
+.step-badge {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 1px dashed #ffffff;
-    border-radius: 50%;
+    color: white;
+    font-weight: 800;
     font-size: 1.2rem;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
-.PGPMFLEX .PGPMFLEX-icon-container {
-    flex-shrink: 0;
-}
-
-/* Center Dotted Divider */
-.PGPMFLEX .PGPMFLEX-vertical-divider {
+/* The small circle connecting the card to the line */
+.line-node {
     position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 4px solid;
+    border-radius: 50%;
     left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    border-left: 1px dashed #cccccc;
-    z-index: 0;
     transform: translateX(-50%);
 }
 
-/* Responsive adjustment */
-@media (max-width: 768px) {
-    .PGPMFLEX .PGPMFLEX-info-card {
-        min-height: auto;
+.move-up .line-node {
+    bottom: -48px; /* Connects card from bottom to the middle line */
+}
+
+.move-down .line-node {
+    top: -48px; /* Connects card from top to the middle line */
+}
+
+/* Responsive Fix */
+@media (max-width: 992px) {
+    .PGPMFLEX-admission-evavul-connector-line {
+        display: none;
     }
-}
-
-
-
-
-/* ================================
-   PGPM FLEX INFO – PREMIUM DESIGN
-================================ */
-
-.PGPMFLEXINFO-container {
-    background: #f8f9fa;
-    padding: 80px 30px;
-    border-radius: 24px;
-    position: relative;
-    overflow: hidden;
-}
-
-/* ================================
-   CENTER CIRCLE
-================================ */
-
-.PGPMFLEXINFO-main-circle {
-    background: linear-gradient(145deg, #ffffff, #f1f1f1);
-    border: 10px solid #5ac501;
-    border-radius: 50%;
-    aspect-ratio: 1 / 1;
-    max-width: 420px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 35px;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-    position: relative;
-    transition: transform 0.4s ease;
-}
-
-.PGPMFLEXINFO-main-circle:hover {
-    transform: scale(1.05);
-}
-
-.PGPMFLEXINFO-circle-title {
-    font-weight: 900;
-    color: black;
-    line-height: 1.25;
-    letter-spacing: 0.5px;
-}
-
-.PGPMFLEXINFO-circle-title span {
-    font-size: 1.4rem;
-}
-
-/* ================================
-   RIGHT TIMELINE
-================================ */
-
-.PGPMFLEXINFO-list-wrapper {
-    position: relative;
-    padding-left: 60px;
-}
-
-/* Vertical Gradient Line */
-.PGPMFLEXINFO-list-wrapper::before {
-    content: "";
-    position: absolute;
-    left: 22px;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: linear-gradient(to bottom, #5ac501, #5ac501, #5ac501);
-    border-radius: 10px;
-}
-
-/* ================================
-   FEATURE ITEM
-================================ */
-
-.PGPMFLEXINFO-feature-item {
-    position: relative;
-    margin-bottom: 35px;
-    padding: 18px 25px;
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(8px);
-    border-radius: 16px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-    transition: all 0.35s ease;
-}
-
-.PGPMFLEXINFO-feature-item:hover {
-    transform: translateX(10px);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
-}
-
-/* ================================
-   DOT WITH PULSE EFFECT
-================================ */
-
-.PGPMFLEXINFO-dot {
-    position: absolute;
-    left: -48px;
-    top: 28px;
-    width: 18px;
-    height: 18px;
-    background-color: #5ac501;
-    border-radius: 50%;
-    box-shadow: 0 0 0 6px #5ac501;
-    animation: PGPMFLEXINFO-pulse 2s infinite;
-}
-
-@keyframes PGPMFLEXINFO-pulse {
-    0% {
-        box-shadow: 0 0 0 0 #5ac501;
+    .move-up, .move-down {
+        transform: translateY(0);
+        margin-bottom: 30px;
     }
-    70% {
-        box-shadow: 0 0 0 14px rgba(230,126,34,0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(230,126,34,0);
-    }
-}
-
-/* ================================
-   TEXT
-================================ */
-
-.PGPMFLEXINFO-feature-text {
-    font-size: 1.05rem;
-    color: black;
-    font-weight: 600;
-    line-height: 1.6;
-}
-
-/* ================================
-   RESPONSIVE
-================================ */
-
-@media (max-width: 768px) {
-    .PGPMFLEXINFO-list-wrapper {
-        padding-left: 40px;
-    }
-
-    .PGPMFLEXINFO-dot {
-        left: -40px;
-    }
-
-    .PGPMFLEXINFO-main-circle {
-        max-width: 260px;
+    .line-node {
+        display: none;
     }
 }

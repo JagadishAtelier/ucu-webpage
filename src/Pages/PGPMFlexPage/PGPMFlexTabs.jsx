@@ -4,6 +4,9 @@ import "../responsive-programs.css";
 import AboutPageHero from "../AboutPage/AboutPageHero/AboutPageHero";
 import "./PGPMFlexPage.css"; // Reuse tabs styling
 import PGPMFlexOverview from "./PGPMFlexOverview";
+import PgApplications from "../PgprogramPage/PgApplications";
+import PGPMFLEXFeesTab from "./PGPMFLEXFeesTab";
+import PGPMFlexAdmission from "./PGPMFlexAdmission";
 
 const TAB_LIST = [
     "Overview",
@@ -39,9 +42,9 @@ export default function PGPMFlexTabs() {
             case "Overview":
                 return <PGPMFlexOverview />;
             case "Fees":
-                return <PGPMFlexOverview />;
+                return <PGPMFLEXFeesTab />;
             case "Admissions":
-                return <PGPMFlexOverview />;
+                return <PGPMFlexAdmission />;
             default:
                 return <div>Content not found</div>;
         }
@@ -92,7 +95,9 @@ export default function PGPMFlexTabs() {
                 breadcrumb={["Home", "PGPM Flex"]}
                 bgImage="https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg"
             />
-
+            <div>
+                <PgApplications className="under-banner" />
+            </div>
             <div className="pg-tabs-panel">
                 {renderContent(active)}
             </div>
