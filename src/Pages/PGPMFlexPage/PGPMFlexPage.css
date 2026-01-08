@@ -519,6 +519,9 @@
     .who-is-for-section{
     padding: 0 !important;
   }
+  .course-structure.p-sm-0{
+    padding-top: 0 !important;
+  }
 }
 
 
