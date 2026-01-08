@@ -152,10 +152,10 @@ export default function PgTabs() {
         <ArrowUp />
       </button>
       <nav
-        className="pg-tabs-nav "
+        ref={navRef}
+        className="pg-tabs-nav mobile-sticky-tabs"
         role="tablist"
         aria-label="Page sections"
-        ref={navRef}
       >
         {TAB_LIST.map((tab) => (
           <button

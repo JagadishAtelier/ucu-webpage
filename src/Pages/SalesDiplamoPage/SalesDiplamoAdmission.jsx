@@ -42,7 +42,7 @@ const SalesDiplamoAdmission = () => {
     ];
 
     return (
-        <Container fluid className="py-5 bg-white">
+        <Container fluid className="py-lg-5 bg-white">
             <div className="PGPMFLEX-admission-app-proc-stepper-container container">
 
                 <h1 className="display-5 mb-4 fw-bold">
@@ -65,7 +65,7 @@ const SalesDiplamoAdmission = () => {
                 </div>
 
                 {/* Cards */}
-                <Row className="g-4 mt-4">
+                <Row className="g-4 mt-lg-4">
                     {steps.map(step => (
                         <Col key={step.id} xs={12} md={6} lg className="PGPMFLEX-admission-app-proc-col">
                             <Card className="PGPMFLEX-admission-app-proc-card h-100">

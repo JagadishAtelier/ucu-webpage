@@ -50,7 +50,7 @@ export default function SalesDiplamoPageOverview() {
                 </div>
             </div>
 
-            <section className="SALESDIP-overview-container">
+            <section className="SALESDIP-overview-container py-0">
                 <div className="container">
                     <h3 className=" mb-4">
                         Who is this program for?

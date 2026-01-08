@@ -67,13 +67,12 @@ export default function PGXPMTabs() {
 
             {/* Let's try the request literally: Tabs above banner. */}
 
-            <nav
-                className="pg-tabs-nav justify-content-center "
-                role="tablist"
-                aria-label="Page sections"
-                ref={navRef}
-                style={{ marginTop: '0px' }} // Spacer for fixed navbar if needed
-            >
+      <nav
+        ref={navRef}
+        className="pg-tabs-nav mobile-sticky-tabs"
+        role="tablist"
+        aria-label="Page sections"
+      >
                 {TAB_LIST.map((tab) => (
                     <button
                         key={tab}

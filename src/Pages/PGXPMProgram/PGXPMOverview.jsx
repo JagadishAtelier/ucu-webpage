@@ -24,10 +24,10 @@ export default function PGXPMOverview() {
                 <WhoIsFor />
             </div>
             
-            <div className="container overflow-visible">
+            <div className="container overflow-x-hidden">
                 <PGXPM360/>
             </div>
-            <div className="container overflow-visible">
+            <div className="container overflow-x-hidden">
                 <CourseStructure/>
             </div>
 

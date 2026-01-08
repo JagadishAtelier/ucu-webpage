@@ -42,7 +42,7 @@ const PGPMFlexApplication = () => {
         <Container fluid className="py-5 bg-white">
             <div className="PGPMFLEX-admission-app-proc-stepper-container container">
                 {/* Timeline */}
-                <h3 className="cs-subtitle mb-4">Application Process</h3>
+                <h3 className="cs-subtitle mb-lg-4 mb-0">Application Process</h3>
                 <div className="PGPMFLEX-admission-app-proc-line-container">
                     <div className="PGPMFLEX-admission-app-proc-progress-line"></div>
                     <div className="PGPMFLEX-admission-app-proc-dots-row">
@@ -58,14 +58,14 @@ const PGPMFlexApplication = () => {
                 </div>
 
                 {/* Cards */}
-                <Row className="g-4 mt-4">
+                <Row className="g-4 mt-lg-4 mt-0">
                     {steps.map((step) => (
                         <Col
                             key={step.id}
                             xs={12}
                             md={6}
                             lg
-                            className="PGPMFLEX-admission-app-proc-col"
+                            className="PGPMFLEX-admission-app-proc-col px-0"
                         >
                             <Card className="PGPMFLEX-admission-app-proc-card h-100">
                                 <Card.Body>

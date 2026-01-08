@@ -11,7 +11,7 @@ function OverviewObjective() {
     <div>
       <div
         style={{ paddingBottom: "150px", position: "relative" }}
-        className="container my-1"
+        className="container my-1 overflow-visible"
       >
         <h1 className="display-4 fw-bold col-12 col-lg-12 mb-3">
           <span style={{ color: "#fff" }}>Objective</span>
@@ -68,7 +68,7 @@ function OverviewObjective() {
         </ul>
 
         <h3 className="mt-4 fs-4" style={{ color: "#ffffffff" }}>PGDM Competency Goals at UCU:</h3>
-        <ol className="ms-4">
+        <ol className="ms-lg-4">
           <p>
             <li>
               <span className="fw-bold " style={{ color: "#5ac501" }}>

@@ -4,10 +4,10 @@ export default function CurriculumOverview() {
   return (
     <section className="curriculum-section py-5">
       <div className="container-flued mx-5">
-        <div className="row align-items-center px-4">
+        <div className="row align-items-center px-lg-4 px-0">
 
           {/* LEFT SIDE */}
-          <div className="col-lg-6 text-white">
+          <div className="col-lg-6 text-white px-0">
 
             <h2 className="fw-bold mb-4 lh-base">
               Globally Benchmarked Curriculum. Truly World
@@ -45,8 +45,8 @@ export default function CurriculumOverview() {
           </div>
 
           {/* RIGHT SIDE IMAGE */}
-          <div className="col-lg-6 mt-4 mt-lg-0">
-            <div className="curiculum image-wrapper">
+          <div className="col-lg-6 mt-4 mt-lg-0 px-0">
+            <div className="curiculum image-wrapper ">
               <img
                 src="/historyImages/1.jpg"
                 alt="Curriculum"

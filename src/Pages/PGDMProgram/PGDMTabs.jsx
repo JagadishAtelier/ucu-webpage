@@ -120,12 +120,12 @@ export default function PGDMTabs() {
             >
                 <ArrowUp />
             </button>
-            <nav
-                className="pg-tabs-nav justify-content-end "
-                role="tablist"
-                aria-label="Page sections"
-                ref={navRef}
-            >
+      <nav
+        ref={navRef}
+        className="pg-tabs-nav mobile-sticky-tabs"
+        role="tablist"
+        aria-label="Page sections"
+      >
                 {TAB_LIST.map((tab) => (
                     <button
                         key={tab}

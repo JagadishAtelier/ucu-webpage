@@ -38,7 +38,7 @@ const eligibilityCriteria = [
 
 
   return (
-    <section className="pb-5">
+    <section className="pb-lg-5 pb-0 pt-0">
       <div className="container">
         <div className="row mb-5">
           <div className="col-12">

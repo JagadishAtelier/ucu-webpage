@@ -522,6 +522,15 @@
   .course-structure.p-sm-0{
     padding-top: 0 !important;
   }
+  .PGPMFLEX-admission-eligible-section{
+    padding: 0 !important;
+  }
+  .PGPMFLEX-admission-evavul-zig-container{
+    padding: 0;
+  }
+  .PGPMFLEX-admission-evavul-zig-card{
+    width: 100%;
+  }
 }
 
 
@@ -538,7 +547,6 @@
     z-index: 9;
 
     display: flex;
-    justify-content: center;
     gap: 12px;
 
     overflow-x: auto;

@@ -35,3 +35,13 @@
     max-width: 100%;
   }
 }
+
+@media (max-width:480px) {
+  .leaders-grid{
+    grid-template-columns: repeat(1,1fr);
+    gap: 10px;
+  }
+  .curiculum.image-wrapper img{
+    height: 30vh;
+  }
+}

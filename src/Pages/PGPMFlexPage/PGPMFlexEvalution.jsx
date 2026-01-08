@@ -26,7 +26,7 @@ const steps = [
 
 
   return (
-    <section className="PGPMFLEX-admission-evavul-zig-section">
+    <section className="PGPMFLEX-admission-evavul-zig-section p-0">
       <Container>
                 <h3 className="cs-subtitle mb-5">Evalution Process</h3>
 

@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Badge } from "react-bootstrap";
 
 const SalesDiplamoFeesTab = () => {
   return (
-    <section className=" container">
+    <section className=" container pt-0">
       <Container>
         <h1 className="display-5 my-4 fw-bold col-12 col-lg-12 text-center">
           Program  <span style={{ color: "#5ac501" }}> Fees</span>
