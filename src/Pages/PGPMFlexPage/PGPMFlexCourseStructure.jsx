@@ -18,8 +18,8 @@ const brands = [
 ];
 export default function PGPMFlexCourseStructure() {
     return (
-        <section className="course-structure">
-            <div className="cs-container">
+        <section className="course-structure p-sm-0">
+            <div className="cs-container px-sm-0">
 
                 {/* HEADER */}
                 <h2 className="cs-title"><span className="brand-text">Course</span> Overview</h2>

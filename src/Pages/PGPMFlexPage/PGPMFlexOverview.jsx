@@ -21,14 +21,14 @@ export default function PGPMFlexOverview() {
                     </p>
                 </div>
             </div>
-            <div className="container p-3 pt-0 pt-lg-3">
+            <div className="container p-3 pt-0 pt-lg-3 overflow-x-hidden">
                 <PGPMFlexWho />
             </div>
 
-            <div className="container overflow-visible">
+            <div className="container overflow-x-hidden">
                 <PGPMFlexInfograph />
             </div>
-            <div className="container overflow-visible">
+            <div className="container overflow-x-hidden">
                 <PGPMFlexCourseStructure />
             </div>
             {/* <div class="PGPXM-download-btnds d-flex flex-column flex-lg-row gap-3 container">

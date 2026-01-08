@@ -23,7 +23,7 @@ const data = [
 export default function PGPMFlexWho() {
     return (
         <section className="who-is-for-section container mb-lg-5">
-            <h2 className="section-heading text-center mb-5">
+            <h2 className="section-heading text-center mb-lg-5 mb-3">
                 Who is the <span style={{ color: "#0b1c3d" }}>PGPM Flex For?</span>
             </h2>
 

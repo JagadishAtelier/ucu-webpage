@@ -498,17 +498,26 @@
   .PGPMFLEX-progress-section{
     width: 50% !important;
   }
+      .who-is-for-section{
+    padding: 0 !important;
+  }
+  .pgxpm-360-section{
+    padding-bottom: 0;
+  }
 }
 @media (max-width:480px) {
   .pgpm-flex-pillar-item{
     width: 100%;
-    flex: 0 0 calc(100% - 24px);
+    flex: 0 0 calc(100%);
   }
   .pgpm-flex-terms{
     grid-template-columns: repeat(2,1fr);
   }
   .PGPMFLEX-progress-section{
     width: 50% !important;
+  }
+    .who-is-for-section{
+    padding: 0 !important;
   }
 }
 
@@ -554,4 +563,5 @@
   .pillars-grid{
     margin-top: 0;
   }
+
 }
