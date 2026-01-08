@@ -278,4 +278,12 @@
     height: 30vh;
     max-width: none;
   }
+  .timeline-row .content,
+  .timeline-row.reverse .content{
+    padding: 1rem;
+    text-align: justify;
+  }
+  .story-paragraph{
+    text-align: justify !important;
+  }
 }
