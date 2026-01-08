@@ -38,7 +38,7 @@ const pillars = [
       <div className="container py-lg-5 py-0">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-5"
+          className="text-center mb-lg-5 mb-3"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -10,7 +10,7 @@ import PGPMFlexWho from "./PGPMFlexWho";
 export default function PGPMFlexOverview() {
     return (
         <>
-            <div className="container my-1 p-3">
+            <div className="container p-3 pt-0 pt-lg-3">
                 {/* Placeholder for About Section */}
                 <div className="row">
                     <h1 className="display-5 mb-4 fw-bold col-12 col-lg-12">
@@ -21,7 +21,7 @@ export default function PGPMFlexOverview() {
                     </p>
                 </div>
             </div>
-            <div className="container p-3">
+            <div className="container p-3 pt-0 pt-lg-3">
                 <PGPMFlexWho />
             </div>
 

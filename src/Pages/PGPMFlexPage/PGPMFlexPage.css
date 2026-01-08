@@ -511,3 +511,50 @@
     width: 50% !important;
   }
 }
+
+
+
+/* ===============================
+   MOBILE SCROLLABLE STICKY TABS
+   =============================== */
+
+@media (max-width: 768px) {
+
+  .mobile-sticky-tabs {
+    position: sticky;
+    top: 0; /* change to navbar height if navbar is fixed */
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .mobile-sticky-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pg-tab-btn {
+    flex: 0 0 auto;
+    border-radius: 22px;
+    white-space: nowrap;
+  }
+  .PGPMFLEX-percent{
+    font-size: 1rem;
+  }
+  .PGPMFLEX-progress-section{
+    align-items: center;
+  }
+  .pillars-grid{
+    margin-top: 0;
+  }
+}
+.pg-tabs-root{
+  overflow-x: hidden;
+}
