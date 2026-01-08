@@ -62,18 +62,18 @@ function EEPCxo() {
     return (
         <div className='captital-campus-content-sec mt-4'>
             <h1 className='display-5 fw-bold'>UCU <span style={{ color: "#5ac501" }}> CXO Leadership Academy</span></h1>
-            <p className='pt'>The <strong> CXO Leadership Academy @ UCU </strong> is a premier executive education platform designed exclusively for senior professionals and aspiring boardroom leaders. Anchored in UCU’s philosophy of industry co-creation and global relevance, the Academy curates specialized programs for each C-suite role—CEO, CFO, CHRO, CIO, CMO, COO, CPO, CSO, and CTO—ensuring participants gain the strategic acumen, leadership agility, and domain mastery required to excel at the highest levels of corporate leadership.
+            <p className='pt text-justifys'>The <strong> CXO Leadership Academy @ UCU </strong> is a premier executive education platform designed exclusively for senior professionals and aspiring boardroom leaders. Anchored in UCU’s philosophy of industry co-creation and global relevance, the Academy curates specialized programs for each C-suite role—CEO, CFO, CHRO, CIO, CMO, COO, CPO, CSO, and CTO—ensuring participants gain the strategic acumen, leadership agility, and domain mastery required to excel at the highest levels of corporate leadership.
             </p>
             <h3>
                 Key Features:
             </h3>
-            <ul>
+            <ul className="text-justifys">
                 <li className='mb-2 pt'><strong>Role-Specific Programs : </strong> Tailored learning journeys aligned to the unique responsibilities of each CXO function.</li>
                 <li className='mb-2 pt'><strong>Boardroom Readiness : </strong> Immersive modules on enterprise strategy, governance, digital transformation, and stakeholder management.</li>
                 <li className='mb-2 pt'><strong>Leadership Labs : </strong> Experiential simulations, case studies, and strategic dialogues that replicate boardroom decision-making.</li>
 
             </ul>
-            <p className='my-4 pt'>The Academy is not just about preparing leaders—it is about <strong> accelerating transformation. </strong> By combining academic rigor with corporate relevance, the CXO Leadership Academy @ UCU positions itself as the definitive destination for professionals ready to step into enterprise leadership and shape the future of business.</p>
+            <p className='my-4 pt text-justifys'>The Academy is not just about preparing leaders—it is about <strong> accelerating transformation. </strong> By combining academic rigor with corporate relevance, the CXO Leadership Academy @ UCU positions itself as the definitive destination for professionals ready to step into enterprise leadership and shape the future of business.</p>
             <h3 className='mb-4'>CXO Leadership Programs – UCU Chennai</h3>
             <div className="EEPCxo-responsive-table-wrapper">
                 <table className="EEPCxo-placement-table placement-table w-100 overflow-hidden">

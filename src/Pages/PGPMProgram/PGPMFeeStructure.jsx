@@ -8,7 +8,7 @@ import HostelSection from "../../Components/PGDM-program/FeeStructure/HostelSect
 
 const PGPMFeeStructure = () => {
   return (
-    <section className="container p-3 mx-auto  my-1">
+    <section className="container p-3 mx-auto  my-1 text-justifys">
       <h3 className="display-6 fw-bold col-12 col-lg-12">
         <span className="program">PGPM</span> Fee Structure
       </h3>
@@ -22,7 +22,7 @@ const PGPMFeeStructure = () => {
           />
         </div>
 
-        <div className="fee-details">
+        <div className="fee-details text-justifys">
           <h5 className="gradient-text hero-gradient-1">
             PGPM Fee Structure
           </h5>

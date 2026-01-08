@@ -24,7 +24,7 @@ const FeeStructure = () => {
           <p>
             The fee for Fee Structure is <strong> INR 10,00,000*</strong>.
           </p>
-          <p>
+          <p className="text-justifys">
             This fee is not inclusive of hostel accommodation, mess and other expenses.This includes only the tuition fee and is subject to revision.</p>
 <p> The above mentioned fee does not include the 
 Global Fast Track Immersion Program which is our exchange program crafted for the 

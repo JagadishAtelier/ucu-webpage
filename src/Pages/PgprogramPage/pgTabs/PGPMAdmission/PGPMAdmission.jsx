@@ -36,7 +36,7 @@ import PGPMBottomBanner from "../../../PGPMProgram/PGPMBottomBanner";
 function PGPMAdmission() {
   return (
     <section className="pgdm-section">
-      <div className="container my-4">
+      <div className="container my-4 text-justifys">
         <h1 className="display-5 fw-bold">
           <span style={{ color: "#5ac501" }}>Admission</span> Process
         </h1>

@@ -28,11 +28,11 @@ const PGXPM360 = () => {
   ];
 
   return (
-    <section className="pgxpm-360-section">
-      <div className="container py-5">
+    <div className="pgxpm-360-section py-0">
+      <div className="container py-0">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-5"
+          className="text-center mb-4"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -47,7 +47,7 @@ const PGXPM360 = () => {
         </motion.div>
 
         {/* Cards Grid */}
-        <div className="pillars-grid">
+        <div className="pillars-grid mt-0">
           {pillars.map((pillar, index) => (
             <motion.div
               key={index}
@@ -91,7 +91,7 @@ const PGXPM360 = () => {
         >
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 

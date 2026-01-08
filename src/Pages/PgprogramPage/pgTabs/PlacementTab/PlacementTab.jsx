@@ -11,7 +11,7 @@ function PlacementTab() {
       <h1 className="display-6 fw-bold col-12 col-lg-12"><span style={{ color: "#5ac501" }} className=''>UCU Chennai:  </span> Gateway to the World of Opportunity
       </h1>
 
-      <p className=''> Through its expansive network of 2000+ leading corporations—spanning both national champions and global giants—UCU Chennai unlocks high-impact career pathways for every student. From consulting, banking, and finance to manufacturing, FinTech, IT/ITES, sales & marketing, and global capability centers (GCCs), our industry-first ecosystem ensures access to cutting-edge roles that accelerate your journey toward business leadership</p>
+      <p className='text-justifys'> Through its expansive network of 2000+ leading corporations—spanning both national champions and global giants—UCU Chennai unlocks high-impact career pathways for every student. From consulting, banking, and finance to manufacturing, FinTech, IT/ITES, sales & marketing, and global capability centers (GCCs), our industry-first ecosystem ensures access to cutting-edge roles that accelerate your journey toward business leadership</p>
 
       <h1 className='fs-2 fw-medium mt-5'>Placements process</h1>
       <p>The placement process happens in two hiring cycles:</p>

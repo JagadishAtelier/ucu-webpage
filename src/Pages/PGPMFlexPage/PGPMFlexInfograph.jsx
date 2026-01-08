@@ -35,10 +35,10 @@ const pillars = [
 
   return (
     <section className="pgxpm-360-section">
-      <div className="container py-lg-5 py-0">
+      <div className="container py-lg-0 py-0">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-lg-5 mb-3"
+          className="text-center mb-lg-0 mb-3"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -53,7 +53,7 @@ const pillars = [
         </motion.div>
 
         {/* Cards Grid */}
-        <div className="pillars-grid pgpm-flex-pillar-grid">
+        <div className="pillars-grid pgpm-flex-pillar-grid mt-lg-3">
           {pillars.map((pillar, index) => (
             <motion.div
               key={index}

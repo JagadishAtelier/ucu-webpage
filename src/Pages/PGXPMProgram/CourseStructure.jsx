@@ -20,11 +20,11 @@ const brands = [
 export default function CourseStructure() {
   return (
     <section className="course-structure">
-      <div className="cs-container">
+      <div className="">
 
         {/* HEADER */}
         <h2 className="cs-title"><span className="brand-text">Course</span> Structure</h2>
-        <p className="cs-description">
+        <p className="text-justifys">
           The PGXPM course structure has been designed keeping in mind your
           professional commitments, providing flexibility to pursue the
           on-campus component of the program without having to take long breaks

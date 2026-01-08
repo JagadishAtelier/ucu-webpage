@@ -21,7 +21,7 @@ const PGDMFeeStructure = () => {
                     />
                 </div>
 
-                <div className="fee-details">
+                <div className="fee-details text-justifys">
                     <h5 className="gradient-text hero-gradient-1">
                          PGDM Fee Structure
                     </h5>

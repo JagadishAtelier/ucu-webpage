@@ -14,7 +14,7 @@ function OverviewTab() {
 
     return (
         <>
-            <div data-aos="fade-up" className="container my-1 p-3">
+            <div data-aos="fade-up" className="container my-1 p-3 text-justifys">
                 <OverviewAbout />
             </div>
             <div

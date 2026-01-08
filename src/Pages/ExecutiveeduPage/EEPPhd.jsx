@@ -13,7 +13,7 @@ function EEPPhd() {
             </div>
 
             {/* Overview Section */}
-            <div className="eep-phd-card">
+            <div className="eep-phd-card text-justifys">
                 <p className=" pt">The <strong>Executive PhD in Management (EFPM) at UCU </strong> is a doctoral-level program designed for senior professionals, entrepreneurs, and policy leaders who wish to deepen their research capabilities while continuing their careers. Unlike traditional PhDs, the EFPM is tailored for executives who bring rich professional experience and seek to generate impactful, practice-oriented research that addresses complex business and societal challenges.</p>
 
                 <p className="pt">This program blends <strong> academic rigor with industry relevance, </strong> enabling participants to evolve into thought leaders, policy influencers, and global strategists. It is structured to allow professionals to pursue advanced scholarship without stepping away from their leadership responsibilities.</p>

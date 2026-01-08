@@ -3,7 +3,7 @@ import founderImg from "/founder.jpg";
 import CppMindMap from "./CppMindMap";
 function CPPIntroduction() {
   return (
-    <div className="captital-campus-content-sec mt-4">
+    <div className="captital-campus-content-sec mt-4 text-justifys">
       <h1 className="display-4 fw-bold" style={{ color: "#5ac501" }}>
         Introduction
       </h1>

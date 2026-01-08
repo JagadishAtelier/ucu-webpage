@@ -36,7 +36,7 @@ function LCPPower() {
                                     <h1 className="display-5 fw-bold mb-3">Program <span style={{ color: "#5ac501" }}>Overview</span></h1>
                                 </div>
 
-                                <div className="lcpPower-rich-text">
+                                <div className="lcpPower-rich-text text-justifys">
                                     <p className="pt">
                                         The <strong>Leadership Coaching Program at UCU </strong> is a high-impact, 6–9 month, one-on-one coaching journey designed exclusively for experienced professionals and emerging senior leaders. Rooted in global coaching standards and aligned with a transformative vision, this program accelerates leadership growth by combining diagnostics, personalized goal-setting, and immersive coaching sessions.
 

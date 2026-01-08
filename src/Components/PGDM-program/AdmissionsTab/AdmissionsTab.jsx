@@ -6,12 +6,12 @@ import PGPMBottomBanner from "../../../Pages/PGPMProgram/PGPMBottomBanner";
 
 export default function AdmissionsTab() {
   return (
-        <section className="admissions-tab container p-3 mx-auto  my-1">
+        <section className="admissions-tab container p-3 mx-auto text-justifys  my-1">
           {/* Title */}
           <h3 className="display-6 fw-bold col-12 col-lg-12"><span className="program">PGDM</span> Admission Process</h3>
 
           {/* Intro paragraph */}
-          <p className="pg-panel-body">
+          <p className="pg-panel-body text-justifys">
             UCU is keen to engage with the finest from the vast talent pool
             available to further its mission: to influence managerial practice and
             promote value-based growth by advancing wise innovations. Its admissions
@@ -19,7 +19,7 @@ export default function AdmissionsTab() {
             for Indian and International applicants.
           </p>
 
-          <p className="pg-panel-body">
+          <p className="pg-panel-body text-justifys">
             In the context of international applicants, the Government of India
             through AICTE has allocated PGDM an additional 36 seats to be filled
             exclusively by international students, including Persons of Indian
@@ -61,7 +61,7 @@ export default function AdmissionsTab() {
           {/* Eligibility */}
           <div className="admissions-section">
             <h4 className="admissions-subtitle">Eligibility</h4>
-            <p>
+            <p className="text-justifys">
               Bachelor’s degree with at least 50% marks or equivalent CGPA in any
               discipline from a recognised university. CAT and GMAT entrance scores
               are accepted. Both fresh graduates and candidates with up to five

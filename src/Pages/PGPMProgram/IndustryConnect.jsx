@@ -2,7 +2,7 @@ import "./PGPMProgram.css";
 
 export const IndustryConnect = () => {
   return (
-    <section className="industry-connect container">
+    <section className="industry-connect container py-1">
       <div className="industry-connect__container">
         <h3>
           <span style={{ color: "#5ac501" }}>Industry</span> Connect
@@ -15,7 +15,7 @@ export const IndustryConnect = () => {
 
           {/* RIGHT: CONTENT */}
           <div className="industry-connect__content">
-            <p>
+            <p className="text-justifys">
               UCU Chennai is the brainchild of leaders from business and
               academia with 30+ years of experience. It has well established
               industry networks, via 10,000+ professionals, 1000+ BU Leaders and

@@ -15,10 +15,10 @@ import { IndustryConnect } from "./IndustryConnect";
 function PGPMOverViewTab() {
   return (
     <>
-      <div data-aos="fade-up" className="container my-1 p-3">
+      <div data-aos="fade-up" className="container my-1 px-3">
         <PGPMOverviewAbout />
       </div>
-      <div className="container  p-3">
+      <div className="container  px-3">
         <PGPMKeyHighlights />
       </div>
       {/* <div

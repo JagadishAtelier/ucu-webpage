@@ -23,8 +23,8 @@ const data = [
 
 export default function WhoIsFor() {
     return (
-        <section className="who-is-for-section container mb-5">
-            <h2 className="section-heading text-center mb-5">
+        <div className="who-is-for-section container mb-5 pt-lg-0">
+            <h2 className="section-heading text-center mb-3">
                 Who is the <span style={{ color: "#0b1c3d" }}>PGXPM For?</span>
             </h2>
 
@@ -36,6 +36,6 @@ export default function WhoIsFor() {
                     </div>
                 ))}
             </div>
-        </section>
+        </div>
     );
 }

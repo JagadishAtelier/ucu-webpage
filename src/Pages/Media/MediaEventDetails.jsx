@@ -69,7 +69,7 @@ function MediaEventDetails() {
                 </div>
             </div>
 
-            <div className='captital-campus-content-sec my-4'>
+            <div className='captital-campus-content-sec my-4 text-justifys'>
                 <div dangerouslySetInnerHTML={{ __html: data }} />
             </div>
 

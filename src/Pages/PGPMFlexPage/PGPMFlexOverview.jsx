@@ -21,7 +21,7 @@ export default function PGPMFlexOverview() {
                     </p>
                 </div>
             </div>
-            <div className="container p-3 pt-0 pt-lg-3 overflow-x-hidden">
+            <div className="container p-3 pt-0 pt-lg-0  overflow-x-hidden">
                 <PGPMFlexWho />
             </div>
 

@@ -85,9 +85,9 @@ export default function PGPMTabs() {
     switch (tab) {
       case "Overview":
         return (
-          <section aria-labelledby="overview-heading">
+          <div aria-labelledby="overview-heading py-0">
             <PGPMOverViewTab />
-          </section>
+          </div>
         );
 
       case "Curriculum":

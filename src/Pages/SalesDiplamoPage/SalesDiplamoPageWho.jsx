@@ -40,7 +40,7 @@ const eligibilityCriteria = [
   return (
     <section className="pb-lg-5 pb-0 pt-0">
       <div className="container">
-        <div className="row mb-5">
+        <div className="row mb-3 mb-lg-3">
           <div className="col-12">
             <h3 className="">Salient features of the program</h3>
           </div>

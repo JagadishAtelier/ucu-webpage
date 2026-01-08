@@ -47,11 +47,11 @@ function ProgramsForIndividualsData() {
     return (
         <div className='captital-campus-content-sec my-4'>
             <div className='d-flex flex-lg-row flex-column gap-5'>
-                <div className='col-lg-8'>
+                <div className='col-lg-8 '>
                     <h3 className='mb-3'>Choose from a diverse range of programmes that strengthen your management and leadership acumen and map your career to future success.</h3>
-                    <p>Whatever your distinctive learning goal, be it improving your Leadership and Management skills or preparing for a new role or learning about industry innovations, ISB Executive Education has a learning solution for you.</p>
-                    <p>Explore our swathe of offerings from long-duration advanced and comprehensive leadership development programmes to shorter-term, topic-focused learning experiences. Our world-class learning journeys offer research-backed curricula and diverse industry perspectives delivered through a wide range of pedagogies, opportunities for collaborative learning with a diverse and vibrant group of peers, and practical solutions for your pressing business challenges.</p>
-                    <p>Experience accelerated personal and professional growth to create a significant impact in your world.</p>
+                    <p className="text-justifys">Whatever your distinctive learning goal, be it improving your Leadership and Management skills or preparing for a new role or learning about industry innovations, ISB Executive Education has a learning solution for you.</p>
+                    <p className="text-justifys">Explore our swathe of offerings from long-duration advanced and comprehensive leadership development programmes to shorter-term, topic-focused learning experiences. Our world-class learning journeys offer research-backed curricula and diverse industry perspectives delivered through a wide range of pedagogies, opportunities for collaborative learning with a diverse and vibrant group of peers, and practical solutions for your pressing business challenges.</p>
+                    <p className="text-justifys">Experience accelerated personal and professional growth to create a significant impact in your world.</p>
                     <div className='PFI-grid'>
                         {data.map((item, index) => (
                             <div className='d-flex flex-column gap-3 justify-content-between p-0 rounded

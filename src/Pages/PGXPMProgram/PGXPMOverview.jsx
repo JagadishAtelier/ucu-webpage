@@ -20,7 +20,7 @@ export default function PGXPMOverview() {
                     </p>
                 </div>
             </div>
-            <div className="container p-3">
+            <div className="container px-3">
                 <WhoIsFor />
             </div>
             

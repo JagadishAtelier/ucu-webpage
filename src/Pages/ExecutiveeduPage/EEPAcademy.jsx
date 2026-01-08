@@ -65,7 +65,7 @@ function EEPAcademy() {
                 {/* <GraduationCap className="eepa-intro-icon" /> */}
                 <h1 className='display-5 fw-bold'>UCU’s <span style={{ color: "#5ac501" }}> Faculty Development </span> Programs</h1>
             </div>
-            <p className="pt">
+            <p className="pt text-justifys">
                 UCU’s Faculty Development Programs (FDPs) are designed to strengthen academic delivery,
                 enhance pedagogical excellence, and align faculty capabilities with industry and
                 regulatory benchmarks. Through structured workshops, curated decks, and hands-on adoption

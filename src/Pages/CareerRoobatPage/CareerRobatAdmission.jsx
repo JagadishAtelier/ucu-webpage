@@ -34,11 +34,11 @@ import CareerRobatEvaluationProcess from "./CareerRobatEvaluationProcess";
 function CareerRobatAdmission() {
   return (
     <section className="pgdm-section">
-      <div className="container my-4">
+      <div className="container my-4 text-justifys">
         <h1 className="display-5 fw-bold">
           <span style={{ color: "#5ac501" }}>Admission</span> Process
         </h1>
-        <p>
+        <p className="text-justifys">
           Admissions to the Career Reboot Program for Women follow a{" "}
           <strong>rolling interview process</strong>, with exceptional
           candidates receiving early offers even before the official closing
