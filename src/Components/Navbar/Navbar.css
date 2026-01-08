@@ -1685,6 +1685,9 @@ box-shadow: 1px 4px 10px #00054b70;
 
 @media (max-width:480px) {
   .mobile-toggle{
-    padding: 0;
+    padding: 0 !important;
+  }
+  .custom-prev, .custom-next{
+    padding: 0 !important;
   }
 }
