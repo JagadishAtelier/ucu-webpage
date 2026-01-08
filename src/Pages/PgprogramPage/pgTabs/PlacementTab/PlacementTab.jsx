@@ -112,8 +112,8 @@ function PlacementTab() {
             </p>
             <h1 className='fs-2 fw-medium mt-5'>Tentative placement timelines</h1>
 
-            <div className="d-flex mt-3 gap-2">
-              <div className='d-inline w-50'>
+            <div className="d-flex mt-3 gap-lg-2 flex-lg-row flex-column gap-3">
+              <div className='d-inline w-lg-50 w-100'>
               <p className='placement-table-head m-0 w-100 rounded-top'>Internship timelines</p>
               <table className="placement-table w-100">
 
@@ -143,7 +143,7 @@ function PlacementTab() {
                 </tbody>
               </table>
             </div>
-            <div className='d-inline w-50'>
+            <div className='d-inline w-lg-50 w-100'>
               <p className='placement-table-head w-100 m-0 rounded-top'>Final placement timelines</p>
               <table className="placement-table w-100">
 

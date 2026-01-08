@@ -65,9 +65,8 @@ const Navbar = () => {
         {submenu.map((sub) => (
           <li
             key={sub.label}
-            className={`submenu-item ${
-              sub.className === "sublink-custom" ? "no-padding" : ""
-            }`}
+            className={`submenu-item ${sub.className === "sublink-custom" ? "no-padding" : ""
+              }`}
           >
             {sub.submenu && sub.submenu.length > 0 ? (
               <div className="submenu-parent">
@@ -102,26 +101,26 @@ const Navbar = () => {
           <li key={item.label} className="menu-item">
             {item.submenu && item.submenu.length > 0 ? (
               <>
-<button
-  className={`menu-btn depth-${depth} ${openMenus[item.label] ? "open" : ""}`}
-  onClick={() => {
-    toggleSubmenu(item.label); // open submenu
-    if (item.link) navigate(item.link); // navigate if link exists
-  }}
->
-  {item.label}
-  {depth === 0 ? (
-    <ChevronDown
-      size={16}
-      className={`chevron ${openMenus[item.label] ? "rotated" : ""}`}
-    />
-  ) : (
-    <ChevronRight
-      size={16}
-      className={`chevron ${openMenus[item.label] ? "rotated" : ""}`}
-    />
-  )}
-</button>
+                <button
+                  className={`menu-btn depth-${depth} ${openMenus[item.label] ? "open" : ""}`}
+                  onClick={() => {
+                    toggleSubmenu(item.label); // open submenu
+                    if (item.link) navigate(item.link); // navigate if link exists
+                  }}
+                >
+                  {item.label}
+                  {depth === 0 ? (
+                    <ChevronDown
+                      size={16}
+                      className={`chevron ${openMenus[item.label] ? "rotated" : ""}`}
+                    />
+                  ) : (
+                    <ChevronRight
+                      size={16}
+                      className={`chevron ${openMenus[item.label] ? "rotated" : ""}`}
+                    />
+                  )}
+                </button>
 
                 {openMenus[item.label] &&
                   renderMenuItems(item.submenu, depth + 1)}
@@ -181,7 +180,7 @@ const Navbar = () => {
             </div>
             <p
               className="fs-6 mb-0 position-absolute logo-text-under"
-              style={{ color: "#1703a9",bottom: "0.2rem" }}
+              style={{ color: "#1703a9", bottom: "0.2rem" }}
             >
               Business School
             </p>
@@ -199,9 +198,8 @@ const Navbar = () => {
                   .map((menu) => (
                     <li
                       key={menu.label}
-                      className={`list-inline-item nav-item dropdown ${
-                        menu.submenu ? "has-mega" : ""
-                      }`}
+                      className={`list-inline-item nav-item dropdown ${menu.submenu ? "has-mega" : ""
+                        }`}
                       onMouseEnter={() => handleHover(menu.label)}
                       onMouseLeave={() => handleLeave(menu.label)}
                     >
@@ -219,11 +217,10 @@ const Navbar = () => {
                           ) : (
                             <Link
                               to={menu.link || "#"}
-                              className={`nav-link dropdown-toggle ${
-                                menu.label === "Online Programs"
+                              className={`nav-link dropdown-toggle ${menu.label === "Online Programs"
                                   ? "online-program-link"
                                   : ""
-                              }`}
+                                }`}
                             >
                               {menu.label.toUpperCase()}
                             </Link>
@@ -331,9 +328,8 @@ const Navbar = () => {
                 .map((menu) => (
                   <li
                     key={menu.label}
-                    className={`nav-item dropdown ${
-                      menu.submenu ? "has-mega" : ""
-                    }`}
+                    className={`nav-item dropdown ${menu.submenu ? "has-mega" : ""
+                      }`}
                     onMouseEnter={() => handleHover(menu.label)}
                     onMouseLeave={() => handleLeave(menu.label)}
                   >
@@ -372,7 +368,7 @@ const Navbar = () => {
                                 <p className="text-end fs-5 fw-bold mb-0 campus-text-right-name">
                                   Ganesan Ramachandran
                                 </p>
-                                <p className="text-end campus-text-right-name" style={{fontSize:'12px'}}>
+                                <p className="text-end campus-text-right-name" style={{ fontSize: '12px' }}>
                                   Managing Director, Accenture Strategy &
                                   Consulting
                                 </p>
@@ -395,7 +391,7 @@ const Navbar = () => {
                                       >
                                         <span>{item.label}</span>
                                       </Link>
-                                      <p style={{fontSize:'13px',color:'#333'}}> {item.description} </p>
+                                      <p style={{ fontSize: '13px', color: '#333' }}> {item.description} </p>
                                     </div>
                                   ))}
                                 </div>

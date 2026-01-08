@@ -1682,7 +1682,17 @@ box-shadow: 1px 4px 10px #00054b70;
 .nav-link{
   cursor: pointer;
 }
+.menu-btn .chevron {
+  flex-shrink: 0;      /* 🔥 prevents icon resize */
+  width: 16px;
+  height: 16px;
+}
 
+@media (max-width:991px) {
+  .drawer-content .menu-link{
+    text-align: left;
+  }
+}
 @media (max-width:480px) {
   .mobile-toggle{
     padding: 0 !important;

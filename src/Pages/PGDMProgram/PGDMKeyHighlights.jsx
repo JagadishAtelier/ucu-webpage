@@ -139,12 +139,12 @@ export default function PGDMKeyHighlights() {
                                         dangerouslySetInnerHTML={{ __html: item.text }}
                                     />
 
-                                    <button
+                                    {/* <button
                                         className="btn-cta"
                                         onClick={() => navigate(item.link)}
                                     >
                                         {item.action} <span className="chev">›</span>
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
                         );
@@ -160,14 +160,14 @@ export default function PGDMKeyHighlights() {
                         className="content-text"
                         dangerouslySetInnerHTML={{ __html: activeItem.text }}
                     />
-                    {activeItem.action && (
+                    {/* {activeItem.action && (
                         <button
                             onClick={() => navigate(activeItem.link)}
                             className="btn-cta"
                         >
                             {activeItem.action} <span className="chev">›</span>
                         </button>
-                    )}
+                    )} */}
                 </div>
             </div>
         </div>

@@ -168,7 +168,6 @@ export const menuData = [
 
       {
         label: "Executive Post Graduate Certificate Programmes",
-        link: "/program/career-reboot",
         submenu: [
           {
             label: "Domain Specialization",
@@ -843,7 +842,6 @@ export const menuDataMobile = [
   {
     label: "Online Programs",
     placement: "top",
-    link: "/program/online-program",
     submenu: [
       { label: "Digital Marketing & AI", link: "/program/Digital-Marketing-AI" },
       { label: "Product Management", link: "/program/Product-Management" },
