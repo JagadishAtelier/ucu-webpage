@@ -1,44 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./FixedSideBar.css";
-import { useLocation } from "react-router-dom";
 import {
   FiPhoneCall,
   FiDownloadCloud,
   FiHelpCircle,
   FiMail,
-  FiMessageCircle
+  FiMessageCircle,
 } from "react-icons/fi";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function FixedSideBar() {
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
-
   const [showModal, setShowModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const realMobile = window.innerWidth < 768;
-
-  // FORCE MOBILE BEHAVIOR ON HOME PAGE (desktop also)
-  const isMobile = realMobile || isHomePage;
-
-  // AUTO CLOSE SIDEBAR BY DEFAULT ONLY ON HOME PAGE DESKTOP
-  useEffect(() => {
-    if (isHomePage && !realMobile) {
-      setIsOpen(false);
-    }
-  }, [isHomePage, realMobile]);
+  const isMobile = window.innerWidth < 768;
 
   const items = [
-    ...(isMobile
-      ? [
-          {
-            icon: <ChevronRight />,
-            action: () => setIsOpen(false),
-          },
-        ]
-      : []),
-
     { label: "Make an Enquiry", icon: <FiPhoneCall />, action: () => setShowModal(true) },
     { label: "Get Brochure", icon: <FiDownloadCloud />, link: "#" },
     { label: "Attend A Session", icon: <FiHelpCircle />, link: "#" },
@@ -46,27 +23,33 @@ function FixedSideBar() {
     {
       label: "Chat",
       icon: <FiMessageCircle />,
-      link: "https://wa.me/919876543210"
+      link: "https://wa.me/919876543210",
     },
   ];
 
   return (
     <>
-      {/* SIDEBAR (hidden by default on homepage desktop) */}
-      <div
-        className={`fixedSidebar ${isOpen ? "openSidebar" : ""}`}
-        style={{
-          display: isHomePage && !realMobile && !isOpen ? "none" : "block",
-        }}
-      >
+      {/* ================= SIDEBAR ================= */}
+      <div className={`fixedSidebar ${isOpen ? "openSidebar" : ""}`}>
+
+        {/* 🔼 TOP CLOSE ARROW */}
+        {isOpen && (
+          <button
+            className="sidebarTopCloseBtn"
+            onClick={() => setIsOpen(false)}
+          >
+            <ChevronRight />
+          </button>
+        )}
+
         {items.map((item, index) => (
           <a
             key={index}
-            href={item.link ? item.link : undefined}
+            href={item.link || undefined}
             target={item.link ? "_blank" : undefined}
             rel="noopener noreferrer"
             className="sidebarItem"
-            onClick={item.action ? item.action : undefined}
+            onClick={item.action}
           >
             <span className="sidebarIcon animatedIcon">{item.icon}</span>
             <span className="sidebarLabel">{item.label}</span>
@@ -74,22 +57,17 @@ function FixedSideBar() {
         ))}
       </div>
 
-      {/* SHOW ARROW ON MOBILE + HOME PAGE DESKTOP */}
-{(isMobile || (isHomePage && !realMobile)) && (
-  <button
-    className="sidebarArrowBtn"
-    onClick={() => setIsOpen(!isOpen)}
-    style={{
-  display: isHomePage && !realMobile && !isOpen ? "block" : "none",
-}}
+      {/* ▶ SIDE OPEN ARROW */}
+      {!isOpen && (
+        <button
+          className="sidebarArrowBtn"
+          onClick={() => setIsOpen(true)}
+        >
+          <ChevronLeft />
+        </button>
+      )}
 
-  >
-    {isOpen ? <ChevronRight /> : <ChevronLeft />}
-  </button>
-)}
-
-
-      {/* MODAL */}
+      {/* ================= MODAL ================= */}
       {showModal && (
         <div className="proModalOverlay" onClick={() => setShowModal(false)}>
           <div className="proModalCard" onClick={(e) => e.stopPropagation()}>
@@ -103,22 +81,22 @@ function FixedSideBar() {
 
               <div className="proInputGroup">
                 <label>Name</label>
-                <input type="text" placeholder="Enter your name" />
+                <input type="text" />
               </div>
 
               <div className="proInputGroup">
                 <label>Email</label>
-                <input type="email" placeholder="Enter your email" />
+                <input type="email" />
               </div>
 
               <div className="proInputGroup">
-                <label>Phone Number</label>
-                <input type="tel" placeholder="Enter your phone" />
+                <label>Phone</label>
+                <input type="tel" />
               </div>
 
               <div className="proInputGroup">
                 <label>Message</label>
-                <textarea placeholder="Write your message..."></textarea>
+                <textarea />
               </div>
 
               <button className="proSubmitBtn">Submit Enquiry</button>

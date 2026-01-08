@@ -88,6 +88,7 @@
   transition: all 0.4s ease;
   position: relative;
   min-height: 76%;
+  width: 100%;
 }
 
 .SALESDIPROAD-glass-card:hover {
@@ -102,8 +103,7 @@
   right: 20px;
   font-size: 3rem;
   font-weight: 900;
-  opacity: 0.05;
-  color: #000;
+  color: gray;
 }
 
 .SALESDIPROAD-card-month {
@@ -174,7 +174,9 @@
   animation: SALESDIPROAD-pulsing 2s infinite;
   opacity: 0;
 }
-
+.PGPXM-download-btnds{
+  justify-content: center;
+}
 @keyframes SALESDIPROAD-pulsing {
   0% { transform: scale(0.5); opacity: 0.8; }
   100% { transform: scale(2); opacity: 0; }

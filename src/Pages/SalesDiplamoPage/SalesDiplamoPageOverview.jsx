@@ -44,13 +44,13 @@ export default function SalesDiplamoPageOverview() {
                     <h1 className="display-5 mb-4 fw-bold col-12 col-lg-12">
                         About <span style={{ color: "#5ac501" }}> Sales Diploma</span>
                     </h1>
-                    <p style={{ textAlign: "justify" }}>
+                    <p className="mb-0" style={{ textAlign: "justify" }}>
                         In India’s booming sales landscape—one of the largest and fastest‑growing employment avenues—the demand for skilled professionals has never been greater. UCU rises to this challenge by co‑creating and co‑delivering its 6‑month Sales Diploma in collaboration with leading corporates, ensuring unmatched relevance and practical exposure. The program acts as a powerful career launchpad, equipping participants with the confidence, competence, and connections to thrive in high‑growth sales roles.
                     </p>
                 </div>
             </div>
 
-            <section className="SALESDIP-overview-container py-5">
+            <section className="SALESDIP-overview-container">
                 <div className="container">
                     <h3 className=" mb-4">
                         Who is this program for?

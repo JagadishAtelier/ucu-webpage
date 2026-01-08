@@ -11,6 +11,27 @@
   z-index: 999999;
   
 }
+.fixedSidebar {
+  right: -70px;
+  transition: right 0.35s ease;
+}
+
+.fixedSidebar.openSidebar {
+  right: 0;
+}
+.sidebarTopCloseBtn {
+  width: 100%;
+  background: gainsboro;
+  border: none;
+  padding: 10px 0;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+  color: #1535b4;
+  margin-bottom: 10px;
+}
 
 .sidebarItem {
   display: flex;
@@ -200,6 +221,9 @@
 
   .fixedSidebar.openSidebar {
     right: 0; /* Slide in */
+  }
+  .sidebarArrowBtn{
+    padding: 10px !important;
   }
 }
 

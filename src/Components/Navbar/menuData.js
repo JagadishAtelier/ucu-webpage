@@ -526,7 +526,7 @@ export const menuDataMobile = [
   {
     label: "About",
     placement: "bottom",
-    link: "/about-ucu",
+
     submenu: [
       { label: "Our Story", scrollId: "our-story" },
       { label: "Vision & Mission", scrollId: "vision-mission" },
@@ -538,7 +538,6 @@ export const menuDataMobile = [
 
   {
     label: "Programs",
-    link: "/program",
     placement: "bottom",
     submenu: [
       {
@@ -550,7 +549,7 @@ export const menuDataMobile = [
             label: "Flexi Program",
             className: "sublink-custom",
             submenu: [
-              { label: "PGPM Flex", link: "/program/pgpm" },
+              { label: "PGPM Flex", link: "/PGPM-Flex" },
               { label: "PGXPM ", link: "/program-pgxpm" },
             ],
           },
@@ -560,7 +559,7 @@ export const menuDataMobile = [
           // },
           {
             label: "Career Reboot Program for Women",
-            link: "/program/career-reboot",
+            link: "/Career-Reboot-Program-for-Women",
             className: "sublink-custom",
           },
         ],
@@ -568,13 +567,11 @@ export const menuDataMobile = [
 
       {
         label: "Executive Post Graduate Certificate Programmes",
-        link: "/program/career-reboot",
         submenu: [
           {
-            label: "Functional Specialization",
-            link: "/program/functional-certifications",
+            label: "Domain Specialization",
             submenu: [
-              { label: "Sales", link: "/program/sales" },
+              { label: "Sales", link: "/SalesDiplamo" },
               {
                 label: "Product",
                 link: "/program/product",
@@ -589,8 +586,7 @@ export const menuDataMobile = [
             ],
           },
           {
-            label: "Industry Sector Specialization",
-            link: "/program/industry-sector",
+            label: "Career Lane Specialization",
             submenu: [
               { label: "FinTech Genesis", link: "/program/fintech" },
               {

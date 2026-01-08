@@ -1679,3 +1679,12 @@ box-shadow: 1px 4px 10px #00054b70;
   width: 100%;
   height: auto;
 }
+.nav-link{
+  cursor: pointer;
+}
+
+@media (max-width:480px) {
+  .mobile-toggle{
+    padding: 0;
+  }
+}
