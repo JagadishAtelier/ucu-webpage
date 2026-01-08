@@ -261,3 +261,21 @@
   z-index: 2;
 }
 
+
+@media (max-width:480px) {
+  .timeline-line,
+  .timeline-point{
+    display: none;
+  }
+  .timeline-row.row{
+    padding: 0 ;
+    margin: 0;
+  }
+  .timeline-carousel{
+    width: 100%;
+  }
+  .timeline-carousel .image-auto img{
+    height: 30vh;
+    max-width: none;
+  }
+}

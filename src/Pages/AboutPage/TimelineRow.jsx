@@ -16,7 +16,7 @@ const TimelineRow = ({ title, description, images = [], images1 = [], reverse })
         {images.length > 0 && (
           <Swiper
             modules={[Autoplay]}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            autoplay={{ delay: 3000000, disableOnInteraction: false }}
             loop={true}
             allowTouchMove={false}
             speed={1200}  
@@ -25,7 +25,7 @@ const TimelineRow = ({ title, description, images = [], images1 = [], reverse })
             {images.map((imgSrc, idx) => (
               <SwiperSlide key={idx}>
                 <div className="image-auto">
-                  <img src={imgSrc} alt={`${title} ${idx + 1}`} />
+                  <img className="time-line-slider-image-tag" src={imgSrc} alt={`${title} ${idx + 1}`} />
                 </div>
               </SwiperSlide>
             ))}
