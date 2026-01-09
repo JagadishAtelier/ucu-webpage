@@ -12,21 +12,21 @@ const SalesDiplamoAdmission = () => {
     const steps = [
         {
             id: 1,
-            title: 'Fill out the admission form on the UCU website',
+            title: 'Fill out the admission form on UCU Website',
             icon: <FileSignature size={24} />
         },
         {
             id: 2,
-            title: 'Attend the interview conducted by our panel of SMEs',
+            title: 'Attend the Interview by our panel of SMEs',
             list: [
-                "Submit relevant documents such as academic profile, work experience, and achievements",
-                "Submit an essay explaining why you wish to pursue the Sales Diploma at UCU"
+                "Submit the relevant documents such as academic profiles, work experience, achievements, etc.",
+                "Submit the Essay suggesting why you want your Sales Diploma and why UCU?"
             ],
             icon: <Users size={24} />
         },
         {
             id: 3,
-            title: 'Holistic evaluation and announcement of composite score & results',
+            title: 'After a holistic evaluation of the above, our team shall get back with your composite score and result.',
             icon: <ClipboardCheck size={24} />
         },
         {

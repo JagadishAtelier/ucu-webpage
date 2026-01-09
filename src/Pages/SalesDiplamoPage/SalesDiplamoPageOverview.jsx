@@ -32,6 +32,8 @@ export default function SalesDiplamoPageOverview() {
                     </h1>
                     <p style={{ textAlign: "justify" }}>
                         UCU’s Diploma Programs are crafted to be truly distinctive — designed to fast‑track careers by equipping learners with sharp, industry‑ready skills that deliver immediate impact.
+                    </p>
+                    <p style={{ textAlign: "justify" }}>
                         Targeted at fresh graduates and early professionals with 0–3 years of experience, these programs offer a powerful alternative to a full‑time MBA. Instead of broad general management, participants dive straight into functional expertise across high‑demand domains such as Sales & Marketing, Finance, Analytics, and more.
 
 
@@ -63,7 +65,7 @@ export default function SalesDiplamoPageOverview() {
                                 <UserPlus size={22} />
                             </span>
                             <p className="SALESDIP-overview-text mb-0">
-                                This program is crafted for high potential freshers as well as professionals with 0-3 years of post UG work experience, wanting to launch a career in Sales with top corporates in FMCG/FMCD, IT/ITES, BFSI and more.
+This program is crafted for high potential freshers as well as professionals with 0-3 years of post UG work experience, wanting to launch a career in Sales with top corporates in FMCG/FMCD, IT/ITES, BFSI and more. 
                             </p>
                         </li>
 

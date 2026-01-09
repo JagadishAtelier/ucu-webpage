@@ -4,6 +4,7 @@
 import PGPMBottomBanner from "../../Pages/PGPMProgram/PGPMBottomBanner";
 import CareerRobatApply from "./CareerRobatApply";
 import CareerRobatFeatures from "./CareerRobatFeatures";
+import CRPFWFlow from "./CRPFWFlow";
 
 
 export default function CareerRobatOverview() {
@@ -27,6 +28,9 @@ UCU’s Career Reboot Program for Women is aimed at re-equipping women on a care
             
             <div className="container overflow-visible">
                 <CareerRobatFeatures/>
+            </div>
+            <div className="container overflow-visible">
+                <CRPFWFlow/>
             </div>
                     <div class="PGPXM-download-btnds d-flex flex-column flex-lg-row gap-3 container">
           <button class="btn custom-download-btn d-flex align-items-center">

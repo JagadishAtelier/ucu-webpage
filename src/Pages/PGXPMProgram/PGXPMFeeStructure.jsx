@@ -25,12 +25,13 @@ const PGXPMFeeStructure = () => {
                         PGXPM Fee Structure
                     </h5>
                     <p>
-                        Our fee is  <strong> INR 9,00,000*</strong> + applicable taxes.
+                        Our fee is  <strong> INR 9,00,000*</strong> + tax.
                     </p>
                     <p>
-                        Total cost is <strong> INR 10,00,000*</strong> + applicable taxes.payable in two installments of <strong>
+                        Total cost is <strong> INR 10,00,000*</strong> + with two installments of <strong>
                             INR 5,00,000*
                         </strong>
+                         + tax each
                     </p>
                 </div>
             </div>

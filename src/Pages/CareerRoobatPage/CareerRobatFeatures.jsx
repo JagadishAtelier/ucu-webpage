@@ -12,10 +12,10 @@ function CareerRobatFeatures() {
   ];
 
   return (
-    <section className="CRPFeatures py-5">
+    <section className="CRPFeatures py-lg-5 pb-0">
       <div className="container">
         <h3 className="CRPFeatures-title mb-4">
-          Key Features of the Program
+          Key features about the program
         </h3>
 
         <div className="CRPFeatures-panel">

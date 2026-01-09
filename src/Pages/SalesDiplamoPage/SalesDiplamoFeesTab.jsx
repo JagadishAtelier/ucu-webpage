@@ -27,10 +27,10 @@ const SalesDiplamoFeesTab = () => {
                   <span className="PGPMFLEX-fees-tab-price">75,000 + tax</span>
                 </div>
 
-                <p className="PGPMFLEX-fees-tab-desc">
+                {/* <p className="PGPMFLEX-fees-tab-desc">
                   Complete program fee for UCU including tuition, study
                   material, academic resources, and alumni services.
-                </p>
+                </p> */}
               </Card.Body>
             </Card>
           </Col>
@@ -62,9 +62,9 @@ const SalesDiplamoFeesTab = () => {
                   </li>
                 </ul>
 
-                <div className="PGPMFLEX-fees-tab-distribution">
+                {/* <div className="PGPMFLEX-fees-tab-distribution">
                   Distributed evenly over <strong>18 months</strong>
-                </div>
+                </div> */}
               </Card.Body>
             </Card>
           </Col>

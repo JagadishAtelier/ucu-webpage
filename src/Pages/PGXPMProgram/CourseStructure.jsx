@@ -25,10 +25,7 @@ export default function CourseStructure() {
         {/* HEADER */}
         <h2 className="cs-title"><span className="brand-text">Course</span> Structure</h2>
         <p className="text-justifys">
-          The PGXPM course structure has been designed keeping in mind your
-          professional commitments, providing flexibility to pursue the
-          on-campus component of the program without having to take long breaks
-          from your job. The program consists of 7 residencies across 20 months.
+The PGXPM course structure has been designed keeping in mind your professional commitments, providing flexibility to pursue the in-class component of the program without having to take long breaks from your job. The program will consist of 1 residency in each of the 7 terms, with the first, fourth and final residencies of 9 days each and the intermediate residencies of 5 days each. The program will commence during winter 2025 and conclude by summer 2026.
         </p>
 
         {/* STATS */}
