@@ -27,10 +27,10 @@ const PGPMFLEXFeesTab = () => {
                   <span className="PGPMFLEX-fees-tab-price">5,00,000</span>
                 </div>
 
-                <p className="PGPMFLEX-fees-tab-desc">
+                {/* <p className="PGPMFLEX-fees-tab-desc">
                   Complete program fee for UCU including tuition, study
                   material, academic resources, and alumni services.
-                </p>
+                </p> */}
               </Card.Body>
             </Card>
           </Col>
@@ -64,10 +64,14 @@ const PGPMFLEXFeesTab = () => {
                     <span>Installment 4</span>
                     <strong>₹ 1,50,000</strong>
                   </li>
+                  <li>
+                    <span>Total</span>
+                    <strong>₹ 6,00,000</strong>
+                  </li>
                 </ul>
 
                 <div className="PGPMFLEX-fees-tab-distribution">
-                  Distributed evenly over <strong>18 months</strong>
+                  distributed over <strong>18 months</strong>
                 </div>
               </Card.Body>
             </Card>

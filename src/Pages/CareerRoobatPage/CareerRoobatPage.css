@@ -179,3 +179,61 @@
   background: #002855;
   transform: scale(1.2);
 }
+
+
+.CRPFWFlowTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+
+.CRPFWFlowCardCompact {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.3rem;
+  height: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.CRPFWFlowBadge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 38px;
+  height: 38px;
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CRPFWFlowIconCompact {
+  font-size: 22px;
+  color: #0d6efd;
+}
+
+.CRPFWFlowContent h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.CRPFWFlowContent p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .CRPFWFlowCardCompact {
+    padding-left: 60px;
+  }
+}

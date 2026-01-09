@@ -44,7 +44,12 @@ const Timeline = () => {
       images: [image1, image2,"/abt-story-1.jpeg","/abt-story-2.jpeg"
         ,"/abt-story-3.jpeg"
         ,"/abt-story-4.jpeg"
-        ,"/abt-story-5.jpeg"
+        ,"/abt-story-5.jpeg",
+        "https://amaindia.b-cdn.net/amain/wp-content/uploads/2019/05/Facilities2.jpg",
+        "https://amaindia.b-cdn.net/amain/wp-content/uploads/2019/05/Facilities4.gif",
+        "https://amaindia.b-cdn.net/amain/wp-content/uploads/2025/07/HT-Parekh-Convention-Center-03.jpeg",
+        "https://amaindia.b-cdn.net/amain/wp-content/uploads/2022/06/DSC_1058.jpg",
+        "https://amaindia.b-cdn.net/amain/wp-content/uploads/2019/05/Facilities5.jpg"
       ],
       reverse: false,
     },
@@ -68,8 +73,8 @@ const Timeline = () => {
         Under his stewardship, the institute’s average campus CTC increased more than sevenfold within a decade,
         reflecting the transformative impact of his leadership.<br /><br />
       `,
-      images: ["/historyImages/2.jpg", "/historyImages/3.jpg", "/historyImages/1.jpg", "histroy-5.jpg", "histroy-4.jpg", "histroy-7.jpg", "histroy-8.jpg",],// replace with a collage or carousel image
-      images1: ["/historyImages/5.jpg", "/historyImages/6.jpg", "/historyImages/4.jpg", "histroy-6.jpg", "histroy-7.jpg","/abt-story-6.jpeg"],// replace with a collage or carousel image
+      images: ["/historyImages/2.jpg", "/historyImages/3.jpg", "/historyImages/1.jpg", "histroy-5.jpg", "https://amaindia.b-cdn.net/amain/wp-content/uploads/2019/05/Facilities5.jpg", "histroy-7.jpg", "histroy-8.jpg",],// replace with a collage or carousel image
+      images1: ["/historyImages/5.jpg", "/historyImages/6.jpg", "/historyImages/4.jpg", "histroy-6.jpg","/abt-story-6.jpeg"],// replace with a collage or carousel image
       reverse: true,
     },
     {

@@ -16,7 +16,7 @@ const TimelineRow = ({ title, description, images = [], images1 = [], reverse })
         {images.length > 0 && (
           <Swiper
             modules={[Autoplay]}
-            autoplay={{ delay: 3000000, disableOnInteraction: false }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             loop={true}
             allowTouchMove={false}
             speed={1200}  
