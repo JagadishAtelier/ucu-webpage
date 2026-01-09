@@ -21,8 +21,8 @@ const features = [
   { icon: <Target />, title: "Sector-Specific Leadership Tracks", description: "Whether it’s FinTech, Mobility, Sustainability, BFSI, IT/ITES, Manufacturing, Consulting, Data & Analytics, or Semiconductors — our curated programs are precision-built to meet the leadership needs of tomorrow’s enterprises." },
   { icon: <TestTube2 />, title: "Faculty Certification with Corporate DNA", description: "UCU’s pioneering Faculty Certification initiative reimagines academic excellence by blending traditional pedagogy with corporate acumen. We certify educators to teach with the pulse of the industry — not just the pages of a textbook." },
   { icon: <RefreshCcw />, title: "Continuous Learning for Continuous Relevance", description: "For working professionals, UCU is a lifelong partner. Our executive learning modules ensure you stay ahead of the curve — with the latest tools, trends, and transformations shaping your sector." },
-  { icon: <Users />, title: "CXO Academy", description: "Guide senior leaders (CEOs, CXOs, executives) through tailored coaching engagements that enhance their self-awareness, emotional intelligence, strategic thinking, and decision-making skills. You help them identify strengths, address leadership gaps, and build sustainable personal and organizational results." },
-  { icon: <Building2 />, title: "Leadership Coach", description: "A Leadership Coach at CXO Academy is a strategic development professional dedicated to empowering senior executives, C-suite leaders, and high-potential leaders with the mindset, skills, and capabilities required to lead effectively in today’s complex business environment." },
+  { icon: <Users />, title: "CXO Academy", description: "Tailored boardroom-ready programs for every C‑suite role — build strategic acumen, governance mastery, and enterprise impact." },
+  { icon: <Building2 />, title: "Leadership Coach", description: "A one‑on‑one coaching journey that transforms senior leaders through diagnostics, bespoke plans, and measurable outcomes." },
 ];
 
 function IndustryApproachContent() {
