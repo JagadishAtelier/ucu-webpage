@@ -33,7 +33,7 @@ const PGPMFlexApplication = () => {
         {
             id: 5,
             title:
-                'Candidates shortlisted for the interview will be intimated about the venue and the time slot through E-mail / telephone',
+                'Shortlisted candidates will be notified via Email/Phone',
             icon: <PhoneCall size={22} />
         }
     ];

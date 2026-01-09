@@ -29,7 +29,7 @@ export default function PGPMFlexWho() {
 
             <div className="who-is-grid">
                 {data.map((item, index) => (
-                    <div key={index} className="who-card">
+                    <div key={index} className="who-card flex-column">
                         <div className="icon-wrapper">{item.icon}</div>
                         <p className="who-card-text">{item.text}</p>
                     </div>

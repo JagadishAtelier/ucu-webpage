@@ -1,0 +1,173 @@
+/* AdmissionsTabRedesigned.css */
+
+.admissions-redesign-container {
+    font-family: 'Merriweather', serif;
+    color: #333;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.admissions-redesign-title {
+    font-family: 'AcidGrotesk', sans-serif;
+    font-weight: 700;
+    color: #1703a9;
+    /* Brand Dark Blue */
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.admissions-intro {
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    color: #555;
+    text-align: justify;
+}
+
+/* Timeline Table */
+.timeline-section {
+    margin-bottom: 3rem;
+}
+
+.timeline-title {
+    font-family: 'AcidGrotesk', sans-serif;
+    font-size: 1.5rem;
+    color: #1703a9;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.timeline-table-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    min-width: 600px;
+}
+
+.timeline-table th,
+.timeline-table td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    vertical-align: middle;
+}
+
+.timeline-table th {
+    background-color: #1703a9;
+    color: white;
+    font-family: 'AcidGrotesk', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* .timeline-table tr:last-child td {
+    border-bottom: none;
+} */
+
+.timeline-table tr:hover {
+    background-color: #f9fffb;
+}
+
+/* Eligibility & Selection Grid */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 992px) {
+    .details-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.detail-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+    border-color: #1703a9;
+}
+
+.detail-title {
+    font-family: 'AcidGrotesk', sans-serif;
+    font-size: 1.4rem;
+    color: #1703a9;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.detail-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #444;
+}
+
+.detail-list li::before {
+    content: "•";
+    color: #022043;
+    /* Brand accent */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Application Process */
+.application-process {
+    background: #f8f9fa;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border-left: 5px solid #1703a9;
+}
+
+.application-process>.darkbtn>.apply-butn {
+    display: inline-block;
+    background: #5ac501;
+    color: white;
+    border: 0;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.apply-butn:hover {
+    background: #022043;
+    color: white;
+    box-shadow: 0 4px 12px rgba(1, 18, 37, 0.3);
+}
+
+.fee-info {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #1703a9;
+}

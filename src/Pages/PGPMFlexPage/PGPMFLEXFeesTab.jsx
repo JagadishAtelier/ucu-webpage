@@ -75,7 +75,7 @@ const PGPMFLEXFeesTab = () => {
         </Row>
 
         <div className="PGPMFLEX-fees-tab-footer text-center">
-          <p>* All fees mentioned above are exclusive of applicable taxes.</p>
+          <p>* All fees mentioned above are excluding taxes.</p>
         </div>
       </Container>
     </section>

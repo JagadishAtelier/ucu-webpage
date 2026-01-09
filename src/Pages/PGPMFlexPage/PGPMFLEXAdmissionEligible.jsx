@@ -50,7 +50,7 @@ const PGPMFLEXAdmissionEligible = () => {
                                 CAT*, XAT+, GMAT, MAT, CMAT
                             </div>
                             <p>
-                                Equivalent aptitude tests or Great Lakes Aptitude Test 
+                                Equivalent aptitude tests or UCU Aptitude Test 
                                 (if required).
                             </p>
                         </div>

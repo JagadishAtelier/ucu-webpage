@@ -10,6 +10,7 @@ import { ArrowUp } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import AboutPageHero from "../../Pages/AboutPage/AboutPageHero/AboutPageHero";
 import PgApplications from "../../Pages/PgprogramPage/PgApplications";
+import AdmissionsTabRedesigned from "./AdmissionsTab/AdmissionsTabRedesigned";
 const TAB_LIST = [
   "Overview",
   "Curriculum",
@@ -98,7 +99,7 @@ export default function PgTabs() {
         return <FeeStructure />;
 
       case "Admissions":
-        return <AdmissionsTab />;
+        return <AdmissionsTabRedesigned />;
 
       // case "International Immersion":
       //   return (

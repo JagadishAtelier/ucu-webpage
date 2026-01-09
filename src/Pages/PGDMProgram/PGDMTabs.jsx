@@ -2,13 +2,14 @@ import React, { useState, useRef, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 import "../responsive-programs.css";
 import PGDMCurricullam from "./PGDMCurricullam";
-import AdmissionsTab from "../../Components/PGDM-program/AdmissionsTab/AdmissionsTab";
+import AdmissionsTabRedesigned from "../../Components/PGDM-program/AdmissionsTab/AdmissionsTabRedesigned";
 import PlacementTab from "../PgprogramPage/pgTabs/PlacementTab/PlacementTab";
 import PGDMOverViewTab from "./PGDMOverViewTab";
 import AboutPageHero from "../AboutPage/AboutPageHero/AboutPageHero";
 import PgApplications from "../PgprogramPage/PgApplications";
 import PGDMFeeStructure from "./PGDMFeeStructure";
-import "./PGDMProgram.css"; // Ensure this CSS file is created/imported
+import "./PGDMProgram.css";
+
 
 const TAB_LIST = [
     "Overview",
@@ -97,7 +98,7 @@ export default function PGDMTabs() {
                 return <PGDMFeeStructure />;
 
             case "Admissions":
-                return <AdmissionsTab />;
+                return <AdmissionsTabRedesigned />;
 
             case "Placements":
                 return <PlacementTab />;
@@ -120,12 +121,12 @@ export default function PGDMTabs() {
             >
                 <ArrowUp />
             </button>
-      <nav
-        ref={navRef}
-        className="pg-tabs-nav mobile-sticky-tabs"
-        role="tablist"
-        aria-label="Page sections"
-      >
+            <nav
+                ref={navRef}
+                className="pg-tabs-nav mobile-sticky-tabs"
+                role="tablist"
+                aria-label="Page sections"
+            >
                 {TAB_LIST.map((tab) => (
                     <button
                         key={tab}
