@@ -1,12 +1,20 @@
 import React from "react";
 import "./AdmissionsTabRedesigned.css";
 import { FaGraduationCap, FaClipboardCheck, FaCalendarAlt } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 export default function AdmissionsTabRedesigned() {
+    const { pathname } = useLocation();
+
+    const pathSegments = pathname.split("/").filter(Boolean); // split and remove empty segments
+    const lastSegment = pathSegments[pathSegments.length - 1]; // get only the last segment
+    const heading = lastSegment
+        ? lastSegment.replace(/-/g, " ").toUpperCase()
+        : "HOME";
     return (
         <section className="admissions-redesign-container">
             {/* Title */}
-            <h3 className="admissions-redesign-title">PGDM Admission Process</h3>
+            <h3 className="admissions-redesign-title">{heading} Admission Process</h3>
 
             {/* Intro */}
             <p className="admissions-intro">
@@ -105,8 +113,8 @@ export default function AdmissionsTabRedesigned() {
                     </table>
                 </div>
                 <p style={{ marginTop: "1rem", fontSize: "0.85rem", color: "#666" }}>
-                        Note: Applicants can apply only once in any of the given admission phases. Applying in any phase does not impact your chances of securing an admission offer.
-                    </p>
+                    Note: Applicants can apply only once in any of the given admission phases. Applying in any phase does not impact your chances of securing an admission offer.
+                </p>
             </div>
 
             {/* Eligibility & Selection Grid */}
