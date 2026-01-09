@@ -1,6 +1,6 @@
 :root {
-  --pg-bg: #e7e7e7;            
-  --pg-text: #000;  
+  --pg-bg: #ffffff;            
+  --pg-text: #2c2c2c;  
   --pg-text-active: #000;   
   --pg-indicator: #16a34a;     
   --pg-gap: 1rem;
@@ -12,7 +12,7 @@
 .pg-tabs-root {
   width: 100%;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: 'AcidGrotesk';
 }
 
 /* nav container (tab row) */
