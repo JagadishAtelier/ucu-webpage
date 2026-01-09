@@ -47,7 +47,6 @@ const Timeline = () => {
         ,"/abt-story-5.jpeg",
         "https://amaindia.b-cdn.net/amain/wp-content/uploads/2019/05/Facilities2.jpg",
         "https://amaindia.b-cdn.net/amain/wp-content/uploads/2019/05/Facilities4.gif",
-        "https://amaindia.b-cdn.net/amain/wp-content/uploads/2024/02/facilities_2024_02.jpg",
         "https://amaindia.b-cdn.net/amain/wp-content/uploads/2025/07/HT-Parekh-Convention-Center-03.jpeg",
         "https://amaindia.b-cdn.net/amain/wp-content/uploads/2022/06/DSC_1058.jpg",
         "https://amaindia.b-cdn.net/amain/wp-content/uploads/2019/05/Facilities5.jpg"
