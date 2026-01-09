@@ -27,7 +27,7 @@ const data = [
 function PGPMCurricullam() {
   return (
     <section className="pgdm-section">
-      <div className="container my-4">
+      <div className="container mt-4">
         {/* HEADING */}
         <h1 className="fw-bold mb-3">
           <span style={{ color: "#5ac501ff" }}>Dual Majors:</span> Developing

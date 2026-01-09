@@ -1,6 +1,4 @@
-import { useRef } from "react";
 import { Briefcase, BarChart3, MessageSquareText, BrainCircuit } from "lucide-react";
-import { motion } from "framer-motion";
 import "./PGPMIndustrySectorMajor.css";
 
 const majors = [
@@ -54,38 +52,9 @@ const majors = [
     },
 ];
 
-const Card = ({ major, index, total, containerRef }) => {
-    const cardRef = useRef(null);
-
-    // const { scrollYProgress } = useScroll({
-    //     target: cardRef,
-    //     offset: ["start end", "start start"],
-    // });
-
-    const topOffset = 140 + index;
-
-
+const Card = ({ major, index }) => {
     return (
-        <motion.div
-            ref={cardRef}
-            className="major-card"
-            style={{
-                top: `${topOffset}px`,
-                zIndex: index + 1,
-            }}
-            initial={{ opacity: 0, y: 50, scale: 0.95 }}
-            whileInView={{
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                transition: {
-                    duration: 0.6,
-                    ease: "easeOut",
-                    delay: index * 0.1, // Stagger effect
-                },
-            }}
-            viewport={{ once: true, margin: "-50px" }}
-        >
+        <div className="major-card">
             <div className="card-content" style={{ borderColor: major.color }}>
                 <div
                     className="icon-box"
@@ -105,25 +74,15 @@ const Card = ({ major, index, total, containerRef }) => {
                     </ul>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 
 export default function PGPMIndustrySectorMajor() {
-    const containerRef = useRef(null);
-
     return (
-        <section className="industry-section" ref={containerRef}>
+        <section className="industry-section">
             <div className="container">
-                <motion.h2
-                    className="section-title"
-                    initial={{ opacity: 0, y: -20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                >
-                    Industry Sector Major
-                </motion.h2>
+                <h2 className="section-title">Industry Sector Major</h2>
 
                 <div className="card-stack">
                     {majors.map((major, index) => (
@@ -131,8 +90,6 @@ export default function PGPMIndustrySectorMajor() {
                             key={index}
                             major={major}
                             index={index}
-                            total={majors.length}
-                            containerRef={containerRef}
                         />
                     ))}
                 </div>
