@@ -29,13 +29,7 @@ export const menuData = [
           },
         ],
       },
-      {
-        label: "Strategic Collaborations",
-        submenu: [
-          { label: "Strategic Partners", link: "/strategic/partners" },
-          { label: "International Collaborations", link: "/strategic/collaborations" },
-          { label: "Industry Partners", link: "/strategic/Industry-partners" },
-          {
+       {
             label: "Centers of Excellence (CoEs)",
             submenu: [
               {
@@ -73,6 +67,12 @@ export const menuData = [
               },
             ],
           },
+          {
+        label: "Strategic Collaborations",
+        submenu: [
+          { label: "Strategic Partners", link: "/strategic/partners" },
+          { label: "International Collaborations", link: "/strategic/collaborations" },
+          { label: "Industry Partners", link: "/strategic/Industry-partners" },
         ],
       },
     ],
@@ -185,6 +185,7 @@ export const menuData = [
                 link: "/program/dm-ai",
               },
               { label: "Banking & Finance", link: "/program/banking-finance" },
+              { label: "International Business  ", link: "/program/international-business" },
             ],
           },
           {
@@ -397,61 +398,42 @@ export const menuData = [
       // },
     ],
   },
+  
   {
-    label: "Faculty",
-    placement: "bottom",
-    submenu: [
-      { label: "Sales & Marketing", link: "/faculty/sales-marketing" },
-      { label: "Finance", link: "/faculty/finance" },
-      {
-        label: "Operations & Supply Chain",
-        link: "/faculty/operations-supply-chain",
-      },
-      { label: "Analytics & AI", link: "/faculty/analytics-AI" },
-      { label: "Consulting", link: "/faculty/consulting" },
-      { label: "Product", link: "/faculty/product" },
-      {
-        label: "Business Communications & Others",
-        link: "/faculty/business-communications-others",
-      },
-    ],
-  },
-
-  {
-    label: "Advisory Councils",
+    label: "Advisory Councel",
     placement: "bottom",
     submenu: [
       {
-        label: "Business Advisory Council",
+        label: "Business Advisory",
         link: "/bac",
         submenu: [
           {
-            label: "Academic Advisory Council",
+            label: "Academic Advisory",
             link: "/aac",
             className: "sublink-custom",
           },
           {
-            label: "CHRO Advisory Council",
+            label: "CHRO Advisory",
             link: "/chro",
             className: "sublink-custom",
           },
           {
-            label: "Talent Advisory Council",
+            label: "Talent Acquisition",
             link: "/tac",
             className: "sublink-custom",
           },
           {
-            label: "L&D Advisory Council",
+            label: "L&D Advisory",
             link: "/ldac",
             className: "sublink-custom",
           },
           {
-            label: "Young CXO Council",
+            label: "Young CXO",
             link: "/ycxoc",
             className: "sublink-custom",
           },
           {
-            label: "Rising Leaders' Council",
+            label: "Rising Leader's",
             link: "/rlc",
             className: "sublink-custom",
           },
@@ -464,22 +446,44 @@ export const menuData = [
       },
 
       {
-        label: "SME Program Advisory Council",
+        label: "SME Program Advisory",
         submenu: [
-          { label: "Sales Advisory Council", link: "/sac" },
-          { label: "Product Management Advisory Council", link: "/pmac" },
-          { label: "Cybersecurity Advisory Council", link: "/cac" },
-          { label: "FinTech Advisory Council", link: "/ftac" },
-          { label: "GCC Advisory Council", link: "/gccac" },
+          { label: "Sales Advisory", link: "/sac" },
+          { label: "Product Management Advisory", link: "/pmac" },
+          { label: "Cybersecurity Advisory", link: "/cac" },
+          { label: "FinTech Advisory", link: "/ftac" },
+          { label: "GCC Advisory", link: "/gccac" },
           {
-            label: "Mobility & Sustainability Advisory Council",
+            label: "Mobility & Sustainability Advisory",
             link: "/msac",
           },
-          { label: "Consulting Advisory Council", link: "/conac" },
+          { label: "Consulting Advisory", link: "/conac" },
         ],
       },
     ],
   },
+
+  {
+    label: "Faculty",
+    placement: "bottom",
+    link: "/faculty",
+    // submenu: [
+    //   { label: "Sales & Marketing", link: "/faculty/sales-marketing" },
+    //   { label: "Finance", link: "/faculty/finance" },
+    //   {
+    //     label: "Operations & Supply Chain",
+    //     link: "/faculty/operations-supply-chain",
+    //   },
+    //   { label: "Analytics & AI", link: "/faculty/analytics-AI" },
+    //   { label: "Consulting", link: "/faculty/consulting" },
+    //   { label: "Product", link: "/faculty/product" },
+    //   {
+    //     label: "Business Communications & Others",
+    //     link: "/faculty/business-communications-others",
+    //   },
+    // ],
+  },
+
 
   {
     label: "Admissions",
@@ -582,6 +586,7 @@ export const menuDataMobile = [
                 link: "/program/dm-ai",
               },
               { label: "Banking & Finance", link: "/program/banking-finance" },
+              { label: "International Business", link: "/program/international-business" },
             ],
           },
           {
@@ -657,36 +662,36 @@ export const menuDataMobile = [
     placement: "bottom",
     submenu: [
       {
-        label: "Business Advisory Council",
+        label: "Business Advisory",
         link: "/bac",
         submenu: [
           {
-            label: "Academic Advisory Council",
+            label: "Academic Advisory",
             link: "/aac",
             className: "sublink-custom",
           },
           {
-            label: "CHRO Advisory Council",
+            label: "CHRO Advisory",
             link: "/chro",
             className: "sublink-custom",
           },
           {
-            label: "Talent Advisory Council",
+            label: "Talent Acquisition",
             link: "/tac",
             className: "sublink-custom",
           },
           {
-            label: "L&D Advisory Council",
+            label: "L&D Advisory",
             link: "/ldac",
             className: "sublink-custom",
           },
           {
-            label: "Young CXO Council",
+            label: "Young CXO",
             link: "/ycxoc",
             className: "sublink-custom",
           },
           {
-            label: "Rising Leaders' Council",
+            label: "Rising Leaders'",
             link: "/rlc",
             className: "sublink-custom",
           },
@@ -701,16 +706,16 @@ export const menuDataMobile = [
       {
         label: "SME Program Advisory Council",
         submenu: [
-          { label: "Sales Advisory Council", link: "/sac" },
-          { label: "Product Management Advisory Council", link: "/pmac" },
-          { label: "Cybersecurity Advisory Council", link: "/cac" },
-          { label: "FinTech Advisory Council", link: "/ftac" },
-          { label: "GCC Advisory Council", link: "/gccac" },
+          { label: "Sales Advisory", link: "/sac" },
+          { label: "Product Management Advisory", link: "/pmac" },
+          { label: "Cybersecurity Advisory", link: "/cac" },
+          { label: "FinTech Advisory", link: "/ftac" },
+          { label: "GCC Advisory", link: "/gccac" },
           {
-            label: "Mobility & Sustainability Advisory Council",
+            label: "Mobility & Sustainability Advisory",
             link: "/msac",
           },
-          { label: "Consulting Advisory Council", link: "/conac" },
+          { label: "Consulting Advisory", link: "/conac" },
         ],
       },
     ],

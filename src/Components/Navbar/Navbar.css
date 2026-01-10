@@ -6,6 +6,12 @@
   font-size: 0.85rem;
 }
 
+.partnership{
+  width: 60vw !important;
+}
+.advisory-councel{
+width: 84vh !important;
+}
 .top-bar a {
   color: #fff;
   font-size: 14px;
@@ -992,6 +998,9 @@ li:hover .career-reboot-heading {
   font-weight: normal !important;
   color: #333 !important;
   text-transform: none !important;
+}
+.submenu-item{
+  cursor: pointer !important;
 }
 
 .submenu-link.sublink-custom {

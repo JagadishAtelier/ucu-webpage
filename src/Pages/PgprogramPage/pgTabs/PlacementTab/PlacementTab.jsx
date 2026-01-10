@@ -148,10 +148,7 @@ function PlacementTab() {
                 <table className="placement-table w-100">
 
                   <thead>
-                    <tr>
-                      <th>Placement cycle</th>
-                      <th>Summer Placement</th>
-                    </tr>
+                    
                   </thead>
                   <tbody>
                     <tr>

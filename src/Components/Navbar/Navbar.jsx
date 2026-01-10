@@ -67,6 +67,11 @@ const Navbar = () => {
             key={sub.label}
             className={`submenu-item ${sub.className === "sublink-custom" ? "no-padding" : ""
               }`}
+            onClick={(e) => {
+              if (sub.link && !e.target.closest("a")) {
+                navigate(sub.link);
+              }
+            }}
           >
             {sub.submenu && sub.submenu.length > 0 ? (
               <div className="submenu-parent">
@@ -218,8 +223,8 @@ const Navbar = () => {
                             <Link
                               to={menu.link || "#"}
                               className={`nav-link dropdown-toggle ${menu.label === "Online Programs"
-                                  ? "online-program-link"
-                                  : ""
+                                ? "online-program-link"
+                                : ""
                                 }`}
                             >
                               {menu.label.toUpperCase()}
