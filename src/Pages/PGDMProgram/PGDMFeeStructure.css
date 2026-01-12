@@ -71,3 +71,70 @@
     width: 100%;
   }
 }
+
+
+
+/* ===========================
+   PGDM PROGRAM HIGHLIGHTS
+   DESKTOP CONTENT
+=========================== */
+
+.PGDMHL-right {
+  position: relative;
+}
+
+.PGDMHL-card {
+  background: linear-gradient(135deg, #ffffff, #f7f9fc);
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+  min-height: 320px;
+}
+
+/* Green Accent Bar */
+.PGDMHL-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 6px;
+  background: #5ac501;
+  border-radius: 22px 0 0 22px;
+}
+
+/* Header */
+.PGDMHL-header {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 16px;
+}
+
+/* Icon */
+.PGDMHL-icon {
+  width: 54px;
+  height: 54px;
+  background: rgba(90, 197, 1, 0.15);
+  color: #5ac501;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+}
+
+/* Title */
+.PGDMHL-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1c1c1c;
+}
+
+/* Content */
+.PGDMHL-text ul {
+  padding-left: 18px;
+  margin-top: 20px;
+}
+
+.PGDMHL-text li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
