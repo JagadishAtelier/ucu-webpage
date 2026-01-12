@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import { Building2, CalendarClock, MapPin, Clock } from "lucide-react";
 
 
 const brands = [
@@ -25,24 +26,26 @@ export default function PGPMFlexCourseStructure() {
                 <h2 className="cs-title"><span className="brand-text">Course</span> Overview</h2>
 
                 {/* STATS */}
-                <div className="cs-stats">
-          <div className="cs-stat-box">
-            <h3>7</h3>
-            <p>On-campus Modules</p>
-          </div>
-          <div className="cs-stat-box">
-            <h3>21</h3>
-            <p>Months Duration</p>
-          </div>
-          <div className="cs-stat-box">
-            <h3>47</h3>
-            <p>Days on Campus</p>
-          </div>
-          <div className="cs-stat-box">
-            <h3>450+</h3>
-            <p>Contact Hours</p>
-          </div>
-        </div>
+                <div className="PGPMFLEX-vibrant-stats-grid">
+                    {[
+                        { value: "7", label: "On-campus Modules", icon: <Building2 size={32} />, color: "#0d6efd" },
+                        { value: "21", label: "Months Duration", icon: <CalendarClock size={32} />, color: "#5ac501" },
+                        { value: "47", label: "Days on Campus", icon: <MapPin size={32} />, color: "#e11d48" },
+                        { value: "450+", label: "Contact Hours", icon: <Clock size={32} />, color: "#9333ea" }
+                    ].map((stat, index) => (
+                        <div
+                            key={index}
+                            className="PGPMFLEX-vibrant-stat-card"
+                            style={{ '--stat-color': stat.color }}
+                        >
+                            <div className="PGPMFLEX-stat-icon-wrapper">
+                                {stat.icon}
+                            </div>
+                            <div className="PGPMFLEX-vibrant-stat-value">{stat.value}</div>
+                            <div className="PGPMFLEX-vibrant-stat-label">{stat.label}</div>
+                        </div>
+                    ))}
+                </div>
 
                 {/* TERMS */}
                 <h3 className="cs-subtitle">3 Months each / 660 classroom hours</h3>
