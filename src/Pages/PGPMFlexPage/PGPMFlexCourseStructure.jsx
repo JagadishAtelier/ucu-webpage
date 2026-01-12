@@ -25,13 +25,13 @@ export default function PGPMFlexCourseStructure() {
                 <h2 className="cs-title"><span className="brand-text">Course</span> Overview</h2>
 
                 {/* STATS */}
-                {/* <div className="cs-stats">
+                <div className="cs-stats">
           <div className="cs-stat-box">
             <h3>7</h3>
             <p>On-campus Modules</p>
           </div>
           <div className="cs-stat-box">
-            <h3>20</h3>
+            <h3>21</h3>
             <p>Months Duration</p>
           </div>
           <div className="cs-stat-box">
@@ -42,7 +42,7 @@ export default function PGPMFlexCourseStructure() {
             <h3>450+</h3>
             <p>Contact Hours</p>
           </div>
-        </div> */}
+        </div>
 
                 {/* TERMS */}
                 <h3 className="cs-subtitle">3 Months each / 660 classroom hours</h3>
@@ -77,23 +77,23 @@ export default function PGPMFlexCourseStructure() {
                 </div>
 
 
-<div className="PGPMFLEX-learning-container">
-      <h3 className="cs-subtitle"> Blended Learning </h3>
-      
-      <div className="PGPMFLEX-custom-progress-wrapper d-flex">
-        {/* 80% In-class Section */}
-        <div className="PGPMFLEX-progress-section PGPMFLEX-in-class" style={{ width: '80%' }}>
-          <span className="PGPMFLEX-percent">80%</span>
-          <span className="PGPMFLEX-label">In-class</span>
-        </div>
-        
-        {/* 20% Digital Section */}
-        <div className="PGPMFLEX-progress-section PGPMFLEX-digital" style={{ width: '20%' }}>
-          <span className="PGPMFLEX-percent">20%</span>
-          <span className="PGPMFLEX-label">Digital</span>
-        </div>
-      </div>
-    </div>
+                <div className="PGPMFLEX-learning-container">
+                    <h3 className="cs-subtitle"> Blended Learning </h3>
+
+                    <div className="PGPMFLEX-custom-progress-wrapper d-flex">
+                        {/* 80% In-class Section */}
+                        <div className="PGPMFLEX-progress-section PGPMFLEX-in-class" style={{ width: '80%' }}>
+                            <span className="PGPMFLEX-percent">80%</span>
+                            <span className="PGPMFLEX-label">In-class</span>
+                        </div>
+
+                        {/* 20% Digital Section */}
+                        <div className="PGPMFLEX-progress-section PGPMFLEX-digital" style={{ width: '20%' }}>
+                            <span className="PGPMFLEX-percent">20%</span>
+                            <span className="PGPMFLEX-label">Digital</span>
+                        </div>
+                    </div>
+                </div>
 
 
                 <div class="PGPXM-download-btnds d-flex flex-column flex-lg-row gap-3 mt-5">
