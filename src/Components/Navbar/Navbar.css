@@ -1555,7 +1555,7 @@ font-size: 0.8rem !important;
 /* ⭐ Custom Design for Campus Placement Dropdown */
 .menu-campus-custom-menu {
   height: 100vh;
-  left: -240%;
+  left: -280%;
 background: linear-gradient(to right, #01266b, #6d58e4)  !important;
     /* background: linear-gradient(to right, #25d366, #351edf) !important; */
     /* background:url(https://img.freepik.com/free-vector/business-doodle-vector-meeting-background_53876-126544.jpg?t=st=1764412967~exp=1764416567~hmac=b326fe86c6636aae78aae7720b8f1deeb44aa700c82969e9aa4a9449fc60dd06&w=1060) !important;
@@ -1612,7 +1612,7 @@ background: linear-gradient(to right, #01266b, #6d58e4)  !important;
   font-weight: 600;
   font-size: 15.5px !important;
   text-align: center;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .navbar-nav > .dropdown .cam-drop-dropdown-menu {
   position: absolute;
@@ -1636,7 +1636,7 @@ background: linear-gradient(to right, #01266b, #6d58e4)  !important;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 
   width: 0;
-  max-width: 1400px;
+  max-width: 1600px;
   max-height: 0;
   overflow: hidden;
   padding: 0 2rem;
@@ -1649,14 +1649,14 @@ background: linear-gradient(to right, #01266b, #6d58e4)  !important;
 .navbar-nav > .dropdown:hover .cam-drop-dropdown-menu {
   opacity: 1;
   visibility: visible;
-  width: 95vw;
+  width: 98vw;
   max-height: fit-content;
   /* enough to show content */
   padding: 2rem;
-  transform: translateX(-51%) translateY(0);
+  transform: translateX(-45%) translateY(0);
 }
 .menu-campus-image{
-  height: 18vh;
+  height: 22vh;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -1671,7 +1671,7 @@ background: linear-gradient(to right, #01266b, #6d58e4)  !important;
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  width: 24%;
+  width: 48%;
   transition: all 0.4s ease-in-out;
 }
 .menu-item-campus-card:hover{
@@ -1709,4 +1709,8 @@ box-shadow: 1px 4px 10px #00054b70;
   .custom-prev, .custom-next{
     padding: 0 !important;
   }
+}
+
+.campus-navbar-auth-img{
+  width: 25%;
 }

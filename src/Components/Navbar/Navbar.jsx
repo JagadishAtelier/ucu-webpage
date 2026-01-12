@@ -360,7 +360,7 @@ const Navbar = () => {
                             }}
                           >
                             <div className="d-flex gap-5 align-items-center">
-                              <div className="col-4">
+                              <div className="col-4 d-flex flex-column gap-3">
                                 <p className="fs-6 campus-text-right">
                                   “UCU is redefining the future of talent—rooted
                                   in India’s heartland, yet engineered for
@@ -370,13 +370,18 @@ const Navbar = () => {
                                   and industry leaders who mentor indigenous
                                   students into globally agile professionals.”
                                 </p>
-                                <p className="text-end fs-5 fw-bold mb-0 campus-text-right-name">
-                                  Ganesan Ramachandran
-                                </p>
-                                <p className="text-end campus-text-right-name" style={{ fontSize: '12px' }}>
-                                  Managing Director, Accenture Strategy &
-                                  Consulting
-                                </p>
+                                <div className="d-flex gap-3 align-items-center justify-content-end">
+                                  <div>
+                                    <p className="text-end fs-5 fw-bold mb-0 campus-text-right-name">
+                                      Ganesan Ramachandran
+                                    </p>
+                                    <p className="text-end campus-text-right-name" style={{ fontSize: '12px' }}>
+                                      Managing Director, Accenture Strategy &
+                                      Consulting
+                                    </p>
+                                  </div>
+                                  <img src="https://ucu-webpage.vercel.app/assets/image3-B0zKHA6P.jpg" className="campus-navbar-auth-img rounded" />
+                                </div>
                               </div>
                               <div className="d-grid cmapus-wrapper-div">
                                 <div className="row row-gap-3">
@@ -396,7 +401,7 @@ const Navbar = () => {
                                       >
                                         <span>{item.label}</span>
                                       </Link>
-                                      <p style={{ fontSize: '13px', color: '#333' }}> {item.description} </p>
+                                      <p className="mb-0" style={{ fontSize: '13px', color: '#333' }}> {item.description} </p>
                                     </div>
                                   ))}
                                 </div>
