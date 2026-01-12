@@ -1,16 +1,16 @@
 .pgpm-flex-pillar-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
 }
 
 .pgpm-flex-pillar-item {
-    flex: 0 0 calc(33.333% - 24px);
+  flex: 0 0 calc(33.333% - 24px);
 }
 
 .pgpm-flex-terms {
-    grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 /* .pgpm-cs-stat-box {
@@ -24,60 +24,60 @@
     background: rgb(249, 250, 252);
 } */
 .pgpm-flex-stats {
-    grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .PGPMFLEX-learning-title {
-    font-weight: bold;
-    letter-spacing: 1px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 /* Main progress bar container */
 .PGPMFLEX-custom-progress-wrapper {
-    height: 60px;
-    /* Adjust height to match image */
-    border-radius: 15px;
-    /* Rounded corners for the whole bar */
-    overflow: hidden;
-    /* Ensures sections don't spill out of radius */
+  height: 60px;
+  /* Adjust height to match image */
+  border-radius: 15px;
+  /* Rounded corners for the whole bar */
+  overflow: hidden;
+  /* Ensures sections don't spill out of radius */
 }
 
 /* Common styling for both sections */
 .PGPMFLEX-progress-section {
-    display: flex;
-    align-items: baseline;
-    /* Aligns text to bottom/baseline */
-    padding: 10px 15px;
-    position: relative;
+  display: flex;
+  align-items: baseline;
+  /* Aligns text to bottom/baseline */
+  padding: 10px 15px;
+  position: relative;
 }
 
 /* Specific section colors */
 .PGPMFLEX-in-class {
-    background: #b7ef8c;
-    border-width: 1px;
-    /* border-style: solid; */
-    border-color: rgb(230, 230, 230);
-    color: #1a2b49;
-    /* Dark navy text */
+  background: #b7ef8c;
+  border-width: 1px;
+  /* border-style: solid; */
+  border-color: rgb(230, 230, 230);
+  color: #1a2b49;
+  /* Dark navy text */
 }
 
 .PGPMFLEX-digital {
-    background-color: #122647;
-    /* Dark navy background */
-    color: #ffffff;
+  background-color: #122647;
+  /* Dark navy background */
+  color: #ffffff;
 }
 
 /* Text styling */
 .PGPMFLEX-percent {
-    font-size: 2.5rem;
-    font-weight: bold;
-    line-height: 1;
-    margin-right: 5px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 5px;
 }
 
 .PGPMFLEX-label {
-    font-size: 1rem;
-    font-weight: 500;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 
@@ -226,75 +226,177 @@
 }
 
 /* Card */
+/* Colorful Card Redesign */
 .PGPMFLEX-admission-eligible-card {
-  background: #f9f9fa;
-  border-radius: 16px;
-  padding: 36px 34px;
+  background: white;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  border: 1px solid #e1e4e8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
 }
 
-/* Label */
-.PGPMFLEX-admission-eligible-label {
-  font-size: 13px;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  color: #0c0142;
-  display: block;
-  margin-bottom: 18px;
+.PGPMFLEX-admission-eligible-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* Internal Layout */
+.PGPMFLEX-card-body {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+.PGPMFLEX-card-footer {
+  background: #ffffff;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.PGPMFLEX-card-footer span {
   font-weight: 700;
+  font-size: 0.95rem;
+  color: #1e293b;
 }
 
-/* Metric */
-.PGPMFLEX-admission-eligible-metric {
-  font-size: 52px;
+.PGPMFLEX-footer-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+
+.PGPMFLEX-admission-eligible-card:hover .PGPMFLEX-footer-icon {
+  background: #0f172a;
+  color: white;
+  transform: translateX(4px);
+}
+
+/* Typography & Elements */
+.PGPMFLEX-admission-eligible-label {
+  font-size: 1.5rem;
   font-weight: 800;
-  color: #5ac501;
-  line-height: 1;
-  margin-bottom: 14px;
-}
-
-.PGPMFLEX-admission-eligible-metric small {
-  font-size: 18px;
-  font-weight: 600;
-  color: #4b5563;
-}
-
-/* Subtext */
-.PGPMFLEX-admission-eligible-subtext {
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.6px;
-  color: #374151;
+  color: #1a1a1a;
   margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  display: block;
 }
 
-/* Content */
-.PGPMFLEX-admission-eligible-card p,
-.PGPMFLEX-admission-eligible-card li {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #1f2937;
+.PGPMFLEX-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 24px;
 }
 
-/* List */
-.PGPMFLEX-admission-eligible-card ul {
-  padding-left: 18px;
-  margin: 0;
+/* Pills Container */
+.PGPMFLEX-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
 }
 
-.PGPMFLEX-admission-eligible-card li {
-  margin-bottom: 10px;
+.PGPMFLEX-tag-pill {
+  padding: 6px 13px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: inline-block;
 }
 
-/* Mobile */
+/* Color Themes */
+/* Theme 1: Blue (Education) */
+.theme-blue .PGPMFLEX-card-body {
+  background: #e0f2fe;
+}
+
+.theme-blue .PGPMFLEX-tag-pill {
+  background: #bae6fd;
+  color: #0369a1;
+}
+
+.theme-blue .PGPMFLEX-admission-eligible-label {
+  color: #0c4a6e;
+}
+
+.theme-blue .PGPMFLEX-card-desc {
+  color: #0c4a6e;
+  opacity: 0.8;
+}
+
+/* Theme 2: Orange (Work Ex) */
+.theme-orange .PGPMFLEX-card-body {
+  background: #ffedd5;
+}
+
+.theme-orange .PGPMFLEX-tag-pill {
+  background: #fed7aa;
+  color: #c2410c;
+}
+
+.theme-orange .PGPMFLEX-admission-eligible-label {
+  color: #7c2d12;
+}
+
+.theme-orange .PGPMFLEX-card-desc {
+  color: #7c2d12;
+  opacity: 0.8;
+}
+
+/* Theme 3: Purple (Scores) */
+.theme-purple .PGPMFLEX-card-body {
+  background: #f3e8ff;
+}
+
+.theme-purple .PGPMFLEX-tag-pill {
+  background: #e9d5ff;
+  color: #7e22ce;
+}
+
+.theme-purple .PGPMFLEX-admission-eligible-label {
+  color: #581c87;
+}
+
+.theme-purple .PGPMFLEX-card-desc {
+  color: #581c87;
+  opacity: 0.8;
+}
+
+/* Theme 4: Green (Requirements) */
+.theme-green .PGPMFLEX-card-body {
+  background: #dcfce7;
+}
+
+.theme-green .PGPMFLEX-tag-pill {
+  background: #bbf7d0;
+  color: #15803d;
+}
+
+.theme-green .PGPMFLEX-admission-eligible-label {
+  color: #14532d;
+}
+
+.theme-green .PGPMFLEX-card-desc {
+  color: #14532d;
+  opacity: 0.8;
+}
+
+/* Mobile Response */
 @media (max-width: 768px) {
   .PGPMFLEX-admission-eligible-header h2 {
     font-size: 28px;
-  }
-
-  .PGPMFLEX-admission-eligible-metric {
-    font-size: 42px;
   }
 }
 
@@ -307,7 +409,7 @@
 .PGPMFLEX-admission-app-proc-line-container {
   position: relative;
   width: 90%;
-  margin: 0 auto 40px;
+  margin: 0 auto 10px;
 }
 
 .PGPMFLEX-admission-app-proc-progress-line {
@@ -316,7 +418,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: #dcdcdc;
+  background: #b6bbe6;
   transform: translateY(-50%);
 }
 
@@ -329,7 +431,7 @@
 .PGPMFLEX-admission-app-proc-dot {
   width: 42px;
   height: 42px;
-  background: #5ac501;
+  background: #0a089b;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -342,9 +444,9 @@
 
 /* Cards */
 .PGPMFLEX-admission-app-proc-card {
-  background: #f9f9fa;
+  background: #ffffff;
   border-radius: 16px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #d7dff0;
   transition: all 0.25s ease;
   position: relative;
 }
@@ -358,7 +460,7 @@
 .PGPMFLEX-admission-app-proc-icon {
   width: 44px;
   height: 44px;
-  color: #5ac501;
+  color: #0a089b;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -371,164 +473,229 @@
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 1px;
-  color: gray;
+  color: #5ac501;
   margin-bottom: 8px;
 }
 
 .PGPMFLEX-admission-app-proc-card-title {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #1f2937;
+  color: #000000;
   line-height: 1.4;
 }
 
 
 
 
+/* Evaluation Section Redesign */
+/* Evaluation Section Redesign */
 .PGPMFLEX-admission-evavul-zig-container {
-    position: relative;
-    padding: 60px 0;
+  position: relative;
+  padding: 100px 0;
+  /* Extra padding for floating icons */
 }
 
-/* The Horizontal Connector Line */
-.PGPMFLEX-admission-evavul-connector-line {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #76bc43 0%, #00a0dc 50%, #76bc43 100%);
-    transform: translateY(-50%);
-    z-index: 1;
+/* Continuous Wave Connector Background */
+.PGPMFLEX-connector-wave {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  /* SVG Wave styling */
+  background-image: url("data:image/svg+xml,%3Csvg width='1440' height='200' viewBox='0 0 1440 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,100 C240,100 240,20 480,20 C720,20 720,180 960,180 C1200,180 1200,100 1440,100' stroke='%23dbeafe' stroke-width='30' fill='none' stroke-linecap='round' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  transform: translateY(-50%);
+  z-index: 0;
+  opacity: 0.8;
 }
 
-/* Card Styling */
-.PGPMFLEX-admission-evavul-zig-card {
-    background: #ffffff;
-    width: 260px;
-    padding: 0;
-    border-radius: 15px 15px 40px 15px; /* Modern asymmetric corners */
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    position: relative;
-    z-index: 2;
-    transition: all 0.3s ease;
-    border: 1px solid #f0f0f0;
+/* New Staggered Layout */
+.PGPMFLEX-eval-card-wrapper {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  padding: 0 10px;
 }
 
-.PGPMFLEX-admission-evavul-zig-card:hover {
-    transform: scale(1.05) !important;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+.PGPMFLEX-eval-card-wrapper:hover {
+  transform: translateY(-5px);
 }
 
-.card-inner {
-    padding: 30px 20px;
+/* Stagger logic - matches the wave path roughly */
+.card-up {
+  margin-top: -30px;
 }
 
-.card-top-accent {
-    height: 6px;
-    width: 100%;
-    border-radius: 15px 15px 0 0;
+.card-down {
+  margin-top: 50px;
 }
 
-/* Logic for Card 1, 3 (Up) and 2, 4 (Down) */
-.move-up {
-    transform: translateY(-80px); /* Pushes Card 1 & 3 above the line */
+/* Card Styling - Light & Clean */
+.PGPMFLEX-eval-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 50px 20px 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-bottom: 5px solid transparent;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.move-down {
-    transform: translateY(80px); /* Pushes Card 2 & 4 below the line */
+/* Blue Theme */
+.card-up .PGPMFLEX-eval-card {
+  background: linear-gradient(180deg, #f0f4ff 0%, #ffffff 100%);
+  border-bottom-color: #0a089b;
 }
 
-/* Step Badge */
-.step-badge {
-    width: 45px;
-    height: 45px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 800;
-    font-size: 1.2rem;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+/* Green Theme */
+.card-down .PGPMFLEX-eval-card {
+  background: linear-gradient(180deg, #f0fff4 0%, #ffffff 100%);
+  border-bottom-color: #5ac501;
 }
 
-/* The small circle connecting the card to the line */
-.line-node {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background: #fff;
-    border: 4px solid;
-    border-radius: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+/* Floating Icon */
+.PGPMFLEX-eval-icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  z-index: 3;
+  border: 4px solid white;
 }
 
-.move-up .line-node {
-    bottom: -48px; /* Connects card from bottom to the middle line */
+.card-up .PGPMFLEX-eval-icon-circle {
+  background: #0a089b;
+  color: white;
 }
 
-.move-down .line-node {
-    top: -48px; /* Connects card from top to the middle line */
+.card-down .PGPMFLEX-eval-icon-circle {
+  background: #5ac501;
+  color: white;
 }
 
-/* Responsive Fix */
-@media (max-width: 992px) {
-    .PGPMFLEX-admission-evavul-connector-line {
-        display: none;
-    }
-    .move-up, .move-down {
-        transform: translateY(0);
-        margin-bottom: 30px;
-    }
-    .line-node {
-        display: none;
-    }
+/* Content */
+.PGPMFLEX-eval-card h5 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+  margin-top: 10px;
+  min-height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PGPMFLEX-eval-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Step Number */
+.PGPMFLEX-eval-number {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(230, 230, 230, 0.315);
+  line-height: 0.8;
+  pointer-events: none;
+}
+
+.PGPMFLEX-eval-node {
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+  .PGPMFLEX-connector-wave {
+    display: none;
+  }
+
+  .card-up,
+  .card-down {
+    margin-top: 0;
+    margin-bottom: 40px;
+    transform: none;
+  }
+
+  .PGPMFLEX-eval-card {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
 }
 
 @media (max-width:768px) {
-  .pgpm-flex-pillar-item{
+  .pgpm-flex-pillar-item {
     width: 100%;
     flex: 0 0 calc(50% - 24px);
   }
-  .pgpm-flex-terms{
-    grid-template-columns: repeat(2,1fr);
+
+  .pgpm-flex-terms {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .PGPMFLEX-progress-section{
+
+  .PGPMFLEX-progress-section {
     width: 50% !important;
   }
-      .who-is-for-section{
+
+  .who-is-for-section {
     padding: 0 !important;
   }
-  .pgxpm-360-section{
+
+  .pgxpm-360-section {
     padding-bottom: 0;
   }
 }
+
 @media (max-width:480px) {
-  .pgpm-flex-pillar-item{
+  .pgpm-flex-pillar-item {
     width: 100%;
     flex: 0 0 calc(100%);
   }
-  .pgpm-flex-terms{
-    grid-template-columns: repeat(2,1fr);
+
+  .pgpm-flex-terms {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .PGPMFLEX-progress-section{
+
+  .PGPMFLEX-progress-section {
     width: 50% !important;
   }
-    .who-is-for-section{
+
+  .who-is-for-section {
     padding: 0 !important;
   }
-  .course-structure.p-sm-0{
+
+  .course-structure.p-sm-0 {
     padding-top: 0 !important;
   }
-  .PGPMFLEX-admission-eligible-section{
+
+  .PGPMFLEX-admission-eligible-section {
     padding: 0 !important;
   }
-  .PGPMFLEX-admission-evavul-zig-container{
+
+  .PGPMFLEX-admission-evavul-zig-container {
     padding: 0;
   }
-  .PGPMFLEX-admission-evavul-zig-card{
+
+  .PGPMFLEX-admission-evavul-zig-card {
     width: 100%;
   }
 }
@@ -543,7 +710,8 @@
 
   .mobile-sticky-tabs {
     position: sticky;
-    top: 0; /* change to navbar height if navbar is fixed */
+    top: 0;
+    /* change to navbar height if navbar is fixed */
     z-index: 9;
 
     display: flex;
@@ -565,13 +733,16 @@
     border-radius: 22px;
     white-space: nowrap;
   }
-  .PGPMFLEX-percent{
+
+  .PGPMFLEX-percent {
     font-size: 1rem;
   }
-  .PGPMFLEX-progress-section{
+
+  .PGPMFLEX-progress-section {
     align-items: center;
   }
-  .pillars-grid{
+
+  .pillars-grid {
     margin-top: 0;
   }
 

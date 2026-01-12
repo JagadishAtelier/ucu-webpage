@@ -77,23 +77,23 @@ export default function PGPMFlexCourseStructure() {
                 </div>
 
 
-<div className="PGPMFLEX-learning-container">
-      <h3 className="cs-subtitle"> Blended Learning </h3>
-      
-      <div className="PGPMFLEX-custom-progress-wrapper d-flex">
-        {/* 80% In-class Section */}
-        <div className="PGPMFLEX-progress-section PGPMFLEX-in-class" style={{ width: '80%' }}>
-          <span className="PGPMFLEX-percent">80%</span>
-          <span className="PGPMFLEX-label">In-class</span>
-        </div>
-        
-        {/* 20% Digital Section */}
-        <div className="PGPMFLEX-progress-section PGPMFLEX-digital" style={{ width: '20%' }}>
-          <span className="PGPMFLEX-percent">20%</span>
-          <span className="PGPMFLEX-label">Digital</span>
-        </div>
-      </div>
-    </div>
+                <div className="PGPMFLEX-learning-container">
+                    <h3 className="cs-subtitle"> Blended Learning </h3>
+
+                    <div className="PGPMFLEX-custom-progress-wrapper d-flex">
+                        {/* 80% In-class Section */}
+                        <div className="PGPMFLEX-progress-section PGPMFLEX-in-class" style={{ width: '80%' }}>
+                            <span className="PGPMFLEX-percent">80%</span>
+                            <span className="PGPMFLEX-label">In-class</span>
+                        </div>
+
+                        {/* 20% Digital Section */}
+                        <div className="PGPMFLEX-progress-section PGPMFLEX-digital" style={{ width: '20%' }}>
+                            <span className="PGPMFLEX-percent">20%</span>
+                            <span className="PGPMFLEX-label">Digital</span>
+                        </div>
+                    </div>
+                </div>
 
 
                 <div class="PGPXM-download-btnds d-flex flex-column flex-lg-row gap-3 mt-5">
