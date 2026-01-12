@@ -4,7 +4,7 @@ import { Container, Row, Col, Card, Badge } from "react-bootstrap";
 const SalesDiplamoFeesTab = () => {
   return (
     <section className="container-fluid p-0 QWERT-fees-section">
-      <div className="d-flex justify-content-center container QWERT-fees-row">
+      <div className="d-flex flex-column flex-lg-row justify-content-center container QWERT-fees-row">
 
         {/* LEFT IMAGE */}
         <div className="QWERT-fees-image-col">
