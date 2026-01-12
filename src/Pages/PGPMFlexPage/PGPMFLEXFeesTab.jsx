@@ -4,7 +4,7 @@ import { Badge } from "react-bootstrap";
 const PGPMFLEXFeesTab = () => {
   return (
     <section className="container-fluid p-0 QWERT-fees-section">
-      <div className="d-flex justify-content-center container QWERT-fees-row">
+      <div className="d-flex flex-column flex-lg-row justify-content-center container QWERT-fees-row">
 
         {/* LEFT IMAGE */}
         <div className="QWERT-fees-image-col">
@@ -29,8 +29,8 @@ const PGPMFLEXFeesTab = () => {
             </h3>
 
             <div className="PGPMFLEX-fees-tab-price-box text-white">
-              <span className="PGPMFLEX-fees-tab-currency">₹</span>
-              <span className="PGPMFLEX-fees-tab-price">5,00,000</span>
+              <span className="PGPMFLEX-fees-tab-currency text-white">₹</span>
+              <span className="PGPMFLEX-fees-tab-price text-white">5,00,000</span>
             </div>
           </div>
 

@@ -634,6 +634,7 @@
   background: #1f2a44;
   padding: 30px;
   border-top-right-radius: 10px;
+  color: white;
 }
 
 /* LIGHT BLOCK */
@@ -643,6 +644,23 @@
   border-bottom-right-radius: 10px;
 }
 
+@media (max-width:768px) {
+  .QWERT-fees-image-col{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  .QWERT-fees-right{
+    width: 100%;
+
+  }
+  .QWERT-fees-dark{
+    border-top-right-radius: 0;
+  }
+  .QWERT-fees-light{
+    border-bottom-left-radius: 10px;
+  }
+}
 @media (max-width:480px) {
   .QWERT-fees-image-col{
     width: 100%;
