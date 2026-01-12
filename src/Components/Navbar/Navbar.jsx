@@ -81,7 +81,7 @@ const Navbar = () => {
                 >
                   {sub.label}
                 </Link>
-                <ChevronRight size={12} className="submenu-arrow" />
+                {/* <ChevronRight size={12} className="submenu-arrow" /> */}
                 {renderNestedMenu(sub.submenu, depth + 1)}
               </div>
             ) : (

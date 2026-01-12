@@ -144,8 +144,8 @@ export const menuData = [
       {
         label: "Full Time Programs",
         submenu: [
-          { label: "PGPM ELITE | Career Accelerator Program", link: "/pgpm-elite" },
-          { label: "PGDM | Young Leaders' Program", link: "/program-pgdm" },
+          { label: "PGPM ELITE | Career Accelerator Program", link: "/pgpm-elite",className: "program-highlight padding-bottom" },
+          { label: "PGDM | Young Leaders' Program", link: "/program-pgdm",className: "program-highlight" },
           {
             label: "Flexi Program",
             className: "sublink-custom",

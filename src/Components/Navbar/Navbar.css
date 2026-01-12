@@ -1712,5 +1712,54 @@ box-shadow: 1px 4px 10px #00054b70;
 }
 
 .campus-navbar-auth-img{
-  width: 25%;
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
 }
+
+
+
+/* ================================
+   PROGRAM HIGHLIGHT – FIXED
+================================ */
+
+/* Link itself */
+.submenu-link.program-highlight {
+  position: relative;
+  display: block;              /* MUST */
+  padding-left: 14px;          /* text spacing */
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+.padding-bottom{
+  padding-bottom: 10px !important;
+}
+
+/* Left border */
+.submenu-link.program-highlight::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;                   /* NO GAP */
+  width: 1px;
+  background-color: #ddd;
+}
+
+/* REMOVE bottom gap between highlighted links */
+.dropdown-menu-col ul li:has(.program-highlight) {
+  margin-bottom: 0 !important;
+}
+
+/* Safety: remove link margin if any */
+.submenu-link.program-highlight {
+  margin: 0;
+}
+/* Remove padding from ONLY the parent li */
+.dropdown-menu-col ul li:has(.program-highlight) {
+  padding: 0 !important;
+}
+
+
+
+
