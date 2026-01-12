@@ -1,7 +1,7 @@
 import React from 'react'
 
 function SummerInternship() {
-      const tableHead = ["Trimester 4", "Trimester 5", "Trimester 6"];
+      const tableHead = ["Term 4", "Term 5", "Term 6"];
 
   const tableData = [
     {

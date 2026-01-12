@@ -1,7 +1,7 @@
 import React from "react";
 
 function CurriculumTable() {
-  const tableHead = ["Trimester 1", "Trimester 2", "Trimester 3"];
+  const tableHead = ["Term 1", "Term 2", "Term 3"];
 
   const tableData = [
     {
