@@ -199,9 +199,9 @@ A program with cutting-edge analytics, industry co-creation, and global relevanc
             <Col md={3}>
               <Button className="minor-btn">Consulting</Button>
             </Col>
-            <Col md={3}>
+            {/* <Col md={3}>
               <Button className="minor-btn">Manufacturing</Button>
-            </Col>
+            </Col> */}
           </Row>
           <Row>
             <Col md={3}>
