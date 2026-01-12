@@ -33,6 +33,7 @@
 }
 
 /* Main progress bar container */
+/* Main progress bar container */
 .PGPMFLEX-custom-progress-wrapper {
   height: 60px;
   /* Adjust height to match image */
@@ -43,6 +44,7 @@
 }
 
 /* Common styling for both sections */
+/* Common styling for both sections */
 .PGPMFLEX-progress-section {
   display: flex;
   align-items: baseline;
@@ -51,6 +53,7 @@
   position: relative;
 }
 
+/* Specific section colors */
 /* Specific section colors */
 .PGPMFLEX-in-class {
   background: #b7ef8c;
@@ -68,6 +71,7 @@
 }
 
 /* Text styling */
+/* Text styling */
 .PGPMFLEX-percent {
   font-size: 2.5rem;
   font-weight: bold;
@@ -82,13 +86,11 @@
 
 
 
-/* Section Wrapper */
 .PGPMFLEX-fees-tab-section {
   padding: 80px 0;
   background: #f6f8fb;
 }
 
-/* Header */
 .PGPMFLEX-fees-tab-header h2 {
   font-size: 2.4rem;
   font-weight: 700;
@@ -101,7 +103,6 @@
   font-size: 1.05rem;
 }
 
-/* Cards */
 .PGPMFLEX-fees-tab-card {
   border: none;
   border-radius: 18px;
@@ -115,7 +116,6 @@
   border-top: 6px solid #5ac501;
 }
 
-/* Badge */
 .PGPMFLEX-fees-tab-badge {
   font-size: 0.85rem;
   padding: 6px 14px;
@@ -134,14 +134,12 @@
   color: #fff;
 }
 
-/* Title */
 .PGPMFLEX-fees-tab-title {
   font-weight: 600;
   margin-bottom: 20px;
   color: #1c2c3a;
 }
 
-/* Price */
 .PGPMFLEX-fees-tab-price-box {
   display: flex;
   align-items: baseline;
@@ -160,14 +158,12 @@
   color: #0d6efd;
 }
 
-/* Description */
 .PGPMFLEX-fees-tab-desc {
   font-size: 0.95rem;
   color: #5f6f81;
   line-height: 1.6;
 }
 
-/* Installments */
 .PGPMFLEX-fees-tab-installment-list {
   list-style: none;
   padding: 0;
@@ -186,7 +182,6 @@
   color: #002d5b;
 }
 
-/* Distribution Note */
 .PGPMFLEX-fees-tab-distribution {
   margin-top: 15px;
   padding: 12px;
@@ -197,7 +192,6 @@
   text-align: center;
 }
 
-/* Footer */
 .PGPMFLEX-fees-tab-footer {
   margin-top: 35px;
   font-size: 0.9rem;
@@ -665,6 +659,7 @@
   }
 }
 
+
 @media (max-width:480px) {
   .pgpm-flex-pillar-item {
     width: 100%;
@@ -746,4 +741,278 @@
     margin-top: 0;
   }
 
+}
+
+/* WRAPPER */
+.QWERT-fees-wrapper {
+  padding: 30px 0;
+}
+
+/* STICKY */
+.QWERT-sticky-wrap {
+  position: sticky;
+  top: 120px;
+  /* adjust based on navbar */
+}
+
+/* LEFT */
+.QWERT-fees-intro h1 {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.QWERT-fees-intro h1 span {
+  color: #5ac501;
+}
+
+.QWERT-fees-tagline {
+  font-size: 18px;
+  color: #555;
+  margin: 20px 0 40px;
+}
+
+/* BIG PRICE */
+.QWERT-main-price {
+  background: linear-gradient(205deg, rgb(7, 186, 243) 1%, rgb(23, 3, 169));
+  color: white;
+  padding: 30px;
+  border-radius: 22px;
+  width: fit-content;
+}
+
+.QWERT-main-price small {
+  font-size: 14px;
+}
+
+.QWERT-main-price h2 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.QWERT-main-price span {
+  font-size: 12px;
+}
+
+/* RIGHT PANELS */
+.QWERT-fees-panels {
+  display: grid;
+  gap: 30px;
+}
+
+/* PANEL BASE */
+.QWERT-fees-panel {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+}
+
+.QWERT-fees-panel:hover {
+  transform: translateY(-8px);
+}
+
+/* HEADER */
+.QWERT-panel-header span {
+  font-size: 13px;
+  color: #5ac501;
+  font-weight: 600;
+}
+
+.QWERT-panel-header h3 {
+  font-size: 22px;
+  margin-top: 6px;
+}
+
+/* ONE TIME */
+.QWERT-one-time {
+  border-left: 6px solid #5ac501;
+}
+
+.QWERT-panel-price {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+.QWERT-panel-note {
+  font-size: 14px;
+  color: #666;
+}
+
+/* INSTALLMENT */
+.QWERT-installment {
+  background: white;
+  border-left: 6px solid #5ac501;
+}
+
+.QWERT-installment-breakup {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.QWERT-installment-breakup li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 15px;
+}
+
+.QWERT-installment-footer strong {
+  font-size: 18px;
+}
+
+.QWERT-installment-footer span {
+  display: block;
+  font-size: 13px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.QWERT-fees-panels-col {
+  position: relative;
+}
+
+.QWERT-sticky-wrap-col {
+  position: sticky;
+  top: 50px;
+  height: max-content;
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+  .QWERT-sticky-wrap {
+    position: static;
+  }
+
+  .QWERT-fees-intro h1 {
+    font-size: 36px;
+  }
+
+  .QWERT-main-price h2 {
+    font-size: 32px;
+  }
+
+  .QWERT-main-price {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   INFOGRAPHIC SECTION REDESIGN
+   ========================================= */
+
+.PGPMFLEX-info-section {
+  background-color: #ffffff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.PGPMFLEX-info-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.PGPMFLEX-info-title span {
+  color: #0a089b;
+  /* Brand Blue */
+}
+
+.PGPMFLEX-info-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+/* Grid Layout */
+.PGPMFLEX-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Card Styling */
+/* Card Styling */
+.PGPMFLEX-info-card {
+  background: var(--card-gradient);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  border-radius: 20px;
+  padding: 40px 30px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-position 0.6s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.PGPMFLEX-info-card::before {
+  display: none;
+}
+
+.PGPMFLEX-info-card:hover {
+  transform: translateY(-10px);
+  background-position: 100% 50%;
+  /* "Direction change" via position shift */
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Box */
+.PGPMFLEX-info-icon-box {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: var(--card-color);
+  transition: all 0.4s ease;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.PGPMFLEX-info-card:hover .PGPMFLEX-info-icon-box {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Content */
+.PGPMFLEX-info-content {
+  flex-grow: 1;
+}
+
+.PGPMFLEX-info-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.PGPMFLEX-info-card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+  .PGPMFLEX-info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .PGPMFLEX-info-card {
+    padding: 30px 20px;
+  }
 }

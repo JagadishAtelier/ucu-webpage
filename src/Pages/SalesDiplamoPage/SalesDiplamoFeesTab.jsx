@@ -3,76 +3,74 @@ import { Container, Row, Col, Card, Badge } from "react-bootstrap";
 
 const SalesDiplamoFeesTab = () => {
   return (
-    <section className=" container pt-0">
+    <section className="QWERT-fees-wrapper">
       <Container>
-        <h1 className="display-5 my-4 fw-bold col-12 col-lg-12 text-center">
-          Program  <span style={{ color: "#5ac501" }}> Fees</span>
-        </h1>
+        <Row className="align-items-start g-5">
 
-        <Row className="g-4 justify-content-center">
-          {/* PLAN 1 */}
-          <Col lg={5} md={6}>
-            <Card className="PGPMFLEX-fees-tab-card">
-              <Card.Body>
-                <Badge className="PGPMFLEX-fees-tab-badge PGPMFLEX-fees-tab-plan-one">
-                  Plan 1
-                </Badge>
+          {/* LEFT – STICKY */}
+          <Col lg={5} className="QWERT-sticky-wrap-col">
+            <div className="QWERT-sticky-wrap">
+              <div className="QWERT-fees-intro">
+                <h1>
+                  Program <span>Fees</span>
+                </h1>
 
-                <h4 className="PGPMFLEX-fees-tab-title">
-                  Amount should be
-                </h4>
+                <p className="QWERT-fees-tagline">
+                  Flexible payment options designed for working professionals
+                </p>
 
-                <div className="PGPMFLEX-fees-tab-price-box">
-                  <span className="PGPMFLEX-fees-tab-currency">INR</span>
-                  <span className="PGPMFLEX-fees-tab-price">75,000 + tax</span>
+                <div className="QWERT-main-price">
+                  <small className="text-white">Starting from</small>
+                  <h2>₹ 75,000 + tax</h2>
+                  <span>* excluding taxes</span>
+                </div>
+              </div>
+            </div>
+          </Col>
+
+          {/* RIGHT – SCROLL CONTENT */}
+          <Col lg={7} className="QWERT-fees-panels-col">
+            <div className="QWERT-fees-panels">
+
+              {/* PLAN 1 */}
+              <div className="QWERT-fees-panel QWERT-one-time">
+                <div className="QWERT-panel-header">
+                  <span>Plan 1</span>
+                  <h3>Amount should be</h3>
                 </div>
 
-                {/* <p className="PGPMFLEX-fees-tab-desc">
-                  Complete program fee for UCU including tuition, study
-                  material, academic resources, and alumni services.
-                </p> */}
-              </Card.Body>
-            </Card>
-          </Col>
+                <div className="QWERT-panel-price">
+                  ₹ 75,000 + tax
+                </div>
 
-          {/* PLAN 2 */}
-          <Col lg={5} md={6}>
-            <Card className="PGPMFLEX-fees-tab-card PGPMFLEX-fees-tab-highlighted">
-              <Card.Body>
-                <Badge className="PGPMFLEX-fees-tab-badge PGPMFLEX-fees-tab-plan-two">
-                  Plan 2
-                </Badge>
+                <p className="QWERT-panel-note">
+                  Best value with maximum savings
+                </p>
+              </div>
 
-                <h4 className="PGPMFLEX-fees-tab-title">
-                  Installment Plan
-                </h4>
+              {/* PLAN 2 */}
+              <div className="QWERT-fees-panel QWERT-installment">
+                <div className="QWERT-panel-header">
+                  <span>Plan 2 · Popular</span>
+                  <h3>Installment Plan</h3>
+                </div>
 
-                <ul className="PGPMFLEX-fees-tab-installment-list">
-                  <li>
-                    <span>Installment 1</span>
-                    <strong>INR 45,000 + tax</strong>
-                  </li>
-                  <li>
-                    <span>Installment 2</span>
-                    <strong> INR 40,000 + tax</strong>
-                  </li>
-                  <li>
-                    <span>Total of</span>
-                    <strong> INR 85,000 + tax</strong>
-                  </li>
+                <ul className="QWERT-installment-breakup">
+                  <li><span>Installment 1</span><strong>₹ 45,000 + tax</strong></li>
+                  <li><span>Installment 2</span><strong>₹ 40,000 + tax</strong></li>
                 </ul>
 
-                {/* <div className="PGPMFLEX-fees-tab-distribution">
-                  Distributed evenly over <strong>18 months</strong>
-                </div> */}
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+                <div className="QWERT-installment-footer">
+                  <strong>Total: ₹ 85,000 + tax</strong>
+                  {/* <span>Distributed over 18 months</span> */}
+                </div>
+                <p className="mt-3">* All fees mentioned above are excluding taxes.</p>
+              </div>
 
-        <div className="PGPMFLEX-fees-tab-footer text-center">
-          <p>* All fees mentioned above are exclusive of applicable taxes.</p>
-        </div>
+            </div>
+          </Col>
+
+        </Row>
       </Container>
     </section>
   );

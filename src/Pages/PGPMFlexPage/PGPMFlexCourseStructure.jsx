@@ -25,13 +25,13 @@ export default function PGPMFlexCourseStructure() {
                 <h2 className="cs-title"><span className="brand-text">Course</span> Overview</h2>
 
                 {/* STATS */}
-                {/* <div className="cs-stats">
+                <div className="cs-stats">
           <div className="cs-stat-box">
             <h3>7</h3>
             <p>On-campus Modules</p>
           </div>
           <div className="cs-stat-box">
-            <h3>20</h3>
+            <h3>21</h3>
             <p>Months Duration</p>
           </div>
           <div className="cs-stat-box">
@@ -42,7 +42,7 @@ export default function PGPMFlexCourseStructure() {
             <h3>450+</h3>
             <p>Contact Hours</p>
           </div>
-        </div> */}
+        </div>
 
                 {/* TERMS */}
                 <h3 className="cs-subtitle">3 Months each / 660 classroom hours</h3>

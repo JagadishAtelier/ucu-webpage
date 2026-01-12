@@ -199,15 +199,18 @@ A program with cutting-edge analytics, industry co-creation, and global relevanc
             <Col md={3}>
               <Button className="minor-btn">Consulting</Button>
             </Col>
-            <Col md={3}>
-              <Button className="minor-btn">Manufacturing</Button>
+                        <Col md={3}>
+              <Button className="minor-btn">Semiconductor</Button>
             </Col>
+            {/* <Col md={3}>
+              <Button className="minor-btn">Manufacturing</Button>
+            </Col> */}
           </Row>
-          <Row>
+          {/* <Row>
             <Col md={3}>
               <Button className="minor-btn">Semiconductor</Button>
             </Col>
-          </Row>
+          </Row> */}
         </section>
 
         <div>

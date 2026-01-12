@@ -92,8 +92,8 @@ export default function PGDMKeyHighlights() {
             </h1>
 
             {/* LEFT NAV */}
-            <div className="col-12 col-lg-3">
-                <div className="left-nav d-flex flex-column">
+            <div className="col-12 col-lg-12">
+                <div className="left-nav d-flex flex-row gap-3">
                     {tabs.map((item) => {
                         const isActive = item.id === active;
                         const isOpen = mobileOpen === item.id;
@@ -153,23 +153,25 @@ export default function PGDMKeyHighlights() {
             </div>
 
             {/* RIGHT CONTENT */}
-            <div className="col-12 col-lg-9 d-none d-lg-block">
-                <div className="content-card p-4">
-                    <h3 className="content-title">{activeItem.title}</h3>
+            {/* RIGHT CONTENT – DESKTOP */}
+            <div className="col-12 col-lg-12 d-none d-lg-block PGDMHL-right">
+                <div className="PGDMHL-card p-5 position-relative">
+                    <div className="PGDMHL-accent"></div>
+
+                    <div className="PGDMHL-header d-flex align-items-center gap-3 mb-4">
+                        <div className="PGDMHL-icon">
+                            {activeItem.icon}
+                        </div>
+                        <h3 className="PGDMHL-title m-0">{activeItem.title}</h3>
+                    </div>
+
                     <div
-                        className="content-text"
+                        className="PGDMHL-text"
                         dangerouslySetInnerHTML={{ __html: activeItem.text }}
                     />
-                    {/* {activeItem.action && (
-                        <button
-                            onClick={() => navigate(activeItem.link)}
-                            className="btn-cta"
-                        >
-                            {activeItem.action} <span className="chev">›</span>
-                        </button>
-                    )} */}
                 </div>
             </div>
+
         </div>
     );
 }
