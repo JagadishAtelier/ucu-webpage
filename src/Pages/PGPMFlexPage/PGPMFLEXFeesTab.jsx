@@ -1,65 +1,79 @@
 import React from "react";
-import { Badge } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 const PGPMFLEXFeesTab = () => {
   return (
-    <section className="container-fluid p-0 QWERT-fees-section">
-      <div className="d-flex flex-column flex-lg-row justify-content-center container QWERT-fees-row">
+    <section className="QWERT-fees-wrapper">
+      <Container>
+        <Row className="align-items-start g-5">
 
-        {/* LEFT IMAGE */}
-        <div className="QWERT-fees-image-col">
-          <img
-            src="https://img.freepik.com/premium-photo/free-photo-front-view-male-female-student-wearing-black-backpack-holding-copybooks-files_1283069-4794.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
-            alt="Fees"
-            className="QWERT-fees-image"
-          />
-        </div>
+          {/* LEFT – STICKY */}
+          <Col lg={5} className="QWERT-sticky-wrap-col">
+            <div className="QWERT-sticky-wrap">
+              <div className="QWERT-fees-intro">
+                <h1>
+                  Program <span>Fees</span>
+                </h1>
 
-        {/* RIGHT CONTENT */}
-        <div className="QWERT-fees-right">
+                <p className="QWERT-fees-tagline">
+                  Flexible payment options designed for working professionals
+                </p>
 
-          {/* PLAN 1 – DARK */}
-          <div className="QWERT-fees-dark">
-            <Badge className="PGPMFLEX-fees-tab-badge PGPMFLEX-fees-tab-plan-one">
-              Plan 1
-            </Badge>
-
-            <h3 className="PGPMFLEX-fees-tab-title text-white">
-              The total for UCU is
-            </h3>
-
-            <div className="PGPMFLEX-fees-tab-price-box text-white">
-              <span className="PGPMFLEX-fees-tab-currency text-white">₹</span>
-              <span className="PGPMFLEX-fees-tab-price text-white">5,00,000</span>
+                <div className="QWERT-main-price">
+                  <small className="text-white">Starting from</small>
+                  <h2>₹ 5,00,000</h2>
+                  <span>* excluding taxes</span>
+                </div>
+              </div>
             </div>
-          </div>
+          </Col>
 
-          {/* PLAN 2 – LIGHT */}
-          <div className="QWERT-fees-light">
-            <Badge className="PGPMFLEX-fees-tab-badge PGPMFLEX-fees-tab-plan-two">
-              Plan 2
-            </Badge>
+          {/* RIGHT – SCROLL CONTENT */}
+          <Col lg={7} className="QWERT-fees-panels-col">
+            <div className="QWERT-fees-panels">
 
-            <h3 className="PGPMFLEX-fees-tab-title">
-              Installment Plan
-            </h3>
+              {/* PLAN 1 */}
+              <div className="QWERT-fees-panel QWERT-one-time">
+                <div className="QWERT-panel-header">
+                  <span>Plan 1</span>
+                  <h3>The total for UCU is</h3>
+                </div>
 
-            <ul className="PGPMFLEX-fees-tab-installment-list">
-              <li><span>Installment 1</span><strong>₹ 1,50,000</strong></li>
-              <li><span>Installment 2</span><strong>₹ 1,50,000</strong></li>
-              <li><span>Installment 3</span><strong>₹ 1,50,000</strong></li>
-              <li><span>Installment 4</span><strong>₹ 1,50,000</strong></li>
-              <li><span>Total</span><strong>₹ 6,00,000</strong></li>
-            </ul>
+                <div className="QWERT-panel-price">
+                  ₹ 5,00,000
+                </div>
 
-            <div className="PGPMFLEX-fees-tab-distribution mb-3">
-              distributed over <strong>18 months</strong>
+                <p className="QWERT-panel-note">
+                  Best value with maximum savings
+                </p>
+              </div>
+
+              {/* PLAN 2 */}
+              <div className="QWERT-fees-panel QWERT-installment">
+                <div className="QWERT-panel-header">
+                  <span>Plan 2 · Popular</span>
+                  <h3>Installment Plan</h3>
+                </div>
+
+                <ul className="QWERT-installment-breakup">
+                  <li><span>Installment 1</span><strong>₹ 1,50,000</strong></li>
+                  <li><span>Installment 2</span><strong>₹ 1,50,000</strong></li>
+                  <li><span>Installment 3</span><strong>₹ 1,50,000</strong></li>
+                  <li><span>Installment 4</span><strong>₹ 1,50,000</strong></li>
+                </ul>
+
+                <div className="QWERT-installment-footer">
+                  <strong>Total: ₹ 6,00,000</strong>
+                  <span>Distributed over 18 months</span>
+                </div>
+                <p className="mt-3">* All fees mentioned above are excluding taxes.</p>
+              </div>
+
             </div>
-            <p>* All fees mentioned above are excluding taxes.</p>
-          </div>
+          </Col>
 
-        </div>
-      </div>
+        </Row>
+      </Container>
     </section>
   );
 };

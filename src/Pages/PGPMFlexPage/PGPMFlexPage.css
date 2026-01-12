@@ -593,88 +593,154 @@
 
 
 
-.QWERT-fees-section {
-  width: 100%;
+/* WRAPPER */
+.QWERT-fees-wrapper {
+  padding: 30px 0;
 }
 
-/* ROW CONTROLS HEIGHT */
-.QWERT-fees-row {
-  display: flex;
-  align-items: stretch;
+/* STICKY */
+.QWERT-sticky-wrap {
+  position: sticky;
+  top: 120px; /* adjust based on navbar */
 }
 
-/* LEFT COLUMN */
-.QWERT-fees-image-col {
-  width: 50%;
-  display: flex;
-  overflow: hidden;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
+/* LEFT */
+.QWERT-fees-intro h1 {
+  font-size: 48px;
+  font-weight: 800;
 }
 
-/* IMAGE */
-.QWERT-fees-image {
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  display: block;
+.QWERT-fees-intro h1 span {
+  color: #5ac501;
 }
 
-/* RIGHT COLUMN */
-.QWERT-fees-right {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-
+.QWERT-fees-tagline {
+  font-size: 18px;
+  color: #555;
+  margin: 20px 0 40px;
 }
 
-/* DARK BLOCK */
-.QWERT-fees-dark {
-  background: #1f2a44;
-  padding: 30px;
-  border-top-right-radius: 10px;
+/* BIG PRICE */
+.QWERT-main-price {
+  background: linear-gradient(205deg, rgb(7, 186, 243) 1%, rgb(23, 3, 169)) ;
   color: white;
-}
-
-/* LIGHT BLOCK */
-.QWERT-fees-light {
-  background: #f7f7f7;
   padding: 30px;
-  border-bottom-right-radius: 10px;
+  border-radius: 22px;
+  width: fit-content;
 }
 
-@media (max-width:768px) {
-  .QWERT-fees-image-col{
-    width: 100%;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
-  }
-  .QWERT-fees-right{
-    width: 100%;
-
-  }
-  .QWERT-fees-dark{
-    border-top-right-radius: 0;
-  }
-  .QWERT-fees-light{
-    border-bottom-left-radius: 10px;
-  }
+.QWERT-main-price small {
+  font-size: 14px;
 }
-@media (max-width:480px) {
-  .QWERT-fees-image-col{
-    width: 100%;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
-  }
-  .QWERT-fees-right{
-    width: 100%;
 
+.QWERT-main-price h2 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.QWERT-main-price span {
+  font-size: 12px;
+}
+
+/* RIGHT PANELS */
+.QWERT-fees-panels {
+  display: grid;
+  gap: 30px;
+}
+
+/* PANEL BASE */
+.QWERT-fees-panel {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+}
+
+.QWERT-fees-panel:hover {
+  transform: translateY(-8px);
+}
+
+/* HEADER */
+.QWERT-panel-header span {
+  font-size: 13px;
+  color: #5ac501;
+  font-weight: 600;
+}
+
+.QWERT-panel-header h3 {
+  font-size: 22px;
+  margin-top: 6px;
+}
+
+/* ONE TIME */
+.QWERT-one-time {
+  border-left: 6px solid #5ac501;
+}
+
+.QWERT-panel-price {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+.QWERT-panel-note {
+  font-size: 14px;
+  color: #666;
+}
+
+/* INSTALLMENT */
+.QWERT-installment {
+  background: white;
+  border-left: 6px solid #5ac501;
+}
+
+.QWERT-installment-breakup {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.QWERT-installment-breakup li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 15px;
+}
+
+.QWERT-installment-footer strong {
+  font-size: 18px;
+}
+
+.QWERT-installment-footer span {
+  display: block;
+  font-size: 13px;
+  color: #555;
+  margin-top: 5px;
+}
+.QWERT-fees-panels-col{
+  position: relative;
+}
+.QWERT-sticky-wrap-col{
+  position: sticky;
+  top: 0;
+  height: max-content;
+}
+/* MOBILE */
+@media (max-width: 991px) {
+  .QWERT-sticky-wrap {
+    position: static;
   }
-  .QWERT-fees-dark{
-    border-top-right-radius: 0;
+
+  .QWERT-fees-intro h1 {
+    font-size: 36px;
   }
-  .QWERT-fees-light{
-    border-bottom-left-radius: 10px;
+
+  .QWERT-main-price h2 {
+    font-size: 32px;
+  }
+  .QWERT-main-price{
+    width: 100%;
   }
 }
