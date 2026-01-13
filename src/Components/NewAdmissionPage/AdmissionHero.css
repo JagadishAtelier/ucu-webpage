@@ -791,6 +791,31 @@
 .NEWADMCAREER-contact-link:hover {
   color: #facc15; /* gold hover */
 }
+.NEWADMCAREER-section {
+  position: relative;
+  min-height: 420px;              /* IMPORTANT */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay layer */
+.NEWADMCAREER-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* Content above overlay */
+.NEWADMCAREER-container {
+  position: relative;
+  z-index: 2;
+}
 
 
 

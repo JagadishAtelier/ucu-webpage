@@ -57,10 +57,10 @@ function NewAdminLearn() {
       <Container>
         {/* Header */}
         <div className="text-center NEWADMLEARN-header">
-          <h3 className="NEWADMLEARN-title">
+          <h3 className="NEWADMLEARN-title" data-aos="fade-down" data-aos-delay="100">
             Learn from the Best at UCU University
           </h3>
-          <p className="NEWADMLEARN-subtitle">
+          <p className="NEWADMLEARN-subtitle" data-aos="fade-down" data-aos-delay="100">
             UCU University’s faculty combines academic excellence, research
             depth, and real-world industry exposure to deliver a future-focused
             learning experience.
@@ -82,6 +82,7 @@ function NewAdminLearn() {
             768: { slidesPerView: 2 },
             992: { slidesPerView: 3 },
           }}
+          data-aos="zoom-in" data-aos-delay="100"
         >
           {facultyData.map((faculty, index) => (
             <SwiperSlide key={index}>
@@ -117,7 +118,7 @@ function NewAdminLearn() {
         {/* Stats */}
         <Row className="NEWADMLEARN-stats g-4">
           {statsData.map((stat, index) => (
-            <Col xs={6} lg={3} className="text-center" key={index}>
+            <Col xs={6} lg={3} className="text-center" key={index} data-aos="fade-up" data-aos-delay="100">
               <div className="NEWADMLEARN-stat-number">{stat.value}</div>
               <div className="NEWADMLEARN-stat-text">{stat.label}</div>
             </Col>

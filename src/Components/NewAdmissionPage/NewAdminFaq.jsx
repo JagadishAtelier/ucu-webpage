@@ -41,8 +41,8 @@ function NewAdminFaq() {
       <Container className="NEWADMFAQ-container">
         {/* Header */}
         <div className="text-center NEWADMFAQ-header">
-          <h3 className="NEWADMFAQ-title">Frequently Asked Questions</h3>
-          <p className="NEWADMFAQ-subtitle">
+          <h3 className="NEWADMFAQ-title" data-aos="fade-down" data-aos-delay="100">Frequently Asked Questions</h3>
+          <p className="NEWADMFAQ-subtitle" data-aos="fade-down" data-aos-delay="100">
             Everything you need to know about our UCU program
           </p>
         </div>
@@ -50,7 +50,7 @@ function NewAdminFaq() {
         {/* FAQ Items */}
         <div className="NEWADMFAQ-list">
           {faqs.map((item, index) => (
-            <div className="NEWADMFAQ-item" key={index}>
+            <div className="NEWADMFAQ-item" key={index} data-aos="fade-down" data-aos-delay="100">
               <button
                 className="NEWADMFAQ-question text-black"
                 onClick={() => toggleFAQ(index)}

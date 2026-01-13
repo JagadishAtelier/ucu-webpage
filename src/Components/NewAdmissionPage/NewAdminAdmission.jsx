@@ -12,8 +12,8 @@ function NewAdminAdmission() {
       <Container>
         {/* HEADER */}
         <div className="text-center mb-5">
-          <h3 className="NEWADMADMIS-title mb-3">UCU University Admission Process</h3>
-          <p className="NEWADMADMIS-subtitle mx-auto">
+          <h3 className="NEWADMADMIS-title mb-3" data-aos="fade-down" data-aos-delay="100">UCU University Admission Process</h3>
+          <p className="NEWADMADMIS-subtitle mx-auto" data-aos="fade-down" data-aos-delay="100">
             A transparent and structured admission process designed to assess academic readiness, career aspirations, and overall potential.
           </p>
         </div>
@@ -21,7 +21,7 @@ function NewAdminAdmission() {
         <Row className="g-5">
           {/* TIMELINE */}
           <Col lg={6}>
-            <h4 className="NEWADMADMIS-subheading mb-4">
+            <h4 className="NEWADMADMIS-subheading mb-4" data-aos="fade-up" data-aos-delay="100">
               Application Timeline
             </h4>
 
@@ -52,7 +52,7 @@ function NewAdminAdmission() {
                   desc: "A faculty panel reviews the candidate’s academic background, career goals, leadership potential, and program fit.",
                 },
               ].map((item, index) => (
-                <div key={index} className="NEWADMADMIS-timeline-item">
+                <div key={index} className="NEWADMADMIS-timeline-item" data-aos="fade-up" data-aos-delay="100">
                   <div className="NEWADMADMIS-step">{item.step}</div>
                   <div>
                     <div className="NEWADMADMIS-item-title">
@@ -88,13 +88,13 @@ function NewAdminAdmission() {
 
           {/* ELIGIBILITY */}
           <Col lg={6}>
-            <h4 className="NEWADMADMIS-subheading mb-4">
+            <h4 className="NEWADMADMIS-subheading mb-4" data-aos="fade-down" data-aos-delay="100">
               Eligibility Criteria
             </h4>
 
-            <div className="NEWADMADMIS-card mb-4">
-              <div className="NEWADMADMIS-eligibility">
-                <div>
+            <div className="NEWADMADMIS-card mb-4" data-aos="fade-left" data-aos-delay="100">
+              <div className="NEWADMADMIS-eligibility" >
+                <div >
                   <FaCheckCircle />
                   <div>
                     <h6>Academic Qualification</h6>
@@ -127,7 +127,7 @@ function NewAdminAdmission() {
             </div>
 
             {/* DOCUMENTS */}
-            <div className="NEWADMADMIS-documents">
+            <div className="NEWADMADMIS-documents" data-aos="fade-up" data-aos-delay="100">
               <h5 className="mb-4">Required Documents</h5>
               <ul>
                 {[

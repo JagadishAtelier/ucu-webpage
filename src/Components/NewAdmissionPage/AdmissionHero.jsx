@@ -30,23 +30,23 @@ function AdmissionHero() {
                     <div className="col-lg-7 col-md-12 text-white">
 
                         {/* Badge */}
-                        <div className="NEWADM-badge mb-4">
+                        <div className="NEWADM-badge mb-4" data-aos="fade-down" data-aos-delay="100">
                             <i className="fas fa-star me-2"></i>
                             Admissions Open for 2026–28 Batch
                         </div>
 
                         {/* Heading */}
-                        <h2 className="NEWADM-title">
+                        <h2 className="NEWADM-title" data-aos="fade-right" data-aos-delay="100">
                             Transform Your Career with an UCU
                         </h2>
 
                         {/* Description */}
-                        <p className="NEWADM-description">
+                        <p className="NEWADM-description" data-aos="fade-right" data-aos-delay="100">
 Transform your career with an UCU that blends academic excellence, industry relevance, and global exposure.
                         </p>
 
                         {/* CTA Buttons */}
-                        <div className="d-flex flex-column flex-sm-row gap-3 mb-5">
+                        <div className="d-flex flex-column flex-sm-row gap-3 mb-5" data-aos="fade-right" data-aos-delay="100">
                             <a href="#apply" className="NEWADM-btn-primary">
                                 <i className="fas fa-pen-to-square me-2"></i>
                                 Start Your Application
@@ -58,7 +58,7 @@ Transform your career with an UCU that blends academic excellence, industry rele
                         </div>
 
                         {/* Stats */}
-                        <div className="d-lg-flex d-none  NEWADM-stats pt-4">
+                        <div className="d-lg-flex d-none  NEWADM-stats pt-4" data-aos="fade-right" data-aos-delay="100">
                             <div className="col-4">
                                 <h3>8</h3>
                                 <span>Specializations</span>
@@ -74,7 +74,7 @@ Transform your career with an UCU that blends academic excellence, industry rele
                         </div>
 
                     </div>
-                    <div className='h-100 pt-5 d-none d-lg-block'>
+                    <div className='h-100 pt-5 d-none d-lg-block'data-aos="fade-left" data-aos-delay="100">
                         <img src='/adm.png'
                         className='h-100 w-100'/>
                     </div>
