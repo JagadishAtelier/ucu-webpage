@@ -188,7 +188,7 @@ export default function PGPMKeyHighlights() {
                   onClick={() => setActive(item.id)}
                   aria-pressed={isActive}
                 >
-                  <div className="icon me-3">{item.icon}</div>
+                  <div className="icon">{item.icon}</div>
                   <div
                     className="label"
                     dangerouslySetInnerHTML={{ __html: item.label }}

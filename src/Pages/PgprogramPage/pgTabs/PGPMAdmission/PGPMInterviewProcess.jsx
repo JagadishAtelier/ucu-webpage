@@ -2,15 +2,15 @@ import React from "react";
 
 function PGPMInterviewProcess() {
   return (
-    <section className="InterviewProcess rounded">
-      <div className="container">
+    <section className="InterviewProcess rounded p-5">
+      <div className="">
         
         <h2 className="ip-title">Profile-based Early Interview Process:</h2>
 
-        <div className="row align-items-start">
+        <div className="d-flex gap-5 align-items-stretch">
 
           {/* Left Content */}
-          <div className="col-md-7">
+          <div className="col-md-7 ip-left">
             <p>
               UCU will conduct early interviews for{" "}
               <a
@@ -53,11 +53,11 @@ function PGPMInterviewProcess() {
           </div>
 
           {/* Right Image */}
-          <div className="col-md-5 text-center">
+          <div className="text-center ip-image-wrap">
             <img
               src="https://img.freepik.com/free-photo/medium-shot-people-chatting-work_23-2149345215.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
               alt="Eligibility"
-              className="img-fluid ip-image"
+              className="ip-image"
               loading="lazy"
             />
           </div>

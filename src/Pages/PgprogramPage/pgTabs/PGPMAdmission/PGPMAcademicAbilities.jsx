@@ -2,8 +2,8 @@ import React from "react";
 
 function PGPMAcademicAbilities() {
   return (
-    <section className="PGPMAcademicAbilities mt-5 rounded shadow">
-      <div className="container">
+    <section className="PGPMAcademicAbilities mt-5 rounded shadow p-5">
+      <div className="">
         <div className="inner-section mb-5">
 
           <div className="pgpm-heading">

@@ -2,8 +2,8 @@ import React from "react";
 
 function CareerRobatInterviewProcess() {
   return (
-    <section className="InterviewProcess rounded">
-      <div className="container">
+    <section className="InterviewProcess rounded p-5">
+      <div className="">
         
         <h2 className="ip-title">Profile-based Early Interview Process:</h2>
 

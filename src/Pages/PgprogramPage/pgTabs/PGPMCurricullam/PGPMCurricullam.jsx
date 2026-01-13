@@ -44,7 +44,7 @@ function PGPMCurricullam() {
         <div className="row g-4 mt-3">
           {/* INDUSTRY SECTOR MAJORS */}
           <div className="col-lg-6">
-            <div className="border h-100 p-4 bg-light rounded-2">
+            <div style={{background:"linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"}} className="border text-white h-100 p-4 rounded-2">
               {/* <h3 className="fw-bold mb-2">Industry Sector Majors</h3>
               <p className="text-muted small mb-3">
                 Designed for emerging roles in high-growth global sectors
@@ -70,8 +70,8 @@ function PGPMCurricullam() {
           </div>
 
           {/* FUNCTIONAL MAJORS */}
-          <div className="col-lg-6">
-            <div className="border h-100 p-4 rounded-2">
+          <div className="col-lg-6 text-white">
+            <div className="border h-100 p-4 rounded-2"style={{background:"linear-gradient(135deg, #22c55e 0%, #15803d 100%)"}}>
               <p className="small border-start ps-3 mb-3 border-color-green" >
                 Combined with the Industry Sector Majors, we offer the second
                 major in traditional functional domains:

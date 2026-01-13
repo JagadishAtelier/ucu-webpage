@@ -2,8 +2,8 @@ import React from "react";
 
 function CareerRobatEssay() {
   return (
-    <section className="PGPMEssay mt-5 rounded">
-      <div className="container rounded">
+    <section className="PGPMEssay mt-5 rounded p-5">
+      <div className=" rounded">
         <div className="recruit">
 
           <h2>Essay</h2>
