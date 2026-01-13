@@ -4,7 +4,7 @@ function PGPMEvaluationProcess() {
   return (
     <section className="PGPMEvaluationProcess">
       <div className="container">
-        <div className="inner-section mb-5">
+        <div className="inner-section mb-0">
 
           <h2 className="sub-heading">Evaluation Process</h2>
 

@@ -225,7 +225,6 @@
 /* OverviewParticipant.css or your CSS file */
 .participant-sec-swiper {
   position: relative;
-  padding-bottom: 5%;
 }
 
 .participant-sec-swiper .swiper-pagination {
@@ -282,7 +281,6 @@
   width:1000px;
   height: 550px;
 }
-
-.play-btn-container {
-
+.PGPMEvaluationProcess{
+  padding-bottom: 0;
 }
