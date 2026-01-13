@@ -93,7 +93,7 @@ function Sales() {
       </div> */}
       <div>
       <h1 className="display-6 fw-bold col-12 col-lg-12 text-center">
-      <span style={{color:"#5ac501"}}>Functional</span> Specialization
+      <span style={{color:"#5ac501"}}>Domain </span> Specialization
         </h1>
       </div>
       <Swiper
@@ -130,7 +130,7 @@ function Sales() {
 
       <div>
       <h1 className="display-6 fw-bold col-12 col-lg-12 text-center mt-lg-4 mt-3">
-      <span style={{color:"#5ac501"}}>Industry-Sector</span> Specialization
+      <span style={{color:"#5ac501"}}>Career Lane </span> Specialization
         </h1>
       </div>
 
