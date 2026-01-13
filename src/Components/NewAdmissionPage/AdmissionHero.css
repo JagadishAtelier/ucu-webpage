@@ -1,0 +1,814 @@
+/* HERO SECTION */
+.NEWADM-hero-section {
+  height: 650px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+
+/* BADGE */
+.NEWADM-badge {
+  display: inline-block;
+  background: #f59e0b;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* TITLE */
+.NEWADM-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (min-width: 992px) {
+  .NEWADM-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* DESCRIPTION */
+.NEWADM-description {
+  font-size: 1.1rem;
+  color: #e3ecf7;
+  line-height: 1.7;
+}
+
+/* BUTTONS */
+.NEWADM-btn-primary {
+  background: #ffffff;
+  color: #022047;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.NEWADM-btn-primary:hover {
+  background: #e9f1ff;
+  color: #022047;
+}
+
+.NEWADM-btn-outline {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.NEWADM-btn-outline:hover {
+  background: #ffffff;
+  color: #022047;
+}
+
+/* STATS */
+.NEWADM-stats {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.NEWADM-stats h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.NEWADM-stats span {
+  font-size: 0.9rem;
+  color: #cddcf0;
+}
+
+
+
+.NEWADMWHY-section {
+  background-color: #f8f9fa;
+}
+
+/* Title */
+.NEWADMWHY-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: serif;
+  margin-bottom: 1rem;
+}
+
+.NEWADMWHY-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  max-width: 750px;
+}
+
+/* Card */
+.NEWADMWHY-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 14px;
+      border: 1px solid transparent;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.NEWADMWHY-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      border-color: #3b82f6;
+    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+}
+
+/* Icon */
+.NEWADMWHY-icon {
+  width: 56px;
+  height: 56px;
+  background: #e7f1ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #0d6efd;
+  margin-bottom: 1.5rem;
+}
+
+/* Card Text */
+.NEWADMWHY-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.NEWADMWHY-card p {
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+
+.NEWADMIND-section {
+  background-color: #ffffff;
+}
+
+/* Badge */
+.NEWADMIND-badge {
+  background: #e7f1ff;
+  color: #0d6efd;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Title & text */
+.NEWADMIND-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  font-family: serif;
+}
+
+.NEWADMIND-description {
+  font-size: 1.05rem;
+  color: #6c757d;
+  line-height: 1.7;
+}
+
+/* Features */
+.NEWADMIND-feature {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.NEWADMIND-feature-icon {
+  width: 42px;
+  height: 42px;
+  background: #e7f1ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d6efd;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.NEWADMIND-feature h5 {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.NEWADMIND-feature p {
+  margin: 0;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+/* Recruiters box */
+.NEWADMIND-recruiters {
+  background: linear-gradient(90deg, #f4f8ff, #eef5ff);
+  border: 1px solid #d6e4ff;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.NEWADMIND-recruiter-icon {
+  font-size: 1.8rem;
+  color: #0d6efd;
+}
+
+.NEWADMIND-recruiter-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Image */
+.NEWADMIND-image {
+  border-radius: 22px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Rank card */
+.NEWADMIND-rank-card {
+  position: absolute;
+  bottom: -24px;
+  left: -24px;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  max-width: 260px;
+}
+
+.NEWADMIND-trophy {
+  font-size: 2rem;
+  color: #f5b301;
+}
+
+.NEWADMIND-rank {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.NEWADMIND-rank-card p {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+
+
+
+.NEWADMADMIS-section {
+  background-color: #f8f9fa;
+}
+
+/* Titles */
+.NEWADMADMIS-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  font-family: serif;
+}
+
+.NEWADMADMIS-subtitle {
+  max-width: 760px;
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.NEWADMADMIS-subheading {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Timeline */
+.NEWADMADMIS-timeline-item {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  margin-top: 5%;
+}
+
+.NEWADMADMIS-step,
+.NEWADMADMIS-step-final {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+}
+
+.NEWADMADMIS-step {
+  background: #0d6efd;
+}
+
+.NEWADMADMIS-step-final {
+  background: #f5b301;
+}
+
+.NEWADMADMIS-item-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.NEWADMADMIS-item-date {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 6px;
+}
+
+.NEWADMADMIS-timeline-item p {
+  margin: 0;
+  color: #6c757d;
+}
+
+/* Eligibility Card */
+.NEWADMADMIS-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.NEWADMADMIS-eligibility > div {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.NEWADMADMIS-eligibility > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* 🔒 Lock icon size */
+.NEWADMADMIS-eligibility svg {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  font-size: 22px;
+  margin-top: 4px;
+  color: #198754;
+}
+.NEWADMADMIS-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 40px;
+    bottom: -20px;
+    width: 2px;
+    background: linear-gradient(to bottom, #3b82f6, #dbeafe);
+}
+.NEWADMADMIS-timeline-item:last-child::before {
+  display: none;
+}
+
+
+.NEWADMADMIS-eligibility h6 {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.NEWADMADMIS-eligibility p {
+  margin: 0;
+  color: #6c757d;
+}
+
+/* Documents */
+.NEWADMADMIS-documents {
+  background: #0d6efd;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.NEWADMADMIS-documents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.NEWADMADMIS-documents li {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: flex-start;
+}
+
+.NEWADMADMIS-documents svg {
+  margin-top: 4px;
+}
+
+
+
+
+.NEWADMWHO-section {
+  background: #ffffff;
+}
+
+/* Badge */
+.NEWADMWHO-badge {
+  background: #f6e8c3;
+  color: #8a6a1f;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Title */
+.NEWADMWHO-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: serif;
+}
+
+.NEWADMWHO-subtitle {
+  max-width: 720px;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+/* Stats */
+.NEWADMWHO-stat-card {
+  padding: 32px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #eef4ff, #ffffff);
+  border: 1px solid #dbeafe;
+  text-align: center;
+}
+
+.NEWADMWHO-stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.NEWADMWHO-stat-label {
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Cards */
+.NEWADMWHO-info-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  border: none;
+}
+
+.NEWADMWHO-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.NEWADMWHO-card-title i {
+  color: #2563eb;
+}
+
+/* Icon Lists */
+.NEWADMWHO-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.NEWADMWHO-list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.NEWADMWHO-list-icon {
+  font-size: 1.1rem;
+  margin-top: 4px;
+  color: #16a34a;
+}
+
+.NEWADMWHO-list-star .NEWADMWHO-list-icon {
+  color: #d97706;
+}
+
+.NEWADMWHO-list strong {
+  font-size: 0.95rem;
+  display: block;
+}
+
+.NEWADMWHO-list span {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+
+
+.NEWADMLEARN-section {
+  padding: 5rem 0;
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+/* Header */
+.NEWADMLEARN-header {
+  margin-bottom: 4rem;
+}
+
+.NEWADMLEARN-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.NEWADMLEARN-subtitle {
+  font-size: 1.2rem;
+  color: #cfe2ff;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Card */
+.NEWADMLEARN-card {
+  height: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.NEWADMLEARN-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Avatar */
+.NEWADMLEARN-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+}
+
+/* Text */
+.NEWADMLEARN-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.NEWADMLEARN-role {
+  font-size: 0.9rem;
+  color: #cfe2ff;
+}
+
+.NEWADMLEARN-quote {
+  color: #e9f2ff;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Divider */
+.NEWADMLEARN-divider {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.NEWADMLEARN-cred-label {
+  font-size: 0.85rem;
+  color: #cfe2ff;
+  margin-bottom: 0.25rem;
+}
+
+.NEWADMLEARN-cred-main {
+  font-weight: 600;
+}
+
+.NEWADMLEARN-cred-sub {
+  font-size: 0.85rem;
+  color: #cfe2ff;
+}
+
+/* Stats */
+.NEWADMLEARN-stats {
+  margin-top: 2rem;
+}
+
+.NEWADMLEARN-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.NEWADMLEARN-stat-text {
+  color: #cfe2ff;
+  font-size: 0.95rem;
+}
+
+
+
+.NEWADMFAQ-section {
+  padding: 3rem 0;
+  background-color: #ffffff;
+}
+
+.NEWADMFAQ-container {
+  max-width: 860px;
+}
+
+/* Header */
+.NEWADMFAQ-header {
+  margin-bottom: 4rem;
+}
+
+.NEWADMFAQ-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.NEWADMFAQ-subtitle {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+/* FAQ List */
+.NEWADMFAQ-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Item */
+.NEWADMFAQ-item {
+  background-color: #f9fafb;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Question */
+.NEWADMFAQ-question {
+  width: 100%;
+  padding: 1.5rem;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  text-transform: none;
+}
+
+.NEWADMFAQ-question:hover {
+  background-color: #f3f4f6;
+}
+
+/* Icon */
+.NEWADMFAQ-icon {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2563eb;
+  transition: transform 0.3s ease;
+}
+
+/* Answer */
+.NEWADMFAQ-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.NEWADMFAQ-answer.open {
+  max-height: 500px;
+}
+
+.NEWADMFAQ-answer p {
+  padding: 0 1.5rem 1.5rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+
+.NEWADMCAREER-section {
+  padding: 5rem 0;
+  background-image: url('https://img.freepik.com/premium-photo/businessman-climbing-steps-towards-bright-future_411562-19698.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+/* Container */
+.NEWADMCAREER-container {
+  max-width: 720px;
+}
+
+/* Header */
+.NEWADMCAREER-title {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'serif', serif;
+}
+
+.NEWADMCAREER-subtitle {
+  font-size: 1.25rem;
+  color: #dbeafe; /* light blue text */
+  line-height: 1.6;
+}
+
+/* Buttons */
+.NEWADMCAREER-btn-primary {
+  background-color: #ffffff;
+  color: #1d4ed8; /* primary blue */
+  padding: 1rem 2.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.NEWADMCAREER-btn-primary:hover {
+  background-color: #e0f2fe;
+  color: #1d4ed8;
+}
+
+.NEWADMCAREER-btn-secondary {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.NEWADMCAREER-btn-secondary:hover {
+  background-color: #ffffff;
+  color: #1d4ed8;
+}
+
+/* Help Card */
+.NEWADMCAREER-help-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.NEWADMCAREER-help-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #dbeafe;
+  margin-bottom: 0.75rem;
+}
+
+.NEWADMCAREER-contact a {
+  color: #dbeafe;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.NEWADMCAREER-contact-link:hover {
+  color: #facc15; /* gold hover */
+}
+
+
+
+@media (max-width:768px) {
+  .NEWADM-hero-section{
+    height: fit-content;
+  }
+}
+@media (max-width:480px) {
+  .NEWADM-hero-section{
+    height: fit-content;
+  }
+  .NEWADMIND-image{
+        height: 30vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  .NEWADMLEARN-stat-number{
+    font-size: 1.5rem;
+  }
+}

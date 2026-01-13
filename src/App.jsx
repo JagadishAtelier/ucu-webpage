@@ -69,6 +69,7 @@ import CareerRoobatPageTabs from "./Pages/CareerRoobatPage/CareerRoobatPageTabs"
 import CareerRoobatPage from "./Pages/CareerRoobatPage/CareerRoobatPage";
 import PGPMFlexPageHome from "./Pages/PGPMFlexPage/PGPMFlexPageHome";
 import SalesDiplamoPage from "./Pages/SalesDiplamoPage/SalesDiplamoPage";
+import AdmissionHero from "./Components/NewAdmissionPage/AdmissionHero";
 
 function App() {
   useEffect(() => {
@@ -107,7 +108,7 @@ function App() {
           <Route path="/csr" element={<SociatalImpact />} />
           <Route path="/open-programs" element={<OpenPrograms />} />
           <Route path="/summer-programs" element={<SummerProgram />} />
-          <Route path="/admissions" element={<AdmissionPage />} />
+          <Route path="/admissions" element={<AdmissionHero />} />
           <Route path="/consortium" element={<Consortium />} />
           <Route path="/offerings" element={<OfferingsPage />} />
           <Route path="/executive-edu/*" element={<EEPHome />} />
