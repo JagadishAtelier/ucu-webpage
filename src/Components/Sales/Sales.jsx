@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination,Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./Sales.css";
@@ -26,24 +26,24 @@ const functionalData = [
 const industryData = [
   {
     image: "https://media.istockphoto.com/id/866905356/photo/fintech-the-financial-technology.webp?a=1&b=1&s=612x612&w=0&k=20&c=R3ceaD5uN_QA_6_OGYQAt2xM5jYNXqCCMxQpIgUAKDs=",
-    heading: "Fin-Tech",
+    heading: "FinTech Genesis",
     para: `Lead the financial revolution with cutting-edge skills in digital finance, innovation, and tech-powered disruption
     `,
   },
   {
     image: "https://www.colliers.com/-/media/images/colliers/asia/india/research-images/2024/1536gccreport.ashx?bid=3dd61b5289dd4e2abf9a823864443392",
-    heading: "Global Capability Center (GCC)",
+    heading: "GCC Launchpad",
     para: `Step into the engine room of global enterprises—mastering strategy, scale, and operational excellence across GCCs
     `,
   },
   {
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhbHRoY2FyZXxlbnwwfHwwfHx8MA%3D%3D",
-    heading: "Healthcare & Lifescience",
+    heading: "HealthTech Ignition",
     para: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
   },
   {
     image: "https://plus.unsplash.com/premium_photo-1683121716061-3faddf4dc504?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U2VtaWNvbmR1Y3RvcnxlbnwwfHwwfHx8MA%3D%3D",
-    heading: "Semiconductor",
+    heading: "Advanced Manufacturing",
     para: "Specialized program focused on financial technology and innovations.",
   },
   // {
@@ -71,10 +71,10 @@ function Sales() {
     <div className="sales-container container-fluid my-lg-3 my-1">
       <div className="d-flex flex-lg-column flex-column align-items-lg-center justify-content-lg-center text-center mb-4">
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center">
-           <span style={{color:"#5ac501"}}>Executive Post Graduate</span> <br /> Certificate Programmes
+          <span style={{ color: "#5ac501" }}>Executive Post Graduate</span> <br /> Certificate Programmes
         </h1>
         <p className="col-lg-6 text-center sort-disc">
-        Explore our range of industry-focused programs designed to equip <br /> students with practical skills and career-ready expertise.
+          Explore our range of industry-focused programs designed to equip <br /> students with practical skills and career-ready expertise.
         </p>
       </div>
       {/* <div className="sales-tabs text-center mb-4">
@@ -92,12 +92,12 @@ function Sales() {
         </button>
       </div> */}
       <div>
-      <h1 className="display-6 fw-bold col-12 col-lg-12 text-center">
-      <span style={{color:"#5ac501"}}>Domain </span> Specialization
+        <h1 className="display-6 fw-bold col-12 col-lg-12 text-center">
+          <span style={{ color: "#5ac501" }}>Domain </span> Specialization
         </h1>
       </div>
       <Swiper
-        modules={[Pagination,Autoplay]}
+        modules={[Pagination, Autoplay]}
         spaceBetween={10}
         slidesPerView={1}
         pagination={{ clickable: true }}
@@ -129,13 +129,13 @@ function Sales() {
       </Swiper>
 
       <div>
-      <h1 className="display-6 fw-bold col-12 col-lg-12 text-center mt-lg-4 mt-3">
-      <span style={{color:"#5ac501"}}>Career Lane </span> Specialization
+        <h1 className="display-6 fw-bold col-12 col-lg-12 text-center mt-lg-4 mt-3">
+          <span style={{ color: "#5ac501" }}>Career Lane </span> Specialization
         </h1>
       </div>
 
       <Swiper
-        modules={[Pagination,Autoplay]}
+        modules={[Pagination, Autoplay]}
         spaceBetween={10}
         slidesPerView={1}
         pagination={{ clickable: true }}
