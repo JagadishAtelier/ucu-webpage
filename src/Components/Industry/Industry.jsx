@@ -64,7 +64,7 @@ function Industry() {
   }, []);
 
   return (
-    <div className="industry-container">
+    <div className="industry-container mt-5">
       <div
         className="d-flex flex-column flex-lg-column align-items-lg-center justify-content-lg-center"
         data-aos="fade-up"
