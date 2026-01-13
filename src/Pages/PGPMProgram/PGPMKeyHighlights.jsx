@@ -8,9 +8,9 @@ import { BsSuitcase } from "react-icons/bs";
 const ITEMS = [
   {
     id: "programhighlights",
-    label: "Program Highlights",
+    label: "Program Overview",
     icon: <Lightbulb size={20} />,
-    title: "Program Highlights",
+    title: "Program Overview",
     text: `
       <ul class="clear-div">
         <li>1 year residential program</li>
