@@ -15,6 +15,7 @@ import Wps from "../Components/Wps/Wps";
 import OverviewParticipant from "../Components/PGDM-program/OverviewTab/OverviewParticipant";
 import Aspirants from "../Components/Aspirants/Aspirants";
 import Testimonial from "../Components/Testimonial/Testimonial";
+import Sales from "../Components/Sales/Sales";
 
 const Home = () => {
   return (
@@ -33,12 +34,19 @@ const Home = () => {
 
         {/* Management Section */}
         <div data-aos="fade-left" data-aos-delay="100">
+
+          <Wps />
+        </div>
+        <div data-aos="fade-left" data-aos-delay="100">
+
+                <Sales />
+        </div>
+        {/* Management Section */}
+        <div data-aos="fade-left" data-aos-delay="100">
           <Management />
         </div>
 
         <ExPhd />
-
-        <Wps />
 
         <Platforms />
 
@@ -47,11 +55,11 @@ const Home = () => {
           <Industry />
         </div>
         <div className=" mx-lg-5 mx-0 text-center">
-          <Aspirants/>
+          <Aspirants />
         </div>
 
         <div className="my-4 mx-lg-5 mx-0 text-center">
-          <Testimonial/>
+          <Testimonial />
         </div>
         {/* Events */}
         <div data-aos="fade-right" data-aos-delay="100">

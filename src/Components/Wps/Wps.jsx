@@ -16,7 +16,7 @@ const data = [
   {
     image: image1,
     // heading: "Career Reboot Program",
-    para1: `Designed for women aspiring to get back into the corporate world, this hybrid program spans X months, offering a flexible learning experience tailored to help participants confidently restart their professional journey.`,
+    para1: `UCU’s Career Reboot Program for Women is aimed at re-equipping women on a career break into high impact roles in the corporate world. The 6-month program combines classroom learning with hands-on experience via live projects, thereby giving updated industry and corporate overview to candidates.`,
   },
   // {
   //   image: image2,

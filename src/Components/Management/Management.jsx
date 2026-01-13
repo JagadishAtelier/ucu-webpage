@@ -21,9 +21,7 @@ const data = [
     top: "Management Development Programs (MDPs)",
     // heading: "Management Development Programs (MDPs)",
     btntext: "Explore MDPS",
-    para: `Supercharge your leadership impact with
-    UCU’s MDP Executive Programs—immersive, high-velocity experiences designed to
-    unleash visionary success
+    para: `UCU’s Management Development Programs (MDPs) are intensive, short-duration learning experiences crafted for working professionals who seek to stay ahead in a rapidly changing business environment.
     `,
   },
 ];
@@ -45,7 +43,7 @@ function Management() {
             Learning (XEL)
           </h1>
           <p className="sort-disc col-lg-6 text-center">
-          Turbocharge your executive prowess with XEL’s high-octane courses—ignite bold leadership and deliver breakthrough results!
+            Turbocharge your executive prowess with XEL’s high-octane courses—ignite bold leadership and deliver breakthrough results!
           </p>
         </div>
         <div className="man-data-div">
@@ -56,7 +54,7 @@ function Management() {
                 <div className="man-item-content">
                   {/* <h1>{item.heading}</h1> */}
                   <h1 className="top-text-man my-0 ms-0 h3 fw-semibold">{item.top}</h1>
-<ExpandableText text={item.para} limit={120} color="#fff" />
+                  <ExpandableText text={item.para} limit={120} color="#fff" />
 
                   <a className="EXPLORE-MDPS ">{item.btntext}</a>
                 </div>
@@ -64,72 +62,72 @@ function Management() {
             </div>
           ))}
         </div>
-          <div className="extra-content my-4 mx-auto" data-aos="fade-up">
-            <div className="extra-content-inner">
-              <h3 className="display-4 fw-bold col-12 col-lg-12 text-center">1 Year <span style={{color:"#5ac501"}}> CXO Accelerator Program</span></h3>
-              <h4 className="text-center fw-bold display-6"> with Campus Immersion</h4>
-              <p className="sort-disc">
-                An intensive, one-year executive learning journey designed to
-                empower business leaders with cutting-edge skills, strategic
-                insights, and real-world leadership exposure. The program blends
-                academic rigor with practical industry immersion to prepare
-                leaders for the challenges of tomorrow.
-              </p>
+        <div className="extra-content my-4 mx-auto" data-aos="fade-up">
+          <div className="extra-content-inner">
+            <h3 className="display-4 fw-bold col-12 col-lg-12 text-center">1 Year <span style={{ color: "#5ac501" }}> CXO Accelerator Program</span></h3>
+            <h4 className="text-center fw-bold display-6"> with Campus Immersion</h4>
+            <p className="sort-disc">
+              An intensive, one-year executive learning journey designed to
+              empower business leaders with cutting-edge skills, strategic
+              insights, and real-world leadership exposure. The program blends
+              academic rigor with practical industry immersion to prepare
+              leaders for the challenges of tomorrow.
+            </p>
 
-              {/* Grid Section */}
-              <div className="cxo-grid">
-                {/* <div className="cxo-card bg-cxo">
+            {/* Grid Section */}
+            <div className="cxo-grid">
+              {/* <div className="cxo-card bg-cxo">
                   <h4>CXO</h4>
                   <p className="fs-6">
                     Master cross-functional leadership, strategy execution, and
                     boardroom decision-making.
                   </p>
                 </div> */}
-                <div className="cxo-card bg-cio">
-                  <h4>CIO</h4>
-                  <p className="fs-6">
-                    Drive digital transformation, IT governance, and innovation
-                    in technology adoption.
-                  </p>
-                </div>
-                <div className="cxo-card bg-cto">
-                  <h4>CTO</h4>
-                  <p className="fs-6">
-                    Build expertise in emerging technologies, product
-                    innovation, and scalable architectures.
-                  </p>
-                </div>
-                <div className="cxo-card bg-cmo">
-                  <h4>CMO</h4>
-                  <p className="fs-6">
-                    Lead customer-first growth, brand building, and data-driven
-                    marketing strategies.
-                  </p>
-                </div>
-                <div className="cxo-card bg-chro">
-                  <h4>CHRO</h4>
-                  <p className="fs-6">
-                    Transform people strategy, organizational culture, and
-                    workforce innovation.
-                  </p>
-                </div>
-                <div className="cxo-card bg-cfo">
-                  <h4>CFO</h4>
-                  <p className="fs-6">
-                    Strengthen financial strategy, risk management, and global
-                    capital allocation.
-                  </p>
-                </div>
-                <div className="cxo-card bg-cpo">
-                  <h4>CPO</h4>
-                  <p className="fs-6">
-                    Optimize product vision, design thinking, and customer
-                    experience excellence.
-                  </p>
-                </div>
+              <div className="cxo-card bg-cio">
+                <h4>CIO</h4>
+                <p className="fs-6">
+                  Drive digital transformation, IT governance, and innovation
+                  in technology adoption.
+                </p>
+              </div>
+              <div className="cxo-card bg-cto">
+                <h4>CTO</h4>
+                <p className="fs-6">
+                  Build expertise in emerging technologies, product
+                  innovation, and scalable architectures.
+                </p>
+              </div>
+              <div className="cxo-card bg-cmo">
+                <h4>CMO</h4>
+                <p className="fs-6">
+                  Lead customer-first growth, brand building, and data-driven
+                  marketing strategies.
+                </p>
+              </div>
+              <div className="cxo-card bg-chro">
+                <h4>CHRO</h4>
+                <p className="fs-6">
+                  Transform people strategy, organizational culture, and
+                  workforce innovation.
+                </p>
+              </div>
+              <div className="cxo-card bg-cfo">
+                <h4>CFO</h4>
+                <p className="fs-6">
+                  Strengthen financial strategy, risk management, and global
+                  capital allocation.
+                </p>
+              </div>
+              <div className="cxo-card bg-cpo">
+                <h4>CPO</h4>
+                <p className="fs-6">
+                  Optimize product vision, design thinking, and customer
+                  experience excellence.
+                </p>
               </div>
             </div>
           </div>
+        </div>
 
         {/* <div className="view-more-wrapper mt-4">
           <button

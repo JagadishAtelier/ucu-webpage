@@ -18,8 +18,7 @@ const data = [
     {
       image: image1,
       heading: "Executive PhD",
-      para: `The Executive PhD (EPhD) is a doctoral-level program tailored for working professionals, combining advanced research with career continuity.
-      Designed for Industry Leaders aspiring a career in academia 
+      para: `The Executive PhD in Management (EFPM) at UCU is a doctoral-level program designed for senior professionals, entrepreneurs, and policy leaders who wish to deepen their research capabilities while continuing their careers.
       `,
       eligible : "10+ years of work experience"
     },
