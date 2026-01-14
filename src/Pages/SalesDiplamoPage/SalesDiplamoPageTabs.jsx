@@ -49,29 +49,37 @@ export default function SalesDiplamoPageTabs() {
         }
     };
 
+    const getHeroData = (tab) => {
+        switch (tab) {
+            case "Fees":
+                return {
+                    breadcrumb: ["Home", "Sales Diploma", "Fees"],
+                    bgImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop" // Finance/Fees related
+                };
+            case "Admissions":
+                return {
+                    breadcrumb: ["Home", "Sales Diploma", "Admissions"],
+                    bgImage: "https://kahedu.edu.in/n/wp-content/uploads/2021/09/9-Important-Tips-to-Increase-College-Admission-Chances.jpg" // Education/Graduation related
+                };
+            case "Overview":
+            default:
+                return {
+                    breadcrumb: ["Home", "Sales Diploma", "Overview"],
+                    bgImage: "https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg"
+                };
+        }
+    }
+
+    const heroData = getHeroData(active);
+
     return (
         <div className="pg-tabs-root">
-            {/* User said 'Three tabs above the banner'. 
-           Usually Navbar is top. 
-           In PGDM implementation: Navbar -> Hero -> TabsNav (Sticky) -> Content.
-           But 'Tabs above the banner'? 
-           Maybe Nav -> Tabs -> Banner -> Content?
-           Let's stick to the PGDM layout (Nav -> Banner -> Tabs -> Content) unless strictly interpreted.
-           Wait, 'Three tabs above the banner' likely means:
-           NAVBAR
-           TABS (Overview, Fees, Admissions)
-           BANNER (Hero)
-           CONTENT
-       */}
-
-            {/* Let's try the request literally: Tabs above banner. */}
-
-      <nav
-        ref={navRef}
-        className="pg-tabs-nav mobile-sticky-tabs"
-        role="tablist"
-        aria-label="Page sections"
-      >
+            <nav
+                ref={navRef}
+                className="pg-tabs-nav mobile-sticky-tabs"
+                role="tablist"
+                aria-label="Page sections"
+            >
                 {TAB_LIST.map((tab) => (
                     <button
                         key={tab}
@@ -89,9 +97,8 @@ export default function SalesDiplamoPageTabs() {
 
             <AboutPageHero
                 title="Sales Diploma"
-                // sub="Post Graduate Program for Executives"
-                breadcrumb={["Home", "Sales Diploma"]}
-                bgImage="https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg"
+                breadcrumb={heroData.breadcrumb}
+                bgImage={heroData.bgImage}
             />
             <div>
                 <PgApplications className="under-banner" />

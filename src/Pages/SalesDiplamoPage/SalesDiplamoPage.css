@@ -1,25 +1,24 @@
-
 .SALESDIP-overview-title {
-    font-weight: 700;
-    color: #333;
-    font-size: 1.75rem;
+  font-weight: 700;
+  color: #333;
+  font-size: 1.75rem;
 }
 
 .SALESDIP-overview-item {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: black;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black;
 }
 
 .SALESDIP-overview-icon {
-    font-size: 1.5rem;
-    min-width: 30px;
-    display: flex;
-    justify-content: center;
+  font-size: 1.5rem;
+  min-width: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .SALESDIP-overview-text strong {
-    color: #000;
+  color: #000;
 }
 
 
@@ -74,8 +73,14 @@
 }
 
 /* Up and Down Positioning */
-.SALESDIPROAD-node.top { transform: translateY(-130px); }
-.SALESDIPROAD-node.bottom { transform: translateY(130px); flex-direction: column-reverse; }
+.SALESDIPROAD-node.top {
+  transform: translateY(-130px);
+}
+
+.SALESDIPROAD-node.bottom {
+  transform: translateY(130px);
+  flex-direction: column-reverse;
+}
 
 /* The Glassmorphism Card */
 .SALESDIPROAD-glass-card {
@@ -99,7 +104,7 @@
 
 .SALESDIPROAD-card-id {
   position: absolute;
-  top: -15px;
+  top: -5px;
   right: 20px;
   font-size: 3rem;
   font-weight: 900;
@@ -174,59 +179,103 @@
   animation: SALESDIPROAD-pulsing 2s infinite;
   opacity: 0;
 }
-.PGPXM-download-btnds{
+
+.PGPXM-download-btnds {
   justify-content: center;
 }
+
 @keyframes SALESDIPROAD-pulsing {
-  0% { transform: scale(0.5); opacity: 0.8; }
-  100% { transform: scale(2); opacity: 0; }
+  0% {
+    transform: scale(0.5);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 992px) {
-  .SALESDIPROAD-flex-container { flex-direction: column; align-items: center; }
-  .SALESDIPROAD-node { width: 100%; margin: 20px 0; }
-  .SALESDIPROAD-node.top, .SALESDIPROAD-node.bottom { transform: none; flex-direction: row; }
-  .SALESDIPROAD-main-path { left: 50px; width: 4px; height: 100%; top: 0; transform: none; }
-  .SALESDIPROAD-connector { width: 100px; height: auto; }
-  .SALESDIPROAD-glass-card { width: 80%; }
+  .SALESDIPROAD-flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .SALESDIPROAD-node {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .SALESDIPROAD-node.top,
+  .SALESDIPROAD-node.bottom {
+    transform: none;
+    flex-direction: row;
+  }
+
+  .SALESDIPROAD-main-path {
+    left: 50px;
+    width: 4px;
+    height: 100%;
+    top: 0;
+    transform: none;
+  }
+
+  .SALESDIPROAD-connector {
+    width: 100px;
+    height: auto;
+  }
+
+  .SALESDIPROAD-glass-card {
+    width: 80%;
+  }
 }
 
-.PGPMFLEX-admission-app-proc-list{
-    font-size: 0.90rem;
+.PGPMFLEX-admission-app-proc-list {
+  font-size: 0.90rem;
 }
 
 @media (max-width:768px) {
-    .SALESDIPROAD-main-path{
-        display: none;
-    }
-    .SALESDIPROAD-connector{
-        display: none;
-    }
-    .SALESDIPROAD-wrapper{
-        padding: 0;
-    }
-    .SALESDIPROAD-glass-card{
-        width: 100%;
-    }
-        .PGPMFLEX-admission-app-proc-line-container{
-        display: none;
-    }
+  .SALESDIPROAD-main-path {
+    display: none;
+  }
+
+  .SALESDIPROAD-connector {
+    display: none;
+  }
+
+  .SALESDIPROAD-wrapper {
+    padding: 0;
+  }
+
+  .SALESDIPROAD-glass-card {
+    width: 100%;
+  }
+
+  .PGPMFLEX-admission-app-proc-line-container {
+    display: none;
+  }
 }
+
 @media (max-width:480px) {
-    .SALESDIPROAD-main-path{
-        display: none;
-    }
-    .SALESDIPROAD-connector{
-        display: none;
-    }
-    .SALESDIPROAD-wrapper{
-        padding: 0;
-    }
-    .SALESDIPROAD-glass-card{
-        width: 100%;
-    }
-    .PGPMFLEX-admission-app-proc-line-container{
-        display: none;
-    }
+  .SALESDIPROAD-main-path {
+    display: none;
+  }
+
+  .SALESDIPROAD-connector {
+    display: none;
+  }
+
+  .SALESDIPROAD-wrapper {
+    padding: 0;
+  }
+
+  .SALESDIPROAD-glass-card {
+    width: 100%;
+  }
+
+  .PGPMFLEX-admission-app-proc-line-container {
+    display: none;
+  }
 }

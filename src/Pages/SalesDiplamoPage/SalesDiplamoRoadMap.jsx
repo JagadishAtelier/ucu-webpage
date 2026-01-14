@@ -1,88 +1,107 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { DoorOpen, Search, Briefcase, Award } from 'lucide-react';
+import "../../Pages/PGPMFlexPage/PGPMFlexPage.css"; // Reuse vibrant styles
 
 const SalesDiplamoRoadMap = () => {
-  const roadmapData = [
+  const steps = [
     {
       id: "01",
       month: "Month 0",
       title: "The Gateway",
-      subtitle: "Admission & Onboarding",
+      desc: "Admission & Onboarding",
       tasks: ["Admission: Apply for the Diploma Program.", "Interview and Results"],
-      color: "#00a0dc"   // PGPMFlex Blue
+      color: "#0a089b",
+      icon: <DoorOpen size={28} />
     },
     {
       id: "02",
       month: "Month 1-3",
       title: "The Deep Dive",
-      subtitle: "Classroom & Field Exposure",
-      tasks: ["Classroom Programs", "Field Visits", "Interim Assessments","Seminars & Workshops","Optional Live Project Opportunities"],
-      color: "#76bc43"   // PGPMFlex Green
+      desc: "Classroom & Field Exposure",
+      tasks: ["Classroom Programs", "Field Visits", "Interim Assessments"],
+      color: "#5ac501",
+      icon: <Search size={28} />
     },
     {
       id: "03",
       month: "Month 4-5",
       title: "The Bridge",
-      subtitle: "Career & Placements",
-      tasks: ["Career Grooming & Campus Placements"],
-      color: "#00a0dc"
+      desc: "Career & Placements",
+      tasks: ["Career Grooming", "Campus Placements", "Mentorship Sessions"],
+      color: "#0a089b",
+      icon: <Briefcase size={28} />
     },
     {
       id: "04",
       month: "Month 6",
       title: "The Milestone",
-      subtitle: "Certification & Beyond",
+      desc: "Certification & Beyond",
       tasks: ["Final Assessments", "Convocation"],
-      color: "#76bc43"
-    }
+      color: "#5ac501",
+      icon: <Award size={28} />
+    },
   ];
 
   return (
-    <section className="SALESDIPROAD-section">
-      <div className="container">
-        <div className="SALESDIPROAD-header ">
-          <h3 className="SALESDIPROAD-title mt-lg-5">Program Roadmap</h3>
-          <div className="SALESDIPROAD-underline"></div>
+    <section className="PGPMFLEX-admission-evavul-zig-section pt-5 pb-5">
+      <Container>
+        <div className="text-center mb-5">
+          <h3 className="section-heading display-6 fw-bold">
+            Program <span style={{ color: "#5ac501ff" }}>Roadmap</span>
+          </h3>
+          <p className="text-secondary mt-2">Your journey from admission to certification</p>
         </div>
 
-        <div className="SALESDIPROAD-wrapper">
-          <div className="SALESDIPROAD-main-path"></div>
+        <div className="PGPMFLEX-admission-evavul-zig-container">
+          {/* Background Line */}
+          <div className="PGPMFLEX-connector-wave"></div>
 
-          <div className="SALESDIPROAD-flex-container">
-            {roadmapData.map((item, index) => (
-              <div
-                key={index}
-                className={`SALESDIPROAD-node ${index % 2 === 0 ? 'top' : 'bottom'}`}
-              >
-                <div
-                  className="SALESDIPROAD-glass-card"
-                  style={{ '--card-accent': item.color }}
-                >
-                  <div className="SALESDIPROAD-card-id">{item.id}</div>
-                  <span className="SALESDIPROAD-card-month">{item.month}</span>
+          <Row className="g-0 justify-content-center position-relative" style={{ zIndex: 2 }}>
+            {steps.map((step, index) => (
+              <Col lg={3} md={6} key={index} className="d-flex justify-content-center px-2">
+                <div className={`PGPMFLEX-eval-card-wrapper w-100 ${index % 2 === 0 ? 'card-up' : 'card-down'}`}>
 
-                  <ul className="SALESDIPROAD-task-list">
-                    {item.tasks.map((task, i) => (
-                      <li key={i}>{task}</li>
-                    ))}
-                  </ul>
+                  {/* The Card */}
+                  <div className="PGPMFLEX-eval-card" style={{
+                    background: index % 2 === 0
+                      ? 'linear-gradient(145deg, #0a089b, #050468)'
+                      : 'linear-gradient(145deg, #5ac501, #429601)',
+                    boxShadow: index % 2 === 0
+                      ? '0 10px 25px rgba(10, 8, 155, 0.3)'
+                      : '0 10px 25px rgba(90, 197, 1, 0.3)',
+                    minHeight: '320px'
+                  }}>
+                    <div className="PGPMFLEX-eval-icon-circle">
+                      {step.icon}
+                    </div>
+
+                    <div className="mt-4 text-white">
+                      <span className="badge bg-white bg-opacity-25 mb-2">{step.month}</span>
+                      <h5 className="text-white fw-bold mb-1">{step.title}</h5>
+                      <p className="text-light small mb-3">{step.desc}</p>
+
+                      <ul className="list-unstyled text-start small text-light border-top border-white border-opacity-50 pt-3">
+                        {step.tasks.map((t, i) => (
+                          <li key={i} className="d-flex align-items-start mb-1">
+                            <span className="me-2 text-white">•</span> {t}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="PGPMFLEX-eval-number">{step.id}</div>
+                  </div>
+
+                  {/* Connector Node */}
+                  <div className="PGPMFLEX-eval-node"></div>
+
                 </div>
-
-                <div className="SALESDIPROAD-connector">
-                  <div
-                    className="SALESDIPROAD-pulse"
-                    style={{ background: item.color }}
-                  ></div>
-                  <div
-                    className="SALESDIPROAD-dot"
-                    style={{ borderColor: item.color }}
-                  ></div>
-                </div>
-
-              </div>
+              </Col>
             ))}
-          </div>
+          </Row>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

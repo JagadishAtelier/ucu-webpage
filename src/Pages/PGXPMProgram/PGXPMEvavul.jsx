@@ -1,51 +1,78 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-const PGXPMEvavul = () => {
-const steps = [
-  { 
-    id: "01", 
-    title: "Application Review & Preliminary Shortlisting", 
-    color: "#00a0dc" 
-  },
-  { 
-    id: "02", 
-    title: "Academic Credentials & Professional Experience Evaluation", 
-    color: "#76bc43" 
-  },
-  { 
-    id: "03", 
-    title: "Written Assessment & Personal Interview (If Applicable)", 
-    color: "#00a0dc" 
-  },
-  { 
-    id: "04", 
-    title: "Final Evaluation: Purpose, Performance & Overall Profile Assessment", 
-    color: "#76bc43" 
-  },
-];
+import { ClipboardList, GraduationCap, FileText, UserCheck } from 'lucide-react';
+import "../../Pages/PGPMFlexPage/PGPMFlexPage.css"; // Reuse PGPM Flex CSS
 
+const PGXPMEvavul = () => {
+  const steps = [
+    {
+      id: "01",
+      title: "Application Review",
+      desc: "Preliminary shortlisting based on your application details.",
+      color: "#0a089b",
+      icon: <ClipboardList size={28} />
+    },
+    {
+      id: "02",
+      title: "Credentials Evaluation",
+      desc: "Assessment of academic records and professional experience.",
+      color: "#5ac501",
+      icon: <GraduationCap size={28} />
+    },
+    {
+      id: "03",
+      title: "Assessment & Interview",
+      desc: "Written test and personal interview if applicable.",
+      color: "#0a089b",
+      icon: <FileText size={28} />
+    },
+    {
+      id: "04",
+      title: "Final Selection",
+      desc: "Overall profile assessment and final offer rollout.",
+      color: "#5ac501",
+      icon: <UserCheck size={28} />
+    },
+  ];
 
   return (
     <section className="PGPMFLEX-admission-evavul-zig-section">
       <Container>
-                <h3 className="cs-subtitle mb-5">Evalution Process</h3>
+        <div className="mb-5">
+          <h3 className="cs-subtitle d-inline-block" style={{ color: "#0a089b", }}>
+            Evaluation Process
+          </h3>
+        </div>
 
         <div className="PGPMFLEX-admission-evavul-zig-container">
-          {/* The Background Connector Line */}
-          <div className="PGPMFLEX-admission-evavul-connector-line"></div>
+          {/* Background Line */}
+          <div className="PGPMFLEX-connector-wave"></div>
 
-          <Row className="g-0 justify-content-center">
+          <Row className="g-0 justify-content-center position-relative" style={{ zIndex: 2 }}>
             {steps.map((step, index) => (
-              <Col lg={3} md={6} key={index} className="d-flex justify-content-center">
-                <div className={`PGPMFLEX-admission-evavul-zig-card ${index % 2 === 0 ? 'move-up' : 'move-down'}`}>
-                  <div className="card-top-accent" style={{ backgroundColor: step.color }}></div>
-                  <div className="card-inner">
-                    <div className="step-badge" style={{ background: step.color }}>{step.id}</div>
-                    <p className="mt-3">{step.title}</p>
-                    {/* <p className="text-muted small">{step.text}</p> */}
+              <Col lg={3} md={6} key={index} className="d-flex justify-content-center px-2">
+                <div className={`PGPMFLEX-eval-card-wrapper ${index % 2 === 0 ? 'card-up' : 'card-down'}`}>
+
+                  {/* The Card */}
+                  <div className="PGPMFLEX-eval-card" style={{
+                    background: index % 2 === 0
+                      ? 'linear-gradient(145deg, #0a089b, #050468)'
+                      : 'linear-gradient(145deg, #5ac501, #429601)',
+                    boxShadow: index % 2 === 0
+                      ? '0 10px 25px rgba(10, 8, 155, 0.3)'
+                      : '0 10px 25px rgba(90, 197, 1, 0.3)'
+                  }}>
+                    <div className="PGPMFLEX-eval-icon-circle">
+                      {step.icon}
+                    </div>
+                    <h5 className="text-white fw-bold mb-2">{step.title}</h5>
+                    <p className="text-white-50 small mb-0">{step.desc}</p>
+                    <div className="PGPMFLEX-eval-number">{step.id}</div>
                   </div>
-                  {/* Visual Node on the line */}
-                  <div className="line-node" style={{ borderColor: step.color }}></div>
+
+                  {/* Connector Node */}
+                  <div className="PGPMFLEX-eval-node"></div>
+
                 </div>
               </Col>
             ))}
