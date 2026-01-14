@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import { Building2, CalendarClock, MapPin, Clock } from "lucide-react";
+import { Building2, CalendarClock, MapPin, Clock, BookOpen, Users } from "lucide-react";
 
 
 const brands = [
@@ -49,33 +49,42 @@ export default function PGPMFlexCourseStructure() {
 
                 {/* TERMS */}
                 <h3 className="cs-subtitle">3 Months each / 660 classroom hours</h3>
-                <div className="cs-terms pgpm-flex-terms">
+                <div className="pgpm-flex-6-grid mb-4">
                     {[
-                        { term: "Term 1", days: 9 },
-                        { term: "Term 2", days: 9 },
-                        { term: "Term 3", days: 5 },
-                        { term: "Term 4", days: 5 },
-                        { term: "Term 5", days: 5 },
-                        { term: "Term 6", days: 5 },
+                        { term: "Term 1", days: 9, gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)" },
+                        { term: "Term 2", days: 9, gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" },
+                        { term: "Term 3", days: 5, gradient: "linear-gradient(135deg, #00c9a7 0%, #92fe9d 100%)" },
+                        { term: "Term 4", days: 5, gradient: "linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%)" },
+                        { term: "Term 5", days: 5, gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)" },
+                        { term: "Term 6", days: 5, gradient: "linear-gradient(135deg, #56ccf2 0%, #2f80ed 100%)" },
                     ].map((t, i) => (
-                        <div key={i} className="cs-term-card py-4 pgpm-cs-stat-box">
-                            <h4 className="m-0">{t.term}</h4>
-                            {/* <span>{t.days} Days</span>
-              <small>On Campus</small> */}
+                        <div
+                            key={i}
+                            className="cs-term-card pgxpm-term-card"
+                            style={{ background: t.gradient }}
+                        >
+                            <h4 className="m-0 text-white">{t.term}</h4>
+                            <span className="d-block mt-2 fw-bold text-white fs-4">{t.days} Days</span>
+                            <small className="text-white-50">On Campus</small>
                         </div>
                     ))}
                 </div>
 
                 {/* TABLE */}
+                {/* TABLE */}
                 <h3 className="cs-subtitle">Each Term</h3>
-                <div className="cs-stats pgpm-flex-stats">
-                    <div className="cs-stat-box">
-                        <p>LEARN </p>
-                        <h3>Classes on Sundays </h3>
+                <div className="row g-4 mb-5">
+                    <div className="col-md-6">
+                        <div className="cs-stat-box h-100 p-4 rounded-4 text-center learn-box d-flex flex-column justify-content-center">
+                            <h6 className="text-uppercase fw-bold opacity-75 mb-2 ls-wider">Learn</h6>
+                            <h3 className="fw-bolder mb-0 display-6">Classes on Sundays</h3>
+                        </div>
                     </div>
-                    <div className="cs-stat-box">
-                        <p>Apply/Develop</p>
-                        <h3>Post Classes 6 days</h3>
+                    <div className="col-md-6">
+                        <div className="cs-stat-box h-100 p-4 rounded-4 text-center apply-box d-flex flex-column justify-content-center">
+                            <h6 className="text-uppercase fw-bold opacity-75 mb-2 ls-wider">Apply / Develop</h6>
+                            <h3 className="fw-bolder mb-0 display-6">Post Classes 6 Days</h3>
+                        </div>
                     </div>
                 </div>
 
@@ -85,7 +94,7 @@ export default function PGPMFlexCourseStructure() {
 
                     <div className="PGPMFLEX-custom-progress-wrapper d-flex">
                         {/* 80% In-class Section */}
-                        <div className="PGPMFLEX-progress-section PGPMFLEX-in-class" style={{ width: '80%' }}>
+                        <div className="PGPMFLEX-progress-section PGPMFLEX-in-class" style={{ width: '80%',color:'#fff' }}>
                             <span className="PGPMFLEX-percent">80%</span>
                             <span className="PGPMFLEX-label">In-class</span>
                         </div>
@@ -99,14 +108,18 @@ export default function PGPMFlexCourseStructure() {
                 </div>
 
 
-                <div class="PGPXM-download-btnds d-flex flex-column flex-lg-row gap-3 mt-5">
-                    <button class="btn custom-download-btn d-flex align-items-center">
-                        <i class="fas fa-book-open me-3"></i>
+                <div className="pgxpm-download-actions d-flex flex-column flex-md-row gap-4 mt-5 justify-content-center">
+                    <button className="btn pgxpm-download-btn d-flex align-items-center justify-content-center gap-3">
+                        <div className="icon-box">
+                            <BookOpen size={24} />
+                        </div>
                         <span>Download Curriculum</span>
                     </button>
 
-                    <button class="btn custom-download-btn d-flex align-items-center">
-                        <i class="fas fa-users-cog me-3"></i>
+                    <button className="btn pgxpm-download-btn d-flex align-items-center justify-content-center gap-3">
+                        <div className="icon-box">
+                            <Users size={24} />
+                        </div>
                         <span>Download Class Profile</span>
                     </button>
                 </div>

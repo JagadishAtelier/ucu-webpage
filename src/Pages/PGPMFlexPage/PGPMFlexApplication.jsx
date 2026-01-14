@@ -42,7 +42,7 @@ const PGPMFlexApplication = () => {
         <Container fluid className="py-5 bg-white">
             <div className="PGPMFLEX-admission-app-proc-stepper-container container">
                 {/* Timeline */}
-                <h3 className="cs-subtitle mb-lg-4 mb-0" style={{ color: "#0a089b" }}>Application Process</h3>
+                <h3 className="cs-subtitle mb-lg-4 mb-0" style={{ color: "#000" }}>Application Process</h3>
                 <div className="PGPMFLEX-admission-app-proc-line-container">
                     <div className="PGPMFLEX-admission-app-proc-progress-line"></div>
                     <div className="PGPMFLEX-admission-app-proc-dots-row">

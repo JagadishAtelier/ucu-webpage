@@ -350,60 +350,68 @@ const Navbar = () => {
                     {menu.submenu && (
                       <>
                         {menu.specialDropdown === "campusDropdown" ? (
-                          // ⭐ Custom dropdown design only for Campus Placements
+                          // ⭐ Custom Full Screen Dropdown for Campus Placements
                           <div
-                            className="cam-drop-dropdown-menu menu-campus-custom-menu"
+                            className="campus-full-menu"
                             style={{
                               display: hoverMenus[menu.label]
                                 ? "block"
-                                : "block",
+                                : "none",
                             }}
                           >
-                            <div className="d-flex gap-5 align-items-center">
-                              <div className="col-4 d-flex flex-column gap-3">
-                                <p className="fs-6 campus-text-right">
-                                  “UCU is redefining the future of talent—rooted
-                                  in India’s heartland, yet engineered for
-                                  global impact. Its industry-first,
-                                  future-ready model is a blueprint for
-                                  inclusive excellence—powered by global faculty
-                                  and industry leaders who mentor indigenous
-                                  students into globally agile professionals.”
-                                </p>
-                                <div className="d-flex gap-3 align-items-center justify-content-end">
-                                  <div>
-                                    <p className="text-end fs-5 fw-bold mb-0 campus-text-right-name">
-                                      Ganesan Ramachandran
-                                    </p>
-                                    <p className="text-end campus-text-right-name" style={{ fontSize: '12px' }}>
-                                      Managing Director, Accenture Strategy &
-                                      Consulting
+                            <div className="container h-100">
+                              <div className="row h-100 align-items-center">
+                                {/* Left Side: Testimonial / Impact */}
+                                <div className="col-lg-4 d-flex flex-column justify-content-center pe-5 border-end border-light-subtle">
+                                  <div className="mb-4">
+                                    <h3 className="fw-bold text-white mb-3 text-start">Future of Talent</h3>
+                                    <p className="text-white opacity-75 fs-6 lh-base text-start">
+                                      “UCU is redefining the future of talent—rooted in India’s heartland, yet engineered for global impact. Its industry-first, future-ready model is a blueprint for inclusive excellence.”
                                     </p>
                                   </div>
-                                  <img src="https://ucu-webpage.vercel.app/assets/image3-B0zKHA6P.jpg" className="campus-navbar-auth-img rounded" />
-                                </div>
-                              </div>
-                              <div className="d-grid cmapus-wrapper-div">
-                                <div className="row row-gap-3">
-                                  {menu.submenu.map((item) => (
-                                    <div
-                                      onClick={() => navigate(`${item.link}`)}
-                                      className="mx-auto bg-white p-2 gap-2 justify-content-start shadow d-flex flex-column align-items-center menu-item-campus-card"
-                                    >
-                                      <img
-                                        src={item.image}
-                                        className="menu-campus-image"
-                                      />
-                                      <Link
-                                        key={item.label}
-                                        to={item.link}
-                                        className="menu-campus-card"
-                                      >
-                                        <span>{item.label}</span>
-                                      </Link>
-                                      <p className="mb-0" style={{ fontSize: '13px', color: '#333' }}> {item.description} </p>
+                                  <div className="d-flex align-items-center gap-3">
+                                    <img
+                                      src="https://ucu-webpage.vercel.app/assets/image3-B0zKHA6P.jpg"
+                                      alt="Ganesan Ramachandran"
+                                      className="rounded-circle border border-2 border-white"
+                                      style={{ width: '60px', height: '60px', objectFit: 'cover' }}
+                                    />
+                                    <div>
+                                      <h6 className="fw-bold text-white mb-0 text-start">Ganesan Ramachandran</h6>
+                                      <small className="text-white opacity-75 d-flex align-items-center gap-2 text-start">
+                                        MD,
+                                        <img
+                                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/2560px-Accenture.svg.png"
+                                          alt="Accenture"
+                                          style={{ height: '20px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
+                                        />
+                                        Strategy & Consulting
+                                      </small>
                                     </div>
-                                  ))}
+                                  </div>
+                                </div>
+
+                                {/* Right Side: Cards Grid */}
+                                <div className="col-lg-8 ps-5">
+                                  <div className="row g-4">
+                                    {menu.submenu.map((item, idx) => (
+                                      <div className="col-md-6" key={idx}>
+                                        <div
+                                          className="campus-menu-card p-3 rounded-3 bg-white h-100 shadow-sm cursor-pointer position-relative overflow-hidden group"
+                                          onClick={() => navigate(`${item.link}`)}
+                                        >
+                                          <div className="d-flex gap-3 align-items-center mb-2">
+                                            <div className="campus-icon-box rounded-circle bg-light p-2">
+                                              {/* Simple fallback if no specific icon, utilizing image as cover thumb or removing img for cleaner look */}
+                                              <img src={item.image} alt="" className="rounded-circle" style={{ width: '40px', height: '40px', objectFit: 'cover' }} />
+                                            </div>
+                                            <h6 className="fw-bold mb-0 text-dark">{item.label}</h6>
+                                          </div>
+                                          <p className="text-muted small mb-0 lh-sm">{item.description}</p>
+                                        </div>
+                                      </div>
+                                    ))}
+                                  </div>
                                 </div>
                               </div>
                             </div>

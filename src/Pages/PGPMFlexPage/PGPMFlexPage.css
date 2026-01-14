@@ -1,3 +1,5 @@
+@import "./PGPMFlexCourseStructure_colorful.css";
+
 .pgpm-flex-pillar-grid {
   display: flex;
   flex-wrap: wrap;
@@ -13,16 +15,17 @@
   grid-template-columns: repeat(6, 1fr);
 }
 
-/* .pgpm-cs-stat-box {
-    text-align: center;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(230, 230, 230);
-    border-image: initial;
-    border-radius: 12px;
-    padding: 24px;
-    background: rgb(249, 250, 252);
-} */
+.pgpm-cs-stat-box {
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(230, 230, 230);
+  border-image: initial;
+  border-radius: 12px;
+  padding: 24px;
+  background: rgb(249, 250, 252);
+}
+
 .pgpm-flex-stats {
   grid-template-columns: repeat(2, 1fr);
 }

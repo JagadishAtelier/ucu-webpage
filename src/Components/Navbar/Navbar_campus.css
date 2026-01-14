@@ -1,0 +1,65 @@
+/* =========================================
+   FULL SCREEN CAMPUS DROPDOWN REDESIGN
+   ========================================= */
+
+.campus-full-menu {
+    position: fixed;
+    top: 140px;
+    /* Aligns with bottom of the logo-box/header */
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 140px);
+    background: linear-gradient(135deg, #01266b 0%, #6d58e4 100%);
+    z-index: 9999;
+    padding: 4rem 0;
+    overflow-y: auto;
+
+    /* Animation */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Show state handled via inline display in JSX, but we can add helper */
+.nav-item:hover .campus-full-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Card Styles */
+.campus-menu-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.campus-menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.campus-icon-box img {
+    border: 2px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.campus-menu-card:hover .campus-icon-box img {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .campus-full-menu {
+        top: 100px;
+        height: calc(100vh - 100px);
+    }
+}
+
+@media (max-width: 992px) {
+    .campus-full-menu {
+        display: none !important;
+        /* Managed by mobile drawer instead */
+    }
+}
