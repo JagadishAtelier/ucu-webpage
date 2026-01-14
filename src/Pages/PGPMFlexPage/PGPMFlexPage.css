@@ -938,6 +938,19 @@
   gap: 30px;
 }
 
+/* Center the last item if it's the 5th (or any odd last child) */
+.PGPMFLEX-info-grid> :last-child:nth-child(2n+1) {
+  grid-column: span 2;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  .PGPMFLEX-info-grid> :last-child:nth-child(2n+1) {
+    width: 100%;
+  }
+}
+
 /* Card Styling */
 /* Card Styling */
 .PGPMFLEX-info-card {

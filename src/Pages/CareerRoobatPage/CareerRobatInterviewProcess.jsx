@@ -53,9 +53,9 @@ function CareerRobatInterviewProcess() {
           </div>
 
           {/* Right Image */}
-          <div className="col-md-5 text-center">
+          <div className="col-md-5 text-center" style={{ height: "-webkit-fill-available" }}>
             <img
-              src="https://www.greatlakes.edu.in/chennai/assets/greatlakes/images/eligibility-pic.webp"
+              src="https://img.freepik.com/free-photo/medium-shot-people-chatting-work_23-2149345215.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
               alt="Eligibility"
               className="img-fluid ip-image"
               loading="lazy"

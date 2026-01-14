@@ -15,7 +15,7 @@ function CareerRobatFeatures() {
     <section className="CRPFeatures py-lg-5 pb-0">
       <div className="container">
         <h3 className="CRPFeatures-title mb-4">
-          Key features about the program
+          <span style={{ color: "#5ac501" }}>Key features </span> about the program
         </h3>
 
         <div className="CRPFeatures-panel">

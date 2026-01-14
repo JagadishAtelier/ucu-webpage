@@ -1,49 +1,79 @@
 import React from "react";
-import "../PGDMProgram/PGDMFeeStructure.css"; // Reuse CSS
-import feeImage from "../../Assets/aboutPageImage/fee.jpg";
-import PGPMBottomBanner from "../../Pages/PGPMProgram/PGPMBottomBanner";
-import HostelSection from "../../Components/PGDM-program/FeeStructure/HostelSection";
+import { Container, Row, Col } from "react-bootstrap";
+import "../../Pages/PGPMFlexPage/PGPMFlexPage.css"; // Reuse vibrant styles
 
 const CareerRobatFees = () => {
     return (
-        <section className="container p-3 mx-auto  my-1">
-            <h3 className="display-6 fw-bold col-12 col-lg-12">
-                <span className="program">Career Reboot Program for Women </span> Fee Structure
-            </h3>
+        <section className="QWERT-fees-wrapper">
+            <Container>
+                <Row className="align-items-start g-5">
 
-            {/* ================= Fee Info ================= */}
-            <div className="fee-info bg-light p-3 rounded">
-                <div className="fee-image">
-                    <img
-                        src={feeImage}
-                        alt="Students discussing fee details"
-                    />
-                </div>
+                    {/* LEFT – STICKY */}
+                    <Col lg={5} className="QWERT-sticky-wrap-col">
+                        <div className="QWERT-sticky-wrap">
+                            <div className="QWERT-fees-intro">
+                                <h1>
+                                    Program <span>Fees</span>
+                                </h1>
 
-                <div className="fee-details">
-                    <h5 className="gradient-text hero-gradient-1">
-                        Career Reboot Program for Women Fee Structure
-                    </h5>
-                    <p>
-                        Plan 1 is  <strong> 75,000*</strong> + taxes INR in one instalment.
-                    </p>
-                    <p>
-                        Plan 2 is <strong> INR 45,000 + tax*</strong> and <strong>
-                            INR 40,000 + tax*
-                        </strong> in two installments.
-                    </p>
-                </div>
-            </div>
+                                <p className="QWERT-fees-tagline">
+                                    Invest in your restart with our flexible fee structure
+                                </p>
 
-            <div className="mt-5">
-                {/* Reusing Hostel section if relevant, or maybe just text since it's executive */}
-                {/* <HostelSection /> */}
-                <p className="text-muted">*Accommodation during campus immersion modules will be charged separately.</p>
-            </div>
+                                <div className="QWERT-main-price">
+                                    <small className="text-white">Starting from</small>
+                                    <h2>₹ 75,000</h2>
+                                    <span>* excluding taxes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </Col>
 
-            {/* <div className="mt-5">
-                <PGPMBottomBanner />
-            </div> */}
+                    {/* RIGHT – SCROLL CONTENT */}
+                    <Col lg={7} className="QWERT-fees-panels-col">
+                        <div className="QWERT-fees-panels">
+
+                            {/* PLAN 1 */}
+                            <div className="QWERT-fees-panel QWERT-one-time">
+                                <div className="QWERT-panel-header">
+                                    <span>Standard · Savings Plan</span>
+                                    <h3>One-time Payment</h3>
+                                </div>
+
+                                <div className="QWERT-panel-price">
+                                    ₹ 75,000
+                                </div>
+
+                                <p className="QWERT-panel-note">
+                                    Pay the full amount upfront and save.
+                                </p>
+                            </div>
+
+                            {/* PLAN 2 */}
+                            <div className="QWERT-fees-panel QWERT-installment">
+                                <div className="QWERT-panel-header">
+                                    <span>Plan 2 · Flexible</span>
+                                    <h3>Installment Plan</h3>
+                                </div>
+
+                                <ul className="QWERT-installment-breakup">
+                                    <li><span>Installment 1</span><strong>₹ 45,000</strong></li>
+                                    <li><span>Installment 2</span><strong>₹ 40,000</strong></li>
+                                </ul>
+
+                                <div className="QWERT-installment-footer">
+                                    <strong>Total: ₹ 85,000</strong>
+                                    <span>Distributed over 2 installments</span>
+                                </div>
+                                <p className="mt-3 text-muted small">* All fees mentioned above are excluding taxes.</p>
+                                <p className="text-muted small">* Accommodation during campus immersion modules will be charged separately.</p>
+                            </div>
+
+                        </div>
+                    </Col>
+
+                </Row>
+            </Container>
         </section>
     );
 };
