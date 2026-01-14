@@ -144,6 +144,29 @@ export default function PgTabs() {
       ? "Post Graduate Program in Management" // when PGPM Elite
       : "UCU Post Graduate Program in Management"; // default
 
+  const getHeroData = (tab) => {
+    switch (tab) {
+      case "Fees and Scholarships":
+        return {
+          breadcrumb: ["Home", "PGDM Programs", "Fees"],
+          bgImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop"
+        };
+      case "Admissions":
+        return {
+          breadcrumb: ["Home", "PGDM Programs", "Admissions"],
+          bgImage: "https://kahedu.edu.in/n/wp-content/uploads/2021/09/9-Important-Tips-to-Increase-College-Admission-Chances.jpg"
+        };
+      case "Overview":
+      default:
+        return {
+          breadcrumb: ["Home", "PGDM Programs", tab === "Overview" ? "Overview" : tab],
+          bgImage: "https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+        };
+    }
+  };
+
+  const heroData = getHeroData(active);
+
   return (
     <div className="pg-tabs-root">
       <button
@@ -166,9 +189,8 @@ export default function PgTabs() {
             id="overview-section"
             aria-selected={active === tab}
             aria-controls={`panel-${tab.replace(/\s+/g, "-").toLowerCase()}`}
-            className={`pg-tab-btn ${
-              active === tab ? "pg-tab-btn--active" : ""
-            }`}
+            className={`pg-tab-btn ${active === tab ? "pg-tab-btn--active" : ""
+              }`}
             onClick={() => setActive(tab)}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {
@@ -184,8 +206,8 @@ export default function PgTabs() {
       <AboutPageHero
         title={heading}
         sub={subText}
-        breadcrumb={["Home", "PGDM Programs"]}
-        bgImage="https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+        breadcrumb={heroData.breadcrumb}
+        bgImage={heroData.bgImage}
       />
       <div>
         <PgApplications className="under-banner" />

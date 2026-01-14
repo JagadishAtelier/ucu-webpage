@@ -131,6 +131,30 @@ export default function PGPMTabs() {
     }
   };
 
+  const getHeroData = (tab) => {
+    switch (tab) {
+      case "Fees":
+        return {
+          breadcrumb: ["Home", "PGPM ELITE", "Fees"],
+          bgImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop"
+        };
+      case "Admissions":
+        return {
+          breadcrumb: ["Home", "PGPM ELITE", "Admissions"],
+          bgImage: "https://kahedu.edu.in/n/wp-content/uploads/2021/09/9-Important-Tips-to-Increase-College-Admission-Chances.jpg"
+        };
+      case "Overview":
+      default:
+        // Use default/overview image for other tabs like Curriculum, Placements
+        return {
+          breadcrumb: ["Home", "PGPM ELITE", tab === "Overview" ? "Overview" : tab],
+          bgImage: "https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+        };
+    }
+  };
+
+  const heroData = getHeroData(active);
+
   return (
     <div className="pg-tabs-root">
       <button
@@ -171,8 +195,8 @@ export default function PGPMTabs() {
       <AboutPageHero
         title="PGPM ELITE"
         sub="Post Graduate Program in Management"
-        breadcrumb={["Home", "PGPM Programs"]}
-        bgImage="https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+        breadcrumb={heroData.breadcrumb}
+        bgImage={heroData.bgImage}
       />
 
       <div>

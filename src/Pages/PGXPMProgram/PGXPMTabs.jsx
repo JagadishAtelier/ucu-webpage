@@ -50,6 +50,29 @@ export default function PGXPMTabs() {
         }
     };
 
+    const getHeroData = (tab) => {
+        switch (tab) {
+            case "Fees":
+                return {
+                    breadcrumb: ["Home", "PGXPM", "Fees"],
+                    bgImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop"
+                };
+            case "Admissions":
+                return {
+                    breadcrumb: ["Home", "PGXPM", "Admissions"],
+                    bgImage: "https://kahedu.edu.in/n/wp-content/uploads/2021/09/9-Important-Tips-to-Increase-College-Admission-Chances.jpg"
+                };
+            case "Overview":
+            default:
+                return {
+                    breadcrumb: ["Home", "PGXPM", "Overview"],
+                    bgImage: "https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg"
+                };
+        }
+    }
+
+    const heroData = getHeroData(active);
+
     return (
         <div className="pg-tabs-root">
             {/* User said 'Three tabs above the banner'. 
@@ -67,12 +90,12 @@ export default function PGXPMTabs() {
 
             {/* Let's try the request literally: Tabs above banner. */}
 
-      <nav
-        ref={navRef}
-        className="pg-tabs-nav mobile-sticky-tabs"
-        role="tablist"
-        aria-label="Page sections"
-      >
+            <nav
+                ref={navRef}
+                className="pg-tabs-nav mobile-sticky-tabs"
+                role="tablist"
+                aria-label="Page sections"
+            >
                 {TAB_LIST.map((tab) => (
                     <button
                         key={tab}
@@ -91,8 +114,8 @@ export default function PGXPMTabs() {
             <AboutPageHero
                 title="PGXPM"
                 sub="Post Graduate Program for Executives"
-                breadcrumb={["Home", "PGXPM"]}
-                bgImage="https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg"
+                breadcrumb={heroData.breadcrumb}
+                bgImage={heroData.bgImage}
             />
             <div>
                 <PgApplications className="under-banner" />
