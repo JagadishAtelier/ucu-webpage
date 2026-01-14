@@ -378,13 +378,14 @@ const Navbar = () => {
                                     />
                                     <div>
                                       <h6 className="fw-bold text-white mb-0 text-start">Ganesan Ramachandran</h6>
-                                      <small className="text-white opacity-75 d-flex align-items-center gap-2 text-start">
-                                        MD,
-                                        <img
-                                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/2560px-Accenture.svg.png"
-                                          alt="Accenture"
-                                          style={{ height: '20px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
-                                        />
+                                      <small className="text-white opacity-75 text-start">
+                                        <div style={{ display: 'flex', alignItems: 'flex-end', lineHeight: '1', gap: '5px' }}>
+                                          MD,
+                                          <img
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/2560px-Accenture.svg.png"
+                                            alt="Accenture"
+                                            style={{ height: '20px', objectFit: 'contain', display: 'inline-block', filter: 'brightness(0) invert(1)', verticalAlign: 'middle' }}
+                                          /></div>
                                         Strategy & Consulting
                                       </small>
                                     </div>

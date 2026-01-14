@@ -32,7 +32,7 @@
 .PGPMFLEX-in-class {
     background: linear-gradient(90deg, #84cc16 0%, #a3e635 100%) !important;
     /* Lime Green gradient */
-    color: #365314 !important;
+    color: #365314;
     /* Dark Green Text */
     border: none !important;
     position: relative;

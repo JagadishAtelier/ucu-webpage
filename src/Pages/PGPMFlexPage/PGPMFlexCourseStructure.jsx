@@ -94,7 +94,7 @@ export default function PGPMFlexCourseStructure() {
 
                     <div className="PGPMFLEX-custom-progress-wrapper d-flex">
                         {/* 80% In-class Section */}
-                        <div className="PGPMFLEX-progress-section PGPMFLEX-in-class" style={{ width: '80%',color:'#fff' }}>
+                        <div className="PGPMFLEX-progress-section PGPMFLEX-in-class" style={{ width: '80%',color:'#fff !important' }}>
                             <span className="PGPMFLEX-percent">80%</span>
                             <span className="PGPMFLEX-label">In-class</span>
                         </div>
