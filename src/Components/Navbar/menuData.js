@@ -31,6 +31,7 @@ export const menuData = [
       },
        {
             label: "Centers of Excellence (CoEs)",
+            link: "/coe",
             submenu: [
               {
                 label: "Marketing",
@@ -775,6 +776,7 @@ export const menuDataMobile = [
           { label: "Industry Partners", link: "/Industry-partners" },
           {
             label: "Centers of Excellence (CoEs)",
+            link: "/coe",
             submenu: [
               {
                 label: "Marketing",
