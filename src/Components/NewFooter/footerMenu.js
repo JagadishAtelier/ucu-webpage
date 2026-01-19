@@ -25,7 +25,7 @@ export const footerMenu = [
       { label: "Business Advisory", link: "/bac" },
       { label: "Academic Advisory", link: "/aac" },
       { label: "CHRO Advisory", link: "/chro" },
-      { label: "Talent Advisory", link: "/tac" },
+      { label: "Talent Acquisition", link: "/tac" },
       { label: "L&D Advisory", link: "/ldac" },
       { label: "Young Advisory", link: "/ycxoc" },
       { label: "Rising Leaders", link: "/rlc" },

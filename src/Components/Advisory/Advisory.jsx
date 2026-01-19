@@ -710,10 +710,10 @@ XLRI, Jamshedpur`,
     type: "tac",
     // gridHead: <>Meet Our <span className="color-highlight">Student Committees</span></>,
     bgImage: `https://s7d9.scene7.com/is/image/shrm/istock-1704589778?ts=1753806253269&dpr=off&fmt=png-alpha&bfc=on`,
-    bannerHead: "Talent Advisory Council (TAC)",
-    sec2head: "Talent Advisory Council (TAC)",
+    bannerHead: "Talent Acquisition Council (TAC)",
+    sec2head: "Talent Acquisition Council (TAC)",
     sec2Para:
-      "The Talent Advisory Council (TAC) is a distinguished panel of industry leaders, academic professionals, and organizational experts who collaborate with the university to shape strategies for talent development and career readiness. TAC focuses on identifying emerging skill requirements, enhancing curriculum relevance, and strengthening industry–academia partnerships. The council provides valuable guidance on internships, placements, and professional development opportunities, ensuring that students are well-prepared to excel in competitive global markets. By fostering innovation and aligning academic learning with real-world expectations, TAC plays a vital role in nurturing future-ready graduates.",
+      "The Talent Acquisition Council (TAC) is a distinguished panel of industry leaders, academic professionals, and organizational experts who collaborate with the university to shape strategies for talent development and career readiness. TAC focuses on identifying emerging skill requirements, enhancing curriculum relevance, and strengthening industry–academia partnerships. The council provides valuable guidance on internships, placements, and professional development opportunities, ensuring that students are well-prepared to excel in competitive global markets. By fostering innovation and aligning academic learning with real-world expectations, TAC plays a vital role in nurturing future-ready graduates.",
     staff: [
       { image :"https://media.licdn.com/dms/image/v2/D5603AQGPtVv6IueM8A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1726118821230?e=1765411200&v=beta&t=tW20a_SQGJqk6jsA9onaul4rztCECDZppm7rmRoSblc",
         name :"Paul Arun ",
