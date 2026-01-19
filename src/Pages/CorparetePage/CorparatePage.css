@@ -104,3 +104,33 @@
 .cap-cxo-view-btn:hover {
   background-color: #5ac501;
 }
+
+/* Grid View Styles */
+.cap-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.8s ease-in-out;
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .cap-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cap-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cap-grid-container.expanded {
+  opacity: 1;
+  max-height: 3000px;
+  margin-top: 30px;
+}

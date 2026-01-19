@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import './StrategicCollab.css'
 import { ChevronRight } from 'lucide-react'
 import Navbar from '../../Components/Navbar/Navbar'
@@ -10,6 +11,33 @@ import AcademicCollab from './AcademicCollab'
 import InternationalCollab from './InternationalCollab'
 import IndustrySwiperIcons from './IndustrySwiperIcons'
 function StrategicCollabBanner() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname.includes('/strategic/partners')) {
+      const element = document.getElementById('strategic-partners');
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else if (location.pathname.includes('/strategic/collaborations')) {
+      const element = document.getElementById('international-collab');
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else if (location.pathname.includes('/strategic/Industry-partners')) {
+      const element = document.getElementById('industry-swiper-icons');
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   return (
     <div>
       <Navbar />
@@ -39,12 +67,18 @@ function StrategicCollabBanner() {
         </div>
 
       </div>
-      <StrategicCollabAbout/>
-      <StrategicPartners/>
-      <IndustrialCollab/>
-      <AcademicCollab/>
-      <InternationalCollab/>
-      <IndustrySwiperIcons/>
+      <StrategicCollabAbout />
+      <div id="strategic-partners">
+        <StrategicPartners />
+      </div>
+      <IndustrialCollab />
+      <AcademicCollab />
+      <div id="international-collab">
+        <InternationalCollab />
+      </div>
+      <div id="industry-swiper-icons">
+        <IndustrySwiperIcons />
+      </div>
       <NewFooter />
     </div>
   )

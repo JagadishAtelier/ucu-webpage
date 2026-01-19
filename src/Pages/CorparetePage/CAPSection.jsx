@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -55,9 +55,11 @@ const data = [
 ];
 
 function CAPSection() {
+    const [viewAll, setViewAll] = useState(false);
+
     return (
         <div className="captital-campus-content-sec mt-4">
-            <h1 className="text-center display-5 fw-bold">Career <span style={{color:"#5ac501"}}> Acceleration </span> Program <span style={{color:"#5ac501"}}>(CAP)</span></h1>
+            <h1 className="text-center display-5 fw-bold">Career <span style={{ color: "#5ac501" }}> Acceleration </span> Program <span style={{ color: "#5ac501" }}>(CAP)</span></h1>
             <p className="text-center pt">
                 Career Acceleration Program (CAP) is UCU’s signature industry
                 interaction series where CXOs, BU heads, and domain leaders engage
@@ -66,41 +68,64 @@ function CAPSection() {
                 enhancing placement readiness and strategic exposure.
             </p>
 
-            <Swiper
-                modules={[Autoplay]}
-                spaceBetween={30}
-                slidesPerView={3}
-                navigation
-                loop={true}
+            {!viewAll && (
+                <Swiper
+                    modules={[Autoplay]}
+                    spaceBetween={30}
+                    slidesPerView={3}
+                    navigation
+                    loop={true}
+                    pagination={{ clickable: true }}
+                    autoplay={{ delay: 4000, disableOnInteraction: false }}
+                    breakpoints={{
+                        0: { slidesPerView: 1 },
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 },
+                    }}
+                    className="cap-grid mt-5"
+                >
+                    {data.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <div className="text-center cap-card-div position-relative">
+                                <img
+                                    src={item.thumbnail}
+                                    alt={item.para}
+                                    className="media-play-thumbnail"
+                                    style={{ height: '40vh', objectFit: 'cover' }}
+                                />
+                                <div className="mga-overlay"></div>
+                                <div className="mga-overlay-text">
+                                    <p className="text-center mt-3 mb-0 cap-para fs-5 fw-bold">{item.author}</p>
+                                    <p className="text-center m-0 cap-para">{item.proffection}</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            )}
 
-                pagination={{ clickable: true }}
-                autoplay={{ delay: 4000, disableOnInteraction: false }}
-                breakpoints={{
-                    0: { slidesPerView: 1 },
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
-                }}
-                className="cap-grid mt-5"
-            >
+            <div className={`cap-grid-container ${viewAll ? 'expanded' : ''}`}>
                 {data.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        <div className="text-center cap-card-div position-relative">
-                            <img
-                                src={item.thumbnail}
-                                alt={item.para}
-                                className="media-play-thumbnail"
-                            />
-                                            <div className="mga-overlay"></div>
-                            <div className="mga-overlay-text">
+                    <div className="text-center cap-card-div position-relative" key={index}>
+                        <img
+                            src={item.thumbnail}
+                            alt={item.para}
+                            className="media-play-thumbnail"
+                            style={{ height: '40vh', objectFit: 'cover' }}
+                        />
+                        <div className="mga-overlay"></div>
+                        <div className="mga-overlay-text">
                             <p className="text-center mt-3 mb-0 cap-para fs-5 fw-bold">{item.author}</p>
                             <p className="text-center m-0 cap-para">{item.proffection}</p>
-</div>
                         </div>
-                    </SwiperSlide>
+                    </div>
                 ))}
-            </Swiper>
+            </div>
+
             <div className="d-flex justify-content-center mt-4">
-                <Button>View All</Button>
+                <Button onClick={() => setViewAll(!viewAll)}>
+                    {viewAll ? "View Less" : "View All"}
+                </Button>
             </div>
         </div>
     );
