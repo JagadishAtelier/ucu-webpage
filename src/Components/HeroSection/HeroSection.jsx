@@ -117,8 +117,8 @@ function HeroSection() {
                     <p className="program-description">{data.bannerContent}</p>
                   </div>
                   <div className="hero-btn mt-4 content-slide-in">
-                    <button className="hero-section-apply-btn fw-semibold">
-                      <a href={data.applyLink} className="text-white text-decoration-none">APPLY NOW</a>
+                    <button onClick={() => showModal("apply")} className="hero-section-apply-btn fw-semibold">
+                      <a  className="text-white text-decoration-none">APPLY NOW</a>
                     </button>
                     <button className="hero-section-download-btn fw-semibold">
                       <a href={data.pdf}

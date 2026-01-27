@@ -6,7 +6,7 @@ import Sales from "../Sales/Sales";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { useModal } from "../Context/ApplyModal/ModalContext";
-
+import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 import AOS from "aos";
@@ -21,6 +21,7 @@ const data = [
     buttonText:"Explore More",
     elgible : "3+ years of experience",
     duration : "18 months",
+        link:"/pgpm-elite"
   },
   {
     image: image2,
@@ -28,7 +29,8 @@ const data = [
     para: `UCU’s two year Young Leader’s Program (PGDM) focuses on the development of aspiring professionals with 0-3 years of experience into beginners management and leadership positions.The program focuses on developing core capabilities in traditional management areas like Finance, Operations, Sales & Marketing, HR/OB and Strategy.`,
     buttonText:"Explore More",
     elgible : "0 - 3 years of experience",
-    duration : "24 months"
+    duration : "24 months",
+        link:"/program-pgdm"
 
   },
   // {
@@ -60,6 +62,7 @@ const secondRowdata = [
     buttonText:"Explore More",
     elgible : "3+ years of experience",
     duration : "18 months",
+    link:"/PGPM-Flex"
   },
   {
     image: "https://plus.unsplash.com/premium_photo-1691844987876-e27e1b502338?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -68,7 +71,8 @@ const secondRowdata = [
     `,
     buttonText:"Explore More",
     elgible : "0 - 3 years of experience",
-    duration : "24 months"
+    duration : "24 months",
+    link:"/program-pgxpm"
 
   },
   // {
@@ -95,6 +99,7 @@ const secondRowdata = [
 
 function CareerSection() {
   const { showModal } = useModal();
+  const navigate = useNavigate()
   console.log("useModal hook loaded:", showModal);  
   // const navigate = useNavigate();
   useEffect(() => {
@@ -145,7 +150,7 @@ function CareerSection() {
                   <p className="program-description">{item.duration}</p>
                 </div>
                 <div className="car-explore-btn-div">
-                  <button className="btn green-explore-btn py-2">{item.buttonText}</button>
+                  <button onClick={()=> navigate(item.link)} className="btn green-explore-btn py-2">{item.buttonText}</button>
                   <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>
@@ -191,7 +196,7 @@ function CareerSection() {
                   <p className="program-description">{item.duration}</p>
                 </div>
                 <div className="car-explore-btn-div">
-                  <button className="btn green-explore-btn py-2">{item.buttonText}</button>
+                  <button onClick={()=> navigate(item.link)} className="btn green-explore-btn py-2">{item.buttonText}</button>
                   <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>

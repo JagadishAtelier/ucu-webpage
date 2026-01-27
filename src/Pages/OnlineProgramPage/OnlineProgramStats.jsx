@@ -24,12 +24,12 @@ const OnlineProgramStats = () => {
   ];
 
   return (
-    <section className="ONLINEACT py-5">
+    <div className="ONLINEACT py-5">
       <div className="container">
         <div className="stats-wrapper shadow-lg">
           <div className="row g-0">
             {stats.map((item) => (
-              <div key={item.id} className="col-md-4 stats-item">
+              <div key={item.id} className="col-lg-4 stats-item">
                 <div className="stats-content">
                   <div className="icon-box">
                     <i className={`fas ${item.icon}`}></i>
@@ -42,7 +42,7 @@ const OnlineProgramStats = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

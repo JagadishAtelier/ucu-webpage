@@ -115,12 +115,12 @@ export const menuData = [
     label: "Online Programs",
     placement: "top",
     submenu: [
-      { label: "Digital Marketing & AI", link: "/program/Digital-Marketing-AI" },
-      { label: "Product Management", link: "/program/Product-Management" },
-      { label: "Cybersecurity", link: "/program/Cybersecurity" },
+      { label: "Digital Marketing & AI", link: "/online-program/Digital-Marketing-AI" },
+      { label: "Product Management", link: "/online-program/Product-Management" },
+      { label: "Cybersecurity", link: "/online-program/Cybersecurity" },
       {
         label: "AIMA AICTE Approved PGDM",
-        link: "/program/AIMA-AICTE-Approved-PGDM",
+        link: "/online-program/AIMA-AICTE-Approved-PGDM",
       },
     ],
   },
@@ -850,12 +850,12 @@ export const menuDataMobile = [
     label: "Online Programs",
     placement: "top",
     submenu: [
-      { label: "Digital Marketing & AI", link: "/program/Digital-Marketing-AI" },
-      { label: "Product Management", link: "/program/Product-Management" },
-      { label: "Cybersecurity", link: "/program/Cybersecurity" },
+      { label: "Digital Marketing & AI", link: "/online-program/Digital-Marketing-AI" },
+      { label: "Product Management", link: "/online-program/Product-Management" },
+      { label: "Cybersecurity", link: "/online-program/Cybersecurity" },
       {
         label: "AIMA AICTE Approved PGDM",
-        link: "/program/AIMA-AICTE-Approved-PGDM",
+        link: "/online-program/AIMA-AICTE-Approved-PGDM",
       },
     ],
   },

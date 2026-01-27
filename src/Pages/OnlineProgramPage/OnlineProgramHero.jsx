@@ -2,7 +2,7 @@ import React from "react";
 
 const OnlineProgramHero = () => {
   return (
-<section className="ONLINEHER">
+<div className="ONLINEHER">
   <div className="ONLINEHER-hero-background">
     <div className="ONLINEHER-container container-fluid h-100">
       <div className="ONLINEHER-row row h-100 align-items-center">
@@ -126,7 +126,7 @@ const OnlineProgramHero = () => {
       </form>
     </div>
   </div>
-</section>
+</div>
 
   );
 };

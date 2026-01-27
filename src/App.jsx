@@ -72,6 +72,7 @@ import SalesDiplamoPage from "./Pages/SalesDiplamoPage/SalesDiplamoPage";
 import AdmissionHero from "./Components/NewAdmissionPage/AdmissionHero";
 import OnlineProgramPageBanner from "./Pages/OnlineProgramPage/OnlineProgramPageBanner";
 import OnlineProgramPage from "./Pages/OnlineProgramPage/OnlineProgramPage";
+import OnlineProgramFormPage from "./Pages/OnlineProgramFormPage/OnlineProgramFormPage";
 
 function App() {
   useEffect(() => {
@@ -139,7 +140,8 @@ function App() {
           <Route path="/Career-Reboot-Program-for-Women" element={<CareerRoobatPage />} />
           <Route path="/PGPM-Flex" element={<PGPMFlexPageHome />} />
           <Route path="/SalesDiplamo" element={<SalesDiplamoPage />} />
-          <Route path="/online-program" element={<OnlineProgramPage />} />
+          <Route path="/online-program/*" element={<OnlineProgramPage />} />
+          <Route path="/online-program-form" element={<OnlineProgramFormPage />} />
           {/* <Route path="/account" element={<ProfilePage />} /> */}
         </Routes>
         <FixedSideBar />

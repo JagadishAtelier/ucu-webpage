@@ -5,6 +5,8 @@ import image2 from "../../Assets/ucu (1)/Rectangle 100.jpg";
 import Aos from "aos";
 import Platforms from "../Platforms/Platforms";
 import ExpandableText from "../CareerSection/ExpandableText";
+import { link } from "framer-motion/client";
+import { useNavigate } from "react-router-dom";
 const data = [
   {
     image: image1,
@@ -15,6 +17,7 @@ const data = [
     Customised Learning Program—an electrifying, tailor-made curriculum engineered to
     catalyze your strategic objectives.
     `,
+    link:"/executive-edu?tab=1"
   },
   {
     image: image2,
@@ -23,10 +26,12 @@ const data = [
     btntext: "Explore MDPS",
     para: `UCU’s Management Development Programs (MDPs) are intensive, short-duration learning experiences crafted for working professionals who seek to stay ahead in a rapidly changing business environment.
     `,
+    link:"/executive-edu?tab=6"
   },
 ];
 function Management() {
   const [showMore, setShowMore] = useState(false);
+  const navigate = useNavigate()
   useEffect(() => {
     Aos.init({
       duration: 1000, // animation duration
@@ -56,7 +61,7 @@ function Management() {
                   <h1 className="top-text-man my-0 ms-0 h3 fw-semibold">{item.top}</h1>
                   <ExpandableText text={item.para} limit={120} color="#fff" />
 
-                  <a className="EXPLORE-MDPS ">{item.btntext}</a>
+                  <a href={item.link} className="EXPLORE-MDPS ">{item.btntext}</a>
                 </div>
               </div>
             </div>
@@ -83,42 +88,42 @@ function Management() {
                     boardroom decision-making.
                   </p>
                 </div> */}
-              <div className="cxo-card bg-cio">
+              <div onClick={()=>navigate("/engagement/cio")} className="cxo-card bg-cio">
                 <h4>CIO</h4>
                 <p className="fs-6">
                   Drive digital transformation, IT governance, and innovation
                   in technology adoption.
                 </p>
               </div>
-              <div className="cxo-card bg-cto">
+              <div onClick={()=>navigate("/engagement/cto")} className="cxo-card bg-cto">
                 <h4>CTO</h4>
                 <p className="fs-6">
                   Build expertise in emerging technologies, product
                   innovation, and scalable architectures.
                 </p>
               </div>
-              <div className="cxo-card bg-cmo">
+              <div onClick={()=>navigate("/engagement/cmo")} className="cxo-card bg-cmo">
                 <h4>CMO</h4>
                 <p className="fs-6">
                   Lead customer-first growth, brand building, and data-driven
                   marketing strategies.
                 </p>
               </div>
-              <div className="cxo-card bg-chro">
+              <div onClick={()=>navigate("/engagement/chro")} className="cxo-card bg-chro">
                 <h4>CHRO</h4>
                 <p className="fs-6">
                   Transform people strategy, organizational culture, and
                   workforce innovation.
                 </p>
               </div>
-              <div className="cxo-card bg-cfo">
+              <div onClick={()=>navigate("/engagement/cfo")} className="cxo-card bg-cfo">
                 <h4>CFO</h4>
                 <p className="fs-6">
                   Strengthen financial strategy, risk management, and global
                   capital allocation.
                 </p>
               </div>
-              <div className="cxo-card bg-cpo">
+              <div onClick={()=>navigate("/engagement/cpo")} className="cxo-card bg-cpo">
                 <h4>CPO</h4>
                 <p className="fs-6">
                   Optimize product vision, design thinking, and customer

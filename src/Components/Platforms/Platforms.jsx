@@ -4,6 +4,8 @@ import image from "../../Assets/ucu (1)/Rectangle 154.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useModal } from "../Context/ApplyModal/ModalContext";
+import { link } from "framer-motion/client";
+import { useNavigate } from "react-router-dom";
 
 const data = [
   // {
@@ -13,34 +15,42 @@ const data = [
   {
     head: "Product Management",
     text: "Build, launch, and lead breakthrough products with cross-functional expertise and market-first thinking",
+    link:"/program/product"
   },
   {
     head: "Cybersecurity",
     text: "Protect the digital frontier with cutting-edge skills in risk, resilience, and cyber intelligence",
+        link:"/program/cybersecurity"
   },
   {
     head: "Brand Management & Digital Marketing",
     text: "Drive growth & enhance brand value in the digital age through data-led storytelling and performance marketing mastery",
+        link:"/program/dm-ai"
   },
   {
     head: "Mobilty & Sustainability",
     text: "Shape the future of smart, sustainable ecosystems with innovation at the intersection of tech and impact",
+        link:"/program/Mobilty"
   },
   {
     head: "Consulting",
     text: "Become a trusted advisor with analytical thinking, strategic insight, and boardroom-ready problem solving",
+        link:"/program/consulting"
   },
   {
     head: "Banking & Finance",
     text: " Navigate the banking & financial landscape with domain depth, regulatory fluency, and technology enabled thinking to spearhead value driven outcomes",
+        link:"/program/banking-finance"
   },
   {
     head: "Business Analytics",
     text: "Turn data into decisions with analytical tools that power business performance and strategic clarity",
+        link:"/program/international-business"
   },
   {
     head: "Data Science & AI",
     text: "Harness the power of algorithms and AI to unlock insights, automate intelligence, and transform industries",
+        link:"/program/product"
   },
 ];
 
@@ -49,6 +59,7 @@ const industryData = [
     head: "Fin-Tech",
     text: `Lead the financial revolution with cutting-edge skills in digital finance, innovation, and tech-powered disruption
     `,
+        link:"/program/fintech"
   },
   {
     image:
@@ -56,18 +67,21 @@ const industryData = [
     head: "Global Capability Center (GCC)",
     text: `Step into the engine room of global enterprises—mastering strategy, scale, and operational excellence across GCCs
     `,
+        link:"/program/gcc"
   },
   {
     image:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhbHRoY2FyZXxlbnwwfHwwfHx8MA%3D%3D",
     head: "Healthcare & Lifescience",
     text: "A focused program that delves into the intricacies of modern logistics, procurement, and supply chain.",
+        link:"/program/HealthTech-Ignition"
   },
   {
     image:
       "https://plus.unsplash.com/premium_photo-1683121716061-3faddf4dc504?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U2VtaWNvbmR1Y3RvcnxlbnwwfHwwfHx8MA%3D%3D",
     head: "Semiconductor",
     text: "Specialized program focused on financial technology and innovations.",
+        link:"/program/Advanced-Manufacturing"
   },
   // {
   //   image: image2,
@@ -85,6 +99,7 @@ function Platforms() {
   const [openIndex, setOpenIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("functional");
   const { showModal } = useModal();
+  const navigate = useNavigate()
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -175,7 +190,7 @@ function Platforms() {
                     {item.text}
                   </p>
                   <div className="car-explore-btn-div-faq">
-                    <button className="btn btn-outline-dark py-lg-2 py-1">
+                    <button onClick={()=>navigate(item.link)} className="btn btn-outline-dark py-lg-2 py-1">
                       EXPLORE
                     </button>
                     <button

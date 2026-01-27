@@ -11,7 +11,6 @@
 }
 .ONLINEPAG-logo {
   height: 60px;
-    padding-top: 10px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 
@@ -252,4 +251,488 @@
         border-right: none;
         border-bottom: 1px solid #eee;
     }
+}
+
+
+
+.ONLINEPRO-section {
+  background: radial-gradient(circle at top, #e3f2fd, #ffffff);
+  padding: 60px 60px 0;
+}
+
+/* Tabs Container */
+.ONLINEPRO-tabs-container {
+  border-radius: 20px;
+  padding: 12px;
+  margin-bottom: 40px;
+
+  /* DESKTOP DEFAULT */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+
+.ONLINEPRO-tab {
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  background: white;
+  color: #334155;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.3s ease;
+  white-space: normal;
+}
+
+/* .ONLINEPRO-section .swiper-wrapper{
+  justify-content: center;
+} */
+
+.ONLINEPRO-tab.active {
+  background: #1d5ec9;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(29, 94, 201, 0.3);
+}
+
+/* Title */
+.ONLINEPRO-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1d5ec9;
+  letter-spacing: 0.5px;
+}
+
+/* Card */
+.ONLINEPRO-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  border: 1px solid #f0f4f8;
+}
+
+/* Circular Image Wrapper */
+.ONLINEPRO-img-wrapper {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  padding: 8px;
+  /* Replicating the blue crescent shadow in the image */
+  background: linear-gradient(210deg, #fff 40%, #4ea1fd,black 100%);
+  position: relative;
+}
+
+.ONLINEPRO-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* Text Styling */
+.ONLINEPRO-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.4;
+  min-height: 30px;
+  margin-bottom: 15px;
+}
+
+.ONLINEPRO-duration {
+  font-weight: 700;
+  color: #334155;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* Button Styling (Pill with Arrow) */
+.ONLINEPRO-btn {
+  border: none;
+  padding: 8px 8px 8px 25px;
+  border-radius: 30px;
+  background: linear-gradient(to right, #4b91f7, #1d5ec9);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  transition: 0.3s ease;
+}
+
+.ONLINEPRO-arrow {
+  background: rgba(255, 255, 255, 0.2);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.ONLINEPRO-btn:hover {
+  transform: scale(1.05);
+  color: white;
+}
+@media (max-width: 767px) {
+  .ONLINEPRO-tabs-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+
+    /* smooth scroll */
+    scroll-behavior: smooth;
+  }
+
+  .ONLINEPRO-tabs-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ONLINEPRO-tab {
+    flex: 0 0 auto;
+    min-width: 260px;
+    white-space: normal;
+  }
+}
+
+
+
+
+
+
+/* Heading */
+.ONLINEAPP-title {
+  font-size: 3rem;
+  font-weight: 400;
+  color: black;
+  line-height: 1.1;
+}
+
+.ONLINEAPP-title span {
+  font-weight: 800;
+  font-size: 4rem;
+  color: #5ac501;
+}
+
+/* Cards */
+.ONLINEAPP-card {
+  height: 100%;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.ONLINEAPP-card:hover {
+  transform: translateY(-8px);
+}
+
+.ONLINEAPP-card h5 {
+  font-weight: 700;
+  margin-top: 15px;
+  color: #003A8F;
+}
+
+.ONLINEAPP-card h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.ONLINEAPP-card ul {
+  padding-left: 18px;
+}
+
+.ONLINEAPP-card ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* Icons */
+.ONLINEAPP-icon {
+  font-size: 42px;
+  color: #003A8F;
+}
+
+/* Step Colors */
+.ONLINEAPP-step1 {
+  background: #6696f7;
+  color: white;
+}
+
+.ONLINEAPP-step2 {
+  background: #2f59bb;
+  color: #ffffff;
+}
+
+.ONLINEAPP-step1 h5,
+.ONLINEAPP-step1 h4,
+.ONLINEAPP-step1 .ONLINEAPP-icon {
+  color: white;
+}
+.ONLINEAPP-step2 h5,
+.ONLINEAPP-step2 h4,
+.ONLINEAPP-step2 .ONLINEAPP-icon {
+  color: #F4B400;
+}
+
+.ONLINEAPP-step3 {
+  background: #1535b4;
+  color: #ffffff;
+}
+
+.ONLINEAPP-step3 h5,
+.ONLINEAPP-step3 h4,
+.ONLINEAPP-step3 .ONLINEAPP-icon {
+  color: #F4B400;
+}
+
+/* CTA */
+.ONLINEAPP-cta {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  border-radius: 10px;
+}
+
+.ONLINEAPP-apply {
+  background: #5ac501;
+  color: white;
+}
+
+.ONLINEAPP-apply:hover {
+  background: #5ac501;
+}
+
+.ONLINEAPP-call {
+  background: #003A8F;
+  color: #ffffff;
+}
+
+.ONLINEAPP-call:hover {
+  background: #002a6b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ONLINEAPP-title {
+    font-size: 2.2rem;
+  }
+
+  .ONLINEAPP-title span {
+    font-size: 3rem;
+  }
+
+  .ONLINEAPP-cta {
+    font-size: 1.5rem;
+  }
+}
+
+
+.ONLINEVAL-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+/* ---------- TOP SECTION ---------- */
+.ONLINEVAL-top-section {
+  min-height: 500px;
+}
+
+.ONLINEVAL-content {
+  background: #fff;
+  padding: 3rem;
+  position: relative;
+}
+
+.ONLINEVAL-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.ONLINEVAL-content-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.ONLINEVAL-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.ONLINEVAL-title span {
+  color: #1d5ec9;
+  font-weight: 800;
+}
+
+.ONLINEVAL-links {
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ONLINEVAL-learn-more{
+  background-color: white;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+}
+.ONLINEVAL-links a {
+  display: inline-flex;
+  align-items: center;
+  color: #1d5ec9;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+/* ---------- SIDE IMAGE ---------- */
+.ONLINEVAL-side-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- BOTTOM CARDS ---------- */
+.ONLINEVAL-cards {
+  color: #fff;
+  text-align: center;
+}
+
+.ONLINEVAL-card {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ONLINEVAL-card img {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.ONLINEVAL-card h5 {
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+
+.ONLINEVAL-card p {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Card Colors */
+.red-1 { background: #2f59bb; }
+.red-2 { background: #1535b4; }
+.red-3 { background: #2f59bb; }
+.red-4 { background: #1535b4; }
+
+
+
+
+.ONLINECOLLAB-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Title */
+.ONLINECOLLAB-title-wrapper {
+  background: #0d6efd; /* Bootstrap primary */
+  color: #fff;
+  width: fit-content;
+  padding: 10px 24px;
+  border-radius: 0 50px 50px 0;
+  margin-bottom: 30px;
+}
+
+.ONLINECOLLAB-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+  .ONLINECOLLAB-title {
+    font-size: 2rem;
+  }
+}
+
+/* Logos Section */
+.ONLINECOLLAB-logos-section {
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+.ONLINECOLLAB-logos-track {
+  display: flex;
+  width: max-content;
+  gap: 100px;
+  animation: ONLINECOLLAB-scroll 25s linear infinite;
+}
+
+/* Logo item */
+.ONLINECOLLAB-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ONLINECOLLAB-logo-item img {
+  height: 60px;
+}
+
+/* Animation */
+@keyframes ONLINECOLLAB-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (max-width:768px) {
+  .ONLINEPRO-section{
+    padding: 0;
+  }
+  .ONLINEPAG-menu{
+    border-radius: 0;
+  }
+  .ONLINEPAG-menu{
+    padding: 10px;
+  }
+  .ONLINEPRO-tabs-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media (max-width:480px) {
+  .ONLINEPRO-section{
+    padding: 0;
+  }
+  .ONLINEPAG-menu{
+    border-radius: 0;
+  }
+  .ONLINEPAG-menu{
+    padding: 10px;
+  }
 }

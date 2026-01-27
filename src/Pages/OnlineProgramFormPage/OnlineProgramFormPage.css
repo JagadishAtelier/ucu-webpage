@@ -1,0 +1,159 @@
+.ONLINEFORM-page-wrapper {
+  background: url('https://img.freepik.com/free-photo/wide-angle-shot-schonbrunn-palace-vienna-austria-with-cloudy-blue-sky_181624-9096.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 40px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.ONLINEFORM-card {
+  border-radius: 12px;
+  border: none;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ONLINEFORM-title {
+  color: #333;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.ONLINEFORM-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.ONLINEFORM-link {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.ONLINEFORM-label {
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.ONLINEFORM-input {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.ONLINEFORM-input:focus {
+  box-shadow: none;
+  border-color: #f45b50;
+}
+
+.ONLINEFORM-captcha-box {
+  background: #f8f9fa;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.ONLINEFORM-refresh {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.ONLINEFORM-small-text {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.ONLINEFORM-checkbox {
+  cursor: pointer;
+}
+
+.ONLINEFORM-submit-btn {
+  background-color: #f45b50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.ONLINEFORM-submit-btn:hover {
+  background-color: #d44a3e;
+  color: white;
+}
+
+
+/* Background wrapper to mimic the light gray background */
+.ONLINEFORMDATA-wrapper {
+    background-color: #ffffff;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Red bordered header box */
+.ONLINEFORMDATA-header-box {
+    border: 1px solid #f5c2c7;
+    background-color: #fff5f5;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ONLINEFORMDATA-main-title {
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Main grey content card */
+.ONLINEFORMDATA-content-card {
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.ONLINEFORMDATA-section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.ONLINEFORMDATA-step-heading {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.ONLINEFORMDATA-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.ONLINEFORMDATA-list {
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.ONLINEFORMDATA-list li {
+    margin-bottom: 10px;
+}
+
+.ONLINEFORMDATA-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.ONLINEFORMDATA-link:hover {
+    text-decoration: underline;
+}
+
+.ONLINEFORMDATA-note {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
