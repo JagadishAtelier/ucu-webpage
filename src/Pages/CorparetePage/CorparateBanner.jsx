@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ChevronRight } from 'lucide-react'
 import './CorparatePage.css'
 import Navbar from '../../Components/Navbar/Navbar'
@@ -6,7 +6,31 @@ import NewFooter from '../../Components/NewFooter/NewFooter'
 import CAPSection from './CAPSection'
 import CTCASection from './CTCASection'
 import CXOSeriesHome from './CXOSeriesHome'
+import { useLocation } from 'react-router-dom'
 function CorparateBanner() {
+      const location = useLocation();
+    
+useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const cxo = params.get("cxo");
+
+    if (location.pathname.includes("/engagement")) {
+      let targetId = null;
+
+      if (location.pathname.includes("/cap")) targetId = "CAPSection";
+      if (location.pathname.includes("/ct-to-ca")) targetId = "CTCASection";
+      if (cxo) targetId = "CXOSeriesHome";
+
+      if (targetId) {
+        const element = document.getElementById(targetId);
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: "smooth" });
+          }, 150);
+        }
+      }
+    }
+  }, [location]);
     return (
         <div>
             <Navbar />
@@ -36,8 +60,8 @@ function CorparateBanner() {
                 </div>
 
             </div>
-            <CAPSection/>
-            <CTCASection/>
+            <div id='CAPSection'> <CAPSection/></div>
+            <div id='CTCASection'><CTCASection/></div>
             <CXOSeriesHome/>
             <NewFooter />
         </div>

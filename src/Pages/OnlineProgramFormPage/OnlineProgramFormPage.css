@@ -46,7 +46,7 @@
 
 .ONLINEFORM-input:focus {
   box-shadow: none;
-  border-color: #f45b50;
+  border-color: #1d5ec9;
 }
 
 .ONLINEFORM-captcha-box {
@@ -54,7 +54,6 @@
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 5px;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 .ONLINEFORM-refresh {
@@ -72,7 +71,7 @@
 }
 
 .ONLINEFORM-submit-btn {
-  background-color: #f45b50;
+  background-color: #1d5ec9;
   color: white;
   border: none;
   border-radius: 4px;
@@ -81,7 +80,7 @@
 }
 
 .ONLINEFORM-submit-btn:hover {
-  background-color: #d44a3e;
+  background-color: #1d5ec9;
   color: white;
 }
 

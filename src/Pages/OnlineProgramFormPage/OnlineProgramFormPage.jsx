@@ -63,7 +63,7 @@ return (
           <div className="card-body p-4 p-md-5">
             <h2 className="ONLINEFORM-title mb-1">Sign Up Form</h2>
             <p className="ONLINEFORM-subtitle mb-4">
-              Already have an account? <span className="text-danger ONLINEFORM-link">Login</span>
+              Already have an account? <span className="text-primary ONLINEFORM-link">Login</span>
             </p>
 
             <form>

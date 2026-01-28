@@ -8,7 +8,7 @@ const data = [
         date: "August 23, 2025",
         head: "The Hindu features Dr Abhijit Dasgupta on early business & tech lessons for career success",
         content: "In the article published in The Hindu, Dr Abhijit Dasgupta (Assistant Professor and Director - Bachelor of Data Science), UCU, writes about the transformative impact of introducing business and technology to young minds at an early age.",
-        topic: "Faculty in the News, SP Jain in the News",
+        topic: "Faculty in the News, UCU in the News",
         link: "/The Hindu features Dr Abhijit Dasgupta on early business & tech lessons for career success"
     },
     {
@@ -16,13 +16,13 @@ const data = [
         date: "August 23, 2025",
         head: "The Hindu features Dr Abhijit Dasgupta.",
         content: "In the article published in The Hindu, Dr Abhijit Dasgupta writes about the transformative.",
-        topic: "SP Jain in the News",
+        topic: "UCU in the News",
         link: "/"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
-        head: "SP Jain's Faculty on Building Future Skills",
+        head: "UCU Faculty on Building Future Skills",
         content: "A spotlight on Dr Abhijit Dasgupta’s contribution in bridging business education and data science.",
         topic: "Faculty in the News",
         link: "/"
@@ -30,9 +30,9 @@ const data = [
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
-        head: "SP Jain’s Global Recognition Continues",
+        head: "UCU Global Recognition Continues",
         content: "Dr Dasgupta shares how early exposure to entrepreneurship and tech leads to creative problem-solving.",
-        topic: "SP Jain Updates",
+        topic: "UCU Updates",
         link: "/"
     },
     {

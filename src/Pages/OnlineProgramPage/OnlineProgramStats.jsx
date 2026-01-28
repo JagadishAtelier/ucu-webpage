@@ -24,7 +24,7 @@ const OnlineProgramStats = () => {
   ];
 
   return (
-    <div className="ONLINEACT py-5">
+    <div className="ONLINEACT py-lg-5 py-0">
       <div className="container">
         <div className="stats-wrapper shadow-lg">
           <div className="row g-0">

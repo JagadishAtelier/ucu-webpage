@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Button } from "react-bootstrap";
-
-const cxoSeriesSubHead = ["CIO", "CPO", "CHRO", "CFO", "CEO", "COO"];
+import { useLocation } from "react-router-dom";
+const cxoSeriesSubHead = ["CIO", "CTO", "CMO", "CHRO", "CFO", "CPO"];
 
 const data = [
   {
@@ -16,6 +16,7 @@ const data = [
     para: "Empowering the next generation of digital CIOs",
     author: "Rajesh Mehra",
     profession: "CIO, InnovateCorp",
+    cxo: "CIO",
   },
   {
     videoUrl: "https://youtu.be/bhgVNTJUytA?si=FGAtsM2xOS8NPyRU",
@@ -24,6 +25,7 @@ const data = [
     para: "Transforming HR strategy for the future workforce",
     author: "Anita Sharma",
     profession: "CHRO, PeopleFirst",
+    cxo: "CTO",
   },
   {
     videoUrl: "https://youtu.be/ulaQhIpWY98?si=O_Ofh6g_EBIawX-C",
@@ -32,6 +34,7 @@ const data = [
     para: "Leading through innovation: The CEO’s perspective",
     author: "Priya Nair",
     profession: "CEO, VisionNext",
+    cxo: "CMO",
   },
   {
     videoUrl: "https://youtu.be/ZluP0DX4yWk",
@@ -40,6 +43,7 @@ const data = [
     para: "Driving efficiency through automation",
     author: "Manish Rao",
     profession: "COO, TechBridge",
+    cxo: "CHRO",
   },
   {
     videoUrl: "https://youtu.be/ZluP0DX4yWk",
@@ -48,15 +52,36 @@ const data = [
     para: "Financial resilience in dynamic markets",
     author: "Divya Khanna",
     profession: "CFO, FinWise",
+    cxo: "CFO",
+  },
+  {
+    videoUrl: "https://youtu.be/ZluP0DX4yWk",
+    thumbnail:
+      "https://images.pexels.com/photos/1181346/pexels-photo-1181346.jpeg",
+    para: "Financial resilience in dynamic markets",
+    author: "Divya Khanna",
+    profession: "CPO, FinWise",
+    cxo: "CPO",
   },
 ];
 
 function CXOSeriesHome() {
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState("CIO");
   const [viewAll, setViewAll] = useState(false);
 
+    useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const cxoFromUrl = params.get("cxo");
+
+    if (cxoFromUrl) {
+      setActiveTab(cxoFromUrl.toUpperCase());
+    }
+  }, [location.search]);
+
+  const filteredData = data.filter(item => item.cxo === activeTab);
   return (
-    <div className="captital-campus-content-sec mt-5">
+    <div id="CXOSeriesHome" className="captital-campus-content-sec mt-5">
       <h1 className="cap-cxo-title text-center display-5 fw-bold"><span style={{ color: "#5ac501" }}>CXO </span> Series</h1>
       <p className="cap-cxo-desc text-center pt">
         UCU’s CXO Series is a marquee leadership engagement platform where top business leaders, BU heads, and global strategists share firsthand insights with students. These high-impact sessions offer a rare window into boardroom thinking, industry foresight, and leadership journeys—bridging the gap between classroom learning and executive decision-making.
@@ -66,14 +91,13 @@ function CXOSeriesHome() {
 
       {/* Tabs */}
       <div className="cap-cxo-tabs d-flex justify-content-center flex-wrap gap-3 mt-4">
-        {cxoSeriesSubHead.map((subhead, index) => (
+        {cxoSeriesSubHead.map(tab => (
           <button
-            key={index}
-            onClick={() => setActiveTab(subhead)}
-            className={`cap-cxo-tab ${activeTab === subhead ? "active" : "inactive"
-              }`}
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            className={`cap-cxo-tab ${activeTab === tab ? "active" : ""}`}
           >
-            {subhead}
+            {tab}
           </button>
         ))}
       </div>
@@ -96,7 +120,7 @@ function CXOSeriesHome() {
             }}
             className="cap-cxo-swiper pb-3"
           >
-            {data.map((item, index) => (
+            {filteredData.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="cap-cxo-card position-relative">
                   <img

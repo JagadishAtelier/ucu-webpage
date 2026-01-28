@@ -5,7 +5,7 @@ const data = [
     {
         videoUrl: "https://youtu.be/uvyTVoElld4?si=ET5MBHw44ReoNMhG",
         thumbnail: "https://t3.ftcdn.net/jpg/03/88/72/64/360_F_388726457_kjWTTE4phvKdYjSVKr13N1lA1mKc4yJe.jpg",
-        para: "Abigail Kyra Zhang’s multi-city adventure with SP Jain Global",
+        para: "Abigail Kyra Zhang’s multi-city adventure with UCU",
         tabData: "studentsAlumni",
     },
     {
@@ -58,7 +58,7 @@ function MediaGalleryAbout() {
     return (
         <div className='captital-campus-content-sec my-4'>
             <p>
-                At SP Jain, we have a thriving community of students, faculty and alumni
+                At UCU, we have a thriving community of students, faculty and alumni
                 from over 30 countries with diverse ideas, strength and experiences.
                 These perspectives come together to inspire, engage and enrich the shared
                 learning every day. Our commitment to diversity, offering global education

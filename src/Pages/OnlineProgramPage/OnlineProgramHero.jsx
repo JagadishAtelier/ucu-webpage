@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+const locationData = {
+  India: {
+    TamilNadu: ["Chennai", "Coimbatore", "Madurai"],
+    Karnataka: ["Bengaluru", "Mysuru", "Mangalore"],
+    Maharashtra: ["Mumbai", "Pune", "Nagpur"],
+  },
+  USA: {
+    California: ["Los Angeles", "San Francisco", "San Diego"],
+    Texas: ["Houston", "Dallas", "Austin"],
+  },
+};
 
 const OnlineProgramHero = () => {
+    const [country, setCountry] = useState("");
+  const [state, setState] = useState("");
+  const [city, setCity] = useState("");
+
+  const countries = Object.keys(locationData);
+  const states = country ? Object.keys(locationData[country]) : [];
+  const cities = country && state ? locationData[country][state] : [];
   return (
 <div className="ONLINEHER">
   <div className="ONLINEHER-hero-background">
@@ -70,36 +88,88 @@ const OnlineProgramHero = () => {
             Course you are interested in
           </label>
           <select className="ONLINEHER-select form-select">
-            <option>Select Course</option>
+  <option value="" disabled selected hidden>
+    Select your option
+  </option>
+  <option value="1">Career Reboot Program for Women</option>
+  <option value="2">Sales</option>
+  <option value="3">Product</option>
+  <option value="4">Consulting</option>
+  <option value="5">Cybersecurity</option>
+  <option value="6">Digital Marketing & AI</option>
+  <option value="7">Banking & Finance</option>
+  <option value="8">International Business</option>
+  <option value="9">FinTech Genesis</option>
+  <option value="10">GCC Launchpad</option>
+  <option value="11">HealthTech Ignition</option>
+  <option value="12">Advanced Manufacturing</option>
           </select>
         </div>
 
-        <div className="col-md-6">
-          <label className="ONLINEHER-label form-label text-muted small">
-            Select Country
-          </label>
-          <select className="ONLINEHER-select form-select">
-            <option>Select Country</option>
-          </select>
-        </div>
+<div className="col-md-6">
+        <label className="ONLINEHER-label form-label text-muted small">
+          Select Country
+        </label>
+        <select
+          className="ONLINEHER-select form-select"
+          value={country}
+          onChange={(e) => {
+            setCountry(e.target.value);
+            setState("");
+            setCity("");
+          }}
+        >
+          <option value="">Select Country</option>
+          {countries.map((c) => (
+            <option key={c} value={c}>
+              {c}
+            </option>
+          ))}
+        </select>
+      </div>
 
-        <div className="col-md-6">
-          <label className="ONLINEHER-label form-label text-muted small">
-            Select State
-          </label>
-          <select className="ONLINEHER-select form-select">
-            <option>Select State</option>
-          </select>
-        </div>
+      {/* State */}
+      <div className="col-md-6">
+        <label className="ONLINEHER-label form-label text-muted small">
+          Select State
+        </label>
+        <select
+          className="ONLINEHER-select form-select"
+          value={state}
+          onChange={(e) => {
+            setState(e.target.value);
+            setCity("");
+          }}
+          disabled={!country}
+        >
+          <option value="">Select State</option>
+          {states.map((s) => (
+            <option key={s} value={s}>
+              {s}
+            </option>
+          ))}
+        </select>
+      </div>
 
-        <div className="col-md-6">
-          <label className="ONLINEHER-label form-label text-muted small">
-            Select City
-          </label>
-          <select className="ONLINEHER-select form-select">
-            <option>Select City</option>
-          </select>
-        </div>
+      {/* City */}
+      <div className="col-md-6">
+        <label className="ONLINEHER-label form-label text-muted small">
+          Select City
+        </label>
+        <select
+          className="ONLINEHER-select form-select"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          disabled={!state}
+        >
+          <option value="">Select City</option>
+          {cities.map((c) => (
+            <option key={c} value={c}>
+              {c}
+            </option>
+          ))}
+        </select>
+      </div>
 
         <div className="col-12">
           <div className="ONLINEHER-checkbox form-check d-flex gap-2 bg-light p-3 rounded">

@@ -46,7 +46,7 @@ function OfferingsPlacement() {
                             </Button>
                             <Button
                                 className='col-4'
-                                onClick={()=>navigate('contact-us')}
+                                onClick={()=>navigate('/contact-us')}
                                 style={{ backgroundColor: "#5ac501", border: "none" }}
                             >
                                 Contact us

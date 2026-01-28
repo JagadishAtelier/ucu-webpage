@@ -16,17 +16,19 @@ export const menuData = [
             label: "Career Transformation to Career Acceleration (CT 2 CA)",
             link: "/engagement/ct-to-ca",
           },
-          {
-            label: "CXO Series",
-            submenu: [
-              { label: "CIO ", link: "/engagement/cio" },
-              { label: "CTO ", link: "/engagement/cto" },
-              { label: "CMO ", link: "/engagement/cmo" },
-              { label: "CHRO", link: "/engagement/chro" },
-              { label: "CFO ", link: "/engagement/cfo" },
-              { label: "CPO ", link: "/engagement/cpo" },
-            ],
-          },
+{
+  label: "CXO Series",
+  submenu: [
+{ label: "CIO", link: "/engagement?cxo=CIO" },
+{ label: "CTO", link: "/engagement?cxo=CTO" },
+{ label: "CMO", link: "/engagement?cxo=CMO" },
+{ label: "CHRO", link: "/engagement?cxo=CHRO" },
+{ label: "CFO", link: "/engagement?cxo=CFO" },
+{ label: "CPO", link: "/engagement?cxo=CPO" },
+
+  ],
+}
+
         ],
       },
        {
@@ -114,6 +116,7 @@ export const menuData = [
   {
     label: "Online Programs",
     placement: "top",
+         link: "/online-program/",
     submenu: [
       { label: "Digital Marketing & AI", link: "/online-program/Digital-Marketing-AI" },
       { label: "Product Management", link: "/online-program/Product-Management" },
@@ -849,6 +852,7 @@ export const menuDataMobile = [
   {
     label: "Online Programs",
     placement: "top",
+     link: "/online-program/online",
     submenu: [
       { label: "Digital Marketing & AI", link: "/online-program/Digital-Marketing-AI" },
       { label: "Product Management", link: "/online-program/Product-Management" },

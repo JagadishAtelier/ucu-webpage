@@ -33,14 +33,14 @@ const OnlineProgramValue = () => {
                 VALUE ADDED PROGRAMS at no extra cost.
               </p>
 
-              <div className="ONLINEVAL-links">
+              {/* <div className="ONLINEVAL-links">
                 <a href="/student-services">Student Services</a>
 
                 <a href="/value-added-services" className="ONLINEVAL-learn-more">
                   <span>LEARN MORE</span>
                 <ChevronRight/>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
 
