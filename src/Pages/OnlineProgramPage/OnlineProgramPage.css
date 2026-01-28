@@ -67,9 +67,6 @@
 
 /* MOBILE SCROLL */
 @media (max-width: 1199px) {
-  .ONLINEPAG-header {
-    display: block !important;
-  }
 
   .ONLINEPAG-menu {
     overflow-x: auto;

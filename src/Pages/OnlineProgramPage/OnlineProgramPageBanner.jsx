@@ -4,7 +4,7 @@ import { Search } from "lucide-react";
 
 function OnlineProgramPageBanner() {
   return (
-    <div className="ONLINEPAG-header d-none d-xl-flex">
+    <div className="ONLINEPAG-header d-none d-lg-flex">
       <div className="container-fluid d-flex align-items-center px-0 px-lg-3">
 
         {/* Logo */}
