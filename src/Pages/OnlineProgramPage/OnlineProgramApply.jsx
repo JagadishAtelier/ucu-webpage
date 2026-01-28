@@ -107,7 +107,7 @@ const OnlineProgramApply = () => {
         </div>
 
         {/* ===== CTA ===== */}
-        <div className="row mt-4 g-4 justify-content-end">
+        <div className="row mt-4 g-4 justify-content-center">
           <div className="col-lg-3 col-md-4">
             <a
               className="ONLINEAPP-cta ONLINEAPP-apply"

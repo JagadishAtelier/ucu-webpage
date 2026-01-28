@@ -131,42 +131,42 @@ const programs = [
     title: "FinTech Ascend",
     duration: "2 Years",
     category: "Executive & Advanced Executive PG Certificate Programs",
-    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    img: "https://img.freepik.com/free-photo/close-up-hand-holding-smartphone_23-2149151172.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
         link:"/program/FinTech-Ascend"
   },
   {
     title: "FinTech Vanguard",
     duration: "2 Years",
     category: "Executive & Advanced Executive PG Certificate Programs",
-    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    img: "https://img.freepik.com/free-photo/beautiful-cryptocurrwncy-concept_23-2149250213.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
         link:"/program/FinTech-Vanguard"
   },
   {
     title: "GCC-Catalyst",
     duration: "2 Years",
     category: "Executive & Advanced Executive PG Certificate Programs",
-    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    img: "https://img.freepik.com/free-vector/chlorine-background_52683-49563.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
         link:"/program/GCC-Catalyst"
   },
   {
     title: "GCC Elevate",
     duration: "2 Years",
     category: "Executive & Advanced Executive PG Certificate Programs",
-    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    img: "https://img.freepik.com/premium-photo/aerial-view-city-night-social-media-connection-concept-photo-manipulation_232070-4216.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
         link:"/program/GCC-Elevate"
   },
   {
     title: "HealthTech Navigate",
     duration: "2 Years",
     category: "Executive & Advanced Executive PG Certificate Programs",
-    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    img: "https://img.freepik.com/free-photo/healthcare-experts-discuss-recovery-strategies-treatment-center_482257-95008.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
         link:"/program/HealthTech-Navigate"
   },
   {
     title: "HealthTech Pinnacle",
     duration: "2 Years",
     category: "Executive & Advanced Executive PG Certificate Programs",
-    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    img: "https://img.freepik.com/free-photo/futuristic-technology-hologram_23-2151917435.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
         link:"/program/HealthTech-Pinnacle"
   },
 
