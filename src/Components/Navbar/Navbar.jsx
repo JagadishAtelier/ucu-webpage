@@ -424,7 +424,7 @@ const Navbar = () => {
                                             </div> */}
                                             <div className="mt-auto">
                                               <h5 className="card-title text-white">{item.label}</h5>
-                                              <p className="card-description text-white opacity-75">{item.description}</p>
+                                              <p className="card-description text-white opacity-90">{item.description}</p>
                                             </div>
                                           </div>
                                         </div>
