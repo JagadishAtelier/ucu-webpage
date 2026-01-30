@@ -1,15 +1,18 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-function NewAdminReady() {
+function NewAdminReady({ data }) {
+    const title = data?.readyToApply?.title || "Ready to Transform Your Career?";
+    const description = data?.readyToApply?.description || "Join 180 ambitious individuals in the Class of 2026. Applications close March 31, 2026.";
+
     return (
         <div id="apply" className="NEWADMCAREER-section">
             <Container className="text-center NEWADMCAREER-container">
                 <h3 className="NEWADMCAREER-title" data-aos="fade-down" data-aos-delay="100">
-                    Ready to Transform Your Career?
+                    {title}
                 </h3>
                 <p className="NEWADMCAREER-subtitle text-white" data-aos="fade-down" data-aos-delay="100">
-                    Join 180 ambitious individuals in the Class of 2026. Applications close March 31, 2026.
+                    {description}
                 </p>
 
                 {/* Buttons */}

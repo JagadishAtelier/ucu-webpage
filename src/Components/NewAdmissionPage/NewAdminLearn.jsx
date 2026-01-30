@@ -5,52 +5,58 @@ import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 
-function NewAdminLearn() {
+
+
+function NewAdminLearn({ data }) {
   /* =======================
-     FACULTY DATA
+     FACULTY DATA (Fallback)
   ======================= */
-  const facultyData = [
+  const defaultFacultyData = [
     {
-      name: "Dr. Rajesh Kumar",
-      role: "Strategy & Leadership",
+      title: "Dr. Rajesh Kumar",
+      subtitle: "Strategy & Leadership",
       image:
         "https://img.freepik.com/free-photo/cheerful-indian-businessman-smiling-closeup-portrait-jobs-career-campaign_53876-129417.jpg",
-      quote:
+      description:
         "At UCU University, we focus on experiential learning that helps students think strategically and lead with confidence in complex business environments.",
-      credMain: "PhD in Management",
-      credSub: "20+ years of academic & industry experience",
+      listItems: ["PhD in Management", "20+ years of academic & industry experience"]
     },
     {
-      name: "Dr. Priya Menon",
-      role: "Finance & Business Analytics",
+      title: "Dr. Priya Menon",
+      subtitle: "Finance & Business Analytics",
       image:
         "https://img.freepik.com/free-photo/picture-dissatisfied-grumpy-young-afro-american-woman-with-long-straight-hair-expressing-her-disagreement-keeping-arms-folded-looking-with-serious-skeptical-facial-expression_344912-1026.jpg",
-      quote:
+      description:
         "Our approach blends strong analytical foundations with practical financial insights to prepare students for data-driven decision making.",
-      credMain: "PhD in Finance",
-      credSub: "Researcher & industry consultant",
+      listItems: ["PhD in Finance", "Researcher & industry consultant"]
     },
     {
-      name: "Prof. Arjun Mehta",
-      role: "Marketing & Digital Strategy",
+      title: "Prof. Arjun Mehta",
+      subtitle: "Marketing & Digital Strategy",
       image:
         "https://img.freepik.com/free-photo/worldface-pakistani-guy-white-background_53876-146312.jpg",
-      quote:
+      description:
         "UCU University emphasizes applied learning, enabling students to understand consumer behavior and modern digital business models.",
-      credMain: "MBA & Advanced Marketing Certifications",
-      credSub: "Academic mentor with industry exposure",
-    },
+      listItems: ["MBA & Advanced Marketing Certifications", "Academic mentor with industry exposure"]
+    }
   ];
 
   /* =======================
      STATS DATA
   ======================= */
-  const statsData = [
+  const defaultStats = [
     { value: "25+", label: "Experienced Faculty Members" },
     { value: "Majority", label: "Doctorates & Research Scholars" },
     { value: "15+", label: "Industry-Experienced Mentors" },
     { value: "100+", label: "Research Papers & Case Studies" },
   ];
+
+  const sectionData = data?.learningExperience || {};
+  const facultyList = sectionData.cards && sectionData.cards.length > 0 ? sectionData.cards : defaultFacultyData;
+  const statsData = defaultStats; // Not in CMS yet
+  const title = sectionData.title || "Learn from the Best at UCU University";
+  const description = sectionData.description || "UCU University’s faculty combines academic excellence, research depth, and real-world industry exposure to deliver a future-focused learning experience.";
+
 
   return (
     <div id="placements" className="NEWADMLEARN-section">
@@ -58,12 +64,10 @@ function NewAdminLearn() {
         {/* Header */}
         <div className="text-center NEWADMLEARN-header">
           <h3 className="NEWADMLEARN-title" data-aos="fade-down" data-aos-delay="100">
-            Learn from the Best at UCU University
+            {title}
           </h3>
           <p className="NEWADMLEARN-subtitle" data-aos="fade-down" data-aos-delay="100">
-            UCU University’s faculty combines academic excellence, research
-            depth, and real-world industry exposure to deliver a future-focused
-            learning experience.
+            {description}
           </p>
         </div>
 
@@ -84,35 +88,40 @@ function NewAdminLearn() {
           }}
           data-aos="zoom-in" data-aos-delay="100"
         >
-          {facultyData.map((faculty, index) => (
-            <SwiperSlide key={index}>
-              <div className="NEWADMLEARN-card">
-                <div className="d-flex align-items-center gap-3 mb-4">
-                  <img
-                    src={faculty.image}
-                    alt={faculty.name}
-                    className="NEWADMLEARN-avatar"
-                  />
-                  <div>
-                    <div className="NEWADMLEARN-name">{faculty.name}</div>
-                    <div className="NEWADMLEARN-role">{faculty.role}</div>
+          {facultyList.map((faculty, index) => {
+            const credMain = faculty.listItems && faculty.listItems[0] ? faculty.listItems[0] : "";
+            const credSub = faculty.listItems && faculty.listItems[1] ? faculty.listItems[1] : "";
+
+            return (
+              <SwiperSlide key={index}>
+                <div className="NEWADMLEARN-card">
+                  <div className="d-flex align-items-center gap-3 mb-4">
+                    <img
+                      src={faculty.image}
+                      alt={faculty.title}
+                      className="NEWADMLEARN-avatar"
+                    />
+                    <div>
+                      <div className="NEWADMLEARN-name">{faculty.title}</div>
+                      <div className="NEWADMLEARN-role">{faculty.subtitle}</div>
+                    </div>
+                  </div>
+
+                  <p className="NEWADMLEARN-quote">"{faculty.description}"</p>
+
+                  <div className="NEWADMLEARN-divider">
+                    <div className="NEWADMLEARN-cred-label">Credentials</div>
+                    <div className="NEWADMLEARN-cred-main">
+                      {credMain}
+                    </div>
+                    <div className="NEWADMLEARN-cred-sub">
+                      {credSub}
+                    </div>
                   </div>
                 </div>
-
-                <p className="NEWADMLEARN-quote">"{faculty.quote}"</p>
-
-                <div className="NEWADMLEARN-divider">
-                  <div className="NEWADMLEARN-cred-label">Credentials</div>
-                  <div className="NEWADMLEARN-cred-main">
-                    {faculty.credMain}
-                  </div>
-                  <div className="NEWADMLEARN-cred-sub">
-                    {faculty.credSub}
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
 
         {/* Stats */}
@@ -128,5 +137,4 @@ function NewAdminLearn() {
     </div>
   );
 }
-
 export default NewAdminLearn;

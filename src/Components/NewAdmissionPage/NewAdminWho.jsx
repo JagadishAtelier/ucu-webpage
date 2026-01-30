@@ -1,85 +1,66 @@
+
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import * as FaIcons from "react-icons/fa";
 
-function NewAdminWho() {
+function NewAdminWho({ data }) {
     /* =======================
-       DATA CONFIG
+       DATA CONFIG (Fallbacks)
     ======================= */
 
-    const statsData = [
+    const defaultStats = [
         { value: "180", label: "Total Intake" },
         { value: "Entrance Test", label: "Score Considered" },
         { value: "Up to 40%", label: "Women Representation" },
         { value: "Merit-Based", label: "Scholarships Available" },
     ];
 
+    const defaultTitle = "Who Should Apply to UCU University";
+    const defaultSubtitle = "UCU University invites motivated learners to be part of its founding cohort and contribute to a forward-looking academic and professional ecosystem.";
+    const defaultBadge = "Founding Batch 2026–28";
 
-    const cardData = [
+    const defaultCards = [
         {
             title: "Ideal Candidate Profile",
-            icon: "fas fa-lightbulb",
+            icon: "FaLightbulb",
             listClass: "NEWADMWHO-list",
-            iconClass: "fas fa-check-circle",
-            items: [
-                {
-                    title: "Curious & Innovative Thinkers",
-                    desc: "Individuals who are eager to learn, question ideas, and adapt to evolving business environments.",
-                },
-                {
-                    title: "Strong Academic Foundation",
-                    desc: "Graduates with consistent academic performance and a commitment to continuous learning.",
-                },
-                {
-                    title: "Leadership & Initiative",
-                    desc: "Demonstrated leadership through academics, work experience, sports, or community engagement.",
-                },
+            iconClass: "FaCheckCircle",
+            listItems: [
+                "Curious & Innovative Thinkers",
+                "Strong Academic Foundation",
+                "Leadership & Initiative"
             ],
         },
         {
             title: "Diverse Academic Backgrounds",
-            icon: "fas fa-users",
+            icon: "FaUsers",
             listClass: "NEWADMWHO-list",
-            iconClass: "fas fa-check-circle",
-            items: [
-                {
-                    title: "All Disciplines Welcome",
-                    desc: "Engineering, Commerce, Science, Arts, Humanities, and interdisciplinary backgrounds.",
-                },
-                {
-                    title: "Fresh Graduates",
-                    desc: "Students ready to build strong fundamentals and begin their professional journey.",
-                },
-                {
-                    title: "Working Professionals",
-                    desc: "Individuals seeking career growth, role transition, or leadership development.",
-                },
+            iconClass: "FaCheckCircle",
+            listItems: [
+                "All Disciplines Welcome",
+                "Fresh Graduates",
+                "Working Professionals"
             ],
         },
         {
             title: "Founding Batch Benefits",
-            icon: "fas fa-trophy",
+            icon: "FaTrophy",
             listClass: "NEWADMWHO-list NEWADMWHO-list-star",
-            iconClass: "fas fa-star",
-            items: [
-                {
-                    title: "Inaugural Cohort Recognition",
-                    desc: "Be part of UCU University’s first academic legacy.",
-                },
-                {
-                    title: "Influence Academic Culture",
-                    desc: "Actively contribute to shaping traditions, student initiatives, and academic practices.",
-                },
-                {
-                    title: "Close Faculty Interaction",
-                    desc: "Enhanced mentorship and direct engagement with core academic and program leadership teams.",
-                },
+            iconClass: "FaStar",
+            listItems: [
+                "Inaugural Cohort Recognition",
+                "Influence Academic Culture",
+                "Close Faculty Interaction"
             ],
         },
     ];
 
-    /* =======================
-       UI
-    ======================= */
+    const title = data?.title || defaultTitle;
+    const subtitle = data?.description || defaultSubtitle; // Note: backend schema calls it description, frontend prop was subtitle
+    const badge = data?.badge || defaultBadge;
+    const cards = data?.cards && data.cards.length > 0 ? data.cards : defaultCards;
+    // Stats are not in CMS yet, using default
+    const statsData = defaultStats;
 
     return (
         <div className="NEWADMWHO-section py-5 bg-white">
@@ -88,13 +69,13 @@ function NewAdminWho() {
                 <div className="text-center mb-4">
                     <span className="NEWADMWHO-badge d-inline-block mb-3" data-aos="fade-down" data-aos-delay="100">
                         <i className="fas fa-star me-2"></i>
-                        Founding Batch 2026–28
+                        {badge}
                     </span>
 
-                    <h3 className="NEWADMWHO-title mb-3" data-aos="fade-down" data-aos-delay="100">Who Should Apply to UCU University</h3>
+                    <h3 className="NEWADMWHO-title mb-3" data-aos="fade-down" data-aos-delay="100">{title}</h3>
 
                     <p className="NEWADMWHO-subtitle mx-auto" data-aos="fade-down" data-aos-delay="100">
-                        UCU University invites motivated learners to be part of its founding cohort and contribute to a forward-looking academic and professional ecosystem.
+                        {subtitle}
                     </p>
                 </div>
 
@@ -112,30 +93,35 @@ function NewAdminWho() {
 
                 {/* Info Cards */}
                 <Row className="g-4">
-                    {cardData.map((card, index) => (
-                        <Col lg={4} key={index}>
-                            <Card className="NEWADMWHO-info-card h-100" data-aos="fade-up" data-aos-delay="100">
-                                <Card.Body>
-                                    <h4 className="NEWADMWHO-card-title">
-                                        <i className={`${card.icon} me-2`}></i>
-                                        {card.title}
-                                    </h4>
+                    {cards.map((card, index) => {
+                        // Dynamic Icons
+                        const IconComponent = FaIcons[card.icon] || FaIcons.FaRegLightbulb;
+                        const ListIcon = index === 2 ? FaIcons.FaStar : FaIcons.FaCheckCircle; // Logic for specific icon style or just generic
 
-                                    <ul className={card.listClass}>
-                                        {card.items.map((item, idx) => (
-                                            <li key={idx}>
-                                                <i className={`${card.iconClass} NEWADMWHO-list-icon`}></i>
-                                                <div>
-                                                    <strong>{item.title}</strong>
-                                                    <span>{item.desc}</span>
-                                                </div>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
+                        return (
+                            <Col lg={4} key={index}>
+                                <Card className="NEWADMWHO-info-card h-100" data-aos="fade-up" data-aos-delay="100">
+                                    <Card.Body>
+                                        <h4 className="NEWADMWHO-card-title">
+                                            <IconComponent className="me-2" />
+                                            {card.title}
+                                        </h4>
+
+                                        <ul className={index === 2 ? "NEWADMWHO-list NEWADMWHO-list-star" : "NEWADMWHO-list"}>
+                                            {card.listItems && card.listItems.map((item, idx) => (
+                                                <li key={idx}>
+                                                    <ListIcon className="NEWADMWHO-list-icon" />
+                                                    <div>
+                                                        <strong>{item}</strong>
+                                                    </div>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        );
+                    })}
                 </Row>
             </Container>
         </div>
