@@ -5,13 +5,13 @@
 .campus-full-menu {
     position: fixed;
     top: 140px;
-    /* Aligns with bottom of the logo-box/header */
     left: 0;
     width: 100vw;
     height: calc(100vh - 140px);
-    background: linear-gradient(135deg, #01266b 0%, #6d58e4 100%);
+    /* Deep blue/purple gradient for a premium academic/tech feel */
+    background: linear-gradient(135deg, #021B4B 0%, #19469D 100%);
     z-index: 9999;
-    padding: 4rem 0;
+    padding: 3rem 0;
     overflow-y: auto;
 
     /* Animation */
@@ -22,31 +22,92 @@
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Show state handled via inline display in JSX, but we can add helper */
+/* Helper for open state (if managed manually) */
+.campus-full-menu.open,
 .nav-item:hover .campus-full-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-/* Card Styles */
+/* -------------------------------------
+   Card Styles
+   ------------------------------------- */
+.opacity-90{
+    opacity: 87% !important;
+}
 .campus-menu-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #000;
+    /* fallback */
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    min-height: 220px;
 }
 
 .campus-menu-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-.campus-icon-box img {
-    border: 2px solid #fff;
-    transition: transform 0.3s ease;
+/* Gradient Overlay */
+.campus-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 90%);
+    z-index: 1;
+    transition: background 0.3s ease;
 }
 
-.campus-menu-card:hover .campus-icon-box img {
-    transform: scale(1.1);
+.campus-menu-card:hover .campus-card-overlay {
+    background: linear-gradient(to bottom, transparent 0%, #000 100%);
+}
+
+/* Action Icon (Arrow) */
+.action-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.campus-menu-card:hover .action-icon {
+    background: #fff;
+    color: #000;
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* Typography */
+.card-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsive adjustments */
@@ -60,6 +121,5 @@
 @media (max-width: 992px) {
     .campus-full-menu {
         display: none !important;
-        /* Managed by mobile drawer instead */
     }
 }

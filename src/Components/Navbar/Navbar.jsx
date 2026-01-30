@@ -18,6 +18,15 @@ const Navbar = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Close hover menus on window scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setHoverMenus({});
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const toggleMobile = () => setMobileOpen(!mobileOpen);
 
   const toggleSearch = () => setSearchDropdown(!searchDrodow);
@@ -362,10 +371,10 @@ const Navbar = () => {
                             <div className="container h-100">
                               <div className="row h-100 align-items-center">
                                 {/* Left Side: Testimonial / Impact */}
-                                <div className="col-lg-4 d-flex flex-column justify-content-center pe-5 border-end border-light-subtle">
+                                <div className="col-lg-5 d-flex flex-column justify-content-center pe-5 border-end border-light-subtle">
                                   <div className="mb-4">
-                                    <h3 className="fw-bold text-white mb-3 text-start">Future of Talent</h3>
-                                    <p className="text-white opacity-75 fs-6 lh-base text-start">
+                                    <h3 className="fw-bold text-white mb-3 text-start fs-1">Future of Talent</h3>
+                                    <p className="text-white opacity-90 fs-6 lh-base text-start">
                                       “UCU is redefining the future of talent—rooted in India’s heartland, yet engineered for global impact. Its industry-first, future-ready model is a blueprint for inclusive excellence.”
                                     </p>
                                   </div>
@@ -393,22 +402,31 @@ const Navbar = () => {
                                 </div>
 
                                 {/* Right Side: Cards Grid */}
-                                <div className="col-lg-8 ps-5">
+                                <div className="col-lg-7 ps-5">
                                   <div className="row g-4">
                                     {menu.submenu.map((item, idx) => (
                                       <div className="col-md-6" key={idx}>
                                         <div
-                                          className="campus-menu-card p-3 rounded-3 bg-white h-100 shadow-sm cursor-pointer position-relative overflow-hidden group"
+                                          className="campus-menu-card h-100 cursor-pointer position-relative overflow-hidden"
                                           onClick={() => navigate(`${item.link}`)}
+                                          style={{
+                                            backgroundImage: `url(${item.image})`,
+                                            backgroundSize: "cover",
+                                            backgroundPosition: "center",
+                                          }}
                                         >
-                                          <div className="d-flex gap-3 align-items-center mb-2">
-                                            <div className="campus-icon-box rounded-circle bg-light p-2">
-                                              {/* Simple fallback if no specific icon, utilizing image as cover thumb or removing img for cleaner look */}
-                                              <img src={item.image} alt="" className="rounded-circle" style={{ width: '40px', height: '40px', objectFit: 'cover' }} />
+                                          <div className="campus-card-overlay"></div>
+                                          <div className="card-content d-flex flex-column h-100 position-relative" style={{ zIndex: 2 }}>
+                                            {/* <div className="d-flex align-items-start justify-content-end mb-3 w-100">
+                                              <div className="action-icon">
+                                                <ChevronRight size={20} className="arrow-icon" />
+                                              </div>
+                                            </div> */}
+                                            <div className="mt-auto">
+                                              <h5 className="card-title text-white">{item.label}</h5>
+                                              <p className="card-description text-white opacity-75">{item.description}</p>
                                             </div>
-                                            <h6 className="fw-bold mb-0 text-dark">{item.label}</h6>
                                           </div>
-                                          <p className="text-muted small mb-0 lh-sm">{item.description}</p>
                                         </div>
                                       </div>
                                     ))}
