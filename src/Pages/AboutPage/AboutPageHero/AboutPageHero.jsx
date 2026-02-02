@@ -2,7 +2,7 @@ import React from 'react';
 import './AboutPageHero.css';
 import { FaChevronRight } from 'react-icons/fa';
 
-function AboutPageHero({ title,sub, breadcrumb = [], bgImage }) {
+function AboutPageHero({ title, sub, breadcrumb = [], bgImage }) {
   return (
     <div
       data-aos="fade-down"
@@ -16,9 +16,9 @@ function AboutPageHero({ title,sub, breadcrumb = [], bgImage }) {
       }}
     >
       <div className="hero-content-wrapper" data-aos="fade-right">
-        <h1 className="fw-bold display-4 display-md-3 display-lg-2">{title}</h1>
+        <h1 className="fw-bold display-4 display-md-3 display-lg-2" dangerouslySetInnerHTML={{ __html: title }}></h1>
         {sub && (
-         <p>({sub})</p>
+          <p>({sub})</p>
         )}
         {/* ✅ Breadcrumb rendering */}
         <div className="d-flex align-items-center flex-row gap-2 justify-content-center justify-content-lg-start mt-3 fs-5">

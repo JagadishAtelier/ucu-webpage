@@ -3,30 +3,36 @@ import "./AboutYears.css";
 import CountUp from "react-countup";
 import bgImage from "../../../Assets/aboutPageImage/vision_mission_bg2.png";
 
-const data = [
-  {
-    head: 30,
-    suffix: "+ Years",
-    para: "Of leadership experience shaping business education and transforming learning journeys worldwide.",
-  },
-  {
-    head: 12000,
-    suffix: "+",
-    para: "Global alumni network blending international insight with local excellence and strong industry links.",
-  },
-  {
-    head: 200,
-    suffix: "+",
-    para: "SMEs and industry practitioners driving UCU’s growth and fostering impactful corporate learning.",
-  },
-  {
-    head: 100,
-    suffix: "+",
-    para: "Eminent global professors advancing UCU’s academic excellence and inspiring next-gen leaders.",
-  },
-];
+const AboutYears = ({ statsData }) => {
+  const staticData = [
+    {
+      head: 30,
+      suffix: "+ Years",
+      para: "Of leadership experience shaping business education and transforming learning journeys worldwide.",
+    },
+    {
+      head: 12000,
+      suffix: "+",
+      para: "Global alumni network blending international insight with local excellence and strong industry links.",
+    },
+    {
+      head: 200,
+      suffix: "+",
+      para: "SMEs and industry practitioners driving UCU’s growth and fostering impactful corporate learning.",
+    },
+    {
+      head: 100,
+      suffix: "+",
+      para: "Eminent global professors advancing UCU’s academic excellence and inspiring next-gen leaders.",
+    },
+  ];
 
-function AboutYears() {
+  const data = statsData && statsData.length > 0 ? statsData.map(item => ({
+    head: parseInt(item.heading) || 0,
+    suffix: item.subHeading,
+    para: item.content
+  })) : staticData;
+
   const [inView, setInView] = useState(false);
   const sectionRef = useRef(null);
 
@@ -59,39 +65,38 @@ function AboutYears() {
         backgroundRepeat: "no-repeat",
       }}
     >
-            <div
+      <div
         className="w-100 h-100 py-5 px-3 px-lg-5"
         style={{
           backgroundColor: 'rgba(0, 0, 0, 0.58)', // Adjust the '0.4' value to control opacity
           padding: '1px' // Add a small padding to ensure the overlay takes effect
         }}
       >
-      <div className="d-flex flex-column justify-content-between flex-lg-row justify-content-lg-between align-items-lg-start w-100">
-        {data.map((item, index) => (
-          <div
-            key={index}
-            className={`col-12 col-lg-3 d-flex flex-column gap-3 flex-lg-column align-items-center align-items-lg-start px-0 px-lg-3 position-relative ${
-              index < data.length - 1 ? "with-divider" : ""
-            }`}
-          >
-            <h1 className="fw-bold counter-text">
-              {inView ? (
-                <CountUp
-                  start={0}
-                  end={item.head}
-                  duration={2.5}
-                  separator=","
-                  suffix={item.suffix}
-                />
-              ) : (
-                0
-              )}
-            </h1>
+        <div className="d-flex flex-column justify-content-between flex-lg-row justify-content-lg-between align-items-lg-start w-100">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className={`col-12 col-lg-3 d-flex flex-column gap-3 flex-lg-column align-items-center align-items-lg-start px-0 px-lg-3 position-relative ${index < data.length - 1 ? "with-divider" : ""
+                }`}
+            >
+              <h1 className="fw-bold counter-text">
+                {inView ? (
+                  <CountUp
+                    start={0}
+                    end={item.head}
+                    duration={2.5}
+                    separator=","
+                    suffix={item.suffix}
+                  />
+                ) : (
+                  0
+                )}
+              </h1>
 
-            <p className="counter-paragraph mb-0">{item.para}</p>
-          </div>
-        ))}
-      </div>
+              <p className="counter-paragraph mb-0">{item.para}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

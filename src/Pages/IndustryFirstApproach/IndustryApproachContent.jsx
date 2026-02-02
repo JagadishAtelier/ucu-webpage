@@ -13,25 +13,35 @@ import {
 } from "lucide-react";
 import "./IndustryFirstApproach.css";
 
-const features = [
-  { icon: <Rocket />, title: "Industry First. Future Ready. Always.", description: "At Universal Corporate University (UCU), Chennai, we don’t just follow industry trends — we set them. Our programs are engineered for the boardroom, built with the boardroom, and benchmarked against global best practices. Here's how we lead the charge:" },
-  { icon: <Timer />, title: "Strategy Powered by 100+ CXOs", description: "Our Business Advisory Council, HR Leadership Panels (CHROs, TA Heads, L&D Experts), and Young CXO Council bring together over 100 top-tier industry leaders from global MNCs. These visionaries co-create UCU’s curriculum, ensuring every module is a direct response to what the market demands — not what academia assumes. - In addition, UCU is establishing sector-specific and program-led advisory councils in domains such as Sales, Product Management, Cybersecurity, Brand Management, Digital Marketing, FinTech, Global Capability Centres (GCCs), and more — enabling deep vertical alignment and precision-driven curriculum design for each specialized track." },
-  { icon: <GraduationCap />, title: "Faculty of Titans", description: "UCU’s Professors of Practice and industry trainers hail from the world’s most respected firms in Consulting, Finance, Product Management, and Technology. They don’t just teach — they transfer wisdom, war stories, and winning strategies." },
-  { icon: <BadgeCheck />, title: "Day-Zero Industry Readiness", description: "Our learners don’t wait to be industry-ready — they arrive that way. Every program is infused with real-world simulations, case-led learning, and leadership grooming, ensuring fresh graduates hit the ground sprinting and experienced professionals ascend to strategic roles." },
-  { icon: <Target />, title: "Sector-Specific Leadership Tracks", description: "Whether it’s FinTech, Mobility, Sustainability, BFSI, IT/ITES, Manufacturing, Consulting, Data & Analytics, or Semiconductors — our curated programs are precision-built to meet the leadership needs of tomorrow’s enterprises." },
-  { icon: <TestTube2 />, title: "Faculty Certification with Corporate DNA", description: "UCU’s pioneering Faculty Certification initiative reimagines academic excellence by blending traditional pedagogy with corporate acumen. We certify educators to teach with the pulse of the industry — not just the pages of a textbook." },
-  { icon: <RefreshCcw />, title: "Continuous Learning for Continuous Relevance", description: "For working professionals, UCU is a lifelong partner. Our executive learning modules ensure you stay ahead of the curve — with the latest tools, trends, and transformations shaping your sector." },
-  { icon: <Users />, title: "CXO Academy", description: "Tailored boardroom-ready programs for every C‑suite role — build strategic acumen, governance mastery, and enterprise impact." },
-  { icon: <Building2 />, title: "Leadership Coach", description: "A one‑on‑one coaching journey that transforms senior leaders through diagnostics, bespoke plans, and measurable outcomes." },
-];
+const iconMap = {
+  Rocket: <Rocket />,
+  Timer: <Timer />,
+  GraduationCap: <GraduationCap />,
+  BadgeCheck: <BadgeCheck />,
+  Target: <Target />,
+  TestTube2: <TestTube2 />,
+  RefreshCcw: <RefreshCcw />,
+  Users: <Users />,
+  Building2: <Building2 />,
+  User2: <User2 />
+};
 
-function IndustryApproachContent() {
+function stripHtml(html) {
+  if (!html) return "";
+  const tmp = document.createElement("DIV");
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || "";
+}
+
+function IndustryApproachContent({ features, title, description }) {
   const rowsRef = useRef([]);
   const cardsRef = useRef([]);
-const [expandedIndex, setExpandedIndex] = useState(null);
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
   const toggleExpand = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
+
   useEffect(() => {
     // 🔹 Existing row animation observer
     const rowObserver = new IntersectionObserver(
@@ -77,26 +87,27 @@ const [expandedIndex, setExpandedIndex] = useState(null);
       rowObserver.disconnect();
       if (cardObserver) cardObserver.disconnect();
     };
-  }, []);
+  }, [features]);
 
-  const rows = [
-    features.slice(0, 3),
-    features.slice(3, 6),
-    features.slice(6, 9),
-  ];
+  // Use props features if available
+  const dataFeatures = features || [];
+
+  // Chunk into rows of 3
+  const rows = [];
+  for (let i = 0; i < dataFeatures.length; i += 3) {
+    rows.push(dataFeatures.slice(i, i + 3));
+  }
 
   return (
     <section className="industry-approach-section py-5">
       <div className="container-flued mx-5">
         <div className="text-center mb-5">
           <h2 className="fw-bold display-6">
-            Industry Aligned. Leadership Driven.
+            {title || "Industry Aligned. Leadership Driven."}
           </h2>
-          <p className="text-muted mx-auto" style={{ maxWidth: "750px" }}>
-            UCU is built on a simple belief: education must move at the speed of
-            industry. Every program is engineered with corporate leaders to
-            create future-ready professionals.
-          </p>
+          {description && (
+            <div className="text-muted mx-auto" style={{ maxWidth: "750px" }} dangerouslySetInnerHTML={{ __html: description }}></div>
+          )}
         </div>
 
         {rows.map((rowItems, rowIndex) => (
@@ -108,6 +119,7 @@ const [expandedIndex, setExpandedIndex] = useState(null);
             {rowItems.map((item, index) => {
               const cardIndex = rowIndex * 3 + index;
               const isExpanded = expandedIndex === cardIndex;
+              const iconComponent = iconMap[item.icon] || <Rocket />;
 
               return (
                 <div className="col-lg-4 col-md-6 d-flex justify-content-center" key={index}>
@@ -116,15 +128,17 @@ const [expandedIndex, setExpandedIndex] = useState(null);
                     ref={(el) => cardsRef.current.push(el)}
                   >
                     <div className="d-flex justify-content-center">
-                      <div className="industry-icon">{item.icon}</div>
+                      <div className="industry-icon">{iconComponent}</div>
                     </div>
                     <h4 className="fw-bold mt-4 mb-3 text-center">{item.title}</h4>
 
-                    <p className="text-muted small text-center">
-                      {isExpanded
-                        ? item.description
-                        : item.description.slice(0, 120) + "..."}
-                    </p>
+                    <div className="text-muted small text-center">
+                      {isExpanded ? (
+                        <div dangerouslySetInnerHTML={{ __html: item.description }}></div>
+                      ) : (
+                        <p>{stripHtml(item.description).slice(0, 120) + "..."}</p>
+                      )}
+                    </div>
 
                     <p
                       className="text-primary text-center fw-bold mt-1"

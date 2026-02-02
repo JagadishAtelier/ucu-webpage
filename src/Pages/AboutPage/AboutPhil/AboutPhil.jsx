@@ -51,7 +51,62 @@ const data = [
   },
 ];
 
-function AboutPhil() {
+function AboutPhil({
+  visionData = null,
+  missionData = null
+}) {
+  const defaultVision = `To be a globally recognised force in business education—democratising access, 
+    bridging rural-urban divides, and empowering learners and educators through a curriculum 
+    co-created and delivered by industry leaders and corporate practitioners, within a lifelong 
+    learning ecosystem that redefines global teaching standards and prepares agile talent for 
+    the future of work.`;
+
+  const defaultMission = (
+    <>
+      <ul className="mission-list text-lg-justify">
+        <li className="mb-2">
+          To co-create and co-deliver cutting-edge, contemporary, and
+          future-ready curricula in active collaboration with industry
+          leaders, ensuring every learning experience is rooted in enterprise
+          relevance and designed for real-world impact.
+        </li>
+        <li className="mb-2">
+          To equip MBA aspirants and professionals with the skills and
+          knowledge required to excel in a competitive business landscape.
+        </li>
+        <li className="mb-2">
+          To accelerate academic transformation across partner institutions by
+          empowering their faculty through development programs co-created and
+          delivered with UCU’s expansive industry network—driving measurable
+          upliftment in teaching outcomes and institutional performance.
+        </li>
+        <li className="mb-2">
+          To champion inclusive education by leveraging advanced digital
+          platforms that connect rural and urban learners to high-quality
+          business education—unlocking potential, accelerating growth, and
+          fostering a more equitable talent landscape.
+        </li>
+      </ul>
+    </>
+  );
+
+  // Construct display data
+  const displayData = [
+    {
+      icon: iconVision,
+      head: visionData?.heading ? `<span> ${visionData.heading}</span>` : "<span> Vision</span>",
+      para: visionData?.content || defaultVision,
+      image: visionData?.image || visionImage,
+    },
+    {
+      icon: iconMission,
+      head: missionData?.heading ? `<span > ${missionData.heading}</span>` : "<span > Mission</span>",
+      para: missionData?.content ? (
+        <div dangerouslySetInnerHTML={{ __html: missionData.content }} />
+      ) : defaultMission,
+    },
+  ];
+
   return (
     <div
       data-aos="fade-up"
@@ -72,7 +127,7 @@ function AboutPhil() {
         }}
       >
         <div className="row w-lg-100 py-4 py-lg-0 justify-content-center">
-          {data.map((item, index) => (
+          {displayData.map((item, index) => (
             <div
               key={index}
               className={`col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start mb-4 px-3 ${index === 0
@@ -102,7 +157,7 @@ function AboutPhil() {
               <h1 className="fw-bold vission-h1 fs-2 mb-3 text-center text-lg-start" dangerouslySetInnerHTML={{ __html: item.head }}>
               </h1>
               {typeof item.para === "string" ? (
-                <p className=" vission-p fs-6 mb-3 text-lg-justify ap-text-p">{item.para}</p>
+                <div className=" vission-p fs-6 mb-3 text-lg-justify ap-text-p" dangerouslySetInnerHTML={{ __html: item.para }}></div>
               ) : (
                 <div className=" vission-p fs-6 mb-3 text-lg-right ap-text-p">{item.para}</div>
               )}

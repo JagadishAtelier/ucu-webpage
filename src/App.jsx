@@ -10,6 +10,7 @@ import Home from "./Pages/Home";
 import Footer from "./Components/Footer/Footer";
 import Program from "./Pages/Program";
 import AboutPage from "./Pages/AboutPage";
+import AboutDynamicPage from "./Pages/AboutPage/AboutDynamicPage";
 import NavbarNew from "./Components/Navbar/NavbarNew";
 import FaculityPage from "./Pages/FaculityPage";
 import ProgramDetails from "./Pages/ProgramDetails";
@@ -91,6 +92,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/program" element={<Program />} />
           <Route path="/about-ucu" element={<AboutPage />} />
+          <Route path="/about/:slug" element={<AboutDynamicPage />} />
           <Route path="/faculty/*" element={<NewFaculty />} />
           <Route path="/profile/details" element={<PDPhero />} />
           <Route path="/program-pgdm" element={<PGDMProgramPage />} />

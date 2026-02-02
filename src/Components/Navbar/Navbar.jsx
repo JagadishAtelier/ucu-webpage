@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { menuData, menuDataMobile } from "./menuData";
 import "./Navbar.css";
@@ -12,6 +13,60 @@ const Navbar = () => {
   const [hoverMenus, setHoverMenus] = useState({});
   const [searchDrodow, setSearchDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 760);
+  const [navData, setNavData] = useState(menuData);
+  const [navDataMobile, setNavDataMobile] = useState(menuDataMobile);
+
+  useEffect(() => {
+    const fetchAboutMenu = async () => {
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/about/nav`);
+        if (response.data && Array.isArray(response.data)) {
+          // console.log("Fetched About Nav Data:", response.data);
+          const dynamicAboutItems = response.data
+            .filter(item => item.slug !== 'main-about-ucu')
+            .map(item => {
+              let link = `/about/${item.slug}`;
+              if (item.slug === 'leadership') link = '/leader-ship';
+              else if (item.slug === 'founders-messages') link = '/founder-message';
+              else if (item.slug === 'industry-approach') link = '/industry-approach';
+
+              return {
+                label: item.title,
+                link: link
+              };
+            });
+
+          console.log("Navbar: Dynamic Items prepared:", dynamicAboutItems);
+
+          const updateMenu = (initialData, dynamicItems) => {
+            return initialData.map(menu => {
+              if (menu.label === "About") {
+                console.log("Navbar: Updating About menu. Current submenu length:", menu.submenu.length);
+                const existingLabels = new Set(menu.submenu.map(i => i.label));
+                const newItems = dynamicItems.filter(i => !existingLabels.has(i.label));
+                console.log("Navbar: Adding new items:", newItems);
+                return {
+                  ...menu,
+                  submenu: [
+                    ...menu.submenu,
+                    ...newItems
+                  ]
+                };
+              }
+              return menu;
+            });
+          };
+
+          setNavData(prev => updateMenu(menuData, dynamicAboutItems));
+          setNavDataMobile(prev => updateMenu(menuDataMobile, dynamicAboutItems));
+        }
+      } catch (error) {
+        console.error("Error fetching About navigation:", error);
+      }
+    };
+
+    fetchAboutMenu();
+  }, []);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 760);
@@ -207,7 +262,7 @@ const Navbar = () => {
           >
             <div className="top-bar d-flex justify-content-end align-items-center pt-3">
               <ul className="list-inline mb-0">
-                {menuData
+                {navData
                   .filter((menu) => menu.placement === "top")
                   .map((menu) => (
                     <li
@@ -337,7 +392,7 @@ const Navbar = () => {
 
             {/* Bottom/Main Menu */}
             <ul className="navbar-nav navbar-main d-flex justify-content-end align-items-center gap-2">
-              {menuData
+              {navData
                 .filter((menu) => menu.placement === "bottom")
                 .map((menu) => (
                   <li
@@ -528,7 +583,7 @@ const Navbar = () => {
                 </button>
               </div>
               <div className="drawer-content">
-                {renderMenuItems(isMobile ? menuDataMobile : menuData)}
+                {renderMenuItems(isMobile ? navDataMobile : navData)}
               </div>
             </div>
           </>

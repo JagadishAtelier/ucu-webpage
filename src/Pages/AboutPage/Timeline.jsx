@@ -4,29 +4,9 @@ import "./Timeline.css";
 import TimelineRow from "./TimelineRow";
 import image1 from '../../Assets/about-page-images/image-1.jpg'
 import image2 from '../../Assets/about-page-images/image-2.jpg'
-// ✅ TimelineRow Component
-// const TimelineRow = ({ title, description, image, reverse }) => {
-//   return (
-//     <Row className={`timeline-row ${reverse ? "reverse" : ""} active`}>
-//       <div className="timeline-point"></div>
-//       <Col md={6} className="image">
-//         {image && (
-//           <div className="image-auto">
-//             <img src={image} alt={title} />
-//           </div>
-//         )}
-//       </Col>
-//       <Col md={6} className="content">
-//         <h3>{title}</h3>
-//         <p dangerouslySetInnerHTML={{ __html: description }} />
-//       </Col>
-//     </Row>
-//   );
-// };
 
-// ✅ Timeline Component
-const Timeline = () => {
-  const data = [
+const Timeline = ({ timelineData }) => {
+  const staticData = [
     {
       title: "<span>1990 – 2009</span> : Vision Realised",
       description: `
@@ -41,10 +21,10 @@ const Timeline = () => {
         
         These milestones laid the foundation for his deep expertise in corporate and executive education ecosystems.
       `,
-      images: [image1, image2,"/abt-story-1.jpeg","/abt-story-2.jpeg"
-        ,"/abt-story-3.jpeg"
-        ,"/abt-story-4.jpeg"
-        ,"/abt-story-5.jpeg",
+      images: [image1, image2, "/abt-story-1.jpeg", "/abt-story-2.jpeg"
+        , "/abt-story-3.jpeg"
+        , "/abt-story-4.jpeg"
+        , "/abt-story-5.jpeg",
         "https://amaindia.b-cdn.net/amain/wp-content/uploads/2019/05/Facilities2.jpg",
         "https://amaindia.b-cdn.net/amain/wp-content/uploads/2019/05/Facilities4.gif",
         "https://amaindia.b-cdn.net/amain/wp-content/uploads/2025/07/HT-Parekh-Convention-Center-03.jpeg",
@@ -73,8 +53,7 @@ const Timeline = () => {
         Under his stewardship, the institute’s average campus CTC increased more than sevenfold within a decade,
         reflecting the transformative impact of his leadership.<br /><br />
       `,
-      images: ["/historyImages/2.jpg", "/historyImages/3.jpg", "/historyImages/1.jpg", "histroy-5.jpg", "histroy-7.jpg", "histroy-8.jpg",],// replace with a collage or carousel image
-      images1: ["/historyImages/5.jpg", "/historyImages/6.jpg", "/historyImages/4.jpg", "histroy-6.jpg","/abt-story-6.jpeg"],// replace with a collage or carousel image
+      images: ["/historyImages/2.jpg", "/historyImages/3.jpg", "/historyImages/1.jpg", "histroy-5.jpg", "histroy-7.jpg", "histroy-8.jpg", "/historyImages/5.jpg", "/historyImages/6.jpg", "/historyImages/4.jpg", "histroy-6.jpg", "/abt-story-6.jpeg"],
       reverse: true,
     },
     {
@@ -95,13 +74,20 @@ const Timeline = () => {
         UCU is the <strong>living legacy</strong> of a leader who dedicated his career to aligning talent with enterprise expectations.
         Every program is engineered for genuine impact, empowering learners to become agile, future-ready business leaders.
       `,
-      images: ["/timeline-logo2.png"], // replace with actual image
-      images1: ["https://img.freepik.com/free-photo/shanghai-waitan_649448-3038.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
-         "https://img.freepik.com/free-photo/modern-amphitheater-usa_1268-14358.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
-          "https://img.freepik.com/premium-photo/aerial-drone-shot-waverly-hills-sanatorium-louisville-kentucky_665346-46385.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",],
+      images: ["/timeline-logo2.png",
+        "https://img.freepik.com/free-photo/shanghai-waitan_649448-3038.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
+        "https://img.freepik.com/free-photo/modern-amphitheater-usa_1268-14358.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
+        "https://img.freepik.com/premium-photo/aerial-drone-shot-waverly-hills-sanatorium-louisville-kentucky_665346-46385.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",],
       reverse: false,
     },
   ];
+
+  const data = timelineData && timelineData.length > 0 ? timelineData.map((item, index) => ({
+    title: item.heading,
+    description: item.content,
+    images: item.gallery || [],
+    reverse: index % 2 !== 0
+  })) : staticData;
 
   return (
     <>
