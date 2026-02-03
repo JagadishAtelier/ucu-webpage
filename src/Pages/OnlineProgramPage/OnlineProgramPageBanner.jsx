@@ -21,11 +21,11 @@ function OnlineProgramPageBanner() {
             <li className="ONLINEPAG-dropdown">
               <a href="#">Programs</a>
 
-              <ul className="ONLINEPAG-dropdown-menu">
-                <li><a href="/Career-Reboot-Program-for-Women">Career Reboot Program for Women</a></li>
-                <li><a className="ONLINEPAG-has-submenu">Executive Post Graduate Certificate Programmes</a>
+              <ul className="ONLINEPAG-dropdown-menu program">
+
+                <li><a className="ONLINEPAG-has-submenu ONLINEPAG-dropdown-menu-head">Executive Post Graduate Certificate Programmes</a>
                   <ul className="ONLINEPAG-sub-dropdown-menu-middle">
-                    <li><a href="#">Domain Specialization</a>
+                    <li><p>Domain Specialization</p>
                       <ul className="ONLINEPAG-sub-dropdown-menu">
                         <li><a href="/SalesDiplamo">Sales</a></li>
                         <li><a href="/program/product">Product</a></li>
@@ -36,7 +36,7 @@ function OnlineProgramPageBanner() {
                         <li><a href="/program/international-business">International Business</a></li>
                       </ul>
                     </li>
-                    <li><a>Career Lane Specialization</a>
+                    <li><p>Career Lane Specialization</p>
                       <ul className="ONLINEPAG-sub-dropdown-menu">
                         <li><a href="/program/fintech">FinTech Genesis</a></li>
                         <li><a href="/program/GCC-Launchpad">GCC Launchpad</a></li>
@@ -47,6 +47,7 @@ function OnlineProgramPageBanner() {
                   </ul>
 
                 </li>
+                                <li><a href="/Career-Reboot-Program-for-Women" className="ONLINEPAG-dropdown-menu-head">Career Reboot Program for Women</a></li>
               </ul>
 
             </li>
@@ -54,22 +55,22 @@ function OnlineProgramPageBanner() {
             <li className="ONLINEPAG-dropdown">
               <a href="#">Executive Education</a>
 
-              <ul className="ONLINEPAG-dropdown-menu">
-                <li><a href="/executive-edu?tab=0">Individuals Professional</a></li>
-                <li><a href="/executive-edu?tab=2">CXO Academy</a></li>
-                <li><a href="/executive-edu?tab=4">Academic Accelerator</a></li>
-                <li><a href="/executive-edu?tab=6">MDPs</a></li>
-                <li><a href="/executive-edu?tab=5">Leadership Coach Academy</a></li>
-                <li><a href="/contact-us">XEL Contact</a></li>
+              <ul className="ONLINEPAG-dropdown-menu executive">
+                <li><a href="/executive-edu?tab=0" className="ONLINEPAG-dropdown-menu-head">Individuals Professional</a></li>
+                <li><a href="/executive-edu?tab=2" className="ONLINEPAG-dropdown-menu-head">CXO Academy</a></li>
+                <li><a href="/executive-edu?tab=4" className="ONLINEPAG-dropdown-menu-head">Academic Accelerator</a></li>
+                <li><a href="/executive-edu?tab=6" className="ONLINEPAG-dropdown-menu-head">MDPs</a></li>
+                <li><a href="/executive-edu?tab=5" className="ONLINEPAG-dropdown-menu-head">Leadership Coach Academy</a></li>
+                <li><a href="/contact-us" className="ONLINEPAG-dropdown-menu-head">XEL Contact</a></li>
                 <li className="ONLINEPAG-sub-dropdown">
                   <a
                     href="/executive/leadership"
-                    className="ONLINEPAG-has-submenu"
+                    className="ONLINEPAG-has-submenu ONLINEPAG-dropdown-menu-head ONLINEPAG-dropdown-menu-custom"
                   >
                     Executive & Advanced Executive PG Certificate Programs
                   </a>
 
-                  <ul className="ONLINEPAG-sub-dropdown-menu">
+                  <ul className="ONLINEPAG-sub-dropdown-menu ms-3">
                     <li><a href="/program/FinTech-Ascend">FinTech Ascend</a></li>
                     <li><a href="/program/FinTech-Vanguard">FinTech Vanguard</a></li>
                     <li><a href="/program/GCC-Catalyst">GCC Catalyst</a></li>
