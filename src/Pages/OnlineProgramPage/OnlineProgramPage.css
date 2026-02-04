@@ -40,9 +40,6 @@
   font-size: 1rem;
 }
 
-.ONLINEPAG-menu-list li a:hover {
-  color: #f5c000;
-}
 
 /* ACTIONS */
 .ONLINEPAG-actions a {
@@ -782,8 +779,10 @@
   position: absolute;
   top: 120%;
   left: 0;
-  min-width: 220px;
-  background: #fff;
+  max-width: 1200px;
+  background: rgba(14, 14, 34, 0.37);
+  backdrop-filter: blur(14px) saturate(180%);
+  color: white;
   list-style: none;
   padding: 10px 0;
   margin: 0;
@@ -795,9 +794,16 @@
   transition: all 0.25s ease;
   z-index: 9999;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 2px solid rgba(52, 140, 255, 0.5);
+  border-radius: 12px;
 }
-
+.ONLINEPAG-dropdown-menu.executive{
+  width: 35vw;
+}
+.ONLINEPAG-dropdown-menu.program{
+  width: 35vw;
+}
 /* Show on hover */
 .ONLINEPAG-dropdown:hover .ONLINEPAG-dropdown-menu {
   opacity: 1;
@@ -805,22 +811,40 @@
   transform: translateY(0);
 }
 
-/* Dropdown links */
 .ONLINEPAG-dropdown-menu li a {
-  display: block;
-  padding: 10px 18px;
-  color: #000;
+  position: relative;
+  /* REQUIRED for ::after */
+  display: inline-block;
+  /* keeps underline tight to text */
+  color: white;
   font-size: 14px;
   text-decoration: none;
-  white-space: nowrap;
+}
+.ONLINEPAG-dropdown-menu-head{
+  padding: 10px 18px;
+      margin-bottom: 10px;
+    padding-bottom: 4px;
 }
 
-/* Hover effect */
-.ONLINEPAG-dropdown-menu li a:hover {
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  color: #5ac501;
+
+.ONLINEPAG-dropdown-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  /* align with text padding */
+  bottom: 0px;
+  width: 0;
+  height: 2px;
+  background-color: #5ac501;
+  transition: width 0.3s ease;
 }
+
+.ONLINEPAG-dropdown-menu li a:hover::after {
+  width: calc(100% - 36px);
+  /* full width minus padding */
+}
+
+
 
 .ONLINEPAG-has-submenu {
   font-weight: 600;
@@ -830,22 +854,88 @@
 }
 
 .ONLINEPAG-sub-dropdown-menu li a {
-  font-size: 13px;
-  /* reduced size */
-  font-weight: 400;
-  color: #555;
-  padding: 6px 0;
+  display: inline-block;
+  white-space: normal;
+  text-indent: 0;
+  padding-left: 0;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: white !important;
+  text-decoration: none;
 }
 
 .ONLINEPAG-sub-dropdown-menu li a:hover {
-  color: #000;
+  color: #000 !important;
   background: none;
+  padding: 0;
 }
 
 .ONLINEPAG-sub-dropdown-menu {
   list-style: none;
+  padding-left: 0;
 }
-.ONLINEPAG-sub-dropdown-menu-middle{
+
+.ONLINEPAG-sub-dropdown-menu-middle {
   color: black;
-    list-style: none;
+  list-style: none;
+}
+
+
+.ONLINEPAG-dropdown-menu li p {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: white !important;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+.ONLINEPAG-dropdown-menu ul li:hover {
+  background-color: #ffffffb6;
+  border-radius: 2px;
+  color: black !important;
+}
+
+.ONLINEPAG-dropdown-menu ul li {
+  margin-bottom: 6px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-bottom: 0.2rem;
+  padding-top: 0.2rem;
+}
+/* ❌ Remove bottom line for submenu links */
+.ONLINEPAG-sub-dropdown-menu li a::after {
+  display: none !important;
+}
+
+/* Also prevent it on hover */
+.ONLINEPAG-sub-dropdown-menu li a:hover::after {
+  width: 0 !important;
+}
+.ONLINEPAG-sub-dropdown-menu{
+      border-left: 1px solid #ddd;
+}
+
+
+.ONLINEPAG-dropdown-menu-custom ul li:hover {
+  background-color: #ffffffb6;
+  border-radius: 2px;
+  color: black !important;
+}
+
+.ONLINEPAG-dropdown-menu-custom ul li {
+  margin-bottom: 6px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-bottom: 0;
+}
+
+/* Allow long dropdown text to wrap to next line */
+.ONLINEPAG-dropdown-menu li a {
+  white-space: normal;          /* allow wrapping */
+  max-width: 540px;             /* control line length */
+  line-height: 1.4;             /* better readability */
+  display: block;               /* full-width clickable area */
+  word-break: break-word;       /* break very long words */
 }
