@@ -16,61 +16,61 @@ export const menuData = [
             label: "Career Transformation to Career Acceleration (CT 2 CA)",
             link: "/engagement/ct-to-ca",
           },
-{
-  label: "CXO Series",
-  submenu: [
-{ label: "CIO", link: "/engagement?cxo=CIO" },
-{ label: "CTO", link: "/engagement?cxo=CTO" },
-{ label: "CMO", link: "/engagement?cxo=CMO" },
-{ label: "CHRO", link: "/engagement?cxo=CHRO" },
-{ label: "CFO", link: "/engagement?cxo=CFO" },
-{ label: "CPO", link: "/engagement?cxo=CPO" },
+          {
+            label: "CXO Series",
+            submenu: [
+              { label: "CIO", link: "/engagement?cxo=CIO" },
+              { label: "CTO", link: "/engagement?cxo=CTO" },
+              { label: "CMO", link: "/engagement?cxo=CMO" },
+              { label: "CHRO", link: "/engagement?cxo=CHRO" },
+              { label: "CFO", link: "/engagement?cxo=CFO" },
+              { label: "CPO", link: "/engagement?cxo=CPO" },
 
-  ],
-}
+            ],
+          }
 
         ],
       },
-       {
-            label: "Centers of Excellence (CoEs)",
-            link: "/coe",
-            submenu: [
-              {
-                label: "Marketing",
-                link: "/coe/marketing",
-              },
-              {
-                label: "Finance",
-                link: "/coe/finance",
-              },
-              {
-                label: "Operations",
-                link: "/coe/operations",
-              },
-              {
-                label: "Analytics, Data & AI",
-                link: "/coe/analytics-ai",
-              },
-              {
-                label: "Consulting",
-                link: "/coe/consulting",
-              },
-              {
-                label: "Entrepreneurship",
-                link: "/coe/entrepreneurship",
-              },
-              {
-                label: "Emerging Enterprise & Innovation (EEI)",
-                link: "/coe/EmergingEnterpriseInnovation",
-              },
-              {
-                label: "Faculty Chairs",
-                link: "/coe/FacultyChairs",
-                className: "rainbow-link"
-              },
-            ],
+      {
+        label: "Centers of Excellence (CoEs)",
+        link: "/coe",
+        submenu: [
+          {
+            label: "Marketing",
+            link: "/coe/marketing",
           },
           {
+            label: "Finance",
+            link: "/coe/finance",
+          },
+          {
+            label: "Operations",
+            link: "/coe/operations",
+          },
+          {
+            label: "Analytics, Data & AI",
+            link: "/coe/analytics-ai",
+          },
+          {
+            label: "Consulting",
+            link: "/coe/consulting",
+          },
+          {
+            label: "Entrepreneurship",
+            link: "/coe/entrepreneurship",
+          },
+          {
+            label: "Emerging Enterprise & Innovation (EEI)",
+            link: "/coe/EmergingEnterpriseInnovation",
+          },
+          {
+            label: "Faculty Chairs",
+            link: "/coe/FacultyChairs",
+            className: "rainbow-link"
+          },
+        ],
+      },
+      {
         label: "Strategic Collaborations",
         submenu: [
           { label: "Strategic Partners", link: "/strategic/partners" },
@@ -116,7 +116,7 @@ export const menuData = [
   {
     label: "Online Programs",
     placement: "top",
-         link: "/online-program/",
+    link: "/online-program/",
     submenu: [
       { label: "Digital Marketing & AI", link: "/online-program/Digital-Marketing-AI" },
       { label: "Product Management", link: "/online-program/Product-Management" },
@@ -148,8 +148,8 @@ export const menuData = [
       {
         label: "Full Time Programs",
         submenu: [
-          { label: "PGPM ELITE | Career Accelerator Program", link: "/pgpm-elite",className: "program-highlight padding-bottom" },
-          { label: "PGDM | Young Leaders' Program", link: "/program-pgdm",className: "program-highlight" },
+          { label: "PGPM ELITE | Career Accelerator Program", link: "/pgpm-elite", className: "program-highlight padding-bottom" },
+          { label: "PGDM | Young Leaders' Program", link: "/program-pgdm", className: "program-highlight" },
           {
             label: "Flexi Program",
             className: "sublink-custom",
@@ -216,87 +216,87 @@ export const menuData = [
     ],
   },
 
-    //   "Individuals Professional",
-    // "XEL Enterprise Program",
-    // "CXO Academy",
-    // "Executive phD",
-    // "Academic Accelerator",
-    // "Leadership Coach Academy",
-    // "MDPs",
-    // "XEL Contact"
+  //   "Individuals Professional",
+  // "XEL Enterprise Program",
+  // "CXO Academy",
+  // "Executive phD",
+  // "Academic Accelerator",
+  // "Leadership Coach Academy",
+  // "MDPs",
+  // "XEL Contact"
   {
     label: "Executive Education",
     placement: "bottom",
     submenu: [
-    {
-      label: "Individuals Professional",
-      link: "/executive-edu?tab=0",
-    },
-    {
-      label: "XEL Enterprise Program",
-      link: "/executive-edu?tab=1",
-    },
-    {
-      label: "CXO Academy",
-      link: "/executive-edu?tab=2",
-    },
-    {
-      label: "Executive PhD",
-      link: "/executive-edu?tab=3",
-    },
-    {
-      label: "Academic Accelerator",
-      link: "/executive-edu?tab=4",
-    },
-    {
-      label: "Leadership Coach Academy",
-      link: "/executive-edu?tab=5",
-    },
-    {
-      label: "MDPs",
-      link: "/executive-edu?tab=6",
-    },
-    {
-      label: "XEL Contact",
-      link: "/contact-us",
-    },
       {
-            label: "Executive & Advanced Executive PG Certificate Programs",
-            className: "sublink-custom",
+        label: "Individuals Professional",
+        link: "/executive-edu?tab=0",
+      },
+      {
+        label: "XEL Enterprise Program",
+        link: "/executive-edu?tab=1",
+      },
+      {
+        label: "CXO Academy",
+        link: "/executive-edu?tab=2",
+      },
+      {
+        label: "Executive PhD",
+        link: "/executive-edu?tab=3",
+      },
+      {
+        label: "Academic Accelerator",
+        link: "/executive-edu?tab=4",
+      },
+      {
+        label: "Leadership Coach Academy",
+        link: "/executive-edu?tab=5",
+      },
+      {
+        label: "MDPs",
+        link: "/executive-edu?tab=6",
+      },
+      {
+        label: "XEL Contact",
+        link: "/contact-us",
+      },
+      {
+        label: "Executive & Advanced Executive PG Certificate Programs",
+        className: "sublink-custom",
+        customHover: false,
+        submenu: [
+          {
+            label: "FinTech Ascend",
+            link: "/program/FinTech-Ascend",
             customHover: false,
-            submenu: [
-              {
-                label: "FinTech Ascend",
-                link: "/program/FinTech-Ascend",
-                customHover: false,
-              },
-              {
-                label: "FinTech Vanguard",
-                link: "/program/FinTech-Vanguard",
-                customHover: false,
-              },
-              {
-                label: "GCC-Catalyst",
-                link: "/program/GCC-Catalyst",
-                customHover: false,
-              },
-              {
-                label: "GCC Elevate",
-                link: "/program/GCC-Elevate",
-                customHover: false,
-              },
-              {
-                label: "HealthTech Navigate",
-                link: "/program/HealthTech-Navigate",
-                customHover: false,
-              },
-              {
-                label: "HealthTech Pinnacle",
-                link: "/program/HealthTech-Pinnacle",
-                customHover: false,
-              },
-            ]
           },
+          {
+            label: "FinTech Vanguard",
+            link: "/program/FinTech-Vanguard",
+            customHover: false,
+          },
+          {
+            label: "GCC-Catalyst",
+            link: "/program/GCC-Catalyst",
+            customHover: false,
+          },
+          {
+            label: "GCC Elevate",
+            link: "/program/GCC-Elevate",
+            customHover: false,
+          },
+          {
+            label: "HealthTech Navigate",
+            link: "/program/HealthTech-Navigate",
+            customHover: false,
+          },
+          {
+            label: "HealthTech Pinnacle",
+            link: "/program/HealthTech-Pinnacle",
+            customHover: false,
+          },
+        ]
+      },
       // {
       //   label: "Individuals Professional",
       //   link: "/executive-edu",
@@ -402,7 +402,7 @@ export const menuData = [
       // },
     ],
   },
-  
+
   {
     label: "Advisory Councel",
     placement: "bottom",
@@ -496,36 +496,36 @@ export const menuData = [
   },
 
   {
-  label: "Campus Placements",
-  placement: "bottom",
-  specialDropdown: "campusDropdown",
-  submenu: [
-    {
-      label: "Campus Placement",
-      link: "/placements/Campus-Placement",
-      image: "https://img.freepik.com/free-photo/friendly-team-members-chatting-laughing-together-office-break_1163-4701.jpg?t=st=1764411900~exp=1764415500~hmac=dd8c5cc0b0e97035629767ed530ab96c16c7a47cd8b49021c052fab2689bc0a4&w=1060",
-      description: "Connect students with top industry roles and opportunities through our structured placement process.", // 13 words
-    },
-    {
-      label: "Explore Talent",
-      link: "/explore-talent",
-      image: "https://img.freepik.com/premium-photo/human-resources-hr-management-recruitment-employment-headhunting-concept_1294533-966.jpg?ga=GA1.1.216810021.1750942177&semt=ais_hybrid&w=740&q=80",
-      description: "Discover a diverse pool of highly skilled and career-ready graduates for your recruitment needs.", // 13 words
-    },
-    {
-      label: "Corporate Engagement",
-      link: "/engagement/cap",
-      image: "https://img.freepik.com/free-photo/corporate-businessman-giving-presentation-large-audience_53876-101865.jpg?t=st=1764411983~exp=1764415583~hmac=e2f5b1328916ad38e02481f5336bfe748bef7bd491e44104cdef0550d97b5cf0&w=1060",
-      description: "Build strategic partnerships with the university through workshops, internships, and industry projects.", // 13 words
-    },
-    {
-      label: "Testimonials",
-      link: "/placements/Testimonials",
-      image: "https://img.freepik.com/premium-photo/happy-graduate-giving-thumbs-up_1152821-13729.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
-      description: "Read success stories and firsthand accounts from students and corporate partners about their experience.", // 13 words
-    },
-  ],
-},
+    label: "Campus Placements",
+    placement: "bottom",
+    specialDropdown: "campusDropdown",
+    submenu: [
+      {
+        label: "Campus Placement",
+        link: "/placements/Campus-Placement",
+        image: "https://img.freepik.com/free-photo/friendly-team-members-chatting-laughing-together-office-break_1163-4701.jpg?t=st=1764411900~exp=1764415500~hmac=dd8c5cc0b0e97035629767ed530ab96c16c7a47cd8b49021c052fab2689bc0a4&w=1060",
+        description: "Connect students with top industry roles and opportunities through our structured placement process.", // 13 words
+      },
+      {
+        label: "Explore Talent",
+        link: "/explore-talent",
+        image: "https://img.freepik.com/premium-photo/human-resources-hr-management-recruitment-employment-headhunting-concept_1294533-966.jpg?ga=GA1.1.216810021.1750942177&semt=ais_hybrid&w=740&q=80",
+        description: "Discover a diverse pool of highly skilled and career-ready graduates for your recruitment needs.", // 13 words
+      },
+      {
+        label: "Corporate Engagement",
+        link: "/engagement/cap",
+        image: "https://img.freepik.com/free-photo/corporate-businessman-giving-presentation-large-audience_53876-101865.jpg?t=st=1764411983~exp=1764415583~hmac=e2f5b1328916ad38e02481f5336bfe748bef7bd491e44104cdef0550d97b5cf0&w=1060",
+        description: "Build strategic partnerships with the university through workshops, internships, and industry projects.", // 13 words
+      },
+      {
+        label: "Testimonials",
+        link: "/placements/Testimonials",
+        image: "https://img.freepik.com/premium-photo/happy-graduate-giving-thumbs-up_1152821-13729.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80",
+        description: "Read success stories and firsthand accounts from students and corporate partners about their experience.", // 13 words
+      },
+    ],
+  },
 ];
 export const menuDataMobile = [
   // 🔝 Top Menu
@@ -625,7 +625,7 @@ export const menuDataMobile = [
       },
       {
         label: "Management Development Programs (MDPs)",
-        link:"/program/MDPs"
+        link: "/program/MDPs"
       },
       {
         label: "1 Year CXO Accelerator Program with Campus Immersion",
@@ -741,10 +741,10 @@ export const menuDataMobile = [
     label: "Campus Placements",
     placement: "bottom",
     submenu: [
-      { label: "Campus Placement", link: "/placements/Campus-Placement",image:"https://img.freepik.com/free-photo/focus-indian-boy-who-standing-sepately-group-international-students-standing-together-park-university_1157-50077.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-      { label: "Explore Talent", link: "/explore-talent",image:"https://img.freepik.com/premium-photo/pretty-brunette-holding-binoculars_13339-118544.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-      { label: "Corporate Engagement", link: "/engagement/cap",image:"https://img.freepik.com/free-photo/cheerful-overjoyed-business-people-conference-room-celerating-diverse-colleagues-with-new-opportunity-enjoing-victory-meeting-broadroom-office_482257-5101.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
-      { label: "Testimonials", link: "/placements/Testimonials",image:"https://img.freepik.com/premium-photo/happy-graduate-giving-thumbs-up_1152821-13729.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Campus Placement", link: "/placements/Campus-Placement", image: "https://img.freepik.com/free-photo/focus-indian-boy-who-standing-sepately-group-international-students-standing-together-park-university_1157-50077.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Explore Talent", link: "/explore-talent", image: "https://img.freepik.com/premium-photo/pretty-brunette-holding-binoculars_13339-118544.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Corporate Engagement", link: "/engagement/cap", image: "https://img.freepik.com/free-photo/cheerful-overjoyed-business-people-conference-room-celerating-diverse-colleagues-with-new-opportunity-enjoing-victory-meeting-broadroom-office_482257-5101.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
+      { label: "Testimonials", link: "/placements/Testimonials", image: "https://img.freepik.com/premium-photo/happy-graduate-giving-thumbs-up_1152821-13729.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80" },
     ],
   },
   {
@@ -852,7 +852,7 @@ export const menuDataMobile = [
   {
     label: "Online Programs",
     placement: "top",
-     link: "/online-program/online",
+    link: "/online-program/online",
     submenu: [
       { label: "Digital Marketing & AI", link: "/online-program/Digital-Marketing-AI" },
       { label: "Product Management", link: "/online-program/Product-Management" },

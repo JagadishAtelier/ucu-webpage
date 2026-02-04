@@ -40,8 +40,24 @@ const FounderMessage = () => {
     try {
       parsedContent = typeof content === 'string' ? JSON.parse(content) : content;
     } catch (e) {
-      // If parsing fails, treat as HTML string
-      return <div dangerouslySetInnerHTML={{ __html: content }} />;
+      // Parsing failed, try to extract JSON array if wrapped in HTML tags
+      if (typeof content === 'string') {
+        const firstBracket = content.indexOf('[');
+        const lastBracket = content.lastIndexOf(']');
+        if (firstBracket !== -1 && lastBracket !== -1 && lastBracket > firstBracket) {
+          try {
+            const candidate = content.substring(firstBracket, lastBracket + 1);
+            parsedContent = JSON.parse(candidate);
+          } catch (innerE) {
+            // Still failed to parse, fallback to HTML
+            return <div dangerouslySetInnerHTML={{ __html: content }} />;
+          }
+        } else {
+          return <div dangerouslySetInnerHTML={{ __html: content }} />;
+        }
+      } else {
+        return <div dangerouslySetInnerHTML={{ __html: content }} />;
+      }
     }
 
     if (!Array.isArray(parsedContent)) return <div dangerouslySetInnerHTML={{ __html: parsedContent }} />;
