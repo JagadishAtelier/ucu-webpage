@@ -104,7 +104,7 @@ function App() {
           <Route path="/auth/password" element={<AuthPassword />} />
           <Route path="/auth/forgot-password" element={<ForgotPassPage />} />
           <Route path="/auth/reset" element={<ResetPassPage />} />
-          <Route path="/advisory-councils/:type" element={<Advisory />} />
+          <Route path="/advisory-councils/:title" element={<Advisory />} />
           <Route path="/Careers" element={<CareersPage />} />
           <Route path="/founder-message" element={<FounderMessage />} />
           <Route path="/pgprogram" element={<PgprogramPage />} />

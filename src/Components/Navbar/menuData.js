@@ -437,41 +437,41 @@ export const menuData = [
     submenu: [
       {
         label: "Business Advisory",
-        link: "/bac",
+        link: "/advisory-councils/Business Advisory Council",
         submenu: [
           {
             label: "Academic Advisory",
-            link: "/aac",
+            link: "/advisory-councils/aac",
             className: "sublink-custom",
           },
           {
             label: "CHRO Advisory",
-            link: "/chro",
+            link: "/advisory-councils/chro",
             className: "sublink-custom",
           },
           {
             label: "Talent Acquisition",
-            link: "/tac",
+            link: "/advisory-councils/tac",
             className: "sublink-custom",
           },
           {
             label: "L&D Advisory",
-            link: "/ldac",
+            link: "/advisory-councils/ldac",
             className: "sublink-custom",
           },
           {
             label: "Young CXO",
-            link: "/ycxoc",
+            link: "/advisory-councils/ycxoc",
             className: "sublink-custom",
           },
           {
             label: "Rising Leader's",
-            link: "/rlc",
+            link: "/advisory-councils/rlc",
             className: "sublink-custom",
           },
           {
             label: "Our Brand Ambassadors",
-            link: "/oba",
+            link: "/advisory-councils/oba",
             className: "sublink-custom",
           },
         ],
@@ -480,16 +480,16 @@ export const menuData = [
       {
         label: "SME Program Advisory",
         submenu: [
-          { label: "Sales Advisory", link: "/sac" },
-          { label: "Product Management Advisory", link: "/pmac" },
-          { label: "Cybersecurity Advisory", link: "/cac" },
-          { label: "FinTech Advisory", link: "/ftac" },
-          { label: "GCC Advisory", link: "/gccac" },
+          { label: "Sales Advisory", link: "/advisory-councils/sac" },
+          { label: "Product Management Advisory", link: "/advisory-councils/pmac" },
+          { label: "Cybersecurity Advisory", link: "/advisory-councils/cac" },
+          { label: "FinTech Advisory", link: "/advisory-councils/ftac" },
+          { label: "GCC Advisory", link: "/advisory-councils/gccac" },
           {
             label: "Mobility & Sustainability Advisory",
-            link: "/msac",
+            link: "/advisory-councils/msac",
           },
-          { label: "Consulting Advisory", link: "/conac" },
+          { label: "Consulting Advisory", link: "/advisory-councils/conac" },
         ],
       },
     ],
@@ -695,41 +695,41 @@ export const menuDataMobile = [
     submenu: [
       {
         label: "Business Advisory",
-        link: "/bac",
+        link: "/advisory-councils/Business Advisory Council",
         submenu: [
           {
             label: "Academic Advisory",
-            link: "/aac",
+            link: "/advisory-councils/aac",
             className: "sublink-custom",
           },
           {
             label: "CHRO Advisory",
-            link: "/chro",
+            link: "/advisory-councils/chro",
             className: "sublink-custom",
           },
           {
             label: "Talent Acquisition",
-            link: "/tac",
+            link: "/advisory-councils/tac",
             className: "sublink-custom",
           },
           {
             label: "L&D Advisory",
-            link: "/ldac",
+            link: "/advisory-councils/ldac",
             className: "sublink-custom",
           },
           {
             label: "Young CXO",
-            link: "/ycxoc",
+            link: "/advisory-councils/ycxoc",
             className: "sublink-custom",
           },
           {
             label: "Rising Leaders'",
-            link: "/rlc",
+            link: "/advisory-councils/rlc",
             className: "sublink-custom",
           },
           {
             label: "Our Brand Ambassadors",
-            link: "/oba",
+            link: "/advisory-councils/oba",
             className: "sublink-custom",
           },
         ],
@@ -738,16 +738,16 @@ export const menuDataMobile = [
       {
         label: "SME Program Advisory Council",
         submenu: [
-          { label: "Sales Advisory", link: "/sac" },
-          { label: "Product Management Advisory", link: "/pmac" },
-          { label: "Cybersecurity Advisory", link: "/cac" },
-          { label: "FinTech Advisory", link: "/ftac" },
-          { label: "GCC Advisory", link: "/gccac" },
+          { label: "Sales Advisory", link: "/advisory-councils/sac" },
+          { label: "Product Management Advisory", link: "/advisory-councils/pmac" },
+          { label: "Cybersecurity Advisory", link: "/advisory-councils/cac" },
+          { label: "FinTech Advisory", link: "/advisory-councils/ftac" },
+          { label: "GCC Advisory", link: "/advisory-councils/gccac" },
           {
             label: "Mobility & Sustainability Advisory",
-            link: "/msac",
+            link: "/advisory-councils/msac",
           },
-          { label: "Consulting Advisory", link: "/conac" },
+          { label: "Consulting Advisory", link: "/advisory-councils/conac" },
         ],
       },
     ],
