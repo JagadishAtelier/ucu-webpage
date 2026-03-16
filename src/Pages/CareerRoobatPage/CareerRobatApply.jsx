@@ -44,7 +44,7 @@ function CareerRobatApply() {
       desc: "Interested in pursuing a high impact career in FinTech, Product Management, Consulting, Sales & Marketing, etc.",
       icon: <Target size={20} />,
       theme: "theme-red", // If theme-red doesn't exist in CSS, it might default or fallback. I should check CSS or stick to existing themes. Let's reuse theme-blue or similar if unsure, but I'll try to vary. Actually, I saw blue, orange, purple, green. Let's use theme-blue again or rotate. Let's use 'theme-orange' again for variety or just define styles if needed. Let's Stick to available themes: Blue, Orange, Purple, Green. I will reuse Blue for the 5th one.
-      theme: "theme-blue",
+      // theme: "theme-blue",
       tags: ["High Impact Career"]
     },
   ];

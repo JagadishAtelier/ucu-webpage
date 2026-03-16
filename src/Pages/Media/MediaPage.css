@@ -1,51 +1,145 @@
-.ucu-media-page-card {
-    background: #fefefe !important;
-    border:1px solid #dbdbdb;
-    color: black !important;
-    box-shadow: -1px 4px 16px #0000003b !important;
-    border-radius: 13px !important;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-}
-.ucu-media-page-card:hover{
-    box-shadow:-1px 7px 16px #0000003b !important;
-    transform: translateY(-6px);
+/* Base Media Page Container */
+.captital-campus-content-sec {
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.med-route-bg {
-    padding-right: 8%;
+/* Hero Section Refinements */
+.fac-hero-section {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #081672; /* Fallback */
 }
-.fsize-6{
+
+.fac-hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(8, 22, 114, 0.8), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+}
+
+.fac-hero-section > div {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb Styling */
+.campus-route-bg {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-top-right-radius: 20px;
+    padding: 10px 30px !important;
+    z-index: 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.campus-route-bg p {
+    font-weight: 500;
+    letter-spacing: 0.5px;
     font-size: 0.9rem;
 }
 
-.med-image {
-    height: 40vh;
-    max-width: 400px;
-    width: 100%;
-    border-radius: 5px;
+/* Premium Card Design */
+.ucu-media-page-card {
+    background: #ffffff !important;
+    border: none !important;
+    color: #333 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    border-radius: 20px !important;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
 }
 
-@media (max-width:768px) {
-    .ucu-media-page-card {
-        height: fit-content !important;
-    }
-
+.ucu-media-page-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
+    transform: translateY(-8px);
 }
 
-@media (max-width:480px) {
-    .med-route-bg {
-        padding: 0 3%;
-    }
+.ucu-event-page-image {
+    transition: transform 0.6s ease;
+}
 
+.ucu-media-page-card:hover .ucu-event-page-image {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #081672;
+    font-family: 'Manrope', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.ucu-media-page-card:hover .card-title {
+    color: #5ac501;
+}
+
+/* Featured Card (Index 0) */
+.large-card {
+    min-height: 380px;
+}
+
+.large-card .card-title {
+    font-size: 1.75rem !important;
+    margin-bottom: 20px;
+}
+
+/* Category Badges */
+.category-link {
+    display: inline-block;
+    background: #f0f7ff;
+    color: #081672;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.category-link:hover {
+    background: #5ac501;
+    color: white;
+}
+
+/* Pagination Styling */
+.pagination-custom .btn {
+    border-radius: 50px;
+    padding: 8px 24px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(90, 197, 1, 0.2);
+}
+
+@media (max-width: 991px) {
+    .large-card {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+    .large-card > div {
+        flex: 1 1 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
     .ucu-media-page-card {
         flex-direction: column !important;
+        height: auto !important;
     }
-    .ucu-event-page-image{
-        height: 30vh !important;
+    .ucu-media-page-card > div {
+        flex: 1 1 100% !important;
     }
-    .med-image{
-        height: 30vh;
-        object-fit: cover;
+    .ucu-event-page-image {
+        height: 250px !important;
     }
 }

@@ -1,7 +1,8 @@
-import { Calendar1Icon } from 'lucide-react'
+import { Calendar1Icon, ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
 import { Button, Container, Row, Col, Pagination } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+
 const data = [
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
@@ -9,13 +10,13 @@ const data = [
         head: "The Hindu features Dr Abhijit Dasgupta on early business & tech lessons for career success",
         content: "In the article published in The Hindu, Dr Abhijit Dasgupta (Assistant Professor and Director - Bachelor of Data Science), UCU, writes about the transformative impact of introducing business and technology to young minds at an early age.",
         topic: "Faculty in the News, UCU in the News",
-        link: "/The Hindu features Dr Abhijit Dasgupta on early business & tech lessons for career success"
+        link: "/media/ucu-media/details-1"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
-        head: "The Hindu features Dr Abhijit Dasgupta.",
-        content: "In the article published in The Hindu, Dr Abhijit Dasgupta writes about the transformative.",
+        head: "UCU Recognized for Innovation in Higher Education",
+        content: "International education bodies award UCU for its commitment to industry-first pedagogical approaches.",
         topic: "UCU in the News",
         link: "/"
     },
@@ -46,59 +47,19 @@ const data = [
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
-        head: "Empowering Students with Data Skills",
-        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
-        topic: "Faculty Research",
+        head: "New Industry Partnerships Announced",
+        content: "UCU signs MoUs with top global tech firms to enhance student placement opportunities.",
+        topic: "UCU Updates",
         link: "/"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
-        head: "Empowering Students with Data Skills",
-        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
-        topic: "Faculty Research",
+        head: "Sustainability at the Heart of UCU Curriculum",
+        content: "How UCU is shaping the next generation of eco-conscious business leaders.",
+        topic: "UCU in the News",
         link: "/"
-    },
-    {
-        image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
-        date: "August 23, 2025",
-        head: "Empowering Students with Data Skills",
-        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
-        topic: "Faculty Research",
-        link: "/"
-    },
-    {
-        image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
-        date: "August 23, 2025",
-        head: "Empowering Students with Data Skills",
-        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
-        topic: "Faculty Research",
-        link: "/"
-    },
-    {
-        image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
-        date: "August 23, 2025",
-        head: "Empowering Students with Data Skills",
-        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
-        topic: "Faculty Research",
-        link: "/"
-    },
-    {
-        image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
-        date: "August 23, 2025",
-        head: "Empowering Students with Data Skills",
-        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
-        topic: "Faculty Research",
-        link: "/"
-    },
-    {
-        image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
-        date: "August 23, 2025",
-        head: "Empowering Students with Data Skills",
-        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
-        topic: "Faculty Research",
-        link: "/"
-    },
+    }
 ]
 
 function UCUEventPage1() {
@@ -107,102 +68,92 @@ function UCUEventPage1() {
     const itemsPerPage = 7
     const totalPage = Math.ceil(data.length / itemsPerPage)
 
-    // Get items for the current page
     const currentData = data.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
 
-    const handlePageChange = (pageNumber) => {
-        setCurrentPage(pageNumber);
-    };
     return (
-        <Container className="my-4">
-            <Row className="g-4">
-                {currentData.map((item, index) => (
-                    <Col
-                        key={index}
-                        xs={12}
-                        md={12}
-                        lg={index === 0 ? 12 : 6}
-                        className="mx-auto"
-                    >
-                        <div
-                            className={`card shadow-sm d-flex overflow-hidden ucu-media-page-card border-0 ${index === 0 ? 'flex-row p-3 large-card' : 'flex-row small-card p-3'
-                                }`}
-                            style={{
-                                height: index === 0 ? '320px' : '40vh',
-                            }}
+        <Container className="my-5">
+            <Row className="g-5">
+                {currentData.map((item, index) => {
+                    const isFirst = index === 0 && currentPage === 1;
+                    return (
+                        <Col
+                            key={index}
+                            xs={12}
+                            lg={isFirst ? 12 : 6}
                         >
-                            {/* Image section */}
                             <div
-                                style={{
-                                    flex: index === 0 ? '0 0 45%' : '0 0 35%',
-                                    overflow: 'hidden',
-                                }}
+                                className={`ucu-media-page-card overflow-hidden d-flex flex-column flex-md-row ${isFirst ? 'large-card' : ''}`}
+                                onClick={() => navigate(item.link || '#')}
                             >
-                                <img
-                                    src={item.image}
-                                    alt={item.head}
-                                    className="img-fluid w-100 object-fit-cover ucu-event-page-image"
-                                    style={{
-                                        height: index === 0 ? '100%' : '100%',
-                                    }}
-                                />
-                            </div>
-
-                            {/* Content section */}
-                            <div
-                                className={`p-lg-3 p-md-3 py-3 d-flex flex-column justify-content-between ${index === 0 ? '' : 'p-lg-3 py-3'
-                                    }`}
-                            >
-                                <div>
-                                    <div className="d-flex align-items-center mb-2 ">
-                                        <Calendar1Icon size={index === 0 ? 18 : 14} className="me-2" />
-                                        <small>{item.date}</small>
-                                    </div>
-                                    <h5 style={{ cursor: "pointer" }} onClick={() => navigate(`${item.head}`)}
-                                        className={`card-title  fw-semibold  lh-sm ${index === 0 ? 'fs-5' : 'fs-6'
-                                            }`}
-                                    >
-                                        {item.head}
-                                    </h5>
-                                    <p
-                                        className={` ${index === 0 ? 'fs-6' : ' fsize-6 '
-                                            } mb-1 `}
-                                        style={{ lineHeight: index === 0 ? '1.4' : '1.6' }}
-                                    >
-                                        {item.content}
-                                    </p>
-                                    <a
-                                        href={item.link}
-                                        className="d-block mb-1 "
-                                        style={{ fontSize: index === 0 ? '0.9rem' : '0.8rem', }}
-                                    >
-                                        {item.topic}
-                                    </a>
+                                {/* Image Container */}
+                                <div className="position-relative overflow-hidden" style={{ flex: isFirst ? '0 0 50%' : '0 0 40%' }}>
+                                    <img
+                                        src={item.image}
+                                        alt={item.head}
+                                        className="ucu-event-page-image w-100 h-100 object-fit-cover"
+                                        style={{ minHeight: isFirst ? '350px' : '200px' }}
+                                    />
                                 </div>
-                                <Button
-                                    size={index === 0 ? 'md' : 'sm'}
-                                    className="align-self-start border-0 mt-3"
-                                    style={{ backgroundColor: "#5ac501" }}
-                                    onClick={() => navigate(`${item.head}`)}
-                                >
-                                    Read More
-                                </Button>
+
+                                {/* Content Container */}
+                                <div className="p-4 d-flex flex-column justify-content-between w-100">
+                                    <div>
+                                        <div className="d-flex align-items-center mb-3 text-muted">
+                                            <Calendar1Icon size={16} className="me-2 text-success" />
+                                            <span style={{ fontSize: '0.85rem', fontWeight: 500 }}>{item.date}</span>
+                                        </div>
+                                        
+                                        <h3 className={`card-title fw-bold mb-3 ${isFirst ? 'fs-2' : 'fs-4'}`}>
+                                            {item.head}
+                                        </h3>
+                                        
+                                        <p className="text-secondary mb-4" style={{ 
+                                            fontSize: isFirst ? '1.1rem' : '0.95rem',
+                                            display: '-webkit-box',
+                                            WebkitLineClamp: isFirst ? '4' : '3',
+                                            WebkitBoxOrient: 'vertical',
+                                            overflow: 'hidden'
+                                        }}>
+                                            {item.content}
+                                        </p>
+
+                                        <div className="mb-3">
+                                            {item.topic.split(',').map((tag, i) => (
+                                                <span key={i} className="category-link">{tag.trim()}</span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="mt-auto d-flex align-items-center text-success fw-bold" style={{ cursor: 'pointer' }}>
+                                        READ MORE <ArrowRight size={18} className="ms-2" />
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </Col>
-                ))}
+                        </Col>
+                    )
+                })}
             </Row>
 
-            <div className="d-flex justify-content-end mt-4">
-                <Pagination className='gap-3'>
-                    <Button style={{ backgroundColor: "#5ac501" }} className='w-100 border-0' onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
-                        disabled={currentPage === 1}
-                    >Preview</Button>
-                    <Button style={{ backgroundColor: "#5ac501" }} className='w-100 border-0' onClick={() => currentPage < totalPage && setCurrentPage(currentPage + 1)}
-                        disabled={currentPage === totalPage}
-                    >Next</Button>
-                </Pagination>
-            </div>
+            {totalPage > 1 && (
+                <div className="d-flex justify-content-center mt-5 pagination-custom">
+                    <Pagination className="gap-2">
+                        <Button 
+                            className="btn-success"
+                            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                            disabled={currentPage === 1}
+                        >
+                            PREVIOUS
+                        </Button>
+                        <Button 
+                            className="btn-success"
+                            onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPage))}
+                            disabled={currentPage === totalPage}
+                        >
+                            NEXT
+                        </Button>
+                    </Pagination>
+                </div>
+            )}
         </Container>
     )
 }

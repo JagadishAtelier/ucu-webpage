@@ -99,10 +99,38 @@ export const menuData = [
   {
     label: "Media", placement: "top",
     submenu: [
-      { label: "UCU Chennai in the Media", link: "/media/ucu-media" },
-      { label: "What’s on at UCU Chennai", link: "/media/ucu-on-at" },
-      { label: "Gallery", link: "/media/gallery" },
-      { label: "UCU Chennai Blog", link: "/media/blog" },
+      {
+        label: "News",
+        submenu: [
+          {
+            label: "UCU Chennai in the Media",
+            link: "/media/ucu-media",
+          },]
+      },
+      {
+        label: "Events", submenu: [
+          {
+            label: "What’s on at UCU Chennai",
+            link: "/media/ucu-on-at",
+          },
+        ]
+      },
+      {
+        label: "Gallery", submenu: [
+          {
+            label: "Images & Videos",
+            link: "/media/gallery",
+          },
+        ]
+      },
+      {
+        label: "Blog", submenu: [
+          {
+            label: "UCU Chennai Blog",
+            link: "/media/blog",
+          },
+        ]
+      },
     ]
   },
   // { label: "contact", link: "/contact", placement: "top" },
@@ -834,10 +862,38 @@ export const menuDataMobile = [
   {
     label: "Media", placement: "top",
     submenu: [
-      { label: "UCU Chennai in the Media", link: "/media/ucu-media" },
-      { label: "What’s on at UCU Chennai", link: "/media/ucu-on-at" },
-      { label: "Gallery", link: "/media/gallery" },
-      { label: "UCU Chennai Blog", link: "/media/blog" },
+      {
+        label: "News",
+        submenu: [
+          {
+            label: "UCU Chennai in the Media",
+            link: "/media/ucu-media",
+          },]
+      },
+      {
+        label: "Events", submenu: [
+          {
+            label: "What’s on at UCU Chennai",
+            link: "/media/ucu-on-at",
+          },
+        ]
+      },
+      {
+        label: "Gallery", submenu: [
+          {
+            label: "Images & Videos",
+            link: "/media/gallery",
+          },
+        ]
+      },
+      {
+        label: "Blog", submenu: [
+          {
+            label: "UCU Chennai Blog",
+            link: "/media/blog",
+          },
+        ]
+      },
     ]
   },
   // { label: "News & Blog", link: "/news-blogs", placement: "top" },

@@ -1,4 +1,4 @@
-import { Calendar1Icon } from 'lucide-react'
+import { Calendar1Icon, ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
 import { Button, Container, Row, Col, Pagination, Form } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
@@ -7,221 +7,165 @@ const data = [
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
-        head: "The Hindu features Dr Abhijit Dasgupta on early business & tech lessons for career success",
-        content: "In the article published in The Hindu, Dr Abhijit Dasgupta writes about the transformative impact of introducing business and technology to young minds.",
-        topic: "Bachelor of Business Administration",
+        head: "The Future of Digital Marketing in a Post-AI World",
+        content: "Explore how artificial intelligence is reshaping consumer behavior and how marketers can leverage these tools to drive high-impact results in 2025.",
+        topic: "Marketing",
         link: "/"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "July 10, 2025",
-        head: "UCU Faculty on Building Future Skills",
-        content: "A spotlight on Dr Abhijit Dasgupta’s contribution in bridging business education and data science.",
-        topic: "Bachelor of Data Science",
+        head: "Ethics and Excellence: The Foundation of Modern Leadership",
+        content: "Our faculty Discuss why ethical decision-making is no longer optional but a core requirement for commercial success in the global market.",
+        topic: "Leadership",
         link: "/"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "June 15, 2025",
-        head: "UCU’s Global Recognition Continues",
-        content: "Dr Dasgupta shares how early exposure to entrepreneurship and tech leads to creative problem-solving.",
-        topic: "Master of Global Business",
+        head: "From Campus to Corporate: A Survival Guide",
+        content: "UCU alumni share their top 5 tips for navigating the transition from student life to a high-stakes corporate environment.",
+        topic: "Alumni Stories",
         link: "/"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "April 05, 2025",
-        head: "Empowering Students with Data Skills",
-        content: "UCU continues to emphasize early adoption of data-driven decision-making education.",
-        topic: "Master of AI in Business",
+        head: "Understanding the Data Science Boom",
+        content: "Why data literacy is becoming the most sought-after skill across all industries, not just in technology departments.",
+        topic: "Data Science",
         link: "/"
-    },
-    {
-        image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
-        date: "March 20, 2025",
-        head: "UCU Updates - Data Science Growth",
-        content: "Students showcase innovative uses of data in new research projects.",
-        topic: "Global MBA",
-        link: "/"
-    },
-    {
-        image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
-        date: "March 20, 2025",
-        head: "UCU Updates - Data Science Growth",
-        content: "Students showcase innovative uses of data in new research projects.",
-        topic: "Executive MBA",
-        link: "/"
-    },
-    {
-        image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
-        date: "March 20, 2025",
-        head: "UCU Updates - Data Science Growth",
-        content: "Students showcase innovative uses of data in new research projects.",
-        topic: "MBA",
-        link: "/"
-    },
-    {
-        image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
-        date: "March 20, 2025",
-        head: "UCU Updates - Data Science Growth",
-        content: "Students showcase innovative uses of data in new research projects.",
-        topic: "Doctor of Business Administration",
-        link: "/"
-    },
-    {
-        image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
-        date: "March 20, 2025",
-        head: "UCU Updates - Data Science Growth",
-        content: "Students showcase innovative uses of data in new research projects.",
-        topic: "Master of Applied Finance and Wealth Management",
-        link: "/"
-    },
-    {
-        image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
-        date: "March 20, 2025",
-        head: "UCU Updates - Data Science Growth",
-        content: "Students showcase innovative uses of data in new research projects.",
-        topic: "Faculty Insights",
-        link: "/"
-    },
+    }
 ]
 
 function MediablogData() {
     const navigate = useNavigate()
-
     const [currentPage, setCurrentPage] = useState(1)
     const itemsPerPage = 7
-
     const [selectedTopic, setSelectedTopic] = useState("")
-    const [selectedMonth, setSelectedMonth] = useState("")
 
     const uniqueTopics = [...new Set(data.map(item => item.topic))]
-    const uniqueMonths = [...new Set(data.map(item => item.date.split(" ")[0]))]
 
     const filteredData = data.filter(item => {
-        const month = item.date.split(" ")[0]
-        const matchTopic = selectedTopic ? item.topic === selectedTopic : true
-        const matchMonth = selectedMonth ? month === selectedMonth : true
-        return matchTopic && matchMonth
+        return selectedTopic ? item.topic === selectedTopic : true
     })
 
     const totalPage = Math.ceil(filteredData.length / itemsPerPage)
     const currentData = filteredData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
 
-    const handlePageChange = (pageNumber) => setCurrentPage(pageNumber)
     return (
-        <div className='captital-campus-content-sec my-4'>
-            <p>Welcome to UCU Blogs – where the heart of our community comes alive through inspiring stories, industry insights, and first-hand experiences. From expert perspectives to real-life journeys, this is your space to explore, connect, and feel at home in a world of ideas and inspiration.</p>
-            <div
-                data-aos="fade-down"
-                className="rounded d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start  text-center text-md-start text-lg-center p-3 px-lg-3 w-50"
-                style={{
-                    backgroundColor:"#081672ff",
-                    marginLeft:'auto',
-                    marginRight:'auto',
-                }}
-            >
-                <div className="w-100 w-lg-100 w-md-100" data-aos="fade-right">
-                    <Form className='col-lg-12'>
-                        <div className='d-flex flex-row gap-5 align-items-center'>
-                            <Form.Label className='text-start fs-5 text-white  '>Categories</Form.Label>
-                            <Form.Select
-                                value={selectedTopic}
-                                onChange={(e) => { setSelectedTopic(e.target.value); setCurrentPage(1) }}
-                            >
-                                <option value="" disabled>Please Select Category</option>
-                                <option value="" >All Blogs</option>
-                                {uniqueTopics.map((topic, idx) => (
-                                    <option key={idx} value={topic}>{topic}</option>
-                                ))}
-                            </Form.Select>
-                        </div>
-                    </Form>
+        <div className='my-5'>
+            <Container className="mb-5 text-center">
+                <p className="lead text-muted mx-auto" style={{ maxWidth: '800px' }}>
+                    Welcome to UCU Blogs – where the heart of our community comes alive through inspiring stories, 
+                    industry insights, and first-hand experiences.
+                </p>
+            </Container>
+
+            {/* Category Filter */}
+            <div className="container mb-5">
+                <div 
+                    className="p-4 rounded-4 shadow-sm d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 px-lg-5 mx-auto"
+                    style={{ backgroundColor: "#081672", color: "white", maxWidth: '900px' }}
+                >
+                    <h5 className="mb-0 fw-bold text-nowrap">CATEGORIES</h5>
+                    <Form.Select 
+                        className="bg-white border-0 py-2 rounded-3 w-100"
+                        style={{ maxWidth: '400px' }}
+                        value={selectedTopic}
+                        onChange={(e) => { setSelectedTopic(e.target.value); setCurrentPage(1) }}
+                    >
+                        <option value="">All Blogs</option>
+                        {uniqueTopics.map((topic, idx) => (
+                            <option key={idx} value={topic}>{topic}</option>
+                        ))}
+                    </Form.Select>
                 </div>
             </div>
 
-            <Container className="my-4 p-0">
-                <Row className="g-4">
+            <Container className="p-0">
+                <Row className="g-5">
                     {currentData.length > 0 ? (
-                        currentData.map((item, index) => (
-                            <Col key={index} xs={12} md={12} lg={index === 0 ? 12 : 6} className="mx-auto">
-                                <div
-                                    className={`card d-flex overflow-hidden ucu-media-page-card  ${index === 0 ? 'flex-row p-3 large-card' : 'flex-row small-card p-3'}`}
-                                    style={{ height: index === 0 ? '320px' : '40vh' }}
-                                >
-                                    <div style={{ flex: index === 0 ? '0 0 45%' : '0 0 35%', overflow: 'hidden' }}>
-                                        <img
-                                            src={item.image}
-                                            alt={item.head}
-                                            className="img-fluid w-100 object-fit-cover ucu-event-page-image"
-                                            style={{ height: '100%' }}
-                                        />
-                                    </div>
-
-                                    <div className={`p-lg-3 p-md-3 py-3 d-flex flex-column justify-content-between ${index === 0 ? '' : 'p-lg-3 p-md-3 py-3'}`}>
-                                        <div>
-                                            <div className="d-flex align-items-center mb-2 ">
-                                                <Calendar1Icon size={index === 0 ? 18 : 14} className="me-2" />
-                                                <small>{item.date}</small>
-                                            </div>
-                                            <h5
-                                                style={{ cursor: "pointer" }}
-                                                onClick={() => navigate(item.head)}
-                                                className={`card-title fw-semibold  ${index === 0 ? 'fs-5' : 'fs-6'}`}
-                                            >
-                                                {item.head}
-                                            </h5>
-                                            <p
-                                                className={`${index === 0 ? 'fs-6' : 'fs-7 '}`}
-                                                style={{ lineHeight: index === 0 ? '1.4' : '1.2' }}
-                                            >
-                                                {item.content}
-                                            </p>
-                                            <a
-                                                href={item.link}
-                                                className="d-block mb-2 "
-                                                style={{ fontSize: index === 0 ? '0.9rem' : '0.8rem' }}
-                                            >
-                                                {item.topic}
-                                            </a>
+                        currentData.map((item, index) => {
+                            const isFirst = index === 0 && currentPage === 1;
+                            return (
+                                <Col key={index} xs={12} lg={isFirst ? 12 : 6}>
+                                    <div
+                                        className={`ucu-media-page-card overflow-hidden d-flex flex-column flex-md-row ${isFirst ? 'large-card' : ''}`}
+                                        onClick={() => navigate(item.link || '#')}
+                                    >
+                                        <div className="position-relative overflow-hidden" style={{ flex: isFirst ? '0 0 50%' : '0 0 40%' }}>
+                                            <img
+                                                src={item.image}
+                                                alt={item.head}
+                                                className="ucu-event-page-image w-100 h-100 object-fit-cover"
+                                                style={{ minHeight: isFirst ? '350px' : '220px' }}
+                                            />
                                         </div>
-                                        <Button
-                                            size={index === 0 ? 'md' : 'sm'}
-                                            className="align-self-start border-0 mt-3"
-                                            style={{ backgroundColor: "#5ac501" }}
-                                            onClick={() => navigate(item.head)}
-                                        >
-                                            Read More
-                                        </Button>
+
+                                        <div className="p-4 d-flex flex-column justify-content-between w-100">
+                                            <div>
+                                                <div className="d-flex align-items-center mb-3 text-muted">
+                                                    <Calendar1Icon size={16} className="me-2 text-success" />
+                                                    <span style={{ fontSize: '0.85rem', fontWeight: 500 }}>{item.date}</span>
+                                                </div>
+                                                
+                                                <h3 className={`card-title fw-bold mb-3 ${isFirst ? 'fs-2' : 'fs-4'}`}>
+                                                    {item.head}
+                                                </h3>
+                                                
+                                                <p className="text-secondary mb-4" style={{ 
+                                                    fontSize: isFirst ? '1.1rem' : '0.95rem',
+                                                    display: '-webkit-box',
+                                                    WebkitLineClamp: isFirst ? '4' : '3',
+                                                    WebkitBoxOrient: 'vertical',
+                                                    overflow: 'hidden'
+                                                }}>
+                                                    {item.content}
+                                                </p>
+
+                                                <div className="mb-3">
+                                                    <span className="category-link">{item.topic}</span>
+                                                </div>
+                                            </div>
+
+                                            <div className="mt-auto d-flex align-items-center text-success fw-bold">
+                                                READ MORE <ArrowRight size={18} className="ms-2" />
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </Col>
-                        ))
+                                </Col>
+                            )
+                        })
                     ) : (
-                        <p className="text-center ">No results found.</p>
+                        <Col xs={12}>
+                            <div className="text-center py-5 opacity-50">
+                                <h5>No blog posts found in this category.</h5>
+                            </div>
+                        </Col>
                     )}
                 </Row>
 
-                <div className="d-flex justify-content-end mt-4">
-                    <Pagination className='gap-3'>
-                        <Button
-                            style={{ backgroundColor: "#5ac501" }}
-                            className='w-100 border-0'
-                            onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
-                            disabled={currentPage === 1}
-                        >
-                            Previous
-                        </Button>
-                        <Button
-                            style={{ backgroundColor: "#5ac501" }}
-                            className='w-100 border-0'
-                            onClick={() => currentPage < totalPage && setCurrentPage(currentPage + 1)}
-                            disabled={currentPage === totalPage}
-                        >
-                            Next
-                        </Button>
-                    </Pagination>
-                </div>
+                {totalPage > 1 && (
+                    <div className="d-flex justify-content-center mt-5 pagination-custom">
+                        <Pagination className="gap-2">
+                            <Button 
+                                className="btn-success"
+                                onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                                disabled={currentPage === 1}
+                            >
+                                PREVIOUS
+                            </Button>
+                            <Button 
+                                className="btn-success"
+                                onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPage))}
+                                disabled={currentPage === totalPage}
+                            >
+                                NEXT
+                            </Button>
+                        </Pagination>
+                    </div>
+                )}
             </Container>
         </div>
     )
