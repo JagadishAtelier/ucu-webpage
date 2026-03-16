@@ -57,7 +57,7 @@ function CareerRobatApply() {
             <h2 className="display-5 fw-bold mb-3">
               Who Can <span style={{ color: "#5ac501" }}>Apply?</span>
             </h2>
-            </div>
+          </div>
         </div>
 
         <div className="row g-4 justify-content-center">
