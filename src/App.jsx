@@ -74,8 +74,10 @@ import AdmissionHero from "./Components/NewAdmissionPage/AdmissionHero";
 import OnlineProgramPageBanner from "./Pages/OnlineProgramPage/OnlineProgramPageBanner";
 import OnlineProgramPage from "./Pages/OnlineProgramPage/OnlineProgramPage";
 import OnlineProgramFormPage from "./Pages/OnlineProgramFormPage/OnlineProgramFormPage";
+import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 
 function App() {
+  const isMaintenance = true;
   useEffect(() => {
     AOS.init({
       duration: 1200, // animation duration
@@ -89,62 +91,68 @@ function App() {
       {/* </div> */}
       <ModalProvider>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/program" element={<Program />} />
-          <Route path="/about-ucu" element={<AboutPage />} />
-          <Route path="/about/:slug" element={<AboutDynamicPage />} />
-          <Route path="/faculty/*" element={<NewFaculty />} />
-          <Route path="/profile/details" element={<PDPhero />} />
-          <Route path="/program-pgdm" element={<PGDMProgramPage />} />
-          <Route path="/pgpm-elite" element={<PGPMProgramPage />} />
-          <Route path="/program-pgxpm" element={<PGXPMProgramPage />} />
-          <Route path="/program/*" element={<PgprogramPage />} />
-          <Route path="/auth/register" element={<SignUpPage />} />
-          <Route path="/auth/login" element={<LoginPage />} />
-          <Route path="/auth/password" element={<AuthPassword />} />
-          <Route path="/auth/forgot-password" element={<ForgotPassPage />} />
-          <Route path="/auth/reset" element={<ResetPassPage />} />
-          <Route path="/advisory-councils/:title" element={<Advisory />} />
-          <Route path="/Careers" element={<CareersPage />} />
-          <Route path="/founder-message" element={<FounderMessage />} />
-          <Route path="/pgprogram" element={<PgprogramPage />} />
-          <Route path="/leader-ship" element={<LeaderShipPage />} />
-          <Route path="/campus-ambience" element={<CampusPage />} />
-          <Route path="/csr" element={<SociatalImpact />} />
-          <Route path="/open-programs" element={<OpenPrograms />} />
-          <Route path="/summer-programs" element={<SummerProgram />} />
-          <Route path="/admissions" element={<AdmissionHero />} />
-          <Route path="/consortium" element={<Consortium />} />
-          <Route path="/offerings" element={<OfferingsPage />} />
-          <Route path="/executive-edu/*" element={<EEPHome />} />
-          <Route path="/placements/*" element={<CampusPlacementsPage />} />
-          <Route path="/coe/*" element={<COEPage />} />
-          <Route path="/media/ucu-media" element={<UCUMedia />} />
-          <Route path="/media/ucu-media/*" element={<MediaEventDetails />} />
-          <Route path="/media/ucu-on-at" element={<UCUMediaEventsPage />} />
-          <Route path="/media/ucu-on-at/*" element={<UCUMediaEventsPageDetails />} />
-          <Route path="/media/gallery" element={<MediagalleryBanner />} />
-          <Route path="/media/blog" element={<MediablogBanner />} />
-          <Route path="/engagement/*" element={<CorparateBanner />} />
-          <Route path="/strategic/*" element={<StrategicCollabBanner />} />
-          <Route path="/contact-us" element={<ContactUsPage />} />
-          <Route path="/batch-profile" element={<BatchProfilePage />} />
-          <Route path="/talent-details" element={<TalentNavigationPage />} />
-          <Route path="/expression-of-interest" element={<ExpressInterestPageBanner />} />
-          <Route path="/industry-approach" element={<IndustryFirstApproach />} />
-          <Route path="/contact-chapters" element={<ContactChapters />} />
-          <Route path="/contact-chapters-international" element={<ContactChapterInternatinal />} />
-          <Route path="/explore-talent" element={<TalentPage />} />
-          <Route path="/blog" element={<BlogPageBanner />} />
-          <Route path="/programs-for-individuals" element={<ProgramsForIndividualsBanner />} />
-          <Route path="/cxo-series/*" element={<CXOPageBanner />} />
-          <Route path="/lcp" element={<LCPBanner />} />
-          <Route path="/Career-Reboot-Program-for-Women" element={<CareerRoobatPage />} />
-          <Route path="/PGPM-Flex" element={<PGPMFlexPageHome />} />
-          <Route path="/SalesDiplamo" element={<SalesDiplamoPage />} />
-          <Route path="/online-program/*" element={<OnlineProgramPage />} />
-          <Route path="/online-program-form" element={<OnlineProgramFormPage />} />
-          {/* <Route path="/account" element={<ProfilePage />} /> */}
+          {isMaintenance ? (
+            <Route path="*" element={<NotFoundPage />} />
+          ) : (
+            <>
+              <Route path="/" element={<Home />} />
+              <Route path="/program" element={<Program />} />
+              <Route path="/about-ucu" element={<AboutPage />} />
+              <Route path="/about/:slug" element={<AboutDynamicPage />} />
+              <Route path="/faculty/*" element={<NewFaculty />} />
+              <Route path="/profile/details" element={<PDPhero />} />
+              <Route path="/program-pgdm" element={<PGDMProgramPage />} />
+              <Route path="/pgpm-elite" element={<PGPMProgramPage />} />
+              <Route path="/program-pgxpm" element={<PGXPMProgramPage />} />
+              <Route path="/program/*" element={<PgprogramPage />} />
+              <Route path="/auth/register" element={<SignUpPage />} />
+              <Route path="/auth/login" element={<LoginPage />} />
+              <Route path="/auth/password" element={<AuthPassword />} />
+              <Route path="/auth/forgot-password" element={<ForgotPassPage />} />
+              <Route path="/auth/reset" element={<ResetPassPage />} />
+              <Route path="/advisory-councils/:title" element={<Advisory />} />
+              <Route path="/Careers" element={<CareersPage />} />
+              <Route path="/founder-message" element={<FounderMessage />} />
+              <Route path="/pgprogram" element={<PgprogramPage />} />
+              <Route path="/leader-ship" element={<LeaderShipPage />} />
+              <Route path="/campus-ambience" element={<CampusPage />} />
+              <Route path="/csr" element={<SociatalImpact />} />
+              <Route path="/open-programs" element={<OpenPrograms />} />
+              <Route path="/summer-programs" element={<SummerProgram />} />
+              <Route path="/admissions" element={<AdmissionHero />} />
+              <Route path="/consortium" element={<Consortium />} />
+              <Route path="/offerings" element={<OfferingsPage />} />
+              <Route path="/executive-edu/*" element={<EEPHome />} />
+              <Route path="/placements/*" element={<CampusPlacementsPage />} />
+              <Route path="/coe/*" element={<COEPage />} />
+              <Route path="/media/ucu-media" element={<UCUMedia />} />
+              <Route path="/media/ucu-media/*" element={<MediaEventDetails />} />
+              <Route path="/media/ucu-on-at" element={<UCUMediaEventsPage />} />
+              <Route path="/media/ucu-on-at/*" element={<UCUMediaEventsPageDetails />} />
+              <Route path="/media/gallery" element={<MediagalleryBanner />} />
+              <Route path="/media/blog" element={<MediablogBanner />} />
+              <Route path="/engagement/*" element={<CorparateBanner />} />
+              <Route path="/strategic/*" element={<StrategicCollabBanner />} />
+              <Route path="/contact-us" element={<ContactUsPage />} />
+              <Route path="/batch-profile" element={<BatchProfilePage />} />
+              <Route path="/talent-details" element={<TalentNavigationPage />} />
+              <Route path="/expression-of-interest" element={<ExpressInterestPageBanner />} />
+              <Route path="/industry-approach" element={<IndustryFirstApproach />} />
+              <Route path="/contact-chapters" element={<ContactChapters />} />
+              <Route path="/contact-chapters-international" element={<ContactChapterInternatinal />} />
+              <Route path="/explore-talent" element={<TalentPage />} />
+              <Route path="/blog" element={<BlogPageBanner />} />
+              <Route path="/programs-for-individuals" element={<ProgramsForIndividualsBanner />} />
+              <Route path="/cxo-series/*" element={<CXOPageBanner />} />
+              <Route path="/lcp" element={<LCPBanner />} />
+              <Route path="/Career-Reboot-Program-for-Women" element={<CareerRoobatPage />} />
+              <Route path="/PGPM-Flex" element={<PGPMFlexPageHome />} />
+              <Route path="/SalesDiplamo" element={<SalesDiplamoPage />} />
+              <Route path="/online-program/*" element={<OnlineProgramPage />} />
+              <Route path="/online-program-form" element={<OnlineProgramFormPage />} />
+              {/* <Route path="/account" element={<ProfilePage />} /> */}
+            </>
+          )}
         </Routes>
         <FixedSideBar />
         {/* <WhatsAppButton/> */}

@@ -3,7 +3,7 @@ import { ChevronRight, Home } from 'lucide-react'
 import Navbar from '../../Components/Navbar/Navbar'
 import NewFooter from '../../Components/NewFooter/NewFooter'
 import MediaGalleryAbout from './MediaGalleryAbout'
-import './MediagalleryBanner.css'
+import './Mediagallery.css'
 function MediagalleryBanner() {
     return (
         <div>
