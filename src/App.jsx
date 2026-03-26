@@ -154,7 +154,7 @@ function App() {
             </>
           )}
         </Routes>
-        <FixedSideBar />
+        {/* <FixedSideBar /> */}
         {/* <WhatsAppButton/> */}
       </ModalProvider>
     </Router>
