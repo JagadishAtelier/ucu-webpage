@@ -25,7 +25,7 @@ function NotFoundPage() {
                 </div>
             </div>
 
-            <h2 className="error-label">NOT FOUND</h2>
+            <h2 className="error-label">UCU WEBSITE NOT LIVE NOW</h2>
             <h2 className="error-label">Contact Atelier Technologies</h2>
         </div>
     );
