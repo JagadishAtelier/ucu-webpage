@@ -26,6 +26,7 @@ function NotFoundPage() {
             </div>
 
             <h2 className="error-label">NOT FOUND</h2>
+            <h2 className="error-label">Contact Atelier Technologies</h2>
         </div>
     );
 }

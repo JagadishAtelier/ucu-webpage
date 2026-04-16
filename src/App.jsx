@@ -77,7 +77,7 @@ import OnlineProgramFormPage from "./Pages/OnlineProgramFormPage/OnlineProgramFo
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 
 function App() {
-  const isMaintenance = false;
+  const isMaintenance = true;
   useEffect(() => {
     AOS.init({
       duration: 1200, // animation duration
