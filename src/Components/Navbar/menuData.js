@@ -432,7 +432,7 @@ export const menuData = [
   },
 
   {
-    label: "Advisory Councel",
+    label: "Advisory Council",
     placement: "bottom",
     submenu: [
       {
