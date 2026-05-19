@@ -2,9 +2,11 @@ import React from "react";
 import "./AdmissionsTabRedesigned.css";
 import { FaGraduationCap, FaClipboardCheck, FaCalendarAlt } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
+import { useModal } from "../../Context/ApplyModal/ModalContext";
 
 export default function AdmissionsTabRedesigned() {
     const { pathname } = useLocation();
+    const { showModal } = useModal();
 
     const pathSegments = pathname.split("/").filter(Boolean); // split and remove empty segments
     const lastSegment = pathSegments[pathSegments.length - 1]; // get only the last segment
@@ -171,7 +173,7 @@ export default function AdmissionsTabRedesigned() {
                 <div style={{ marginTop: "1.5rem" }} className="darkbtn">
                     <button
                         className="apply-butn"
-                        onClick={() => window.open("/apply", "_blank")}
+                        onClick={() => showModal("apply")}
                     >
                         Apply Now
                     </button>

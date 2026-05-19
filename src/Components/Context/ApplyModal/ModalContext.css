@@ -175,4 +175,16 @@
       width: 55%;
     }
   }
+
+  .form-div select, .form-div input[type="date"] {
+    height: 43px;
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 8px 12px;
+    width: 100%;
+    background-color: #fff;
+  }
+
   

@@ -4,10 +4,12 @@ import { LuHourglass } from "react-icons/lu";
 import { div } from "framer-motion/client";
 import { PersonStanding, User } from "lucide-react";
 import { useLocation } from "react-router-dom";
+import { useModal } from "../../Components/Context/ApplyModal/ModalContext";
 
 export default function PGPMApplications() {
       const { pathname } = useLocation();
       const isPGdM = pathname.includes("pgdm");
+      const { showModal } = useModal();
   return (
     <div className="pg-applications">
       {/* Applications Open */}
@@ -18,7 +20,7 @@ export default function PGPMApplications() {
           <p className="text-small d-lg-block d-none">Batch 2026–28</p>
           
         </div>
-        <button className="apply-btn d-lg-block d-none">Apply Now</button>
+        <button onClick={() => showModal("apply")} className="apply-btn d-lg-block d-none">Apply Now</button>
         
         {/* Mobile content */}
         <div className="d-flex flex-row flex-wrap gap-1">
@@ -30,7 +32,7 @@ export default function PGPMApplications() {
           
         </div>
         </div>
-        <button className="apply-btn-mob d-lg-none d-block py-2 mx-auto">Apply Now</button>
+        <button onClick={() => showModal("apply")} className="apply-btn-mob d-lg-none d-block py-2 mx-auto">Apply Now</button>
         </div>
       </div>
 

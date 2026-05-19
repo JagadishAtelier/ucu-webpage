@@ -11,8 +11,10 @@ import {
 } from 'lucide-react';
 import "../../Pages/PGPMFlexPage/PGPMFlexPage.css"; // Reuse vibrant styles
 import { Link } from 'react-router-dom';
+import { useModal } from "../../Components/Context/ApplyModal/ModalContext";
 
 const SalesDiplamoAdmission = () => {
+    const { showModal } = useModal();
     const steps = [
         {
             id: 1,
@@ -104,12 +106,12 @@ const SalesDiplamoAdmission = () => {
 
             {/* Premium Buttons */}
             <div className="pgxpm-download-actions d-flex flex-column flex-md-row gap-4 mt-5 justify-content-center">
-                <Link to={"/admissions"} className="btn pgxpm-download-btn d-flex align-items-center justify-content-center gap-3">
+                <button onClick={() => showModal("apply")} className="btn pgxpm-download-btn d-flex align-items-center justify-content-center gap-3">
                     <div className="icon-box">
                         <ArrowRight size={20} />
                     </div>
                     <span>Apply Now</span>
-                </Link>
+                </button>
 
                 <button className="btn pgxpm-download-btn d-flex align-items-center justify-content-center gap-3">
                     <div className="icon-box">
