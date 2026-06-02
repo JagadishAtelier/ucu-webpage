@@ -138,13 +138,13 @@ function CPPExecutive() {
           variant={activeTab === "functional" ? "primary" : "outline-primary"}
           onClick={() => setActiveTab("functional")}
         >
-          Functional Specialization
+          Domain Specialization
         </Button>
         <Button
           variant={activeTab === "industry" ? "primary" : "outline-primary"}
           onClick={() => setActiveTab("industry")}
         >
-          Industry Sector Specialization
+          Career Lane Specialization
         </Button>
       </div>
 

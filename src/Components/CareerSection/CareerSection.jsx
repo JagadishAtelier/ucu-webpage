@@ -151,7 +151,7 @@ function CareerSection() {
                 </div>
                 <div className="car-explore-btn-div">
                   <button onClick={()=> navigate(item.link)} className="btn green-explore-btn py-2">{item.buttonText}</button>
-                  <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
+                  <button onClick={() => navigate(`${item.link}?tab=admissions`)} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>
             </div>
@@ -197,7 +197,7 @@ function CareerSection() {
                 </div>
                 <div className="car-explore-btn-div">
                   <button onClick={()=> navigate(item.link)} className="btn green-explore-btn py-2">{item.buttonText}</button>
-                  <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
+                  <button onClick={() => navigate(`${item.link}?tab=admissions`)} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>
             </div>

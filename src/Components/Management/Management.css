@@ -134,6 +134,9 @@ align-items: center;
  margin-top: 1rem;
  max-width:70%;
 }
+.nomaxwd{
+  max-width: 100% !important;
+}
 .sort-disc{
   text-align: center;
   color: #000;

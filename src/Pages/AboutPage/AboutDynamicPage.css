@@ -1,0 +1,28 @@
+.dynamic-about-content-block {
+  width: 100%;
+}
+
+.dynamic-about-content-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dynamic-about-content-block .story-heading {
+  text-align: center;
+}
+
+.dynamic-about-story-content {
+  max-width: 1100px;
+}
+
+.dynamic-about-story-content p:last-child {
+  margin-bottom: 0;
+}
+
+.dynamic-about-story-content ul,
+.dynamic-about-story-content ol {
+  display: inline-block;
+  text-align: left;
+}

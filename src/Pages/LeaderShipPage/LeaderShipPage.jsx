@@ -6,13 +6,16 @@ import Footer from '../../Components/Footer/Footer';
 import NewFooter from '../../Components/NewFooter/NewFooter';
 import LeaderShipPeople from './LeaderShipPeople';
 import { RiDoubleQuotesR } from 'react-icons/ri';
+import { useParams } from 'react-router-dom';
 function LeaderShipPage() {
+  const { slug } = useParams();
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/about/page/leadership`);
+        const pageSlug = slug || "leadership";
+        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/about/leadership/${pageSlug}`);
         const result = await response.json();
         if (result.success) {
           setData(result.data);
@@ -22,7 +25,7 @@ function LeaderShipPage() {
       }
     };
     fetchData();
-  }, []);
+  }, [slug]);
 
   if (!data) return (
     <div>

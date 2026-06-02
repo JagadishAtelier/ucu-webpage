@@ -11,6 +11,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import NewFooter from "../Components/NewFooter/NewFooter";
 import Platforms from "../Components/Platforms/Platforms";
 import ExPhd from "../Components/ExPhd/ExPhd";
+import HomeEESection from "../Components/HomeEESection/HomeEESection";
 import Wps from "../Components/Wps/Wps";
 import OverviewParticipant from "../Components/PGDM-program/OverviewTab/OverviewParticipant";
 import Aspirants from "../Components/Aspirants/Aspirants";
@@ -49,7 +50,8 @@ const Home = () => {
         <ExPhd />
 
         <Platforms />
-
+        {/* <HomeEESection /> */}
+        
         {/* Industry */}
         <div data-aos="fade-up" data-aos-delay="100" className="my-4">
           <Industry />
@@ -77,9 +79,9 @@ const Home = () => {
         </div>
 
         {/* Banner */}
-        <div data-aos="fade-up" data-aos-delay="100">
+        {/* <div data-aos="fade-up" data-aos-delay="100">
           <Banner />
-        </div>
+        </div> */}
 
         <NewFooter />
       </>

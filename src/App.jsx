@@ -74,6 +74,7 @@ import AdmissionHero from "./Components/NewAdmissionPage/AdmissionHero";
 import OnlineProgramPageBanner from "./Pages/OnlineProgramPage/OnlineProgramPageBanner";
 import OnlineProgramPage from "./Pages/OnlineProgramPage/OnlineProgramPage";
 import OnlineProgramFormPage from "./Pages/OnlineProgramFormPage/OnlineProgramFormPage";
+import CertificationApplicationFormPage from "./Pages/CertificationApplicationFormPage/CertificationApplicationFormPage";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 
 function App() {
@@ -113,8 +114,10 @@ function App() {
               <Route path="/advisory-councils/:title" element={<Advisory />} />
               <Route path="/Careers" element={<CareersPage />} />
               <Route path="/founder-message" element={<FounderMessage />} />
+              <Route path="/founder-message/:slug" element={<FounderMessage />} />
               <Route path="/pgprogram" element={<PgprogramPage />} />
               <Route path="/leader-ship" element={<LeaderShipPage />} />
+              <Route path="/leader-ship/:slug" element={<LeaderShipPage />} />
               <Route path="/campus-ambience" element={<CampusPage />} />
               <Route path="/csr" element={<SociatalImpact />} />
               <Route path="/open-programs" element={<OpenPrograms />} />
@@ -138,6 +141,7 @@ function App() {
               <Route path="/talent-details" element={<TalentNavigationPage />} />
               <Route path="/expression-of-interest" element={<ExpressInterestPageBanner />} />
               <Route path="/industry-approach" element={<IndustryFirstApproach />} />
+              <Route path="/industry-approach/:slug" element={<IndustryFirstApproach />} />
               <Route path="/contact-chapters" element={<ContactChapters />} />
               <Route path="/contact-chapters-international" element={<ContactChapterInternatinal />} />
               <Route path="/explore-talent" element={<TalentPage />} />
@@ -150,6 +154,7 @@ function App() {
               <Route path="/SalesDiplamo" element={<SalesDiplamoPage />} />
               <Route path="/online-program/*" element={<OnlineProgramPage />} />
               <Route path="/online-program-form" element={<OnlineProgramFormPage />} />
+              <Route path="/certification-application-form" element={<CertificationApplicationFormPage />} />
               {/* <Route path="/account" element={<ProfilePage />} /> */}
             </>
           )}

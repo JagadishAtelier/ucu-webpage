@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
 import "../responsive-programs.css";
 import AboutPageHero from "../AboutPage/AboutPageHero/AboutPageHero";
@@ -15,7 +16,27 @@ const TAB_LIST = [
 ];
 
 export default function PGXPMTabs() {
-    const [active, setActive] = useState(TAB_LIST[0]);
+    const location = useLocation();
+    const [active, setActive] = useState(() => {
+        const queryParams = new URLSearchParams(window.location.search);
+        const tabParam = queryParams.get("tab");
+        if (tabParam) {
+            const found = TAB_LIST.find(t => t.toLowerCase() === tabParam.toLowerCase());
+            if (found) return found;
+        }
+        return TAB_LIST[0];
+    });
+
+    useEffect(() => {
+        const queryParams = new URLSearchParams(location.search);
+        const tabParam = queryParams.get("tab");
+        if (tabParam) {
+            const found = TAB_LIST.find(t => t.toLowerCase() === tabParam.toLowerCase());
+            if (found) {
+                setActive(found);
+            }
+        }
+    }, [location.search]);
     const navRef = useRef(null);
     const btnRefs = useRef({});
 

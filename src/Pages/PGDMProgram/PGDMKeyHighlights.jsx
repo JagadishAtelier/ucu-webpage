@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiMapPin, FiUsers, FiBriefcase, FiAward } from "react-icons/fi";
-import { BaggageClaim, Book, ChevronDown, Lightbulb, Sun } from "lucide-react";
+import { BaggageClaim, Book, ChevronDown, Lightbulb, Sun, Award } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FaFly } from "react-icons/fa";
 import { BsSuitcase } from "react-icons/bs";
+import axios from "axios";
 
 const ITEMS = [
     {
@@ -72,12 +73,72 @@ const ITEMS = [
 
 export default function PGDMKeyHighlights() {
     const navigate = useNavigate();
+    const { pathname } = useLocation();
 
     const [active, setActive] = useState("programhighlights");
     const [mobileOpen, setMobileOpen] = useState("programhighlights");
+    const [dynamicHighlights, setDynamicHighlights] = useState(null);
 
-    // Create a copy of ITEMS and add PGDM-specific tab if needed
-    const tabs = [...ITEMS];
+    useEffect(() => {
+        const fetchHighlights = async () => {
+            try {
+                const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/fulltimeprograms`);
+                // PGDM path generally is program-pgdm or includes pgdm
+                const match = res.data.find((prog) => {
+                    const titleLower = prog.programTitle?.toLowerCase() || "";
+                    const idLower = prog._id?.toLowerCase() || "";
+                    return (
+                        pathname.toLowerCase().includes(idLower) ||
+                        pathname.toLowerCase().includes(titleLower.replace(/\s+/g, "-")) ||
+                        idLower === "pgdm" ||
+                        titleLower.includes("pgdm")
+                    );
+                });
+                if (match && match.highlights && match.highlights.length > 0) {
+                    setDynamicHighlights(match.highlights);
+                    const firstId = match.highlights[0].id || match.highlights[0].label?.toLowerCase().replace(/\s+/g, "-");
+                    setActive(firstId);
+                    setMobileOpen(firstId);
+                }
+            } catch (err) {
+                console.error("Error fetching program highlights:", err);
+            }
+        };
+        fetchHighlights();
+    }, [pathname]);
+
+    const getIcon = (name) => {
+        switch (name) {
+            case "Lightbulb":
+                return <Lightbulb size={20} />;
+            case "Book":
+                return <Book size={20} />;
+            case "Suitcase":
+                return <BsSuitcase size={20} />;
+            case "Sun":
+                return <Sun size={20} />;
+            case "Award":
+                return <Award size={20} />;
+            case "Briefcase":
+                return <FiBriefcase size={20} />;
+            case "Users":
+                return <FiUsers size={20} />;
+            case "MapPin":
+                return <FiMapPin size={20} />;
+            default:
+                return <Lightbulb size={20} />;
+        }
+    };
+
+    const tabs = dynamicHighlights
+        ? dynamicHighlights.map((h) => ({
+              id: h.id || h.label?.toLowerCase().replace(/\s+/g, "-"),
+              label: h.label,
+              icon: getIcon(h.iconName),
+              title: h.title,
+              text: h.text,
+          }))
+        : [...ITEMS];
 
     const activeItem = tabs.find((i) => i.id === active) || tabs[0];
 

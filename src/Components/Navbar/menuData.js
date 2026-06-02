@@ -199,7 +199,7 @@ export const menuData = [
       },
 
       {
-        label: "Executive Post Graduate Certificate Programmes",
+        label: "Executive Post Graduate Certificate Programmes (Early Career)",
         submenu: [
           {
             label: "Domain Specialization",
@@ -294,34 +294,48 @@ export const menuData = [
         customHover: false,
         submenu: [
           {
-            label: "FinTech Ascend",
-            link: "/program/FinTech-Ascend",
+            label: "Mid Career",
+            className: "sublink-custom",
             customHover: false,
+            submenu: [
+              {
+                label: "FinTech Ascend",
+                link: "/program/FinTech-Ascend",
+                customHover: false,
+              },
+              {
+                label: "GCC Catalyst",
+                link: "/program/GCC-Catalyst",
+                customHover: false,
+              },
+              {
+                label: "HealthTech Navigate",
+                link: "/program/HealthTech-Navigate",
+                customHover: false,
+              },
+            ],
           },
           {
-            label: "FinTech Vanguard",
-            link: "/program/FinTech-Vanguard",
+            label: "For Mid-Senior Management",
+            className: "sublink-custom",
             customHover: false,
-          },
-          {
-            label: "GCC-Catalyst",
-            link: "/program/GCC-Catalyst",
-            customHover: false,
-          },
-          {
-            label: "GCC Elevate",
-            link: "/program/GCC-Elevate",
-            customHover: false,
-          },
-          {
-            label: "HealthTech Navigate",
-            link: "/program/HealthTech-Navigate",
-            customHover: false,
-          },
-          {
-            label: "HealthTech Pinnacle",
-            link: "/program/HealthTech-Pinnacle",
-            customHover: false,
+            submenu: [
+              {
+                label: "FinTech Vanguard",
+                link: "/program/FinTech-Vanguard",
+                customHover: false,
+              },
+              {
+                label: "GCC Elevate",
+                link: "/program/GCC-Elevate",
+                customHover: false,
+              },
+              {
+                label: "HealthTech Pinnacle",
+                link: "/program/HealthTech-Pinnacle",
+                customHover: false,
+              },
+            ],
           },
         ]
       },
@@ -601,7 +615,7 @@ export const menuDataMobile = [
       },
 
       {
-        label: "Executive Post Graduate Certificate Programmes",
+        label: "Executive Post Graduate Certificate Programmes (Early Career)",
         submenu: [
           {
             label: "Domain Specialization",
@@ -665,6 +679,57 @@ export const menuDataMobile = [
           { label: "CHRO", link: "/program/CHRO" },
           { label: "CFO", link: "/program/CFO" },
           { label: "CPO", link: "/program/CPO" },
+        ],
+      },
+      {
+        label: "Executive & Advanced Executive PG Certificate Programs",
+        className: "sublink-custom",
+        customHover: false,
+        submenu: [
+          {
+            label: "Mid Career",
+            className: "sublink-custom",
+            customHover: false,
+            submenu: [
+              {
+                label: "FinTech Ascend",
+                link: "/program/FinTech-Ascend",
+                customHover: false,
+              },
+              {
+                label: "GCC Catalyst",
+                link: "/program/GCC-Catalyst",
+                customHover: false,
+              },
+              {
+                label: "HealthTech Navigate",
+                link: "/program/HealthTech-Navigate",
+                customHover: false,
+              },
+            ],
+          },
+          {
+            label: "For Mid-Senior Management",
+            className: "sublink-custom",
+            customHover: false,
+            submenu: [
+              {
+                label: "FinTech Vanguard",
+                link: "/program/FinTech-Vanguard",
+                customHover: false,
+              },
+              {
+                label: "GCC Elevate",
+                link: "/program/GCC-Elevate",
+                customHover: false,
+              },
+              {
+                label: "HealthTech Pinnacle",
+                link: "/program/HealthTech-Pinnacle",
+                customHover: false,
+              },
+            ],
+          },
         ],
       },
     ],

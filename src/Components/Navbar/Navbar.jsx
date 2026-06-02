@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { menuData, menuDataMobile } from "./menuData";
 import "./Navbar.css";
 import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
-import logoImg from "../../Assets/aac/Copy of Webpage_20250924_151944_0001.png";
+import logoImg from "/logo3.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -19,32 +19,55 @@ const Navbar = () => {
   useEffect(() => {
     const fetchAboutMenu = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/about/nav`);
-        if (response.data && Array.isArray(response.data)) {
-          // console.log("Fetched About Nav Data:", response.data);
-          const dynamicAboutItems = response.data
-            .filter(item => item.slug !== 'main-about-ucu')
-            .map(item => {
-              let link = `/about/${item.slug}`;
-              if (item.slug === 'leadership') link = '/leader-ship';
-              else if (item.slug === 'founders-messages') link = '/founder-message';
-              else if (item.slug === 'industry-approach') link = '/industry-approach';
+        const baseUrl = `${import.meta.env.VITE_API_BASE_URL}/about`;
+        const [genericResponse, leadershipResponse, industryResponse, founderResponse] = await Promise.allSettled([
+          axios.get(`${baseUrl}/nav`),
+          axios.get(`${baseUrl}/leadership`),
+          axios.get(`${baseUrl}/industry-approach`),
+          axios.get(`${baseUrl}/founder-message`),
+        ]);
 
-              return {
-                label: item.title,
-                link: link
-              };
-            });
+        const getPages = (result) => {
+          if (result.status !== "fulfilled") return [];
+          return Array.isArray(result.value.data?.data)
+            ? result.value.data.data
+            : Array.isArray(result.value.data)
+              ? result.value.data
+              : [];
+        };
 
-          console.log("Navbar: Dynamic Items prepared:", dynamicAboutItems);
+        const aboutPages = getPages(genericResponse);
+        const leadershipPages = getPages(leadershipResponse);
+        const industryPages = getPages(industryResponse);
+        const founderPages = getPages(founderResponse);
+        const staticAboutSlugs = new Set([
+          "main-about-ucu",
+          "leadership",
+          "founders-messages",
+          "industry-approach",
+        ]);
 
+        const dynamicAboutItems = [
+          ...aboutPages
+            .filter((item) => item?.slug && !staticAboutSlugs.has(item.slug))
+            .map((item) => ({ label: item.title, link: `/about/${item.slug}` })),
+          ...founderPages
+            .filter((item) => item?.slug && item.slug !== "founders-messages")
+            .map((item) => ({ label: item.title, link: `/founder-message/${item.slug}` })),
+          ...leadershipPages
+            .filter((item) => item?.slug && item.slug !== "leadership")
+            .map((item) => ({ label: item.title, link: `/leader-ship/${item.slug}` })),
+          ...industryPages
+            .filter((item) => item?.slug && item.slug !== "industry-approach")
+            .map((item) => ({ label: item.title, link: `/industry-approach/${item.slug}` })),
+        ];
+
+        if (dynamicAboutItems.length > 0) {
           const updateMenu = (initialData, dynamicItems) => {
             return initialData.map(menu => {
               if (menu.label === "About") {
-                console.log("Navbar: Updating About menu. Current submenu length:", menu.submenu.length);
-                const existingLabels = new Set(menu.submenu.map(i => i.label));
-                const newItems = dynamicItems.filter(i => !existingLabels.has(i.label));
-                console.log("Navbar: Adding new items:", newItems);
+                const existingLinks = new Set(menu.submenu.map(i => i.link).filter(Boolean));
+                const newItems = dynamicItems.filter(i => !existingLinks.has(i.link));
                 return {
                   ...menu,
                   submenu: [
@@ -57,8 +80,8 @@ const Navbar = () => {
             });
           };
 
-          setNavData(prev => updateMenu(menuData, dynamicAboutItems));
-          setNavDataMobile(prev => updateMenu(menuDataMobile, dynamicAboutItems));
+          setNavData(updateMenu(menuData, dynamicAboutItems));
+          setNavDataMobile(updateMenu(menuDataMobile, dynamicAboutItems));
         }
       } catch (error) {
         console.error("Error fetching About navigation:", error);

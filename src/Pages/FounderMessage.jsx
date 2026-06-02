@@ -3,14 +3,17 @@ import "./FounderMessage.css";
 import Navbar from "../Components/Navbar/Navbar";
 import NewFooter from "../Components/NewFooter/NewFooter";
 import founderImg from "/founder.jpg";
+import { useParams } from "react-router-dom";
 
 const FounderMessage = () => {
+  const { slug } = useParams();
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/about/page/founders-messages`);
+        const pageSlug = slug || "founders-messages";
+        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/about/founder-message/${pageSlug}`);
         const result = await response.json();
         if (result.success) {
           setData(result.data);
@@ -20,7 +23,7 @@ const FounderMessage = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [slug]);
 
   if (!data) return (
     <>

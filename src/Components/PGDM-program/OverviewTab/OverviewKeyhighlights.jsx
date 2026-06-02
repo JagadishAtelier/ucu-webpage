@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiMapPin, FiUsers, FiBriefcase, FiAward } from "react-icons/fi";
 import "./OverviewKeyhighlights.css";
-import { BaggageClaim, Book, ChevronDown, Lightbulb, Sun } from "lucide-react";
+import { BaggageClaim, Book, ChevronDown, Lightbulb, Sun, Award } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FaFly } from "react-icons/fa";
 import { BsSuitcase } from "react-icons/bs";
+import axios from "axios";
 
 const ITEMS = [
   {
@@ -20,11 +21,9 @@ const ITEMS = [
 	<li>Short term international immersions</li>
 	<li>Entrepreneurial Incubation</li>
 	<li>Empirical study under Great Lakes Research Centre</li>
-	<li>Rigorous 12 week <a href="https://www.greatlakes.edu.in/chennai/pgdm/summer-internship-report">summer internship</a></li>
+	<li>Rigorous 12 week summer internship</li>
 	<li>AICTE approved</li>
 </ul>`,
-    action: "Know more",
-    link: "/campus-ambience",
   },
   {
     id: "learningexperience",
@@ -52,8 +51,6 @@ const ITEMS = [
 	<li>Karma Yoga - A Leadership Experiential Program</li>
 </ul>
     `,
-    action: "Find out how",
-    link: "/industry-approach",
   },
   {
     id: "internationaltieups",
@@ -71,8 +68,6 @@ const ITEMS = [
 	<li>Free boarding / lodging on reciprocal basis for students during exchange</li>
 	<li>Joint global summers [8-12 weeks]</li>
 </ul>`,
-    action: "View placements",
-    link: "/placements/recruiters",
   },
 ];
 
@@ -83,10 +78,68 @@ export default function OverviewKeyhighlights() {
 
   const [active, setActive] = useState("programhighlights");
   const [mobileOpen, setMobileOpen] = useState("programhighlights");
+  const [dynamicHighlights, setDynamicHighlights] = useState(null);
+
+  useEffect(() => {
+    const fetchHighlights = async () => {
+      try {
+        const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/fulltimeprograms`);
+        const match = res.data.find((prog) => {
+          const titleLower = prog.programTitle?.toLowerCase() || "";
+          const idLower = prog._id?.toLowerCase() || "";
+          return (
+            pathname.toLowerCase().includes(idLower) ||
+            pathname.toLowerCase().includes(titleLower.replace(/\s+/g, "-"))
+          );
+        });
+        if (match && match.highlights && match.highlights.length > 0) {
+          setDynamicHighlights(match.highlights);
+          const firstId = match.highlights[0].id || match.highlights[0].label?.toLowerCase().replace(/\s+/g, "-");
+          setActive(firstId);
+          setMobileOpen(firstId);
+        }
+      } catch (err) {
+        console.error("Error fetching program highlights:", err);
+      }
+    };
+    fetchHighlights();
+  }, [pathname]);
+
+  const getIcon = (name) => {
+    switch (name) {
+      case "Lightbulb":
+        return <Lightbulb size={20} />;
+      case "Book":
+        return <Book size={20} />;
+      case "Suitcase":
+        return <BsSuitcase size={20} />;
+      case "Sun":
+        return <Sun size={20} />;
+      case "Award":
+        return <Award size={20} />;
+      case "Briefcase":
+        return <FiBriefcase size={20} />;
+      case "Users":
+        return <FiUsers size={20} />;
+      case "MapPin":
+        return <FiMapPin size={20} />;
+      default:
+        return <Lightbulb size={20} />;
+    }
+  };
 
   // Create a copy of ITEMS and add PGDM-specific tab if needed
-  const tabs = [...ITEMS];
-  if (isPGDM) {
+  let tabs = dynamicHighlights
+    ? dynamicHighlights.map((h) => ({
+        id: h.id || h.label?.toLowerCase().replace(/\s+/g, "-"),
+        label: h.label,
+        icon: getIcon(h.iconName),
+        title: h.title,
+        text: h.text,
+      }))
+    : [...ITEMS];
+
+  if (!dynamicHighlights && isPGDM) {
     tabs.push({
       id: "summerinternship",
       label: "Summer Internship",
@@ -109,7 +162,7 @@ export default function OverviewKeyhighlights() {
 	<li>Building live business solving capabilities</li>
 </ul>
     `,
-    })
+    });
   }
 
   const activeItem = tabs.find((i) => i.id === active) || tabs[0];
@@ -174,13 +227,6 @@ export default function OverviewKeyhighlights() {
                     className="content-text"
                     dangerouslySetInnerHTML={{ __html: item.text }}
                   />
-{/* 
-                  <button
-                    className="btn-cta"
-                    onClick={() => navigate(item.link)}
-                  >
-                    {item.action} <span className="chev">›</span>
-                  </button> */}
                 </div>
               </div>
             );

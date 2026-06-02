@@ -4,6 +4,8 @@ import axios from "axios";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 import NewFooter from "../../Components/NewFooter/NewFooter";
+import "./AboutStory/AboutStory.css";
+import "./AboutDynamicPage.css";
 
 
 const AboutDynamicPage = () => {
@@ -11,6 +13,64 @@ const AboutDynamicPage = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    const renderHtml = (html) => ({ __html: html || "" });
+
+    const renderSection = (section, index) => {
+        const isContentBlock = (section.type || "content") === "content" && !section.image;
+
+        if (isContentBlock) {
+            return (
+                <section
+                    key={index}
+                    data-aos="fade-up"
+                    className="about-story-section dynamic-about-content-block py-5 px-3 px-md-4 px-lg-0 text-center"
+                >
+                    <div className="dynamic-about-content-inner">
+                        {section.heading && (
+                            <h2
+                                className="story-heading fw-bold mb-3 mb-md-4"
+                                dangerouslySetInnerHTML={renderHtml(section.heading)}
+                            />
+                        )}
+                        {section.content && (
+                            <div
+                                className="story-paragraph dynamic-about-story-content text-center mx-auto px-lg-5"
+                                dangerouslySetInnerHTML={renderHtml(section.content)}
+                            />
+                        )}
+                    </div>
+                </section>
+            );
+        }
+
+        return (
+            <div key={index} className="container py-4">
+                <div className={`row mb-5 align-items-center ${index % 2 !== 0 ? 'flex-row-reverse' : ''}`}>
+                    {section.image ? (
+                        <>
+                            <div className="col-md-6 mb-4 mb-md-0">
+                                <img
+                                    src={section.image}
+                                    alt={section.heading}
+                                    className="img-fluid rounded shadow"
+                                />
+                            </div>
+                            <div className="col-md-6">
+                                {section.heading && <h3 className="fw-bold mb-3" dangerouslySetInnerHTML={renderHtml(section.heading)} />}
+                                <div dangerouslySetInnerHTML={renderHtml(section.content)} />
+                            </div>
+                        </>
+                    ) : (
+                        <div className="col-12">
+                            {section.heading && <h3 className="fw-bold mb-3" dangerouslySetInnerHTML={renderHtml(section.heading)} />}
+                            <div dangerouslySetInnerHTML={renderHtml(section.content)} />
+                        </div>
+                    )}
+                </div>
+            </div>
+        );
+    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -77,7 +137,7 @@ const AboutDynamicPage = () => {
                         />
                         <div className="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
                         <div className="position-absolute top-50 start-50 translate-middle text-center text-white w-75">
-                            <h1 className="display-4 fw-bold">{data.title}</h1>
+                            <h1 className="display-4 fw-bold" dangerouslySetInnerHTML={renderHtml(data.title)} />
                         </div>
                     </div>
                 )}
@@ -88,37 +148,14 @@ const AboutDynamicPage = () => {
                     {data.description && (
                         <div className="row mb-5">
                             <div className="col-lg-10 mx-auto text-center">
-                                <p className="lead" style={{ whiteSpace: 'pre-line' }}>{data.description}</p>
+                                <div className="lead" dangerouslySetInnerHTML={renderHtml(data.description)} />
                             </div>
                         </div>
                     )}
-
-                    {/* Dynamic Sections */}
-                    {data.sections && data.sections.map((section, index) => (
-                        <div key={index} className={`row mb-5 align-items-center ${index % 2 !== 0 ? 'flex-row-reverse' : ''}`}>
-                            {section.image ? (
-                                <>
-                                    <div className="col-md-6 mb-4 mb-md-0">
-                                        <img
-                                            src={section.image}
-                                            alt={section.heading}
-                                            className="img-fluid rounded shadow"
-                                        />
-                                    </div>
-                                    <div className="col-md-6">
-                                        {section.heading && <h3 className="fw-bold mb-3">{section.heading}</h3>}
-                                        <div style={{ whiteSpace: 'pre-line' }}>{section.content}</div>
-                                    </div>
-                                </>
-                            ) : (
-                                <div className="col-12">
-                                    {section.heading && <h3 className="fw-bold mb-3">{section.heading}</h3>}
-                                    <div style={{ whiteSpace: 'pre-line' }}>{section.content}</div>
-                                </div>
-                            )}
-                        </div>
-                    ))}
                 </div>
+
+                {/* Dynamic Sections */}
+                {data.sections && data.sections.map(renderSection)}
             </div>
             <NewFooter />
         </>

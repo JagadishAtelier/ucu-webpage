@@ -94,7 +94,7 @@ const tabData = {
 const tabTitles = {
     fulltime: "Full-Time Programs",
     flexi: "Flexi Programs",
-    executive: "Functional Specialization",
+    executive: "Domain Specialization",
     career: "Career Reboot Program for Women",
 };
 
@@ -174,7 +174,7 @@ function TalentFullTime() {
                         ))}
 
                         {/* Industry Sector Title */}
-                        <h1 className="text-center my-4">Industry Sector Specialization</h1>
+                        <h1 className="text-center my-4">Career Lane Specialization</h1>
                         {tabData.executive.industrySector.map((item, index) => (
                             <div onClick={() => navigate("/talent-details", { state: { head: item.head } })}
                                 className="col-lg-4 col-md-6" key={index}>

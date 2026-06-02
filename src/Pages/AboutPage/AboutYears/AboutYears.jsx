@@ -93,7 +93,7 @@ const AboutYears = ({ statsData }) => {
                 )}
               </h1>
 
-              <p className="counter-paragraph mb-0">{item.para}</p>
+              <p className="counter-paragraph mb-0" dangerouslySetInnerHTML={{ __html: item.para }} />
             </div>
           ))}
         </div>

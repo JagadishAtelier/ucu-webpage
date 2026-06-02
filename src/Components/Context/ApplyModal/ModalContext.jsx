@@ -1,11 +1,13 @@
 import React, { createContext, useContext, useState } from "react";
 import './ModalContext.css'
 import emailjs from "emailjs-com";
+import { useNavigate } from "react-router-dom";
 
 const ModalContext = createContext();
 export const useModal = () => useContext(ModalContext);
 
 export const ModalProvider = ({ children }) => {
+  const navigate = useNavigate();
   const [modalType, setModalType] = useState(null);
 
   const [country, setCountry] = useState("INDIAN");
@@ -79,8 +81,23 @@ export const ModalProvider = ({ children }) => {
       console.error("Error submitting basic lead:", err);
     }
 
-    // Go to step 2
-    setStep(2);
+    // Redirect to detailed full-page certification application form
+    navigate("/certification-application-form", {
+      state: {
+        leadData: {
+          fullName,
+          email,
+          phoneCode,
+          phoneNumber,
+          program,
+          qualification,
+          workExperience,
+          city,
+        }
+      }
+    });
+
+    hideModal();
   };
 
   // STEP 2: DETAILED APPLICATION SUBMIT

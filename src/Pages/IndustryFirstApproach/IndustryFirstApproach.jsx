@@ -4,13 +4,16 @@ import { ChevronRight } from 'lucide-react'
 import Navbar from '../../Components/Navbar/Navbar'
 import NewFooter from '../../Components/NewFooter/NewFooter'
 import IndustryApproachContent from './IndustryApproachContent'
+import { useParams } from 'react-router-dom'
 function IndustryFirstApproach() {
+    const { slug } = useParams();
     const [data, setData] = React.useState(null);
 
     React.useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/about/page/industry-approach`);
+                const pageSlug = slug || "industry-approach";
+                const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/about/industry-approach/${pageSlug}`);
                 const result = await response.json();
                 if (result.success) {
                     setData(result.data);
@@ -20,7 +23,7 @@ function IndustryFirstApproach() {
             }
         };
         fetchData();
-    }, []);
+    }, [slug]);
 
     if (!data) return (
         <div>

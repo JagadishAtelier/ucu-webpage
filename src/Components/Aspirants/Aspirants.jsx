@@ -130,7 +130,7 @@ useEffect(()=>{
             <div className="asp-play-button-overlay">▶</div>
           </div>
         )}
-        <p className="program-description">
+        <p className="program-description mb-0">
           <strong>-{item.author}</strong>
         </p>
         <p className="program-description">{item.authorProf}</p>

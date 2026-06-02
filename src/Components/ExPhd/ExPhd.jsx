@@ -82,8 +82,8 @@ function ExPhd() {
                   <p className="program-description">{item.eligible}</p>
                 </div>
                 <div className="car-explore-btn-div">
-                  <button onClick={()=>navigate("/SalesDiplamo")} className="btn car-apply-btn py-2">EXPLORE</button>
-                  <button onClick={() => showModal("apply")} className="btn car-apply-btn py-2">APPLY NOW</button>
+                  <button onClick={()=>navigate("/executive-edu?tab=3")} className="btn car-apply-btn py-2">EXPLORE</button>
+                  <button onClick={() => navigate("/executive-edu?tab=3")} className="btn car-apply-btn py-2">APPLY NOW</button>
                 </div>
               </div>
             </div>

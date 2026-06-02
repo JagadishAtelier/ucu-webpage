@@ -95,10 +95,10 @@ function PGPMSpecification() {
 
             <div className="row mt-5 mb-3 d-none d-lg-block">
                 <div className="col-6">
-                    <h2 className="fw-bold">Industry Specialisations</h2>
+                    <h2 className="fw-bold">Career Lane Specialisations</h2>
                 </div>
                 <div className="col-6">
-                    <h2 className="fw-bold">Functional Specialisations</h2>
+                    <h2 className="fw-bold">Domain Specialisations</h2>
                 </div>
             </div>
 
@@ -151,7 +151,7 @@ function PGPMSpecification() {
             <div className="d-block d-lg-none">
 
                 {/* INDUSTRY SECTION */}
-                <h2 className="fw-bold">Industry Specialisations</h2>
+                <h2 className="fw-bold">Career Lane Specialisations</h2>
                 {industry.map((item, index) => (
                     <div className="mb-4" key={index}>
                         <p className="SS-list-heading px-3 py-3">{item.heading}</p>
@@ -165,7 +165,7 @@ function PGPMSpecification() {
                 ))}
 
                 {/* FUNCTIONAL SECTION */}
-                <h2 className="fw-bold mt-5">Functional Specialisations</h2>
+                <h2 className="fw-bold mt-5">Domain Specialisations</h2>
                 {functional.map((item, index) => (
                     <div className="mb-4" key={index}>
                         <p className="SS-list-heading px-3 py-3">{item.heading}</p>

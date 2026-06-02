@@ -96,10 +96,10 @@ The PGPM program offers specialisations allowing students to gain deep expertise
 
             <div className="row mt-5 mb-3">
                 <div className="col-6">
-                    <h2 className="fw-bold">Industry Specialisations</h2>
+                    <h2 className="fw-bold">Career Lane Specialisations</h2>
                 </div>
                 <div className="col-6">
-                    <h2 className="fw-bold">Functional Specialisations</h2>
+                    <h2 className="fw-bold">Domain Specialisations</h2>
                 </div>
             </div>
 

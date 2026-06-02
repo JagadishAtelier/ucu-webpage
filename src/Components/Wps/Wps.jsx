@@ -91,7 +91,7 @@ function Wps() {
                 <div className="car-explore-btn-div">
                   <button onClick={()=> navigate("/Career-Reboot-Program-for-Women")} className="btn car-apply-btn py-2">EXPLORE</button>
                   <button
-                    onClick={() => showModal("apply")}
+                    onClick={() => navigate("/Career-Reboot-Program-for-Women?tab=admissions")}
                     className="btn car-apply-btn py-2"
                   >
                     APPLY NOW

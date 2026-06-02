@@ -101,7 +101,7 @@ function Sales() {
     <div className="sales-container container-fluid my-lg-3 my-1">
       <div className="d-flex flex-lg-column flex-column align-items-lg-center justify-content-lg-center text-center mb-4">
         <h1 className="display-4 fw-bold col-12 col-lg-12 text-center">
-          <span style={{ color: "#5ac501" }}>Executive Post Graduate</span> <br /> Certificate Programmes
+          <span style={{ color: "#5ac501" }}>Executive Post Graduate</span> <br /> Certificate Programmes (Early Career)
         </h1>
         <p className="col-lg-6 text-center sort-disc">
           Explore our range of industry-focused programs designed to equip <br /> students with practical skills and career-ready expertise.
@@ -150,7 +150,7 @@ function Sales() {
                   <button onClick={()=> navigate(item.link)} className="car-explore-btn expo-btn btn btn-outline-dark">
                     EXPLORE
                   </button>
-                  <button onClick={() => showModal("apply")} className="car-apply-btn expo-btn">APPLY NOW</button>
+                  <button onClick={() => navigate(`${item.link}?tab=admissions`)} className="car-apply-btn expo-btn">APPLY NOW</button>
                 </div>
               </div>
             </div>
@@ -188,7 +188,7 @@ function Sales() {
                   <button onClick={()=> navigate(item.link)} className="car-explore-btn expo-btn btn btn-outline-dark">
                     EXPLORE
                   </button>
-                  <button onClick={() => showModal("apply")} className="car-apply-btn expo-btn">APPLY NOW</button>
+                  <button onClick={() => navigate(`${item.link}?tab=admissions`)} className="car-apply-btn expo-btn">APPLY NOW</button>
                 </div>
               </div>
             </div>
