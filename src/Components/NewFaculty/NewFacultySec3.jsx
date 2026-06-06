@@ -1,9 +1,51 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./NewFac.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { getFacultyBuckets } from "../../Api/FacultyBucketApi";
 
-const departments = [
+const sortDepartments = (items) =>
+  [...items].sort((a, b) => String(a.title || "").localeCompare(String(b.title || "")));
+
+const defaultDepartments = sortDepartments([
+  {
+    title: "Consulting",
+    data: [
+      {
+        name: "Giampaolo Gabbi",
+        prof: "Professor of Practice Audit & Risk Management",
+        image:
+          "https://sdabocconiasiacenter.com/wp-content/uploads/2025/04/alessandro_recla_cv.jpg",
+      },
+      {
+        name: "Leonardo Luca Etro",
+        prof: `Dean, SDA Bocconi Asia Center
+        Associate Professor of Practice
+        M&A and Restructuring`,
+        image:
+          "https://sdabocconiasiacenter.com/wp-content/uploads/2025/04/daniele_tonini_cv.jpg",
+      },
+    ],
+  },
+  {
+    title: "Data Science, Analytics and Gen AI",
+    data: [
+      {
+        name: "Giampaolo Gabbi",
+        prof: "Professor of Practice Audit & Risk Management",
+        image:
+          "https://sdabocconiasiacenter.com/wp-content/uploads/2025/04/alessandro_recla_cv.jpg",
+      },
+      {
+        name: "Leonardo Luca Etro",
+        prof: `Dean, SDA Bocconi Asia Center
+        Associate Professor of Practice
+        M&A and Restructuring`,
+        image:
+          "https://sdabocconiasiacenter.com/wp-content/uploads/2025/04/daniele_tonini_cv.jpg",
+      },
+    ],
+  },
   {
     title: "Marketing",
     data: [
@@ -13,6 +55,14 @@ const departments = [
         image: "https://sdabocconiasiacenter.com/wp-content/uploads/2024/07/laura_zoni_cv.jpg",
       },
     ],
+  },
+  {
+    title: "Sales",
+    data: [],
+  },
+  {
+    title: "HR/OB",
+    data: [],
   },
   {
     title: "Operations & Supply Chain",
@@ -92,44 +142,6 @@ const departments = [
     ],
   },
   {
-    title: "Analytics & AI",
-    data: [
-      {
-        name: "Giampaolo Gabbi",
-        prof: "Professor of Practice Audit & Risk Management",
-        image:
-          "https://sdabocconiasiacenter.com/wp-content/uploads/2025/04/alessandro_recla_cv.jpg",
-      },
-      {
-        name: "Leonardo Luca Etro",
-        prof: `Dean, SDA Bocconi Asia Center
-        Associate Professor of Practice
-        M&A and Restructuring`,
-        image:
-          "https://sdabocconiasiacenter.com/wp-content/uploads/2025/04/daniele_tonini_cv.jpg",
-      },
-    ],
-  },
-  {
-    title: "Consulting",
-    data: [
-      {
-        name: "Giampaolo Gabbi",
-        prof: "Professor of Practice Audit & Risk Management",
-        image:
-          "https://sdabocconiasiacenter.com/wp-content/uploads/2025/04/alessandro_recla_cv.jpg",
-      },
-      {
-        name: "Leonardo Luca Etro",
-        prof: `Dean, SDA Bocconi Asia Center
-        Associate Professor of Practice
-        M&A and Restructuring`,
-        image:
-          "https://sdabocconiasiacenter.com/wp-content/uploads/2025/04/daniele_tonini_cv.jpg",
-      },
-    ],
-  },
-  {
     title: "Product",
     data: [
       {
@@ -167,7 +179,7 @@ const departments = [
   //     },
   //   ],
   // },
-];
+]);
 
 const FacultyPairCard = ({ pair }) => {
     const navigate = useNavigate();
@@ -231,6 +243,11 @@ const DepartmentSection = ({ department, isOpen, onToggle }) => {
         {pairs.map((pair, idx) => (
           <FacultyPairCard key={idx} pair={pair} />
         ))}
+        {department.data.length === 0 && (
+          <div className="p-4 mx-lg-4 mb-4 rounded shadow-sm bg-color-card text-center text-muted">
+            Faculty profiles will be updated soon.
+          </div>
+        )}
       </div>
     </div>
   );
@@ -238,6 +255,23 @@ const DepartmentSection = ({ department, isOpen, onToggle }) => {
 
 function NewFacultySec3() {
   const [openIndex, setOpenIndex] = useState(null);
+  const [departments, setDepartments] = useState(defaultDepartments);
+
+  useEffect(() => {
+    const fetchBuckets = async () => {
+      try {
+        const buckets = await getFacultyBuckets();
+        const visibleBuckets = buckets.filter((bucket) => bucket.isVisible !== false);
+        if (visibleBuckets.length) {
+          setDepartments(sortDepartments(visibleBuckets));
+        }
+      } catch (error) {
+        console.error("Failed to fetch faculty buckets", error);
+      }
+    };
+
+    fetchBuckets();
+  }, []);
 
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);

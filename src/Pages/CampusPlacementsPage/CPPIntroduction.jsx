@@ -1,6 +1,28 @@
 import React from "react";
 import founderImg from "/founder.jpg";
 import CppMindMap from "./CppMindMap";
+
+const placementTestimonials = [
+  {
+    title: "Corporate Recruiter",
+    subtitle: "Campus hiring partner",
+    quote:
+      "UCU's placement approach is structured around role-readiness, practical exposure, and close industry involvement, which makes the hiring conversation sharper from the start.",
+  },
+  {
+    title: "Industry Mentor",
+    subtitle: "Leadership and business coach",
+    quote:
+      "The focus on simulations, live projects, and mentoring helps learners connect business concepts with execution, which is exactly what employers look for.",
+  },
+  {
+    title: "Career Services Team",
+    subtitle: "Corporate and career services",
+    quote:
+      "Every placement interaction is designed to be transparent, collaborative, and aligned to both recruiter expectations and learner aspirations.",
+  },
+];
+
 function CPPIntroduction() {
   return (
     <div className="captital-campus-content-sec mt-4 text-justifys">
@@ -176,6 +198,25 @@ function CPPIntroduction() {
             <br />
             Universal Corporate University, Chennai
           </p>
+        </div>
+      </section>
+
+      <section className="placement-testimonials-section">
+        <div className="placement-testimonials-header">
+          <p>Placement Testimonials</p>
+          <h2>What partners say about UCU talent</h2>
+        </div>
+        <div className="placement-testimonials-grid">
+          {placementTestimonials.map((testimonial) => (
+            <article className="placement-testimonial-card" key={testimonial.title}>
+              <span className="placement-testimonial-quote">"</span>
+              <p className="placement-testimonial-text">{testimonial.quote}</p>
+              <div>
+                <h3>{testimonial.title}</h3>
+                <p>{testimonial.subtitle}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
     </div>

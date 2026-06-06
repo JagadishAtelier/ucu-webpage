@@ -1,5 +1,29 @@
 import React, { useState } from 'react'
 import { Col, Container, Form, Row, Button } from "react-bootstrap";
+
+const programOptions = [
+    "PGDM | Young Leaders' Program",
+    "PGPM ELITE | Career Accelerator Program",
+    "PGPM Flex",
+    "PGXPM",
+    "Career Reboot Program for Women",
+    "Sales Diploma",
+    "Digital Marketing & AI",
+    "Product Management",
+    "Cybersecurity",
+    "Banking & Finance",
+    "Business Analytics",
+    "Data Science & AI",
+    "Mobility & Sustainability",
+    "Consulting",
+    "FinTech",
+    "GCC",
+    "MDPs",
+    "Leadership Coaching Program",
+    "CXO Series",
+    "Online Programs",
+];
+
 function ExpressInterestForm() {
 
     const [openForm, setOpenForm] = useState(false)
@@ -107,12 +131,27 @@ function ExpressInterestForm() {
                         </Row>
                         {openForm && (
                             <div className='my-4 contact-form-card bg-white p-4 p-md-5'>
-                                <Button className='col-12'>EXPRESSION OF INTEREST (EOI) </Button>
+                                <Button className='col-12'>Expression of Interest (EOI)</Button>
+                                <h2 className="EOI-section-title">Expression of Interest (EOI)</h2>
                                 <div className=' d-flex align-items-center justify-content-center my-4 gap-5'>
                                     {/* <img src='/logo.svg' className='EOI-logo'/> */}
                                     <h3 className='text-center'>Corporate & Career Services- Chennai </h3>
                                 </div>
                                 <Form>
+                                    <div className="EOI-program-checklist mb-4">
+                                        <p className="fs-5 fw-bold mb-3">Programs of Interest</p>
+                                        <Row>
+                                            {programOptions.map((program) => (
+                                                <Col lg={4} md={6} key={program}>
+                                                    <Form.Check
+                                                        type="checkbox"
+                                                        label={program}
+                                                        className="EOI-program-check mb-2 fw-bold"
+                                                    />
+                                                </Col>
+                                            ))}
+                                        </Row>
+                                    </div>
                                     <Row>
                                         <Form.Group className='d-flex align-items-end flex-wrap mb-3 gap-lg-4 gap-0'>
                                             <p className='col-fit mb-0'>UCU Recruiter’s Expression of Interest in Class of</p>

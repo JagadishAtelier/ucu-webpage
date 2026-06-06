@@ -1,4 +1,4 @@
-// import React from "react";
+import { useEffect, useState } from "react";
 // Reuse or placeholder components
 import PGPMBottomBanner from "../../Pages/PGPMProgram/PGPMBottomBanner";
 import SalesDiplamoPageFeatures from "./SalesDiplamoPageFeatures";
@@ -6,6 +6,7 @@ import SalesDiplamoPageWho from "./SalesDiplamoPageWho";
 import { UserPlus, Target, Building2, Download, FileText, CheckCircle2 } from "lucide-react";
 import SalesDiplamoRoadMap from "./SalesDiplamoRoadMap";
 import "../../Pages/PGPMFlexPage/PGPMFlexPage.css"; // Reuse vibrant styles
+import { getSalesDiplomaPage } from "../../Api/SalesDiplomaPageApi";
 
 const brands = [
     { name: "Apple", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" },
@@ -23,6 +24,23 @@ const brands = [
 ];
 
 export default function SalesDiplamoPageOverview() {
+    const [pageData, setPageData] = useState(null);
+
+    useEffect(() => {
+        getSalesDiplomaPage()
+            .then(setPageData)
+            .catch((error) => console.error("Failed to fetch Sales Diploma page data", error));
+    }, []);
+
+    const stats = pageData?.stats?.length
+        ? pageData.stats
+        : [
+            { value: "6", label: "Months", note: "Intensive sales diploma journey" },
+            { value: "0-3", label: "Years", note: "Freshers and early professionals" },
+            { value: "4+", label: "Sectors", note: "FMCG, FMCD, IT/ITES, BFSI and more" },
+            { value: "100%", label: "Role Focus", note: "Practical sales readiness" },
+        ];
+
     return (
         <>
             <div className="container my-1 p-3">
@@ -120,6 +138,25 @@ export default function SalesDiplamoPageOverview() {
             <div className="container p-3">
                 <SalesDiplamoPageWho />
             </div>
+
+            <section className="sales-diploma-stats-section">
+                <div className="container">
+                    <div className="sales-diploma-stats-header">
+                        <h3>{pageData?.statsTitle || "Sales Diploma at a Glance"}</h3>
+                        <p>{pageData?.statsSubtitle || "A focused, corporate-connected pathway for early career sales talent."}</p>
+                    </div>
+                    <div className="sales-diploma-stats-grid">
+                        {stats.map((stat, index) => (
+                            <div className="sales-diploma-stat-card" key={`${stat.label}-${index}`}>
+                                <span className="sales-diploma-stat-index">{String(index + 1).padStart(2, "0")}</span>
+                                <strong>{stat.value}</strong>
+                                <h4>{stat.label}</h4>
+                                {stat.note && <p>{stat.note}</p>}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             <div className="container my-5">
                 <h3 className="cs-subtitle mb-4">Participant’s Organisations</h3>

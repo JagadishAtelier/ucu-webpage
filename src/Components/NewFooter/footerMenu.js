@@ -44,8 +44,6 @@ export const footerMenu = [
       { label: "Campus", link: "/campus-ambience" },
       { label: "Campus Placements", link: "/placements/Campus-Placement" },
       { label: "Societal impact", link: "/csr" },
-      { label: "Open Programs", link: "/open-programs" },
-      { label: "Summer Programs", link: "/summer-programs" },
       { label: "Consortium", link: "/consortium" },
       { label: "Careers", link: "/careers" },
     ],

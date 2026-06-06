@@ -24,7 +24,13 @@ function Advisory() {
       const { category, adivsories } = res.data;
 
       setCategory(category);
-      setAdvisories(adivsories);
+      const sortedAdvisories = [...(adivsories || [])].sort((a, b) => {
+        const aOrder = Number.isFinite(a.sortOrder) ? a.sortOrder : Number.MAX_SAFE_INTEGER;
+        const bOrder = Number.isFinite(b.sortOrder) ? b.sortOrder : Number.MAX_SAFE_INTEGER;
+        if (aOrder !== bOrder) return aOrder - bOrder;
+        return String(a._id || "").localeCompare(String(b._id || ""));
+      });
+      setAdvisories(sortedAdvisories);
     } catch (error) {
       console.error("Failed to fetch", error);
     }
@@ -90,8 +96,8 @@ function Advisory() {
         </div>
 
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center mb-lg-5 mb-5 position-relative">
-          {advisories.map((person, idx) => (
-            <div key={idx} className="col d-flex">
+          {advisories.map((person) => (
+            <div key={person._id || person.name} className="col d-flex">
               <div className="staff-card d-flex flex-column justify-content-between align-items-center text-center w-100 mt-lg-3">
                 <img
                   src={person.profileImageUrl}
@@ -109,7 +115,7 @@ function Advisory() {
                 </div>
 
                 <div className="">
-                  <p className="fs-5 mb-2 font-bold">{person.comText}</p>
+                  <p className="fs-5 mb-2 font-bold">{person.companyText}</p>
                   <h4 className="fs-4 fw-bold text-uppercase mb-2">
                     {person.name}
                   </h4>

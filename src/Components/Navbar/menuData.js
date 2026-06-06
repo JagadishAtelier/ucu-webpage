@@ -446,7 +446,7 @@ export const menuData = [
   },
 
   {
-    label: "Advisory Council",
+    label: "Advisory Councils",
     placement: "bottom",
     submenu: [
       {
@@ -514,19 +514,17 @@ export const menuData = [
     placement: "bottom",
     link: "/faculty",
     // submenu: [
-    //   { label: "Sales & Marketing", link: "/faculty/sales-marketing" },
+    //   { label: "Consulting", link: "/faculty/consulting" },
+    //   { label: "Data Science, Analytics and Gen AI", link: "/faculty/data-science-analytics-gen-ai" },
     //   { label: "Finance", link: "/faculty/finance" },
+    //   { label: "HR/OB", link: "/faculty/hr-ob" },
+    //   { label: "Marketing", link: "/faculty/marketing" },
     //   {
     //     label: "Operations & Supply Chain",
     //     link: "/faculty/operations-supply-chain",
     //   },
-    //   { label: "Analytics & AI", link: "/faculty/analytics-AI" },
-    //   { label: "Consulting", link: "/faculty/consulting" },
     //   { label: "Product", link: "/faculty/product" },
-    //   {
-    //     label: "Business Communications & Others",
-    //     link: "/faculty/business-communications-others",
-    //   },
+    //   { label: "Sales", link: "/faculty/sales" },
     // ],
   },
 
@@ -738,19 +736,17 @@ export const menuDataMobile = [
     label: "Faculty",
     placement: "bottom",
     submenu: [
-      { label: "Sales & Marketing", link: "/faculty/sales-marketing" },
+      { label: "Consulting", link: "/faculty/consulting" },
+      { label: "Data Science, Analytics and Gen AI", link: "/faculty/data-science-analytics-gen-ai" },
       { label: "Finance", link: "/faculty/finance" },
+      { label: "HR/OB", link: "/faculty/hr-ob" },
+      { label: "Marketing", link: "/faculty/marketing" },
       {
         label: "Operations & Supply Chain",
         link: "/faculty/operations-supply-chain",
       },
-      { label: "Analytics & AI", link: "/faculty/analytics-AI" },
-      { label: "Consulting", link: "/faculty/consulting" },
       { label: "Product", link: "/faculty/product" },
-      {
-        label: "Business Communications & Others",
-        link: "/faculty/business-communications-others",
-      },
+      { label: "Sales", link: "/faculty/sales" },
     ],
   },
 

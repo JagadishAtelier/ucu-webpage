@@ -5,13 +5,15 @@ import "../responsive-programs.css";
 import AboutPageHero from "../AboutPage/AboutPageHero/AboutPageHero";
 import SalesDiplamoPageOverview from "./SalesDiplamoPageOverview";
 import SalesDiplamoFeesTab from "./SalesDiplamoFeesTab";
-import SalesDiplamoAdmission from "./SalesDiplamoAdmission";
 import PgApplications from "../PgprogramPage/PgApplications";
+import AdmissionsTabRedesigned from "../../Components/PGDM-program/AdmissionsTab/AdmissionsTabRedesigned";
+import PlacementTab from "../PgprogramPage/pgTabs/PlacementTab/PlacementTab";
 
 const TAB_LIST = [
     "Overview",
     "Fees",
     "Admissions",
+    "Placements",
 ];
 
 export default function SalesDiplamoPageTabs() {
@@ -64,7 +66,9 @@ export default function SalesDiplamoPageTabs() {
             case "Fees":
                 return <SalesDiplamoFeesTab />;
             case "Admissions":
-                return <SalesDiplamoAdmission />;
+                return <AdmissionsTabRedesigned />;
+            case "Placements":
+                return <PlacementTab />;
             default:
                 return <div>Content not found</div>;
         }
@@ -80,7 +84,12 @@ export default function SalesDiplamoPageTabs() {
             case "Admissions":
                 return {
                     breadcrumb: ["Home", "Sales Diploma", "Admissions"],
-                    bgImage: "https://kahedu.edu.in/n/wp-content/uploads/2021/09/9-Important-Tips-to-Increase-College-Admission-Chances.jpg" // Education/Graduation related
+                    bgImage: "https://kahedu.edu.in/n/wp-content/uploads/2021/09/9-Important-Tips-to-Increase-College-Admission-Chances.jpg"
+                };
+            case "Placements":
+                return {
+                    breadcrumb: ["Home", "Sales Diploma", "Placements"],
+                    bgImage: "https://img.freepik.com/free-photo/focus-indian-boy-who-standing-sepately-group-international-students-standing-together-park-university_1157-50077.jpg"
                 };
             case "Overview":
             default:

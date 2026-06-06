@@ -1,6 +1,32 @@
 .EOI-logo{
     height: 100px;
 }
+
+.EOI-section-title {
+    color: #0c0142;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 1.5rem 0 0.5rem;
+    text-align: center;
+}
+
+.EOI-program-checklist {
+    background: #f7fbf3;
+    border: 1px solid #dcefd2;
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.EOI-program-check {
+    color: #1f2933;
+    line-height: 1.35;
+}
+
+.EOI-program-check .form-check-input:checked {
+    background-color: #5ac501;
+    border-color: #5ac501;
+}
+
 .input-EOI-drop {
     border: none !important;
     border-bottom: 1px solid gray !important;

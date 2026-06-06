@@ -4,13 +4,29 @@ import { LuHourglass } from "react-icons/lu";
 import "./PgApplications.css";
 import { div } from "framer-motion/client";
 import { PersonStanding, User } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useModal } from "../../Components/Context/ApplyModal/ModalContext";
 
 export default function PgApplications({ className = "" }) {
       const { pathname } = useLocation();
       const isPGdM = pathname.includes("pgdm");
+      const isSalesDiploma = pathname.toLowerCase().includes("salesdiplamo");
+      const navigate = useNavigate();
       const { showModal } = useModal();
+      const handleApply = () => {
+        if (isSalesDiploma) {
+          navigate("/certification-application-form", {
+            state: {
+              leadData: {
+                program: "Sales Diploma",
+              },
+            },
+          });
+          return;
+        }
+
+        showModal("apply");
+      };
   return (
        <div className={`pg-applications ${className}`}>
       {/* Applications Open */}
@@ -21,7 +37,7 @@ export default function PgApplications({ className = "" }) {
           <p className="text-small d-lg-block d-none">Batch 2026–28</p>
           
         </div>
-        <button onClick={() => showModal("apply")} className="apply-btn d-lg-block d-none">Apply Now</button>
+        <button onClick={handleApply} className="apply-btn d-lg-block d-none">Apply Now</button>
         
         {/* Mobile content */}
         <div className="d-flex flex-row flex-wrap gap-1">
@@ -33,7 +49,7 @@ export default function PgApplications({ className = "" }) {
           
         </div>
         </div>
-        <button onClick={() => showModal("apply")} className="apply-btn-mob d-lg-none d-block py-2 mx-auto">Apply Now</button>
+        <button onClick={handleApply} className="apply-btn-mob d-lg-none d-block py-2 mx-auto">Apply Now</button>
         </div>
       </div>
 

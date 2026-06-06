@@ -2,9 +2,6 @@ import React from 'react'
 import { FaChevronRight } from "react-icons/fa";
 import NewFacDirectors from './NewFacDirectors';
 import NewFacultySec3 from './NewFacultySec3';
-import NewFacMoreBanner from './NewFacMoreBanner';
-import NewFacSocial from './NewFacSocial';
-import NewFacBrand from './NewFacBrand';
 import NewFooter from '../NewFooter/NewFooter';
 import Navbar from '../Navbar/Navbar';
 function NewFaculty() {
@@ -40,9 +37,6 @@ function NewFaculty() {
 
     <NewFacDirectors/>
     <NewFacultySec3/>
-    <NewFacMoreBanner/>
-    {/* <NewFacSocial/> */}
-    <NewFacBrand/>
     <NewFooter/>
     </div>
   )

@@ -236,6 +236,92 @@
   font-size: 0.90rem;
 }
 
+.sales-diploma-stats-section {
+  padding: 56px 0;
+  background: linear-gradient(135deg, #07111f 0%, #123057 55%, #0f5132 100%);
+  color: #fff;
+}
+
+.sales-diploma-stats-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.sales-diploma-stats-header h3 {
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  font-weight: 800;
+  margin: 0;
+}
+
+.sales-diploma-stats-header p {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.sales-diploma-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.sales-diploma-stat-card {
+  position: relative;
+  min-height: 190px;
+  padding: 28px 20px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.sales-diploma-stat-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -24px -40px auto;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(90, 197, 1, 0.28);
+}
+
+.sales-diploma-stat-index {
+  display: inline-flex;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.sales-diploma-stat-card strong {
+  display: block;
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  line-height: 1;
+  color: #b7ff6a;
+}
+
+.sales-diploma-stat-card h4 {
+  margin: 12px 0 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.sales-diploma-stat-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .sales-diploma-stats-header {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
 @media (max-width:768px) {
   .SALESDIPROAD-main-path {
     display: none;
