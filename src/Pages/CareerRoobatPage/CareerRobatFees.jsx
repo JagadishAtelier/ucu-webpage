@@ -1,8 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../../Pages/PGPMFlexPage/PGPMFlexPage.css"; // Reuse vibrant styles
+import ProgramContentRenderer from "../../Components/ProgramContentRenderer";
+import useProgramTabSections from "../../Api/useProgramTabSections";
 
 const CareerRobatFees = () => {
+    const { sections } = useProgramTabSections("career-reboot-women", "Fees Structure");
+
+    if (sections.length) {
+        return <ProgramContentRenderer sections={sections} />;
+    }
+
     return (
         <section className="QWERT-fees-wrapper">
             <Container>
