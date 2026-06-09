@@ -6,17 +6,9 @@ import CareerRobatApply from "./CareerRobatApply";
 import CareerRobatFeatures from "./CareerRobatFeatures";
 import CRPFWFlow from "./CRPFWFlow";
 import { BookOpen, UserCog } from "lucide-react";
-import ProgramContentRenderer from "../../Components/ProgramContentRenderer";
-import useProgramTabSections from "../../Api/useProgramTabSections";
 
 
 export default function CareerRobatOverview() {
-    const { sections } = useProgramTabSections("career-reboot-women", "Overview");
-
-    if (sections.length) {
-        return <ProgramContentRenderer sections={sections} />;
-    }
-
     return (
         <>
             <div className="container my-1 p-3">

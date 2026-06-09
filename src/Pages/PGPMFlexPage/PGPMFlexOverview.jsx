@@ -5,17 +5,9 @@
 import PGPMFlexCourseStructure from "./PGPMFlexCourseStructure";
 import PGPMFlexInfograph from "./PGPMFlexInfograph";
 import PGPMFlexWho from "./PGPMFlexWho";
-import ProgramContentRenderer from "../../Components/ProgramContentRenderer";
-import useProgramTabSections from "../../Api/useProgramTabSections";
 
 
 export default function PGPMFlexOverview() {
-    const { sections } = useProgramTabSections("pgpm-flex", "Overview");
-
-    if (sections.length) {
-        return <ProgramContentRenderer sections={sections} />;
-    }
-
     return (
         <>
             <div className="container p-3 pt-0 pt-lg-3">

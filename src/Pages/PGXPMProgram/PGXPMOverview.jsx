@@ -6,16 +6,8 @@ import CourseStructure from "./CourseStructure";
 import PGXPM360 from "./PGXPM360";
 import WhoIsFor from "./WhoIsFor";
 import "../../Pages/PGPMFlexPage/PGPMFlexPage.css"; // Reuse PGPM Flex CSS
-import ProgramContentRenderer from "../../Components/ProgramContentRenderer";
-import useProgramTabSections from "../../Api/useProgramTabSections";
 
 export default function PGXPMOverview() {
-    const { sections } = useProgramTabSections("pgxpm", "Overview");
-
-    if (sections.length) {
-        return <ProgramContentRenderer sections={sections} />;
-    }
-
     return (
         <>
             <div className="container p-3 pt-0 pt-lg-3">

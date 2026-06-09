@@ -1,15 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ProgramContentRenderer from "../../Components/ProgramContentRenderer";
-import useProgramTabSections from "../../Api/useProgramTabSections";
 
 const PGPMFLEXFeesTab = () => {
-  const { sections } = useProgramTabSections("pgpm-flex", "Fees Structure");
-
-  if (sections.length) {
-    return <ProgramContentRenderer sections={sections} />;
-  }
-
   return (
     <section className="QWERT-fees-wrapper">
       <Container>

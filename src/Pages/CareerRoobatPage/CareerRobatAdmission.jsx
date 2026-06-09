@@ -5,8 +5,6 @@ import CareerRobatAcademicAbilities from "./CareerRobatAcademicAbilities";
 import CareerRobatApplicationGuidelines from "./CareerRobatApplicationGuidelines";
 import CareerRobatEssay from "./CareerRobatEssay";
 import CareerRobatEvaluationProcess from "./CareerRobatEvaluationProcess";
-import ProgramContentRenderer from "../../Components/ProgramContentRenderer";
-import useProgramTabSections from "../../Api/useProgramTabSections";
 // const data = [
 //   {
 //     text: "Valid CAT*/GMATx/XAT+ scores. For PGPM admission process 2026-27, UCU Institute of Management will accept scores of GMAT taken after 1st January 2023, CAT taken in 2024/2025, or XAT taken in 2025/2026."
@@ -34,12 +32,6 @@ import useProgramTabSections from "../../Api/useProgramTabSections";
 //   },
 // ]
 function CareerRobatAdmission() {
-  const { sections } = useProgramTabSections("career-reboot-women", "Admissions");
-
-  if (sections.length) {
-    return <ProgramContentRenderer sections={sections} />;
-  }
-
   return (
     <section className="pgdm-section">
       <div className="container my-4 text-justifys">
