@@ -1,32 +1,47 @@
 import React, { useState } from 'react';
 import { Form, Row, Col, Button, Modal } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
-function OfferingsPlacement() {
-    const navigate = useNavigate()
+
+function OfferingsPlacement({ getKeyValue }) {
+    const navigate = useNavigate();
     const [showForm, setShowForm] = useState(false);
 
     const handleExploreClick = () => setShowForm(true);
     const handleClose = () => setShowForm(false);
 
+    const kv = (key, fallback) => (getKeyValue ? getKeyValue("OfferingsPlacement", key, fallback) : fallback);
+
+    const mainTitle = kv("mainTitle", "Placement Academy for Career Enhancement (PACE)");
+    const subTitle = kv("subTitle", "Career Transformation Module (CTM)");
+    const description = kv("description", "Accelerate your placement readiness from Day One through our curated, company-aligned and industry-specific career modules.");
+    const bullet1 = kv("bullet1", "Join the UCU Placement Academy for Career Enhancement (PACE) to unlock structured pathways to job readiness and career success");
+    const bullet2 = kv("bullet2", "Begin with our diagnostic module to assess your current capabilities (“As-Is”) against industry expectations (“To-Be”) for your aspired role");
+    const bullet3 = kv("bullet3", "Access curated, outcome-driven courses designed to bridge skill gaps and build industry-aligned competencies");
+    const bullet4 = kv("bullet4", "Validate your readiness through mock GDPI simulations conducted by seasoned industry professionals and subject matter experts");
+
+    const launchpadTitle = kv("launchpadTitle", "Career Launchpad Program (CLP)");
+    const launchpadDesc = kv("launchpadDesc", "Get access to top job opportunities and internships via our curated listings for freshers");
+    const exploreBtnText = kv("exploreBtnText", "Explore");
+    const contactBtnText = kv("contactBtnText", "Contact us");
+
     return (
         <div className='captital-campus-content-sec mt-5'>
-            <h1>Placement Academy for Career Enhancement (PACE)</h1>
-            <h5 className='my-3'>Career Transformation Module (CTM)</h5>
+            <h1>{mainTitle}</h1>
+            <h5 className='my-3'>{subTitle}</h5>
 
             <div className='d-flex flex-lg-row flex-column align-items-center gap-3'>
                 <img
                     src='https://www.simplilearn.com/ice9/free_resources_article_thumb/Career_Transformation.jpeg'
                     className='op-image'
+                    alt="placement prep"
                 />
                 <div className='op-blue-box'>
-                    <p>
-                        Accelerate your placement readiness from Day One through our curated, company-aligned and industry-specific career modules.
-                    </p>
+                    <p>{description}</p>
                     <ul>
-                        <li>Join the UCU Placement Academy for Career Enhancement (PACE) to unlock structured pathways to job readiness and career success</li>
-                        <li>Begin with our diagnostic module to assess your current capabilities (“As-Is”) against industry expectations (“To-Be”) for your aspired role</li>
-                        <li>Access curated, outcome-driven courses designed to bridge skill gaps and build industry-aligned competencies</li>
-                        <li>Validate your readiness through mock GDPI simulations conducted by seasoned industry professionals and subject matter experts</li>
+                        <li>{bullet1}</li>
+                        <li>{bullet2}</li>
+                        <li>{bullet3}</li>
+                        <li>{bullet4}</li>
                     </ul>
                 </div>
             </div>
@@ -34,28 +49,29 @@ function OfferingsPlacement() {
             <div className='mt-5'>
                 <div className='d-flex flex-lg-row flex-column-reverse align-items-start gap-3'>
                     <div className='op-blue-box'>
-                        <h5 className='mt-3'>Career Launchpad Program (CLP)</h5>
-                        <p>Get access to top job opportunities and internships via our curated listings for freshers</p>
+                        <h5 className='mt-3'>{launchpadTitle}</h5>
+                        <p>{launchpadDesc}</p>
                         <div className='d-flex gap-3'>
                             <Button
                                 className='col-4'
                                 onClick={handleExploreClick}
                                 style={{ backgroundColor: "#5ac501", border: "none" }}
                             >
-                                Explore
+                                {exploreBtnText}
                             </Button>
                             <Button
                                 className='col-4'
                                 onClick={()=>navigate('/contact-us')}
                                 style={{ backgroundColor: "#5ac501", border: "none" }}
                             >
-                                Contact us
+                                {contactBtnText}
                             </Button>
                         </div>
                     </div>
                     <img
                         src='https://www.anderson.ucla.edu/sites/default/files/styles/max_1300x1300/public/image/2022-01/MBA-campaign-consortium-banner2.jpg?itok=7syfM7Cj'
                         className='op-image'
+                        alt="Launchpad banner"
                     />
                 </div>
             </div>

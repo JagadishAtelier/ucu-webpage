@@ -1,9 +1,8 @@
 import React from "react";
 
-const data = [
+const defaultCards = [
   {
-    image:
-      "https://img.freepik.com/free-vector/abstract-low-polygonal-graduation-cap-planet-earth-globe-model-map-e-learning-concept_127544-1106.jpg?w=740&q=80",
+    image: "https://img.freepik.com/free-vector/abstract-low-polygonal-graduation-cap-planet-earth-globe-model-map-e-learning-concept_127544-1106.jpg?w=740&q=80",
     head: "Academic Transformation",
     para: `
       <ul>
@@ -15,8 +14,7 @@ const data = [
     `,
   },
   {
-    image:
-      "https://img.freepik.com/free-vector/illustration-business-people_53876-18375.jpg?w=740&q=80",
+    image: "https://img.freepik.com/free-vector/illustration-business-people_53876-18375.jpg?w=740&q=80",
     head: "Industry & Employability Connect",
     para: `
       <ul>
@@ -27,8 +25,7 @@ const data = [
     `,
   },
   {
-    image:
-      "https://img.freepik.com/free-vector/education-background-design_1300-10.jpg?w=740&q=80",
+    image: "https://img.freepik.com/free-vector/education-background-design_1300-10.jpg?w=740&q=80",
     head: "Research & Knowledge Capital",
     para: `
       <ul>
@@ -39,8 +36,7 @@ const data = [
     `,
   },
   {
-    image:
-      "https://img.freepik.com/free-vector/gradient-roadmap-infographic-template_23-2149014708.jpg?w=740&q=80",
+    image: "https://img.freepik.com/free-vector/gradient-roadmap-infographic-template_23-2149014708.jpg?w=740&q=80",
     head: "Governance & Quality Roadmap",
     para: `
       <ul>
@@ -51,8 +47,7 @@ const data = [
     `,
   },
   {
-    image:
-      "https://img.freepik.com/premium-vector/augmented-reality-infographic-circle-concept-smart-ui-elements-facial-recognition-ar-app-ar-game-virtual-reality_159242-3818.jpg?w=740&q=80",
+    image: "https://img.freepik.com/premium-vector/augmented-reality-infographic-circle-concept-smart-ui-elements-facial-recognition-ar-app-ar-game-virtual-reality_159242-3818.jpg?w=740&q=80",
     head: "Brand, Alumni & Community",
     para: `
       <ul>
@@ -64,17 +59,21 @@ const data = [
   },
 ];
 
-function OfferingsCard() {
+function OfferingsCard({ getArray }) {
+  const arr = (key, fallback) => (getArray ? getArray("OfferingsCard", key, fallback) : fallback);
+  const cards = arr("offeringsCardsData", defaultCards);
+
   return (
     <div className="container offerings-container ">
       <div className="row g-4">
-        {data.map((item, index) => (
+        {cards.map((item, index) => (
           <div className="col-lg-4 col-md-6 col-sm-12 mx-auto" key={index}>
             <div className="offer-card shadow-sm h-100 text-center">
               <img
                 src={item.image}
                 alt={item.head}
                 className="offer-image img-fluid"
+                style={{objectFit: "cover", height: "200px", width: "100%"}}
               />
               <div className="offer-content text-start p-3">
                 <h5 className="offer-head text-center fw-bold">{item.head}</h5>

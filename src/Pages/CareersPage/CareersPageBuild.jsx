@@ -1,7 +1,7 @@
-import React,{useRef, useState,useEffect} from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import useCountUp from '../../useCountUp'
 
-const data = [
+const defaultStats = [
     { number: "700+", text: "Staff Members" },
     { number: "49%", text: "Gender Diversity (Women in Staff)" },
     { number: "70+", text: "Resident Faculty" },
@@ -26,7 +26,15 @@ function CountUpItem({ number, text, startCount }) {
   );
 }
 
-function CareersPageBuild() {
+function CareersPageBuild({ getKeyValue, getArray }) {
+  const kv = (key, fallback) => (getKeyValue ? getKeyValue("CareersPageBuild", key, fallback) : fallback);
+  const arr = (key, fallback) => (getArray ? getArray("CareersPageBuild", key, fallback) : fallback);
+
+  const headingStart = kv("headingStart", "Build a Career");
+  const headingSpan = kv("headingSpan", "with UCU");
+  const description = kv("description", "UCU intends to work with people");
+  const stats = arr("statsData", defaultStats);
+
   const [startCount, setStartCount] = useState(false);
   const sectionRef = useRef(null);
 
@@ -44,16 +52,16 @@ function CareersPageBuild() {
   return (
     <div className="captital-campus-content-sec mt-5" ref={sectionRef}>
       <h1 className='display-5 fw-bold col-12'>
-        Build a Career <span style={{ color: "#5ac501" }}>with UCU</span>
+        {headingStart} <span style={{ color: "#5ac501" }}>{headingSpan}</span>
       </h1>
 
       <p className='pt'>
-        UCU intends to work with people
+        {description}
       </p>
 
       <div className='d-grid cpb-data-grid rounded'>
         <div className='row row-gap-5'>
-          {data.map((item, index) => (
+          {stats.map((item, index) => (
             <CountUpItem
               key={index}
               number={item.number}

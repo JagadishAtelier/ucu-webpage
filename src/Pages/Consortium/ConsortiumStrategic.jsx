@@ -4,7 +4,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const data = [
+const defaultSlides = [
   {
     head: `Our <span style="color:#5ac501">Strategic Partners</span>`,
     para: "Our strategic partners share our deep commitment to enhance inclusion in global business education and leadership. Thanks to them, students are redefining the world of business from the classroom to the boardroom — and heading confidently towards a successful future. The Consortium values its strategic partnerships with the following organisations and institutions",
@@ -19,7 +19,10 @@ const data = [
   },
 ];
 
-function ConsortiumStrategic() {
+function ConsortiumStrategic({ getKeyValue, getArray }) {
+  const arr = (key, fallback) => (getArray ? getArray("ConsortiumStrategic", key, fallback) : fallback);
+  const slides = arr("partnersSlides", defaultSlides);
+
   return (
     <div className="captital-campus-content-sec my-4 text-center">
       <Swiper
@@ -30,7 +33,7 @@ function ConsortiumStrategic() {
         slidesPerView={1}
         className="strategic-swiper"
       >
-        {data.map((item, index) => (
+        {slides.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="consortium-strategic-container">
               <h1

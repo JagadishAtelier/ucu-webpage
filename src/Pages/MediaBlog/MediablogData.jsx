@@ -1,57 +1,94 @@
-import { Calendar1Icon, ArrowRight } from 'lucide-react'
-import React, { useState } from 'react'
+import { Calendar1Icon, ArrowRight, Loader } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
 import { Button, Container, Row, Col, Pagination, Form } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import { getMediaByGridHead } from '../../Api/MediaApi'
 
-const data = [
+const fallbackData = [
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
-        head: "The Future of Digital Marketing in a Post-AI World",
+        title: "The Future of Digital Marketing in a Post-AI World",
         content: "Explore how artificial intelligence is reshaping consumer behavior and how marketers can leverage these tools to drive high-impact results in 2025.",
         topic: "Marketing",
-        link: "/"
+        slug: "future-of-digital-marketing"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "July 10, 2025",
-        head: "Ethics and Excellence: The Foundation of Modern Leadership",
+        title: "Ethics and Excellence: The Foundation of Modern Leadership",
         content: "Our faculty Discuss why ethical decision-making is no longer optional but a core requirement for commercial success in the global market.",
         topic: "Leadership",
-        link: "/"
+        slug: "ethics-and-excellence-modern-leadership"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "June 15, 2025",
-        head: "From Campus to Corporate: A Survival Guide",
+        title: "From Campus to Corporate: A Survival Guide",
         content: "UCU alumni share their top 5 tips for navigating the transition from student life to a high-stakes corporate environment.",
         topic: "Alumni Stories",
-        link: "/"
+        slug: "from-campus-to-corporate-survival-guide"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "April 05, 2025",
-        head: "Understanding the Data Science Boom",
+        title: "Understanding the Data Science Boom",
         content: "Why data literacy is becoming the most sought-after skill across all industries, not just in technology departments.",
         topic: "Data Science",
-        link: "/"
+        slug: "understanding-the-data-science-boom"
     }
-]
+];
 
 function MediablogData() {
-    const navigate = useNavigate()
-    const [currentPage, setCurrentPage] = useState(1)
-    const itemsPerPage = 7
-    const [selectedTopic, setSelectedTopic] = useState("")
+    const navigate = useNavigate();
+    const [blogs, setBlogs] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 7;
+    const [selectedTopic, setSelectedTopic] = useState("");
 
-    const uniqueTopics = [...new Set(data.map(item => item.topic))]
+    useEffect(() => {
+        getMediaByGridHead("Blog").then(res => {
+            if (res?.success && res.data?.data) {
+                setBlogs(res.data.data);
+            } else {
+                setBlogs(fallbackData);
+            }
+            setLoading(false);
+        }).catch(err => {
+            console.error("Error loading blog posts:", err);
+            setBlogs(fallbackData);
+            setLoading(false);
+        });
+    }, []);
 
-    const filteredData = data.filter(item => {
-        return selectedTopic ? item.topic === selectedTopic : true
-    })
+    if (loading) {
+        return (
+            <div className="my-5 py-5 text-center">
+                <Loader className="animate-spin text-success mx-auto" size={32} />
+                <p className="mt-2 text-muted">Loading Blogs...</p>
+            </div>
+        );
+    }
 
-    const totalPage = Math.ceil(filteredData.length / itemsPerPage)
-    const currentData = filteredData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+    const uniqueTopics = [...new Set(blogs.map(item => item.topic || item.category).filter(Boolean))];
+
+    const filteredData = blogs.filter(item => {
+        const topicName = item.topic || item.category;
+        return selectedTopic ? topicName === selectedTopic : true;
+    });
+
+    const totalPage = Math.ceil(filteredData.length / itemsPerPage);
+    const currentData = filteredData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+    const handleCardClick = (item) => {
+        if (item.newsLink && (item.newsLink.startsWith("http://") || item.newsLink.startsWith("https://"))) {
+            window.open(item.newsLink, "_blank", "noopener,noreferrer");
+        } else {
+            const pathSlug = item.slug || item.title?.toLowerCase().replace(/[^a-z0-9]/g, "-");
+            navigate(`/media/blog/${pathSlug}`);
+        }
+    };
 
     return (
         <div className='my-5'>
@@ -88,16 +125,18 @@ function MediablogData() {
                     {currentData.length > 0 ? (
                         currentData.map((item, index) => {
                             const isFirst = index === 0 && currentPage === 1;
+                            const displayTitle = item.title || item.head;
+                            const displayTopic = item.topic || item.category || "";
                             return (
                                 <Col key={index} xs={12} lg={isFirst ? 12 : 6}>
                                     <div
                                         className={`ucu-media-page-card overflow-hidden d-flex flex-column flex-md-row ${isFirst ? 'large-card' : ''}`}
-                                        onClick={() => navigate(item.link || '#')}
+                                        onClick={() => handleCardClick(item)}
                                     >
                                         <div className="position-relative overflow-hidden" style={{ flex: isFirst ? '0 0 50%' : '0 0 40%' }}>
                                             <img
                                                 src={item.image}
-                                                alt={item.head}
+                                                alt={displayTitle}
                                                 className="ucu-event-page-image w-100 h-100 object-fit-cover"
                                                 style={{ minHeight: isFirst ? '350px' : '220px' }}
                                             />
@@ -111,7 +150,7 @@ function MediablogData() {
                                                 </div>
                                                 
                                                 <h3 className={`card-title fw-bold mb-3 ${isFirst ? 'fs-2' : 'fs-4'}`}>
-                                                    {item.head}
+                                                    {displayTitle}
                                                 </h3>
                                                 
                                                 <p className="text-secondary mb-4" style={{ 
@@ -125,7 +164,7 @@ function MediablogData() {
                                                 </p>
 
                                                 <div className="mb-3">
-                                                    <span className="category-link">{item.topic}</span>
+                                                    <span className="category-link">{displayTopic}</span>
                                                 </div>
                                             </div>
 
@@ -171,4 +210,4 @@ function MediablogData() {
     )
 }
 
-export default MediablogData
+export default MediablogData;

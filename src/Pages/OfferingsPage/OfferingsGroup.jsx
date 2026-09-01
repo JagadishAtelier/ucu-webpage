@@ -1,6 +1,6 @@
 import React from 'react'
 
-const data = [
+const defaultExtensions = [
     {
         image : "https://cdn-icons-png.freepik.com/256/2083/2083219.png?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_white_label",
         head : "Digital & AI Learning Labs",
@@ -21,16 +21,23 @@ const data = [
         head : "Regional Knowledge Observatory",
         para : "Data repository on institutional innovation."
     },
-]
-function OfferingsGroup() {
+];
+
+function OfferingsGroup({ getKeyValue, getArray }) {
+  const kv = (key, fallback) => (getKeyValue ? getKeyValue("OfferingsGroup", key, fallback) : fallback);
+  const arr = (key, fallback) => (getArray ? getArray("OfferingsGroup", key, fallback) : fallback);
+
+  const mainHeading = kv("mainHeading", "Academic Accelerator Plus Extensions");
+  const extensions = arr("extensionsData", defaultExtensions);
+
   return (
     <div className='captital-campus-content-sec mt-5'>
-        <h1>Academic Accelerator Plus Extensions</h1>
+        <h1>{mainHeading}</h1>
         <div className='d-grid mt-3'>
             <div className='row gap-2'>
-                {data.map((item,index)=>(
-                    <div className='col-12 col-md-6 col-lg-3 d-flex flex-column gap-3 align-items-center text-center og-blue-box p-3'>
-                        <img src={item.image} className='og-image'/>
+                {extensions.map((item, index)=>(
+                    <div key={index} className='col-12 col-md-6 col-lg-3 d-flex flex-column gap-3 align-items-center text-center og-blue-box p-3'>
+                        <img src={item.image} className='og-image' alt={item.head} />
                         <p className='mb-0 fw-bold'>{item.head}</p>
                         <p className='mb-0 og-para-color'>{item.para}</p>
                     </div>

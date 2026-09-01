@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import React from 'react';
 
-const data = [
+const defaultOpenings = [
   {
     image: "https://img.freepik.com/free-photo/free-time-students-bachelor-s-campus-life-rhythm-five-friendly-students-are-walking_8353-6408.jpg?w=740&q=80",
     header: "Academic Openings",
@@ -14,12 +14,19 @@ const data = [
   },
 ];
 
-function CareersPageOpening() {
+function CareersPageOpening({ getKeyValue, getArray }) {
+  const kv = (key, fallback) => (getKeyValue ? getKeyValue("CareersPageOpening", key, fallback) : fallback);
+  const arr = (key, fallback) => (getArray ? getArray("CareersPageOpening", key, fallback) : fallback);
+
+  const headingStart = kv("headingStart", "Current");
+  const headingSpan = kv("headingSpan", "Job Openings");
+  const openings = arr("openingsData", defaultOpenings);
+
   return (
     <div className="captital-campus-content-sec mt-5">
-      <h1 className='display-5 fw-bold'>Current <span style={{color:"#5ac501"}}> Job Openings </span></h1>
+      <h1 className='display-5 fw-bold'>{headingStart} <span style={{color:"#5ac501"}}>{headingSpan}</span></h1>
       <div className="d-flex flex-column flex-lg-row gap-3">
-        {data.map((item, index) => (
+        {openings.map((item, index) => (
           <div key={index} className="cpo-data-div rounded">
             <div className="cpo-image-container">
               <img src={item.image} alt={item.header} className='rounded'/>

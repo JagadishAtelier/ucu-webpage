@@ -973,28 +973,144 @@ li:hover .career-reboot-heading {
 
 .search-dropdown-box-div {
   position: absolute;
-  bottom: -100%;
+  top: 100%;
   left: 0;
   width: 100%;
   margin: 0;
-  padding: 2.5rem;
+  padding: 1.5rem 2.5rem;
   background-color: white;
-  border-top: 1px solid black;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  z-index: 9999;
+  max-height: 480px;
+  overflow-y: auto;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .search-dropdown-box {
   width: 100%;
-  height: 45px;
-  position: relative;
-  padding-left: 2%;
-  border: 1px solid gainsboro;
+  height: 48px;
+  padding: 0 3.5rem 0 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  background-color: #fcfcfc;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.search-dropdown-box:focus {
+  border-color: #005bd4;
+  box-shadow: 0 0 0 3px rgba(0, 91, 212, 0.15);
+  background-color: #ffffff;
 }
 
 .dropdown-search-icon {
   position: absolute;
-  right: 5%;
-  top: 42%;
+  right: 3.5rem;
   color: #005bd4;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-search-close-btn {
+  background: none;
+  border: none;
+  color: #777;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.dropdown-search-close-btn:hover {
+  color: #d32f2f;
+  transform: scale(1.05);
+}
+
+.search-recommendations-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-section-title {
+  font-size: 0.785rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #888;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 0.4rem;
+  text-align: left;
+}
+
+.search-results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 280px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.search-result-item:hover {
+  background-color: rgba(0, 91, 212, 0.06);
+  transform: translateX(4px);
+}
+
+.search-item-label {
+  font-weight: 500;
+  color: #222;
+  flex: 1;
+}
+
+.search-item-category {
+  font-size: 0.72rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #666;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-left: 1rem;
+}
+
+.search-result-item:hover .search-item-category {
+  background-color: rgba(0, 91, 212, 0.15);
+  color: #005bd4;
+}
+
+.search-no-results {
+  padding: 1.5rem;
+  text-align: center;
+  color: #777;
+  font-style: italic;
 }
 
 .online-program-link {

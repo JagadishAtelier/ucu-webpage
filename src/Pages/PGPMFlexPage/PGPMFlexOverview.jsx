@@ -2,12 +2,20 @@
 // Reuse or placeholder components
 // import IndustryConnect from "../../Pages/PGPMProgram/IndustryConnect";
 
+import useProgramTabSections from "../../Api/useProgramTabSections";
 import PGPMFlexCourseStructure from "./PGPMFlexCourseStructure";
 import PGPMFlexInfograph from "./PGPMFlexInfograph";
 import PGPMFlexWho from "./PGPMFlexWho";
 
+const fallbackAbout =
+    "Accelerate your career with UCU Chennai's PGPM Flex - a globally benchmarked, industry-integrated executive management program co-created and co-delivered with the industry. Designed for ambitious professionals, the program offers a flexible weekend format that blends rigorous classroom learning with real-world application, ensuring career growth without interruption. With traditional specializations in Marketing, Finance, Operations, and Analytics and new age specialization options in GCC, Fin-Tech, Product Management and more, participants gain cutting-edge skills, CXO perspectives, and hands-on exposure through live projects, mentored dissertations, and industry simulations. Backed by international collaborations, distinguished faculty, and a powerful alumni network, UCU Chennai empowers you to lead with confidence in the digital era. Join us to transform your potential into leadership excellence through authentic industry engagement.";
 
 export default function PGPMFlexOverview() {
+    const { sections } = useProgramTabSections("pgpm-flex", "Overview");
+    const aboutBody = sections.find((section) =>
+        section.title?.toLowerCase().includes("about")
+    )?.contentData?.body;
+
     return (
         <>
             <div className="container p-3 pt-0 pt-lg-3">
@@ -17,7 +25,7 @@ export default function PGPMFlexOverview() {
                         About <span style={{ color: "#5ac501" }}> PGPM Flex</span>
                     </h1>
                     <p style={{ textAlign: "justify" }}>
-Accelerate your career with UCU Chennai’s PGPM Flex – a globally benchmarked, industry‑integrated executive management program co‑created and co‑delivered with the industry. Designed for ambitious professionals, the program offers a flexible weekend format that blends rigorous classroom learning with real‑world application, ensuring career growth without interruption. With traditional specializations in Marketing, Finance, Operations, and Analytics and new age specialization options in GCC, Fin-Tech, Product Management and more, participants gain cutting‑edge skills, CXO perspectives, and hands‑on exposure through live projects, mentored dissertations, and industry simulations. Backed by international collaborations, distinguished faculty, and a powerful alumni network, UCU Chennai empowers you to lead with confidence in the digital era. Join us to transform your potential into leadership excellence through authentic industry engagement.
+                        {aboutBody || fallbackAbout}
                     </p>
                 </div>
             </div>

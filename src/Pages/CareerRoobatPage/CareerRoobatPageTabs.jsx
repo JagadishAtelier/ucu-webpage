@@ -1,11 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { ArrowUp } from "lucide-react";
 import "../responsive-programs.css";
 import AboutPageHero from "../AboutPage/AboutPageHero/AboutPageHero";
-import PGXPMFeeStructure from "../PGXPMProgram/PGXPMFeeStructure";
-import PGXPMAdmission from "../PGXPMProgram/PGXPMAdmission";
-import "./CareerRoobatPage.css"; // Reuse tabs styling
+import "./CareerRoobatPage.css";
 import CareerRobatOverview from "./CareerRobatOverview";
 import CareerRobatFees from "./CareerRobatFees";
 import CareerRobatAdmission from "./CareerRobatAdmission";
@@ -17,7 +14,7 @@ const TAB_LIST = [
     "Admissions",
 ];
 
-export default function CareerRoobatPageTabs() {
+export default function CareerRoobatPageTabs({ getKeyValue, getImage, getArray }) {
     const location = useLocation();
     const [active, setActive] = useState(() => {
         const queryParams = new URLSearchParams(window.location.search);
@@ -42,13 +39,6 @@ export default function CareerRoobatPageTabs() {
     const navRef = useRef(null);
     const btnRefs = useRef({});
 
-    const scrollTo = (id) => {
-        const el = document.getElementById(id);
-        if (el) {
-            el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-    };
-
     useEffect(() => {
         const btn = btnRefs.current[active];
         if (btn?.scrollIntoView) {
@@ -63,33 +53,38 @@ export default function CareerRoobatPageTabs() {
     const renderContent = (tab) => {
         switch (tab) {
             case "Overview":
-                return <CareerRobatOverview />;
+                return <CareerRobatOverview getKeyValue={getKeyValue} getArray={getArray} getImage={getImage} />;
             case "Fees":
-                return <CareerRobatFees />;
+                return <CareerRobatFees getKeyValue={getKeyValue} getArray={getArray} />;
             case "Admissions":
-                return <CareerRobatAdmission />;
+                return <CareerRobatAdmission getKeyValue={getKeyValue} getArray={getArray} />;
             default:
                 return <div>Content not found</div>;
         }
     };
 
+    const kv = (key, fallback) => (getKeyValue ? getKeyValue("CareerRoobatPageTabs", key, fallback) : fallback);
+    const img = (index, fallback) => (getImage ? getImage("CareerRoobatPageTabs", index, fallback) : fallback);
+
+    const title = kv("title", "Career Reboot Program for Women");
+
     const getHeroData = (tab) => {
         switch (tab) {
             case "Fees":
                 return {
-                    breadcrumb: ["Home", "Career Reboot Program for Women", "Fees"],
-                    bgImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop"
+                    breadcrumb: ["Home", title, "Fees"],
+                    bgImage: img(1, "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop")
                 };
             case "Admissions":
                 return {
-                    breadcrumb: ["Home", "Career Reboot Program for Women", "Admissions"],
-                    bgImage: "https://kahedu.edu.in/n/wp-content/uploads/2021/09/9-Important-Tips-to-Increase-College-Admission-Chances.jpg"
+                    breadcrumb: ["Home", title, "Admissions"],
+                    bgImage: img(2, "https://kahedu.edu.in/n/wp-content/uploads/2021/09/9-Important-Tips-to-Increase-College-Admission-Chances.jpg")
                 };
             case "Overview":
             default:
                 return {
-                    breadcrumb: ["Home", "Career Reboot Program for Women", "Overview"],
-                    bgImage: "https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg"
+                    breadcrumb: ["Home", title, "Overview"],
+                    bgImage: img(0, "https://img.freepik.com/premium-photo/diverse-group-students-holding-books-front-globe-symbolizing-global-education_638974-7905.jpg")
                 };
         }
     };
@@ -120,7 +115,7 @@ export default function CareerRoobatPageTabs() {
             </nav>
 
             <AboutPageHero
-                title="Career Reboot Program for Women"
+                title={title}
                 breadcrumb={heroData.breadcrumb}
                 bgImage={heroData.bgImage}
             />

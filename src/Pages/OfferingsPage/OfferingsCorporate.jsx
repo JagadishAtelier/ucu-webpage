@@ -1,7 +1,8 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { Form, Row, Col, Button, Modal } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
-const data = [
+
+const defaultCorporateData = [
     {
         image : "https://images.pexels.com/photos/3771055/pexels-photo-3771055.jpeg?auto=compress&cs=tinysrgb&w=600",
         head : "One Stop Access to untapped, high-potential talent",
@@ -12,53 +13,60 @@ const data = [
         head : " Scout upcoming talent",
         para : "Get first access to talent data for upcoming academic years and engage with them through campus corporate programs as the hiring season begins",
         btn : "Explore More",
-        btn2:"Contact us"
+        btn2: "Contact us"
     },
+];
 
-]
-function OfferingsCorporate() {
-    const navigate = useNavigate()
-        const [showForm, setShowForm] = useState(false);
+function OfferingsCorporate({ getKeyValue, getArray }) {
+    const navigate = useNavigate();
+    const [showForm, setShowForm] = useState(false);
 
     const handleExploreClick = () => setShowForm(true);
     const handleClose = () => setShowForm(false);
-  return (
-    <div className='captital-campus-content-sec mt-5'>
-        <h1>Corporate Offerings</h1>
-<div className="d-grid mt-4">
-  <div className="row g-4">
-    {data.map((item, index) => (
-      <div key={index} className="col-lg-6 col-12">
-        <div className="oc-card-wrapper d-flex flex-column">
-          <img src={item.image} alt={item.head} className="oc-data-image" />
-          <div className="oc-text-div d-flex flex-column justify-content-between">
-            <div>
-              <h4 className="oc-title">{item.head}</h4>
-              <p className="oc-desc">{item.para}</p>
-            </div>
-            <div className="d-flex gap-3">
-              {item.btn && (
-                <Button
-                  className="oc-btn-primary flex-fill"
-                  onClick={handleExploreClick}
-                >
-                  {item.btn}
-                </Button>
-              )}
-              {item.btn2 && (
-                <Button className="oc-btn-secondary flex-fill" onClick={()=>navigate('/contact-us')}>
-                  {item.btn2}
-                </Button>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
 
-                    {/* 🔹 Modal Section */}
+    const kv = (key, fallback) => (getKeyValue ? getKeyValue("OfferingsCorporate", key, fallback) : fallback);
+    const arr = (key, fallback) => (getArray ? getArray("OfferingsCorporate", key, fallback) : fallback);
+
+    const title = kv("title", "Corporate Offerings");
+    const dataList = arr("corporateDataList", defaultCorporateData);
+
+    return (
+        <div className='captital-campus-content-sec mt-5'>
+            <h1>{title}</h1>
+            <div className="d-grid mt-4">
+                <div className="row g-4">
+                    {dataList.map((item, index) => (
+                        <div key={index} className="col-lg-6 col-12">
+                            <div className="oc-card-wrapper d-flex flex-column animate-card">
+                                <img src={item.image} alt={item.head} className="oc-data-image" style={{objectFit: "cover", height: "250px", width: "100%"}} />
+                                <div className="oc-text-div d-flex flex-column justify-content-between">
+                                    <div>
+                                        <h4 className="oc-title">{item.head}</h4>
+                                        <p className="oc-desc">{item.para}</p>
+                                    </div>
+                                    <div className="d-flex gap-3">
+                                        {item.btn && (
+                                            <Button
+                                                className="oc-btn-primary flex-fill"
+                                                onClick={handleExploreClick}
+                                            >
+                                                {item.btn}
+                                            </Button>
+                                        )}
+                                        {item.btn2 && (
+                                            <Button className="oc-btn-secondary flex-fill" onClick={()=>navigate('/contact-us')}>
+                                                {item.btn2}
+                                            </Button>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* 🔹 Modal Section */}
             <Modal show={showForm} onHide={handleClose} centered size="lg" className="custom-modal">
                 <Modal.Header closeButton className="custom-modal-header">
                     <Modal.Title>Scout upcoming talent Registration</Modal.Title>
@@ -91,7 +99,6 @@ function OfferingsCorporate() {
                         </Row>
 
                         <Row className="mb-3">
-
                             <Form.Group as={Col} md="6" controlId="formCourse">
                                 <Form.Label>Designation</Form.Label>
                                 <Form.Control type="text" placeholder="Enter your Designation" />
@@ -118,8 +125,8 @@ function OfferingsCorporate() {
                     </Button>
                 </Modal.Footer>
             </Modal>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default OfferingsCorporate

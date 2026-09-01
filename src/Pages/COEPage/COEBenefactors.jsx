@@ -1,10 +1,9 @@
-import { data } from 'framer-motion/client';
-import React from 'react'
+import React from 'react';
 import { Button } from 'react-bootstrap';
 
-const peopleData = [
+const defaultPeopleData = [
   {
-    image: "https://inc42.com/wp-content/uploads/2014/04/deep-kalra_mmt-200x300.jpg", // Deep Kalra
+    image: "https://inc42.com/wp-content/uploads/2014/04/deep-kalra_mmt-200x300.jpg",
     name: "Deep Kalra",
     year: "PGP 1992",
     prof: "Founder & Group CEO – MakeMyTrip, Chairman IIMAEF Board"
@@ -41,14 +40,23 @@ const peopleData = [
   }
 ];
 
-function COEBenefactors() {
+function COEBenefactors({ getKeyValue, getArray }) {
+  const kv = (key, fallback) => (getKeyValue ? getKeyValue("COEBenefactors", key, fallback) : fallback);
+  const arr = (key, fallback) => (getArray ? getArray("COEBenefactors", key, fallback) : fallback);
+
+  const headingStart = kv("headingStart", "Our");
+  const headingSpan = kv("headingSpan", "Benefactors");
+  const peopleData = arr("peopleData", defaultPeopleData);
+  const donateBtnText = kv("donateBtnText", "DONATE");
+  const initiativesBtnText = kv("initiativesBtnText", "View initiatives");
+
   return (
     <div className='captital-campus-content-sec mt-5'>
-      <h1 className='text-center'>Our <span style={{ color: "#5ac501" }}>Benefactors</span></h1>
+      <h1 className='text-center'>{headingStart} <span style={{ color: "#5ac501" }}>{headingSpan}</span></h1>
       <div className='coe-benfactor-d-grid mt-4'>
         {peopleData.map((item, index) => (
           <div key={index} title={item.name} className='d-flex align-items-center p-2 gap-4 coe-benfactor-grid-div shadow'>
-            <img src={item.image} className='col-5' alt={item.name} style={{objectFit:"cover"}} />
+            <img src={item.image} className='col-5' alt={item.name} style={{objectFit:"cover", height: "100%", maxHeight: "150px"}} />
             <div className='col-6'>
               <p className='fw-bold mb-1' style={{ color: "#5ac501" }}>{item.name}</p>
               <p className='mb-3' style={{ fontSize: '14px' }}>{item.year}</p>
@@ -58,8 +66,8 @@ function COEBenefactors() {
         ))}
       </div>
       <div className='d-flex flex-lg-row flex-column flex-md-row mt-5 gap-3 justify-content-center align-items-center'>
-        <Button className='col-12 col-md-4 col-lg-3' style={{ backgroundColor: "#5ac501", border: "none" }}>DONATE </Button>
-        <Button className='col-12 col-md-4 col-lg-3' style={{ backgroundColor: "#5ac501", border: "none" }}>View initiatives</Button>
+        <Button className='col-12 col-md-4 col-lg-3' style={{ backgroundColor: "#5ac501", border: "none" }}>{donateBtnText}</Button>
+        <Button className='col-12 col-md-4 col-lg-3' style={{ backgroundColor: "#5ac501", border: "none" }}>{initiativesBtnText}</Button>
       </div>
     </div>
   )

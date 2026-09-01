@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { ChevronRight, Home } from 'lucide-react'
 import Navbar from '../../Components/Navbar/Navbar'
 import NewFooter from '../../Components/NewFooter/NewFooter'
 import UCUMepData from './UCUMepData'
 import './UCUMediaEventsPage.css'
+import { getBannerByBreadcrumb } from '../../Api/MediaApi'
 
 function UCUMediaEventsPage() {
+  const [banner, setBanner] = useState(null);
+
+  useEffect(() => {
+    getBannerByBreadcrumb("Events").then(res => {
+      if (res?.success) {
+        setBanner(res.data);
+      }
+    });
+  }, []);
+
+  const bannerTitle = banner?.bannerTitle || "What’s on at UCU Chennai";
+  const bannerContent = banner?.bannerContent || "Explore our calendar of upcoming summits, workshops, and flagship events designed to ignite innovation and foster academic excellence.";
+  const bannerImg = banner?.bannerImage?.[0] || "https://img.freepik.com/premium-photo/communication-feedback-chos-role_1077802-145596.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80";
+
   return (
         <div>
             <Navbar/>
@@ -13,7 +28,7 @@ function UCUMediaEventsPage() {
                 data-aos="fade-down"
                 className="fac-hero-section text-white px-3 px-lg-5"
                 style={{
-                    backgroundImage: `linear-gradient(rgba(8, 22, 114, 0.7), rgba(8, 22, 114, 0.7)), url(https://img.freepik.com/premium-photo/communication-feedback-chos-role_1077802-145596.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80)`,
+                    backgroundImage: `linear-gradient(rgba(8, 22, 114, 0.7), rgba(8, 22, 114, 0.7)), url(${bannerImg})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     minHeight: "60vh",
@@ -23,11 +38,14 @@ function UCUMediaEventsPage() {
                     <div className="row">
                         <div className="col-lg-8" data-aos="fade-right">
                             <h1 className="display-3 fw-bold mb-4">
-                                What’s on <span style={{ color: "#5ac501" }}>at UCU Chennai</span>
+                                {bannerTitle.includes("at UCU Chennai") ? (
+                                    <>
+                                        What’s on <span style={{ color: "#5ac501" }}>at UCU Chennai</span>
+                                    </>
+                                ) : bannerTitle}
                             </h1>
                             <p className="lead opacity-90 mb-0" style={{ maxWidth: '600px' }}>
-                                Explore our calendar of upcoming summits, workshops, and flagship events 
-                                designed to ignite innovation and foster academic excellence.
+                                {bannerContent}
                             </p>
                         </div>
                     </div>

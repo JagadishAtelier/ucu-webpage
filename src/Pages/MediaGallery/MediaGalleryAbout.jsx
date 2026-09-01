@@ -1,7 +1,8 @@
-import { Play, X } from 'lucide-react';
-import React, { useState } from 'react';
+import { Play, X, Loader } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { getMediaByGridHead } from '../../Api/MediaApi';
 
-const data = [
+const fallbackData = [
     {
         videoUrl: "https://youtu.be/uvyTVoElld4?si=ET5MBHw44ReoNMhG",
         thumbnail: "https://t3.ftcdn.net/jpg/03/88/72/64/360_F_388726457_kjWTTE4phvKdYjSVKr13N1lA1mKc4yJe.jpg",
@@ -31,20 +32,49 @@ const data = [
         thumbnail: "https://t3.ftcdn.net/jpg/03/88/72/64/360_F_388726457_kjWTTE4phvKdYjSVKr13N1lA1mKc4yJe.jpg",
         para: "Campus Tour: A glimpse into our vibrant Chennai campus",
         tabData: "campusTours",
-    },
+    }
 ];
 
 function convertToEmbedUrl(url) {
+    if (!url) return "";
     if (url.includes("youtu.be/")) {
         const videoId = url.split("youtu.be/")[1].split("?")[0];
+        return `https://www.youtube.com/embed/${videoId}`;
+    }
+    if (url.includes("watch?v=")) {
+        const videoId = url.split("watch?v=")[1].split("&")[0];
         return `https://www.youtube.com/embed/${videoId}`;
     }
     return url;
 }
 
 function MediaGalleryAbout() {
+    const [galleryItems, setGalleryItems] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [modalVideo, setModalVideo] = useState(null);
     const [activeTab, setActiveTab] = useState("all");
+
+    useEffect(() => {
+        getMediaByGridHead("Gallery").then(res => {
+            if (res?.success && res.data?.data) {
+                // Map the schema fields to component model properties
+                const mapped = res.data.data.map(item => ({
+                    videoUrl: item.newsLink || item.videoUrl || "",
+                    thumbnail: item.image || "",
+                    para: item.title || "",
+                    tabData: item.topic || item.category || "studentsAlumni"
+                }));
+                setGalleryItems(mapped);
+            } else {
+                setGalleryItems(fallbackData);
+            }
+            setLoading(false);
+        }).catch(err => {
+            console.error("Error loading gallery items:", err);
+            setGalleryItems(fallbackData);
+            setLoading(false);
+        });
+    }, []);
 
     const tabs = [
         { key: "all", label: "SHOW ALL" },
@@ -55,7 +85,16 @@ function MediaGalleryAbout() {
         { key: "campusTours", label: "CAMPUS TOURS" },
     ];
 
-    const filteredData = activeTab === "all" ? data : data.filter(item => item.tabData === activeTab);
+    if (loading) {
+        return (
+            <div className="my-5 py-5 text-center">
+                <Loader className="animate-spin text-success mx-auto" size={32} />
+                <p className="mt-2 text-muted">Loading Gallery...</p>
+            </div>
+        );
+    }
+
+    const filteredData = activeTab === "all" ? galleryItems : galleryItems.filter(item => item.tabData === activeTab);
 
     return (
         <div className='my-5'>

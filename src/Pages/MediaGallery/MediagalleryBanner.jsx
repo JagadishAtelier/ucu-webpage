@@ -1,10 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { ChevronRight, Home } from 'lucide-react'
 import Navbar from '../../Components/Navbar/Navbar'
 import NewFooter from '../../Components/NewFooter/NewFooter'
 import MediaGalleryAbout from './MediaGalleryAbout'
 import './MediaGallery.css'
+import { getBannerByBreadcrumb } from '../../Api/MediaApi'
+
 function MediagalleryBanner() {
+    const [banner, setBanner] = useState(null);
+
+    useEffect(() => {
+        getBannerByBreadcrumb("Gallery").then(res => {
+            if (res?.success) {
+                setBanner(res.data);
+            }
+        });
+    }, []);
+
+    const bannerTitle = banner?.bannerTitle || "Dynamic Gallery";
+    const bannerContent = banner?.bannerContent || "A visual journey through life at UCU Chennai. Experience our vibrant campus, innovative student projects, and global industry collaborations.";
+    const bannerMedia = banner?.bannerImage?.[0] || "https://www.spjain.org/hubfs/SP-Jain-Global-Corporate-Video.mp4";
+    const isVideo = bannerMedia.endsWith(".mp4");
+
     return (
         <div>
             <Navbar />
@@ -13,17 +30,30 @@ function MediagalleryBanner() {
                 className="fac-hero-section position-relative overflow-hidden text-white px-3 px-lg-5"
                 style={{ minHeight: "65vh" }}
             >
-                {/* Background Video with Overlay */}
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-                    style={{ zIndex: -1 }}
-                >
-                    <source src="https://www.spjain.org/hubfs/SP-Jain-Global-Corporate-Video.mp4" type="video/mp4" />
-                </video>
+                {/* Background Video or Image with Overlay */}
+                {isVideo ? (
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                        style={{ zIndex: -1 }}
+                    >
+                        <source src={bannerMedia} type="video/mp4" />
+                    </video>
+                ) : (
+                    <div
+                        className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                        style={{
+                            backgroundImage: `url(${bannerMedia})`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                            zIndex: -1
+                        }}
+                    />
+                )}
+                
                 <div
                     className="position-absolute top-0 start-0 w-100 h-100"
                     style={{ background: 'linear-gradient(rgba(8, 22, 114, 0.4), rgba(8, 22, 114, 0.8))', zIndex: -1 }}
@@ -33,11 +63,14 @@ function MediagalleryBanner() {
                     <div className="row">
                         <div className="col-lg-8" data-aos="fade-right">
                             <h1 className="display-3 fw-bold mb-4">
-                                Dynamic <span style={{ color: "#5ac501" }}>Gallery</span>
+                                {bannerTitle.includes("Gallery") ? (
+                                    <>
+                                        Dynamic <span style={{ color: "#5ac501" }}>Gallery</span>
+                                    </>
+                                ) : bannerTitle}
                             </h1>
                             <p className="lead opacity-90 mb-0" style={{ maxWidth: '600px' }}>
-                                A visual journey through life at UCU Chennai. Experience our vibrant
-                                campus, innovative student projects, and global industry collaborations.
+                                {bannerContent}
                             </p>
                         </div>
                     </div>
@@ -58,4 +91,4 @@ function MediagalleryBanner() {
     )
 }
 
-export default MediagalleryBanner
+export default MediagalleryBanner;

@@ -1,7 +1,6 @@
 import React from 'react'
-import { ProgressBar } from 'react-bootstrap'
 
-const leftData = [
+const defaultWorkExp = [
     {
         number: "70%",
         name: "Freasher"
@@ -18,9 +17,9 @@ const leftData = [
         number: "5%",
         name: "24+"
     },
-]
+];
 
-const rightData = [
+const defaultIndustryDiversity = [
     {
         image: "https://cdn-icons-png.freepik.com/256/7771/7771656.png?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_white_label",
         name: "BFSI"
@@ -57,17 +56,27 @@ const rightData = [
         image: "https://cdn-icons-png.freepik.com/256/7771/7771656.png?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_white_label",
         name: "BFSI"
     },
-]
-function BPCWorkExp() {
+];
+
+function BPCWorkExp({ getKeyValue, getArray }) {
+    const kv = (key, fallback) => (getKeyValue ? getKeyValue("BPCWorkExp", key, fallback) : fallback);
+    const arr = (key, fallback) => (getArray ? getArray("BPCWorkExp", key, fallback) : fallback);
+
+    const titleLeft = kv("titleLeft", "Work Experience (In Months)");
+    const titleRight = kv("titleRight", "Industry Diversity");
+
+    const workExpData = arr("workExpData", defaultWorkExp);
+    const industryDiversityData = arr("industryDiversityData", defaultIndustryDiversity);
+
     return (
         <div className='captital-campus-content-sec mt-5'>
-            <div className='d-flex flex-lg-row flex-column gap-lg-3 gap-5 p-lg-5 py-4 rounded'style={{backgroundColor:"#f6f6f8"}}>
-                <div>
-                    <h3 className='text-center text-lg-start'>Work Experience (In Months)</h3>
+            <div className='d-flex flex-lg-row flex-column gap-lg-3 gap-5 p-lg-5 py-4 rounded' style={{backgroundColor:"#f6f6f8"}}>
+                <div className="flex-1 w-100">
+                    <h3 className='text-center text-lg-start'>{titleLeft}</h3>
                     <div className='d-grid mt-4'>
                         <div className='row gap-5 mx-auto justify-content-lg-start justify-content-center'>
-                            {leftData.map((item,index)=>(
-                                <div className='BPC-work-left-content col-lg-6 col-12'>
+                            {workExpData.map((item,index)=>(
+                                <div key={index} className='BPC-work-left-content col-lg-5 col-12'>
                                     <h1 className='fw-bold display-4'>{item.number}</h1>
                                     <p className='fw-bold fs-5'>{item.name}</p>
                                 </div>
@@ -76,17 +85,17 @@ function BPCWorkExp() {
                     </div>
                 </div>
 
-
-                <div>
-                    <h3 className='text-center text-lg-start'>Industry Diversity</h3>
+                <div className="flex-1 w-100">
+                    <h3 className='text-center text-lg-start'>{titleRight}</h3>
                     <div className='d-grid mt-4'>
                         <div className='row row-gap-4 mx-auto justify-content-center'>
-                            {rightData.map((item,index)=>(
-                                <div className='BPC-work-right-content d-flex flex-column gap-3 align-items-center col-4'>
-                                    <div className='BPC-work-right-content-img-div'><img src={item.image}/></div>
-                                    <p>{item.name}</p>
+                            {industryDiversityData.map((item,index)=>(
+                                <div key={index} className='BPC-work-right-content d-flex flex-column gap-3 align-items-center col-4'>
+                                    <div className='BPC-work-right-content-img-div'>
+                                      <img src={item.image} alt={item.name} />
+                                    </div>
+                                    <p className="text-center text-xs mt-1">{item.name}</p>
                                 </div>
-
                             ))}
                         </div>
                     </div>

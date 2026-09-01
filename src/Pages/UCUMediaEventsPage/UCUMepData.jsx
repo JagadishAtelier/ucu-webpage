@@ -1,70 +1,107 @@
-import { Calendar1Icon, ArrowRight, Filter } from 'lucide-react'
-import React, { useState } from 'react'
+import { Calendar1Icon, ArrowRight, Loader } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
 import { Button, Container, Row, Col, Pagination, Form } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import { getMediaByGridHead } from '../../Api/MediaApi'
 
-const data = [
+const fallbackData = [
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "August 23, 2025",
-        head: "International AI Summit at UCU Chennai",
+        title: "International AI Summit at UCU Chennai",
         content: "Join world-class experts for a two-day summit exploring the future of Generative AI and its impact on global business operations.",
         topic: "International Summit",
-        link: "/"
+        slug: "international-ai-summit"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "July 10, 2025",
-        head: "Leadership Workshop for Executive MBA",
+        title: "Leadership Workshop for Executive MBA",
         content: "A deep-dive workshop into strategic leadership and change management for emerging corporate leaders.",
         topic: "Workshops",
-        link: "/"
+        slug: "leadership-workshop-for-executive-mba"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "June 15, 2025",
-        head: "Annual Placement Drive 2025",
+        title: "Annual Placement Drive 2025",
         content: "Top Fortune 500 companies visit UCU for the annual recruitment cycle for graduating batches.",
         topic: "Placement Events",
-        link: "/"
+        slug: "annual-placement-drive-2025"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "April 05, 2025",
-        head: "Innovation Challenge - Demo Day",
+        title: "Innovation Challenge - Demo Day",
         content: "Students pitch their startup ideas to a panel of venture capitalists and industry stalwarts.",
         topic: "Competitions",
-        link: "/"
+        slug: "innovation-challenge-demo-day"
     },
     {
         image: "https://www.spjain.org/hubfs/Dr-Abhijit-Dasgupta-article-in-The-Hindu-SP-Jain-Global-Faculty-INSIDE-IMAGE-1.jpg",
         date: "March 20, 2025",
-        head: "Industry Connect Series: Fintech",
+        title: "Industry Connect Series: Fintech",
         content: "Exploring the disruption in digital payments and financial services with industry leaders from leading banks.",
         topic: "Industry Connect",
-        link: "/"
+        slug: "industry-connect-series-fintech"
     }
-]
+];
 
 function UCUMepData() {
-    const navigate = useNavigate()
-    const [currentPage, setCurrentPage] = useState(1)
-    const itemsPerPage = 7
-    const [selectedTopic, setSelectedTopic] = useState("")
-    const [selectedMonth, setSelectedMonth] = useState("")
+    const navigate = useNavigate();
+    const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 7;
+    const [selectedTopic, setSelectedTopic] = useState("");
+    const [selectedMonth, setSelectedMonth] = useState("");
 
-    const uniqueTopics = [...new Set(data.map(item => item.topic))]
-    const uniqueMonths = [...new Set(data.map(item => item.date.split(" ")[0]))]
+    useEffect(() => {
+        getMediaByGridHead("Events").then(res => {
+            if (res?.success && res.data?.data) {
+                setEvents(res.data.data);
+            } else {
+                setEvents(fallbackData);
+            }
+            setLoading(false);
+        }).catch(err => {
+            console.error("Error loading events list:", err);
+            setEvents(fallbackData);
+            setLoading(false);
+        });
+    }, []);
 
-    const filteredData = data.filter(item => {
-        const month = item.date.split(" ")[0]
-        const matchTopic = selectedTopic ? item.topic === selectedTopic : true
-        const matchMonth = selectedMonth ? month === selectedMonth : true
-        return matchTopic && matchMonth
-    })
+    if (loading) {
+        return (
+            <div className="my-5 py-5 text-center">
+                <Loader className="animate-spin text-success mx-auto" size={32} />
+                <p className="mt-2 text-muted">Loading Events list...</p>
+            </div>
+        );
+    }
 
-    const totalPage = Math.ceil(filteredData.length / itemsPerPage)
-    const currentData = filteredData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+    const uniqueTopics = [...new Set(events.map(item => item.topic || item.category).filter(Boolean))];
+    const uniqueMonths = [...new Set(events.map(item => item.date?.split(" ")?.[0]).filter(Boolean))];
+
+    const filteredData = events.filter(item => {
+        const topicName = item.topic || item.category;
+        const month = item.date?.split(" ")?.[0];
+        const matchTopic = selectedTopic ? topicName === selectedTopic : true;
+        const matchMonth = selectedMonth ? month === selectedMonth : true;
+        return matchTopic && matchMonth;
+    });
+
+    const totalPage = Math.ceil(filteredData.length / itemsPerPage);
+    const currentData = filteredData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+    const handleCardClick = (item) => {
+        if (item.newsLink && (item.newsLink.startsWith("http://") || item.newsLink.startsWith("https://"))) {
+            window.open(item.newsLink, "_blank", "noopener,noreferrer");
+        } else {
+            const pathSlug = item.slug || item.title?.toLowerCase().replace(/[^a-z0-9]/g, "-");
+            navigate(`/media/ucu-on-at/${pathSlug}`);
+        }
+    };
 
     return (
         <div className='my-5'>
@@ -117,16 +154,18 @@ function UCUMepData() {
                     {currentData.length > 0 ? (
                         currentData.map((item, index) => {
                             const isFirst = index === 0 && currentPage === 1;
+                            const displayTitle = item.title || item.head;
+                            const displayTopic = item.topic || item.category || "";
                             return (
                                 <Col key={index} xs={12} lg={isFirst ? 12 : 6}>
                                     <div
                                         className={`ucu-media-page-card overflow-hidden d-flex flex-column flex-md-row ${isFirst ? 'large-card' : ''}`}
-                                        onClick={() => navigate(item.link || '#')}
+                                        onClick={() => handleCardClick(item)}
                                     >
                                         <div className="position-relative overflow-hidden" style={{ flex: isFirst ? '0 0 50%' : '0 0 40%' }}>
                                             <img
                                                 src={item.image}
-                                                alt={item.head}
+                                                alt={displayTitle}
                                                 className="ucu-event-page-image w-100 h-100 object-fit-cover"
                                                 style={{ minHeight: isFirst ? '350px' : '220px' }}
                                             />
@@ -140,7 +179,7 @@ function UCUMepData() {
                                                 </div>
                                                 
                                                 <h3 className={`card-title fw-bold mb-3 ${isFirst ? 'fs-2' : 'fs-4'}`}>
-                                                    {item.head}
+                                                    {displayTitle}
                                                 </h3>
                                                 
                                                 <p className="text-secondary mb-4" style={{ 
@@ -154,7 +193,7 @@ function UCUMepData() {
                                                 </p>
 
                                                 <div className="mb-3">
-                                                    <span className="category-link">{item.topic}</span>
+                                                    <span className="category-link">{displayTopic}</span>
                                                 </div>
                                             </div>
 
@@ -200,4 +239,4 @@ function UCUMepData() {
     )
 }
 
-export default UCUMepData
+export default UCUMepData;

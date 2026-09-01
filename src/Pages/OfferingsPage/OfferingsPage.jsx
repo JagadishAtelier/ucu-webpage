@@ -8,7 +8,15 @@ import OfferingsCard from './OfferingsCard'
 import OfferingsGroup from './OfferingsGroup'
 import OfferingsPlacement from './OfferingsPlacement'
 import OfferingsCorporate from './OfferingsCorporate'
+import useFrontendContent from '../../hooks/useFrontendContent'
+
 function OfferingsPage() {
+    const { getKeyValue, getImage, getArray } = useFrontendContent("offerings");
+
+    const title = getKeyValue("OfferingsPage", "title", "UCU Consortium Offerings");
+    const bgImage = getImage("OfferingsPage", 0, "https://assets.kpmg.com/is/image/kpmgcloud/man-and-woman-discussing-something-on-laptop:cq5dam-web-2732-1088?wid=2732&hei=1088");
+    const subtitle = getKeyValue("OfferingsPage", "subtitle", "Focused on value creation");
+
     return (
         <div>
             <Navbar/>
@@ -16,7 +24,7 @@ function OfferingsPage() {
                 data-aos="fade-down"
                 className="fac-hero-section d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start text-white text-center text-md-start text-lg-start p-3 p-lg-5 p-lg-7"
                 style={{
-                    backgroundImage: `url(https://assets.kpmg.com/is/image/kpmgcloud/man-and-woman-discussing-something-on-laptop:cq5dam-web-2732-1088?wid=2732&hei=1088)`,
+                    backgroundImage: `url(${bgImage})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -27,10 +35,8 @@ function OfferingsPage() {
                     className="w-100 w-lg-75 w-lg-50 ms-lg-5"
                     data-aos="fade-right"
                 >
-                    {/* Dynamic Title */}
-                    <h1 className="fw-bold fs-1 fs-lg-1">UCU Consortium Offerings</h1>
-                    <p>Focused on value creation
-                    </p>
+                    <h1 className="fw-bold fs-1 fs-lg-1">{title}</h1>
+                    <p>{subtitle}</p>
                 </div>
 
                 <div className='position-absolute bottom-0 left-0 d-flex align-items-center campus-route-bg py-3'>
@@ -38,13 +44,12 @@ function OfferingsPage() {
                     <ChevronRight />
                     <p className='m-0'>CONSORTIUM </p>
                 </div>
-
             </div>
-            <OfferingsHelp/>
-            <OfferingsCard/>
-            <OfferingsGroup/>
-            <OfferingsPlacement/>
-            <OfferingsCorporate/>
+            <OfferingsHelp getKeyValue={getKeyValue} />
+            <OfferingsCard getArray={getArray} />
+            <OfferingsGroup getKeyValue={getKeyValue} getArray={getArray} />
+            <OfferingsPlacement getKeyValue={getKeyValue} />
+            <OfferingsCorporate getKeyValue={getKeyValue} getArray={getArray} />
             <NewFooter/>
         </div>
     )

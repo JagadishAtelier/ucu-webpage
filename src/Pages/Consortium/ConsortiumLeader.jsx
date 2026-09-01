@@ -2,10 +2,9 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 import image3 from "../../Assets/acp/image3.jpg";
 import aacImage3 from "../../Assets/linkedin profilea/Dr. Vaidy Jayaraman.jpg";
-import pI from "../../Assets/acp/profileImg.webp";
-import { ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-const data = [
+
+const defaultLeaderData = [
   {
     image: image3,
     head: "Ganesan Ramachandran",
@@ -25,28 +24,37 @@ const data = [
     image: '/kunal.jpg',
     head: "Kunal Choudhury",
   }
-]
+];
 
+function ConsortiumLeader({ getKeyValue, getArray }) {
+  const navigate = useNavigate();
 
-function ConsortiumLeader() {
-  const navigate = useNavigate()
+  const kv = (key, fallback) => (getKeyValue ? getKeyValue("ConsortiumLeader", key, fallback) : fallback);
+  const arr = (key, fallback) => (getArray ? getArray("ConsortiumLeader", key, fallback) : fallback);
+
+  const mainHeading = kv("mainHeading", "Our Leadership Team");
+  const introDesc = kv("introDesc", "At the Consortium, “Representation” and “Inclusion” are not just buzzwords; they are the credo we live by and the thoughtful actions that define us. Meet the inspiring people who live and breathe our mission.");
+  const leaders = arr("leadersData", defaultLeaderData);
+  const buttonText = kv("buttonText", "MEET OUR FULL TEAM");
+
   return (
     <div className='captital-campus-content-sec text-white py-lg-5 py-3 consortium-leader-container consortium-pillars-container' style={{ backgroundColor: "#0c0142" }}>
       <h1 className='fw-bold text-center display-5 col-10 mx-auto text-uppercase'>
-        Our Leadership Team
+        {mainHeading}
       </h1>
-      <p className='text-center col-lg-9 col-md-9 col-12 mx-auto mb-lg-5 mb-3'>At the Consortium, “Representation” and “Inclusion” are not just buzzwords; they are the credo we live by and the thoughtful actions that define us. Meet the inspiring people who live and breathe our mission.</p>
+      <p className='text-center col-lg-9 col-md-9 col-12 mx-auto mb-lg-5 mb-3'>
+        {introDesc}
+      </p>
       <div className='d-grid px-3'>
         <div className='row row-gap-2'>
-          {data.map((item, index) => (
+          {leaders.map((item, index) => (
             <div key={index} className='col-lg-3 col-md-6 d-flex'>
               <div className='card bg-transparent text-left text-white border-0 w-100 d-flex flex-column align-items-lg-start'>
-                  <img src={item.image} alt={item.head} className='img-fluid rounded mb-3 consortium-leader-image' />
-                  <div className='consotium-text-box'>
-                    <h4 className='text-uppercase fw-bold text-center'>{item.head}</h4>
-                    <p className='consoritum-para-text text-center'>{item.para}</p>
-                  </div>
-
+                <img src={item.image} alt={item.head} className='img-fluid rounded mb-3 consortium-leader-image' style={{objectFit:"cover", height: "300px", width: "100%"}} />
+                <div className='consotium-text-box'>
+                  <h4 className='text-uppercase fw-bold text-center'>{item.head}</h4>
+                  <p className='consoritum-para-text text-center'>{item.para}</p>
+                </div>
               </div>
             </div>
           ))}
@@ -55,7 +63,7 @@ function ConsortiumLeader() {
 
       <div className='text-center pb-2 mt-5'>
         <Button onClick={()=>navigate("/aac")} variant='light' className='text-black fw-semibold px-4 m-0'>
-          MEET OUR FULL TEAM
+          {buttonText}
         </Button>
       </div>
     </div>

@@ -48,6 +48,7 @@ import UCUMediaEventsPage from "./Pages/UCUMediaEventsPage/UCUMediaEventsPage";
 import UCUMediaEventsPageDetails from "./Pages/UCUMediaEventsPage/UCUMediaEventsPageDetails";
 import MediagalleryBanner from "./Pages/MediaGallery/MediagalleryBanner";
 import MediablogBanner from "./Pages/MediaBlog/MediablogBanner";
+import MediablogDetails from "./Pages/MediaBlog/MediablogDetails";
 import CorparateBanner from "./Pages/CorparetePage/CorparateBanner";
 import StrategicCollabBanner from "./Pages/StrategicCollab/StrategicCollabBanner";
 import BatchProfilePage from "./Pages/BatchProfilePage/BatchProfilePage";
@@ -78,7 +79,7 @@ import CertificationApplicationFormPage from "./Pages/CertificationApplicationFo
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 
 function App() {
-  const isMaintenance = false;
+  const isMaintenance = true;
   useEffect(() => {
     AOS.init({
       duration: 1200, // animation duration
@@ -129,11 +130,12 @@ function App() {
               <Route path="/placements/*" element={<CampusPlacementsPage />} />
               <Route path="/coe/*" element={<COEPage />} />
               <Route path="/media/ucu-media" element={<UCUMedia />} />
-              <Route path="/media/ucu-media/*" element={<MediaEventDetails />} />
+              <Route path="/media/ucu-media/:slug" element={<MediaEventDetails />} />
               <Route path="/media/ucu-on-at" element={<UCUMediaEventsPage />} />
-              <Route path="/media/ucu-on-at/*" element={<UCUMediaEventsPageDetails />} />
+              <Route path="/media/ucu-on-at/:slug" element={<UCUMediaEventsPageDetails />} />
               <Route path="/media/gallery" element={<MediagalleryBanner />} />
               <Route path="/media/blog" element={<MediablogBanner />} />
+              <Route path="/media/blog/:slug" element={<MediablogDetails />} />
               <Route path="/engagement/*" element={<CorparateBanner />} />
               <Route path="/strategic/*" element={<StrategicCollabBanner />} />
               <Route path="/contact-us" element={<ContactUsPage />} />

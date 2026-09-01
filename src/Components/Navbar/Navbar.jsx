@@ -1,10 +1,30 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { menuData, menuDataMobile } from "./menuData";
 import "./Navbar.css";
 import { ChevronDown, ChevronRight, Menu, Search, User, X } from "lucide-react";
 import logoImg from "/logo3.png";
+
+// Helper to recursively flatten nav/menu data into a searchable list
+const flattenMenu = (items, parentLabel = "") => {
+  let flat = [];
+  if (!items || !Array.isArray(items)) return flat;
+  items.forEach(item => {
+    if (item.link || item.scrollId) {
+      flat.push({
+        label: item.label,
+        link: item.link || (item.scrollId ? `/about-ucu?section=${item.scrollId}` : "#"),
+        category: parentLabel || "General",
+        scrollId: item.scrollId
+      });
+    }
+    if (item.submenu && item.submenu.length > 0) {
+      flat = [...flat, ...flattenMenu(item.submenu, item.label || parentLabel)];
+    }
+  });
+  return flat;
+};
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -15,6 +35,62 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 760);
   const [navData, setNavData] = useState(menuData);
   const [navDataMobile, setNavDataMobile] = useState(menuDataMobile);
+
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  // Flatten menu items for search index
+  const searchIndex = useMemo(() => {
+    return flattenMenu(navData);
+  }, [navData]);
+
+  // Handle query input change
+  const handleSearchChange = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+    if (!query.trim()) {
+      setSearchResults([]);
+      return;
+    }
+
+    const filtered = searchIndex.filter(item =>
+      item.label.toLowerCase().includes(query.toLowerCase()) ||
+      item.category.toLowerCase().includes(query.toLowerCase())
+    );
+
+    // Rank matching items (exact matches first, prefix matches next, etc.)
+    const ranked = filtered.sort((a, b) => {
+      const q = query.toLowerCase();
+      const aLabel = a.label.toLowerCase();
+      const bLabel = b.label.toLowerCase();
+      
+      const aExact = aLabel === q;
+      const bExact = bLabel === q;
+      if (aExact && !bExact) return -1;
+      if (!aExact && bExact) return 1;
+
+      const aStarts = aLabel.startsWith(q);
+      const bStarts = bLabel.startsWith(q);
+      if (aStarts && !bStarts) return -1;
+      if (!aStarts && bStarts) return 1;
+      
+      return aLabel.localeCompare(bLabel);
+    });
+
+    setSearchResults(ranked);
+  };
+
+  const handleResultClick = (item) => {
+    setSearchDropdown(false);
+    setSearchQuery("");
+    setSearchResults([]);
+    
+    if (item.scrollId) {
+      handleScrollNavigation(item.scrollId);
+    } else {
+      navigate(item.link);
+    }
+  };
 
   useEffect(() => {
     const fetchAboutMenu = async () => {
@@ -393,13 +469,69 @@ const Navbar = () => {
               </div>
               {searchDrodow && (
                 <div className="search-dropdown-box-div">
-                  <input
-                    type="text"
-                    className="search-dropdown-box"
-                    placeholder="Search ...."
-                  />
-                  <div className="dropdown-search-icon">
-                    <Search size={20} />
+                  <div className="search-input-wrapper">
+                    <input
+                      type="text"
+                      className="search-dropdown-box"
+                      placeholder="Search courses, pages, centers..."
+                      value={searchQuery}
+                      onChange={handleSearchChange}
+                      autoFocus
+                    />
+                    <div className="dropdown-search-icon">
+                      <Search size={20} />
+                    </div>
+                    <button 
+                      className="dropdown-search-close-btn" 
+                      onClick={() => {
+                        setSearchDropdown(false);
+                        setSearchQuery("");
+                        setSearchResults([]);
+                      }}
+                      aria-label="Close search"
+                    >
+                      <X size={20} />
+                    </button>
+                  </div>
+
+                  <div className="search-recommendations-container">
+                    {searchQuery.trim() === "" ? (
+                      <>
+                        <h6 className="search-section-title">Popular Recommendations</h6>
+                        <ul className="search-results-list">
+                          {searchIndex
+                            .filter(item => 
+                              ["PGPM Flex", "PGDM | Young Leaders' Program", "Sales", "Digital Marketing & AI", "Centers of Excellence (CoEs)"].includes(item.label)
+                            )
+                            .slice(0, 5)
+                            .map((item, idx) => (
+                              <li key={idx} className="search-result-item" onClick={() => handleResultClick(item)}>
+                                <Search size={14} className="me-2 text-muted-foreground animate-pulse" />
+                                <span className="search-item-label">{item.label}</span>
+                                <span className="search-item-category">{item.category}</span>
+                              </li>
+                            ))
+                          }
+                        </ul>
+                      </>
+                    ) : searchResults.length > 0 ? (
+                      <>
+                        <h6 className="search-section-title">Search Results ({searchResults.length})</h6>
+                        <ul className="search-results-list">
+                          {searchResults.map((item, idx) => (
+                            <li key={idx} className="search-result-item" onClick={() => handleResultClick(item)}>
+                              <Search size={14} className="me-2 text-muted-foreground" />
+                              <span className="search-item-label">{item.label}</span>
+                              <span className="search-item-category">{item.category}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    ) : (
+                      <div className="search-no-results">
+                        No matches found for "{searchQuery}"
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
@@ -566,7 +698,7 @@ const Navbar = () => {
 
           {/* Mobile Buttons */}
           <div className="d-flex gap-2 mobile-right">
-            <Search className="icon " size={24} color="#fff" />
+            <Search className="icon " size={24} color="#fff" onClick={toggleSearch} style={{ cursor: "pointer" }} />
             <User
               className="icon"
               size={24}
